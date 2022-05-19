@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Word = Microsoft.Office.Interop.Word;
+using System.Reflection;
 
 namespace SQT
 {
@@ -28,6 +30,7 @@ namespace SQT
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,6 +47,7 @@ namespace SQT
             //tBAddress.Text = "$" + exchangeRates["USD"] + "  $" + exchangeRates["EUR"].ToString();
             quoteNumber = ("Qu" + DateTime.Now.ToString("yy") + "-000");
             tBQuoteNumber.Text = quoteNumber;
+
         }
 
         private void tBQuoteNumber_TextChanged(object sender, EventArgs e)
@@ -52,7 +56,9 @@ namespace SQT
             if (quoteNumber != tBQuoteNumber.Text)
             {
                 quoteNumber = tBQuoteNumber.Text;
+
             }
+            //MessageBox.Show(quoteNumber.ToString());
         }
 
         //find the live currency rates from floatrates.com and write them into the Exchange rate dictionary 
@@ -62,6 +68,7 @@ namespace SQT
             //bool switchEUR = false;
             string dKey = "";
             float dName = 0;
+            bool b = true;
             //XmlDocument currencyXML = new XmlDocument();
             //currencyXML.Load("http://www.floatrates.com/daily/aud.xml");
 
@@ -71,11 +78,13 @@ namespace SQT
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "targetCurrency")
                 {
                     dKey = XMLR.ReadElementContentAsString();
+
                 }
 
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "inverseRate")
                 {
                     dName = float.Parse(XMLR.ReadElementContentAsString());
+
                 }
 
                 if (dKey != "" && dName != 0)
@@ -83,11 +92,14 @@ namespace SQT
                     exchangeRates.Add(dKey, dName * basePrices["16CurrencyMargin"]);
                     dKey = "";
                     dName = 0;
+
                 }
 
-                if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "pubDate")
+                if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "pubDate" && b)
                 {
                     exchangeRateDate = XMLR.ReadElementContentAsString();
+                    b = false;
+
                 }
             }
             //MessageBox.Show("EXCHANGE");
@@ -105,11 +117,13 @@ namespace SQT
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "costItem")
                 {
                     dKey = XMLR.ReadElementContentAsString();
+
                 }
 
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "price")
                 {
                     dName = float.Parse(XMLR.ReadElementContentAsString());
+
                 }
 
                 if (dKey != "" && dName != -1)
@@ -119,6 +133,7 @@ namespace SQT
                     //MessageBox.Show(basePrices[dKey].ToString());
                     dKey = "";
                     dName = -1;
+
                 }
             }
             //MessageBox.Show("BASE");
@@ -136,11 +151,13 @@ namespace SQT
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Floors")
                 {
                     dKey = int.Parse(XMLR.ReadElementContentAsString());
+
                 }
 
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Price")
                 {
                     dName = float.Parse(XMLR.ReadElementContentAsString());
+
                 }
 
                 if (dKey != 0 && dName != -1)
@@ -148,6 +165,7 @@ namespace SQT
                     labourPrice.Add(dKey, dName);
                     dKey = 0;
                     dName = -1;
+
                 }
             }
             //MessageBox.Show("BASE");
@@ -158,16 +176,19 @@ namespace SQT
         private void buttonAUD_Click(object sender, EventArgs e)
         {
             SelectCurrency("A");
+
         }
 
         private void buttonUSD_Click(object sender, EventArgs e)
         {
             SelectCurrency("U");
+
         }
 
         private void buttonEUR_Click(object sender, EventArgs e)
         {
             SelectCurrency("E");
+
         }
 
         public void SelectCurrency(string selector)
@@ -177,6 +198,7 @@ namespace SQT
             if (selector == "A")
             {
                 applicableExchangeRate = 1;
+
             }
             else if (selector == "U")
             {
@@ -187,6 +209,7 @@ namespace SQT
                 lblExchangeDate.Visible = true;
                 exchangeRateLbl.Text = "The current Exchange rate is $1 USD to $" + exchangeRates["USD"] + " AUD";
                 lblExchangeDate.Text = "Correct as of " + exchangeRateDate;
+
             }
             else if (selector == "E")
             {
@@ -197,8 +220,9 @@ namespace SQT
                 lblExchangeDate.Visible = true;
                 exchangeRateLbl.Text = "The current Exchange rate is €1 EUR to $" + exchangeRates["EUR"] + " AUD";
                 lblExchangeDate.Text = "Correct as of " + exchangeRateDate;
-                //MessageBox.Show(applicableExchangeRate.ToString());
+
             }
+            //MessageBox.Show(applicableExchangeRate.ToString());
         }
 
         private void label13_Click(object sender, EventArgs e) { }
@@ -207,16 +231,19 @@ namespace SQT
         private void btnShippingReset_Click(object sender, EventArgs e)
         {
             ShippingCalculation(1);
+
         }
 
         private void btn20Ft_Click(object sender, EventArgs e)
         {
             ShippingCalculation(2);
+
         }
 
         private void btn40Ft_Click(object sender, EventArgs e)
         {
             ShippingCalculation(3);
+
         }
 
         public void ShippingCalculation(int selector)
@@ -235,11 +262,13 @@ namespace SQT
             {
                 num20Ft++;
                 shippingLbl20.Text = num20Ft + "x 20ft Container(s) - $" + basePrices["20ftFreight"] * num20Ft;
+
             }
             else if (selector == 3)
             {
                 num40Ft++;
                 shippingLbl40.Text = num40Ft + "x 40ft Container(s) - $" + basePrices["40ftFreight"] * num40Ft;
+
             }
             freightTotal = (num20Ft * basePrices["20ftFreight"]) + (num40Ft * basePrices["40ftFreight"]);
             shippingLblTotal.Text = "Total of $" + freightTotal + " for shipping";
@@ -275,10 +304,12 @@ namespace SQT
             if (cbSecurity.Checked)
             {
                 PriceListFormatting(lblSecurity, (basePrices["Security"] + (basePrices["SecurityPerFloor"] * int.Parse(tBFloors.Text))));
+
             }
             else
             {
                 PriceListFormatting(lblSecurity, 0);
+
             }
             PriceListFormatting(lblFreight, freightTotal);
             PriceListFormatting(lblLabour, labourPrice[int.Parse(tBFloors.Text)]);
@@ -287,6 +318,7 @@ namespace SQT
             lblCostIncludingMargin.Text = ("$" + (liftPrice * (1 + (float.Parse(tbMargin.Text) / 100))).ToString());
             lblGST.Text = ("$" + (((liftPrice * (1 + (float.Parse(tbMargin.Text) / 100))) * 0.1).ToString()));
             lblPriceIncludingGST.Text = ("$" + ((liftPrice * (1 + (float.Parse(tbMargin.Text) / 100))) * 1.1).ToString());
+
         }
 
         public void PriceListFormatting(Label label, float cost)
@@ -295,11 +327,13 @@ namespace SQT
             {
                 label.Text = "$" + cost;
                 liftPrice += cost;
+
             }
             else
             {
                 label.Text = "N/A";
                 liftPrice += 0;
+
             }
         }
 
@@ -310,6 +344,7 @@ namespace SQT
         private void button1_Click(object sender, EventArgs e)
         {
             GeneratePriceList();
+
         }
     }
 }
