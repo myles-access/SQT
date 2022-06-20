@@ -142,10 +142,14 @@
             this.tbMargin = new System.Windows.Forms.TextBox();
             this.label79 = new System.Windows.Forms.Label();
             this.lblExchangeDate = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button3 = new System.Windows.Forms.Button();
+            this.lbWait = new System.Windows.Forms.Label();
+            this.lblLiftNoConvert = new System.Windows.Forms.Label();
+            this.lblLiftNoConvertPrice = new System.Windows.Forms.Label();
             this.currencySelectionGroup.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -216,7 +220,7 @@
             this.lblGST.AutoSize = true;
             this.lblGST.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGST.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblGST.Location = new System.Drawing.Point(284, 712);
+            this.lblGST.Location = new System.Drawing.Point(284, 718);
             this.lblGST.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGST.Name = "lblGST";
             this.lblGST.Size = new System.Drawing.Size(92, 26);
@@ -228,7 +232,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label6.Location = new System.Drawing.Point(224, 712);
+            this.label6.Location = new System.Drawing.Point(224, 718);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 26);
@@ -240,7 +244,7 @@
             this.lblCostIncludingMargin.AutoSize = true;
             this.lblCostIncludingMargin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCostIncludingMargin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblCostIncludingMargin.Location = new System.Drawing.Point(283, 683);
+            this.lblCostIncludingMargin.Location = new System.Drawing.Point(283, 689);
             this.lblCostIncludingMargin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCostIncludingMargin.Name = "lblCostIncludingMargin";
             this.lblCostIncludingMargin.Size = new System.Drawing.Size(92, 26);
@@ -252,7 +256,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label8.Location = new System.Drawing.Point(6, 683);
+            this.label8.Location = new System.Drawing.Point(6, 689);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(275, 26);
@@ -264,7 +268,7 @@
             this.lblCostOfParts.AutoSize = true;
             this.lblCostOfParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCostOfParts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblCostOfParts.Location = new System.Drawing.Point(284, 657);
+            this.lblCostOfParts.Location = new System.Drawing.Point(284, 663);
             this.lblCostOfParts.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCostOfParts.Name = "lblCostOfParts";
             this.lblCostOfParts.Size = new System.Drawing.Size(92, 26);
@@ -276,7 +280,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label10.Location = new System.Drawing.Point(90, 657);
+            this.label10.Location = new System.Drawing.Point(90, 663);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(191, 26);
@@ -438,6 +442,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.groupBox1.Controls.Add(this.lblLiftNoConvert);
+            this.groupBox1.Controls.Add(this.lblLiftNoConvertPrice);
             this.groupBox1.Controls.Add(this.label73);
             this.groupBox1.Controls.Add(this.lblLabour);
             this.groupBox1.Controls.Add(this.label75);
@@ -513,7 +519,7 @@
             this.label73.AutoSize = true;
             this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label73.Location = new System.Drawing.Point(226, 625);
+            this.label73.Location = new System.Drawing.Point(226, 645);
             this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(54, 18);
@@ -526,7 +532,7 @@
             this.lblLabour.AutoSize = true;
             this.lblLabour.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLabour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblLabour.Location = new System.Drawing.Point(286, 625);
+            this.lblLabour.Location = new System.Drawing.Point(286, 645);
             this.lblLabour.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLabour.Name = "lblLabour";
             this.lblLabour.Size = new System.Drawing.Size(63, 18);
@@ -538,7 +544,7 @@
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label75.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label75.Location = new System.Drawing.Point(227, 601);
+            this.label75.Location = new System.Drawing.Point(227, 621);
             this.label75.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(53, 18);
@@ -551,7 +557,7 @@
             this.lblFreight.AutoSize = true;
             this.lblFreight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFreight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblFreight.Location = new System.Drawing.Point(286, 601);
+            this.lblFreight.Location = new System.Drawing.Point(286, 621);
             this.lblFreight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFreight.Name = "lblFreight";
             this.lblFreight.Size = new System.Drawing.Size(63, 18);
@@ -563,7 +569,7 @@
             this.label77.AutoSize = true;
             this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label77.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label77.Location = new System.Drawing.Point(219, 576);
+            this.label77.Location = new System.Drawing.Point(219, 596);
             this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(61, 18);
@@ -576,7 +582,7 @@
             this.lblSecurity.AutoSize = true;
             this.lblSecurity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSecurity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblSecurity.Location = new System.Drawing.Point(286, 576);
+            this.lblSecurity.Location = new System.Drawing.Point(286, 596);
             this.lblSecurity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSecurity.Name = "lblSecurity";
             this.lblSecurity.Size = new System.Drawing.Size(63, 18);
@@ -588,7 +594,7 @@
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label59.Location = new System.Drawing.Point(160, 549);
+            this.label59.Location = new System.Drawing.Point(160, 569);
             this.label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(120, 18);
@@ -601,7 +607,7 @@
             this.lblEntrance.AutoSize = true;
             this.lblEntrance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEntrance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblEntrance.Location = new System.Drawing.Point(286, 549);
+            this.lblEntrance.Location = new System.Drawing.Point(286, 569);
             this.lblEntrance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEntrance.Name = "lblEntrance";
             this.lblEntrance.Size = new System.Drawing.Size(63, 18);
@@ -613,7 +619,7 @@
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label61.Location = new System.Drawing.Point(218, 525);
+            this.label61.Location = new System.Drawing.Point(218, 545);
             this.label61.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(62, 18);
@@ -626,7 +632,7 @@
             this.lblScaffold.AutoSize = true;
             this.lblScaffold.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScaffold.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblScaffold.Location = new System.Drawing.Point(286, 525);
+            this.lblScaffold.Location = new System.Drawing.Point(286, 545);
             this.lblScaffold.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScaffold.Name = "lblScaffold";
             this.lblScaffold.Size = new System.Drawing.Size(63, 18);
@@ -638,7 +644,7 @@
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label63.Location = new System.Drawing.Point(161, 500);
+            this.label63.Location = new System.Drawing.Point(161, 520);
             this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(119, 18);
@@ -651,7 +657,7 @@
             this.lblWorkcover.AutoSize = true;
             this.lblWorkcover.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWorkcover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblWorkcover.Location = new System.Drawing.Point(286, 500);
+            this.lblWorkcover.Location = new System.Drawing.Point(286, 520);
             this.lblWorkcover.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWorkcover.Name = "lblWorkcover";
             this.lblWorkcover.Size = new System.Drawing.Size(63, 18);
@@ -663,7 +669,7 @@
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label65.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label65.Location = new System.Drawing.Point(155, 476);
+            this.label65.Location = new System.Drawing.Point(155, 496);
             this.label65.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(119, 18);
@@ -676,7 +682,7 @@
             this.lblTravel.AutoSize = true;
             this.lblTravel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTravel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblTravel.Location = new System.Drawing.Point(286, 476);
+            this.lblTravel.Location = new System.Drawing.Point(286, 496);
             this.lblTravel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTravel.Name = "lblTravel";
             this.lblTravel.Size = new System.Drawing.Size(63, 18);
@@ -688,7 +694,7 @@
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label67.Location = new System.Drawing.Point(220, 452);
+            this.label67.Location = new System.Drawing.Point(220, 472);
             this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(60, 18);
@@ -701,7 +707,7 @@
             this.lblStorage.AutoSize = true;
             this.lblStorage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStorage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblStorage.Location = new System.Drawing.Point(286, 452);
+            this.lblStorage.Location = new System.Drawing.Point(286, 472);
             this.lblStorage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStorage.Name = "lblStorage";
             this.lblStorage.Size = new System.Drawing.Size(63, 18);
@@ -713,7 +719,7 @@
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label69.Location = new System.Drawing.Point(216, 428);
+            this.label69.Location = new System.Drawing.Point(216, 448);
             this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(64, 18);
@@ -726,7 +732,7 @@
             this.lblManuals.AutoSize = true;
             this.lblManuals.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManuals.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblManuals.Location = new System.Drawing.Point(286, 428);
+            this.lblManuals.Location = new System.Drawing.Point(286, 448);
             this.lblManuals.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblManuals.Name = "lblManuals";
             this.lblManuals.Size = new System.Drawing.Size(63, 18);
@@ -738,7 +744,7 @@
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label71.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label71.Location = new System.Drawing.Point(188, 403);
+            this.label71.Location = new System.Drawing.Point(188, 423);
             this.label71.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(92, 18);
@@ -751,7 +757,7 @@
             this.lblMaintenance.AutoSize = true;
             this.lblMaintenance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaintenance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblMaintenance.Location = new System.Drawing.Point(286, 403);
+            this.lblMaintenance.Location = new System.Drawing.Point(286, 423);
             this.lblMaintenance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaintenance.Name = "lblMaintenance";
             this.lblMaintenance.Size = new System.Drawing.Size(63, 18);
@@ -763,7 +769,7 @@
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label43.Location = new System.Drawing.Point(218, 381);
+            this.label43.Location = new System.Drawing.Point(218, 401);
             this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(62, 18);
@@ -776,7 +782,7 @@
             this.lblFork.AutoSize = true;
             this.lblFork.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFork.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblFork.Location = new System.Drawing.Point(286, 381);
+            this.lblFork.Location = new System.Drawing.Point(286, 401);
             this.lblFork.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFork.Name = "lblFork";
             this.lblFork.Size = new System.Drawing.Size(63, 18);
@@ -788,7 +794,7 @@
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label45.Location = new System.Drawing.Point(210, 357);
+            this.label45.Location = new System.Drawing.Point(210, 377);
             this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(70, 18);
@@ -801,7 +807,7 @@
             this.lblDrawing.AutoSize = true;
             this.lblDrawing.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDrawing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblDrawing.Location = new System.Drawing.Point(286, 357);
+            this.lblDrawing.Location = new System.Drawing.Point(286, 377);
             this.lblDrawing.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDrawing.Name = "lblDrawing";
             this.lblDrawing.Size = new System.Drawing.Size(63, 18);
@@ -813,7 +819,7 @@
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label47.Location = new System.Drawing.Point(220, 332);
+            this.label47.Location = new System.Drawing.Point(220, 352);
             this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(60, 18);
@@ -826,7 +832,7 @@
             this.lblCartage.AutoSize = true;
             this.lblCartage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCartage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblCartage.Location = new System.Drawing.Point(286, 332);
+            this.lblCartage.Location = new System.Drawing.Point(286, 352);
             this.lblCartage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCartage.Name = "lblCartage";
             this.lblCartage.Size = new System.Drawing.Size(63, 18);
@@ -838,7 +844,7 @@
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label49.Location = new System.Drawing.Point(163, 308);
+            this.label49.Location = new System.Drawing.Point(163, 328);
             this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(117, 18);
@@ -851,7 +857,7 @@
             this.lblAccommodation.AutoSize = true;
             this.lblAccommodation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAccommodation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblAccommodation.Location = new System.Drawing.Point(286, 308);
+            this.lblAccommodation.Location = new System.Drawing.Point(286, 328);
             this.lblAccommodation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAccommodation.Name = "lblAccommodation";
             this.lblAccommodation.Size = new System.Drawing.Size(63, 18);
@@ -863,7 +869,7 @@
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label51.Location = new System.Drawing.Point(182, 284);
+            this.label51.Location = new System.Drawing.Point(182, 304);
             this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(98, 18);
@@ -876,7 +882,7 @@
             this.lblElectrical.AutoSize = true;
             this.lblElectrical.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblElectrical.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblElectrical.Location = new System.Drawing.Point(286, 284);
+            this.lblElectrical.Location = new System.Drawing.Point(286, 304);
             this.lblElectrical.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblElectrical.Name = "lblElectrical";
             this.lblElectrical.Size = new System.Drawing.Size(63, 18);
@@ -888,7 +894,7 @@
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label53.Location = new System.Drawing.Point(201, 260);
+            this.label53.Location = new System.Drawing.Point(201, 280);
             this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(79, 18);
@@ -901,7 +907,7 @@
             this.lblDuct.AutoSize = true;
             this.lblDuct.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDuct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblDuct.Location = new System.Drawing.Point(286, 260);
+            this.lblDuct.Location = new System.Drawing.Point(286, 280);
             this.lblDuct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDuct.Name = "lblDuct";
             this.lblDuct.Size = new System.Drawing.Size(63, 18);
@@ -913,7 +919,7 @@
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label55.Location = new System.Drawing.Point(195, 235);
+            this.label55.Location = new System.Drawing.Point(195, 255);
             this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(85, 18);
@@ -926,7 +932,7 @@
             this.lblShaft.AutoSize = true;
             this.lblShaft.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShaft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblShaft.Location = new System.Drawing.Point(286, 235);
+            this.lblShaft.Location = new System.Drawing.Point(286, 255);
             this.lblShaft.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblShaft.Name = "lblShaft";
             this.lblShaft.Size = new System.Drawing.Size(63, 18);
@@ -938,7 +944,7 @@
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label57.Location = new System.Drawing.Point(219, 211);
+            this.label57.Location = new System.Drawing.Point(219, 231);
             this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(61, 18);
@@ -951,7 +957,7 @@
             this.lblSign.AutoSize = true;
             this.lblSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblSign.Location = new System.Drawing.Point(286, 211);
+            this.lblSign.Location = new System.Drawing.Point(286, 231);
             this.lblSign.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSign.Name = "lblSign";
             this.lblSign.Size = new System.Drawing.Size(63, 18);
@@ -963,7 +969,7 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label35.Location = new System.Drawing.Point(230, 185);
+            this.label35.Location = new System.Drawing.Point(230, 205);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(50, 18);
@@ -977,7 +983,7 @@
             this.lblWiring.AutoSize = true;
             this.lblWiring.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWiring.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblWiring.Location = new System.Drawing.Point(286, 185);
+            this.lblWiring.Location = new System.Drawing.Point(286, 205);
             this.lblWiring.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWiring.Name = "lblWiring";
             this.lblWiring.Size = new System.Drawing.Size(63, 18);
@@ -989,7 +995,7 @@
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label37.Location = new System.Drawing.Point(214, 161);
+            this.label37.Location = new System.Drawing.Point(214, 181);
             this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(66, 18);
@@ -1002,7 +1008,7 @@
             this.lblSundries.AutoSize = true;
             this.lblSundries.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSundries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblSundries.Location = new System.Drawing.Point(286, 161);
+            this.lblSundries.Location = new System.Drawing.Point(286, 181);
             this.lblSundries.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSundries.Name = "lblSundries";
             this.lblSundries.Size = new System.Drawing.Size(63, 18);
@@ -1014,7 +1020,7 @@
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label39.Location = new System.Drawing.Point(189, 136);
+            this.label39.Location = new System.Drawing.Point(189, 156);
             this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(91, 18);
@@ -1027,7 +1033,7 @@
             this.lblSump.AutoSize = true;
             this.lblSump.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSump.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblSump.Location = new System.Drawing.Point(286, 136);
+            this.lblSump.Location = new System.Drawing.Point(286, 156);
             this.lblSump.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSump.Name = "lblSump";
             this.lblSump.Size = new System.Drawing.Size(63, 18);
@@ -1039,7 +1045,7 @@
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label41.Location = new System.Drawing.Point(153, 112);
+            this.label41.Location = new System.Drawing.Point(153, 132);
             this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(127, 18);
@@ -1052,7 +1058,7 @@
             this.lblBlanket.AutoSize = true;
             this.lblBlanket.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBlanket.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblBlanket.Location = new System.Drawing.Point(286, 112);
+            this.lblBlanket.Location = new System.Drawing.Point(286, 132);
             this.lblBlanket.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBlanket.Name = "lblBlanket";
             this.lblBlanket.Size = new System.Drawing.Size(63, 18);
@@ -1064,7 +1070,7 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label31.Location = new System.Drawing.Point(182, 88);
+            this.label31.Location = new System.Drawing.Point(182, 108);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(98, 18);
@@ -1077,7 +1083,7 @@
             this.lblGSM.AutoSize = true;
             this.lblGSM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGSM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblGSM.Location = new System.Drawing.Point(286, 88);
+            this.lblGSM.Location = new System.Drawing.Point(286, 108);
             this.lblGSM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGSM.Name = "lblGSM";
             this.lblGSM.Size = new System.Drawing.Size(63, 18);
@@ -1089,7 +1095,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label33.Location = new System.Drawing.Point(163, 64);
+            this.label33.Location = new System.Drawing.Point(163, 84);
             this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(117, 18);
@@ -1102,7 +1108,7 @@
             this.lblFire.AutoSize = true;
             this.lblFire.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFire.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblFire.Location = new System.Drawing.Point(286, 64);
+            this.lblFire.Location = new System.Drawing.Point(286, 84);
             this.lblFire.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFire.Name = "lblFire";
             this.lblFire.Size = new System.Drawing.Size(63, 18);
@@ -1114,7 +1120,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label29.Location = new System.Drawing.Point(189, 39);
+            this.label29.Location = new System.Drawing.Point(189, 59);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(91, 18);
@@ -1127,7 +1133,7 @@
             this.lblFinishes.AutoSize = true;
             this.lblFinishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFinishes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblFinishes.Location = new System.Drawing.Point(286, 39);
+            this.lblFinishes.Location = new System.Drawing.Point(286, 59);
             this.lblFinishes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFinishes.Name = "lblFinishes";
             this.lblFinishes.Size = new System.Drawing.Size(63, 18);
@@ -1139,7 +1145,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label27.Location = new System.Drawing.Point(155, 15);
+            this.label27.Location = new System.Drawing.Point(155, 38);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(125, 18);
@@ -1152,7 +1158,7 @@
             this.lblCost.AutoSize = true;
             this.lblCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblCost.Location = new System.Drawing.Point(286, 15);
+            this.lblCost.Location = new System.Drawing.Point(286, 38);
             this.lblCost.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCost.Name = "lblCost";
             this.lblCost.Size = new System.Drawing.Size(63, 18);
@@ -1607,16 +1613,6 @@
             this.lblExchangeDate.Text = "The current Exchange rate is 1 USD to 1.533233 AUD";
             this.lblExchangeDate.Visible = false;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(459, 749);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 68;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
@@ -1631,13 +1627,62 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(335, 749);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 69;
+            this.button3.Text = "save\\";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // lbWait
+            // 
+            this.lbWait.AutoSize = true;
+            this.lbWait.BackColor = System.Drawing.Color.Gray;
+            this.lbWait.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWait.ForeColor = System.Drawing.Color.Navy;
+            this.lbWait.Location = new System.Drawing.Point(113, 306);
+            this.lbWait.Name = "lbWait";
+            this.lbWait.Size = new System.Drawing.Size(965, 110);
+            this.lbWait.TabIndex = 71;
+            this.lbWait.Text = "... PLEASE WAIT ...\r\nThis may take up to 2 minutes to complete";
+            this.lbWait.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbWait.Visible = false;
+            // 
+            // lblLiftNoConvert
+            // 
+            this.lblLiftNoConvert.AutoSize = true;
+            this.lblLiftNoConvert.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLiftNoConvert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblLiftNoConvert.Location = new System.Drawing.Point(156, 15);
+            this.lblLiftNoConvert.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLiftNoConvert.Name = "lblLiftNoConvert";
+            this.lblLiftNoConvert.Size = new System.Drawing.Size(125, 18);
+            this.lblLiftNoConvert.TabIndex = 64;
+            this.lblLiftNoConvert.Text = "Cost of Lift (AUD)";
+            this.lblLiftNoConvert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblLiftNoConvertPrice
+            // 
+            this.lblLiftNoConvertPrice.AutoSize = true;
+            this.lblLiftNoConvertPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLiftNoConvertPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblLiftNoConvertPrice.Location = new System.Drawing.Point(287, 15);
+            this.lblLiftNoConvertPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLiftNoConvertPrice.Name = "lblLiftNoConvertPrice";
+            this.lblLiftNoConvertPrice.Size = new System.Drawing.Size(63, 18);
+            this.lblLiftNoConvertPrice.TabIndex = 65;
+            this.lblLiftNoConvertPrice.Text = "ERROR";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1170, 802);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.currencySelectionGroup);
             this.Controls.Add(this.lblExchangeDate);
             this.Controls.Add(this.tbMargin);
@@ -1687,6 +1732,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tBAddress);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbWait);
+            this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -1708,123 +1755,127 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tBAddress;
-        private System.Windows.Forms.TextBox tBQuoteNumber;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblPriceIncludingGST;
-        private System.Windows.Forms.Label lblGST;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblCostIncludingMargin;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblCostOfParts;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button buttonEUR;
-        private System.Windows.Forms.Button buttonUSD;
-        private System.Windows.Forms.Label labelLiftCurrency;
-        private System.Windows.Forms.Button buttonAUD;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.GroupBox currencySelectionGroup;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbSundries;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox tbDuct;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox tbShaftLight;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox tbAccomodation;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox tbStorage;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox tbTravel;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox tbCartage;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label exchangeRateLbl;
-        private System.Windows.Forms.Button btn20Ft;
-        private System.Windows.Forms.Button btn40Ft;
-        private System.Windows.Forms.Button btnShippingReset;
-        private System.Windows.Forms.Label shippingLblTotal;
-        private System.Windows.Forms.Label shippingLbl20;
-        private System.Windows.Forms.Label shippingLbl40;
-        private System.Windows.Forms.TextBox tbNumberLifts;
-        private System.Windows.Forms.TextBox tBFloors;
-        private System.Windows.Forms.TextBox tbCost;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Label lblLabour;
-        private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.Label lblFreight;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.Label lblSecurity;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label lblEntrance;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label lblScaffold;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label lblWorkcover;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label lblTravel;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label lblStorage;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.Label lblManuals;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label lblMaintenance;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label lblFork;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label lblDrawing;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label lblCartage;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label lblAccommodation;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label lblElectrical;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label lblDuct;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label lblShaft;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label lblSign;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label lblWiring;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label lblSundries;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label lblSump;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label lblBlanket;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label lblGSM;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label lblFire;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label lblFinishes;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label lblCost;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbEntranceGuards;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox tbWeeksRequired;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox tbScaffold;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.CheckBox cbSecurity;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox tbMargin;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.Label lblExchangeDate;
-        private System.Windows.Forms.Button button2;
-        private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.PrintDialog printDialog1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox tBAddress;
+        public System.Windows.Forms.TextBox tBQuoteNumber;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label lblPriceIncludingGST;
+        public System.Windows.Forms.Label lblGST;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label lblCostIncludingMargin;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label lblCostOfParts;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Button buttonEUR;
+        public System.Windows.Forms.Button buttonUSD;
+        public System.Windows.Forms.Label labelLiftCurrency;
+        public System.Windows.Forms.Button buttonAUD;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.GroupBox currencySelectionGroup;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.TextBox tbSundries;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.TextBox tbDuct;
+        public System.Windows.Forms.Label label17;
+        public System.Windows.Forms.TextBox tbShaftLight;
+        public System.Windows.Forms.Label label18;
+        public System.Windows.Forms.TextBox tbAccomodation;
+        public System.Windows.Forms.Label label19;
+        public System.Windows.Forms.TextBox tbStorage;
+        public System.Windows.Forms.Label label20;
+        public System.Windows.Forms.Label label21;
+        public System.Windows.Forms.TextBox tbTravel;
+        public System.Windows.Forms.Label label22;
+        public System.Windows.Forms.TextBox tbCartage;
+        public System.Windows.Forms.Label label23;
+        public System.Windows.Forms.Label exchangeRateLbl;
+        public System.Windows.Forms.Button btn20Ft;
+        public System.Windows.Forms.Button btn40Ft;
+        public System.Windows.Forms.Button btnShippingReset;
+        public System.Windows.Forms.Label shippingLblTotal;
+        public System.Windows.Forms.Label shippingLbl20;
+        public System.Windows.Forms.Label shippingLbl40;
+        public System.Windows.Forms.TextBox tbNumberLifts;
+        public System.Windows.Forms.TextBox tBFloors;
+        public System.Windows.Forms.TextBox tbCost;
+        public System.Windows.Forms.Label label73;
+        public System.Windows.Forms.Label lblLabour;
+        public System.Windows.Forms.Label label75;
+        public System.Windows.Forms.Label lblFreight;
+        public System.Windows.Forms.Label label77;
+        public System.Windows.Forms.Label lblSecurity;
+        public System.Windows.Forms.Label label59;
+        public System.Windows.Forms.Label lblEntrance;
+        public System.Windows.Forms.Label label61;
+        public System.Windows.Forms.Label lblScaffold;
+        public System.Windows.Forms.Label label63;
+        public System.Windows.Forms.Label lblWorkcover;
+        public System.Windows.Forms.Label label65;
+        public System.Windows.Forms.Label lblTravel;
+        public System.Windows.Forms.Label label67;
+        public System.Windows.Forms.Label lblStorage;
+        public System.Windows.Forms.Label label69;
+        public System.Windows.Forms.Label lblManuals;
+        public System.Windows.Forms.Label label71;
+        public System.Windows.Forms.Label lblMaintenance;
+        public System.Windows.Forms.Label label43;
+        public System.Windows.Forms.Label lblFork;
+        public System.Windows.Forms.Label label45;
+        public System.Windows.Forms.Label lblDrawing;
+        public System.Windows.Forms.Label label47;
+        public System.Windows.Forms.Label lblCartage;
+        public System.Windows.Forms.Label label49;
+        public System.Windows.Forms.Label lblAccommodation;
+        public System.Windows.Forms.Label label51;
+        public System.Windows.Forms.Label lblElectrical;
+        public System.Windows.Forms.Label label53;
+        public System.Windows.Forms.Label lblDuct;
+        public System.Windows.Forms.Label label55;
+        public System.Windows.Forms.Label lblShaft;
+        public System.Windows.Forms.Label label57;
+        public System.Windows.Forms.Label lblSign;
+        public System.Windows.Forms.Label label35;
+        public System.Windows.Forms.Label lblWiring;
+        public System.Windows.Forms.Label label37;
+        public System.Windows.Forms.Label lblSundries;
+        public System.Windows.Forms.Label label39;
+        public System.Windows.Forms.Label lblSump;
+        public System.Windows.Forms.Label label41;
+        public System.Windows.Forms.Label lblBlanket;
+        public System.Windows.Forms.Label label31;
+        public System.Windows.Forms.Label lblGSM;
+        public System.Windows.Forms.Label label33;
+        public System.Windows.Forms.Label lblFire;
+        public System.Windows.Forms.Label label29;
+        public System.Windows.Forms.Label lblFinishes;
+        public System.Windows.Forms.Label label27;
+        public System.Windows.Forms.Label lblCost;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox tbEntranceGuards;
+        public System.Windows.Forms.Label label24;
+        public System.Windows.Forms.TextBox tbWeeksRequired;
+        public System.Windows.Forms.Label label25;
+        public System.Windows.Forms.TextBox tbScaffold;
+        public System.Windows.Forms.Label label26;
+        public System.Windows.Forms.CheckBox cbSecurity;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox tbMargin;
+        public System.Windows.Forms.Label label79;
+        public System.Windows.Forms.Label lblExchangeDate;
+        public System.Drawing.Printing.PrintDocument printDocument1;
+        public System.Windows.Forms.PrintDialog printDialog1;
+        public System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        public System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Label lbWait;
+        public System.Windows.Forms.Label lblLiftNoConvert;
+        public System.Windows.Forms.Label lblLiftNoConvertPrice;
     }
 }
 
