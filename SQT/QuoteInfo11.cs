@@ -13,6 +13,7 @@ namespace SQT
     public partial class QuoteInfo11 : Form
     {
         Form1 f = Application.OpenForms.OfType<Form1>().Single();
+
         public QuoteInfo11()
         {
             InitializeComponent();
@@ -35,10 +36,27 @@ namespace SQT
 
         private void buttonEUR_Click(object sender, EventArgs e)
         {
-            //f.WordData("","");
-            //call WordData method in form 1 to send all info into the dictiinary for writing 
-            //open question form 3
-            //close this form 
+            //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
+
+            //Load next form and close this one 
+            f.QuestionsComplete();
+            this.Close();
+        }
+
+        private void buttonEUR_Click_1(object sender, EventArgs e)
+        {
+
+            //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
+
+            //Load next form and close this one 
+            f.QuestionsComplete();
+            this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            f.QuestionCloseCall(this);
         }
     }
 }

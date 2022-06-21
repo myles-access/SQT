@@ -56,6 +56,7 @@
             this.button1.TabStop = false;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // buttonEUR
             // 
@@ -68,6 +69,7 @@
             this.buttonEUR.TabStop = false;
             this.buttonEUR.Text = "Next";
             this.buttonEUR.UseVisualStyleBackColor = true;
+            this.buttonEUR.Click += new System.EventHandler(this.buttonEUR_Click_1);
             // 
             // label3
             // 

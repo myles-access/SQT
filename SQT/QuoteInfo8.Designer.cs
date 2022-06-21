@@ -47,9 +47,9 @@
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tbphone = new System.Windows.Forms.TextBox();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.tbphone = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
@@ -68,8 +68,8 @@
             this.radioButton21 = new System.Windows.Forms.RadioButton();
             this.radioButton22 = new System.Windows.Forms.RadioButton();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.radioButton23 = new System.Windows.Forms.RadioButton();
             this.radioButton24 = new System.Windows.Forms.RadioButton();
@@ -99,6 +99,7 @@
             this.button2.TabStop = false;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -111,6 +112,7 @@
             this.button3.TabStop = false;
             this.button3.Text = "Next";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
@@ -307,6 +309,17 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Mirror";
             // 
+            // tbphone
+            // 
+            this.tbphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbphone.ForeColor = System.Drawing.Color.Black;
+            this.tbphone.Location = new System.Drawing.Point(25, 57);
+            this.tbphone.Margin = new System.Windows.Forms.Padding(2);
+            this.tbphone.Name = "tbphone";
+            this.tbphone.Size = new System.Drawing.Size(154, 32);
+            this.tbphone.TabIndex = 74;
+            this.tbphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // radioButton9
             // 
             this.radioButton9.AutoSize = true;
@@ -328,17 +341,6 @@
             this.radioButton10.Text = "N/A";
             this.radioButton10.UseVisualStyleBackColor = true;
             // 
-            // tbphone
-            // 
-            this.tbphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbphone.ForeColor = System.Drawing.Color.Black;
-            this.tbphone.Location = new System.Drawing.Point(25, 57);
-            this.tbphone.Margin = new System.Windows.Forms.Padding(2);
-            this.tbphone.Name = "tbphone";
-            this.tbphone.Size = new System.Drawing.Size(154, 32);
-            this.tbphone.TabIndex = 74;
-            this.tbphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.textBox1);
@@ -350,7 +352,7 @@
             this.groupBox6.Size = new System.Drawing.Size(230, 107);
             this.groupBox6.TabIndex = 80;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Mirror";
+            this.groupBox6.Text = "Lighting";
             // 
             // textBox1
             // 
@@ -368,10 +370,10 @@
             this.radioButton11.AutoSize = true;
             this.radioButton11.Location = new System.Drawing.Point(54, 26);
             this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(163, 28);
+            this.radioButton11.Size = new System.Drawing.Size(172, 28);
             this.radioButton11.TabIndex = 2;
             this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "LED Down Light";
+            this.radioButton11.Text = "LED Down Lights";
             this.radioButton11.UseVisualStyleBackColor = true;
             // 
             // radioButton12
@@ -545,16 +547,6 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Ventilation / Fan";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 29);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(88, 28);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Natural";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
@@ -564,6 +556,16 @@
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Mechanical";
             this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(6, 29);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(88, 28);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Natural";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // groupBox13
             // 

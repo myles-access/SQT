@@ -463,13 +463,17 @@ namespace SQT
             object visible = true;
             object replace = 2;
             object wrap = 1;
+
             //execute find and replace
             fileOpen.Selection.Find.Execute(ref findText, ref matchCase, ref matchWholeWord,
                 ref matchWildCards, ref matchSoundsLike, ref matchAllWordForms, ref forward, ref wrap, ref format, ref replaceWithText, ref replace,
                 ref matchKashida, ref matchDiacritics, ref matchAlefHamza, ref matchControl);
         }
+
         public void QuestionCloseCall(Form f)
         {
+            Form[] questionForms = new Form[11];
+
             wordExportData.Clear();
             WordFinish();
             MessageBox.Show("Word Export Canceled");

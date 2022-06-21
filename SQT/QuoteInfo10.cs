@@ -35,10 +35,31 @@ namespace SQT
 
         private void buttonEUR_Click(object sender, EventArgs e)
         {
-            //f.WordData("","");
-            //call WordData method in form 1 to send all info into the dictiinary for writing 
-            //open question form 3
-            //close this form 
+            QuoteInfo11 nF = new QuoteInfo11();
+
+            //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
+
+            //Load next form and close this one 
+            nF.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            QuoteInfo11 nF = new QuoteInfo11();
+
+            //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
+
+            //Load next form and close this one 
+            nF.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            f.QuestionCloseCall(this);
         }
     }
 }

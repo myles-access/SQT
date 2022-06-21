@@ -38,10 +38,13 @@ namespace SQT
 
         private void buttonEUR_Click(object sender, EventArgs e)
         {
-            //f.WordData("","");
-            //call WordData method in form 1 to send all info into the dictiinary for writing 
-            //open question form 2
-            //close this form 
+            QuoteInfo2 nF = new QuoteInfo2();
+
+            //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
+
+            //Load next form and close this one 
+            nF.Show();
+            this.Close();
         }
     }
 }
