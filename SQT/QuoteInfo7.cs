@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SQT
@@ -25,23 +19,7 @@ namespace SQT
 
         private void PullInfo()
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            f.QuestionCloseCall(this);
-        }
-
-        private void buttonEUR_Click(object sender, EventArgs e)
-        {
-            QuoteInfo8 nF = new QuoteInfo8();
-
-            //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
-
-            //Load next form and close this one 
-            nF.Show();
-            this.Close();
+            //
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -49,16 +27,25 @@ namespace SQT
             QuoteInfo8 nF = new QuoteInfo8();
 
             //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
+            f.WordData("AE143", f.MeasureStringChecker(tbfname.Text, "mm"));//door width 
+            f.WordData("AE144", f.MeasureStringChecker(tbphone.Text, "mm")); //door height 
+            f.WordData("AE145", f.MeasureStringChecker(textBox1.Text, "V"));//door operator voltage 
+            f.WordData("AE146", f.MeasureStringChecker(textBox2.Text, "mm"));//landing door jamb depth
+            f.WordData("AE147", f.RadioButtonHandeler(null, radioButton7, radioButton8));//landing door finish
+            f.WordData("AE148", f.RadioButtonHandeler(null, radioButton5, radioButton3));//door type
+            f.WordData("AE150", f.RadioButtonHandeler(null, radioButton1));// door tracks 
+            f.WordData("AE151", f.RadioButtonHandeler(null, radioButton4, radioButton6));//advanced opening
+            f.WordData("AE152", f.RadioButtonHandeler(null, radioButton11, radioButton12));//door nudging 
+            f.WordData("AE153", f.RadioButtonHandeler(null, radioButton14, radioButton13));//fire rated doors 
+            f.WordData("AE154", f.RadioButtonHandeler(null, radioButton15, radioButton2)); //  entrance protection 
 
             //Load next form and close this one 
             nF.Show();
             this.Close();
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             f.QuestionCloseCall(this);
         }
     }

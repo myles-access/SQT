@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuoteInfo8));
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -73,6 +74,9 @@
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.radioButton23 = new System.Windows.Forms.RadioButton();
             this.radioButton24 = new System.Windows.Forms.RadioButton();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.radioButton25 = new System.Windows.Forms.RadioButton();
+            this.radioButton26 = new System.Windows.Forms.RadioButton();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -86,6 +90,7 @@
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -316,7 +321,7 @@
             this.tbphone.Location = new System.Drawing.Point(25, 57);
             this.tbphone.Margin = new System.Windows.Forms.Padding(2);
             this.tbphone.Name = "tbphone";
-            this.tbphone.Size = new System.Drawing.Size(154, 32);
+            this.tbphone.Size = new System.Drawing.Size(199, 32);
             this.tbphone.TabIndex = 74;
             this.tbphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -347,7 +352,7 @@
             this.groupBox6.Controls.Add(this.radioButton11);
             this.groupBox6.Controls.Add(this.radioButton12);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(487, 143);
+            this.groupBox6.Location = new System.Drawing.Point(487, 365);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(230, 107);
             this.groupBox6.TabIndex = 80;
@@ -395,7 +400,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(251, 256);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(230, 129);
+            this.groupBox7.Size = new System.Drawing.Size(230, 90);
             this.groupBox7.TabIndex = 81;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Handrail";
@@ -404,10 +409,10 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(6, 90);
+            this.textBox2.Location = new System.Drawing.Point(25, 52);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(218, 32);
+            this.textBox2.Size = new System.Drawing.Size(199, 32);
             this.textBox2.TabIndex = 74;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -427,10 +432,9 @@
             this.radioButton16.AutoSize = true;
             this.radioButton16.Location = new System.Drawing.Point(6, 62);
             this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(75, 28);
+            this.radioButton16.Size = new System.Drawing.Size(14, 13);
             this.radioButton16.TabIndex = 1;
             this.radioButton16.TabStop = true;
-            this.radioButton16.Text = "Other";
             this.radioButton16.UseVisualStyleBackColor = true;
             // 
             // groupBox9
@@ -474,7 +478,7 @@
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox10.Location = new System.Drawing.Point(487, 256);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(230, 129);
+            this.groupBox10.Size = new System.Drawing.Size(230, 103);
             this.groupBox10.TabIndex = 82;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Skirting";
@@ -540,7 +544,7 @@
             this.groupBox12.Controls.Add(this.checkBox2);
             this.groupBox12.Controls.Add(this.checkBox1);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox12.Location = new System.Drawing.Point(251, 396);
+            this.groupBox12.Location = new System.Drawing.Point(251, 424);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(230, 113);
             this.groupBox12.TabIndex = 84;
@@ -572,7 +576,7 @@
             this.groupBox13.Controls.Add(this.radioButton23);
             this.groupBox13.Controls.Add(this.radioButton24);
             this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.Location = new System.Drawing.Point(487, 396);
+            this.groupBox13.Location = new System.Drawing.Point(251, 353);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(230, 60);
             this.groupBox13.TabIndex = 81;
@@ -601,12 +605,47 @@
             this.radioButton24.Text = "Yes";
             this.radioButton24.UseVisualStyleBackColor = true;
             // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.radioButton25);
+            this.groupBox14.Controls.Add(this.radioButton26);
+            this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.Location = new System.Drawing.Point(487, 143);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(230, 98);
+            this.groupBox14.TabIndex = 72;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Rear Wall";
+            // 
+            // radioButton25
+            // 
+            this.radioButton25.AutoSize = true;
+            this.radioButton25.Location = new System.Drawing.Point(6, 60);
+            this.radioButton25.Name = "radioButton25";
+            this.radioButton25.Size = new System.Drawing.Size(75, 28);
+            this.radioButton25.TabIndex = 2;
+            this.radioButton25.TabStop = true;
+            this.radioButton25.Text = "Other";
+            this.radioButton25.UseVisualStyleBackColor = true;
+            // 
+            // radioButton26
+            // 
+            this.radioButton26.AutoSize = true;
+            this.radioButton26.Location = new System.Drawing.Point(6, 26);
+            this.radioButton26.Name = "radioButton26";
+            this.radioButton26.Size = new System.Drawing.Size(218, 28);
+            this.radioButton26.TabIndex = 1;
+            this.radioButton26.TabStop = true;
+            this.radioButton26.Text = "Hairline Stainless Steel";
+            this.radioButton26.UseVisualStyleBackColor = true;
+            // 
             // QuoteInfo8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(726, 577);
+            this.Controls.Add(this.groupBox14);
             this.Controls.Add(this.groupBox13);
             this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.groupBox11);
@@ -623,8 +662,14 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "QuoteInfo8";
-            this.Text = "QuoteInfo8";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quote Generator";
             this.Load += new System.EventHandler(this.QuoteInfo8_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -652,6 +697,8 @@
             this.groupBox12.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -704,5 +751,8 @@
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.RadioButton radioButton23;
         private System.Windows.Forms.RadioButton radioButton24;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.RadioButton radioButton25;
+        private System.Windows.Forms.RadioButton radioButton26;
     }
 }

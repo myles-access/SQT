@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuoteInfo5));
             this.button1 = new System.Windows.Forms.Button();
             this.buttonEUR = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -107,7 +108,7 @@
             this.tbphone.Margin = new System.Windows.Forms.Padding(2);
             this.tbphone.Name = "tbphone";
             this.tbphone.Size = new System.Drawing.Size(100, 32);
-            this.tbphone.TabIndex = 53;
+            this.tbphone.TabIndex = 2;
             this.tbphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -130,7 +131,7 @@
             this.tbfname.Margin = new System.Windows.Forms.Padding(2);
             this.tbfname.Name = "tbfname";
             this.tbfname.Size = new System.Drawing.Size(100, 32);
-            this.tbfname.TabIndex = 52;
+            this.tbfname.TabIndex = 1;
             this.tbfname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -153,7 +154,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 32);
-            this.textBox1.TabIndex = 57;
+            this.textBox1.TabIndex = 4;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -176,7 +177,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 32);
-            this.textBox2.TabIndex = 56;
+            this.textBox2.TabIndex = 3;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -199,7 +200,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 32);
-            this.textBox3.TabIndex = 61;
+            this.textBox3.TabIndex = 6;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
@@ -222,7 +223,7 @@
             this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 32);
-            this.textBox4.TabIndex = 60;
+            this.textBox4.TabIndex = 5;
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
@@ -245,7 +246,7 @@
             this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 32);
-            this.textBox5.TabIndex = 63;
+            this.textBox5.TabIndex = 7;
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
@@ -399,8 +400,14 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonEUR);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "QuoteInfo5";
-            this.Text = "QuoteInfo5";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quote Generator";
             this.Load += new System.EventHandler(this.QuoteInfo5_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();

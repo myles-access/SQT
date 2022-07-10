@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SQT
@@ -20,36 +14,30 @@ namespace SQT
 
         private void QuoteInfo5_Load(object sender, EventArgs e)
         {
-            PullInfo();
+           // PullInfo();
         }
 
         private void PullInfo()
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            f.QuestionCloseCall(this);
-        }
-
-        private void buttonEUR_Click(object sender, EventArgs e)
-        {
-            QuoteInfo6 nF = new QuoteInfo6();
-
-            //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
-
-            //Load next form and close this one 
-            nF.Show();
-            this.Close();
+            //
         }
 
         private void buttonEUR_Click_1(object sender, EventArgs e)
         {
-
             QuoteInfo6 nF = new QuoteInfo6();
 
             //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
+            f.WordData("AE123", f.MeasureStringChecker(tbfname.Text, "mm"));// shaft width
+            f.WordData("AE124", f.MeasureStringChecker(tbphone.Text, "mm"));//shaft depth
+            f.WordData("AE125", f.MeasureStringChecker(textBox2.Text, "mm"));//pit depth
+            f.WordData("AE126", f.MeasureStringChecker(textBox1.Text, "mm"));//headroom
+            f.WordData("AE127", f.MeasureStringChecker(textBox4.Text, "mm"));//travel
+            f.WordData("AE128", textBox3.Text);// number of landings
+            f.WordData("AE129", textBox5.Text);//number of landing doors 
+            f.WordData("AE130", f.RadioButtonHandeler(null, radioButton10)); //structure shaft 
+            f.WordData("AE131", f.RadioButtonHandeler(null, radioButton1));//fixings
+            f.WordData("AE132", f.RadioButtonHandeler(null, radioButton5, radioButton6));//trimmer beams
+            f.WordData("AE133", f.RadioButtonHandeler(null, radioButton3, radioButton2));//false floor
 
             //Load next form and close this one 
             nF.Show();

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 using Word = Microsoft.Office.Interop.Word;
@@ -11,19 +10,19 @@ namespace SQT
     {
         // VARS
         public string quoteNumber = "";
-        public float applicableExchangeRate = 1;
-        public int exCurrency = 0; // 0 AUD, 1 USD, 2 EUR
-        public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
         public string exchangeRateDate;
-        public Dictionary<string, float> basePrices = new Dictionary<string, float>();
-        public Dictionary<int, float> labourPrice = new Dictionary<int, float>();
-        public int num20Ft;
-        public int num40Ft;
+        public float applicableExchangeRate = 1;
         public float freightTotal = 0;
         public float liftPrice;
+        public int exCurrency = 0; // 0 AUD, 1 USD, 2 EUR
+        public int num20Ft;
+        public int num40Ft;
+        public Dictionary<string, float> basePrices = new Dictionary<string, float>();
+        public Dictionary<int, float> labourPrice = new Dictionary<int, float>();
+        public Dictionary<string, string> wordExportData = new Dictionary<string, string>();
+        public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
         Word.Application fileOpen;
         Word.Document document;
-        public Dictionary<string, string> wordExportData = new Dictionary<string, string>();
 
         public Form1()
         {
@@ -37,6 +36,7 @@ namespace SQT
             FetchCurrencyRates();
             FetchLabourPrices();
             GeneratePriceList();
+
             lblCostOfParts.Text = "$0";
             lblCostIncludingMargin.Text = "$0";
             lblGST.Text = "$0";
@@ -44,6 +44,8 @@ namespace SQT
             quoteNumber = ("Qu" + DateTime.Now.ToString("yy") + "-000");
             tBQuoteNumber.Text = quoteNumber;
             lbWait.Visible = false;
+            button3.Visible = false;
+            button3.Enabled = false;
         }
 
         private void tBQuoteNumber_TextChanged(object sender, EventArgs e)
@@ -154,10 +156,12 @@ namespace SQT
         {
             SelectCurrency("A");
         }
+
         private void buttonUSD_Click(object sender, EventArgs e)
         {
             SelectCurrency("U");
         }
+
         private void buttonEUR_Click(object sender, EventArgs e)
         {
             SelectCurrency("E");
@@ -201,10 +205,12 @@ namespace SQT
         {
             ShippingCalculation(1);
         }
+
         private void btn20Ft_Click(object sender, EventArgs e)
         {
             ShippingCalculation(2);
         }
+
         private void btn40Ft_Click(object sender, EventArgs e)
         {
             ShippingCalculation(3);
@@ -276,7 +282,7 @@ namespace SQT
             if (exCurrency == 0)
             {
                 lblLiftNoConvert.Visible = false;
-                lblLiftNoConvertPrice.Visible = false;  
+                lblLiftNoConvertPrice.Visible = false;
             }
             else if (exCurrency == 1)
             {
@@ -334,24 +340,10 @@ namespace SQT
         private void button1_Click(object sender, EventArgs e)
         {
             GeneratePriceList();
+            button3.Visible = true;
+            button3.Enabled = true;
         }
 
-        private void label13_Click(object sender, EventArgs e)
-        {
-            //
-        }
-        private void costOfLiftTB_TextChanged(object sender, EventArgs e)
-        {
-            //
-        }
-        private void labelLiftCurrency_Click(object sender, EventArgs e)
-        {
-            //
-        }
-        private void label35_Click(object sender, EventArgs e)
-        {
-            //
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -385,38 +377,45 @@ namespace SQT
             this.Enabled = false;
             //questions complete method called from final form of querstions to continue the export to word function. 
         }
-        public void QuestionsComplete()
+
+        public void QuestionsComplete() //called from the final question to continue the export to word function 
         {
-            //called from the final question to continue the export to word function 
+            WordData("AE211", FormalDate());
+            WordData("AE212", lblCostIncludingMargin.Text);
+            WordData("AE213", lblGST.Text);
+            WordData("AE214", lblPriceIncludingGST.Text);
+
             WordReplaceLooper();// loop the find and replace method to populate the info 
             WordSave(true);// save the doc again 
             WordFinish();//finish the methods 
+
         }
 
-        public void WordSetup()
+        public void WordSetup() // sets up the word document ready to be written
         {
             lbWait.Visible = true;
-                        fileOpen = new Word.Application();
+            fileOpen = new Word.Application();
             document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\SQT.docm", ReadOnly: false);
             fileOpen.Visible = false;
             document.Activate();
         }
 
-        private void WordFinish()
+        private void WordFinish() // closes the word document 
         {
             fileOpen.Quit();
             lbWait.Visible = false;
             this.Enabled = true;
         }
 
-        private void WordSave(bool b)
+        private void WordSave(bool b) // if false,asks where to save the word doc and saves it. if true saves in the previously set location
         {
             if (!b)
             {
                 saveFileDialog1.Title = ("Where to save the quote");
                 saveFileDialog1.InitialDirectory = "X:\\Sales\\Qu-" + DateTime.Now.ToString("yyyy");
-                saveFileDialog1.FileName = tBAddress.Text + "Quote";
-                saveFileDialog1.DefaultExt = "docm";
+                saveFileDialog1.FileName = tBAddress.Text + " Quote";
+                saveFileDialog1.DefaultExt = "docx";
+                saveFileDialog1.Filter = "Word Docs (*.docx; *.docm)|*.docx;*.docm|All files (*.*)|*.*";
                 saveFileDialog1.ShowDialog();
                 if (saveFileDialog1.FileName != null || saveFileDialog1.FileName != "")
                 {
@@ -433,12 +432,13 @@ namespace SQT
             }
         }
 
-        public void WordData(string k, string v)
+        public void WordData(string k, string v) // called from question forms to take data and write it to the dictionary
         {
             wordExportData.Add(k, v);
+            //MessageBox.Show("Word Data Method called with: " + k + " " + v);
         }
 
-        private void WordReplaceLooper()
+        private void WordReplaceLooper() // loops through the word document performing a find and replace operation
         {
             foreach (KeyValuePair<string, string> i in wordExportData)
             {
@@ -448,7 +448,7 @@ namespace SQT
 
         static void FindAndReplace(Word.Application fileOpen, object findText, object replaceWithText)
         {
-            object matchCase = false;
+            object matchCase = true;
             object matchWholeWord = true;
             object matchWildCards = false;
             object matchSoundsLike = false;
@@ -470,14 +470,193 @@ namespace SQT
                 ref matchKashida, ref matchDiacritics, ref matchAlefHamza, ref matchControl);
         }
 
-        public void QuestionCloseCall(Form f)
+        public void QuestionCloseCall(Form f) // method called by a closing Question form to signal the program to close the word document being used and to wipe the data from the dictionary
         {
-            Form[] questionForms = new Form[11];
+            //Form[] questionForms = new Form[11];
+            DialogResult d = MessageBox.Show("Are you sure you wish to cancel quote exporting?", "Close?", MessageBoxButtons.YesNo);
 
-            wordExportData.Clear();
-            WordFinish();
-            MessageBox.Show("Word Export Canceled");
-            f.Close();
+            if (d == DialogResult.Yes)
+            {
+                wordExportData.Clear();
+                WordFinish();
+                MessageBox.Show("Word Export Canceled");
+                f.Close();
+            }
         }
+
+        public string RadioButtonHandeler(TextBox tb = null, params RadioButton[] rb) // called with all the radio buttons in each group to find which is checked and return the text 
+        {
+            foreach (RadioButton i in rb)
+            {
+                if (i.Checked) //find the checked box
+                {
+                    if (i.Text == "")// if radio button has no text return the text of the textbox
+                    {
+                        return tb.Text;
+                    }
+                    else// otherwise retun the text of the radio button
+                    {
+                        return i.Text;
+                    }
+                }
+            }
+            return "";
+        }
+
+        public string CheckBoxHandler(params CheckBox[] cB)
+        {
+            string str = "";
+            int count = 0;
+
+            foreach (CheckBox i in cB)
+            {
+                if (i.Checked)
+                {
+                    count++;
+                }
+            }
+
+            foreach (CheckBox i in cB)
+            {
+                if (i.Checked)
+                {
+                    str += i.Text;
+
+                    if (count > 0)
+                    {
+                        if (count >= 3)
+                        {
+                            str += ", ";
+                        }
+                        else if (count == 2)
+                        {
+                            str += " & ";
+                        }
+                        count--;
+                    }
+                }
+            }
+
+            return str;
+        }
+
+        public string MeasureStringChecker(string text, string measurementSuffix) //called to check if the text has the correct measurment suffix before exporting to quote document
+        {
+            //check if text ends in the correct suffix
+            if (text.EndsWith(measurementSuffix))
+            {
+                //if so return the text as presented
+                return text;
+            }
+            else
+            {
+                //if not, append a space and add the measurement suffix
+                string s = text + " " + measurementSuffix;
+
+                //then return the new string
+                return s;
+            }
+        }
+
+        public string FormalDate()
+        {
+            string day = DateTime.Now.ToString("%d");
+            string monthYear = DateTime.Now.ToString("Y");
+
+            bool singleDigit = day.Length == 1;
+            bool endIn1 = day.EndsWith("1");
+            bool endIn2 = day.EndsWith("2");
+            bool endIn3 = day.EndsWith("3");
+            bool startWith1 = day.StartsWith("1");
+
+            if (endIn1)
+            {
+                if (singleDigit)
+                {
+                    day += "st";
+                }
+                else if (startWith1 && !singleDigit)
+                {
+                    day += "th";
+                }
+                else
+                {
+                    day += "st";
+                }
+            }
+            else if (endIn2)
+            {
+                if (singleDigit)
+                {
+                    day += "nd";
+                }
+                else if (startWith1 && !singleDigit)
+                {
+                    day += "th";
+                }
+                else
+                {
+                    day += "nd";
+                }
+            }
+            else if (endIn3)
+            {
+                if (singleDigit)
+                {
+                    day += "rd";
+                }
+                else if (startWith1 && !singleDigit)
+                {
+                    day += "th";
+                }
+                else
+                {
+                    day += "rd";
+                }
+            }
+            else
+            {
+                day += "th";
+            }
+
+            string date = day + " " + monthYear;
+            return date;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e) // close button
+        {
+            // lines below this till "return" are used for the close button to function as a generic debug button for testing. 
+            //close method works and requires no further testing at this time
+            MessageBox.Show(FormalDate());
+
+            return; // remove this line and above to have the close button function normally
+
+            if (document != null)
+            {
+                document.Close();
+            }
+            this.Close();
+        }
+        #region unused methods
+        private void label13_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void costOfLiftTB_TextChanged(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void labelLiftCurrency_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+            //
+        }
+        #endregion
     }
 }

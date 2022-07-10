@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuoteInfo11));
             this.button1 = new System.Windows.Forms.Button();
             this.buttonEUR = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -67,6 +68,8 @@
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.radioButton23 = new System.Windows.Forms.RadioButton();
             this.radioButton24 = new System.Windows.Forms.RadioButton();
+            this.tbfname = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox10.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -84,7 +87,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(11, 459);
+            this.button1.Location = new System.Drawing.Point(11, 563);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(66, 36);
@@ -97,7 +100,7 @@
             // buttonEUR
             // 
             this.buttonEUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEUR.Location = new System.Drawing.Point(627, 446);
+            this.buttonEUR.Location = new System.Drawing.Point(627, 546);
             this.buttonEUR.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEUR.Name = "buttonEUR";
             this.buttonEUR.Size = new System.Drawing.Size(112, 53);
@@ -527,12 +530,39 @@
             this.radioButton24.Text = "Yes";
             this.radioButton24.UseVisualStyleBackColor = true;
             // 
+            // tbfname
+            // 
+            this.tbfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbfname.ForeColor = System.Drawing.Color.Black;
+            this.tbfname.Location = new System.Drawing.Point(128, 458);
+            this.tbfname.Margin = new System.Windows.Forms.Padding(2);
+            this.tbfname.Multiline = true;
+            this.tbfname.Name = "tbfname";
+            this.tbfname.Size = new System.Drawing.Size(593, 80);
+            this.tbfname.TabIndex = 93;
+            this.tbfname.Text = "\r\n\r\n";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(30, 468);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 52);
+            this.label1.TabIndex = 92;
+            this.label1.Text = "General\r\nNotes\r\n";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // QuoteInfo11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(750, 510);
+            this.ClientSize = new System.Drawing.Size(750, 610);
+            this.Controls.Add(this.tbfname);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.groupBox11);
             this.Controls.Add(this.groupBox9);
@@ -548,8 +578,14 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonEUR);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "QuoteInfo11";
-            this.Text = "QuoteInfo11";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quote Generator";
             this.Load += new System.EventHandler(this.QuoteInfo11_Load);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
@@ -621,5 +657,7 @@
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.RadioButton radioButton23;
         private System.Windows.Forms.RadioButton radioButton24;
+        private System.Windows.Forms.TextBox tbfname;
+        private System.Windows.Forms.Label label1;
     }
 }

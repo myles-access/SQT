@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuoteInfo));
             this.tBFloors = new System.Windows.Forms.TextBox();
             this.tbNumberLifts = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -49,7 +50,7 @@
             this.tBFloors.Margin = new System.Windows.Forms.Padding(2);
             this.tBFloors.Name = "tBFloors";
             this.tBFloors.Size = new System.Drawing.Size(48, 32);
-            this.tBFloors.TabIndex = 31;
+            this.tBFloors.TabIndex = 4;
             this.tBFloors.Text = "2";
             this.tBFloors.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -61,7 +62,7 @@
             this.tbNumberLifts.Margin = new System.Windows.Forms.Padding(2);
             this.tbNumberLifts.Name = "tbNumberLifts";
             this.tbNumberLifts.Size = new System.Drawing.Size(48, 32);
-            this.tbNumberLifts.TabIndex = 30;
+            this.tbNumberLifts.TabIndex = 3;
             this.tbNumberLifts.Text = "1";
             this.tbNumberLifts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -97,7 +98,7 @@
             this.tBQuoteNumber.Margin = new System.Windows.Forms.Padding(2);
             this.tBQuoteNumber.Name = "tBQuoteNumber";
             this.tBQuoteNumber.Size = new System.Drawing.Size(165, 32);
-            this.tBQuoteNumber.TabIndex = 26;
+            this.tBQuoteNumber.TabIndex = 2;
             this.tBQuoteNumber.Text = "Qu225-0005";
             this.tBQuoteNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -121,7 +122,7 @@
             this.tBAddress.Margin = new System.Windows.Forms.Padding(2);
             this.tBAddress.Name = "tBAddress";
             this.tBAddress.Size = new System.Drawing.Size(539, 32);
-            this.tBAddress.TabIndex = 25;
+            this.tBAddress.TabIndex = 1;
             this.tBAddress.Text = "1 Main Street, Sydney";
             this.tBAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -192,8 +193,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tBAddress);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "QuoteInfo";
-            this.Text = "QuoteInfo";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quote Generator";
             this.Load += new System.EventHandler(this.QuoteInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

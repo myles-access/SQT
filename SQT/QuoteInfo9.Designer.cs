@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuoteInfo9));
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -169,7 +170,7 @@
             this.tbfname.Margin = new System.Windows.Forms.Padding(2);
             this.tbfname.Name = "tbfname";
             this.tbfname.Size = new System.Drawing.Size(100, 32);
-            this.tbfname.TabIndex = 74;
+            this.tbfname.TabIndex = 1;
             this.tbfname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -192,7 +193,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(433, 32);
-            this.textBox1.TabIndex = 76;
+            this.textBox1.TabIndex = 2;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -215,7 +216,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(433, 32);
-            this.textBox2.TabIndex = 78;
+            this.textBox2.TabIndex = 3;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
@@ -272,7 +273,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(433, 32);
-            this.textBox3.TabIndex = 85;
+            this.textBox3.TabIndex = 4;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -993,8 +994,14 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "QuoteInfo9";
-            this.Text = "....";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quote Generator";
             this.Load += new System.EventHandler(this.QuoteInfo9_Load);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SQT
@@ -13,6 +7,7 @@ namespace SQT
     public partial class QuoteInfo : Form
     {
         Form1 f = Application.OpenForms.OfType<Form1>().Single();
+
         public QuoteInfo()
         {
             InitializeComponent();
@@ -40,7 +35,11 @@ namespace SQT
         {
             QuoteInfo2 nF = new QuoteInfo2();
 
-            //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
+            //f.WordData("","");            //call WordData method in form 1 to send all info into the dictionary for writing 
+            f.WordData("AE101", tBAddress.Text); //address
+            f.WordData("AE102", tBQuoteNumber.Text);//quote number
+            f.WordData("AE103", tbNumberLifts.Text);//number of lifts
+            f.WordData("AE104", tBFloors.Text);//number of floors
 
             //Load next form and close this one 
             nF.Show();

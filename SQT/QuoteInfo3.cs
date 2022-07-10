@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SQT
@@ -29,37 +23,25 @@ namespace SQT
             textBox4.Text = f.textBox4.Text;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            f.QuestionCloseCall(this);
-        }
-
-        private void buttonEUR_Click(object sender, EventArgs e)
-        {
-            QuoteInfo4 nF = new QuoteInfo4();
-
-            //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
-
-            //Load next form and close this one 
-            nF.Show();
-            this.Close();
-        }
-
         private void buttonEUR_Click_1(object sender, EventArgs e)
         {
             QuoteInfo4 nF = new QuoteInfo4();
 
             //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
+            f.WordData("AE111", textBox2.Text);//Supplier
+            f.WordData("AE112", textBox4.Text);//model
+            f.WordData("AE113",textBox1.Text);//capacity
+            f.WordData("AE114", textBox3.Text);//lift number
+            f.WordData("AE115", textBox5.Text);//type of lift
+            f.WordData("AE215", "Full Collective"); //control type, not changable 
 
             //Load next form and close this one 
             nF.Show();
             this.Close();
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
             f.QuestionCloseCall(this);
         }
     }

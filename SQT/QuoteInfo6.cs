@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SQT
@@ -25,23 +19,7 @@ namespace SQT
 
         private void PullInfo()
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            f.QuestionCloseCall(this);
-        }
-
-        private void buttonEUR_Click(object sender, EventArgs e)
-        {
-            QuoteInfo7 nF = new QuoteInfo7();
-
-            //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
-
-            //Load next form and close this one 
-            nF.Show();
-            this.Close();
+            //
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -49,16 +27,23 @@ namespace SQT
             QuoteInfo7 nF = new QuoteInfo7();
 
             //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
+            f.WordData("AE134", f.MeasureStringChecker(textBox1.Text, "kg")); //load
+            f.WordData("AE135", f.MeasureStringChecker(textBox2.Text, "mps"));//speed
+            f.WordData("AE136", f.MeasureStringChecker(textBox7.Text, "mm")); // width
+            f.WordData("AE137", f.MeasureStringChecker(textBox5.Text, "mm"));//depth
+            f.WordData("AE138", f.MeasureStringChecker(textBox4.Text, "mm"));//height
+            f.WordData("AE139", f.MeasureStringChecker(textBox3.Text, "passengers"));//classification rating
+            f.WordData("AE140", textBox6.Text);//number of car entraces
+            f.WordData("AE141", f.MeasureStringChecker(textBox8.Text, "mm"));//front wall return 
+            f.WordData("AE142", "NOTE: " + textBox9.Text);//notes
 
             //Load next form and close this one 
             nF.Show();
             this.Close();
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             f.QuestionCloseCall(this);
         }
     }

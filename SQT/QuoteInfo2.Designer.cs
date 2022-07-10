@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuoteInfo2));
             this.button1 = new System.Windows.Forms.Button();
             this.buttonEUR = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -91,7 +92,7 @@
             this.tbphone.Margin = new System.Windows.Forms.Padding(2);
             this.tbphone.Name = "tbphone";
             this.tbphone.Size = new System.Drawing.Size(198, 32);
-            this.tbphone.TabIndex = 49;
+            this.tbphone.TabIndex = 3;
             this.tbphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -114,7 +115,7 @@
             this.tbfname.Margin = new System.Windows.Forms.Padding(2);
             this.tbfname.Name = "tbfname";
             this.tbfname.Size = new System.Drawing.Size(198, 32);
-            this.tbfname.TabIndex = 48;
+            this.tbfname.TabIndex = 1;
             this.tbfname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -137,7 +138,7 @@
             this.tblname.Margin = new System.Windows.Forms.Padding(2);
             this.tblname.Name = "tblname";
             this.tblname.Size = new System.Drawing.Size(198, 32);
-            this.tblname.TabIndex = 63;
+            this.tblname.TabIndex = 2;
             this.tblname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -160,7 +161,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(329, 32);
-            this.textBox3.TabIndex = 65;
+            this.textBox3.TabIndex = 4;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
@@ -183,7 +184,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(329, 32);
-            this.textBox1.TabIndex = 67;
+            this.textBox1.TabIndex = 5;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -206,7 +207,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(329, 32);
-            this.textBox2.TabIndex = 69;
+            this.textBox2.TabIndex = 6;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
@@ -242,8 +243,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbfname);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "QuoteInfo2";
-            this.Text = "QuoteInfo2";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quote Generator";
             this.Load += new System.EventHandler(this.QuoteInfo2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
