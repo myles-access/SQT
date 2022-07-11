@@ -34,8 +34,8 @@ namespace SQT
             f.WordData("AE127", f.MeasureStringChecker(textBox4.Text, "mm"));//travel
             f.WordData("AE128", textBox3.Text);// number of landings
             f.WordData("AE129", textBox5.Text);//number of landing doors 
-            f.WordData("AE130", f.RadioButtonHandeler(null, radioButton10)); //structure shaft 
-            f.WordData("AE131", f.RadioButtonHandeler(null, radioButton1));//fixings
+            f.WordData("AE130", f.RadioButtonHandeler(textBox6, radioButton10, radioButton9)); //structure shaft 
+            f.WordData("AE131", f.RadioButtonHandeler(textBox7, radioButton1, radioButton4));//fixings
             f.WordData("AE132", f.RadioButtonHandeler(null, radioButton5, radioButton6));//trimmer beams
             f.WordData("AE133", f.RadioButtonHandeler(null, radioButton3, radioButton2));//false floor
 

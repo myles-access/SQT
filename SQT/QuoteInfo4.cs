@@ -31,11 +31,11 @@ namespace SQT
             f.WordData("AE116", f.RadioButtonHandeler(null, radioButton1, radioButton2));//independent service
             f.WordData("AE117", f.RadioButtonHandeler(null, radioButton5, radioButton6));//load weighing
             f.WordData("AE118", f.RadioButtonHandeler(textBox2, radioButton11, radioButton12, radioButton13, radioButton14));//controler location
-            f.WordData("AE119", f.RadioButtonHandeler(null, radioButton9, radioButton10));//machine type
+            f.WordData("AE119", f.RadioButtonHandeler(textBox3, radioButton9, radioButton10));//machine type
             f.WordData("AE120", f.RadioButtonHandeler(null, radioButton3, radioButton4));//fire service
             f.WordData("AE121", f.RadioButtonHandeler(null, radioButton7, radioButton8));//emergency power operation
             f.WordData("AE122", textBox1.Text);//emergency power operation text
-            f.WordData("AE219", f.RadioButtonHandeler(null, radioButton15, radioButton16)); // drive type
+            f.WordData("AE219", f.RadioButtonHandeler(textBox4, radioButton15, radioButton16)); // drive type
 
             //Load next form and close this one 
             nF.Show();

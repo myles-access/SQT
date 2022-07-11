@@ -9,6 +9,7 @@ namespace SQT
     public partial class Form1 : Form
     {
         // VARS
+        public bool sucessfulSave = false;
         public string quoteNumber = "";
         public string exchangeRateDate;
         public float applicableExchangeRate = 1;
@@ -184,7 +185,7 @@ namespace SQT
                 exchangeRateLbl.Enabled = true;
                 lblExchangeDate.Enabled = true;
                 lblExchangeDate.Visible = true;
-                exchangeRateLbl.Text = "The current Exchange rate is $1 USD to " + PriceRounding(exchangeRates["USD"]) + " AUD";
+                exchangeRateLbl.Text = "The current exchange rate is $1 USD to " + PriceRounding(exchangeRates["USD"]) + " AUD";
                 lblExchangeDate.Text = "Correct as of " + exchangeRateDate;
                 exCurrency = 1;
             }
@@ -195,7 +196,7 @@ namespace SQT
                 exchangeRateLbl.Enabled = true;
                 lblExchangeDate.Enabled = true;
                 lblExchangeDate.Visible = true;
-                exchangeRateLbl.Text = "The current Exchange rate is €1 EUR to " + PriceRounding(exchangeRates["EUR"]) + " AUD";
+                exchangeRateLbl.Text = "The current exchange rate is €1 EUR to " + PriceRounding(exchangeRates["EUR"]) + " AUD";
                 lblExchangeDate.Text = "Correct as of " + exchangeRateDate;
                 exCurrency = 2;
             }
@@ -320,7 +321,7 @@ namespace SQT
 
         private string PriceRounding(float s)
         {
-            return "$" + Math.Round(s, 2).ToString("0.00");
+            return "$" + Math.Round(s, 2).ToString("N", new System.Globalization.CultureInfo("en-US"));
         }
 
         public void PriceListFormatting(Label label, float cost)
@@ -337,19 +338,18 @@ namespace SQT
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // generate price list button
         {
             GeneratePriceList();
             button3.Visible = true;
             button3.Enabled = true;
         }
 
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            QuoteInfo qI = new QuoteInfo();
-            qI.Show();
-        }
+        //private void button2_Click(object sender, EventArgs e) // export to quote button
+        //{
+        //    QuoteInfo qI = new QuoteInfo();
+        //    qI.Show();
+        //}
 
         //public string PullTextData(Label l, TextBox t)
         //{
@@ -371,11 +371,23 @@ namespace SQT
         {
             WordSetup();//find and set vars to the quote template document 
             WordSave(false); // save the doc
+            if (sucessfulSave)
+            {
+                WordData("AE101", tBAddress.Text); //address
+                WordData("AE102", tBQuoteNumber.Text);//quote number
+                WordData("AE103", tbNumberLifts.Text);//number of lifts
+                WordData("AE104", tBFloors.Text);//number of floors
 
-            QuoteInfo qI = new QuoteInfo();
-            qI.Show();//open questionaire 
-            this.Enabled = false;
-            //questions complete method called from final form of querstions to continue the export to word function. 
+                QuoteInfo2 qI = new QuoteInfo2();
+                qI.Show();//open questionaire 
+                this.Enabled = false;
+                //questions complete method called from final form of querstions to continue the export to word function. 
+            }
+            else
+            {
+                MessageBox.Show("Saving Error, Document not saved");
+                return;
+            }
         }
 
         public void QuestionsComplete() //called from the final question to continue the export to word function 
@@ -414,16 +426,13 @@ namespace SQT
                 saveFileDialog1.Title = ("Where to save the quote");
                 saveFileDialog1.InitialDirectory = "X:\\Sales\\Qu-" + DateTime.Now.ToString("yyyy");
                 saveFileDialog1.FileName = tBAddress.Text + " Quote";
-                saveFileDialog1.DefaultExt = "docx";
-                saveFileDialog1.Filter = "Word Docs (*.docx; *.docm)|*.docx;*.docm|All files (*.*)|*.*";
-                saveFileDialog1.ShowDialog();
-                if (saveFileDialog1.FileName != null || saveFileDialog1.FileName != "")
+                saveFileDialog1.DefaultExt = "docm";
+                saveFileDialog1.Filter = "Word Docs (*.docm; *.docx) |*.docm;*.docx|All files (*.*) |*.*";
+                //saveFileDialog1.ShowDialog();
+                if (saveFileDialog1.ShowDialog()==DialogResult.OK)
                 {
                     document.SaveAs2(saveFileDialog1.FileName);
-                }
-                else
-                {
-                    MessageBox.Show("Saving Error, Document not saved");
+                    sucessfulSave = true;
                 }
             }
             else if (b)
@@ -637,6 +646,7 @@ namespace SQT
             }
             this.Close();
         }
+
         #region unused methods
         private void label13_Click(object sender, EventArgs e)
         {

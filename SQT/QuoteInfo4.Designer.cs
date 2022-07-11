@@ -49,6 +49,7 @@
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
@@ -56,7 +57,8 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.radioButton15 = new System.Windows.Forms.RadioButton();
             this.radioButton16 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -251,6 +253,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.textBox3);
             this.groupBox5.Controls.Add(this.radioButton9);
             this.groupBox5.Controls.Add(this.radioButton10);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,23 +267,22 @@
             // radioButton9
             // 
             this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(7, 62);
+            this.radioButton9.Location = new System.Drawing.Point(7, 67);
             this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(53, 28);
+            this.radioButton9.Size = new System.Drawing.Size(14, 13);
             this.radioButton9.TabIndex = 1;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "No";
             this.radioButton9.UseVisualStyleBackColor = true;
             // 
             // radioButton10
             // 
             this.radioButton10.AutoSize = true;
+            this.radioButton10.Checked = true;
             this.radioButton10.Location = new System.Drawing.Point(6, 28);
             this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(158, 28);
+            this.radioButton10.Size = new System.Drawing.Size(102, 28);
             this.radioButton10.TabIndex = 0;
             this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "VVVF Gearless";
+            this.radioButton10.Text = "Gearless";
             this.radioButton10.UseVisualStyleBackColor = true;
             // 
             // groupBox6
@@ -297,6 +299,13 @@
             this.groupBox6.TabIndex = 52;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Controler Location";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(27, 126);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(139, 29);
+            this.textBox2.TabIndex = 54;
             // 
             // radioButton14
             // 
@@ -343,6 +352,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.textBox4);
             this.groupBox7.Controls.Add(this.radioButton15);
             this.groupBox7.Controls.Add(this.radioButton16);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -356,17 +366,16 @@
             // radioButton15
             // 
             this.radioButton15.AutoSize = true;
-            this.radioButton15.Location = new System.Drawing.Point(7, 62);
+            this.radioButton15.Location = new System.Drawing.Point(7, 65);
             this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(53, 28);
+            this.radioButton15.Size = new System.Drawing.Size(14, 13);
             this.radioButton15.TabIndex = 1;
-            this.radioButton15.TabStop = true;
-            this.radioButton15.Text = "No";
             this.radioButton15.UseVisualStyleBackColor = true;
             // 
             // radioButton16
             // 
             this.radioButton16.AutoSize = true;
+            this.radioButton16.Checked = true;
             this.radioButton16.Location = new System.Drawing.Point(6, 28);
             this.radioButton16.Name = "radioButton16";
             this.radioButton16.Size = new System.Drawing.Size(140, 28);
@@ -375,12 +384,19 @@
             this.radioButton16.Text = "Traction MRL";
             this.radioButton16.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // textBox3
             // 
-            this.textBox2.Location = new System.Drawing.Point(27, 126);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 29);
-            this.textBox2.TabIndex = 54;
+            this.textBox3.Location = new System.Drawing.Point(27, 58);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(139, 29);
+            this.textBox3.TabIndex = 55;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(27, 56);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(139, 29);
+            this.textBox4.TabIndex = 56;
             // 
             // QuoteInfo4
             // 
@@ -456,5 +472,7 @@
         private System.Windows.Forms.RadioButton radioButton15;
         private System.Windows.Forms.RadioButton radioButton16;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }

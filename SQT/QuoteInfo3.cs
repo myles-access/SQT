@@ -19,8 +19,8 @@ namespace SQT
 
         private void PullInfo()
         {
-            textBox2.Text = f.textBox2.Text;
-            textBox4.Text = f.textBox4.Text;
+            //textBox2.Text = f.textBox2.Text;
+           // textBox4.Text = f.textBox4.Text;
         }
 
         private void buttonEUR_Click_1(object sender, EventArgs e)
@@ -28,7 +28,7 @@ namespace SQT
             QuoteInfo4 nF = new QuoteInfo4();
 
             //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
-            f.WordData("AE111", textBox2.Text);//Supplier
+            f.WordData("AE111", f.RadioButtonHandeler(null, radioButton1, radioButton2, radioButton3)); //supplier
             f.WordData("AE112", textBox4.Text);//model
             f.WordData("AE113",textBox1.Text);//capacity
             f.WordData("AE114", textBox3.Text);//lift number
