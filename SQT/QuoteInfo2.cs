@@ -7,6 +7,7 @@ namespace SQT
     public partial class QuoteInfo2 : Form
     {
         Form1 f = Application.OpenForms.OfType<Form1>().Single();
+
         public QuoteInfo2()
         {
             InitializeComponent();
@@ -42,7 +43,6 @@ namespace SQT
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
             f.QuestionCloseCall(this);
         }
     }

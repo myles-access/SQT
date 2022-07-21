@@ -30,7 +30,8 @@ namespace SQT
             f.WordData("AE168", tbfname.Text); // number of COPS
             f.WordData("AE169", textBox1.Text);// main COP location
             f.WordData("AE170", textBox2.Text);//aux cop location
-            f.WordData("AE171", textBox3.Text); // designations 
+            f.WordData("AE171", textBox4.Text); // designations 
+            f.WordData("AE191", textBox3.Text); //keyt switch location
             f.WordData("AE172", f.RadioButtonHandeler(textBox6, radioButton15, radioButton19));// COP finish
             f.WordData("AE173", "Dual illumination buttons with gong");// button type 
             f.WordData("AE174", f.RadioButtonHandeler(null, radioButton3, radioButton4, radioButton1));// LED colour

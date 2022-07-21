@@ -37,7 +37,7 @@ namespace SQT
             f.WordData("AE162", f.RadioButtonHandeler(textBox2, radioButton15, radioButton16));//handrail
             f.WordData("AE163", @"Natural & Mechanical");// ventelation fan
             f.WordData("AE164", f.RadioButtonHandeler(textBox5, radioButton4, radioButton3)); //side wall 
-            f.WordData("AE165", textBox1.Text + "LED Lights"); // lighting 
+            f.WordData("AE165", textBox1.Text + " LED Lights"); // lighting 
             f.WordData("AE166", f.RadioButtonHandeler(null, radioButton12, radioButton11)); // skirting
             f.WordData("AE167", f.RadioButtonHandeler(null, radioButton23, radioButton24)); // protective blankets 
             f.WordData("AE216", f.RadioButtonHandeler(textBox6, radioButton25, radioButton26)); //  rear wall
@@ -54,7 +54,8 @@ namespace SQT
 
         private void groupBox4_Enter(object sender, EventArgs e)
         {
-
+            //
         }
+
     }
 }

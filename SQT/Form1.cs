@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
 using Word = Microsoft.Office.Interop.Word;
@@ -8,13 +9,15 @@ namespace SQT
 {
     public partial class Form1 : Form
     {
-        // VARS
+        #region VARS
         public bool sucessfulSave = false;
         public string quoteNumber = "";
         public string exchangeRateDate;
+        public string exchangeRateText;
         public float applicableExchangeRate = 1;
         public float freightTotal = 0;
         public float liftPrice;
+        public float lowestMargin;
         public int exCurrency = 0; // 0 AUD, 1 USD, 2 EUR
         public int num20Ft;
         public int num40Ft;
@@ -22,8 +25,10 @@ namespace SQT
         public Dictionary<int, float> labourPrice = new Dictionary<int, float>();
         public Dictionary<string, string> wordExportData = new Dictionary<string, string>();
         public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
+        public Dictionary<string, string> priceExports = new Dictionary<string, string>();
         Word.Application fileOpen;
         Word.Document document;
+        #endregion
 
         public Form1()
         {
@@ -32,12 +37,14 @@ namespace SQT
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Enabled = true;
+            //this.Enabled = true;
             FetchBasePrices();
             FetchCurrencyRates();
             FetchLabourPrices();
             GeneratePriceList();
 
+            lowestMargin = basePrices["17LowestMargin"];
+            tbMargin.Text = basePrices["18DefaultMargin"].ToString();
             lblCostOfParts.Text = "$0";
             lblCostIncludingMargin.Text = "$0";
             lblGST.Text = "$0";
@@ -47,6 +54,8 @@ namespace SQT
             lbWait.Visible = false;
             button3.Visible = false;
             button3.Enabled = false;
+            printButton.Visible = false;
+            printButton.Enabled = false;
         }
 
         private void tBQuoteNumber_TextChanged(object sender, EventArgs e)
@@ -177,6 +186,7 @@ namespace SQT
             {
                 applicableExchangeRate = 1;
                 exCurrency = 0;
+                exchangeRateText = "AUD";
             }
             else if (selector == "U")
             {
@@ -188,6 +198,7 @@ namespace SQT
                 exchangeRateLbl.Text = "The current exchange rate is $1 USD to " + PriceRounding(exchangeRates["USD"]) + " AUD";
                 lblExchangeDate.Text = "Correct as of " + exchangeRateDate;
                 exCurrency = 1;
+                exchangeRateText = "USD";
             }
             else if (selector == "E")
             {
@@ -199,6 +210,7 @@ namespace SQT
                 exchangeRateLbl.Text = "The current exchange rate is €1 EUR to " + PriceRounding(exchangeRates["EUR"]) + " AUD";
                 lblExchangeDate.Text = "Correct as of " + exchangeRateDate;
                 exCurrency = 2;
+                exchangeRateText = "EUR";
             }
         }
 
@@ -297,7 +309,7 @@ namespace SQT
                 lblLiftNoConvert.Visible = true;
                 lblLiftNoConvertPrice.Visible = true;
                 lblLiftNoConvert.Text = "Cost of Lift (EUR)";
-                PriceListFormatting(lblLiftNoConvertPrice, float.Parse(tbCost.Text));
+                PriceListFormatting(lblLiftNoConvertPrice, float.Parse(tbCost.Text), true);
             }
 
             //add freight based on number of required containers 
@@ -319,16 +331,23 @@ namespace SQT
             lblPriceIncludingGST.Text = PriceRounding(liftPrice * marginPercent * 1.1f);
         }
 
-        private string PriceRounding(float s)
+        private string PriceRounding(float s, bool b = false)
         {
-            return "$" + Math.Round(s, 2).ToString("N", new System.Globalization.CultureInfo("en-US"));
+            if (b)
+            {
+                return "€" + Math.Round(s, 2).ToString("N", new System.Globalization.CultureInfo("en-US"));
+            }
+            else
+            {
+                return "$" + Math.Round(s, 2).ToString("N", new System.Globalization.CultureInfo("en-US"));
+            }
         }
 
-        public void PriceListFormatting(Label label, float cost)
-        {
+        public void PriceListFormatting(Label label, float cost, bool b = false)
+        {           
             if (cost > 0)
             {
-                label.Text = PriceRounding(cost);
+                label.Text = PriceRounding(cost, b);
                 liftPrice += cost;
             }
             else
@@ -340,9 +359,16 @@ namespace SQT
 
         private void button1_Click(object sender, EventArgs e) // generate price list button
         {
-            GeneratePriceList();
-            button3.Visible = true;
-            button3.Enabled = true;
+            lblWaitControl(true);
+            if (floorsTbChecker() && marginTbChecker())
+            {
+                GeneratePriceList();
+                button3.Visible = true;
+                button3.Enabled = true;
+                printButton.Visible = true;
+                printButton.Enabled = true;
+            }
+            lblWaitControl(false);
         }
 
         //private void button2_Click(object sender, EventArgs e) // export to quote button
@@ -380,7 +406,6 @@ namespace SQT
 
                 QuoteInfo2 qI = new QuoteInfo2();
                 qI.Show();//open questionaire 
-                this.Enabled = false;
                 //questions complete method called from final form of querstions to continue the export to word function. 
             }
             else
@@ -397,7 +422,7 @@ namespace SQT
             WordData("AE213", lblGST.Text);
             WordData("AE214", lblPriceIncludingGST.Text);
 
-            WordReplaceLooper();// loop the find and replace method to populate the info 
+            WordReplaceLooper(wordExportData);// loop the find and replace method to populate the info 
             WordSave(true);// save the doc again 
             WordFinish();//finish the methods 
 
@@ -405,7 +430,7 @@ namespace SQT
 
         public void WordSetup() // sets up the word document ready to be written
         {
-            lbWait.Visible = true;
+            lblWaitControl(true);
             fileOpen = new Word.Application();
             document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\SQT.docm", ReadOnly: false);
             fileOpen.Visible = false;
@@ -415,8 +440,7 @@ namespace SQT
         private void WordFinish() // closes the word document 
         {
             fileOpen.Quit();
-            lbWait.Visible = false;
-            this.Enabled = true;
+            lblWaitControl(false);
         }
 
         private void WordSave(bool b) // if false,asks where to save the word doc and saves it. if true saves in the previously set location
@@ -429,7 +453,7 @@ namespace SQT
                 saveFileDialog1.DefaultExt = "docm";
                 saveFileDialog1.Filter = "Word Docs (*.docm; *.docx) |*.docm;*.docx|All files (*.*) |*.*";
                 //saveFileDialog1.ShowDialog();
-                if (saveFileDialog1.ShowDialog()==DialogResult.OK)
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     document.SaveAs2(saveFileDialog1.FileName);
                     sucessfulSave = true;
@@ -447,9 +471,9 @@ namespace SQT
             //MessageBox.Show("Word Data Method called with: " + k + " " + v);
         }
 
-        private void WordReplaceLooper() // loops through the word document performing a find and replace operation
+        private void WordReplaceLooper(Dictionary<string, string> d) // loops through the word document performing a find and replace operation
         {
-            foreach (KeyValuePair<string, string> i in wordExportData)
+            foreach (KeyValuePair<string, string> i in d)
             {
                 FindAndReplace(fileOpen, i.Key, i.Value);
             }
@@ -636,9 +660,9 @@ namespace SQT
         {
             // lines below this till "return" are used for the close button to function as a generic debug button for testing. 
             //close method works and requires no further testing at this time
-            MessageBox.Show(FormalDate());
+            //MessageBox.Show(FormalDate());
 
-            return; // remove this line and above to have the close button function normally
+            // return; // remove this line and above to have the close button function normally
 
             if (document != null)
             {
@@ -668,5 +692,148 @@ namespace SQT
             //
         }
         #endregion
+
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            lblWaitControl(true);
+            printButton.BackColor = Color.Blue;
+            if (SavePricesDocument())
+            {
+                MessageBox.Show("Prices exported as " + saveFileDialog1.FileName);
+                printButton.BackColor = Color.Green;
+            }
+            else
+            {
+                MessageBox.Show("Price Saving Failed");
+                printButton.BackColor = Color.Red;
+            }
+            lblWaitControl(false);
+        }
+
+        private bool SavePricesDocument()
+        {
+            saveFileDialog1.Title = ("Where to save the prices");
+            saveFileDialog1.InitialDirectory = "X:\\Sales\\Qu-" + DateTime.Now.ToString("yyyy");
+            saveFileDialog1.FileName = tBAddress.Text + " Price Breakdown";
+            saveFileDialog1.DefaultExt = "docx";
+            saveFileDialog1.Filter = "Word Doc (*.docx) |*.docx| All files (*.*) |*.*";
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                fileOpen = new Word.Application();
+                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\PriceExport.docx", ReadOnly: false);
+                SavePricesToDict();
+                fileOpen.Visible = false;
+                document.Activate();
+                WordReplaceLooper(priceExports);
+                document.SaveAs2(saveFileDialog1.FileName);
+                document.Close();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void SavePricesToDict()
+        {
+            priceExports.Clear();
+            priceExports.Add("AEP1", tBAddress.Text);
+            priceExports.Add("AEP2", tBQuoteNumber.Text);
+            priceExports.Add("AEP3", FormalDate());
+            priceExports.Add("AEP4", exchangeRateText);
+            priceExports.Add("AEP5", lblLiftNoConvertPrice.Text);
+            priceExports.Add("AEP6", lblCost.Text);
+            priceExports.Add("AEP7", lblFinishes.Text);
+            priceExports.Add("AEP8", lblFire.Text);
+            priceExports.Add("AEP9", lblGSM.Text);
+            priceExports.Add("AEP10", lblBlanket.Text);
+            priceExports.Add("AEP11", lblSump.Text);
+            priceExports.Add("AEP12", lblSundries.Text);
+            priceExports.Add("AEP13", lblWiring.Text);
+            priceExports.Add("AEP14", lblSign.Text);
+            priceExports.Add("AEP15", lblShaft.Text);
+            priceExports.Add("AEP16", lblDuct.Text);
+            priceExports.Add("AEP17", lblElectrical.Text);
+            priceExports.Add("AEP18", lblAccommodation.Text);
+            priceExports.Add("AEP19", lblCartage.Text);
+            priceExports.Add("AEP20", lblDrawing.Text);
+            priceExports.Add("AEP21", lblFork.Text);
+            priceExports.Add("AEP22", lblMaintenance.Text);
+            priceExports.Add("AEP23", lblManuals.Text);
+            priceExports.Add("AEP24", lblStorage.Text);
+            priceExports.Add("AEP25", lblTravel.Text);
+            priceExports.Add("AEP26", lblWorkcover.Text);
+            priceExports.Add("AEP27", lblScaffold.Text);
+            priceExports.Add("AEP28", lblEntrance.Text);
+            priceExports.Add("AEP29", lblSecurity.Text);
+            priceExports.Add("AEP30", lblFreight.Text);
+            priceExports.Add("AEP31", lblLabour.Text);
+            priceExports.Add("AEP32", lblCostOfParts.Text);
+            priceExports.Add("AEP33", tbMargin.Text + "%");
+            priceExports.Add("AEP34", lblCostIncludingMargin.Text);
+            priceExports.Add("AEP35", lblGST.Text);
+            priceExports.Add("AEP36", lblPriceIncludingGST.Text);
+        }
+
+        //private void tBFloors_TextChanged(object sender, EventArgs e)
+        //{
+        //    floorsTbChecker();
+        //}
+
+        public bool floorsTbChecker()
+        {
+            int i = 0;
+            try
+            {
+                i = int.Parse(tBFloors.Text);
+            }
+            catch
+            {
+                //MessageBox.Show("Invalid floor number entered ");
+                return false;  
+            }
+
+            if (i > 16 || i < 0)
+            {
+                MessageBox.Show("Invalid floor number entered ");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        //private void tbMargin_Leave(object sender, EventArgs e)
+        //{
+        //    marginTbChecker();
+        //}
+
+        public bool marginTbChecker()
+        {
+            try
+            {
+                if (lowestMargin > float.Parse(tbMargin.Text))
+                {
+                    MessageBox.Show("Margin % is below the allowed minimum of " + lowestMargin + "%");
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void lblWaitControl(bool b)
+        {
+            lbWait.Enabled = b;
+            lbWait.Visible = b;
+            this.Enabled = !b;
+        }
     }
 }

@@ -39,14 +39,17 @@ namespace SQT
             f.WordData("AE210", f.RadioButtonHandeler(null, radioButton23, radioButton24));//out of service 
             f.WordData("AE218", "NOTE: " + tbfname.Text);//general notes
 
+            //this.Hide();
             //Load next form and close this one 
             f.QuestionsComplete();
             this.Close();
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             f.QuestionCloseCall(this);
+
         }
     }
 }

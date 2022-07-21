@@ -21,6 +21,7 @@ namespace SQT
         {
             //textBox2.Text = f.textBox2.Text;
            // textBox4.Text = f.textBox4.Text;
+           
         }
 
         private void buttonEUR_Click_1(object sender, EventArgs e)
