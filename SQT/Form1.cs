@@ -11,25 +11,31 @@ namespace SQT
     {
         #region VARS
         public bool sucessfulSave = false;
+
         public string quoteNumber = "";
         public string exchangeRateDate;
         public string exchangeRateText;
+
         public float applicableExchangeRate = 1;
         public float freightTotal = 0;
         public float liftPrice;
         public float lowestMargin;
+
         public int exCurrency = 0; // 0 AUD, 1 USD, 2 EUR
         public int num20Ft;
         public int num40Ft;
+
         public Dictionary<string, float> basePrices = new Dictionary<string, float>();
         public Dictionary<int, float> labourPrice = new Dictionary<int, float>();
         public Dictionary<string, string> wordExportData = new Dictionary<string, string>();
         public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
         public Dictionary<string, string> priceExports = new Dictionary<string, string>();
+
         Word.Application fileOpen;
         Word.Document document;
         #endregion
 
+        #region Form Load Methods
         public Form1()
         {
             InitializeComponent();
@@ -57,16 +63,206 @@ namespace SQT
             printButton.Visible = false;
             printButton.Enabled = false;
         }
+        #endregion
 
-        private void tBQuoteNumber_TextChanged(object sender, EventArgs e)
+        #region Button Press Methods
+        private void buttonAUD_Click(object sender, EventArgs e)
         {
-            //when the quote number text box is changed, if it is different to the existing quote number update the quote number
-            if (quoteNumber != tBQuoteNumber.Text)
+            SelectCurrency("A");
+        }
+
+        private void buttonUSD_Click(object sender, EventArgs e)
+        {
+            SelectCurrency("U");
+        }
+
+        private void buttonEUR_Click(object sender, EventArgs e)
+        {
+            SelectCurrency("E");
+        }
+
+        private void btnShippingReset_Click(object sender, EventArgs e)
+        {
+            ShippingCalculation(1);
+        }
+
+        private void btn20Ft_Click(object sender, EventArgs e)
+        {
+            ShippingCalculation(2);
+        }
+
+        private void btn40Ft_Click(object sender, EventArgs e)
+        {
+            ShippingCalculation(3);
+        }
+
+        private void button1_Click(object sender, EventArgs e) // generate price list button
+        {
+            lblWaitControl(true);
+            if (floorsTbChecker() && marginTbChecker())
             {
-                quoteNumber = tBQuoteNumber.Text;
+                GeneratePriceList();
+                button3.Visible = true;
+                button3.Enabled = true;
+                printButton.Visible = true;
+                printButton.Enabled = true;
+            }
+            lblWaitControl(false);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            WordSetup();//find and set vars to the quote template document 
+            WordSave(false); // save the doc
+            if (sucessfulSave)
+            {
+                WordData("AE101", tBAddress.Text); //address
+                WordData("AE102", tBQuoteNumber.Text);//quote number
+                WordData("AE103", tbNumberLifts.Text);//number of lifts
+                WordData("AE104", tBFloors.Text);//number of floors
+
+                QuoteInfo2 qI = new QuoteInfo2();
+                qI.Show();//open questionaire 
+                //questions complete method called from final form of querstions to continue the export to word function. 
+            }
+            else
+            {
+                MessageBox.Show("Saving Error, Document not saved");
+                return;
             }
         }
 
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            lblWaitControl(true);
+            printButton.BackColor = Color.Blue;
+            if (SavePricesDocument())
+            {
+                MessageBox.Show("Prices exported as " + saveFileDialog1.FileName);
+                printButton.BackColor = Color.Green;
+            }
+            else
+            {
+                MessageBox.Show("Price Saving Failed");
+                printButton.BackColor = Color.Red;
+            }
+            lblWaitControl(false);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e) // close button
+        {
+            // lines below this till "return" are used for the close button to function as a generic debug button for testing. 
+            //close method works and requires no further testing at this time
+            //MessageBox.Show(FormalDate());
+
+            // return; // remove this line and above to have the close button function normally
+
+            if (document != null)
+            {
+                document.Close();
+            }
+            this.Close();
+        }
+        #endregion
+
+        #region Word Document Processing Methods
+        public void WordSetup() // sets up the word document ready to be written
+        {
+            lblWaitControl(true);
+            fileOpen = new Word.Application();
+            document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\SQT.docm", ReadOnly: false);
+            fileOpen.Visible = false;
+            document.Activate();
+        }
+
+        private void WordFinish() // closes the word document 
+        {
+            fileOpen.Quit();
+            lblWaitControl(false);
+        }
+
+        private void WordSave(bool b) // if false,asks where to save the word doc and saves it. if true saves in the previously set location
+        {
+            if (!b)
+            {
+                saveFileDialog1.Title = ("Where to save the quote");
+                saveFileDialog1.InitialDirectory = "X:\\Sales\\Qu-" + DateTime.Now.ToString("yyyy");
+                saveFileDialog1.FileName = tBAddress.Text + " Quote";
+                saveFileDialog1.DefaultExt = "docm";
+                saveFileDialog1.Filter = "Word Docs (*.docm; *.docx) |*.docm;*.docx|All files (*.*) |*.*";
+                //saveFileDialog1.ShowDialog();
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    document.SaveAs2(saveFileDialog1.FileName);
+                    sucessfulSave = true;
+                }
+            }
+            else if (b)
+            {
+                document.SaveAs2(saveFileDialog1.FileName);
+            }
+        }
+
+        private void WordReplaceLooper(Dictionary<string, string> d) // loops through the word document performing a find and replace operation
+        {
+            foreach (KeyValuePair<string, string> i in d)
+            {
+                FindAndReplace(fileOpen, i.Key, i.Value);
+            }
+        }
+
+        static void FindAndReplace(Word.Application fileOpen, object findText, object replaceWithText)
+        {
+            object matchCase = true;
+            object matchWholeWord = true;
+            object matchWildCards = false;
+            object matchSoundsLike = false;
+            object matchAllWordForms = false;
+            object forward = true;
+            object format = false;
+            object matchKashida = false;
+            object matchDiacritics = false;
+            object matchAlefHamza = false;
+            object matchControl = false;
+            object read_only = false;
+            object visible = true;
+            object replace = 2;
+            object wrap = 1;
+
+            //execute find and replace
+            fileOpen.Selection.Find.Execute(ref findText, ref matchCase, ref matchWholeWord,
+                ref matchWildCards, ref matchSoundsLike, ref matchAllWordForms, ref forward, ref wrap, ref format, ref replaceWithText, ref replace,
+                ref matchKashida, ref matchDiacritics, ref matchAlefHamza, ref matchControl);
+        }
+        
+        private bool SavePricesDocument()
+        {
+            saveFileDialog1.Title = ("Where to save the prices");
+            saveFileDialog1.InitialDirectory = "X:\\Sales\\Qu-" + DateTime.Now.ToString("yyyy");
+            saveFileDialog1.FileName = tBAddress.Text + " Price Breakdown";
+            saveFileDialog1.DefaultExt = "docx";
+            saveFileDialog1.Filter = "Word Doc (*.docx) |*.docx| All files (*.*) |*.*";
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                fileOpen = new Word.Application();
+                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\PriceExport.docx", ReadOnly: false);
+                SavePricesToDict();
+                fileOpen.Visible = false;
+                document.Activate();
+                WordReplaceLooper(priceExports);
+                document.SaveAs2(saveFileDialog1.FileName);
+                document.Close();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region XML Methods
         //find the live currency rates from floatrates.com and write them into the Exchange rate dictionary 
         private void FetchCurrencyRates()
         {
@@ -159,22 +355,269 @@ namespace SQT
 
             XMLR.Close();
         }
+        #endregion
 
-        //set the exchange rate from the dictionary and update texts based on the clicked button.
-
-        private void buttonAUD_Click(object sender, EventArgs e)
+        #region Data Formatting Methods
+        private string PriceRounding(float s, bool b = false)
         {
-            SelectCurrency("A");
+            if (b)
+            {
+                return "€" + Math.Round(s, 2).ToString("N", new System.Globalization.CultureInfo("en-US"));
+            }
+            else
+            {
+                return "$" + Math.Round(s, 2).ToString("N", new System.Globalization.CultureInfo("en-US"));
+            }
         }
 
-        private void buttonUSD_Click(object sender, EventArgs e)
+        public void PriceListFormatting(Label label, float cost, bool b = false)
         {
-            SelectCurrency("U");
+            if (cost > 0)
+            {
+                label.Text = PriceRounding(cost, b);
+                liftPrice += cost;
+            }
+            else
+            {
+                label.Text = "N/A";
+                liftPrice += 0;
+            }
         }
 
-        private void buttonEUR_Click(object sender, EventArgs e)
+        public string FormalDate()
         {
-            SelectCurrency("E");
+            string day = DateTime.Now.ToString("%d");
+            string monthYear = DateTime.Now.ToString("Y");
+
+            bool singleDigit = day.Length == 1;
+            bool endIn1 = day.EndsWith("1");
+            bool endIn2 = day.EndsWith("2");
+            bool endIn3 = day.EndsWith("3");
+            bool startWith1 = day.StartsWith("1");
+
+            //if the days number ends in a 1 it requires either "th" or "st" suffix 
+            if (endIn1)
+            {
+                // if it is single digit it means it is the 1st and requires the "st" suffix
+                if (singleDigit)
+                {
+                    day += "st";
+                }
+                // if it starts with a 1 and is 2 digits it is the 11th and requires the "th" suffix
+                else if (startWith1 && !singleDigit)
+                {
+                    day += "th";
+                }
+                //if it starts with any other number and si not single digit it means it is not the 1st or the 11th and requires the "st" suffix
+                else
+                {
+                    day += "st";
+                }
+            }
+            //if the days number ends in a 2 it requires either "th" or "nd" suffix
+            else if (endIn2)
+            {
+                // if it is single digit it means it is the 2nd and requires the "nd" suffix
+                if (singleDigit)
+                {
+                    day += "nd";
+                }
+                // if it starts with a 1 and is 2 digits it is the 12th and requires the "th" suffix
+                else if (startWith1 && !singleDigit)
+                {
+                    day += "th";
+                }
+                //if it starts with any other number and si not single digit it means it is not the 2nd or the 12th and requires the "nd" suffix
+                else
+                {
+                    day += "nd";
+                }
+            }
+            //if the days number ends in 3 it requires either "th" or "rd" suffix
+            else if (endIn3)
+            {
+                // if it is single digit it means it is the 3rd and requires the "rd" suffix
+                if (singleDigit)
+                {
+                    day += "rd";
+                }
+                // if it starts with a 1 and is 2 digits it is the 13th and requires the "th" suffix
+                else if (startWith1 && !singleDigit)
+                {
+                    day += "th";
+                }
+                //if it starts with any other number and si not single digit it means it is not the 3rd or the 13th and requires the "rd" suffix
+                else
+                {
+                    day += "rd";
+                }
+            }
+            // if the days number ends in any other number it requires a "th" suffix
+            else
+            {
+                day += "th";
+            }
+
+            //take the correctly formatted date number and add on a full length month and year 
+            string date = day + " " + monthYear;
+            //return the date as a string 
+            return date;
+        }
+
+        public string MeasureStringChecker(string text, string measurementSuffix) //called to check if the text has the correct measurment suffix before exporting to quote document
+        {
+            //check if text ends in the correct suffix
+            if (text.EndsWith(measurementSuffix))
+            {
+                //if so return the text as presented
+                return text;
+            }
+            else
+            {
+                //if not, append a space and add the measurement suffix
+                string s = text + " " + measurementSuffix;
+
+                //then return the new string
+                return s;
+            }
+        }
+        
+        public string RadioButtonHandeler(TextBox tb = null, params RadioButton[] rb) // called with all the radio buttons in each group to find which is checked and return the text 
+        {
+            foreach (RadioButton i in rb)
+            {
+                if (i.Checked) //find the checked box
+                {
+                    if (i.Text == "")// if radio button has no text return the text of the textbox
+                    {
+                        return tb.Text;
+                    }
+                    else// otherwise retun the text of the radio button
+                    {
+                        return i.Text;
+                    }
+                }
+            }
+            return "";
+        }
+
+        public string CheckBoxHandler(params CheckBox[] cB) //called with all the checkboxes in each group, it will then read them and determine how to return a string
+        {
+            string str = "";
+            int count = 0;
+
+            // count the number of checked boxes
+            foreach (CheckBox i in cB)
+            {
+                if (i.Checked)
+                {
+                    count++;
+                }
+            }
+
+            //loop through all the check boxes in the array
+            foreach (CheckBox i in cB)
+            {
+                if (i.Checked)
+                {
+                    //when a checked box is found add it's text to the end of the string
+                    str += i.Text;
+
+                    //if the counter is 1 or lower it means that the last box processed was the final checked box an thus requires no connector for addition boxes texts. 
+                    if (count > 0)
+                    {
+                        // if there is 3 checked boxes or more remaining add a comma
+                        if (count >= 3)
+                        {
+                            str += ", ";
+                        }
+                        // if there is 2 checked boxes remaining add an &
+                        else if (count == 2)
+                        {
+                            str += " & ";
+                        }
+                        //then reduce the counter of remaining checked boxes
+                        count--;
+                    }
+                }
+            }
+
+            //return the final string of all checkboxes texts joined. 
+            return str;
+        }
+
+        public bool floorsTbChecker()
+        {
+            int i = 0;
+            try
+            {
+                i = int.Parse(tBFloors.Text);
+            }
+            catch
+            {
+                //MessageBox.Show("Invalid floor number entered ");
+                return false;
+            }
+
+            if (i > 16 || i < 0)
+            {
+                MessageBox.Show("Invalid floor number entered ");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public bool marginTbChecker()
+        {
+            try
+            {
+                if (lowestMargin > float.Parse(tbMargin.Text))
+                {
+                    MessageBox.Show("Margin % is below the allowed minimum of " + lowestMargin + "%");
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
+        #endregion
+
+        #region unused methods
+        private void label13_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void costOfLiftTB_TextChanged(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void labelLiftCurrency_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+            //
+        }
+        #endregion
+
+        private void tBQuoteNumber_TextChanged(object sender, EventArgs e)
+        {
+            //when the quote number text box is changed, if it is different to the existing quote number update the quote number
+            if (quoteNumber != tBQuoteNumber.Text)
+            {
+                quoteNumber = tBQuoteNumber.Text;
+            }
         }
 
         public void SelectCurrency(string selector)
@@ -212,21 +655,6 @@ namespace SQT
                 exCurrency = 2;
                 exchangeRateText = "EUR";
             }
-        }
-
-        private void btnShippingReset_Click(object sender, EventArgs e)
-        {
-            ShippingCalculation(1);
-        }
-
-        private void btn20Ft_Click(object sender, EventArgs e)
-        {
-            ShippingCalculation(2);
-        }
-
-        private void btn40Ft_Click(object sender, EventArgs e)
-        {
-            ShippingCalculation(3);
         }
 
         public void ShippingCalculation(int selector)
@@ -331,90 +759,6 @@ namespace SQT
             lblPriceIncludingGST.Text = PriceRounding(liftPrice * marginPercent * 1.1f);
         }
 
-        private string PriceRounding(float s, bool b = false)
-        {
-            if (b)
-            {
-                return "€" + Math.Round(s, 2).ToString("N", new System.Globalization.CultureInfo("en-US"));
-            }
-            else
-            {
-                return "$" + Math.Round(s, 2).ToString("N", new System.Globalization.CultureInfo("en-US"));
-            }
-        }
-
-        public void PriceListFormatting(Label label, float cost, bool b = false)
-        {           
-            if (cost > 0)
-            {
-                label.Text = PriceRounding(cost, b);
-                liftPrice += cost;
-            }
-            else
-            {
-                label.Text = "N/A";
-                liftPrice += 0;
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e) // generate price list button
-        {
-            lblWaitControl(true);
-            if (floorsTbChecker() && marginTbChecker())
-            {
-                GeneratePriceList();
-                button3.Visible = true;
-                button3.Enabled = true;
-                printButton.Visible = true;
-                printButton.Enabled = true;
-            }
-            lblWaitControl(false);
-        }
-
-        //private void button2_Click(object sender, EventArgs e) // export to quote button
-        //{
-        //    QuoteInfo qI = new QuoteInfo();
-        //    qI.Show();
-        //}
-
-        //public string PullTextData(Label l, TextBox t)
-        //{
-        //    if (l != null)
-        //    {
-        //        return l.Text;
-        //    }
-        //    else if (t != null)
-        //    {
-        //        return t.Text;
-        //    }
-        //    else
-        //    {
-        //        return null;
-        //    }
-        //}
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            WordSetup();//find and set vars to the quote template document 
-            WordSave(false); // save the doc
-            if (sucessfulSave)
-            {
-                WordData("AE101", tBAddress.Text); //address
-                WordData("AE102", tBQuoteNumber.Text);//quote number
-                WordData("AE103", tbNumberLifts.Text);//number of lifts
-                WordData("AE104", tBFloors.Text);//number of floors
-
-                QuoteInfo2 qI = new QuoteInfo2();
-                qI.Show();//open questionaire 
-                //questions complete method called from final form of querstions to continue the export to word function. 
-            }
-            else
-            {
-                MessageBox.Show("Saving Error, Document not saved");
-                return;
-            }
-        }
-
         public void QuestionsComplete() //called from the final question to continue the export to word function 
         {
             WordData("AE211", FormalDate());
@@ -428,79 +772,10 @@ namespace SQT
 
         }
 
-        public void WordSetup() // sets up the word document ready to be written
-        {
-            lblWaitControl(true);
-            fileOpen = new Word.Application();
-            document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\SQT.docm", ReadOnly: false);
-            fileOpen.Visible = false;
-            document.Activate();
-        }
-
-        private void WordFinish() // closes the word document 
-        {
-            fileOpen.Quit();
-            lblWaitControl(false);
-        }
-
-        private void WordSave(bool b) // if false,asks where to save the word doc and saves it. if true saves in the previously set location
-        {
-            if (!b)
-            {
-                saveFileDialog1.Title = ("Where to save the quote");
-                saveFileDialog1.InitialDirectory = "X:\\Sales\\Qu-" + DateTime.Now.ToString("yyyy");
-                saveFileDialog1.FileName = tBAddress.Text + " Quote";
-                saveFileDialog1.DefaultExt = "docm";
-                saveFileDialog1.Filter = "Word Docs (*.docm; *.docx) |*.docm;*.docx|All files (*.*) |*.*";
-                //saveFileDialog1.ShowDialog();
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    document.SaveAs2(saveFileDialog1.FileName);
-                    sucessfulSave = true;
-                }
-            }
-            else if (b)
-            {
-                document.SaveAs2(saveFileDialog1.FileName);
-            }
-        }
-
         public void WordData(string k, string v) // called from question forms to take data and write it to the dictionary
         {
             wordExportData.Add(k, v);
             //MessageBox.Show("Word Data Method called with: " + k + " " + v);
-        }
-
-        private void WordReplaceLooper(Dictionary<string, string> d) // loops through the word document performing a find and replace operation
-        {
-            foreach (KeyValuePair<string, string> i in d)
-            {
-                FindAndReplace(fileOpen, i.Key, i.Value);
-            }
-        }
-
-        static void FindAndReplace(Word.Application fileOpen, object findText, object replaceWithText)
-        {
-            object matchCase = true;
-            object matchWholeWord = true;
-            object matchWildCards = false;
-            object matchSoundsLike = false;
-            object matchAllWordForms = false;
-            object forward = true;
-            object format = false;
-            object matchKashida = false;
-            object matchDiacritics = false;
-            object matchAlefHamza = false;
-            object matchControl = false;
-            object read_only = false;
-            object visible = true;
-            object replace = 2;
-            object wrap = 1;
-
-            //execute find and replace
-            fileOpen.Selection.Find.Execute(ref findText, ref matchCase, ref matchWholeWord,
-                ref matchWildCards, ref matchSoundsLike, ref matchAllWordForms, ref forward, ref wrap, ref format, ref replaceWithText, ref replace,
-                ref matchKashida, ref matchDiacritics, ref matchAlefHamza, ref matchControl);
         }
 
         public void QuestionCloseCall(Form f) // method called by a closing Question form to signal the program to close the word document being used and to wipe the data from the dictionary
@@ -514,225 +789,6 @@ namespace SQT
                 WordFinish();
                 MessageBox.Show("Word Export Canceled");
                 f.Close();
-            }
-        }
-
-        public string RadioButtonHandeler(TextBox tb = null, params RadioButton[] rb) // called with all the radio buttons in each group to find which is checked and return the text 
-        {
-            foreach (RadioButton i in rb)
-            {
-                if (i.Checked) //find the checked box
-                {
-                    if (i.Text == "")// if radio button has no text return the text of the textbox
-                    {
-                        return tb.Text;
-                    }
-                    else// otherwise retun the text of the radio button
-                    {
-                        return i.Text;
-                    }
-                }
-            }
-            return "";
-        }
-
-        public string CheckBoxHandler(params CheckBox[] cB)
-        {
-            string str = "";
-            int count = 0;
-
-            foreach (CheckBox i in cB)
-            {
-                if (i.Checked)
-                {
-                    count++;
-                }
-            }
-
-            foreach (CheckBox i in cB)
-            {
-                if (i.Checked)
-                {
-                    str += i.Text;
-
-                    if (count > 0)
-                    {
-                        if (count >= 3)
-                        {
-                            str += ", ";
-                        }
-                        else if (count == 2)
-                        {
-                            str += " & ";
-                        }
-                        count--;
-                    }
-                }
-            }
-
-            return str;
-        }
-
-        public string MeasureStringChecker(string text, string measurementSuffix) //called to check if the text has the correct measurment suffix before exporting to quote document
-        {
-            //check if text ends in the correct suffix
-            if (text.EndsWith(measurementSuffix))
-            {
-                //if so return the text as presented
-                return text;
-            }
-            else
-            {
-                //if not, append a space and add the measurement suffix
-                string s = text + " " + measurementSuffix;
-
-                //then return the new string
-                return s;
-            }
-        }
-
-        public string FormalDate()
-        {
-            string day = DateTime.Now.ToString("%d");
-            string monthYear = DateTime.Now.ToString("Y");
-
-            bool singleDigit = day.Length == 1;
-            bool endIn1 = day.EndsWith("1");
-            bool endIn2 = day.EndsWith("2");
-            bool endIn3 = day.EndsWith("3");
-            bool startWith1 = day.StartsWith("1");
-
-            if (endIn1)
-            {
-                if (singleDigit)
-                {
-                    day += "st";
-                }
-                else if (startWith1 && !singleDigit)
-                {
-                    day += "th";
-                }
-                else
-                {
-                    day += "st";
-                }
-            }
-            else if (endIn2)
-            {
-                if (singleDigit)
-                {
-                    day += "nd";
-                }
-                else if (startWith1 && !singleDigit)
-                {
-                    day += "th";
-                }
-                else
-                {
-                    day += "nd";
-                }
-            }
-            else if (endIn3)
-            {
-                if (singleDigit)
-                {
-                    day += "rd";
-                }
-                else if (startWith1 && !singleDigit)
-                {
-                    day += "th";
-                }
-                else
-                {
-                    day += "rd";
-                }
-            }
-            else
-            {
-                day += "th";
-            }
-
-            string date = day + " " + monthYear;
-            return date;
-        }
-
-        private void button2_Click_1(object sender, EventArgs e) // close button
-        {
-            // lines below this till "return" are used for the close button to function as a generic debug button for testing. 
-            //close method works and requires no further testing at this time
-            //MessageBox.Show(FormalDate());
-
-            // return; // remove this line and above to have the close button function normally
-
-            if (document != null)
-            {
-                document.Close();
-            }
-            this.Close();
-        }
-
-        #region unused methods
-        private void label13_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
-        private void costOfLiftTB_TextChanged(object sender, EventArgs e)
-        {
-            //
-        }
-
-        private void labelLiftCurrency_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
-        private void label35_Click(object sender, EventArgs e)
-        {
-            //
-        }
-        #endregion
-
-        private void printButton_Click(object sender, EventArgs e)
-        {
-            lblWaitControl(true);
-            printButton.BackColor = Color.Blue;
-            if (SavePricesDocument())
-            {
-                MessageBox.Show("Prices exported as " + saveFileDialog1.FileName);
-                printButton.BackColor = Color.Green;
-            }
-            else
-            {
-                MessageBox.Show("Price Saving Failed");
-                printButton.BackColor = Color.Red;
-            }
-            lblWaitControl(false);
-        }
-
-        private bool SavePricesDocument()
-        {
-            saveFileDialog1.Title = ("Where to save the prices");
-            saveFileDialog1.InitialDirectory = "X:\\Sales\\Qu-" + DateTime.Now.ToString("yyyy");
-            saveFileDialog1.FileName = tBAddress.Text + " Price Breakdown";
-            saveFileDialog1.DefaultExt = "docx";
-            saveFileDialog1.Filter = "Word Doc (*.docx) |*.docx| All files (*.*) |*.*";
-
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                fileOpen = new Word.Application();
-                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\PriceExport.docx", ReadOnly: false);
-                SavePricesToDict();
-                fileOpen.Visible = false;
-                document.Activate();
-                WordReplaceLooper(priceExports);
-                document.SaveAs2(saveFileDialog1.FileName);
-                document.Close();
-                return true;
-            }
-            else
-            {
-                return false;
             }
         }
 
@@ -775,58 +831,6 @@ namespace SQT
             priceExports.Add("AEP34", lblCostIncludingMargin.Text);
             priceExports.Add("AEP35", lblGST.Text);
             priceExports.Add("AEP36", lblPriceIncludingGST.Text);
-        }
-
-        //private void tBFloors_TextChanged(object sender, EventArgs e)
-        //{
-        //    floorsTbChecker();
-        //}
-
-        public bool floorsTbChecker()
-        {
-            int i = 0;
-            try
-            {
-                i = int.Parse(tBFloors.Text);
-            }
-            catch
-            {
-                //MessageBox.Show("Invalid floor number entered ");
-                return false;  
-            }
-
-            if (i > 16 || i < 0)
-            {
-                MessageBox.Show("Invalid floor number entered ");
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        //private void tbMargin_Leave(object sender, EventArgs e)
-        //{
-        //    marginTbChecker();
-        //}
-
-        public bool marginTbChecker()
-        {
-            try
-            {
-                if (lowestMargin > float.Parse(tbMargin.Text))
-                {
-                    MessageBox.Show("Margin % is below the allowed minimum of " + lowestMargin + "%");
-                    return false;
-                }
-            }
-            catch
-            {
-                return false;
-            }
-
-            return true;
         }
 
         public void lblWaitControl(bool b)
