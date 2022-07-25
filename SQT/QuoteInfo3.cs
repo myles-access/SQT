@@ -19,9 +19,7 @@ namespace SQT
 
         private void PullInfo()
         {
-            //textBox2.Text = f.textBox2.Text;
-           // textBox4.Text = f.textBox4.Text;
-           
+            //
         }
 
         private void buttonEUR_Click_1(object sender, EventArgs e)
@@ -44,6 +42,11 @@ namespace SQT
         private void button1_Click_1(object sender, EventArgs e)
         {
             f.QuestionCloseCall(this);
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

@@ -45,6 +45,7 @@
             // 
             // tBFloors
             // 
+            this.tBFloors.Enabled = false;
             this.tBFloors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBFloors.ForeColor = System.Drawing.Color.Black;
             this.tBFloors.Location = new System.Drawing.Point(492, 159);
@@ -57,6 +58,7 @@
             // 
             // tbNumberLifts
             // 
+            this.tbNumberLifts.Enabled = false;
             this.tbNumberLifts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNumberLifts.ForeColor = System.Drawing.Color.Black;
             this.tbNumberLifts.Location = new System.Drawing.Point(267, 157);
@@ -70,6 +72,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.Enabled = false;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(110, 161);
@@ -82,6 +85,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Enabled = false;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(317, 161);
@@ -93,6 +97,7 @@
             // 
             // tBQuoteNumber
             // 
+            this.tBQuoteNumber.Enabled = false;
             this.tBQuoteNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBQuoteNumber.ForeColor = System.Drawing.Color.Black;
             this.tBQuoteNumber.Location = new System.Drawing.Point(105, 125);
@@ -106,6 +111,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(11, 127);
@@ -117,6 +123,7 @@
             // 
             // tBAddress
             // 
+            this.tBAddress.Enabled = false;
             this.tBAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBAddress.ForeColor = System.Drawing.Color.Black;
             this.tBAddress.Location = new System.Drawing.Point(105, 93);
@@ -130,6 +137,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(11, 95);
@@ -153,6 +161,7 @@
             // 
             // buttonEUR
             // 
+            this.buttonEUR.Enabled = false;
             this.buttonEUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEUR.Location = new System.Drawing.Point(533, 304);
             this.buttonEUR.Margin = new System.Windows.Forms.Padding(2);
@@ -166,6 +175,7 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(11, 321);
             this.button1.Margin = new System.Windows.Forms.Padding(2);

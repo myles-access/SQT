@@ -28,7 +28,7 @@ namespace SQT
             QuoteInfo11 nF = new QuoteInfo11();
 
             //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
-            f.WordData("AE192", f.RadioButtonHandeler(textBox1, radioButton19, radioButton20, radioButton9));//face plate material 
+            f.WordData("AE192", f.RadioButtonHandeler(textBox1, radioButton19,  radioButton9));//face plate material 
             f.WordData("AE193", "Dual illumination buttons with gong");//button type
             f.WordData("AE194", f.RadioButtonHandeler(null, radioButton7, radioButton8));//hall lanterns
             f.WordData("AE195", f.RadioButtonHandeler(null, radioButton13, radioButton14));// braille tactile symbols 

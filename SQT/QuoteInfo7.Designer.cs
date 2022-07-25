@@ -116,9 +116,9 @@
             this.groupBox3.Controls.Add(this.radioButton3);
             this.groupBox3.Controls.Add(this.radioButton5);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(262, 36);
+            this.groupBox3.Location = new System.Drawing.Point(272, 50);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(258, 94);
+            this.groupBox3.Size = new System.Drawing.Size(262, 94);
             this.groupBox3.TabIndex = 68;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Door Type";
@@ -151,9 +151,9 @@
             this.groupBox1.Controls.Add(this.radioButton10);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(262, 230);
+            this.groupBox1.Location = new System.Drawing.Point(501, 233);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(270, 103);
+            this.groupBox1.Size = new System.Drawing.Size(219, 95);
             this.groupBox1.TabIndex = 69;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Door Tracks";
@@ -196,9 +196,9 @@
             this.groupBox2.Controls.Add(this.radioButton9);
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(262, 136);
+            this.groupBox2.Location = new System.Drawing.Point(6, 233);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(256, 92);
+            this.groupBox2.Size = new System.Drawing.Size(236, 95);
             this.groupBox2.TabIndex = 70;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Entrance Protection";
@@ -239,10 +239,10 @@
             // 
             this.tbphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbphone.ForeColor = System.Drawing.Color.Black;
-            this.tbphone.Location = new System.Drawing.Point(158, 82);
+            this.tbphone.Location = new System.Drawing.Point(186, 86);
             this.tbphone.Margin = new System.Windows.Forms.Padding(2);
             this.tbphone.Name = "tbphone";
-            this.tbphone.Size = new System.Drawing.Size(100, 32);
+            this.tbphone.Size = new System.Drawing.Size(81, 32);
             this.tbphone.TabIndex = 2;
             this.tbphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -251,21 +251,21 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(25, 82);
+            this.label2.Location = new System.Drawing.Point(6, 86);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 26);
+            this.label2.Size = new System.Drawing.Size(186, 26);
             this.label2.TabIndex = 74;
-            this.label2.Text = "Door Height";
+            this.label2.Text = "Door Height (mm)";
             // 
             // tbfname
             // 
             this.tbfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbfname.ForeColor = System.Drawing.Color.Black;
-            this.tbfname.Location = new System.Drawing.Point(158, 46);
+            this.tbfname.Location = new System.Drawing.Point(186, 50);
             this.tbfname.Margin = new System.Windows.Forms.Padding(2);
             this.tbfname.Name = "tbfname";
-            this.tbfname.Size = new System.Drawing.Size(100, 32);
+            this.tbfname.Size = new System.Drawing.Size(81, 32);
             this.tbfname.TabIndex = 1;
             this.tbfname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -274,21 +274,21 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(33, 49);
+            this.label1.Location = new System.Drawing.Point(6, 53);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 26);
+            this.label1.Size = new System.Drawing.Size(179, 26);
             this.label1.TabIndex = 71;
-            this.label1.Text = "Door Width";
+            this.label1.Text = "Door Width (mm)";
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.radioButton4);
             this.groupBox4.Controls.Add(this.radioButton6);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(524, 36);
+            this.groupBox4.Location = new System.Drawing.Point(311, 153);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(195, 60);
+            this.groupBox4.Size = new System.Drawing.Size(189, 60);
             this.groupBox4.TabIndex = 75;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Advanced Opening";
@@ -319,10 +319,10 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(158, 126);
+            this.textBox1.Location = new System.Drawing.Point(186, 122);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 32);
+            this.textBox1.Size = new System.Drawing.Size(81, 32);
             this.textBox1.TabIndex = 3;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -331,12 +331,12 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 114);
+            this.label3.Location = new System.Drawing.Point(6, 118);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 52);
+            this.label3.Size = new System.Drawing.Size(170, 26);
             this.label3.TabIndex = 77;
-            this.label3.Text = "Door Operator\r\n Voltage";
+            this.label3.Text = "Door Voltage (v)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // groupBox5
@@ -345,9 +345,9 @@
             this.groupBox5.Controls.Add(this.radioButton7);
             this.groupBox5.Controls.Add(this.radioButton8);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(12, 223);
+            this.groupBox5.Location = new System.Drawing.Point(248, 233);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(244, 110);
+            this.groupBox5.Size = new System.Drawing.Size(244, 95);
             this.groupBox5.TabIndex = 69;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Landing Door Finish";
@@ -388,7 +388,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(158, 178);
+            this.textBox2.Location = new System.Drawing.Point(206, 175);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 32);
@@ -400,12 +400,12 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(5, 166);
+            this.label5.Location = new System.Drawing.Point(0, 164);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 52);
+            this.label5.Size = new System.Drawing.Size(202, 52);
             this.label5.TabIndex = 79;
-            this.label5.Text = "Landing Door\r\nJamb Depth";
+            this.label5.Text = "Landing Door Jamb\r\nDepth (mm)";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // groupBox7
@@ -413,9 +413,9 @@
             this.groupBox7.Controls.Add(this.radioButton11);
             this.groupBox7.Controls.Add(this.radioButton12);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(524, 102);
+            this.groupBox7.Location = new System.Drawing.Point(542, 84);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(195, 60);
+            this.groupBox7.Size = new System.Drawing.Size(177, 60);
             this.groupBox7.TabIndex = 76;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Door Nudging";
@@ -447,9 +447,9 @@
             this.groupBox8.Controls.Add(this.radioButton13);
             this.groupBox8.Controls.Add(this.radioButton14);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(524, 168);
+            this.groupBox8.Location = new System.Drawing.Point(512, 153);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(195, 60);
+            this.groupBox8.Size = new System.Drawing.Size(207, 60);
             this.groupBox8.TabIndex = 77;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Fire Rated Doors";

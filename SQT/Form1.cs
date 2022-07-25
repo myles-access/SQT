@@ -745,11 +745,6 @@ namespace SQT
             //add labour from the labour costs dictionary based on number of floors in the building 
             PriceListFormatting(lblLabour, labourPrice[int.Parse(tBFloors.Text)]);
 
-            //lblCostOfParts.Text = "$" + Math.Round(liftPrice, 2).ToString("0.00");
-            //lblCostIncludingMargin.Text = "$" + Math.Round(liftPrice * marginPercent, 2).ToString("0.00");
-            // lblGST.Text = "$" + Math.Round(liftPrice * marginPercent * 0.1, 2).ToString("0.00");
-            //  lblPriceIncludingGST.Text = "$" + Math.Round(liftPrice * marginPercent * 1.1, 2).ToString("0.00");
-
             float marginPercent = 1 + (float.Parse(tbMargin.Text) / 100);
             liftPrice *= int.Parse(tbNumberLifts.Text);
 
@@ -835,6 +830,9 @@ namespace SQT
 
         public void lblWaitControl(bool b)
         {
+            // if called true will enable the wait message and disable the form
+            // if called false will disable the wait message and enable the form 
+
             lbWait.Enabled = b;
             lbWait.Visible = b;
             this.Enabled = !b;
