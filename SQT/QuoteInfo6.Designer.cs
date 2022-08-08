@@ -32,24 +32,24 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbSpeed = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbLoad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbLiftRating = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbHeight = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbDepth = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbNumofCarEntrances = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbwidth = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.tbFrontWallReturn = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tbLiftCarNotes = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button2
@@ -90,16 +90,16 @@
             this.label4.TabIndex = 50;
             this.label4.Text = "Lift Car";
             // 
-            // textBox2
+            // tbSpeed
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(134, 82);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(117, 32);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSpeed.ForeColor = System.Drawing.Color.Black;
+            this.tbSpeed.Location = new System.Drawing.Point(134, 82);
+            this.tbSpeed.Margin = new System.Windows.Forms.Padding(2);
+            this.tbSpeed.Name = "tbSpeed";
+            this.tbSpeed.Size = new System.Drawing.Size(117, 32);
+            this.tbSpeed.TabIndex = 2;
+            this.tbSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -113,16 +113,16 @@
             this.label6.TabIndex = 74;
             this.label6.Text = "Speed (mps)";
             // 
-            // textBox1
+            // tbLoad
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(134, 47);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 32);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLoad.ForeColor = System.Drawing.Color.Black;
+            this.tbLoad.Location = new System.Drawing.Point(134, 47);
+            this.tbLoad.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLoad.Name = "tbLoad";
+            this.tbLoad.Size = new System.Drawing.Size(117, 32);
+            this.tbLoad.TabIndex = 1;
+            this.tbLoad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -136,16 +136,16 @@
             this.label5.TabIndex = 72;
             this.label5.Text = "Load (kg)";
             // 
-            // textBox3
+            // tbLiftRating
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(524, 78);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 32);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbLiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLiftRating.ForeColor = System.Drawing.Color.Black;
+            this.tbLiftRating.Location = new System.Drawing.Point(524, 78);
+            this.tbLiftRating.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLiftRating.Name = "tbLiftRating";
+            this.tbLiftRating.Size = new System.Drawing.Size(125, 32);
+            this.tbLiftRating.TabIndex = 6;
+            this.tbLiftRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -159,16 +159,16 @@
             this.label7.TabIndex = 70;
             this.label7.Text = "Lift Rating (passengers)";
             // 
-            // textBox4
+            // tbHeight
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(134, 190);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(117, 32);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHeight.ForeColor = System.Drawing.Color.Black;
+            this.tbHeight.Location = new System.Drawing.Point(134, 190);
+            this.tbHeight.Margin = new System.Windows.Forms.Padding(2);
+            this.tbHeight.Name = "tbHeight";
+            this.tbHeight.Size = new System.Drawing.Size(117, 32);
+            this.tbHeight.TabIndex = 5;
+            this.tbHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -182,16 +182,16 @@
             this.label1.TabIndex = 78;
             this.label1.Text = "Depth (mm)";
             // 
-            // textBox5
+            // tbDepth
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(134, 154);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(117, 32);
-            this.textBox5.TabIndex = 4;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDepth.ForeColor = System.Drawing.Color.Black;
+            this.tbDepth.Location = new System.Drawing.Point(134, 154);
+            this.tbDepth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbDepth.Name = "tbDepth";
+            this.tbDepth.Size = new System.Drawing.Size(117, 32);
+            this.tbDepth.TabIndex = 4;
+            this.tbDepth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -205,16 +205,16 @@
             this.label2.TabIndex = 76;
             this.label2.Text = "Width (mm)";
             // 
-            // textBox6
+            // tbNumofCarEntrances
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(524, 116);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(125, 32);
-            this.textBox6.TabIndex = 7;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNumofCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumofCarEntrances.ForeColor = System.Drawing.Color.Black;
+            this.tbNumofCarEntrances.Location = new System.Drawing.Point(524, 116);
+            this.tbNumofCarEntrances.Margin = new System.Windows.Forms.Padding(2);
+            this.tbNumofCarEntrances.Name = "tbNumofCarEntrances";
+            this.tbNumofCarEntrances.Size = new System.Drawing.Size(125, 32);
+            this.tbNumofCarEntrances.TabIndex = 7;
+            this.tbNumofCarEntrances.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -228,16 +228,16 @@
             this.label3.TabIndex = 82;
             this.label3.Text = "# of Car Entrances";
             // 
-            // textBox7
+            // tbwidth
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(134, 118);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(117, 32);
-            this.textBox7.TabIndex = 3;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbwidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbwidth.ForeColor = System.Drawing.Color.Black;
+            this.tbwidth.Location = new System.Drawing.Point(134, 118);
+            this.tbwidth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbwidth.Name = "tbwidth";
+            this.tbwidth.Size = new System.Drawing.Size(117, 32);
+            this.tbwidth.TabIndex = 3;
+            this.tbwidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -251,16 +251,17 @@
             this.label8.TabIndex = 80;
             this.label8.Text = "Height (mm)";
             // 
-            // textBox8
+            // tbFrontWallReturn
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.Black;
-            this.textBox8.Location = new System.Drawing.Point(524, 155);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(125, 32);
-            this.textBox8.TabIndex = 8;
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFrontWallReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFrontWallReturn.ForeColor = System.Drawing.Color.Black;
+            this.tbFrontWallReturn.Location = new System.Drawing.Point(524, 155);
+            this.tbFrontWallReturn.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFrontWallReturn.Name = "tbFrontWallReturn";
+            this.tbFrontWallReturn.Size = new System.Drawing.Size(125, 32);
+            this.tbFrontWallReturn.TabIndex = 8;
+            this.tbFrontWallReturn.Text = "60mm";
+            this.tbFrontWallReturn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
@@ -286,17 +287,17 @@
             this.label10.TabIndex = 87;
             this.label10.Text = "Note";
             // 
-            // textBox9
+            // tbLiftCarNotes
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.Color.Black;
-            this.textBox9.Location = new System.Drawing.Point(81, 234);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(563, 67);
-            this.textBox9.TabIndex = 9;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbLiftCarNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLiftCarNotes.ForeColor = System.Drawing.Color.Black;
+            this.tbLiftCarNotes.Location = new System.Drawing.Point(81, 234);
+            this.tbLiftCarNotes.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLiftCarNotes.Multiline = true;
+            this.tbLiftCarNotes.Name = "tbLiftCarNotes";
+            this.tbLiftCarNotes.Size = new System.Drawing.Size(563, 67);
+            this.tbLiftCarNotes.TabIndex = 9;
+            this.tbLiftCarNotes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // QuoteInfo6
             // 
@@ -305,22 +306,22 @@
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(656, 368);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.tbLiftCarNotes);
+            this.Controls.Add(this.tbFrontWallReturn);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbNumofCarEntrances);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.tbwidth);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbHeight);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbDepth);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbSpeed);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbLoad);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbLiftRating);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
@@ -344,23 +345,23 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbSpeed;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbLoad;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbLiftRating;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbHeight;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbDepth;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbNumofCarEntrances;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbwidth;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tbFrontWallReturn;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tbLiftCarNotes;
     }
 }

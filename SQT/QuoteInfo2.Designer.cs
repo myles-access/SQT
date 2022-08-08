@@ -38,11 +38,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tblname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbAddress1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbAddress2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbAddress3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -153,16 +153,16 @@
             this.label4.TabIndex = 62;
             this.label4.Text = "Last Name";
             // 
-            // textBox3
+            // tbAddress1
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(222, 185);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(329, 32);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress1.ForeColor = System.Drawing.Color.Black;
+            this.tbAddress1.Location = new System.Drawing.Point(222, 185);
+            this.tbAddress1.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddress1.Name = "tbAddress1";
+            this.tbAddress1.Size = new System.Drawing.Size(329, 32);
+            this.tbAddress1.TabIndex = 4;
+            this.tbAddress1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -176,16 +176,16 @@
             this.label7.TabIndex = 64;
             this.label7.Text = "Address Line 1";
             // 
-            // textBox1
+            // tbAddress2
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(222, 221);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(329, 32);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress2.ForeColor = System.Drawing.Color.Black;
+            this.tbAddress2.Location = new System.Drawing.Point(222, 221);
+            this.tbAddress2.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddress2.Name = "tbAddress2";
+            this.tbAddress2.Size = new System.Drawing.Size(329, 32);
+            this.tbAddress2.TabIndex = 5;
+            this.tbAddress2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -199,16 +199,16 @@
             this.label5.TabIndex = 66;
             this.label5.Text = "Address Line 2";
             // 
-            // textBox2
+            // tbAddress3
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(222, 257);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(329, 32);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbAddress3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress3.ForeColor = System.Drawing.Color.Black;
+            this.tbAddress3.Location = new System.Drawing.Point(222, 257);
+            this.tbAddress3.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddress3.Name = "tbAddress3";
+            this.tbAddress3.Size = new System.Drawing.Size(329, 32);
+            this.tbAddress3.TabIndex = 6;
+            this.tbAddress3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -228,11 +228,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(656, 368);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbAddress3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbAddress2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbAddress1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tblname);
             this.Controls.Add(this.label4);
@@ -268,11 +268,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tblname;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbAddress1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbAddress2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbAddress3;
         private System.Windows.Forms.Label label6;
     }
 }

@@ -32,34 +32,34 @@
             this.button1 = new System.Windows.Forms.Button();
             this.buttonEUR = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbphone = new System.Windows.Forms.TextBox();
+            this.tbShaftDepth = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbfname = new System.Windows.Forms.TextBox();
+            this.tbShaftWidth = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbHeadroom = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbPitDepth = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbNumofLandings = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbTravel = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbNumofLandingDoors = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.tbStructureShaft = new System.Windows.Forms.TextBox();
+            this.rbStructureShaftOther = new System.Windows.Forms.RadioButton();
+            this.rbStructureShaftConcrete = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.tbFixings = new System.Windows.Forms.TextBox();
+            this.rbFixingsOther = new System.Windows.Forms.RadioButton();
+            this.rbFixingsTrueBolts = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.rbTrimmerBeamsNo = new System.Windows.Forms.RadioButton();
+            this.rbTrimmerBeamsYes = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rbFalseFloorNo = new System.Windows.Forms.RadioButton();
+            this.rbFalseFloorYes = new System.Windows.Forms.RadioButton();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -104,16 +104,16 @@
             this.label3.TabIndex = 47;
             this.label3.Text = "Shaft Details";
             // 
-            // tbphone
+            // tbShaftDepth
             // 
-            this.tbphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbphone.ForeColor = System.Drawing.Color.Black;
-            this.tbphone.Location = new System.Drawing.Point(210, 83);
-            this.tbphone.Margin = new System.Windows.Forms.Padding(2);
-            this.tbphone.Name = "tbphone";
-            this.tbphone.Size = new System.Drawing.Size(100, 32);
-            this.tbphone.TabIndex = 2;
-            this.tbphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbShaftDepth.ForeColor = System.Drawing.Color.Black;
+            this.tbShaftDepth.Location = new System.Drawing.Point(210, 83);
+            this.tbShaftDepth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbShaftDepth.Name = "tbShaftDepth";
+            this.tbShaftDepth.Size = new System.Drawing.Size(100, 32);
+            this.tbShaftDepth.TabIndex = 2;
+            this.tbShaftDepth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -127,16 +127,16 @@
             this.label2.TabIndex = 54;
             this.label2.Text = "Shaft Depth (mm)";
             // 
-            // tbfname
+            // tbShaftWidth
             // 
-            this.tbfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbfname.ForeColor = System.Drawing.Color.Black;
-            this.tbfname.Location = new System.Drawing.Point(210, 47);
-            this.tbfname.Margin = new System.Windows.Forms.Padding(2);
-            this.tbfname.Name = "tbfname";
-            this.tbfname.Size = new System.Drawing.Size(100, 32);
-            this.tbfname.TabIndex = 1;
-            this.tbfname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbShaftWidth.ForeColor = System.Drawing.Color.Black;
+            this.tbShaftWidth.Location = new System.Drawing.Point(210, 47);
+            this.tbShaftWidth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbShaftWidth.Name = "tbShaftWidth";
+            this.tbShaftWidth.Size = new System.Drawing.Size(100, 32);
+            this.tbShaftWidth.TabIndex = 1;
+            this.tbShaftWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -150,16 +150,16 @@
             this.label1.TabIndex = 51;
             this.label1.Text = "Shaft Width (mm)";
             // 
-            // textBox1
+            // tbHeadroom
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(210, 155);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 32);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbHeadroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHeadroom.ForeColor = System.Drawing.Color.Black;
+            this.tbHeadroom.Location = new System.Drawing.Point(210, 155);
+            this.tbHeadroom.Margin = new System.Windows.Forms.Padding(2);
+            this.tbHeadroom.Name = "tbHeadroom";
+            this.tbHeadroom.Size = new System.Drawing.Size(100, 32);
+            this.tbHeadroom.TabIndex = 4;
+            this.tbHeadroom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -173,16 +173,16 @@
             this.label4.TabIndex = 58;
             this.label4.Text = "Headroom (mm)";
             // 
-            // textBox2
+            // tbPitDepth
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(210, 119);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 32);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbPitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPitDepth.ForeColor = System.Drawing.Color.Black;
+            this.tbPitDepth.Location = new System.Drawing.Point(210, 119);
+            this.tbPitDepth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPitDepth.Name = "tbPitDepth";
+            this.tbPitDepth.Size = new System.Drawing.Size(100, 32);
+            this.tbPitDepth.TabIndex = 3;
+            this.tbPitDepth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -196,16 +196,16 @@
             this.label5.TabIndex = 55;
             this.label5.Text = "Pit Depth (mm)";
             // 
-            // textBox3
+            // tbNumofLandings
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(210, 227);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 32);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNumofLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumofLandings.ForeColor = System.Drawing.Color.Black;
+            this.tbNumofLandings.Location = new System.Drawing.Point(210, 227);
+            this.tbNumofLandings.Margin = new System.Windows.Forms.Padding(2);
+            this.tbNumofLandings.Name = "tbNumofLandings";
+            this.tbNumofLandings.Size = new System.Drawing.Size(100, 32);
+            this.tbNumofLandings.TabIndex = 6;
+            this.tbNumofLandings.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -219,16 +219,16 @@
             this.label6.TabIndex = 62;
             this.label6.Text = "# of Landings";
             // 
-            // textBox4
+            // tbTravel
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(210, 191);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 32);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbTravel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTravel.ForeColor = System.Drawing.Color.Black;
+            this.tbTravel.Location = new System.Drawing.Point(210, 191);
+            this.tbTravel.Margin = new System.Windows.Forms.Padding(2);
+            this.tbTravel.Name = "tbTravel";
+            this.tbTravel.Size = new System.Drawing.Size(100, 32);
+            this.tbTravel.TabIndex = 5;
+            this.tbTravel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -242,16 +242,16 @@
             this.label7.TabIndex = 59;
             this.label7.Text = "Travel (mm)";
             // 
-            // textBox5
+            // tbNumofLandingDoors
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(210, 263);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 32);
-            this.textBox5.TabIndex = 7;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNumofLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumofLandingDoors.ForeColor = System.Drawing.Color.Black;
+            this.tbNumofLandingDoors.Location = new System.Drawing.Point(210, 263);
+            this.tbNumofLandingDoors.Margin = new System.Windows.Forms.Padding(2);
+            this.tbNumofLandingDoors.Name = "tbNumofLandingDoors";
+            this.tbNumofLandingDoors.Size = new System.Drawing.Size(100, 32);
+            this.tbNumofLandingDoors.TabIndex = 7;
+            this.tbNumofLandingDoors.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -267,9 +267,9 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox6);
-            this.groupBox5.Controls.Add(this.radioButton9);
-            this.groupBox5.Controls.Add(this.radioButton10);
+            this.groupBox5.Controls.Add(this.tbStructureShaft);
+            this.groupBox5.Controls.Add(this.rbStructureShaftOther);
+            this.groupBox5.Controls.Add(this.rbStructureShaftConcrete);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(316, 70);
             this.groupBox5.Name = "groupBox5";
@@ -277,40 +277,41 @@
             this.groupBox5.TabIndex = 65;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Structure (Shaft)";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
-            // textBox6
+            // tbStructureShaft
             // 
-            this.textBox6.Location = new System.Drawing.Point(30, 59);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(130, 29);
-            this.textBox6.TabIndex = 70;
+            this.tbStructureShaft.Location = new System.Drawing.Point(30, 59);
+            this.tbStructureShaft.Name = "tbStructureShaft";
+            this.tbStructureShaft.Size = new System.Drawing.Size(130, 29);
+            this.tbStructureShaft.TabIndex = 70;
             // 
-            // radioButton9
+            // rbStructureShaftOther
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(6, 68);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(14, 13);
-            this.radioButton9.TabIndex = 69;
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rbStructureShaftOther.AutoSize = true;
+            this.rbStructureShaftOther.Location = new System.Drawing.Point(6, 68);
+            this.rbStructureShaftOther.Name = "rbStructureShaftOther";
+            this.rbStructureShaftOther.Size = new System.Drawing.Size(14, 13);
+            this.rbStructureShaftOther.TabIndex = 69;
+            this.rbStructureShaftOther.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // rbStructureShaftConcrete
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Checked = true;
-            this.radioButton10.Location = new System.Drawing.Point(6, 28);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(105, 28);
-            this.radioButton10.TabIndex = 0;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Concrete";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rbStructureShaftConcrete.AutoSize = true;
+            this.rbStructureShaftConcrete.Checked = true;
+            this.rbStructureShaftConcrete.Location = new System.Drawing.Point(6, 28);
+            this.rbStructureShaftConcrete.Name = "rbStructureShaftConcrete";
+            this.rbStructureShaftConcrete.Size = new System.Drawing.Size(105, 28);
+            this.rbStructureShaftConcrete.TabIndex = 0;
+            this.rbStructureShaftConcrete.TabStop = true;
+            this.rbStructureShaftConcrete.Text = "Concrete";
+            this.rbStructureShaftConcrete.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.tbFixings);
+            this.groupBox1.Controls.Add(this.rbFixingsOther);
+            this.groupBox1.Controls.Add(this.rbFixingsTrueBolts);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(488, 70);
             this.groupBox1.Name = "groupBox1";
@@ -319,38 +320,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fixings";
             // 
-            // textBox7
+            // tbFixings
             // 
-            this.textBox7.Location = new System.Drawing.Point(27, 60);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(124, 29);
-            this.textBox7.TabIndex = 72;
+            this.tbFixings.Location = new System.Drawing.Point(27, 60);
+            this.tbFixings.Name = "tbFixings";
+            this.tbFixings.Size = new System.Drawing.Size(124, 29);
+            this.tbFixings.TabIndex = 72;
             // 
-            // radioButton4
+            // rbFixingsOther
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(6, 69);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(14, 13);
-            this.radioButton4.TabIndex = 71;
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbFixingsOther.AutoSize = true;
+            this.rbFixingsOther.Location = new System.Drawing.Point(6, 69);
+            this.rbFixingsOther.Name = "rbFixingsOther";
+            this.rbFixingsOther.Size = new System.Drawing.Size(14, 13);
+            this.rbFixingsOther.TabIndex = 71;
+            this.rbFixingsOther.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbFixingsTrueBolts
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 28);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(97, 28);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "TruBolts";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbFixingsTrueBolts.AutoSize = true;
+            this.rbFixingsTrueBolts.Checked = true;
+            this.rbFixingsTrueBolts.Location = new System.Drawing.Point(6, 28);
+            this.rbFixingsTrueBolts.Name = "rbFixingsTrueBolts";
+            this.rbFixingsTrueBolts.Size = new System.Drawing.Size(113, 28);
+            this.rbFixingsTrueBolts.TabIndex = 0;
+            this.rbFixingsTrueBolts.TabStop = true;
+            this.rbFixingsTrueBolts.Text = "True Bolts";
+            this.rbFixingsTrueBolts.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton5);
-            this.groupBox3.Controls.Add(this.radioButton6);
+            this.groupBox3.Controls.Add(this.rbTrimmerBeamsNo);
+            this.groupBox3.Controls.Add(this.rbTrimmerBeamsYes);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(316, 192);
             this.groupBox3.Name = "groupBox3";
@@ -359,32 +360,32 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Trimmer Beams";
             // 
-            // radioButton5
+            // rbTrimmerBeamsNo
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(72, 28);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(53, 28);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "No";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbTrimmerBeamsNo.AutoSize = true;
+            this.rbTrimmerBeamsNo.Location = new System.Drawing.Point(72, 28);
+            this.rbTrimmerBeamsNo.Name = "rbTrimmerBeamsNo";
+            this.rbTrimmerBeamsNo.Size = new System.Drawing.Size(53, 28);
+            this.rbTrimmerBeamsNo.TabIndex = 1;
+            this.rbTrimmerBeamsNo.TabStop = true;
+            this.rbTrimmerBeamsNo.Text = "No";
+            this.rbTrimmerBeamsNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rbTrimmerBeamsYes
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 28);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(60, 28);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Yes";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbTrimmerBeamsYes.AutoSize = true;
+            this.rbTrimmerBeamsYes.Location = new System.Drawing.Point(6, 28);
+            this.rbTrimmerBeamsYes.Name = "rbTrimmerBeamsYes";
+            this.rbTrimmerBeamsYes.Size = new System.Drawing.Size(60, 28);
+            this.rbTrimmerBeamsYes.TabIndex = 0;
+            this.rbTrimmerBeamsYes.TabStop = true;
+            this.rbTrimmerBeamsYes.Text = "Yes";
+            this.rbTrimmerBeamsYes.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton3);
+            this.groupBox2.Controls.Add(this.rbFalseFloorNo);
+            this.groupBox2.Controls.Add(this.rbFalseFloorYes);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(488, 192);
             this.groupBox2.Name = "groupBox2";
@@ -393,27 +394,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "False Floor";
             // 
-            // radioButton2
+            // rbFalseFloorNo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(72, 28);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(53, 28);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbFalseFloorNo.AutoSize = true;
+            this.rbFalseFloorNo.Location = new System.Drawing.Point(72, 28);
+            this.rbFalseFloorNo.Name = "rbFalseFloorNo";
+            this.rbFalseFloorNo.Size = new System.Drawing.Size(53, 28);
+            this.rbFalseFloorNo.TabIndex = 1;
+            this.rbFalseFloorNo.TabStop = true;
+            this.rbFalseFloorNo.Text = "No";
+            this.rbFalseFloorNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbFalseFloorYes
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 28);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(60, 28);
-            this.radioButton3.TabIndex = 0;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Yes";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbFalseFloorYes.AutoSize = true;
+            this.rbFalseFloorYes.Location = new System.Drawing.Point(6, 28);
+            this.rbFalseFloorYes.Name = "rbFalseFloorYes";
+            this.rbFalseFloorYes.Size = new System.Drawing.Size(60, 28);
+            this.rbFalseFloorYes.TabIndex = 0;
+            this.rbFalseFloorYes.TabStop = true;
+            this.rbFalseFloorYes.Text = "Yes";
+            this.rbFalseFloorYes.UseVisualStyleBackColor = true;
             // 
             // QuoteInfo5
             // 
@@ -425,19 +426,19 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbNumofLandingDoors);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbNumofLandings);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbTravel);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbHeadroom);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbPitDepth);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.tbphone);
+            this.Controls.Add(this.tbShaftDepth);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbfname);
+            this.Controls.Add(this.tbShaftWidth);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonEUR);
@@ -469,33 +470,33 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonEUR;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbphone;
+        private System.Windows.Forms.TextBox tbShaftDepth;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbfname;
+        private System.Windows.Forms.TextBox tbShaftWidth;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbHeadroom;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbPitDepth;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbNumofLandings;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbTravel;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbNumofLandingDoors;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton rbStructureShaftConcrete;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbFixingsTrueBolts;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rbTrimmerBeamsNo;
+        private System.Windows.Forms.RadioButton rbTrimmerBeamsYes;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rbFalseFloorNo;
+        private System.Windows.Forms.RadioButton rbFalseFloorYes;
+        private System.Windows.Forms.TextBox tbStructureShaft;
+        private System.Windows.Forms.RadioButton rbStructureShaftOther;
+        private System.Windows.Forms.TextBox tbFixings;
+        private System.Windows.Forms.RadioButton rbFixingsOther;
     }
 }

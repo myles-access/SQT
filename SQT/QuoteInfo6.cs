@@ -14,12 +14,16 @@ namespace SQT
 
         private void QuoteInfo6_Load(object sender, EventArgs e)
         {
-            PullInfo();
+            if (f.loadingPreviousData)
+            {
+                PullInfo();
+
+            }
         }
 
         private void PullInfo()
         {
-            //
+            f.LoadPreviousXmlTb(tbLoad, tbSpeed, tbwidth, tbDepth, tbHeight, tbLiftRating, tbNumofCarEntrances, tbFrontWallReturn, tbLiftCarNotes);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -27,15 +31,23 @@ namespace SQT
             QuoteInfo7 nF = new QuoteInfo7();
 
             //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
-            f.WordData("AE134", f.MeasureStringChecker(textBox1.Text, "kg")); //load
-            f.WordData("AE135", f.MeasureStringChecker(textBox2.Text, "mps"));//speed
-            f.WordData("AE136", f.MeasureStringChecker(textBox7.Text, "mm")); // width
-            f.WordData("AE137", f.MeasureStringChecker(textBox5.Text, "mm"));//depth
-            f.WordData("AE138", f.MeasureStringChecker(textBox4.Text, "mm"));//height
-            f.WordData("AE139", f.MeasureStringChecker(textBox3.Text, "passengers"));//classification rating
-            f.WordData("AE140", textBox6.Text);//number of car entraces
-            f.WordData("AE141", f.MeasureStringChecker(textBox8.Text, "mm"));//front wall return 
-            f.WordData("AE142", "NOTE: " + textBox9.Text);//notes
+            f.WordData("AE134", f.MeasureStringChecker(tbLoad.Text, "kg")); //load
+            f.WordData("AE135", f.MeasureStringChecker(tbSpeed.Text, "mps"));//speed
+            f.WordData("AE136", f.MeasureStringChecker(tbwidth.Text, "mm")); // width
+            f.WordData("AE137", f.MeasureStringChecker(tbDepth.Text, "mm"));//depth
+            f.WordData("AE138", f.MeasureStringChecker(tbHeight.Text, "mm"));//height
+            f.WordData("AE139", f.MeasureStringChecker(tbLiftRating.Text, "passengers"));//classification rating
+            f.WordData("AE113", f.MeasureStringChecker(tbLiftRating.Text, "passenger"));//classification rating
+            f.WordData("AE140", tbNumofCarEntrances.Text);//number of car entraces
+            f.WordData("AE141", f.MeasureStringChecker(tbFrontWallReturn.Text, "mm"));//front wall return 
+            if (tbFrontWallReturn.Text != "")
+            {
+                f.WordData("AE142", "NOTE: " + tbLiftCarNotes.Text);//notes
+            }
+            else
+            {
+                f.WordData("AE142", "");//notes
+            }
 
             //Load next form and close this one 
             nF.Show();

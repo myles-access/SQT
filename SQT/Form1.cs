@@ -11,6 +11,7 @@ namespace SQT
     {
         #region VARS
         public bool sucessfulSave = false;
+        public bool loadingPreviousData = false;
 
         public string quoteNumber = "";
         public string exchangeRateDate;
@@ -20,6 +21,7 @@ namespace SQT
         public float freightTotal = 0;
         public float liftPrice;
         public float lowestMargin;
+        float marginPercent;
 
         public int exCurrency = 0; // 0 AUD, 1 USD, 2 EUR
         public int num20Ft;
@@ -30,6 +32,7 @@ namespace SQT
         public Dictionary<string, string> wordExportData = new Dictionary<string, string>();
         public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
         public Dictionary<string, string> priceExports = new Dictionary<string, string>();
+        public Dictionary<string, string> loadData = new Dictionary<string, string>();
 
         Word.Application fileOpen;
         Word.Document document;
@@ -96,22 +99,22 @@ namespace SQT
             ShippingCalculation(3);
         }
 
+        private void TextBoxFixer(TextBox tb)
+        {
+            if (tb.Text == "")
+            {
+                tb.Text = 0.ToString();
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e) // generate price list button
         {
-            lblWaitControl(true);
-            if (floorsTbChecker() && marginTbChecker())
-            {
-                GeneratePriceList();
-                button3.Visible = true;
-                button3.Enabled = true;
-                printButton.Visible = true;
-                printButton.Enabled = true;
-            }
-            lblWaitControl(false);
+            GenerateListOfPrices();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            GenerateListOfPrices();
             WordSetup();//find and set vars to the quote template document 
             WordSave(false); // save the doc
             if (sucessfulSave)
@@ -128,12 +131,13 @@ namespace SQT
             else
             {
                 MessageBox.Show("Saving Error, Document not saved");
-                return;
+                lblWaitControl(false);
             }
-        }
+        } // export to quote button
 
         private void printButton_Click(object sender, EventArgs e)
         {
+            GenerateListOfPrices();
             lblWaitControl(true);
             printButton.BackColor = Color.Blue;
             if (SavePricesDocument())
@@ -163,6 +167,11 @@ namespace SQT
             }
             this.Close();
         }
+
+        private void btLoad_Click(object sender, EventArgs e)
+        {
+            LoadPreviousQuote();
+        }
         #endregion
 
         #region Word Document Processing Methods
@@ -178,6 +187,7 @@ namespace SQT
         private void WordFinish() // closes the word document 
         {
             fileOpen.Quit();
+            MessageBox.Show("Quote sucessfully exported");
             lblWaitControl(false);
         }
 
@@ -195,6 +205,11 @@ namespace SQT
                 {
                     document.SaveAs2(saveFileDialog1.FileName);
                     sucessfulSave = true;
+                }
+                else
+                {
+                    sucessfulSave = false;
+                    document.Close();
                 }
             }
             else if (b)
@@ -234,7 +249,7 @@ namespace SQT
                 ref matchWildCards, ref matchSoundsLike, ref matchAllWordForms, ref forward, ref wrap, ref format, ref replaceWithText, ref replace,
                 ref matchKashida, ref matchDiacritics, ref matchAlefHamza, ref matchControl);
         }
-        
+
         private bool SavePricesDocument()
         {
             saveFileDialog1.Title = ("Where to save the prices");
@@ -257,6 +272,14 @@ namespace SQT
             }
             else
             {
+                try
+                {
+                    //document.Close();
+                }
+                catch
+                {
+                    return false;
+                }
                 return false;
             }
         }
@@ -292,6 +315,35 @@ namespace SQT
                     exchangeRates.Add(dKey, dName * basePrices["16CurrencyMargin"]);
                     dKey = "";
                     dName = 0;
+                }
+            }
+
+            XMLR.Close();
+        }
+
+        private void FetchLoadData(string loadPath)
+        {
+            string dKey = "";
+            string dName = "";
+
+            XmlTextReader XMLR = new XmlTextReader(loadPath);
+            while (XMLR.Read())
+            {
+                if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "targetCurrency")
+                {
+                    dKey = XMLR.ReadElementContentAsString();
+                }
+                else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "inverseRate")
+                {
+                    dName = XMLR.ReadElementContentAsString();
+                }
+
+                if (dKey != "" && dName != "")
+                {
+                    loadData.Add(dKey, dName);
+                    
+                    dKey = "";
+                    dName = "";
                 }
             }
 
@@ -481,7 +533,7 @@ namespace SQT
                 return s;
             }
         }
-        
+
         public string RadioButtonHandeler(TextBox tb = null, params RadioButton[] rb) // called with all the radio buttons in each group to find which is checked and return the text 
         {
             foreach (RadioButton i in rb)
@@ -574,7 +626,12 @@ namespace SQT
         {
             try
             {
-                if (lowestMargin > float.Parse(tbMargin.Text))
+                if (tbMargin.Text == "")
+                {
+                    MessageBox.Show("Margin % is below the allowed minimum of " + lowestMargin + "%");
+                    return false;
+                }
+                else if (lowestMargin > float.Parse(tbMargin.Text))
                 {
                     MessageBox.Show("Margin % is below the allowed minimum of " + lowestMargin + "%");
                     return false;
@@ -582,6 +639,7 @@ namespace SQT
             }
             catch
             {
+                MessageBox.Show("Margin % is below the allowed minimum of " + lowestMargin + "%");
                 return false;
             }
 
@@ -591,6 +649,11 @@ namespace SQT
 
         #region unused methods
         private void label13_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void lbWait_Click(object sender, EventArgs e)
         {
             //
         }
@@ -697,7 +760,8 @@ namespace SQT
             PriceListFormatting(lblFinishes, basePrices["1CarFinishes"]);
             PriceListFormatting(lblFire, basePrices["2FireExtinguisher"]);
             PriceListFormatting(lblGSM, basePrices["3GSMUnitPhone"]);
-            PriceListFormatting(lblBlanket, basePrices["4ProtectiveBlanket"]);
+            //PriceListFormatting(lblBlanket, basePrices["4ProtectiveBlanket"]);
+            PriceListFormatting(lblBlanket, float.Parse(tbBlankets.Text));
             PriceListFormatting(lblSump, basePrices["5SumpCover"]);
             PriceListFormatting(lblWiring, basePrices["6Wiring"]);
             PriceListFormatting(lblSign, basePrices["7Sinage"]);
@@ -730,14 +794,14 @@ namespace SQT
                 lblLiftNoConvert.Visible = true;
                 lblLiftNoConvertPrice.Visible = true;
                 lblLiftNoConvert.Text = "Cost of Lift (USD)";
-                PriceListFormatting(lblLiftNoConvertPrice, float.Parse(tbCost.Text));
+                lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(tbCost.Text), false);
             }
             else if (exCurrency == 2)
             {
                 lblLiftNoConvert.Visible = true;
                 lblLiftNoConvertPrice.Visible = true;
                 lblLiftNoConvert.Text = "Cost of Lift (EUR)";
-                PriceListFormatting(lblLiftNoConvertPrice, float.Parse(tbCost.Text), true);
+                lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(tbCost.Text), true);
             }
 
             //add freight based on number of required containers 
@@ -745,11 +809,12 @@ namespace SQT
             //add labour from the labour costs dictionary based on number of floors in the building 
             PriceListFormatting(lblLabour, labourPrice[int.Parse(tBFloors.Text)]);
 
-            float marginPercent = 1 + (float.Parse(tbMargin.Text) / 100);
+            marginPercent = 1 + (float.Parse(tbMargin.Text) / 100);
+            float marginValue = (float.Parse(tbMargin.Text) / 100) * liftPrice;
             liftPrice *= int.Parse(tbNumberLifts.Text);
 
             lblCostOfParts.Text = PriceRounding(liftPrice);
-            lblCostIncludingMargin.Text = PriceRounding(liftPrice * marginPercent);
+            lblCostIncludingMargin.Text = PriceRounding(liftPrice * marginPercent); //+ " (" + PriceRounding(marginValue) + ")";
             lblGST.Text = PriceRounding(liftPrice * marginPercent * 0.1f);
             lblPriceIncludingGST.Text = PriceRounding(liftPrice * marginPercent * 1.1f);
         }
@@ -789,6 +854,8 @@ namespace SQT
 
         public void SavePricesToDict()
         {
+            float f = liftPrice * (marginPercent - 1);
+
             priceExports.Clear();
             priceExports.Add("AEP1", tBAddress.Text);
             priceExports.Add("AEP2", tBQuoteNumber.Text);
@@ -826,6 +893,7 @@ namespace SQT
             priceExports.Add("AEP34", lblCostIncludingMargin.Text);
             priceExports.Add("AEP35", lblGST.Text);
             priceExports.Add("AEP36", lblPriceIncludingGST.Text);
+            priceExports.Add("AEP37", PriceRounding(f).ToString());
         }
 
         public void lblWaitControl(bool b)
@@ -836,6 +904,131 @@ namespace SQT
             lbWait.Enabled = b;
             lbWait.Visible = b;
             this.Enabled = !b;
+        }
+
+        public void GenerateListOfPrices()
+        {
+            // Textboxes = [tbSundries, tbShaftLight, tbDuct, tbAccomodation, tbCartage, tbStorage, tbTravel];
+
+            TextBoxFixer(tbSundries);
+            TextBoxFixer(tbShaftLight);
+            TextBoxFixer(tbDuct);
+            TextBoxFixer(tbAccomodation);
+            TextBoxFixer(tbCartage);
+            TextBoxFixer(tbStorage);
+            TextBoxFixer(tbTravel);
+            TextBoxFixer(tbBlankets);
+            TextBoxFixer(tbScaffold);
+            TextBoxFixer(tbEntranceGuards);
+            TextBoxFixer(tbWeeksRequired);
+
+            if (floorsTbChecker() && marginTbChecker())
+            {
+                GeneratePriceList();
+                button3.Visible = true;
+                button3.Enabled = true;
+                printButton.Visible = true;
+                printButton.Enabled = true;
+            }
+        }
+
+        private void LoadPreviousQuote()
+        {
+            // prompt user to select word doc
+            // remove "quote" or "price breakdown" and file extenstion
+            // find XML doc with the same name in the dependancies folder
+            // call seprate method to load data from that XML into a dictionary 
+            // populate form with data from dictionary
+            // when opening each question form load all relevent data from the dictionary from Form1
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string xmlPath = FindXmlFile(openFileDialog1.FileName);
+                if (xmlPath != null)
+                {
+                    MessageBox.Show(xmlPath);
+                    xmlPath += ".xml";
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid file selected");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid file selected");
+            }
+        }
+
+        private string FindXmlFile(string fileName)
+        {
+            string rtnString = null;
+
+            if (fileName.Contains("Quote"))
+            {
+                string subString = " Quote.docm";
+                int index = fileName.IndexOf(subString);
+                rtnString = fileName.Remove(index, subString.Length);
+                int lastIndex = rtnString.LastIndexOf(@"\", rtnString.Length);
+                rtnString = rtnString.Remove(0, lastIndex + 1);
+                return rtnString;
+            }
+            else if (fileName.Contains("Price Breakdown"))
+            {
+                string subString = " Price Breakdown.docx";
+                int index = fileName.IndexOf(subString);
+                rtnString = fileName.Remove(index, subString.Length);
+                int lastIndex = rtnString.LastIndexOf(@"\", rtnString.Length);
+                rtnString = rtnString.Remove(0, lastIndex + 1);
+                return rtnString;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        private void LoadPreviousJobXml(Dictionary<string, string> d)
+        {
+            TextBox tb;
+
+            foreach (KeyValuePair<string, string> kvp in d)
+            {
+                tb = Controls[kvp.Key] as TextBox;
+                tb.Text = kvp.Value;
+
+            }
+        }
+
+        public  void LoadPreviousXmlTb(params TextBox[] tb)
+        {
+            foreach (TextBox Box in tb)
+            {
+                Box.Text = loadData[Box.Name.ToString()];
+            }
+        }
+
+        public void LoadPreviousXmlCb(params CheckBox[] cb)
+        {
+            foreach (CheckBox Box in cb)
+            {
+                Box.Checked = bool.Parse(loadData[Box.Name.ToString()]);
+            }
+        }
+
+        public void LoadPreviousXmlRb(TextBox tb, params RadioButton[] rb)
+        {
+            foreach (RadioButton radio in rb)
+            {
+                radio.Checked = bool.Parse(loadData[radio.Name.ToString()]);
+
+                if (radio.Checked == true && radio.Text =="")
+                {
+                    tb.Text = loadData[tb.Name.ToString()];
+                    return;
+                }
+            }
         }
     }
 }

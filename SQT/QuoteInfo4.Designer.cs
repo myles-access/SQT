@@ -33,32 +33,32 @@
             this.buttonEUR = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbIndependentServiceNo = new System.Windows.Forms.RadioButton();
+            this.rbIndependentServiceYes = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.rbFireServiceNo = new System.Windows.Forms.RadioButton();
+            this.rbFireServiceYes = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.rbLoadWeighingNo = new System.Windows.Forms.RadioButton();
+            this.rbLoadWeighingYes = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.tbEmergencyPowerOperationText = new System.Windows.Forms.TextBox();
+            this.rbEmergencyPowerOperationNo = new System.Windows.Forms.RadioButton();
+            this.rbEmergencyPowerOperationYes = new System.Windows.Forms.RadioButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.tbmachinetype = new System.Windows.Forms.TextBox();
+            this.rbMachinetypeOther = new System.Windows.Forms.RadioButton();
+            this.rbMachineTypeGearless = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.tbControlerLocation = new System.Windows.Forms.TextBox();
+            this.rbControlerLocationOther = new System.Windows.Forms.RadioButton();
+            this.rbControlerLocationBottomLanding = new System.Windows.Forms.RadioButton();
+            this.rbControlerLoactionTopLanding = new System.Windows.Forms.RadioButton();
+            this.rbControlerlocationShaft = new System.Windows.Forms.RadioButton();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.radioButton16 = new System.Windows.Forms.RadioButton();
+            this.tbDriveType = new System.Windows.Forms.TextBox();
+            this.rbDriveTypeOther = new System.Windows.Forms.RadioButton();
+            this.rbDriveTypeMRL = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -108,8 +108,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbIndependentServiceNo);
+            this.groupBox1.Controls.Add(this.rbIndependentServiceYes);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(41, 28);
             this.groupBox1.Name = "groupBox1";
@@ -118,32 +118,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Independent Service";
             // 
-            // radioButton2
+            // rbIndependentServiceNo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(72, 28);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(53, 28);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbIndependentServiceNo.AutoSize = true;
+            this.rbIndependentServiceNo.Checked = true;
+            this.rbIndependentServiceNo.Location = new System.Drawing.Point(72, 28);
+            this.rbIndependentServiceNo.Name = "rbIndependentServiceNo";
+            this.rbIndependentServiceNo.Size = new System.Drawing.Size(53, 28);
+            this.rbIndependentServiceNo.TabIndex = 1;
+            this.rbIndependentServiceNo.TabStop = true;
+            this.rbIndependentServiceNo.Text = "No";
+            this.rbIndependentServiceNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbIndependentServiceYes
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 28);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(60, 28);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Yes";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbIndependentServiceYes.AutoSize = true;
+            this.rbIndependentServiceYes.Location = new System.Drawing.Point(6, 28);
+            this.rbIndependentServiceYes.Name = "rbIndependentServiceYes";
+            this.rbIndependentServiceYes.Size = new System.Drawing.Size(60, 28);
+            this.rbIndependentServiceYes.TabIndex = 0;
+            this.rbIndependentServiceYes.Text = "Yes";
+            this.rbIndependentServiceYes.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton4);
+            this.groupBox2.Controls.Add(this.rbFireServiceNo);
+            this.groupBox2.Controls.Add(this.rbFireServiceYes);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(246, 97);
             this.groupBox2.Name = "groupBox2";
@@ -152,32 +152,32 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fire Service";
             // 
-            // radioButton3
+            // rbFireServiceNo
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 61);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(53, 28);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.Text = "No";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbFireServiceNo.AutoSize = true;
+            this.rbFireServiceNo.Location = new System.Drawing.Point(7, 61);
+            this.rbFireServiceNo.Name = "rbFireServiceNo";
+            this.rbFireServiceNo.Size = new System.Drawing.Size(53, 28);
+            this.rbFireServiceNo.TabIndex = 1;
+            this.rbFireServiceNo.Text = "No";
+            this.rbFireServiceNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rbFireServiceYes
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Checked = true;
-            this.radioButton4.Location = new System.Drawing.Point(6, 28);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(60, 28);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Yes";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbFireServiceYes.AutoSize = true;
+            this.rbFireServiceYes.Checked = true;
+            this.rbFireServiceYes.Location = new System.Drawing.Point(6, 28);
+            this.rbFireServiceYes.Name = "rbFireServiceYes";
+            this.rbFireServiceYes.Size = new System.Drawing.Size(60, 28);
+            this.rbFireServiceYes.TabIndex = 0;
+            this.rbFireServiceYes.TabStop = true;
+            this.rbFireServiceYes.Text = "Yes";
+            this.rbFireServiceYes.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton5);
-            this.groupBox3.Controls.Add(this.radioButton6);
+            this.groupBox3.Controls.Add(this.rbLoadWeighingNo);
+            this.groupBox3.Controls.Add(this.rbLoadWeighingYes);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(246, 28);
             this.groupBox3.Name = "groupBox3";
@@ -186,33 +186,33 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Load Weighing";
             // 
-            // radioButton5
+            // rbLoadWeighingNo
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(72, 28);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(53, 28);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.Text = "No";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbLoadWeighingNo.AutoSize = true;
+            this.rbLoadWeighingNo.Checked = true;
+            this.rbLoadWeighingNo.Location = new System.Drawing.Point(72, 28);
+            this.rbLoadWeighingNo.Name = "rbLoadWeighingNo";
+            this.rbLoadWeighingNo.Size = new System.Drawing.Size(53, 28);
+            this.rbLoadWeighingNo.TabIndex = 1;
+            this.rbLoadWeighingNo.TabStop = true;
+            this.rbLoadWeighingNo.Text = "No";
+            this.rbLoadWeighingNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rbLoadWeighingYes
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Checked = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 28);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(60, 28);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Yes";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbLoadWeighingYes.AutoSize = true;
+            this.rbLoadWeighingYes.Location = new System.Drawing.Point(6, 28);
+            this.rbLoadWeighingYes.Name = "rbLoadWeighingYes";
+            this.rbLoadWeighingYes.Size = new System.Drawing.Size(60, 28);
+            this.rbLoadWeighingYes.TabIndex = 0;
+            this.rbLoadWeighingYes.Text = "Yes";
+            this.rbLoadWeighingYes.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Controls.Add(this.radioButton7);
-            this.groupBox4.Controls.Add(this.radioButton8);
+            this.groupBox4.Controls.Add(this.tbEmergencyPowerOperationText);
+            this.groupBox4.Controls.Add(this.rbEmergencyPowerOperationNo);
+            this.groupBox4.Controls.Add(this.rbEmergencyPowerOperationYes);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(246, 204);
             this.groupBox4.Name = "groupBox4";
@@ -221,41 +221,41 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Emergency Power Operation";
             // 
-            // textBox1
+            // tbEmergencyPowerOperationText
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(341, 29);
-            this.textBox1.TabIndex = 53;
-            this.textBox1.Text = "UPS auto return to nearest floor";
+            this.tbEmergencyPowerOperationText.Location = new System.Drawing.Point(6, 62);
+            this.tbEmergencyPowerOperationText.Name = "tbEmergencyPowerOperationText";
+            this.tbEmergencyPowerOperationText.Size = new System.Drawing.Size(341, 29);
+            this.tbEmergencyPowerOperationText.TabIndex = 53;
+            this.tbEmergencyPowerOperationText.Text = "UPS auto return to nearest floor";
             // 
-            // radioButton7
+            // rbEmergencyPowerOperationNo
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(72, 28);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(53, 28);
-            this.radioButton7.TabIndex = 1;
-            this.radioButton7.Text = "No";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbEmergencyPowerOperationNo.AutoSize = true;
+            this.rbEmergencyPowerOperationNo.Location = new System.Drawing.Point(72, 28);
+            this.rbEmergencyPowerOperationNo.Name = "rbEmergencyPowerOperationNo";
+            this.rbEmergencyPowerOperationNo.Size = new System.Drawing.Size(53, 28);
+            this.rbEmergencyPowerOperationNo.TabIndex = 1;
+            this.rbEmergencyPowerOperationNo.Text = "No";
+            this.rbEmergencyPowerOperationNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rbEmergencyPowerOperationYes
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Checked = true;
-            this.radioButton8.Location = new System.Drawing.Point(6, 28);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(60, 28);
-            this.radioButton8.TabIndex = 0;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Yes";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rbEmergencyPowerOperationYes.AutoSize = true;
+            this.rbEmergencyPowerOperationYes.Checked = true;
+            this.rbEmergencyPowerOperationYes.Location = new System.Drawing.Point(6, 28);
+            this.rbEmergencyPowerOperationYes.Name = "rbEmergencyPowerOperationYes";
+            this.rbEmergencyPowerOperationYes.Size = new System.Drawing.Size(60, 28);
+            this.rbEmergencyPowerOperationYes.TabIndex = 0;
+            this.rbEmergencyPowerOperationYes.TabStop = true;
+            this.rbEmergencyPowerOperationYes.Text = "Yes";
+            this.rbEmergencyPowerOperationYes.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox3);
-            this.groupBox5.Controls.Add(this.radioButton9);
-            this.groupBox5.Controls.Add(this.radioButton10);
+            this.groupBox5.Controls.Add(this.tbmachinetype);
+            this.groupBox5.Controls.Add(this.rbMachinetypeOther);
+            this.groupBox5.Controls.Add(this.rbMachineTypeGearless);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(41, 100);
             this.groupBox5.Name = "groupBox5";
@@ -264,41 +264,41 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Machine Type";
             // 
-            // textBox3
+            // tbmachinetype
             // 
-            this.textBox3.Location = new System.Drawing.Point(27, 58);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(139, 29);
-            this.textBox3.TabIndex = 55;
+            this.tbmachinetype.Location = new System.Drawing.Point(27, 58);
+            this.tbmachinetype.Name = "tbmachinetype";
+            this.tbmachinetype.Size = new System.Drawing.Size(139, 29);
+            this.tbmachinetype.TabIndex = 55;
             // 
-            // radioButton9
+            // rbMachinetypeOther
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(7, 67);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(14, 13);
-            this.radioButton9.TabIndex = 1;
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rbMachinetypeOther.AutoSize = true;
+            this.rbMachinetypeOther.Location = new System.Drawing.Point(7, 67);
+            this.rbMachinetypeOther.Name = "rbMachinetypeOther";
+            this.rbMachinetypeOther.Size = new System.Drawing.Size(14, 13);
+            this.rbMachinetypeOther.TabIndex = 1;
+            this.rbMachinetypeOther.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // rbMachineTypeGearless
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Checked = true;
-            this.radioButton10.Location = new System.Drawing.Point(6, 28);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(102, 28);
-            this.radioButton10.TabIndex = 0;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Gearless";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rbMachineTypeGearless.AutoSize = true;
+            this.rbMachineTypeGearless.Checked = true;
+            this.rbMachineTypeGearless.Location = new System.Drawing.Point(6, 28);
+            this.rbMachineTypeGearless.Name = "rbMachineTypeGearless";
+            this.rbMachineTypeGearless.Size = new System.Drawing.Size(102, 28);
+            this.rbMachineTypeGearless.TabIndex = 0;
+            this.rbMachineTypeGearless.TabStop = true;
+            this.rbMachineTypeGearless.Text = "Gearless";
+            this.rbMachineTypeGearless.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.textBox2);
-            this.groupBox6.Controls.Add(this.radioButton14);
-            this.groupBox6.Controls.Add(this.radioButton13);
-            this.groupBox6.Controls.Add(this.radioButton11);
-            this.groupBox6.Controls.Add(this.radioButton12);
+            this.groupBox6.Controls.Add(this.tbControlerLocation);
+            this.groupBox6.Controls.Add(this.rbControlerLocationOther);
+            this.groupBox6.Controls.Add(this.rbControlerLocationBottomLanding);
+            this.groupBox6.Controls.Add(this.rbControlerLoactionTopLanding);
+            this.groupBox6.Controls.Add(this.rbControlerlocationShaft);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(408, 28);
             this.groupBox6.Name = "groupBox6";
@@ -307,61 +307,61 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Controler Location";
             // 
-            // textBox2
+            // tbControlerLocation
             // 
-            this.textBox2.Location = new System.Drawing.Point(27, 126);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 29);
-            this.textBox2.TabIndex = 54;
+            this.tbControlerLocation.Location = new System.Drawing.Point(27, 126);
+            this.tbControlerLocation.Name = "tbControlerLocation";
+            this.tbControlerLocation.Size = new System.Drawing.Size(139, 29);
+            this.tbControlerLocation.TabIndex = 54;
             // 
-            // radioButton14
+            // rbControlerLocationOther
             // 
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(7, 135);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(14, 13);
-            this.radioButton14.TabIndex = 3;
-            this.radioButton14.TabStop = true;
-            this.radioButton14.UseVisualStyleBackColor = true;
+            this.rbControlerLocationOther.AutoSize = true;
+            this.rbControlerLocationOther.Location = new System.Drawing.Point(7, 135);
+            this.rbControlerLocationOther.Name = "rbControlerLocationOther";
+            this.rbControlerLocationOther.Size = new System.Drawing.Size(14, 13);
+            this.rbControlerLocationOther.TabIndex = 3;
+            this.rbControlerLocationOther.TabStop = true;
+            this.rbControlerLocationOther.UseVisualStyleBackColor = true;
             // 
-            // radioButton13
+            // rbControlerLocationBottomLanding
             // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(7, 96);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(159, 28);
-            this.radioButton13.TabIndex = 2;
-            this.radioButton13.TabStop = true;
-            this.radioButton13.Text = "Bottom Landing";
-            this.radioButton13.UseVisualStyleBackColor = true;
+            this.rbControlerLocationBottomLanding.AutoSize = true;
+            this.rbControlerLocationBottomLanding.Location = new System.Drawing.Point(7, 96);
+            this.rbControlerLocationBottomLanding.Name = "rbControlerLocationBottomLanding";
+            this.rbControlerLocationBottomLanding.Size = new System.Drawing.Size(159, 28);
+            this.rbControlerLocationBottomLanding.TabIndex = 2;
+            this.rbControlerLocationBottomLanding.TabStop = true;
+            this.rbControlerLocationBottomLanding.Text = "Bottom Landing";
+            this.rbControlerLocationBottomLanding.UseVisualStyleBackColor = true;
             // 
-            // radioButton11
+            // rbControlerLoactionTopLanding
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(7, 62);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(135, 28);
-            this.radioButton11.TabIndex = 1;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Top Landing";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.rbControlerLoactionTopLanding.AutoSize = true;
+            this.rbControlerLoactionTopLanding.Location = new System.Drawing.Point(7, 62);
+            this.rbControlerLoactionTopLanding.Name = "rbControlerLoactionTopLanding";
+            this.rbControlerLoactionTopLanding.Size = new System.Drawing.Size(135, 28);
+            this.rbControlerLoactionTopLanding.TabIndex = 1;
+            this.rbControlerLoactionTopLanding.TabStop = true;
+            this.rbControlerLoactionTopLanding.Text = "Top Landing";
+            this.rbControlerLoactionTopLanding.UseVisualStyleBackColor = true;
             // 
-            // radioButton12
+            // rbControlerlocationShaft
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(6, 28);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(69, 28);
-            this.radioButton12.TabIndex = 0;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "Shaft";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.rbControlerlocationShaft.AutoSize = true;
+            this.rbControlerlocationShaft.Location = new System.Drawing.Point(6, 28);
+            this.rbControlerlocationShaft.Name = "rbControlerlocationShaft";
+            this.rbControlerlocationShaft.Size = new System.Drawing.Size(69, 28);
+            this.rbControlerlocationShaft.TabIndex = 0;
+            this.rbControlerlocationShaft.TabStop = true;
+            this.rbControlerlocationShaft.Text = "Shaft";
+            this.rbControlerlocationShaft.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.textBox4);
-            this.groupBox7.Controls.Add(this.radioButton15);
-            this.groupBox7.Controls.Add(this.radioButton16);
+            this.groupBox7.Controls.Add(this.tbDriveType);
+            this.groupBox7.Controls.Add(this.rbDriveTypeOther);
+            this.groupBox7.Controls.Add(this.rbDriveTypeMRL);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(41, 204);
             this.groupBox7.Name = "groupBox7";
@@ -370,33 +370,33 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Drive Type";
             // 
-            // textBox4
+            // tbDriveType
             // 
-            this.textBox4.Location = new System.Drawing.Point(27, 56);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(139, 29);
-            this.textBox4.TabIndex = 56;
+            this.tbDriveType.Location = new System.Drawing.Point(27, 56);
+            this.tbDriveType.Name = "tbDriveType";
+            this.tbDriveType.Size = new System.Drawing.Size(139, 29);
+            this.tbDriveType.TabIndex = 56;
             // 
-            // radioButton15
+            // rbDriveTypeOther
             // 
-            this.radioButton15.AutoSize = true;
-            this.radioButton15.Location = new System.Drawing.Point(7, 65);
-            this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(14, 13);
-            this.radioButton15.TabIndex = 1;
-            this.radioButton15.UseVisualStyleBackColor = true;
+            this.rbDriveTypeOther.AutoSize = true;
+            this.rbDriveTypeOther.Location = new System.Drawing.Point(7, 65);
+            this.rbDriveTypeOther.Name = "rbDriveTypeOther";
+            this.rbDriveTypeOther.Size = new System.Drawing.Size(14, 13);
+            this.rbDriveTypeOther.TabIndex = 1;
+            this.rbDriveTypeOther.UseVisualStyleBackColor = true;
             // 
-            // radioButton16
+            // rbDriveTypeMRL
             // 
-            this.radioButton16.AutoSize = true;
-            this.radioButton16.Checked = true;
-            this.radioButton16.Location = new System.Drawing.Point(6, 28);
-            this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(140, 28);
-            this.radioButton16.TabIndex = 0;
-            this.radioButton16.TabStop = true;
-            this.radioButton16.Text = "Traction MRL";
-            this.radioButton16.UseVisualStyleBackColor = true;
+            this.rbDriveTypeMRL.AutoSize = true;
+            this.rbDriveTypeMRL.Checked = true;
+            this.rbDriveTypeMRL.Location = new System.Drawing.Point(6, 28);
+            this.rbDriveTypeMRL.Name = "rbDriveTypeMRL";
+            this.rbDriveTypeMRL.Size = new System.Drawing.Size(140, 28);
+            this.rbDriveTypeMRL.TabIndex = 0;
+            this.rbDriveTypeMRL.TabStop = true;
+            this.rbDriveTypeMRL.Text = "Traction MRL";
+            this.rbDriveTypeMRL.UseVisualStyleBackColor = true;
             // 
             // QuoteInfo4
             // 
@@ -448,31 +448,31 @@
         private System.Windows.Forms.Button buttonEUR;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbIndependentServiceNo;
+        private System.Windows.Forms.RadioButton rbIndependentServiceYes;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rbFireServiceNo;
+        private System.Windows.Forms.RadioButton rbFireServiceYes;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rbLoadWeighingNo;
+        private System.Windows.Forms.RadioButton rbLoadWeighingYes;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.TextBox tbEmergencyPowerOperationText;
+        private System.Windows.Forms.RadioButton rbEmergencyPowerOperationNo;
+        private System.Windows.Forms.RadioButton rbEmergencyPowerOperationYes;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton rbMachinetypeOther;
+        private System.Windows.Forms.RadioButton rbMachineTypeGearless;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.RadioButton radioButton14;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton rbControlerLocationOther;
+        private System.Windows.Forms.RadioButton rbControlerLocationBottomLanding;
+        private System.Windows.Forms.RadioButton rbControlerLoactionTopLanding;
+        private System.Windows.Forms.RadioButton rbControlerlocationShaft;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RadioButton radioButton15;
-        private System.Windows.Forms.RadioButton radioButton16;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.RadioButton rbDriveTypeOther;
+        private System.Windows.Forms.RadioButton rbDriveTypeMRL;
+        private System.Windows.Forms.TextBox tbControlerLocation;
+        private System.Windows.Forms.TextBox tbmachinetype;
+        private System.Windows.Forms.TextBox tbDriveType;
     }
 }

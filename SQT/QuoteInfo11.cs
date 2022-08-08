@@ -25,6 +25,7 @@ namespace SQT
 
         private void buttonEUR_Click_1(object sender, EventArgs e)
         {
+            this.Enabled = false;
             //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
             f.WordData("AE199", f.RadioButtonHandeler(textBox1, radioButton20, radioButton19));//supply of true bolts
             f.WordData("AE200", f.RadioButtonHandeler(textBox2, radioButton2, radioButton1));//lift shaft lighting 
@@ -37,19 +38,24 @@ namespace SQT
             f.WordData("AE208", f.RadioButtonHandeler(textBox8, radioButton13, radioButton14));//supply of scaffold 
             f.WordData("AE209", f.RadioButtonHandeler(null, radioButton22, radioButton21));// emergency lowering system 
             f.WordData("AE210", f.RadioButtonHandeler(null, radioButton23, radioButton24));//out of service 
-            f.WordData("AE218", "NOTE: " + tbfname.Text);//general notes
+            if (tbfname.Text != "")
+            {
+                f.WordData("AE218", "NOTE: " + tbfname.Text);//general notes
+            }
+            else
+            {
+                f.WordData("AE218", "");//general notes
+            }
 
             //this.Hide();
             //Load next form and close this one 
             f.QuestionsComplete();
             this.Close();
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             f.QuestionCloseCall(this);
-
         }
     }
 }
