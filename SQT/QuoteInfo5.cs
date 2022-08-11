@@ -46,6 +46,11 @@ namespace SQT
             f.WordData("AE132", f.RadioButtonHandeler(null, rbTrimmerBeamsNo, rbTrimmerBeamsYes));//trimmer beams
             f.WordData("AE133", f.RadioButtonHandeler(null, rbFalseFloorYes, rbFalseFloorNo));//false floor
 
+            f.SaveTbToXML(tbFixings, tbHeadroom, tbNumofLandingDoors, tbNumofLandings, tbPitDepth,
+                tbShaftDepth, tbShaftWidth, tbStructureShaft, tbTravel);
+            f.SaveRbToXML(rbFalseFloorNo, rbFalseFloorYes, rbFixingsOther, rbFixingsTrueBolts, rbStructureShaftConcrete,
+                rbStructureShaftOther, rbTrimmerBeamsNo, rbTrimmerBeamsYes);
+
             //Load next form and close this one 
             nF.Show();
             this.Close();

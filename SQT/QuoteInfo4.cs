@@ -47,6 +47,12 @@ namespace SQT
             f.WordData("AE122", tbEmergencyPowerOperationText.Text);//emergency power operation text
             f.WordData("AE219", f.RadioButtonHandeler(tbDriveType, rbDriveTypeOther, rbDriveTypeMRL)); // drive type
 
+            f.SaveRbToXML(rbControlerLoactionTopLanding, rbControlerLocationBottomLanding, rbControlerLocationOther, rbControlerlocationShaft,
+                rbDriveTypeMRL, rbDriveTypeOther, rbEmergencyPowerOperationNo, rbEmergencyPowerOperationYes, rbFireServiceNo,
+                rbFireServiceYes, rbIndependentServiceNo, rbIndependentServiceYes, rbLoadWeighingNo, rbLoadWeighingYes,
+                rbMachineTypeGearless, rbMachinetypeOther);
+            f.SaveTbToXML(tbControlerLocation, tbDriveType, tbEmergencyPowerOperationText, tbmachinetype);
+
             //Load next form and close this one 
             nF.Show();
             this.Close();

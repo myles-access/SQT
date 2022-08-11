@@ -73,6 +73,16 @@ namespace SQT
             f.WordData("AE189", f.RadioButtonHandeler(null, rbVoiceAnnunciationNo, rbVoiceAnnunciationYes));//voice annunciation 
             f.WordData("AE190", f.RadioButtonHandeler(null, rbPositionIndicatorTypeSurfaceMount, rbPositionIndicatorTypeFlushMount));// position indicaor type 
 
+            f.SaveTbToXML(tbAuxCOPLocation, tbCOPFinish, tbDesignations, tbKeyswitchLocation, tbMainCOPLocation, tbNumberOfCOPS);
+            f.SaveRbToXML(rbAudibleIndicationGOngNo, rbAudibleIndicationGongYes, rbBrailelTactileSymbolsYes, rbBraileTactileSymbolsNo,
+                rbCarLightSwitchNo, rbCarLightSwitchYes, rbCOPFinishOther, rbCOPFinishSatinStainlessSteel, rbDoorCloseButtonNo,
+                rbDoorCLoseButtonYes, rbDoorOpenButtonNo, rbDoorOpenButtonYes, rbExclusiveServiceNo, rbExclusiveServiceYes, rbFanSwitchNo,
+                rbFanSwitchYes, rbFireSErviceKeySwitchNo, rbFireServiceKeySwitchYes, rbGPOInCarNo, rbGPOInCarYes, rbLEDColourBlue,
+                rbLEDColourRed, rbLEDColourWhite, rbLiftOverloadIndicatorYes, rbLiftrOverloadIndicatorNo, rbPositionIndicatorTypeFlushMount,
+                rbPositionIndicatorTypeSurfaceMount, rbRearDoorKeySwitchNo, rbRearDoorKeySwitchYes, rbSecurityCabilingOnlyNo,
+                rbSecurityCabilingOnlyYes, rbSecurityKeySwitchNo, rbSecurityKeySwitchYes, rbTelephoneHandsFreeNo, rbTelephoneHandsFreeYes,
+                rbVoiceAnnunciationNo, rbVoiceAnnunciationYes);
+
             //Load next form and close this one 
             nF.Show();
             Close();

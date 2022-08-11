@@ -1625,7 +1625,7 @@
             this.lbWait.BackColor = System.Drawing.Color.Gray;
             this.lbWait.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWait.ForeColor = System.Drawing.Color.Navy;
-            this.lbWait.Location = new System.Drawing.Point(45, 278);
+            this.lbWait.Location = new System.Drawing.Point(29, 253);
             this.lbWait.Name = "lbWait";
             this.lbWait.Size = new System.Drawing.Size(965, 110);
             this.lbWait.TabIndex = 71;
@@ -1684,6 +1684,7 @@
             // 
             // btLoad
             // 
+            this.btLoad.Enabled = false;
             this.btLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.btLoad.Location = new System.Drawing.Point(8, 670);
             this.btLoad.Name = "btLoad";
@@ -1691,6 +1692,7 @@
             this.btLoad.TabIndex = 76;
             this.btLoad.Text = "Load";
             this.btLoad.UseVisualStyleBackColor = true;
+            this.btLoad.Visible = false;
             this.btLoad.Click += new System.EventHandler(this.btLoad_Click);
             // 
             // openFileDialog1

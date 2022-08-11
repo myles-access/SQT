@@ -38,6 +38,8 @@ namespace SQT
             f.WordData("AE109", tbAddress2.Text);//address 2
             f.WordData("AE110", tbAddress3.Text);//address 3
 
+            f.SaveTbToXML(tbfname, tblname, tbphone, tbAddress1, tbAddress2, tbAddress3);
+
             //Load next form and close this one 
             nF.Show();
             this.Close();

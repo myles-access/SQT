@@ -43,8 +43,8 @@
             this.rbOutofServiceKeySwitchNo = new System.Windows.Forms.RadioButton();
             this.rbOutOfServieKeySwitchYes = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rbFireServiceKeySwitchNo = new System.Windows.Forms.RadioButton();
-            this.rbFireServiceKeySwitchYes = new System.Windows.Forms.RadioButton();
+            this.rbLandingFireServiceKeySwitchNo = new System.Windows.Forms.RadioButton();
+            this.rbLandingFireServiceKeySwitchYes = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.rbHallLanternsNo = new System.Windows.Forms.RadioButton();
             this.rbHallLanternsYes = new System.Windows.Forms.RadioButton();
@@ -98,6 +98,7 @@
             this.label4.Size = new System.Drawing.Size(229, 26);
             this.label4.TabIndex = 50;
             this.label4.Text = "Landing Appointments";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // groupBox10
             // 
@@ -214,8 +215,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.rbFireServiceKeySwitchNo);
-            this.groupBox3.Controls.Add(this.rbFireServiceKeySwitchYes);
+            this.groupBox3.Controls.Add(this.rbLandingFireServiceKeySwitchNo);
+            this.groupBox3.Controls.Add(this.rbLandingFireServiceKeySwitchYes);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(21, 214);
             this.groupBox3.Name = "groupBox3";
@@ -224,27 +225,27 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Fire Service Key Switch";
             // 
-            // rbFireServiceKeySwitchNo
+            // rbLandingFireServiceKeySwitchNo
             // 
-            this.rbFireServiceKeySwitchNo.AutoSize = true;
-            this.rbFireServiceKeySwitchNo.Location = new System.Drawing.Point(72, 28);
-            this.rbFireServiceKeySwitchNo.Name = "rbFireServiceKeySwitchNo";
-            this.rbFireServiceKeySwitchNo.Size = new System.Drawing.Size(53, 28);
-            this.rbFireServiceKeySwitchNo.TabIndex = 1;
-            this.rbFireServiceKeySwitchNo.TabStop = true;
-            this.rbFireServiceKeySwitchNo.Text = "No";
-            this.rbFireServiceKeySwitchNo.UseVisualStyleBackColor = true;
+            this.rbLandingFireServiceKeySwitchNo.AutoSize = true;
+            this.rbLandingFireServiceKeySwitchNo.Location = new System.Drawing.Point(72, 28);
+            this.rbLandingFireServiceKeySwitchNo.Name = "rbLandingFireServiceKeySwitchNo";
+            this.rbLandingFireServiceKeySwitchNo.Size = new System.Drawing.Size(53, 28);
+            this.rbLandingFireServiceKeySwitchNo.TabIndex = 1;
+            this.rbLandingFireServiceKeySwitchNo.TabStop = true;
+            this.rbLandingFireServiceKeySwitchNo.Text = "No";
+            this.rbLandingFireServiceKeySwitchNo.UseVisualStyleBackColor = true;
             // 
-            // rbFireServiceKeySwitchYes
+            // rbLandingFireServiceKeySwitchYes
             // 
-            this.rbFireServiceKeySwitchYes.AutoSize = true;
-            this.rbFireServiceKeySwitchYes.Location = new System.Drawing.Point(6, 28);
-            this.rbFireServiceKeySwitchYes.Name = "rbFireServiceKeySwitchYes";
-            this.rbFireServiceKeySwitchYes.Size = new System.Drawing.Size(60, 28);
-            this.rbFireServiceKeySwitchYes.TabIndex = 0;
-            this.rbFireServiceKeySwitchYes.TabStop = true;
-            this.rbFireServiceKeySwitchYes.Text = "Yes";
-            this.rbFireServiceKeySwitchYes.UseVisualStyleBackColor = true;
+            this.rbLandingFireServiceKeySwitchYes.AutoSize = true;
+            this.rbLandingFireServiceKeySwitchYes.Location = new System.Drawing.Point(6, 28);
+            this.rbLandingFireServiceKeySwitchYes.Name = "rbLandingFireServiceKeySwitchYes";
+            this.rbLandingFireServiceKeySwitchYes.Size = new System.Drawing.Size(60, 28);
+            this.rbLandingFireServiceKeySwitchYes.TabIndex = 0;
+            this.rbLandingFireServiceKeySwitchYes.TabStop = true;
+            this.rbLandingFireServiceKeySwitchYes.Text = "Yes";
+            this.rbLandingFireServiceKeySwitchYes.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -396,8 +397,8 @@
         private System.Windows.Forms.RadioButton rbOutofServiceKeySwitchNo;
         private System.Windows.Forms.RadioButton rbOutOfServieKeySwitchYes;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton rbFireServiceKeySwitchNo;
-        private System.Windows.Forms.RadioButton rbFireServiceKeySwitchYes;
+        private System.Windows.Forms.RadioButton rbLandingFireServiceKeySwitchNo;
+        private System.Windows.Forms.RadioButton rbLandingFireServiceKeySwitchYes;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton rbHallLanternsNo;
         private System.Windows.Forms.RadioButton rbHallLanternsYes;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 using Word = Microsoft.Office.Interop.Word;
@@ -21,7 +22,7 @@ namespace SQT
         public float freightTotal = 0;
         public float liftPrice;
         public float lowestMargin;
-        float marginPercent;
+        private float marginPercent;
 
         public int exCurrency = 0; // 0 AUD, 1 USD, 2 EUR
         public int num20Ft;
@@ -33,12 +34,12 @@ namespace SQT
         public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
         public Dictionary<string, string> priceExports = new Dictionary<string, string>();
         public Dictionary<string, string> loadData = new Dictionary<string, string>();
+        public Dictionary<string, string> saveData = new Dictionary<string, string>();
 
         Word.Application fileOpen;
         Word.Document document;
         #endregion
 
-        #region Form Load Methods
         public Form1()
         {
             InitializeComponent();
@@ -66,9 +67,7 @@ namespace SQT
             printButton.Visible = false;
             printButton.Enabled = false;
         }
-        #endregion
 
-        #region Button Press Methods
         private void buttonAUD_Click(object sender, EventArgs e)
         {
             SelectCurrency("A");
@@ -172,9 +171,7 @@ namespace SQT
         {
             LoadPreviousQuote();
         }
-        #endregion
 
-        #region Word Document Processing Methods
         public void WordSetup() // sets up the word document ready to be written
         {
             lblWaitControl(true);
@@ -283,9 +280,7 @@ namespace SQT
                 return false;
             }
         }
-        #endregion
 
-        #region XML Methods
         //find the live currency rates from floatrates.com and write them into the Exchange rate dictionary 
         private void FetchCurrencyRates()
         {
@@ -341,7 +336,7 @@ namespace SQT
                 if (dKey != "" && dName != "")
                 {
                     loadData.Add(dKey, dName);
-                    
+
                     dKey = "";
                     dName = "";
                 }
@@ -407,9 +402,7 @@ namespace SQT
 
             XMLR.Close();
         }
-        #endregion
 
-        #region Data Formatting Methods
         private string PriceRounding(float s, bool b = false)
         {
             if (b)
@@ -645,7 +638,6 @@ namespace SQT
 
             return true;
         }
-        #endregion
 
         #region unused methods
         private void label13_Click(object sender, EventArgs e)
@@ -811,7 +803,7 @@ namespace SQT
 
             marginPercent = 1 + (float.Parse(tbMargin.Text) / 100);
             float marginValue = (float.Parse(tbMargin.Text) / 100) * liftPrice;
-            liftPrice *= int.Parse(tbNumberLifts.Text);
+            //liftPrice *= int.Parse(tbNumberLifts.Text);
 
             lblCostOfParts.Text = PriceRounding(liftPrice);
             lblCostIncludingMargin.Text = PriceRounding(liftPrice * marginPercent); //+ " (" + PriceRounding(marginValue) + ")";
@@ -828,6 +820,7 @@ namespace SQT
 
             WordReplaceLooper(wordExportData);// loop the find and replace method to populate the info 
             WordSave(true);// save the doc again 
+            SaveReloadXMLFile(saveData);
             WordFinish();//finish the methods 
 
         }
@@ -989,19 +982,7 @@ namespace SQT
             }
         }
 
-        private void LoadPreviousJobXml(Dictionary<string, string> d)
-        {
-            TextBox tb;
-
-            foreach (KeyValuePair<string, string> kvp in d)
-            {
-                tb = Controls[kvp.Key] as TextBox;
-                tb.Text = kvp.Value;
-
-            }
-        }
-
-        public  void LoadPreviousXmlTb(params TextBox[] tb)
+        public void LoadPreviousXmlTb(params TextBox[] tb)
         {
             foreach (TextBox Box in tb)
             {
@@ -1023,12 +1004,64 @@ namespace SQT
             {
                 radio.Checked = bool.Parse(loadData[radio.Name.ToString()]);
 
-                if (radio.Checked == true && radio.Text =="")
+                if (radio.Checked == true && radio.Text == "")
                 {
                     tb.Text = loadData[tb.Name.ToString()];
                     return;
                 }
             }
+        }
+
+        public void SaveTbToXML(params TextBox[] tb)
+        {
+            foreach (TextBox item in tb)
+            {
+                saveData.Add(item.Name.ToString(), item.Text.ToString());
+            }
+        }
+
+        public void SaveRbToXML(params RadioButton[] rb)
+        {
+            foreach (RadioButton item in rb)
+            {
+                saveData.Add(item.Name.ToString(), item.Checked.ToString());
+            }
+        }
+
+        public void SaveCbToXML(params CheckBox[] cb)
+        {
+            foreach (CheckBox item in cb)
+            {
+                saveData.Add(item.Name.ToString(), item.Checked.ToString());
+            }
+        }
+        
+        private void SaveReloadXMLFile(Dictionary<string, string> kvp)
+        {
+            string path = "X:\\Program Dependancies\\Quote tool\\Previous Prices\\" + tBAddress.Text.ToString()+".xml";
+
+            XmlTextWriter xmlWriter = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\Previous Prices\\" + tBAddress.Text.ToString() + ".xml", Encoding.UTF8);
+            xmlWriter.Formatting = Formatting.Indented;
+            xmlWriter.WriteStartDocument();
+
+            xmlWriter.WriteStartElement("Data");
+
+            foreach (KeyValuePair<string, string> i in kvp)
+            {
+                xmlWriter.WriteStartElement("Object");
+
+                xmlWriter.WriteElementString("Name", i.Key);
+                xmlWriter.WriteElementString("Info", i.Value);
+
+                xmlWriter.WriteEndElement(); //Object end
+            }
+            xmlWriter.WriteEndElement();//Data end
+            xmlWriter.Close();
+        }
+
+        private void Form1Save()
+        {
+
         }
     }
 }

@@ -49,6 +49,8 @@ namespace SQT
                 f.WordData("AE142", "");//notes
             }
 
+            f.SaveTbToXML(tbDepth, tbFrontWallReturn, tbHeight, tbLiftCarNotes, tbLiftRating, tbLoad, tbNumofCarEntrances, tbSpeed, tbwidth);
+
             //Load next form and close this one 
             nF.Show();
             this.Close();

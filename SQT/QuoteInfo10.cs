@@ -25,7 +25,7 @@ namespace SQT
             f.LoadPreviousXmlTb(tbNumOfButtonRisers);
             f.LoadPreviousXmlRb(tbFacePlateMaterial, rbFacePlateMaterialOther, rbFacePlateMaterialSatinStainlessSteel);
             f.LoadPreviousXmlRb(null, rbHallLanternsNo, rbHallLanternsYes);
-            f.LoadPreviousXmlRb(null, rbFireServiceKeySwitchNo, rbFireServiceKeySwitchYes);
+            f.LoadPreviousXmlRb(null, rbLandingFireServiceKeySwitchNo, rbLandingFireServiceKeySwitchYes);
             f.LoadPreviousXmlRb(null, rbBraileTactileSymbolsLandingNo, rbBraileTactileSymbolsLandingYes);
             f.LoadPreviousXmlRb(null, rbOutofServiceKeySwitchNo, rbOutOfServieKeySwitchYes);
             f.LoadPreviousXmlRb(null, rbDigitalIndicationIncorperatedNo, rbDigitalIndicationIncorperatedYes);
@@ -43,8 +43,13 @@ namespace SQT
             f.WordData("AE195", f.RadioButtonHandeler(null, rbBraileTactileSymbolsLandingNo, rbBraileTactileSymbolsLandingYes));// braille tactile symbols 
             f.WordData("AE196", f.RadioButtonHandeler(null, rbDigitalIndicationIncorperatedYes, rbDigitalIndicationIncorperatedNo));// digital indication incorperated 
             f.WordData("AE197", f.RadioButtonHandeler(null, rbOutofServiceKeySwitchNo, rbOutOfServieKeySwitchYes));//out of service key switch 
-            f.WordData("AE198", f.RadioButtonHandeler(null, rbFireServiceKeySwitchNo, rbFireServiceKeySwitchYes));// fire service key switch 
+            f.WordData("AE198", f.RadioButtonHandeler(null, rbLandingFireServiceKeySwitchNo, rbLandingFireServiceKeySwitchYes));// fire service key switch 
             f.WordData("AE217", tbNumOfButtonRisers.Text);// number of button risers 
+
+            f.SaveTbToXML(tbFacePlateMaterial, tbNumOfButtonRisers);
+            f.SaveRbToXML(rbBraileTactileSymbolsLandingNo, rbBraileTactileSymbolsLandingYes, rbDigitalIndicationIncorperatedNo,
+                rbDigitalIndicationIncorperatedYes, rbFacePlateMaterialOther, rbFacePlateMaterialSatinStainlessSteel, rbLandingFireServiceKeySwitchNo,
+                rbLandingFireServiceKeySwitchYes, rbHallLanternsNo, rbHallLanternsYes, rbOutofServiceKeySwitchNo, rbOutOfServieKeySwitchYes);
 
             //Load next form and close this one 
             nF.Show();
@@ -54,6 +59,11 @@ namespace SQT
         private void button2_Click(object sender, EventArgs e)
         {
             f.QuestionCloseCall(this);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

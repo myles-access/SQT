@@ -49,6 +49,11 @@ namespace SQT
             f.WordData("AE153", f.RadioButtonHandeler(null, rbFireRatedDoorsYes, rbFireRatedDoorsNo));//fire rated doors 
             f.WordData("AE154", f.RadioButtonHandeler(tbEntrancProtection, rbEntranceProtectionOTher, rbEntranceProtectionElectronicScanner)); //  entrance protection 
 
+            f.SaveTbToXML(tbDoorHeight, tbDoorTracks, tbDoorVoltage, tbDoorWidth, tbEntrancProtection, tbLandingDoorFinish, tbLandingDoorJambDepth);
+            f.SaveRbToXML(rbAdvancedOpeningNo, rbAdvancedOpeningYes, rbDoorNudgingNo, rbDoorNudgingYes, rbDoorTracksAnodisedAluminium, rbDoorTracksOther,
+                rbDoorTypeCentreOpening, rbDoorTypeSideOpening, rbEntranceProtectionElectronicScanner, rbEntranceProtectionOTher, rbFireRatedDoorsNo,
+                rbFireRatedDoorsYes, rbLandingDoorFinishOther, rbLandingDoorFinishStainlessSteel);
+
             //Load next form and close this one 
             nF.Show();
             this.Close();

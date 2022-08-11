@@ -38,6 +38,9 @@ namespace SQT
             f.WordData("AE115", tbTypeofLift.Text);//type of lift
             f.WordData("AE215", "Full Collective"); //control type, not changable 
 
+            f.SaveRbToXML(rbSL, rbSumasa, rbWittur);
+            f.SaveTbToXML(tbModel, tbTypeofLift, tbLiftNumbers);
+
             //Load next form and close this one 
             nF.Show();
             this.Close();

@@ -33,47 +33,47 @@
             this.buttonEUR = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton19 = new System.Windows.Forms.RadioButton();
-            this.radioButton20 = new System.Windows.Forms.RadioButton();
+            this.tbSupplyofTrueBolts = new System.Windows.Forms.TextBox();
+            this.rbSupplyofTrueBoltsByAccess = new System.Windows.Forms.RadioButton();
+            this.rbSupplyofTrueBoltsOther = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.tbLiftShaftLighting = new System.Windows.Forms.TextBox();
+            this.rbLiftShaftLightingByAccess = new System.Windows.Forms.RadioButton();
+            this.rbLiftShaftLightingOther = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.tbPitLadder = new System.Windows.Forms.TextBox();
+            this.rbPitLAdderbyAccess = new System.Windows.Forms.RadioButton();
+            this.rbPitLadderOther = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.tbSumpCover = new System.Windows.Forms.TextBox();
+            this.rbSumpCoverByAccess = new System.Windows.Forms.RadioButton();
+            this.rbSumpCoverOther = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.tbTempEntranceScreens = new System.Windows.Forms.TextBox();
+            this.rbTempEntranceScreensByAccess = new System.Windows.Forms.RadioButton();
+            this.rbTempEntranceScreensOther = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.tbButtonandIndicatorBoxes = new System.Windows.Forms.TextBox();
+            this.rbButtonandIndicatorBoxesByAccess = new System.Windows.Forms.RadioButton();
+            this.rbButtonandIndicatorBoxesOther = new System.Windows.Forms.RadioButton();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
+            this.tbSupplyofScaffold = new System.Windows.Forms.TextBox();
+            this.rbSupplyofScaffoldByAccess = new System.Windows.Forms.RadioButton();
+            this.rbSupplyofScaffoldOther = new System.Windows.Forms.RadioButton();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.radioButton16 = new System.Windows.Forms.RadioButton();
+            this.tbLiftingEyeBeam = new System.Windows.Forms.TextBox();
+            this.rbLiftingEyeBeamByAccess = new System.Windows.Forms.RadioButton();
+            this.rbLiftingEyeBeamOther = new System.Windows.Forms.RadioButton();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.radioButton17 = new System.Windows.Forms.RadioButton();
-            this.radioButton18 = new System.Windows.Forms.RadioButton();
+            this.rbManualsA4SizeNo = new System.Windows.Forms.RadioButton();
+            this.rbManualsA4SizeYes = new System.Windows.Forms.RadioButton();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.radioButton21 = new System.Windows.Forms.RadioButton();
-            this.radioButton22 = new System.Windows.Forms.RadioButton();
+            this.rbEmergencyLoweringSystemNo = new System.Windows.Forms.RadioButton();
+            this.rbEmergencyLoweringSystemYes = new System.Windows.Forms.RadioButton();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.radioButton23 = new System.Windows.Forms.RadioButton();
-            this.radioButton24 = new System.Windows.Forms.RadioButton();
-            this.tbfname = new System.Windows.Forms.TextBox();
+            this.rbOutofServiceNo = new System.Windows.Forms.RadioButton();
+            this.rbOutofServiceYes = new System.Windows.Forms.RadioButton();
+            this.tbGeneralNotes = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox10.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -128,9 +128,9 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.textBox1);
-            this.groupBox10.Controls.Add(this.radioButton19);
-            this.groupBox10.Controls.Add(this.radioButton20);
+            this.groupBox10.Controls.Add(this.tbSupplyofTrueBolts);
+            this.groupBox10.Controls.Add(this.rbSupplyofTrueBoltsByAccess);
+            this.groupBox10.Controls.Add(this.rbSupplyofTrueBoltsOther);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox10.Location = new System.Drawing.Point(12, 32);
             this.groupBox10.Name = "groupBox10";
@@ -139,43 +139,43 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Supply of True Bolts";
             // 
-            // textBox1
+            // tbSupplyofTrueBolts
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(23, 58);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 32);
-            this.textBox1.TabIndex = 96;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbSupplyofTrueBolts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSupplyofTrueBolts.ForeColor = System.Drawing.Color.Black;
+            this.tbSupplyofTrueBolts.Location = new System.Drawing.Point(23, 58);
+            this.tbSupplyofTrueBolts.Margin = new System.Windows.Forms.Padding(2);
+            this.tbSupplyofTrueBolts.Name = "tbSupplyofTrueBolts";
+            this.tbSupplyofTrueBolts.Size = new System.Drawing.Size(163, 32);
+            this.tbSupplyofTrueBolts.TabIndex = 96;
+            this.tbSupplyofTrueBolts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // radioButton19
+            // rbSupplyofTrueBoltsByAccess
             // 
-            this.radioButton19.AutoSize = true;
-            this.radioButton19.Checked = true;
-            this.radioButton19.Location = new System.Drawing.Point(6, 28);
-            this.radioButton19.Name = "radioButton19";
-            this.radioButton19.Size = new System.Drawing.Size(198, 28);
-            this.radioButton19.TabIndex = 2;
-            this.radioButton19.TabStop = true;
-            this.radioButton19.Text = "By Access Elevators";
-            this.radioButton19.UseVisualStyleBackColor = true;
+            this.rbSupplyofTrueBoltsByAccess.AutoSize = true;
+            this.rbSupplyofTrueBoltsByAccess.Checked = true;
+            this.rbSupplyofTrueBoltsByAccess.Location = new System.Drawing.Point(6, 28);
+            this.rbSupplyofTrueBoltsByAccess.Name = "rbSupplyofTrueBoltsByAccess";
+            this.rbSupplyofTrueBoltsByAccess.Size = new System.Drawing.Size(198, 28);
+            this.rbSupplyofTrueBoltsByAccess.TabIndex = 2;
+            this.rbSupplyofTrueBoltsByAccess.TabStop = true;
+            this.rbSupplyofTrueBoltsByAccess.Text = "By Access Elevators";
+            this.rbSupplyofTrueBoltsByAccess.UseVisualStyleBackColor = true;
             // 
-            // radioButton20
+            // rbSupplyofTrueBoltsOther
             // 
-            this.radioButton20.AutoSize = true;
-            this.radioButton20.Location = new System.Drawing.Point(4, 68);
-            this.radioButton20.Name = "radioButton20";
-            this.radioButton20.Size = new System.Drawing.Size(14, 13);
-            this.radioButton20.TabIndex = 1;
-            this.radioButton20.UseVisualStyleBackColor = true;
+            this.rbSupplyofTrueBoltsOther.AutoSize = true;
+            this.rbSupplyofTrueBoltsOther.Location = new System.Drawing.Point(4, 68);
+            this.rbSupplyofTrueBoltsOther.Name = "rbSupplyofTrueBoltsOther";
+            this.rbSupplyofTrueBoltsOther.Size = new System.Drawing.Size(14, 13);
+            this.rbSupplyofTrueBoltsOther.TabIndex = 1;
+            this.rbSupplyofTrueBoltsOther.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.tbLiftShaftLighting);
+            this.groupBox1.Controls.Add(this.rbLiftShaftLightingByAccess);
+            this.groupBox1.Controls.Add(this.rbLiftShaftLightingOther);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(226, 32);
             this.groupBox1.Name = "groupBox1";
@@ -184,43 +184,43 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lift Shaft Lighting";
             // 
-            // textBox2
+            // tbLiftShaftLighting
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(25, 58);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 32);
-            this.textBox2.TabIndex = 97;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbLiftShaftLighting.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLiftShaftLighting.ForeColor = System.Drawing.Color.Black;
+            this.tbLiftShaftLighting.Location = new System.Drawing.Point(25, 58);
+            this.tbLiftShaftLighting.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLiftShaftLighting.Name = "tbLiftShaftLighting";
+            this.tbLiftShaftLighting.Size = new System.Drawing.Size(163, 32);
+            this.tbLiftShaftLighting.TabIndex = 97;
+            this.tbLiftShaftLighting.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // radioButton1
+            // rbLiftShaftLightingByAccess
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 28);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(198, 28);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "By Access Elevators";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbLiftShaftLightingByAccess.AutoSize = true;
+            this.rbLiftShaftLightingByAccess.Checked = true;
+            this.rbLiftShaftLightingByAccess.Location = new System.Drawing.Point(6, 28);
+            this.rbLiftShaftLightingByAccess.Name = "rbLiftShaftLightingByAccess";
+            this.rbLiftShaftLightingByAccess.Size = new System.Drawing.Size(198, 28);
+            this.rbLiftShaftLightingByAccess.TabIndex = 2;
+            this.rbLiftShaftLightingByAccess.TabStop = true;
+            this.rbLiftShaftLightingByAccess.Text = "By Access Elevators";
+            this.rbLiftShaftLightingByAccess.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbLiftShaftLightingOther
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 68);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(14, 13);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbLiftShaftLightingOther.AutoSize = true;
+            this.rbLiftShaftLightingOther.Location = new System.Drawing.Point(6, 68);
+            this.rbLiftShaftLightingOther.Name = "rbLiftShaftLightingOther";
+            this.rbLiftShaftLightingOther.Size = new System.Drawing.Size(14, 13);
+            this.rbLiftShaftLightingOther.TabIndex = 1;
+            this.rbLiftShaftLightingOther.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton4);
+            this.groupBox2.Controls.Add(this.tbPitLadder);
+            this.groupBox2.Controls.Add(this.rbPitLAdderbyAccess);
+            this.groupBox2.Controls.Add(this.rbPitLadderOther);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(440, 32);
             this.groupBox2.Name = "groupBox2";
@@ -229,43 +229,43 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pit Ladder";
             // 
-            // textBox3
+            // tbPitLadder
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(25, 58);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 32);
-            this.textBox3.TabIndex = 97;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbPitLadder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPitLadder.ForeColor = System.Drawing.Color.Black;
+            this.tbPitLadder.Location = new System.Drawing.Point(25, 58);
+            this.tbPitLadder.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPitLadder.Name = "tbPitLadder";
+            this.tbPitLadder.Size = new System.Drawing.Size(163, 32);
+            this.tbPitLadder.TabIndex = 97;
+            this.tbPitLadder.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // radioButton3
+            // rbPitLAdderbyAccess
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Checked = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 28);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(198, 28);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "By Access Elevators";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbPitLAdderbyAccess.AutoSize = true;
+            this.rbPitLAdderbyAccess.Checked = true;
+            this.rbPitLAdderbyAccess.Location = new System.Drawing.Point(6, 28);
+            this.rbPitLAdderbyAccess.Name = "rbPitLAdderbyAccess";
+            this.rbPitLAdderbyAccess.Size = new System.Drawing.Size(198, 28);
+            this.rbPitLAdderbyAccess.TabIndex = 2;
+            this.rbPitLAdderbyAccess.TabStop = true;
+            this.rbPitLAdderbyAccess.Text = "By Access Elevators";
+            this.rbPitLAdderbyAccess.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rbPitLadderOther
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(6, 68);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(14, 13);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbPitLadderOther.AutoSize = true;
+            this.rbPitLadderOther.Location = new System.Drawing.Point(6, 68);
+            this.rbPitLadderOther.Name = "rbPitLadderOther";
+            this.rbPitLadderOther.Size = new System.Drawing.Size(14, 13);
+            this.rbPitLadderOther.TabIndex = 1;
+            this.rbPitLadderOther.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.radioButton5);
-            this.groupBox3.Controls.Add(this.radioButton6);
+            this.groupBox3.Controls.Add(this.tbSumpCover);
+            this.groupBox3.Controls.Add(this.rbSumpCoverByAccess);
+            this.groupBox3.Controls.Add(this.rbSumpCoverOther);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(12, 139);
             this.groupBox3.Name = "groupBox3";
@@ -274,43 +274,43 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sump Cover";
             // 
-            // textBox4
+            // tbSumpCover
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(25, 58);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 32);
-            this.textBox4.TabIndex = 97;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbSumpCover.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSumpCover.ForeColor = System.Drawing.Color.Black;
+            this.tbSumpCover.Location = new System.Drawing.Point(25, 58);
+            this.tbSumpCover.Margin = new System.Windows.Forms.Padding(2);
+            this.tbSumpCover.Name = "tbSumpCover";
+            this.tbSumpCover.Size = new System.Drawing.Size(163, 32);
+            this.tbSumpCover.TabIndex = 97;
+            this.tbSumpCover.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // radioButton5
+            // rbSumpCoverByAccess
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Checked = true;
-            this.radioButton5.Location = new System.Drawing.Point(6, 28);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(198, 28);
-            this.radioButton5.TabIndex = 2;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "By Access Elevators";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbSumpCoverByAccess.AutoSize = true;
+            this.rbSumpCoverByAccess.Checked = true;
+            this.rbSumpCoverByAccess.Location = new System.Drawing.Point(6, 28);
+            this.rbSumpCoverByAccess.Name = "rbSumpCoverByAccess";
+            this.rbSumpCoverByAccess.Size = new System.Drawing.Size(198, 28);
+            this.rbSumpCoverByAccess.TabIndex = 2;
+            this.rbSumpCoverByAccess.TabStop = true;
+            this.rbSumpCoverByAccess.Text = "By Access Elevators";
+            this.rbSumpCoverByAccess.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rbSumpCoverOther
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 68);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(14, 13);
-            this.radioButton6.TabIndex = 1;
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbSumpCoverOther.AutoSize = true;
+            this.rbSumpCoverOther.Location = new System.Drawing.Point(6, 68);
+            this.rbSumpCoverOther.Name = "rbSumpCoverOther";
+            this.rbSumpCoverOther.Size = new System.Drawing.Size(14, 13);
+            this.rbSumpCoverOther.TabIndex = 1;
+            this.rbSumpCoverOther.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox5);
-            this.groupBox4.Controls.Add(this.radioButton7);
-            this.groupBox4.Controls.Add(this.radioButton8);
+            this.groupBox4.Controls.Add(this.tbTempEntranceScreens);
+            this.groupBox4.Controls.Add(this.rbTempEntranceScreensByAccess);
+            this.groupBox4.Controls.Add(this.rbTempEntranceScreensOther);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(226, 139);
             this.groupBox4.Name = "groupBox4";
@@ -319,43 +319,43 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Temp Entrance Screens";
             // 
-            // textBox5
+            // tbTempEntranceScreens
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(25, 58);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(179, 32);
-            this.textBox5.TabIndex = 97;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbTempEntranceScreens.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTempEntranceScreens.ForeColor = System.Drawing.Color.Black;
+            this.tbTempEntranceScreens.Location = new System.Drawing.Point(25, 58);
+            this.tbTempEntranceScreens.Margin = new System.Windows.Forms.Padding(2);
+            this.tbTempEntranceScreens.Name = "tbTempEntranceScreens";
+            this.tbTempEntranceScreens.Size = new System.Drawing.Size(179, 32);
+            this.tbTempEntranceScreens.TabIndex = 97;
+            this.tbTempEntranceScreens.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // radioButton7
+            // rbTempEntranceScreensByAccess
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Checked = true;
-            this.radioButton7.Location = new System.Drawing.Point(6, 28);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(198, 28);
-            this.radioButton7.TabIndex = 2;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "By Access Elevators";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbTempEntranceScreensByAccess.AutoSize = true;
+            this.rbTempEntranceScreensByAccess.Checked = true;
+            this.rbTempEntranceScreensByAccess.Location = new System.Drawing.Point(6, 28);
+            this.rbTempEntranceScreensByAccess.Name = "rbTempEntranceScreensByAccess";
+            this.rbTempEntranceScreensByAccess.Size = new System.Drawing.Size(198, 28);
+            this.rbTempEntranceScreensByAccess.TabIndex = 2;
+            this.rbTempEntranceScreensByAccess.TabStop = true;
+            this.rbTempEntranceScreensByAccess.Text = "By Access Elevators";
+            this.rbTempEntranceScreensByAccess.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rbTempEntranceScreensOther
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(6, 68);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(14, 13);
-            this.radioButton8.TabIndex = 1;
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rbTempEntranceScreensOther.AutoSize = true;
+            this.rbTempEntranceScreensOther.Location = new System.Drawing.Point(6, 68);
+            this.rbTempEntranceScreensOther.Name = "rbTempEntranceScreensOther";
+            this.rbTempEntranceScreensOther.Size = new System.Drawing.Size(14, 13);
+            this.rbTempEntranceScreensOther.TabIndex = 1;
+            this.rbTempEntranceScreensOther.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.textBox7);
-            this.groupBox6.Controls.Add(this.radioButton11);
-            this.groupBox6.Controls.Add(this.radioButton12);
+            this.groupBox6.Controls.Add(this.tbButtonandIndicatorBoxes);
+            this.groupBox6.Controls.Add(this.rbButtonandIndicatorBoxesByAccess);
+            this.groupBox6.Controls.Add(this.rbButtonandIndicatorBoxesOther);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(11, 246);
             this.groupBox6.Name = "groupBox6";
@@ -364,43 +364,43 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Button and Indicator Boxes";
             // 
-            // textBox7
+            // tbButtonandIndicatorBoxes
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(25, 61);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(163, 32);
-            this.textBox7.TabIndex = 97;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbButtonandIndicatorBoxes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbButtonandIndicatorBoxes.ForeColor = System.Drawing.Color.Black;
+            this.tbButtonandIndicatorBoxes.Location = new System.Drawing.Point(25, 61);
+            this.tbButtonandIndicatorBoxes.Margin = new System.Windows.Forms.Padding(2);
+            this.tbButtonandIndicatorBoxes.Name = "tbButtonandIndicatorBoxes";
+            this.tbButtonandIndicatorBoxes.Size = new System.Drawing.Size(163, 32);
+            this.tbButtonandIndicatorBoxes.TabIndex = 97;
+            this.tbButtonandIndicatorBoxes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // radioButton11
+            // rbButtonandIndicatorBoxesByAccess
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Checked = true;
-            this.radioButton11.Location = new System.Drawing.Point(6, 28);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(198, 28);
-            this.radioButton11.TabIndex = 2;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "By Access Elevators";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.rbButtonandIndicatorBoxesByAccess.AutoSize = true;
+            this.rbButtonandIndicatorBoxesByAccess.Checked = true;
+            this.rbButtonandIndicatorBoxesByAccess.Location = new System.Drawing.Point(6, 28);
+            this.rbButtonandIndicatorBoxesByAccess.Name = "rbButtonandIndicatorBoxesByAccess";
+            this.rbButtonandIndicatorBoxesByAccess.Size = new System.Drawing.Size(198, 28);
+            this.rbButtonandIndicatorBoxesByAccess.TabIndex = 2;
+            this.rbButtonandIndicatorBoxesByAccess.TabStop = true;
+            this.rbButtonandIndicatorBoxesByAccess.Text = "By Access Elevators";
+            this.rbButtonandIndicatorBoxesByAccess.UseVisualStyleBackColor = true;
             // 
-            // radioButton12
+            // rbButtonandIndicatorBoxesOther
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(6, 71);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(14, 13);
-            this.radioButton12.TabIndex = 1;
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.rbButtonandIndicatorBoxesOther.AutoSize = true;
+            this.rbButtonandIndicatorBoxesOther.Location = new System.Drawing.Point(6, 71);
+            this.rbButtonandIndicatorBoxesOther.Name = "rbButtonandIndicatorBoxesOther";
+            this.rbButtonandIndicatorBoxesOther.Size = new System.Drawing.Size(14, 13);
+            this.rbButtonandIndicatorBoxesOther.TabIndex = 1;
+            this.rbButtonandIndicatorBoxesOther.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.textBox8);
-            this.groupBox7.Controls.Add(this.radioButton13);
-            this.groupBox7.Controls.Add(this.radioButton14);
+            this.groupBox7.Controls.Add(this.tbSupplyofScaffold);
+            this.groupBox7.Controls.Add(this.rbSupplyofScaffoldByAccess);
+            this.groupBox7.Controls.Add(this.rbSupplyofScaffoldOther);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(12, 353);
             this.groupBox7.Name = "groupBox7";
@@ -409,43 +409,43 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Supply of Scaffold";
             // 
-            // textBox8
+            // tbSupplyofScaffold
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.Black;
-            this.textBox8.Location = new System.Drawing.Point(25, 58);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(163, 32);
-            this.textBox8.TabIndex = 97;
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbSupplyofScaffold.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSupplyofScaffold.ForeColor = System.Drawing.Color.Black;
+            this.tbSupplyofScaffold.Location = new System.Drawing.Point(25, 58);
+            this.tbSupplyofScaffold.Margin = new System.Windows.Forms.Padding(2);
+            this.tbSupplyofScaffold.Name = "tbSupplyofScaffold";
+            this.tbSupplyofScaffold.Size = new System.Drawing.Size(163, 32);
+            this.tbSupplyofScaffold.TabIndex = 97;
+            this.tbSupplyofScaffold.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // radioButton13
+            // rbSupplyofScaffoldByAccess
             // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Checked = true;
-            this.radioButton13.Location = new System.Drawing.Point(6, 28);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(198, 28);
-            this.radioButton13.TabIndex = 2;
-            this.radioButton13.TabStop = true;
-            this.radioButton13.Text = "By Access Elevators";
-            this.radioButton13.UseVisualStyleBackColor = true;
+            this.rbSupplyofScaffoldByAccess.AutoSize = true;
+            this.rbSupplyofScaffoldByAccess.Checked = true;
+            this.rbSupplyofScaffoldByAccess.Location = new System.Drawing.Point(6, 28);
+            this.rbSupplyofScaffoldByAccess.Name = "rbSupplyofScaffoldByAccess";
+            this.rbSupplyofScaffoldByAccess.Size = new System.Drawing.Size(198, 28);
+            this.rbSupplyofScaffoldByAccess.TabIndex = 2;
+            this.rbSupplyofScaffoldByAccess.TabStop = true;
+            this.rbSupplyofScaffoldByAccess.Text = "By Access Elevators";
+            this.rbSupplyofScaffoldByAccess.UseVisualStyleBackColor = true;
             // 
-            // radioButton14
+            // rbSupplyofScaffoldOther
             // 
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(6, 68);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(14, 13);
-            this.radioButton14.TabIndex = 1;
-            this.radioButton14.UseVisualStyleBackColor = true;
+            this.rbSupplyofScaffoldOther.AutoSize = true;
+            this.rbSupplyofScaffoldOther.Location = new System.Drawing.Point(6, 68);
+            this.rbSupplyofScaffoldOther.Name = "rbSupplyofScaffoldOther";
+            this.rbSupplyofScaffoldOther.Size = new System.Drawing.Size(14, 13);
+            this.rbSupplyofScaffoldOther.TabIndex = 1;
+            this.rbSupplyofScaffoldOther.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.textBox6);
-            this.groupBox8.Controls.Add(this.radioButton15);
-            this.groupBox8.Controls.Add(this.radioButton16);
+            this.groupBox8.Controls.Add(this.tbLiftingEyeBeam);
+            this.groupBox8.Controls.Add(this.rbLiftingEyeBeamByAccess);
+            this.groupBox8.Controls.Add(this.rbLiftingEyeBeamOther);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.Location = new System.Drawing.Point(466, 139);
             this.groupBox8.Name = "groupBox8";
@@ -454,42 +454,42 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Lifting Eye / Beam ";
             // 
-            // textBox6
+            // tbLiftingEyeBeam
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(25, 58);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(163, 32);
-            this.textBox6.TabIndex = 97;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbLiftingEyeBeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLiftingEyeBeam.ForeColor = System.Drawing.Color.Black;
+            this.tbLiftingEyeBeam.Location = new System.Drawing.Point(25, 58);
+            this.tbLiftingEyeBeam.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLiftingEyeBeam.Name = "tbLiftingEyeBeam";
+            this.tbLiftingEyeBeam.Size = new System.Drawing.Size(163, 32);
+            this.tbLiftingEyeBeam.TabIndex = 97;
+            this.tbLiftingEyeBeam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // radioButton15
+            // rbLiftingEyeBeamByAccess
             // 
-            this.radioButton15.AutoSize = true;
-            this.radioButton15.Checked = true;
-            this.radioButton15.Location = new System.Drawing.Point(6, 28);
-            this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(198, 28);
-            this.radioButton15.TabIndex = 2;
-            this.radioButton15.TabStop = true;
-            this.radioButton15.Text = "By Access Elevators";
-            this.radioButton15.UseVisualStyleBackColor = true;
+            this.rbLiftingEyeBeamByAccess.AutoSize = true;
+            this.rbLiftingEyeBeamByAccess.Checked = true;
+            this.rbLiftingEyeBeamByAccess.Location = new System.Drawing.Point(6, 28);
+            this.rbLiftingEyeBeamByAccess.Name = "rbLiftingEyeBeamByAccess";
+            this.rbLiftingEyeBeamByAccess.Size = new System.Drawing.Size(198, 28);
+            this.rbLiftingEyeBeamByAccess.TabIndex = 2;
+            this.rbLiftingEyeBeamByAccess.TabStop = true;
+            this.rbLiftingEyeBeamByAccess.Text = "By Access Elevators";
+            this.rbLiftingEyeBeamByAccess.UseVisualStyleBackColor = true;
             // 
-            // radioButton16
+            // rbLiftingEyeBeamOther
             // 
-            this.radioButton16.AutoSize = true;
-            this.radioButton16.Location = new System.Drawing.Point(6, 68);
-            this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(14, 13);
-            this.radioButton16.TabIndex = 1;
-            this.radioButton16.UseVisualStyleBackColor = true;
+            this.rbLiftingEyeBeamOther.AutoSize = true;
+            this.rbLiftingEyeBeamOther.Location = new System.Drawing.Point(6, 68);
+            this.rbLiftingEyeBeamOther.Name = "rbLiftingEyeBeamOther";
+            this.rbLiftingEyeBeamOther.Size = new System.Drawing.Size(14, 13);
+            this.rbLiftingEyeBeamOther.TabIndex = 1;
+            this.rbLiftingEyeBeamOther.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.radioButton17);
-            this.groupBox9.Controls.Add(this.radioButton18);
+            this.groupBox9.Controls.Add(this.rbManualsA4SizeNo);
+            this.groupBox9.Controls.Add(this.rbManualsA4SizeYes);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox9.Location = new System.Drawing.Point(274, 246);
             this.groupBox9.Name = "groupBox9";
@@ -498,32 +498,32 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Manuals A4 Size";
             // 
-            // radioButton17
+            // rbManualsA4SizeNo
             // 
-            this.radioButton17.AutoSize = true;
-            this.radioButton17.Location = new System.Drawing.Point(72, 28);
-            this.radioButton17.Name = "radioButton17";
-            this.radioButton17.Size = new System.Drawing.Size(53, 28);
-            this.radioButton17.TabIndex = 1;
-            this.radioButton17.Text = "No";
-            this.radioButton17.UseVisualStyleBackColor = true;
+            this.rbManualsA4SizeNo.AutoSize = true;
+            this.rbManualsA4SizeNo.Location = new System.Drawing.Point(72, 28);
+            this.rbManualsA4SizeNo.Name = "rbManualsA4SizeNo";
+            this.rbManualsA4SizeNo.Size = new System.Drawing.Size(53, 28);
+            this.rbManualsA4SizeNo.TabIndex = 1;
+            this.rbManualsA4SizeNo.Text = "No";
+            this.rbManualsA4SizeNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton18
+            // rbManualsA4SizeYes
             // 
-            this.radioButton18.AutoSize = true;
-            this.radioButton18.Checked = true;
-            this.radioButton18.Location = new System.Drawing.Point(6, 28);
-            this.radioButton18.Name = "radioButton18";
-            this.radioButton18.Size = new System.Drawing.Size(60, 28);
-            this.radioButton18.TabIndex = 0;
-            this.radioButton18.TabStop = true;
-            this.radioButton18.Text = "Yes";
-            this.radioButton18.UseVisualStyleBackColor = true;
+            this.rbManualsA4SizeYes.AutoSize = true;
+            this.rbManualsA4SizeYes.Checked = true;
+            this.rbManualsA4SizeYes.Location = new System.Drawing.Point(6, 28);
+            this.rbManualsA4SizeYes.Name = "rbManualsA4SizeYes";
+            this.rbManualsA4SizeYes.Size = new System.Drawing.Size(60, 28);
+            this.rbManualsA4SizeYes.TabIndex = 0;
+            this.rbManualsA4SizeYes.TabStop = true;
+            this.rbManualsA4SizeYes.Text = "Yes";
+            this.rbManualsA4SizeYes.UseVisualStyleBackColor = true;
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.radioButton21);
-            this.groupBox11.Controls.Add(this.radioButton22);
+            this.groupBox11.Controls.Add(this.rbEmergencyLoweringSystemNo);
+            this.groupBox11.Controls.Add(this.rbEmergencyLoweringSystemYes);
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox11.Location = new System.Drawing.Point(274, 312);
             this.groupBox11.Name = "groupBox11";
@@ -532,32 +532,32 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Emergency Lowering System";
             // 
-            // radioButton21
+            // rbEmergencyLoweringSystemNo
             // 
-            this.radioButton21.AutoSize = true;
-            this.radioButton21.Location = new System.Drawing.Point(72, 28);
-            this.radioButton21.Name = "radioButton21";
-            this.radioButton21.Size = new System.Drawing.Size(53, 28);
-            this.radioButton21.TabIndex = 1;
-            this.radioButton21.TabStop = true;
-            this.radioButton21.Text = "No";
-            this.radioButton21.UseVisualStyleBackColor = true;
+            this.rbEmergencyLoweringSystemNo.AutoSize = true;
+            this.rbEmergencyLoweringSystemNo.Location = new System.Drawing.Point(72, 28);
+            this.rbEmergencyLoweringSystemNo.Name = "rbEmergencyLoweringSystemNo";
+            this.rbEmergencyLoweringSystemNo.Size = new System.Drawing.Size(53, 28);
+            this.rbEmergencyLoweringSystemNo.TabIndex = 1;
+            this.rbEmergencyLoweringSystemNo.TabStop = true;
+            this.rbEmergencyLoweringSystemNo.Text = "No";
+            this.rbEmergencyLoweringSystemNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton22
+            // rbEmergencyLoweringSystemYes
             // 
-            this.radioButton22.AutoSize = true;
-            this.radioButton22.Location = new System.Drawing.Point(6, 28);
-            this.radioButton22.Name = "radioButton22";
-            this.radioButton22.Size = new System.Drawing.Size(60, 28);
-            this.radioButton22.TabIndex = 0;
-            this.radioButton22.TabStop = true;
-            this.radioButton22.Text = "Yes";
-            this.radioButton22.UseVisualStyleBackColor = true;
+            this.rbEmergencyLoweringSystemYes.AutoSize = true;
+            this.rbEmergencyLoweringSystemYes.Location = new System.Drawing.Point(6, 28);
+            this.rbEmergencyLoweringSystemYes.Name = "rbEmergencyLoweringSystemYes";
+            this.rbEmergencyLoweringSystemYes.Size = new System.Drawing.Size(60, 28);
+            this.rbEmergencyLoweringSystemYes.TabIndex = 0;
+            this.rbEmergencyLoweringSystemYes.TabStop = true;
+            this.rbEmergencyLoweringSystemYes.Text = "Yes";
+            this.rbEmergencyLoweringSystemYes.UseVisualStyleBackColor = true;
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.radioButton23);
-            this.groupBox12.Controls.Add(this.radioButton24);
+            this.groupBox12.Controls.Add(this.rbOutofServiceNo);
+            this.groupBox12.Controls.Add(this.rbOutofServiceYes);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox12.Location = new System.Drawing.Point(491, 246);
             this.groupBox12.Name = "groupBox12";
@@ -566,39 +566,39 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Out of Service";
             // 
-            // radioButton23
+            // rbOutofServiceNo
             // 
-            this.radioButton23.AutoSize = true;
-            this.radioButton23.Location = new System.Drawing.Point(72, 28);
-            this.radioButton23.Name = "radioButton23";
-            this.radioButton23.Size = new System.Drawing.Size(53, 28);
-            this.radioButton23.TabIndex = 1;
-            this.radioButton23.TabStop = true;
-            this.radioButton23.Text = "No";
-            this.radioButton23.UseVisualStyleBackColor = true;
+            this.rbOutofServiceNo.AutoSize = true;
+            this.rbOutofServiceNo.Location = new System.Drawing.Point(72, 28);
+            this.rbOutofServiceNo.Name = "rbOutofServiceNo";
+            this.rbOutofServiceNo.Size = new System.Drawing.Size(53, 28);
+            this.rbOutofServiceNo.TabIndex = 1;
+            this.rbOutofServiceNo.TabStop = true;
+            this.rbOutofServiceNo.Text = "No";
+            this.rbOutofServiceNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton24
+            // rbOutofServiceYes
             // 
-            this.radioButton24.AutoSize = true;
-            this.radioButton24.Location = new System.Drawing.Point(6, 28);
-            this.radioButton24.Name = "radioButton24";
-            this.radioButton24.Size = new System.Drawing.Size(60, 28);
-            this.radioButton24.TabIndex = 0;
-            this.radioButton24.TabStop = true;
-            this.radioButton24.Text = "Yes";
-            this.radioButton24.UseVisualStyleBackColor = true;
+            this.rbOutofServiceYes.AutoSize = true;
+            this.rbOutofServiceYes.Location = new System.Drawing.Point(6, 28);
+            this.rbOutofServiceYes.Name = "rbOutofServiceYes";
+            this.rbOutofServiceYes.Size = new System.Drawing.Size(60, 28);
+            this.rbOutofServiceYes.TabIndex = 0;
+            this.rbOutofServiceYes.TabStop = true;
+            this.rbOutofServiceYes.Text = "Yes";
+            this.rbOutofServiceYes.UseVisualStyleBackColor = true;
             // 
-            // tbfname
+            // tbGeneralNotes
             // 
-            this.tbfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbfname.ForeColor = System.Drawing.Color.Black;
-            this.tbfname.Location = new System.Drawing.Point(320, 381);
-            this.tbfname.Margin = new System.Windows.Forms.Padding(2);
-            this.tbfname.Multiline = true;
-            this.tbfname.Name = "tbfname";
-            this.tbfname.Size = new System.Drawing.Size(354, 80);
-            this.tbfname.TabIndex = 93;
-            this.tbfname.Text = "\r\n\r\n";
+            this.tbGeneralNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbGeneralNotes.ForeColor = System.Drawing.Color.Black;
+            this.tbGeneralNotes.Location = new System.Drawing.Point(320, 381);
+            this.tbGeneralNotes.Margin = new System.Windows.Forms.Padding(2);
+            this.tbGeneralNotes.Multiline = true;
+            this.tbGeneralNotes.Name = "tbGeneralNotes";
+            this.tbGeneralNotes.Size = new System.Drawing.Size(354, 80);
+            this.tbGeneralNotes.TabIndex = 93;
+            this.tbGeneralNotes.Text = "\r\n\r\n";
             // 
             // label1
             // 
@@ -619,7 +619,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(684, 541);
-            this.Controls.Add(this.tbfname);
+            this.Controls.Add(this.tbGeneralNotes);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.groupBox11);
@@ -677,47 +677,47 @@
         private System.Windows.Forms.Button buttonEUR;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.RadioButton radioButton19;
-        private System.Windows.Forms.RadioButton radioButton20;
+        private System.Windows.Forms.RadioButton rbSupplyofTrueBoltsByAccess;
+        private System.Windows.Forms.RadioButton rbSupplyofTrueBoltsOther;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbLiftShaftLightingByAccess;
+        private System.Windows.Forms.RadioButton rbLiftShaftLightingOther;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rbPitLAdderbyAccess;
+        private System.Windows.Forms.RadioButton rbPitLadderOther;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rbSumpCoverByAccess;
+        private System.Windows.Forms.RadioButton rbSumpCoverOther;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton rbTempEntranceScreensByAccess;
+        private System.Windows.Forms.RadioButton rbTempEntranceScreensOther;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton rbButtonandIndicatorBoxesByAccess;
+        private System.Windows.Forms.RadioButton rbButtonandIndicatorBoxesOther;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.RadioButton radioButton14;
+        private System.Windows.Forms.RadioButton rbSupplyofScaffoldByAccess;
+        private System.Windows.Forms.RadioButton rbSupplyofScaffoldOther;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.RadioButton radioButton15;
-        private System.Windows.Forms.RadioButton radioButton16;
+        private System.Windows.Forms.RadioButton rbLiftingEyeBeamByAccess;
+        private System.Windows.Forms.RadioButton rbLiftingEyeBeamOther;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RadioButton radioButton17;
-        private System.Windows.Forms.RadioButton radioButton18;
+        private System.Windows.Forms.RadioButton rbManualsA4SizeNo;
+        private System.Windows.Forms.RadioButton rbManualsA4SizeYes;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.RadioButton radioButton21;
-        private System.Windows.Forms.RadioButton radioButton22;
+        private System.Windows.Forms.RadioButton rbEmergencyLoweringSystemNo;
+        private System.Windows.Forms.RadioButton rbEmergencyLoweringSystemYes;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.RadioButton radioButton23;
-        private System.Windows.Forms.RadioButton radioButton24;
-        private System.Windows.Forms.TextBox tbfname;
+        private System.Windows.Forms.RadioButton rbOutofServiceNo;
+        private System.Windows.Forms.RadioButton rbOutofServiceYes;
+        private System.Windows.Forms.TextBox tbGeneralNotes;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tbSupplyofTrueBolts;
+        private System.Windows.Forms.TextBox tbLiftShaftLighting;
+        private System.Windows.Forms.TextBox tbPitLadder;
+        private System.Windows.Forms.TextBox tbSumpCover;
+        private System.Windows.Forms.TextBox tbTempEntranceScreens;
+        private System.Windows.Forms.TextBox tbLiftingEyeBeam;
+        private System.Windows.Forms.TextBox tbButtonandIndicatorBoxes;
+        private System.Windows.Forms.TextBox tbSupplyofScaffold;
     }
 }

@@ -65,6 +65,13 @@ namespace SQT
             f.WordData("AE167", f.RadioButtonHandeler(null, rbProtectiveBlanketsNo, rbProtectriveBlanketsYes)); // protective blankets 
             f.WordData("AE216", f.RadioButtonHandeler(tbRearWall, rbRearWallOther, rbRearWallBrushedStainlessSteel)); //  rear wall
 
+            f.SaveTbToXML(tbCarDoorFinish, tbCeilingFinish, tbFloorFinish, tbFrontWall, tbHandrail, tbMirror, tbNumOfLEDLights, tbRearWall, tbSideWall);
+            f.SaveRbToXML(tbFrontWallOther, rbBumpRailNo, rbBumpRailYes, rbCarDoorFInishBrushedStainlessSteel, rbCarDoorFinishOther,
+                rbCeilingFinishBrushedStasinlessSteel, rbCeilingFinishMirrorStainlessSteel, rbCeilingFinishOther, rbCeilingFinishWhite, rbFalseCeilingNo,
+                rbFalseCeilingYes, rbFrontWallBrushedStainlessSteel, rbHandrailBrushedStainlessSTeel, rbHandrailOther, rbMirrorFullSize, rbMirrorHalfSize,
+                rbMirrorOther, rbProtectiveBlanketsNo, rbProtectriveBlanketsYes, rbRearWallBrushedStainlessSteel, rbRearWallOther,
+                rbSideWallBrushedStainlessSteel, rbSideWallOther, rbSkirtingNo, rbSkirtingYes);
+
             //Load next form and close this one 
             nF.Show();
             this.Close();
