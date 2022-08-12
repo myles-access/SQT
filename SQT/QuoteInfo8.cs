@@ -19,7 +19,7 @@ namespace SQT
                 PullInfo();
             }
 
-            if (f.tbBlankets.Text != "0")
+            if (f.tbMainBlankets.Text != "0")
             {
                 rbProtectriveBlanketsYes.Checked = true;
             }

@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
-            this.tBAddress = new System.Windows.Forms.TextBox();
-            this.tBQuoteNumber = new System.Windows.Forms.TextBox();
+            this.tBMainAddress = new System.Windows.Forms.TextBox();
+            this.tBMainQuoteNumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPriceIncludingGST = new System.Windows.Forms.Label();
             this.lblGST = new System.Windows.Forms.Label();
@@ -104,20 +104,20 @@
             this.label27 = new System.Windows.Forms.Label();
             this.lblCost = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbSundries = new System.Windows.Forms.TextBox();
+            this.tbMainSundries = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.tbDuct = new System.Windows.Forms.TextBox();
+            this.tbMainDuct = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.tbShaftLight = new System.Windows.Forms.TextBox();
+            this.tbMainShaftLight = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.tbAccomodation = new System.Windows.Forms.TextBox();
+            this.tbMainAccomodation = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.tbStorage = new System.Windows.Forms.TextBox();
+            this.tbMainStorage = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.tbTravel = new System.Windows.Forms.TextBox();
+            this.tbMainTravel = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.tbCartage = new System.Windows.Forms.TextBox();
+            this.tbMainCartage = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.exchangeRateLbl = new System.Windows.Forms.Label();
             this.btn20Ft = new System.Windows.Forms.Button();
@@ -126,18 +126,18 @@
             this.shippingLblTotal = new System.Windows.Forms.Label();
             this.shippingLbl20 = new System.Windows.Forms.Label();
             this.shippingLbl40 = new System.Windows.Forms.Label();
-            this.tbNumberLifts = new System.Windows.Forms.TextBox();
-            this.tBFloors = new System.Windows.Forms.TextBox();
+            this.tbMainNumberLifts = new System.Windows.Forms.TextBox();
+            this.tBMainFloors = new System.Windows.Forms.TextBox();
             this.tbCost = new System.Windows.Forms.TextBox();
-            this.tbEntranceGuards = new System.Windows.Forms.TextBox();
+            this.tbMainEntranceGuards = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.tbWeeksRequired = new System.Windows.Forms.TextBox();
+            this.tbMainWeeksRequired = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.tbScaffold = new System.Windows.Forms.TextBox();
+            this.tbMainScaffold = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.cbSecurity = new System.Windows.Forms.CheckBox();
+            this.cbMainSecurity = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.tbMargin = new System.Windows.Forms.TextBox();
+            this.tbMainMargin = new System.Windows.Forms.TextBox();
             this.label79 = new System.Windows.Forms.Label();
             this.lblExchangeDate = new System.Windows.Forms.Label();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
@@ -147,7 +147,7 @@
             this.lbWait = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.printButton = new System.Windows.Forms.Button();
-            this.tbBlankets = new System.Windows.Forms.TextBox();
+            this.tbMainBlankets = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btLoad = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -167,29 +167,29 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Address";
             // 
-            // tBAddress
+            // tBMainAddress
             // 
-            this.tBAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBAddress.ForeColor = System.Drawing.Color.Black;
-            this.tBAddress.Location = new System.Drawing.Point(97, 6);
-            this.tBAddress.Margin = new System.Windows.Forms.Padding(2);
-            this.tBAddress.Name = "tBAddress";
-            this.tBAddress.Size = new System.Drawing.Size(539, 32);
-            this.tBAddress.TabIndex = 1;
-            this.tBAddress.Text = "1 Main Street, Sydney";
-            this.tBAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBMainAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBMainAddress.ForeColor = System.Drawing.Color.Black;
+            this.tBMainAddress.Location = new System.Drawing.Point(97, 6);
+            this.tBMainAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.tBMainAddress.Name = "tBMainAddress";
+            this.tBMainAddress.Size = new System.Drawing.Size(539, 32);
+            this.tBMainAddress.TabIndex = 1;
+            this.tBMainAddress.Text = "1 Main Street, Sydney";
+            this.tBMainAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tBQuoteNumber
+            // tBMainQuoteNumber
             // 
-            this.tBQuoteNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBQuoteNumber.ForeColor = System.Drawing.Color.Black;
-            this.tBQuoteNumber.Location = new System.Drawing.Point(97, 38);
-            this.tBQuoteNumber.Margin = new System.Windows.Forms.Padding(2);
-            this.tBQuoteNumber.Name = "tBQuoteNumber";
-            this.tBQuoteNumber.Size = new System.Drawing.Size(165, 32);
-            this.tBQuoteNumber.TabIndex = 2;
-            this.tBQuoteNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tBQuoteNumber.TextChanged += new System.EventHandler(this.tBQuoteNumber_TextChanged);
+            this.tBMainQuoteNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBMainQuoteNumber.ForeColor = System.Drawing.Color.Black;
+            this.tBMainQuoteNumber.Location = new System.Drawing.Point(97, 38);
+            this.tBMainQuoteNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.tBMainQuoteNumber.Name = "tBMainQuoteNumber";
+            this.tBMainQuoteNumber.Size = new System.Drawing.Size(165, 32);
+            this.tBMainQuoteNumber.TabIndex = 2;
+            this.tBMainQuoteNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBMainQuoteNumber.TextChanged += new System.EventHandler(this.tBQuoteNumber_TextChanged);
             // 
             // label2
             // 
@@ -1156,17 +1156,17 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Price Including GST";
             // 
-            // tbSundries
+            // tbMainSundries
             // 
-            this.tbSundries.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSundries.ForeColor = System.Drawing.Color.Black;
-            this.tbSundries.Location = new System.Drawing.Point(186, 249);
-            this.tbSundries.Margin = new System.Windows.Forms.Padding(2);
-            this.tbSundries.Name = "tbSundries";
-            this.tbSundries.Size = new System.Drawing.Size(126, 32);
-            this.tbSundries.TabIndex = 8;
-            this.tbSundries.Text = "0";
-            this.tbSundries.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainSundries.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainSundries.ForeColor = System.Drawing.Color.Black;
+            this.tbMainSundries.Location = new System.Drawing.Point(186, 249);
+            this.tbMainSundries.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainSundries.Name = "tbMainSundries";
+            this.tbMainSundries.Size = new System.Drawing.Size(126, 32);
+            this.tbMainSundries.TabIndex = 8;
+            this.tbMainSundries.Text = "0";
+            this.tbMainSundries.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
             // 
@@ -1180,17 +1180,17 @@
             this.label15.TabIndex = 30;
             this.label15.Text = "Sundries";
             // 
-            // tbDuct
+            // tbMainDuct
             // 
-            this.tbDuct.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDuct.ForeColor = System.Drawing.Color.Black;
-            this.tbDuct.Location = new System.Drawing.Point(186, 359);
-            this.tbDuct.Margin = new System.Windows.Forms.Padding(2);
-            this.tbDuct.Name = "tbDuct";
-            this.tbDuct.Size = new System.Drawing.Size(126, 32);
-            this.tbDuct.TabIndex = 10;
-            this.tbDuct.Text = "0";
-            this.tbDuct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainDuct.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainDuct.ForeColor = System.Drawing.Color.Black;
+            this.tbMainDuct.Location = new System.Drawing.Point(186, 359);
+            this.tbMainDuct.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainDuct.Name = "tbMainDuct";
+            this.tbMainDuct.Size = new System.Drawing.Size(126, 32);
+            this.tbMainDuct.TabIndex = 10;
+            this.tbMainDuct.Text = "0";
+            this.tbMainDuct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label17
             // 
@@ -1204,17 +1204,17 @@
             this.label17.TabIndex = 32;
             this.label17.Text = "Metal Duct";
             // 
-            // tbShaftLight
+            // tbMainShaftLight
             // 
-            this.tbShaftLight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbShaftLight.ForeColor = System.Drawing.Color.Black;
-            this.tbShaftLight.Location = new System.Drawing.Point(186, 323);
-            this.tbShaftLight.Margin = new System.Windows.Forms.Padding(2);
-            this.tbShaftLight.Name = "tbShaftLight";
-            this.tbShaftLight.Size = new System.Drawing.Size(126, 32);
-            this.tbShaftLight.TabIndex = 9;
-            this.tbShaftLight.Text = "0";
-            this.tbShaftLight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainShaftLight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainShaftLight.ForeColor = System.Drawing.Color.Black;
+            this.tbMainShaftLight.Location = new System.Drawing.Point(186, 323);
+            this.tbMainShaftLight.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainShaftLight.Name = "tbMainShaftLight";
+            this.tbMainShaftLight.Size = new System.Drawing.Size(126, 32);
+            this.tbMainShaftLight.TabIndex = 9;
+            this.tbMainShaftLight.Text = "0";
+            this.tbMainShaftLight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label18
             // 
@@ -1228,17 +1228,17 @@
             this.label18.TabIndex = 36;
             this.label18.Text = "Shaft Lights";
             // 
-            // tbAccomodation
+            // tbMainAccomodation
             // 
-            this.tbAccomodation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAccomodation.ForeColor = System.Drawing.Color.Black;
-            this.tbAccomodation.Location = new System.Drawing.Point(185, 395);
-            this.tbAccomodation.Margin = new System.Windows.Forms.Padding(2);
-            this.tbAccomodation.Name = "tbAccomodation";
-            this.tbAccomodation.Size = new System.Drawing.Size(126, 32);
-            this.tbAccomodation.TabIndex = 11;
-            this.tbAccomodation.Text = "0";
-            this.tbAccomodation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainAccomodation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainAccomodation.ForeColor = System.Drawing.Color.Black;
+            this.tbMainAccomodation.Location = new System.Drawing.Point(185, 395);
+            this.tbMainAccomodation.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainAccomodation.Name = "tbMainAccomodation";
+            this.tbMainAccomodation.Size = new System.Drawing.Size(126, 32);
+            this.tbMainAccomodation.TabIndex = 11;
+            this.tbMainAccomodation.Text = "0";
+            this.tbMainAccomodation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label19
             // 
@@ -1252,17 +1252,17 @@
             this.label19.TabIndex = 34;
             this.label19.Text = "Accommodation";
             // 
-            // tbStorage
+            // tbMainStorage
             // 
-            this.tbStorage.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStorage.ForeColor = System.Drawing.Color.Black;
-            this.tbStorage.Location = new System.Drawing.Point(185, 467);
-            this.tbStorage.Margin = new System.Windows.Forms.Padding(2);
-            this.tbStorage.Name = "tbStorage";
-            this.tbStorage.Size = new System.Drawing.Size(126, 32);
-            this.tbStorage.TabIndex = 13;
-            this.tbStorage.Text = "0";
-            this.tbStorage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainStorage.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainStorage.ForeColor = System.Drawing.Color.Black;
+            this.tbMainStorage.Location = new System.Drawing.Point(185, 467);
+            this.tbMainStorage.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainStorage.Name = "tbMainStorage";
+            this.tbMainStorage.Size = new System.Drawing.Size(126, 32);
+            this.tbMainStorage.TabIndex = 13;
+            this.tbMainStorage.Text = "0";
+            this.tbMainStorage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label20
             // 
@@ -1287,17 +1287,17 @@
             this.label21.Size = new System.Drawing.Size(0, 26);
             this.label21.TabIndex = 42;
             // 
-            // tbTravel
+            // tbMainTravel
             // 
-            this.tbTravel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTravel.ForeColor = System.Drawing.Color.Black;
-            this.tbTravel.Location = new System.Drawing.Point(185, 503);
-            this.tbTravel.Margin = new System.Windows.Forms.Padding(2);
-            this.tbTravel.Name = "tbTravel";
-            this.tbTravel.Size = new System.Drawing.Size(126, 32);
-            this.tbTravel.TabIndex = 14;
-            this.tbTravel.Text = "0";
-            this.tbTravel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainTravel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainTravel.ForeColor = System.Drawing.Color.Black;
+            this.tbMainTravel.Location = new System.Drawing.Point(185, 503);
+            this.tbMainTravel.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainTravel.Name = "tbMainTravel";
+            this.tbMainTravel.Size = new System.Drawing.Size(126, 32);
+            this.tbMainTravel.TabIndex = 14;
+            this.tbMainTravel.Text = "0";
+            this.tbMainTravel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label22
             // 
@@ -1311,17 +1311,17 @@
             this.label22.TabIndex = 40;
             this.label22.Text = "Travel Allowance";
             // 
-            // tbCartage
+            // tbMainCartage
             // 
-            this.tbCartage.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCartage.ForeColor = System.Drawing.Color.Black;
-            this.tbCartage.Location = new System.Drawing.Point(185, 431);
-            this.tbCartage.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCartage.Name = "tbCartage";
-            this.tbCartage.Size = new System.Drawing.Size(126, 32);
-            this.tbCartage.TabIndex = 12;
-            this.tbCartage.Text = "0";
-            this.tbCartage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainCartage.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainCartage.ForeColor = System.Drawing.Color.Black;
+            this.tbMainCartage.Location = new System.Drawing.Point(185, 431);
+            this.tbMainCartage.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainCartage.Name = "tbMainCartage";
+            this.tbMainCartage.Size = new System.Drawing.Size(126, 32);
+            this.tbMainCartage.TabIndex = 12;
+            this.tbMainCartage.Text = "0";
+            this.tbMainCartage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label23
             // 
@@ -1423,29 +1423,29 @@
             this.shippingLbl40.TabIndex = 53;
             this.shippingLbl40.Text = "0x 40ft Container - $0";
             // 
-            // tbNumberLifts
+            // tbMainNumberLifts
             // 
-            this.tbNumberLifts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNumberLifts.ForeColor = System.Drawing.Color.Black;
-            this.tbNumberLifts.Location = new System.Drawing.Point(255, 80);
-            this.tbNumberLifts.Margin = new System.Windows.Forms.Padding(2);
-            this.tbNumberLifts.Name = "tbNumberLifts";
-            this.tbNumberLifts.Size = new System.Drawing.Size(48, 32);
-            this.tbNumberLifts.TabIndex = 5;
-            this.tbNumberLifts.Text = "1";
-            this.tbNumberLifts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainNumberLifts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainNumberLifts.ForeColor = System.Drawing.Color.Black;
+            this.tbMainNumberLifts.Location = new System.Drawing.Point(255, 80);
+            this.tbMainNumberLifts.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainNumberLifts.Name = "tbMainNumberLifts";
+            this.tbMainNumberLifts.Size = new System.Drawing.Size(48, 32);
+            this.tbMainNumberLifts.TabIndex = 5;
+            this.tbMainNumberLifts.Text = "1";
+            this.tbMainNumberLifts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tBFloors
+            // tBMainFloors
             // 
-            this.tBFloors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBFloors.ForeColor = System.Drawing.Color.Black;
-            this.tBFloors.Location = new System.Drawing.Point(480, 82);
-            this.tBFloors.Margin = new System.Windows.Forms.Padding(2);
-            this.tBFloors.Name = "tBFloors";
-            this.tBFloors.Size = new System.Drawing.Size(48, 32);
-            this.tBFloors.TabIndex = 6;
-            this.tBFloors.Text = "2";
-            this.tBFloors.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBMainFloors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBMainFloors.ForeColor = System.Drawing.Color.Black;
+            this.tBMainFloors.Location = new System.Drawing.Point(480, 82);
+            this.tBMainFloors.Margin = new System.Windows.Forms.Padding(2);
+            this.tBMainFloors.Name = "tBMainFloors";
+            this.tBMainFloors.Size = new System.Drawing.Size(48, 32);
+            this.tBMainFloors.TabIndex = 6;
+            this.tBMainFloors.Text = "2";
+            this.tBMainFloors.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbCost
             // 
@@ -1459,17 +1459,17 @@
             this.tbCost.Text = "0";
             this.tbCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tbEntranceGuards
+            // tbMainEntranceGuards
             // 
-            this.tbEntranceGuards.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEntranceGuards.ForeColor = System.Drawing.Color.Black;
-            this.tbEntranceGuards.Location = new System.Drawing.Point(295, 542);
-            this.tbEntranceGuards.Margin = new System.Windows.Forms.Padding(2);
-            this.tbEntranceGuards.Name = "tbEntranceGuards";
-            this.tbEntranceGuards.Size = new System.Drawing.Size(68, 32);
-            this.tbEntranceGuards.TabIndex = 15;
-            this.tbEntranceGuards.Text = "0";
-            this.tbEntranceGuards.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainEntranceGuards.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainEntranceGuards.ForeColor = System.Drawing.Color.Black;
+            this.tbMainEntranceGuards.Location = new System.Drawing.Point(295, 542);
+            this.tbMainEntranceGuards.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainEntranceGuards.Name = "tbMainEntranceGuards";
+            this.tbMainEntranceGuards.Size = new System.Drawing.Size(68, 32);
+            this.tbMainEntranceGuards.TabIndex = 15;
+            this.tbMainEntranceGuards.Text = "0";
+            this.tbMainEntranceGuards.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label24
             // 
@@ -1483,17 +1483,17 @@
             this.label24.TabIndex = 57;
             this.label24.Text = "Number of Entrance Guards";
             // 
-            // tbWeeksRequired
+            // tbMainWeeksRequired
             // 
-            this.tbWeeksRequired.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbWeeksRequired.ForeColor = System.Drawing.Color.Black;
-            this.tbWeeksRequired.Location = new System.Drawing.Point(535, 542);
-            this.tbWeeksRequired.Margin = new System.Windows.Forms.Padding(2);
-            this.tbWeeksRequired.Name = "tbWeeksRequired";
-            this.tbWeeksRequired.Size = new System.Drawing.Size(68, 32);
-            this.tbWeeksRequired.TabIndex = 16;
-            this.tbWeeksRequired.Text = "0";
-            this.tbWeeksRequired.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainWeeksRequired.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainWeeksRequired.ForeColor = System.Drawing.Color.Black;
+            this.tbMainWeeksRequired.Location = new System.Drawing.Point(535, 542);
+            this.tbMainWeeksRequired.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainWeeksRequired.Name = "tbMainWeeksRequired";
+            this.tbMainWeeksRequired.Size = new System.Drawing.Size(68, 32);
+            this.tbMainWeeksRequired.TabIndex = 16;
+            this.tbMainWeeksRequired.Text = "0";
+            this.tbMainWeeksRequired.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label25
             // 
@@ -1507,17 +1507,17 @@
             this.label25.TabIndex = 59;
             this.label25.Text = "Weeks required";
             // 
-            // tbScaffold
+            // tbMainScaffold
             // 
-            this.tbScaffold.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbScaffold.ForeColor = System.Drawing.Color.Black;
-            this.tbScaffold.Location = new System.Drawing.Point(367, 573);
-            this.tbScaffold.Margin = new System.Windows.Forms.Padding(2);
-            this.tbScaffold.Name = "tbScaffold";
-            this.tbScaffold.Size = new System.Drawing.Size(126, 32);
-            this.tbScaffold.TabIndex = 17;
-            this.tbScaffold.Text = "0";
-            this.tbScaffold.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainScaffold.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainScaffold.ForeColor = System.Drawing.Color.Black;
+            this.tbMainScaffold.Location = new System.Drawing.Point(367, 573);
+            this.tbMainScaffold.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainScaffold.Name = "tbMainScaffold";
+            this.tbMainScaffold.Size = new System.Drawing.Size(126, 32);
+            this.tbMainScaffold.TabIndex = 17;
+            this.tbMainScaffold.Text = "0";
+            this.tbMainScaffold.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label26
             // 
@@ -1531,17 +1531,17 @@
             this.label26.TabIndex = 61;
             this.label26.Text = "Number of months scaffold required";
             // 
-            // cbSecurity
+            // cbMainSecurity
             // 
-            this.cbSecurity.AutoSize = true;
-            this.cbSecurity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSecurity.Location = new System.Drawing.Point(326, 467);
-            this.cbSecurity.Name = "cbSecurity";
-            this.cbSecurity.Size = new System.Drawing.Size(225, 29);
-            this.cbSecurity.TabIndex = 63;
-            this.cbSecurity.TabStop = false;
-            this.cbSecurity.Text = "Is security required?";
-            this.cbSecurity.UseVisualStyleBackColor = true;
+            this.cbMainSecurity.AutoSize = true;
+            this.cbMainSecurity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMainSecurity.Location = new System.Drawing.Point(326, 467);
+            this.cbMainSecurity.Name = "cbMainSecurity";
+            this.cbMainSecurity.Size = new System.Drawing.Size(225, 29);
+            this.cbMainSecurity.TabIndex = 63;
+            this.cbMainSecurity.TabStop = false;
+            this.cbMainSecurity.Text = "Is security required?";
+            this.cbMainSecurity.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -1555,17 +1555,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tbMargin
+            // tbMainMargin
             // 
-            this.tbMargin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMargin.ForeColor = System.Drawing.Color.Black;
-            this.tbMargin.Location = new System.Drawing.Point(152, 613);
-            this.tbMargin.Margin = new System.Windows.Forms.Padding(2);
-            this.tbMargin.Name = "tbMargin";
-            this.tbMargin.Size = new System.Drawing.Size(102, 44);
-            this.tbMargin.TabIndex = 18;
-            this.tbMargin.Text = "99";
-            this.tbMargin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainMargin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainMargin.ForeColor = System.Drawing.Color.Black;
+            this.tbMainMargin.Location = new System.Drawing.Point(152, 613);
+            this.tbMainMargin.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainMargin.Name = "tbMainMargin";
+            this.tbMainMargin.Size = new System.Drawing.Size(102, 44);
+            this.tbMainMargin.TabIndex = 18;
+            this.tbMainMargin.Text = "99";
+            this.tbMainMargin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label79
             // 
@@ -1625,7 +1625,7 @@
             this.lbWait.BackColor = System.Drawing.Color.Gray;
             this.lbWait.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWait.ForeColor = System.Drawing.Color.Navy;
-            this.lbWait.Location = new System.Drawing.Point(29, 253);
+            this.lbWait.Location = new System.Drawing.Point(12, 332);
             this.lbWait.Name = "lbWait";
             this.lbWait.Size = new System.Drawing.Size(965, 110);
             this.lbWait.TabIndex = 71;
@@ -1658,17 +1658,17 @@
             this.printButton.Visible = false;
             this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
-            // tbBlankets
+            // tbMainBlankets
             // 
-            this.tbBlankets.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBlankets.ForeColor = System.Drawing.Color.Black;
-            this.tbBlankets.Location = new System.Drawing.Point(186, 286);
-            this.tbBlankets.Margin = new System.Windows.Forms.Padding(2);
-            this.tbBlankets.Name = "tbBlankets";
-            this.tbBlankets.Size = new System.Drawing.Size(126, 32);
-            this.tbBlankets.TabIndex = 9;
-            this.tbBlankets.Text = "0";
-            this.tbBlankets.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMainBlankets.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainBlankets.ForeColor = System.Drawing.Color.Black;
+            this.tbMainBlankets.Location = new System.Drawing.Point(186, 286);
+            this.tbMainBlankets.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainBlankets.Name = "tbMainBlankets";
+            this.tbMainBlankets.Size = new System.Drawing.Size(126, 32);
+            this.tbMainBlankets.TabIndex = 9;
+            this.tbMainBlankets.Text = "0";
+            this.tbMainBlankets.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -1684,7 +1684,6 @@
             // 
             // btLoad
             // 
-            this.btLoad.Enabled = false;
             this.btLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.btLoad.Location = new System.Drawing.Point(8, 670);
             this.btLoad.Name = "btLoad";
@@ -1692,7 +1691,6 @@
             this.btLoad.TabIndex = 76;
             this.btLoad.Text = "Load";
             this.btLoad.UseVisualStyleBackColor = true;
-            this.btLoad.Visible = false;
             this.btLoad.Click += new System.EventHandler(this.btLoad_Click);
             // 
             // openFileDialog1
@@ -1707,26 +1705,26 @@
             this.ClientSize = new System.Drawing.Size(1170, 802);
             this.Controls.Add(this.btLoad);
             this.Controls.Add(this.lbWait);
-            this.Controls.Add(this.tbBlankets);
+            this.Controls.Add(this.tbMainBlankets);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.printButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.currencySelectionGroup);
             this.Controls.Add(this.lblExchangeDate);
-            this.Controls.Add(this.tbMargin);
+            this.Controls.Add(this.tbMainMargin);
             this.Controls.Add(this.label79);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.cbSecurity);
-            this.Controls.Add(this.tbScaffold);
+            this.Controls.Add(this.cbMainSecurity);
+            this.Controls.Add(this.tbMainScaffold);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.tbWeeksRequired);
+            this.Controls.Add(this.tbMainWeeksRequired);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.tbEntranceGuards);
+            this.Controls.Add(this.tbMainEntranceGuards);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.tbCost);
-            this.Controls.Add(this.tBFloors);
-            this.Controls.Add(this.tbNumberLifts);
+            this.Controls.Add(this.tBMainFloors);
+            this.Controls.Add(this.tbMainNumberLifts);
             this.Controls.Add(this.shippingLbl40);
             this.Controls.Add(this.shippingLbl20);
             this.Controls.Add(this.shippingLblTotal);
@@ -1734,28 +1732,28 @@
             this.Controls.Add(this.btn40Ft);
             this.Controls.Add(this.btn20Ft);
             this.Controls.Add(this.exchangeRateLbl);
-            this.Controls.Add(this.tbStorage);
+            this.Controls.Add(this.tbMainStorage);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.tbTravel);
+            this.Controls.Add(this.tbMainTravel);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.tbCartage);
+            this.Controls.Add(this.tbMainCartage);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.tbShaftLight);
+            this.Controls.Add(this.tbMainShaftLight);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.tbAccomodation);
+            this.Controls.Add(this.tbMainAccomodation);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.tbDuct);
+            this.Controls.Add(this.tbMainDuct);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.tbSundries);
+            this.Controls.Add(this.tbMainSundries);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.tBQuoteNumber);
+            this.Controls.Add(this.tBMainQuoteNumber);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tBAddress);
+            this.Controls.Add(this.tBMainAddress);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -1778,8 +1776,8 @@
         #endregion
 
         public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox tBAddress;
-        public System.Windows.Forms.TextBox tBQuoteNumber;
+        public System.Windows.Forms.TextBox tBMainAddress;
+        public System.Windows.Forms.TextBox tBMainQuoteNumber;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label lblPriceIncludingGST;
         public System.Windows.Forms.Label lblGST;
@@ -1797,20 +1795,20 @@
         public System.Windows.Forms.GroupBox currencySelectionGroup;
         public System.Windows.Forms.Label label11;
         public System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.TextBox tbSundries;
+        public System.Windows.Forms.TextBox tbMainSundries;
         public System.Windows.Forms.Label label15;
-        public System.Windows.Forms.TextBox tbDuct;
+        public System.Windows.Forms.TextBox tbMainDuct;
         public System.Windows.Forms.Label label17;
-        public System.Windows.Forms.TextBox tbShaftLight;
+        public System.Windows.Forms.TextBox tbMainShaftLight;
         public System.Windows.Forms.Label label18;
-        public System.Windows.Forms.TextBox tbAccomodation;
+        public System.Windows.Forms.TextBox tbMainAccomodation;
         public System.Windows.Forms.Label label19;
-        public System.Windows.Forms.TextBox tbStorage;
+        public System.Windows.Forms.TextBox tbMainStorage;
         public System.Windows.Forms.Label label20;
         public System.Windows.Forms.Label label21;
-        public System.Windows.Forms.TextBox tbTravel;
+        public System.Windows.Forms.TextBox tbMainTravel;
         public System.Windows.Forms.Label label22;
-        public System.Windows.Forms.TextBox tbCartage;
+        public System.Windows.Forms.TextBox tbMainCartage;
         public System.Windows.Forms.Label label23;
         public System.Windows.Forms.Label exchangeRateLbl;
         public System.Windows.Forms.Button btn20Ft;
@@ -1819,8 +1817,8 @@
         public System.Windows.Forms.Label shippingLblTotal;
         public System.Windows.Forms.Label shippingLbl20;
         public System.Windows.Forms.Label shippingLbl40;
-        public System.Windows.Forms.TextBox tbNumberLifts;
-        public System.Windows.Forms.TextBox tBFloors;
+        public System.Windows.Forms.TextBox tbMainNumberLifts;
+        public System.Windows.Forms.TextBox tBMainFloors;
         public System.Windows.Forms.TextBox tbCost;
         public System.Windows.Forms.Label label73;
         public System.Windows.Forms.Label lblLabour;
@@ -1875,15 +1873,15 @@
         public System.Windows.Forms.Label label27;
         public System.Windows.Forms.Label lblCost;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox tbEntranceGuards;
+        public System.Windows.Forms.TextBox tbMainEntranceGuards;
         public System.Windows.Forms.Label label24;
-        public System.Windows.Forms.TextBox tbWeeksRequired;
+        public System.Windows.Forms.TextBox tbMainWeeksRequired;
         public System.Windows.Forms.Label label25;
-        public System.Windows.Forms.TextBox tbScaffold;
+        public System.Windows.Forms.TextBox tbMainScaffold;
         public System.Windows.Forms.Label label26;
-        public System.Windows.Forms.CheckBox cbSecurity;
+        public System.Windows.Forms.CheckBox cbMainSecurity;
         public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.TextBox tbMargin;
+        public System.Windows.Forms.TextBox tbMainMargin;
         public System.Windows.Forms.Label label79;
         public System.Windows.Forms.Label lblExchangeDate;
         public System.Windows.Forms.PrintDialog printDialog1;
@@ -1895,7 +1893,7 @@
         public System.Windows.Forms.Label lblLiftNoConvertPrice;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.Button printButton;
-        public System.Windows.Forms.TextBox tbBlankets;
+        public System.Windows.Forms.TextBox tbMainBlankets;
         public System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btLoad;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
