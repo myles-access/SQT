@@ -14,12 +14,21 @@ namespace SQT
 
         private void QuoteInfo10_Load(object sender, EventArgs e)
         {
-            PullInfo();
+            if (f.loadingPreviousData)
+            {
+                PullInfo();
+            }
         }
 
         private void PullInfo()
         {
-            //
+            f.LoadPreviousXmlTb(tbNumOfButtonRisers);
+            f.LoadPreviousXmlRb(tbFacePlateMaterial, rbFacePlateMaterialOther, rbFacePlateMaterialSatinStainlessSteel);
+            f.LoadPreviousXmlRb(null, rbHallLanternsNo, rbHallLanternsYes);
+            f.LoadPreviousXmlRb(null, rbLandingFireServiceKeySwitchNo, rbLandingFireServiceKeySwitchYes);
+            f.LoadPreviousXmlRb(null, rbBraileTactileSymbolsLandingNo, rbBraileTactileSymbolsLandingYes);
+            f.LoadPreviousXmlRb(null, rbOutofServiceKeySwitchNo, rbOutOfServieKeySwitchYes);
+            f.LoadPreviousXmlRb(null, rbDigitalIndicationIncorperatedNo, rbDigitalIndicationIncorperatedYes);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -28,14 +37,19 @@ namespace SQT
             QuoteInfo11 nF = new QuoteInfo11();
 
             //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
-            f.WordData("AE192", f.RadioButtonHandeler(textBox1, radioButton19,  radioButton9));//face plate material 
+            f.WordData("AE192", f.RadioButtonHandeler(tbFacePlateMaterial, rbFacePlateMaterialSatinStainlessSteel,  rbFacePlateMaterialOther));//face plate material 
             f.WordData("AE193", "Dual illumination buttons with gong");//button type
-            f.WordData("AE194", f.RadioButtonHandeler(null, radioButton7, radioButton8));//hall lanterns
-            f.WordData("AE195", f.RadioButtonHandeler(null, radioButton13, radioButton14));// braille tactile symbols 
-            f.WordData("AE196", f.RadioButtonHandeler(null, radioButton3, radioButton4));// digital indication incorperated 
-            f.WordData("AE197", f.RadioButtonHandeler(null, radioButton17, radioButton18));//out of service key switch 
-            f.WordData("AE198", f.RadioButtonHandeler(null, radioButton5, radioButton6));// fire service key switch 
-            f.WordData("AE217", tbfname.Text);// number of button risers 
+            f.WordData("AE194", f.RadioButtonHandeler(null, rbHallLanternsNo, rbHallLanternsYes));//hall lanterns
+            f.WordData("AE195", f.RadioButtonHandeler(null, rbBraileTactileSymbolsLandingNo, rbBraileTactileSymbolsLandingYes));// braille tactile symbols 
+            f.WordData("AE196", f.RadioButtonHandeler(null, rbDigitalIndicationIncorperatedYes, rbDigitalIndicationIncorperatedNo));// digital indication incorperated 
+            f.WordData("AE197", f.RadioButtonHandeler(null, rbOutofServiceKeySwitchNo, rbOutOfServieKeySwitchYes));//out of service key switch 
+            f.WordData("AE198", f.RadioButtonHandeler(null, rbLandingFireServiceKeySwitchNo, rbLandingFireServiceKeySwitchYes));// fire service key switch 
+            f.WordData("AE217", tbNumOfButtonRisers.Text);// number of button risers 
+
+            f.SaveTbToXML(tbFacePlateMaterial, tbNumOfButtonRisers);
+            f.SaveRbToXML(rbBraileTactileSymbolsLandingNo, rbBraileTactileSymbolsLandingYes, rbDigitalIndicationIncorperatedNo,
+                rbDigitalIndicationIncorperatedYes, rbFacePlateMaterialOther, rbFacePlateMaterialSatinStainlessSteel, rbLandingFireServiceKeySwitchNo,
+                rbLandingFireServiceKeySwitchYes, rbHallLanternsNo, rbHallLanternsYes, rbOutofServiceKeySwitchNo, rbOutOfServieKeySwitchYes);
 
             //Load next form and close this one 
             nF.Show();
@@ -45,6 +59,11 @@ namespace SQT
         private void button2_Click(object sender, EventArgs e)
         {
             f.QuestionCloseCall(this);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

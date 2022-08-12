@@ -15,12 +15,15 @@ namespace SQT
 
         private void QuoteInfo2_Load(object sender, EventArgs e)
         {
-           // PullInfo();
+            if (f.loadingPreviousData)
+            {
+                PullInfo();
+            }
         }
 
         private void PullInfo()
         {
-            //
+            f.LoadPreviousXmlTb(tbfname, tblname, tbphone, tbAddress1, tbAddress2, tbAddress3);
         }
 
         private void buttonEUR_Click_1(object sender, EventArgs e)
@@ -31,9 +34,11 @@ namespace SQT
             f.WordData("AE105", tbfname.Text); //first name
             f.WordData("AE106", tblname.Text);//last name
             f.WordData("AE107", tbphone.Text);//phone number
-            f.WordData("AE108", textBox3.Text);//address 1
-            f.WordData("AE109", textBox1.Text);//address 2
-            f.WordData("AE110", textBox2.Text);//address 3
+            f.WordData("AE108", tbAddress1.Text);//address 1
+            f.WordData("AE109", tbAddress2.Text);//address 2
+            f.WordData("AE110", tbAddress3.Text);//address 3
+
+            f.SaveTbToXML(tbfname, tblname, tbphone, tbAddress1, tbAddress2, tbAddress3);
 
             //Load next form and close this one 
             nF.Show();

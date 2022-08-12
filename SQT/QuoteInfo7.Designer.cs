@@ -33,37 +33,37 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.rbDoorTypeSideOpening = new System.Windows.Forms.RadioButton();
+            this.rbDoorTypeCentreOpening = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.tbDoorTracks = new System.Windows.Forms.TextBox();
+            this.rbDoorTracksOther = new System.Windows.Forms.RadioButton();
+            this.rbDoorTracksAnodisedAluminium = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.tbphone = new System.Windows.Forms.TextBox();
+            this.tbEntrancProtection = new System.Windows.Forms.TextBox();
+            this.rbEntranceProtectionOTher = new System.Windows.Forms.RadioButton();
+            this.rbEntranceProtectionElectronicScanner = new System.Windows.Forms.RadioButton();
+            this.tbDoorHeight = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbfname = new System.Windows.Forms.TextBox();
+            this.tbDoorWidth = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rbAdvancedOpeningNo = new System.Windows.Forms.RadioButton();
+            this.rbAdvancedOpeningYes = new System.Windows.Forms.RadioButton();
+            this.tbDoorVoltage = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbLandingDoorFinish = new System.Windows.Forms.TextBox();
+            this.rbLandingDoorFinishOther = new System.Windows.Forms.RadioButton();
+            this.rbLandingDoorFinishStainlessSteel = new System.Windows.Forms.RadioButton();
+            this.tbLandingDoorJambDepth = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.rbDoorNudgingNo = new System.Windows.Forms.RadioButton();
+            this.rbDoorNudgingYes = new System.Windows.Forms.RadioButton();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
+            this.rbFireRatedDoorsNo = new System.Windows.Forms.RadioButton();
+            this.rbFireRatedDoorsYes = new System.Windows.Forms.RadioButton();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -113,8 +113,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton3);
-            this.groupBox3.Controls.Add(this.radioButton5);
+            this.groupBox3.Controls.Add(this.rbDoorTypeSideOpening);
+            this.groupBox3.Controls.Add(this.rbDoorTypeCentreOpening);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(272, 50);
             this.groupBox3.Name = "groupBox3";
@@ -123,33 +123,33 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Door Type";
             // 
-            // radioButton3
+            // rbDoorTypeSideOpening
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 60);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(232, 28);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.Text = "2 Panels / Side Opening";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbDoorTypeSideOpening.AutoSize = true;
+            this.rbDoorTypeSideOpening.Location = new System.Drawing.Point(6, 60);
+            this.rbDoorTypeSideOpening.Name = "rbDoorTypeSideOpening";
+            this.rbDoorTypeSideOpening.Size = new System.Drawing.Size(232, 28);
+            this.rbDoorTypeSideOpening.TabIndex = 2;
+            this.rbDoorTypeSideOpening.Text = "2 Panels / Side Opening";
+            this.rbDoorTypeSideOpening.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // rbDoorTypeCentreOpening
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Checked = true;
-            this.radioButton5.Location = new System.Drawing.Point(6, 28);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(250, 28);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "2 Panels / Centre Opening";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbDoorTypeCentreOpening.AutoSize = true;
+            this.rbDoorTypeCentreOpening.Checked = true;
+            this.rbDoorTypeCentreOpening.Location = new System.Drawing.Point(6, 28);
+            this.rbDoorTypeCentreOpening.Name = "rbDoorTypeCentreOpening";
+            this.rbDoorTypeCentreOpening.Size = new System.Drawing.Size(250, 28);
+            this.rbDoorTypeCentreOpening.TabIndex = 1;
+            this.rbDoorTypeCentreOpening.TabStop = true;
+            this.rbDoorTypeCentreOpening.Text = "2 Panels / Centre Opening";
+            this.rbDoorTypeCentreOpening.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.radioButton10);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.tbDoorTracks);
+            this.groupBox1.Controls.Add(this.rbDoorTracksOther);
+            this.groupBox1.Controls.Add(this.rbDoorTracksAnodisedAluminium);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(501, 233);
             this.groupBox1.Name = "groupBox1";
@@ -158,43 +158,43 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Door Tracks";
             // 
-            // textBox5
+            // tbDoorTracks
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(25, 56);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(188, 32);
-            this.textBox5.TabIndex = 82;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbDoorTracks.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDoorTracks.ForeColor = System.Drawing.Color.Black;
+            this.tbDoorTracks.Location = new System.Drawing.Point(25, 56);
+            this.tbDoorTracks.Margin = new System.Windows.Forms.Padding(2);
+            this.tbDoorTracks.Name = "tbDoorTracks";
+            this.tbDoorTracks.Size = new System.Drawing.Size(188, 32);
+            this.tbDoorTracks.TabIndex = 82;
+            this.tbDoorTracks.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // radioButton10
+            // rbDoorTracksOther
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(6, 67);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(14, 13);
-            this.radioButton10.TabIndex = 81;
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rbDoorTracksOther.AutoSize = true;
+            this.rbDoorTracksOther.Location = new System.Drawing.Point(6, 67);
+            this.rbDoorTracksOther.Name = "rbDoorTracksOther";
+            this.rbDoorTracksOther.Size = new System.Drawing.Size(14, 13);
+            this.rbDoorTracksOther.TabIndex = 81;
+            this.rbDoorTracksOther.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbDoorTracksAnodisedAluminium
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 26);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(204, 28);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Anodised Aluminium";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbDoorTracksAnodisedAluminium.AutoSize = true;
+            this.rbDoorTracksAnodisedAluminium.Checked = true;
+            this.rbDoorTracksAnodisedAluminium.Location = new System.Drawing.Point(6, 26);
+            this.rbDoorTracksAnodisedAluminium.Name = "rbDoorTracksAnodisedAluminium";
+            this.rbDoorTracksAnodisedAluminium.Size = new System.Drawing.Size(204, 28);
+            this.rbDoorTracksAnodisedAluminium.TabIndex = 1;
+            this.rbDoorTracksAnodisedAluminium.TabStop = true;
+            this.rbDoorTracksAnodisedAluminium.Text = "Anodised Aluminium";
+            this.rbDoorTracksAnodisedAluminium.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.radioButton9);
-            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Controls.Add(this.tbEntrancProtection);
+            this.groupBox2.Controls.Add(this.rbEntranceProtectionOTher);
+            this.groupBox2.Controls.Add(this.rbEntranceProtectionElectronicScanner);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(6, 233);
             this.groupBox2.Name = "groupBox2";
@@ -203,48 +203,48 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Entrance Protection";
             // 
-            // textBox4
+            // tbEntrancProtection
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(25, 50);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 32);
-            this.textBox4.TabIndex = 82;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbEntrancProtection.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEntrancProtection.ForeColor = System.Drawing.Color.Black;
+            this.tbEntrancProtection.Location = new System.Drawing.Point(25, 50);
+            this.tbEntrancProtection.Margin = new System.Windows.Forms.Padding(2);
+            this.tbEntrancProtection.Name = "tbEntrancProtection";
+            this.tbEntrancProtection.Size = new System.Drawing.Size(188, 32);
+            this.tbEntrancProtection.TabIndex = 82;
+            this.tbEntrancProtection.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // radioButton9
+            // rbEntranceProtectionOTher
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(6, 61);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(14, 13);
-            this.radioButton9.TabIndex = 81;
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rbEntranceProtectionOTher.AutoSize = true;
+            this.rbEntranceProtectionOTher.Location = new System.Drawing.Point(6, 61);
+            this.rbEntranceProtectionOTher.Name = "rbEntranceProtectionOTher";
+            this.rbEntranceProtectionOTher.Size = new System.Drawing.Size(14, 13);
+            this.rbEntranceProtectionOTher.TabIndex = 81;
+            this.rbEntranceProtectionOTher.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbEntranceProtectionElectronicScanner
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 23);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(188, 28);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Electronic Scanner";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbEntranceProtectionElectronicScanner.AutoSize = true;
+            this.rbEntranceProtectionElectronicScanner.Checked = true;
+            this.rbEntranceProtectionElectronicScanner.Location = new System.Drawing.Point(6, 23);
+            this.rbEntranceProtectionElectronicScanner.Name = "rbEntranceProtectionElectronicScanner";
+            this.rbEntranceProtectionElectronicScanner.Size = new System.Drawing.Size(188, 28);
+            this.rbEntranceProtectionElectronicScanner.TabIndex = 1;
+            this.rbEntranceProtectionElectronicScanner.TabStop = true;
+            this.rbEntranceProtectionElectronicScanner.Text = "Electronic Scanner";
+            this.rbEntranceProtectionElectronicScanner.UseVisualStyleBackColor = true;
             // 
-            // tbphone
+            // tbDoorHeight
             // 
-            this.tbphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbphone.ForeColor = System.Drawing.Color.Black;
-            this.tbphone.Location = new System.Drawing.Point(186, 86);
-            this.tbphone.Margin = new System.Windows.Forms.Padding(2);
-            this.tbphone.Name = "tbphone";
-            this.tbphone.Size = new System.Drawing.Size(81, 32);
-            this.tbphone.TabIndex = 2;
-            this.tbphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbDoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDoorHeight.ForeColor = System.Drawing.Color.Black;
+            this.tbDoorHeight.Location = new System.Drawing.Point(186, 86);
+            this.tbDoorHeight.Margin = new System.Windows.Forms.Padding(2);
+            this.tbDoorHeight.Name = "tbDoorHeight";
+            this.tbDoorHeight.Size = new System.Drawing.Size(81, 32);
+            this.tbDoorHeight.TabIndex = 2;
+            this.tbDoorHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -258,16 +258,16 @@
             this.label2.TabIndex = 74;
             this.label2.Text = "Door Height (mm)";
             // 
-            // tbfname
+            // tbDoorWidth
             // 
-            this.tbfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbfname.ForeColor = System.Drawing.Color.Black;
-            this.tbfname.Location = new System.Drawing.Point(186, 50);
-            this.tbfname.Margin = new System.Windows.Forms.Padding(2);
-            this.tbfname.Name = "tbfname";
-            this.tbfname.Size = new System.Drawing.Size(81, 32);
-            this.tbfname.TabIndex = 1;
-            this.tbfname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbDoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDoorWidth.ForeColor = System.Drawing.Color.Black;
+            this.tbDoorWidth.Location = new System.Drawing.Point(186, 50);
+            this.tbDoorWidth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbDoorWidth.Name = "tbDoorWidth";
+            this.tbDoorWidth.Size = new System.Drawing.Size(81, 32);
+            this.tbDoorWidth.TabIndex = 1;
+            this.tbDoorWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -283,8 +283,8 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.radioButton4);
-            this.groupBox4.Controls.Add(this.radioButton6);
+            this.groupBox4.Controls.Add(this.rbAdvancedOpeningNo);
+            this.groupBox4.Controls.Add(this.rbAdvancedOpeningYes);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(311, 153);
             this.groupBox4.Name = "groupBox4";
@@ -293,38 +293,40 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Advanced Opening";
             // 
-            // radioButton4
+            // rbAdvancedOpeningNo
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(72, 28);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(53, 28);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "No";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbAdvancedOpeningNo.AutoSize = true;
+            this.rbAdvancedOpeningNo.Location = new System.Drawing.Point(72, 28);
+            this.rbAdvancedOpeningNo.Name = "rbAdvancedOpeningNo";
+            this.rbAdvancedOpeningNo.Size = new System.Drawing.Size(53, 28);
+            this.rbAdvancedOpeningNo.TabIndex = 1;
+            this.rbAdvancedOpeningNo.TabStop = true;
+            this.rbAdvancedOpeningNo.Text = "No";
+            this.rbAdvancedOpeningNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rbAdvancedOpeningYes
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 28);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(60, 28);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Yes";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbAdvancedOpeningYes.AutoSize = true;
+            this.rbAdvancedOpeningYes.Location = new System.Drawing.Point(6, 28);
+            this.rbAdvancedOpeningYes.Name = "rbAdvancedOpeningYes";
+            this.rbAdvancedOpeningYes.Size = new System.Drawing.Size(60, 28);
+            this.rbAdvancedOpeningYes.TabIndex = 0;
+            this.rbAdvancedOpeningYes.TabStop = true;
+            this.rbAdvancedOpeningYes.Text = "Yes";
+            this.rbAdvancedOpeningYes.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tbDoorVoltage
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(186, 122);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(81, 32);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbDoorVoltage.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDoorVoltage.ForeColor = System.Drawing.Color.Black;
+            this.tbDoorVoltage.Location = new System.Drawing.Point(186, 122);
+            this.tbDoorVoltage.Margin = new System.Windows.Forms.Padding(2);
+            this.tbDoorVoltage.Name = "tbDoorVoltage";
+            this.tbDoorVoltage.Size = new System.Drawing.Size(81, 32);
+            this.tbDoorVoltage.TabIndex = 3;
+            this.tbDoorVoltage.Text = "125v";
+            this.tbDoorVoltage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbDoorVoltage.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -341,9 +343,9 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox3);
-            this.groupBox5.Controls.Add(this.radioButton7);
-            this.groupBox5.Controls.Add(this.radioButton8);
+            this.groupBox5.Controls.Add(this.tbLandingDoorFinish);
+            this.groupBox5.Controls.Add(this.rbLandingDoorFinishOther);
+            this.groupBox5.Controls.Add(this.rbLandingDoorFinishStainlessSteel);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(248, 233);
             this.groupBox5.Name = "groupBox5";
@@ -352,48 +354,49 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Landing Door Finish";
             // 
-            // textBox3
+            // tbLandingDoorFinish
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(25, 59);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 32);
-            this.textBox3.TabIndex = 80;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbLandingDoorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLandingDoorFinish.ForeColor = System.Drawing.Color.Black;
+            this.tbLandingDoorFinish.Location = new System.Drawing.Point(25, 59);
+            this.tbLandingDoorFinish.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLandingDoorFinish.Name = "tbLandingDoorFinish";
+            this.tbLandingDoorFinish.Size = new System.Drawing.Size(188, 32);
+            this.tbLandingDoorFinish.TabIndex = 80;
+            this.tbLandingDoorFinish.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // radioButton7
+            // rbLandingDoorFinishOther
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(6, 70);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(14, 13);
-            this.radioButton7.TabIndex = 2;
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbLandingDoorFinishOther.AutoSize = true;
+            this.rbLandingDoorFinishOther.Location = new System.Drawing.Point(6, 70);
+            this.rbLandingDoorFinishOther.Name = "rbLandingDoorFinishOther";
+            this.rbLandingDoorFinishOther.Size = new System.Drawing.Size(14, 13);
+            this.rbLandingDoorFinishOther.TabIndex = 2;
+            this.rbLandingDoorFinishOther.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rbLandingDoorFinishStainlessSteel
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Checked = true;
-            this.radioButton8.Location = new System.Drawing.Point(6, 26);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(225, 28);
-            this.radioButton8.TabIndex = 1;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Brushed Stainless Steel";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rbLandingDoorFinishStainlessSteel.AutoSize = true;
+            this.rbLandingDoorFinishStainlessSteel.Checked = true;
+            this.rbLandingDoorFinishStainlessSteel.Location = new System.Drawing.Point(6, 26);
+            this.rbLandingDoorFinishStainlessSteel.Name = "rbLandingDoorFinishStainlessSteel";
+            this.rbLandingDoorFinishStainlessSteel.Size = new System.Drawing.Size(225, 28);
+            this.rbLandingDoorFinishStainlessSteel.TabIndex = 1;
+            this.rbLandingDoorFinishStainlessSteel.TabStop = true;
+            this.rbLandingDoorFinishStainlessSteel.Text = "Brushed Stainless Steel";
+            this.rbLandingDoorFinishStainlessSteel.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // tbLandingDoorJambDepth
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(206, 175);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 32);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbLandingDoorJambDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLandingDoorJambDepth.ForeColor = System.Drawing.Color.Black;
+            this.tbLandingDoorJambDepth.Location = new System.Drawing.Point(206, 175);
+            this.tbLandingDoorJambDepth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLandingDoorJambDepth.Name = "tbLandingDoorJambDepth";
+            this.tbLandingDoorJambDepth.Size = new System.Drawing.Size(100, 32);
+            this.tbLandingDoorJambDepth.TabIndex = 4;
+            this.tbLandingDoorJambDepth.Text = "80mm";
+            this.tbLandingDoorJambDepth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -410,8 +413,8 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.radioButton11);
-            this.groupBox7.Controls.Add(this.radioButton12);
+            this.groupBox7.Controls.Add(this.rbDoorNudgingNo);
+            this.groupBox7.Controls.Add(this.rbDoorNudgingYes);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(542, 84);
             this.groupBox7.Name = "groupBox7";
@@ -420,32 +423,32 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Door Nudging";
             // 
-            // radioButton11
+            // rbDoorNudgingNo
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(72, 28);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(53, 28);
-            this.radioButton11.TabIndex = 1;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "No";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.rbDoorNudgingNo.AutoSize = true;
+            this.rbDoorNudgingNo.Location = new System.Drawing.Point(72, 28);
+            this.rbDoorNudgingNo.Name = "rbDoorNudgingNo";
+            this.rbDoorNudgingNo.Size = new System.Drawing.Size(53, 28);
+            this.rbDoorNudgingNo.TabIndex = 1;
+            this.rbDoorNudgingNo.TabStop = true;
+            this.rbDoorNudgingNo.Text = "No";
+            this.rbDoorNudgingNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton12
+            // rbDoorNudgingYes
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(6, 28);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(60, 28);
-            this.radioButton12.TabIndex = 0;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "Yes";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.rbDoorNudgingYes.AutoSize = true;
+            this.rbDoorNudgingYes.Location = new System.Drawing.Point(6, 28);
+            this.rbDoorNudgingYes.Name = "rbDoorNudgingYes";
+            this.rbDoorNudgingYes.Size = new System.Drawing.Size(60, 28);
+            this.rbDoorNudgingYes.TabIndex = 0;
+            this.rbDoorNudgingYes.TabStop = true;
+            this.rbDoorNudgingYes.Text = "Yes";
+            this.rbDoorNudgingYes.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.radioButton13);
-            this.groupBox8.Controls.Add(this.radioButton14);
+            this.groupBox8.Controls.Add(this.rbFireRatedDoorsNo);
+            this.groupBox8.Controls.Add(this.rbFireRatedDoorsYes);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.Location = new System.Drawing.Point(512, 153);
             this.groupBox8.Name = "groupBox8";
@@ -454,27 +457,27 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Fire Rated Doors";
             // 
-            // radioButton13
+            // rbFireRatedDoorsNo
             // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(72, 28);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(53, 28);
-            this.radioButton13.TabIndex = 1;
-            this.radioButton13.Text = "No";
-            this.radioButton13.UseVisualStyleBackColor = true;
+            this.rbFireRatedDoorsNo.AutoSize = true;
+            this.rbFireRatedDoorsNo.Location = new System.Drawing.Point(72, 28);
+            this.rbFireRatedDoorsNo.Name = "rbFireRatedDoorsNo";
+            this.rbFireRatedDoorsNo.Size = new System.Drawing.Size(53, 28);
+            this.rbFireRatedDoorsNo.TabIndex = 1;
+            this.rbFireRatedDoorsNo.Text = "No";
+            this.rbFireRatedDoorsNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton14
+            // rbFireRatedDoorsYes
             // 
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Checked = true;
-            this.radioButton14.Location = new System.Drawing.Point(6, 28);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(60, 28);
-            this.radioButton14.TabIndex = 0;
-            this.radioButton14.TabStop = true;
-            this.radioButton14.Text = "Yes";
-            this.radioButton14.UseVisualStyleBackColor = true;
+            this.rbFireRatedDoorsYes.AutoSize = true;
+            this.rbFireRatedDoorsYes.Checked = true;
+            this.rbFireRatedDoorsYes.Location = new System.Drawing.Point(6, 28);
+            this.rbFireRatedDoorsYes.Name = "rbFireRatedDoorsYes";
+            this.rbFireRatedDoorsYes.Size = new System.Drawing.Size(60, 28);
+            this.rbFireRatedDoorsYes.TabIndex = 0;
+            this.rbFireRatedDoorsYes.TabStop = true;
+            this.rbFireRatedDoorsYes.Text = "Yes";
+            this.rbFireRatedDoorsYes.UseVisualStyleBackColor = true;
             // 
             // QuoteInfo7
             // 
@@ -484,15 +487,15 @@
             this.ClientSize = new System.Drawing.Size(724, 397);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbLandingDoorJambDepth);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbDoorVoltage);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.tbphone);
+            this.Controls.Add(this.tbDoorHeight);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbfname);
+            this.Controls.Add(this.tbDoorWidth);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -534,36 +537,36 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton rbDoorTypeCentreOpening;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbDoorTracksAnodisedAluminium;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.TextBox tbphone;
+        private System.Windows.Forms.RadioButton rbEntranceProtectionElectronicScanner;
+        private System.Windows.Forms.RadioButton rbDoorTypeSideOpening;
+        private System.Windows.Forms.TextBox tbDoorHeight;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbfname;
+        private System.Windows.Forms.TextBox tbDoorWidth;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton rbAdvancedOpeningNo;
+        private System.Windows.Forms.RadioButton rbAdvancedOpeningYes;
+        private System.Windows.Forms.TextBox tbDoorVoltage;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RadioButton rbLandingDoorFinishOther;
+        private System.Windows.Forms.RadioButton rbLandingDoorFinishStainlessSteel;
+        private System.Windows.Forms.TextBox tbLandingDoorJambDepth;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton rbDoorNudgingNo;
+        private System.Windows.Forms.RadioButton rbDoorNudgingYes;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.RadioButton radioButton14;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton rbFireRatedDoorsNo;
+        private System.Windows.Forms.RadioButton rbFireRatedDoorsYes;
+        private System.Windows.Forms.TextBox tbLandingDoorFinish;
+        private System.Windows.Forms.TextBox tbEntrancProtection;
+        private System.Windows.Forms.RadioButton rbEntranceProtectionOTher;
+        private System.Windows.Forms.TextBox tbDoorTracks;
+        private System.Windows.Forms.RadioButton rbDoorTracksOther;
     }
 }

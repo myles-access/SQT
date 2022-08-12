@@ -14,12 +14,22 @@ namespace SQT
 
         private void QuoteInfo4_Load(object sender, EventArgs e)
         {
-           // PullInfo();
+            if (f.loadingPreviousData)
+            {
+                PullInfo();
+            }
         }
 
         private void PullInfo()
         {
-            //
+            f.LoadPreviousXmlRb(null, rbIndependentServiceYes, rbIndependentServiceNo);
+            f.LoadPreviousXmlRb(null, rbLoadWeighingNo, rbLoadWeighingYes);
+            f.LoadPreviousXmlRb(tbmachinetype, rbMachineTypeGearless, rbMachinetypeOther);
+            f.LoadPreviousXmlRb(null, rbFireServiceNo, rbFireServiceYes);
+            f.LoadPreviousXmlRb(tbControlerLocation, rbControlerLoactionTopLanding, rbControlerLocationBottomLanding, rbControlerlocationShaft, rbControlerLocationOther);
+            f.LoadPreviousXmlRb(tbDriveType, rbDriveTypeMRL, rbDriveTypeOther);
+            f.LoadPreviousXmlRb(null, rbEmergencyPowerOperationNo, rbEmergencyPowerOperationYes);
+            f.LoadPreviousXmlTb(tbEmergencyPowerOperationText);
         }
 
         private void buttonEUR_Click_1(object sender, EventArgs e)
@@ -28,14 +38,20 @@ namespace SQT
             QuoteInfo5 nF = new QuoteInfo5();
 
             //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
-            f.WordData("AE116", f.RadioButtonHandeler(null, radioButton1, radioButton2));//independent service
-            f.WordData("AE117", f.RadioButtonHandeler(null, radioButton5, radioButton6));//load weighing
-            f.WordData("AE118", f.RadioButtonHandeler(textBox2, radioButton11, radioButton12, radioButton13, radioButton14));//controler location
-            f.WordData("AE119", f.RadioButtonHandeler(textBox3, radioButton9, radioButton10));//machine type
-            f.WordData("AE120", f.RadioButtonHandeler(null, radioButton3, radioButton4));//fire service
-            f.WordData("AE121", f.RadioButtonHandeler(null, radioButton7, radioButton8));//emergency power operation
-            f.WordData("AE122", textBox1.Text);//emergency power operation text
-            f.WordData("AE219", f.RadioButtonHandeler(textBox4, radioButton15, radioButton16)); // drive type
+            f.WordData("AE116", f.RadioButtonHandeler(null, rbIndependentServiceYes, rbIndependentServiceNo));//independent service
+            f.WordData("AE117", f.RadioButtonHandeler(null, rbLoadWeighingNo, rbLoadWeighingYes));//load weighing
+            f.WordData("AE118", f.RadioButtonHandeler(tbControlerLocation, rbControlerLoactionTopLanding, rbControlerlocationShaft, rbControlerLocationBottomLanding, rbControlerLocationOther));//controler location
+            f.WordData("AE119", f.RadioButtonHandeler(tbmachinetype, rbMachinetypeOther, rbMachineTypeGearless));//machine type
+            f.WordData("AE120", f.RadioButtonHandeler(null, rbFireServiceNo, rbFireServiceYes));//fire service
+            f.WordData("AE121", f.RadioButtonHandeler(null, rbEmergencyPowerOperationNo, rbEmergencyPowerOperationYes));//emergency power operation
+            f.WordData("AE122", tbEmergencyPowerOperationText.Text);//emergency power operation text
+            f.WordData("AE219", f.RadioButtonHandeler(tbDriveType, rbDriveTypeOther, rbDriveTypeMRL)); // drive type
+
+            f.SaveRbToXML(rbControlerLoactionTopLanding, rbControlerLocationBottomLanding, rbControlerLocationOther, rbControlerlocationShaft,
+                rbDriveTypeMRL, rbDriveTypeOther, rbEmergencyPowerOperationNo, rbEmergencyPowerOperationYes, rbFireServiceNo,
+                rbFireServiceYes, rbIndependentServiceNo, rbIndependentServiceYes, rbLoadWeighingNo, rbLoadWeighingYes,
+                rbMachineTypeGearless, rbMachinetypeOther);
+            f.SaveTbToXML(tbControlerLocation, tbDriveType, tbEmergencyPowerOperationText, tbmachinetype);
 
             //Load next form and close this one 
             nF.Show();

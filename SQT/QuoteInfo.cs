@@ -20,10 +20,10 @@ namespace SQT
 
         private void PullInfo()
         {
-            tBAddress.Text = f.tBAddress.Text;
-            tBQuoteNumber.Text = f.tBQuoteNumber.Text;
-            tbNumberLifts.Text = f.tbNumberLifts.Text;
-            tBFloors.Text = f.tBFloors.Text;
+            tBAddress.Text = f.tBMainAddress.Text;
+            tBQuoteNumber.Text = f.tBMainQuoteNumber.Text;
+            tbNumberLifts.Text = f.tbMainNumberLifts.Text;
+            tBFloors.Text = f.tBMainFloors.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
