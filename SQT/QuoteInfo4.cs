@@ -22,14 +22,23 @@ namespace SQT
 
         private void PullInfo()
         {
-            f.LoadPreviousXmlRb(null, rbIndependentServiceYes, rbIndependentServiceNo);
-            f.LoadPreviousXmlRb(null, rbLoadWeighingNo, rbLoadWeighingYes);
-            f.LoadPreviousXmlRb(tbmachinetype, rbMachineTypeGearless, rbMachinetypeOther);
-            f.LoadPreviousXmlRb(null, rbFireServiceNo, rbFireServiceYes);
-            f.LoadPreviousXmlRb(tbControlerLocation, rbControlerLoactionTopLanding, rbControlerLocationBottomLanding, rbControlerlocationShaft, rbControlerLocationOther);
-            f.LoadPreviousXmlRb(tbDriveType, rbDriveTypeMRL, rbDriveTypeOther);
-            f.LoadPreviousXmlRb(null, rbEmergencyPowerOperationNo, rbEmergencyPowerOperationYes);
-            f.LoadPreviousXmlTb(tbEmergencyPowerOperationText);
+            try
+            {
+
+                f.LoadPreviousXmlRb(null, rbIndependentServiceYes, rbIndependentServiceNo);
+                f.LoadPreviousXmlRb(null, rbLoadWeighingNo, rbLoadWeighingYes);
+                f.LoadPreviousXmlRb(tbmachinetype, rbMachineTypeGearless, rbMachinetypeOther);
+                f.LoadPreviousXmlRb(null, rbFireServiceNo, rbFireServiceYes);
+                f.LoadPreviousXmlRb(tbControlerLocation, rbControlerLoactionTopLanding, rbControlerLocationBottomLanding, rbControlerlocationShaft, rbControlerLocationOther);
+                f.LoadPreviousXmlRb(tbDriveType, rbDriveTypeMRL, rbDriveTypeOther);
+                f.LoadPreviousXmlRb(null, rbEmergencyPowerOperationNo, rbEmergencyPowerOperationYes);
+                f.LoadPreviousXmlTb(tbEmergencyPowerOperationText);
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
         }
 
         private void buttonEUR_Click_1(object sender, EventArgs e)

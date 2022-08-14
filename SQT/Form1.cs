@@ -673,7 +673,10 @@ namespace SQT
             if (SavePricesDocument())
             {
                 MessageBox.Show("Prices exported as " + saveFileDialog1.FileName);
+                Form1SaveToXML();
+                SaveReloadXMLFile(saveData);
                 printButton.BackColor = Color.Green;
+
             }
             else
             {
@@ -769,6 +772,7 @@ namespace SQT
         private void btLoad_Click(object sender, EventArgs e)
         {
             LoadPreviousQuote();
+            GenerateListOfPrices();
         }
 
         private void LoadPreviousQuote()
@@ -787,7 +791,7 @@ namespace SQT
                 {
                     loadData.Clear();
                     xmlPath = @"X:\Program Dependancies\Quote tool\Previous Prices\" + xmlPath + ".xml";
-                    MessageBox.Show(xmlPath);
+                    //MessageBox.Show(xmlPath);
                     loadingPreviousData = true;
                     FetchLoadData(xmlPath);
                     Form1LoadFromXML();

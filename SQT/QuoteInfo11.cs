@@ -23,18 +23,27 @@ namespace SQT
 
         private void PullInfo()
         {
-            f.LoadPreviousXmlTb(tbGeneralNotes);
-            f.LoadPreviousXmlRb(tbSupplyofTrueBolts, rbSupplyofTrueBoltsByAccess, rbSupplyofTrueBoltsOther);
-            f.LoadPreviousXmlRb(tbLiftShaftLighting, rbLiftShaftLightingByAccess, rbLiftShaftLightingOther);
-            f.LoadPreviousXmlRb(tbPitLadder, rbPitLAdderbyAccess, rbPitLadderOther);
-            f.LoadPreviousXmlRb(tbSumpCover, rbSumpCoverByAccess, rbSumpCoverOther);
-            f.LoadPreviousXmlRb(tbTempEntranceScreens, rbTempEntranceScreensByAccess, rbTempEntranceScreensOther);
-            f.LoadPreviousXmlRb(tbLiftingEyeBeam, rbLiftingEyeBeamByAccess, rbLiftingEyeBeamOther);
-            f.LoadPreviousXmlRb(tbButtonandIndicatorBoxes, rbButtonandIndicatorBoxesByAccess, rbButtonandIndicatorBoxesOther);
-            f.LoadPreviousXmlRb(tbSupplyofScaffold, rbSupplyofScaffoldByAccess, rbSupplyofScaffoldOther);
-            f.LoadPreviousXmlRb(null, rbManualsA4SizeNo, rbManualsA4SizeYes);
-            f.LoadPreviousXmlRb(null, rbOutofServiceNo, rbOutofServiceYes);
-            f.LoadPreviousXmlRb(null, rbEmergencyLoweringSystemNo, rbEmergencyLoweringSystemYes);
+            try
+            {
+
+                f.LoadPreviousXmlTb(tbGeneralNotes);
+                f.LoadPreviousXmlRb(tbSupplyofTrueBolts, rbSupplyofTrueBoltsByAccess, rbSupplyofTrueBoltsOther);
+                f.LoadPreviousXmlRb(tbLiftShaftLighting, rbLiftShaftLightingByAccess, rbLiftShaftLightingOther);
+                f.LoadPreviousXmlRb(tbPitLadder, rbPitLAdderbyAccess, rbPitLadderOther);
+                f.LoadPreviousXmlRb(tbSumpCover, rbSumpCoverByAccess, rbSumpCoverOther);
+                f.LoadPreviousXmlRb(tbTempEntranceScreens, rbTempEntranceScreensByAccess, rbTempEntranceScreensOther);
+                f.LoadPreviousXmlRb(tbLiftingEyeBeam, rbLiftingEyeBeamByAccess, rbLiftingEyeBeamOther);
+                f.LoadPreviousXmlRb(tbButtonandIndicatorBoxes, rbButtonandIndicatorBoxesByAccess, rbButtonandIndicatorBoxesOther);
+                f.LoadPreviousXmlRb(tbSupplyofScaffold, rbSupplyofScaffoldByAccess, rbSupplyofScaffoldOther);
+                f.LoadPreviousXmlRb(null, rbManualsA4SizeNo, rbManualsA4SizeYes);
+                f.LoadPreviousXmlRb(null, rbOutofServiceNo, rbOutofServiceYes);
+                f.LoadPreviousXmlRb(null, rbEmergencyLoweringSystemNo, rbEmergencyLoweringSystemYes);
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
         }
 
         private void buttonEUR_Click_1(object sender, EventArgs e)

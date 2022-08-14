@@ -22,11 +22,20 @@ namespace SQT
 
         private void PullInfo()
         {
-            f.LoadPreviousXmlTb(tbShaftDepth, tbShaftWidth, tbPitDepth, tbHeadroom, tbTravel, tbNumofLandingDoors, tbNumofLandings);
-            f.LoadPreviousXmlRb(tbStructureShaft, rbStructureShaftConcrete, rbStructureShaftOther);
-            f.LoadPreviousXmlRb(tbFixings, rbFixingsOther, rbFixingsTrueBolts);
-            f.LoadPreviousXmlRb(null, rbTrimmerBeamsNo, rbTrimmerBeamsYes);
-            f.LoadPreviousXmlRb(null, rbFalseFloorNo, rbFalseFloorYes);
+            try
+            {
+
+                f.LoadPreviousXmlTb(tbShaftDepth, tbShaftWidth, tbPitDepth, tbHeadroom, tbTravel, tbNumofLandingDoors, tbNumofLandings);
+                f.LoadPreviousXmlRb(tbStructureShaft, rbStructureShaftConcrete, rbStructureShaftOther);
+                f.LoadPreviousXmlRb(tbFixings, rbFixingsOther, rbFixingsTrueBolts);
+                f.LoadPreviousXmlRb(null, rbTrimmerBeamsNo, rbTrimmerBeamsYes);
+                f.LoadPreviousXmlRb(null, rbFalseFloorNo, rbFalseFloorYes);
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
         }
 
         private void buttonEUR_Click_1(object sender, EventArgs e)

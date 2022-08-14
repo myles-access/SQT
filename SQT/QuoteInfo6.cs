@@ -23,7 +23,15 @@ namespace SQT
 
         private void PullInfo()
         {
-            f.LoadPreviousXmlTb(tbLoad, tbSpeed, tbwidth, tbDepth, tbHeight, tbLiftRating, tbNumofCarEntrances, tbFrontWallReturn, tbLiftCarNotes);
+            try
+            {
+                f.LoadPreviousXmlTb(tbLoad, tbSpeed, tbwidth, tbDepth, tbHeight, tbLiftRating, tbNumofCarEntrances, tbFrontWallReturn, tbLiftCarNotes);
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

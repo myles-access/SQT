@@ -22,14 +22,23 @@ namespace SQT
 
         private void PullInfo()
         {
-            f.LoadPreviousXmlTb(tbDoorWidth, tbDoorHeight, tbDoorVoltage, tbLandingDoorJambDepth);
-            f.LoadPreviousXmlRb(null, rbDoorTypeCentreOpening, rbDoorTypeSideOpening);
-            f.LoadPreviousXmlRb(null, rbDoorNudgingYes, rbDoorNudgingNo);
-            f.LoadPreviousXmlRb(null, rbAdvancedOpeningNo, rbAdvancedOpeningYes);
-            f.LoadPreviousXmlRb(null, rbFireRatedDoorsNo, rbFireRatedDoorsYes);
-            f.LoadPreviousXmlRb(tbEntrancProtection, rbEntranceProtectionElectronicScanner, rbEntranceProtectionOTher);
-            f.LoadPreviousXmlRb(tbLandingDoorFinish, rbLandingDoorFinishOther, rbLandingDoorFinishStainlessSteel);
-            f.LoadPreviousXmlRb(tbDoorTracks, rbDoorTracksAnodisedAluminium, rbDoorTracksOther);
+            try
+            {
+
+                f.LoadPreviousXmlTb(tbDoorWidth, tbDoorHeight, tbDoorVoltage, tbLandingDoorJambDepth);
+                f.LoadPreviousXmlRb(null, rbDoorTypeCentreOpening, rbDoorTypeSideOpening);
+                f.LoadPreviousXmlRb(null, rbDoorNudgingYes, rbDoorNudgingNo);
+                f.LoadPreviousXmlRb(null, rbAdvancedOpeningNo, rbAdvancedOpeningYes);
+                f.LoadPreviousXmlRb(null, rbFireRatedDoorsNo, rbFireRatedDoorsYes);
+                f.LoadPreviousXmlRb(tbEntrancProtection, rbEntranceProtectionElectronicScanner, rbEntranceProtectionOTher);
+                f.LoadPreviousXmlRb(tbLandingDoorFinish, rbLandingDoorFinishOther, rbLandingDoorFinishStainlessSteel);
+                f.LoadPreviousXmlRb(tbDoorTracks, rbDoorTracksAnodisedAluminium, rbDoorTracksOther);
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

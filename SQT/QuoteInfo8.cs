@@ -31,18 +31,27 @@ namespace SQT
 
         private void PullInfo()
         {
-            f.LoadPreviousXmlTb(tbNumOfLEDLights, tbFloorFinish);
-            f.LoadPreviousXmlRb(tbCarDoorFinish, rbCarDoorFInishBrushedStainlessSteel, rbCarDoorFinishOther);
-            f.LoadPreviousXmlRb(tbCeilingFinish, rbCeilingFinishBrushedStasinlessSteel, rbCeilingFinishOther, rbCeilingFinishWhite, rbCeilingFinishMirrorStainlessSteel);
-            f.LoadPreviousXmlRb(null, rbBumpRailNo, rbBumpRailYes);
-            f.LoadPreviousXmlRb(null, rbFalseCeilingNo, rbFalseCeilingYes);
-            f.LoadPreviousXmlRb(tbFrontWall, rbFrontWallBrushedStainlessSteel, tbFrontWallOther);
-            f.LoadPreviousXmlRb(tbMirror, rbMirrorFullSize, rbMirrorHalfSize, rbMirrorOther);
-            f.LoadPreviousXmlRb(tbHandrail, rbHandrailBrushedStainlessSTeel, rbHandrailOther);
-            f.LoadPreviousXmlRb(tbSideWall, rbSideWallBrushedStainlessSteel, rbSideWallOther);
-            f.LoadPreviousXmlRb(tbRearWall, rbRearWallBrushedStainlessSteel, rbRearWallOther);
-            f.LoadPreviousXmlRb(null, rbSkirtingNo, rbSkirtingYes);
-            f.LoadPreviousXmlRb(null, rbProtectiveBlanketsNo, rbProtectriveBlanketsYes);
+            try
+            {
+
+                f.LoadPreviousXmlTb(tbNumOfLEDLights, tbFloorFinish);
+                f.LoadPreviousXmlRb(tbCarDoorFinish, rbCarDoorFInishBrushedStainlessSteel, rbCarDoorFinishOther);
+                f.LoadPreviousXmlRb(tbCeilingFinish, rbCeilingFinishBrushedStasinlessSteel, rbCeilingFinishOther, rbCeilingFinishWhite, rbCeilingFinishMirrorStainlessSteel);
+                f.LoadPreviousXmlRb(null, rbBumpRailNo, rbBumpRailYes);
+                f.LoadPreviousXmlRb(null, rbFalseCeilingNo, rbFalseCeilingYes);
+                f.LoadPreviousXmlRb(tbFrontWall, rbFrontWallBrushedStainlessSteel, tbFrontWallOther);
+                f.LoadPreviousXmlRb(tbMirror, rbMirrorFullSize, rbMirrorHalfSize, rbMirrorOther);
+                f.LoadPreviousXmlRb(tbHandrail, rbHandrailBrushedStainlessSTeel, rbHandrailOther);
+                f.LoadPreviousXmlRb(tbSideWall, rbSideWallBrushedStainlessSteel, rbSideWallOther);
+                f.LoadPreviousXmlRb(tbRearWall, rbRearWallBrushedStainlessSteel, rbRearWallOther);
+                f.LoadPreviousXmlRb(null, rbSkirtingNo, rbSkirtingYes);
+                f.LoadPreviousXmlRb(null, rbProtectiveBlanketsNo, rbProtectriveBlanketsYes);
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

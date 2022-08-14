@@ -22,25 +22,34 @@ namespace SQT
 
         private void PullInfo()
         {
-            f.LoadPreviousXmlTb(tbNumberOfCOPS, tbMainCOPLocation, tbAuxCOPLocation, tbKeyswitchLocation, tbDesignations);
-            f.LoadPreviousXmlRb(tbCOPFinish, rbCOPFinishOther, rbCOPFinishSatinStainlessSteel);
-            f.LoadPreviousXmlRb(null, rbLEDColourBlue, rbLEDColourRed, rbLEDColourWhite);
-            f.LoadPreviousXmlRb(null, rbPositionIndicatorTypeFlushMount, rbPositionIndicatorTypeSurfaceMount);
-            f.LoadPreviousXmlRb(null, rbDoorOpenButtonYes, rbDoorOpenButtonNo);
-            f.LoadPreviousXmlRb(null, rbDoorCLoseButtonYes, rbDoorCloseButtonNo);
-            f.LoadPreviousXmlRb(null, rbTelephoneHandsFreeYes, rbTelephoneHandsFreeNo);
-            f.LoadPreviousXmlRb(null, rbSecurityCabilingOnlyNo, rbSecurityCabilingOnlyYes);
-            f.LoadPreviousXmlRb(null, rbBrailelTactileSymbolsYes, rbBraileTactileSymbolsNo);
-            f.LoadPreviousXmlRb(null, rbFanSwitchNo, rbFanSwitchYes);
-            f.LoadPreviousXmlRb(null, rbCarLightSwitchNo, rbCarLightSwitchYes);
-            f.LoadPreviousXmlRb(null, rbFireSErviceKeySwitchNo, rbFireServiceKeySwitchYes);
-            f.LoadPreviousXmlRb(null, rbExclusiveServiceNo, rbExclusiveServiceYes);
-            f.LoadPreviousXmlRb(null, rbRearDoorKeySwitchNo, rbRearDoorKeySwitchYes);
-            f.LoadPreviousXmlRb(null, rbLiftOverloadIndicatorYes, rbLiftrOverloadIndicatorNo);
-            f.LoadPreviousXmlRb(null, rbSecurityKeySwitchNo, rbSecurityKeySwitchYes);
-            f.LoadPreviousXmlRb(null, rbGPOInCarNo, rbGPOInCarYes);
-            f.LoadPreviousXmlRb(null, rbAudibleIndicationGOngNo, rbAudibleIndicationGongYes);
-            f.LoadPreviousXmlRb(null, rbVoiceAnnunciationNo, rbVoiceAnnunciationYes);
+            try
+            {
+
+                f.LoadPreviousXmlTb(tbNumberOfCOPS, tbMainCOPLocation, tbAuxCOPLocation, tbKeyswitchLocation, tbDesignations);
+                f.LoadPreviousXmlRb(tbCOPFinish, rbCOPFinishOther, rbCOPFinishSatinStainlessSteel);
+                f.LoadPreviousXmlRb(null, rbLEDColourBlue, rbLEDColourRed, rbLEDColourWhite);
+                f.LoadPreviousXmlRb(null, rbPositionIndicatorTypeFlushMount, rbPositionIndicatorTypeSurfaceMount);
+                f.LoadPreviousXmlRb(null, rbDoorOpenButtonYes, rbDoorOpenButtonNo);
+                f.LoadPreviousXmlRb(null, rbDoorCLoseButtonYes, rbDoorCloseButtonNo);
+                f.LoadPreviousXmlRb(null, rbTelephoneHandsFreeYes, rbTelephoneHandsFreeNo);
+                f.LoadPreviousXmlRb(null, rbSecurityCabilingOnlyNo, rbSecurityCabilingOnlyYes);
+                f.LoadPreviousXmlRb(null, rbBrailelTactileSymbolsYes, rbBraileTactileSymbolsNo);
+                f.LoadPreviousXmlRb(null, rbFanSwitchNo, rbFanSwitchYes);
+                f.LoadPreviousXmlRb(null, rbCarLightSwitchNo, rbCarLightSwitchYes);
+                f.LoadPreviousXmlRb(null, rbFireSErviceKeySwitchNo, rbFireServiceKeySwitchYes);
+                f.LoadPreviousXmlRb(null, rbExclusiveServiceNo, rbExclusiveServiceYes);
+                f.LoadPreviousXmlRb(null, rbRearDoorKeySwitchNo, rbRearDoorKeySwitchYes);
+                f.LoadPreviousXmlRb(null, rbLiftOverloadIndicatorYes, rbLiftrOverloadIndicatorNo);
+                f.LoadPreviousXmlRb(null, rbSecurityKeySwitchNo, rbSecurityKeySwitchYes);
+                f.LoadPreviousXmlRb(null, rbGPOInCarNo, rbGPOInCarYes);
+                f.LoadPreviousXmlRb(null, rbAudibleIndicationGOngNo, rbAudibleIndicationGongYes);
+                f.LoadPreviousXmlRb(null, rbVoiceAnnunciationNo, rbVoiceAnnunciationYes);
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

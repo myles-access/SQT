@@ -23,7 +23,16 @@ namespace SQT
 
         private void PullInfo()
         {
-            f.LoadPreviousXmlTb(tbfname, tblname, tbphone, tbAddress1, tbAddress2, tbAddress3);
+            try
+            {
+
+                f.LoadPreviousXmlTb(tbfname, tblname, tbphone, tbAddress1, tbAddress2, tbAddress3);
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
         }
 
         private void buttonEUR_Click_1(object sender, EventArgs e)

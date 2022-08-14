@@ -22,8 +22,18 @@ namespace SQT
 
         private void PullInfo()
         {
-            f.LoadPreviousXmlTb(tbModel, tbLiftNumbers, tbTypeofLift);
-            f.LoadPreviousXmlRb(null, rbSL, rbSumasa, rbWittur);
+            try
+            {
+
+                f.LoadPreviousXmlTb(tbModel, tbLiftNumbers, tbTypeofLift);
+                f.LoadPreviousXmlRb(null, rbSL, rbSumasa, rbWittur);
+            }
+            catch (Exception)
+            {
+
+
+                return;
+            }
         }
 
         private void buttonEUR_Click_1(object sender, EventArgs e)

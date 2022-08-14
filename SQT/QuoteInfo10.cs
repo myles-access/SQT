@@ -22,13 +22,22 @@ namespace SQT
 
         private void PullInfo()
         {
-            f.LoadPreviousXmlTb(tbNumOfButtonRisers);
-            f.LoadPreviousXmlRb(tbFacePlateMaterial, rbFacePlateMaterialOther, rbFacePlateMaterialSatinStainlessSteel);
-            f.LoadPreviousXmlRb(null, rbHallLanternsNo, rbHallLanternsYes);
-            f.LoadPreviousXmlRb(null, rbLandingFireServiceKeySwitchNo, rbLandingFireServiceKeySwitchYes);
-            f.LoadPreviousXmlRb(null, rbBraileTactileSymbolsLandingNo, rbBraileTactileSymbolsLandingYes);
-            f.LoadPreviousXmlRb(null, rbOutofServiceKeySwitchNo, rbOutOfServieKeySwitchYes);
-            f.LoadPreviousXmlRb(null, rbDigitalIndicationIncorperatedNo, rbDigitalIndicationIncorperatedYes);
+            try
+            {
+                f.LoadPreviousXmlTb(tbNumOfButtonRisers);
+                f.LoadPreviousXmlRb(tbFacePlateMaterial, rbFacePlateMaterialOther, rbFacePlateMaterialSatinStainlessSteel);
+                f.LoadPreviousXmlRb(null, rbHallLanternsNo, rbHallLanternsYes);
+                f.LoadPreviousXmlRb(null, rbLandingFireServiceKeySwitchNo, rbLandingFireServiceKeySwitchYes);
+                f.LoadPreviousXmlRb(null, rbBraileTactileSymbolsLandingNo, rbBraileTactileSymbolsLandingYes);
+                f.LoadPreviousXmlRb(null, rbOutofServiceKeySwitchNo, rbOutOfServieKeySwitchYes);
+                f.LoadPreviousXmlRb(null, rbDigitalIndicationIncorperatedNo, rbDigitalIndicationIncorperatedYes);
+
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
