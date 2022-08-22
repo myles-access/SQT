@@ -8,7 +8,7 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace SQT
 {
-    public partial class Form1 : Form
+    public partial class Lam_Sing_Calc : Form    
     {
         #region VARS
         public bool sucessfulSave = false;
@@ -42,12 +42,13 @@ namespace SQT
 
         #region Form Loading Methods
 
-        public Form1()
+
+        public Lam_Sing_Calc()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Lam_Sing_Calc_Load(object sender, EventArgs e)
         {
             //this.Enabled = true;
             FetchBasePrices();
@@ -70,7 +71,7 @@ namespace SQT
             printButton.Enabled = false;
         }
 
-        #endregion
+#endregion
 
         #region Importing Data from XML Files
 
@@ -522,7 +523,7 @@ namespace SQT
                 //WordData("AE103", tbMainNumberLifts.Text);//number of lifts
                 WordData("AE104", tBMainFloors.Text);//number of floors
 
-                QuoteInfo2 qI = new QuoteInfo2();
+                Lam_Sing_Exp qI = new Lam_Sing_Exp();
                 qI.Show();//open questionaire 
                 //questions complete method called from final form of querstions to continue the export to word function. 
             }
@@ -538,7 +539,7 @@ namespace SQT
         {
             lblWaitControl(true);
             fileOpen = new Word.Application();
-            document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-Pintaric-Single.docx", ReadOnly: false);
+            document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-Lamont-Single.docx", ReadOnly: false);
             fileOpen.Visible = true;
             document.Activate();
         }
@@ -843,7 +844,7 @@ namespace SQT
             }
             catch (Exception)
             {
-               // MessageBox.Show("Unable to find Load Data for this Quote");
+                // MessageBox.Show("Unable to find Load Data for this Quote");
                 return null;
             }
         }
@@ -981,6 +982,17 @@ namespace SQT
 
         #region Data Formatting methods for external calls
 
+        public string CheckboxTrueToYes(CheckBox cb)
+        {
+            if (cb.Checked)
+            {
+                return "Yes";
+            }
+            else
+            {
+                return "No";
+            }
+        }
         public string FormalDate()
         {
             string day = DateTime.Now.ToString("%d");
@@ -1213,17 +1225,5 @@ namespace SQT
         }
 
         #endregion
-
-        public string CheckboxTrueToYes(CheckBox cb)
-        {
-            if (cb.Checked)
-            {
-                return "Yes";
-            }
-            else
-            {
-                return "No";
-            }
-        }
     }
 }

@@ -1,19 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SQT
 {
-    public partial class QuoteInfo2 : Form
+    public partial class Pin_Mul_Calc : Form
     {
-        Form1 f = Application.OpenForms.OfType<Form1>().Single();
+       Pin_Mul_Exp f = Application.OpenForms.OfType<Pin_Mul_Exp>().Single();
 
-        public QuoteInfo2()
+        public Pin_Mul_Calc()
         {
             InitializeComponent();
         }
 
-        private void QuoteInfo2_Load(object sender, EventArgs e)
+        private void Pin_Mul_Calc_Load(object sender, EventArgs e)
         {
             this.Enabled = true;
             if (f.loadingPreviousData)
@@ -216,3 +222,4 @@ namespace SQT
         }
     }
 }
+

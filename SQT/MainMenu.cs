@@ -54,5 +54,17 @@ namespace SQT
         {
 
         }
+
+        private void btPinMulti_Click(object sender, EventArgs e)
+        {
+            Pin_Mul_Exp fPinMul = new Pin_Mul_Exp();
+            fPinMul.Show();
+        }
+
+        private void btLamSingle_Click(object sender, EventArgs e)
+        {
+            Lam_Sing_Calc fLamCalc = new Lam_Sing_Calc();
+            fLamCalc.Show();
+        }
     }
 }

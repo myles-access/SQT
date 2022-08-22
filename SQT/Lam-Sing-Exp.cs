@@ -1,19 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SQT
 {
-    public partial class QuoteInfo2 : Form
+    public partial class Lam_Sing_Exp : Form
     {
-        Form1 f = Application.OpenForms.OfType<Form1>().Single();
+        Lam_Sing_Calc f = Application.OpenForms.OfType<Lam_Sing_Calc>().Single();
 
-        public QuoteInfo2()
+        public Lam_Sing_Exp()
         {
             InitializeComponent();
         }
 
-        private void QuoteInfo2_Load(object sender, EventArgs e)
+        private void Lam_Sing_Exp_Load(object sender, EventArgs e)
         {
             this.Enabled = true;
             if (f.loadingPreviousData)
@@ -214,5 +220,6 @@ namespace SQT
         {
             f.QuestionCloseCall(this);
         }
+
     }
 }

@@ -218,8 +218,6 @@
             this.tbFacePlateMaterial = new System.Windows.Forms.TextBox();
             this.rbFacePlateMaterialSatinStainlessSteel = new System.Windows.Forms.RadioButton();
             this.label39 = new System.Windows.Forms.Label();
-            this.tbGeneralNotes = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.rbOutofServiceNo = new System.Windows.Forms.RadioButton();
             this.rbOutofServiceYes = new System.Windows.Forms.RadioButton();
@@ -486,6 +484,7 @@
             this.tbLiftNumbers.Name = "tbLiftNumbers";
             this.tbLiftNumbers.Size = new System.Drawing.Size(352, 44);
             this.tbLiftNumbers.TabIndex = 8;
+            this.tbLiftNumbers.Text = "1";
             this.tbLiftNumbers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
@@ -493,11 +492,11 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(388, 638);
+            this.label9.Location = new System.Drawing.Point(401, 637);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(200, 37);
+            this.label9.Size = new System.Drawing.Size(184, 37);
             this.label9.TabIndex = 89;
-            this.label9.Text = "Lift Numbers";
+            this.label9.Text = "Lift Number";
             // 
             // label10
             // 
@@ -2478,29 +2477,6 @@
             this.label39.TabIndex = 174;
             this.label39.Text = "Landing Appointments";
             // 
-            // tbGeneralNotes
-            // 
-            this.tbGeneralNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGeneralNotes.ForeColor = System.Drawing.Color.Black;
-            this.tbGeneralNotes.Location = new System.Drawing.Point(267, 5128);
-            this.tbGeneralNotes.Multiline = true;
-            this.tbGeneralNotes.Name = "tbGeneralNotes";
-            this.tbGeneralNotes.Size = new System.Drawing.Size(599, 121);
-            this.tbGeneralNotes.TabIndex = 31;
-            this.tbGeneralNotes.Text = "\r\n\r\n";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Location = new System.Drawing.Point(131, 5149);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(130, 74);
-            this.label40.TabIndex = 179;
-            this.label40.Text = "General\r\nNotes\r\n";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // groupBox35
             // 
             this.groupBox35.Controls.Add(this.rbOutofServiceNo);
@@ -2620,11 +2596,10 @@
             this.label42.ForeColor = System.Drawing.Color.Black;
             this.label42.Location = new System.Drawing.Point(435, 5354);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(130, 74);
+            this.label42.Size = new System.Drawing.Size(17, 74);
             this.label42.TabIndex = 183;
-            this.label42.Text = "General\r\nNotes\r\n";
+            this.label42.Text = "\r\n\r\n";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label42.Visible = false;
             // 
             // QuoteInfo2
             // 
@@ -2636,8 +2611,6 @@
             this.Controls.Add(this.label42);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonEUR);
-            this.Controls.Add(this.tbGeneralNotes);
-            this.Controls.Add(this.label40);
             this.Controls.Add(this.groupBox35);
             this.Controls.Add(this.groupBox36);
             this.Controls.Add(this.label41);
@@ -3021,8 +2994,6 @@
         private System.Windows.Forms.TextBox tbFacePlateMaterial;
         private System.Windows.Forms.RadioButton rbFacePlateMaterialSatinStainlessSteel;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox tbGeneralNotes;
-        private System.Windows.Forms.Label label40;
         private System.Windows.Forms.GroupBox groupBox35;
         private System.Windows.Forms.RadioButton rbOutofServiceNo;
         private System.Windows.Forms.RadioButton rbOutofServiceYes;

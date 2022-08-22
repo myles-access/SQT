@@ -83,6 +83,30 @@
     <Compile Include="AdminPanel.Designer.cs">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lam-Sing-Calc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lam-Sing-Calc.Designer.cs">
+      <DependentUpon>Lam-Sing-Calc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lam-Sing-Exp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lam-Sing-Exp.Designer.cs">
+      <DependentUpon>Lam-Sing-Exp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pin-Mul-Exp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pin-Mul-Exp.Designer.cs">
+      <DependentUpon>Pin-Mul-Exp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pin-Mul-Cal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pin-Mul-Cal.Designer.cs">
+      <DependentUpon>Pin-Mul-Cal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pin-Sing-Calc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +129,18 @@
     </Compile>
     <EmbeddedResource Include="AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lam-Sing-Calc.resx">
+      <DependentUpon>Lam-Sing-Calc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lam-Sing-Exp.resx">
+      <DependentUpon>Lam-Sing-Exp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pin-Mul-Exp.resx">
+      <DependentUpon>Pin-Mul-Exp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pin-Mul-Cal.resx">
+      <DependentUpon>Pin-Mul-Cal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pin-Sing-Calc.resx">
       <DependentUpon>Pin-Sing-Calc.cs</DependentUpon>
