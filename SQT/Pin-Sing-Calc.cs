@@ -539,7 +539,7 @@ namespace SQT
             lblWaitControl(true);
             fileOpen = new Word.Application();
             document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\SQT.docm", ReadOnly: false);
-            fileOpen.Visible = false;
+            fileOpen.Visible = true;
             document.Activate();
         }
 
@@ -550,7 +550,7 @@ namespace SQT
             {
                 saveFileDialog1.Title = ("Where to save the quote");
                 saveFileDialog1.InitialDirectory = "X:\\Sales\\Qu-" + DateTime.Now.ToString("yyyy");
-                saveFileDialog1.FileName = tBMainAddress.Text + " Quote";
+                saveFileDialog1.FileName = tBMainQuoteNumber.Text + " - " + tBMainAddress.Text + " Quote";
                 saveFileDialog1.DefaultExt = "docm";
                 saveFileDialog1.Filter = "Word Docs (*.docm; *.docx) |*.docm;*.docx|All files (*.*) |*.*";
                 //saveFileDialog1.ShowDialog();
@@ -574,7 +574,8 @@ namespace SQT
         // called from question forms to take data and write it to the dictionary
         public void WordData(string k, string v)
         {
-            wordExportData.Add(k, v);
+            //wordExportData.Add(k, v);
+            wordExportData[k] = v;
             //MessageBox.Show("Word Data Method called with: " + k + " " + v);
         }
 
@@ -630,7 +631,9 @@ namespace SQT
         // closes the word document 
         private void WordFinish()
         {
+            fileOpen.ShowMe();
             fileOpen.Quit();
+
             MessageBox.Show("Quote sucessfully exported");
             lblWaitControl(false);
         }
@@ -690,7 +693,7 @@ namespace SQT
         {
             saveFileDialog1.Title = ("Where to save the prices");
             saveFileDialog1.InitialDirectory = "X:\\Sales\\Qu-" + DateTime.Now.ToString("yyyy");
-            saveFileDialog1.FileName = tBMainAddress.Text + " Price Breakdown";
+            saveFileDialog1.FileName = tBMainQuoteNumber.Text + " - " + tBMainAddress.Text + " Price Breakdown";
             saveFileDialog1.DefaultExt = "docx";
             saveFileDialog1.Filter = "Word Doc (*.docx) |*.docx| All files (*.*) |*.*";
 
@@ -699,7 +702,7 @@ namespace SQT
                 fileOpen = new Word.Application();
                 document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\PriceExport.docx", ReadOnly: false);
                 SavePricesToDict();
-                fileOpen.Visible = false;
+                fileOpen.Visible = true;
                 document.Activate();
                 WordReplaceLooper(priceExports);
                 document.SaveAs2(saveFileDialog1.FileName);
@@ -795,7 +798,6 @@ namespace SQT
                     loadingPreviousData = true;
                     FetchLoadData(xmlPath);
                     Form1LoadFromXML();
-
                 }
                 else
                 {
@@ -867,7 +869,6 @@ namespace SQT
                 //EUR
                 SelectCurrency("E");
             }
-
         }
 
         public void LoadPreviousXmlTb(params TextBox[] tb)
@@ -933,9 +934,10 @@ namespace SQT
 
         private void SaveReloadXMLFile(Dictionary<string, string> kvp)
         {
-            string path = "X:\\Program Dependancies\\Quote tool\\Previous Prices\\" + tBMainAddress.Text.ToString() + ".xml";
+            //string path = "X:\\Program Dependancies\\Quote tool\\Previous Prices\\" + saveFileDialog1.FileName.ToString() + ".xml";
+            string path = "X:\\Program Dependancies\\Quote tool\\Previous Prices\\" + tBMainQuoteNumber.Text.ToString() + " - " + tBMainAddress.Text.ToString() + ".xml";
 
-            XmlTextWriter xmlWriter = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\Previous Prices\\" + tBMainAddress.Text.ToString() + ".xml", Encoding.UTF8);
+            XmlTextWriter xmlWriter = new XmlTextWriter(path, Encoding.UTF8);
             xmlWriter.Formatting = Formatting.Indented;
             xmlWriter.WriteStartDocument();
 
@@ -1148,7 +1150,14 @@ namespace SQT
 
             if (document != null)
             {
-                document.Close();
+                try
+                {
+                    document.Close();
+                }
+                catch (Exception)
+                {
+                    // return;
+                }
             }
             this.Close();
         }
