@@ -8,11 +8,12 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace SQT
 {
-    public partial class Lam_Sing_Calc : Form    
+    public partial class Lam_Mul_Calc : Form
     {
         #region VARS
         public bool sucessfulSave = false;
         public bool loadingPreviousData = false;
+        private bool costInEuro;
 
         public string quoteNumber = "";
         public string exchangeRateDate;
@@ -42,13 +43,12 @@ namespace SQT
 
         #region Form Loading Methods
 
-
-        public Lam_Sing_Calc()
+        public Lam_Mul_Calc()
         {
             InitializeComponent();
         }
 
-        private void Lam_Sing_Calc_Load(object sender, EventArgs e)
+        private void Lam_Mul_Calc_Load(object sender, EventArgs e)
         {
             //this.Enabled = true;
             FetchBasePrices();
@@ -71,7 +71,7 @@ namespace SQT
             printButton.Enabled = false;
         }
 
-#endregion
+        #endregion
 
         #region Importing Data from XML Files
 
@@ -358,7 +358,6 @@ namespace SQT
             liftPrice = 0;
 
             //prices pulled from text boxes of program
-            PriceListFormatting(lblCost, float.Parse(tbCost.Text) * applicableExchangeRate);
             PriceListFormatting(lblSundries, float.Parse(tbMainSundries.Text));
             PriceListFormatting(lblShaft, float.Parse(tbMainShaftLight.Text));
             PriceListFormatting(lblDuct, float.Parse(tbMainDuct.Text));
@@ -392,25 +391,34 @@ namespace SQT
             {
                 PriceListFormatting(lblSecurity, 0);
             }
+
+            for (int i = 0; i < int.Parse(tbMainNumberLifts.Text); i++)
+            {
+                PriceListFormatting(lblCost, float.Parse(tbCost.Text) * applicableExchangeRate);
+            }
+
             // if needed show the unconverted cost of the lift
             if (exCurrency == 0)
             {
                 lblLiftNoConvert.Visible = false;
                 lblLiftNoConvertPrice.Visible = false;
+                costInEuro = false;
             }
             else if (exCurrency == 1)
             {
                 lblLiftNoConvert.Visible = true;
                 lblLiftNoConvertPrice.Visible = true;
                 lblLiftNoConvert.Text = "Cost of Lift (USD)";
-                lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(tbCost.Text), false);
+                costInEuro = false;
+                lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(tbCost.Text), costInEuro);
             }
             else if (exCurrency == 2)
             {
                 lblLiftNoConvert.Visible = true;
                 lblLiftNoConvertPrice.Visible = true;
                 lblLiftNoConvert.Text = "Cost of Lift (EUR)";
-                lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(tbCost.Text), true);
+                costInEuro = true;
+                lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(tbCost.Text), costInEuro);
             }
 
             //add freight based on number of required containers 
@@ -426,6 +434,11 @@ namespace SQT
             lblCostIncludingMargin.Text = PriceRounding(liftPrice * marginPercent); //+ " (" + PriceRounding(marginValue) + ")";
             lblGST.Text = PriceRounding(liftPrice * marginPercent * 0.1f);
             lblPriceIncludingGST.Text = PriceRounding(liftPrice * marginPercent * 1.1f);
+
+            float multipliedPrice = float.Parse(tbCost.Text) * float.Parse(tbMainNumberLifts.Text);
+            float convertedMultipliedPrice = float.Parse(tbCost.Text) * float.Parse(tbMainNumberLifts.Text) * applicableExchangeRate;
+            lblCost.Text += " x" + tbMainNumberLifts.Text + " (" + PriceRounding(convertedMultipliedPrice) + ")";
+            lblLiftNoConvertPrice.Text += " x" + tbMainNumberLifts.Text + " (" + PriceRounding(multipliedPrice, costInEuro) + ")";
         }
 
         //Sends prices through the rounder method as well as adding them to the total cost of the lift for the total
@@ -520,10 +533,10 @@ namespace SQT
             {
                 WordData("AE101", tBMainAddress.Text); //address
                 WordData("AE102", tBMainQuoteNumber.Text);//quote number
-                //WordData("AE103", tbMainNumberLifts.Text);//number of lifts
+                WordData("AE103", tbMainNumberLifts.Text);//number of lifts
                 WordData("AE104", tBMainFloors.Text);//number of floors
 
-                Lam_Sing_Exp qI = new Lam_Sing_Exp();
+                Lam_Mul_Exp qI = new Lam_Mul_Exp();
                 qI.Show();//open questionaire 
                 //questions complete method called from final form of querstions to continue the export to word function. 
             }
@@ -539,7 +552,7 @@ namespace SQT
         {
             lblWaitControl(true);
             fileOpen = new Word.Application();
-            document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-Lamont-Single.docx", ReadOnly: false);
+            document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-Lamont-Multi.docx", ReadOnly: false);
             fileOpen.Visible = true;
             document.Activate();
         }
@@ -587,6 +600,9 @@ namespace SQT
             WordData("AE212", lblCostIncludingMargin.Text);
             WordData("AE213", lblGST.Text);
             WordData("AE214", lblPriceIncludingGST.Text);
+
+            float totalPrice = float.Parse(tbCost.Text) * float.Parse(tbMainNumberLifts.Text) * applicableExchangeRate;
+            WordData("AE220", PriceRounding(totalPrice));
 
             WordReplaceLooper(wordExportData);// loop the find and replace method to populate the info 
             WordSave(true);// save the doc again 
@@ -844,7 +860,7 @@ namespace SQT
             }
             catch (Exception)
             {
-                // MessageBox.Show("Unable to find Load Data for this Quote");
+                //MessageBox.Show("Unable to find Load Data for this Quote");
                 return null;
             }
         }
@@ -852,10 +868,11 @@ namespace SQT
         private void Form1LoadFromXML()
         {
             LoadPreviousXmlTb(tbCost, tbMainAccomodation, tBMainAddress, tbMainBlankets, tbMainCartage, tbMainDuct, tbMainEntranceGuards, tBMainFloors, tbMainMargin,
-                 tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired);
+                tbMainNumberLifts, tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired);
             LoadPreviousXmlCb(cbMainSecurity);
             //num20Ft = int.Parse(loadData["num20Ft"]);
             //num40Ft = int.Parse(loadData["num40Ft"]);
+            ShippingCalculation(1);
             for (int i = 0; i < int.Parse(loadData["num20Ft"]); i++)
             {
                 ShippingCalculation(2);
@@ -886,7 +903,10 @@ namespace SQT
         {
             foreach (TextBox Box in tb)
             {
-                Box.Text = loadData[Box.Name.ToString()];
+                if (loadData.ContainsKey(Box.Name.ToString()))
+                {
+                    Box.Text = loadData[Box.Name.ToString()];
+                }
             }
         }
 
@@ -894,7 +914,10 @@ namespace SQT
         {
             foreach (CheckBox Box in cb)
             {
-                Box.Checked = bool.Parse(loadData[Box.Name.ToString()]);
+                if (loadData.ContainsKey(Box.Name.ToString()))
+                {
+                    Box.Checked = bool.Parse(loadData[Box.Name.ToString()]);
+                }
             }
         }
 
@@ -970,7 +993,7 @@ namespace SQT
         private void Form1SaveToXML()
         {
             SaveTbToXML(tbMainAccomodation, tBMainAddress, tbMainBlankets, tbMainCartage, tbMainDuct, tbMainEntranceGuards, tBMainFloors, tbMainMargin,
-                 tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired, tbCost);
+                tbMainNumberLifts, tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired, tbCost);
             SaveCbToXML(cbMainSecurity);
             saveData["num20Ft"] = num20Ft.ToString();
             saveData["num40Ft"] = num40Ft.ToString();
@@ -993,6 +1016,7 @@ namespace SQT
                 return "No";
             }
         }
+
         public string FormalDate()
         {
             string day = DateTime.Now.ToString("%d");
@@ -1225,5 +1249,7 @@ namespace SQT
         }
 
         #endregion
+
+
     }
 }

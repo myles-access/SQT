@@ -61,7 +61,7 @@ namespace SQT
             lblCostIncludingMargin.Text = "$0";
             lblGST.Text = "$0";
             lblPriceIncludingGST.Text = "$0";
-            quoteNumber = ("Qu" + DateTime.Now.ToString("yy") + "-000");
+            quoteNumber = ("QuAP" + DateTime.Now.ToString("yy") + "-000");
             tBMainQuoteNumber.Text = quoteNumber;
             lbWait.Visible = false;
             button3.Visible = false;
@@ -439,7 +439,7 @@ namespace SQT
             lblCost.Text += " x" + tbMainNumberLifts.Text + " (" + PriceRounding(convertedMultipliedPrice) + ")";
             lblLiftNoConvertPrice.Text += " x" + tbMainNumberLifts.Text + " (" + PriceRounding(multipliedPrice, costInEuro) + ")";
         }
-        
+
         //Sends prices through the rounder method as well as adding them to the total cost of the lift for the total
         public void PriceListFormatting(Label label, float cost, bool b = false)
         {
@@ -902,7 +902,10 @@ namespace SQT
         {
             foreach (TextBox Box in tb)
             {
-                Box.Text = loadData[Box.Name.ToString()];
+                if (loadData.ContainsKey(Box.Name.ToString()))
+                {
+                    Box.Text = loadData[Box.Name.ToString()];
+                }
             }
         }
 
@@ -910,7 +913,10 @@ namespace SQT
         {
             foreach (CheckBox Box in cb)
             {
-                Box.Checked = bool.Parse(loadData[Box.Name.ToString()]);
+                if (loadData.ContainsKey(Box.Name.ToString()))
+                {
+                    Box.Checked = bool.Parse(loadData[Box.Name.ToString()]);
+                }
             }
         }
 

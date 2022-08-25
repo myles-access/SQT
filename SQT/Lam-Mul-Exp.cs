@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace SQT
 {
-    public partial class Pin_Mul_Calc : Form
+    public partial class Lam_Mul_Exp : Form
     {
-       Lam_Mul_Calc f = Application.OpenForms.OfType<Lam_Mul_Calc>().Single();
+        Lam_Mul_Calc f = Application.OpenForms.OfType<Lam_Mul_Calc>().Single();
 
-        public Pin_Mul_Calc()
+        public Lam_Mul_Exp()
         {
             InitializeComponent();
         }
 
-        private void Pin_Mul_Calc_Load(object sender, EventArgs e)
+        private void Lam_Mul_Exp_Load(object sender, EventArgs e)
         {
             this.Enabled = true;
             if (f.loadingPreviousData)
@@ -220,6 +220,6 @@ namespace SQT
         {
             f.QuestionCloseCall(this);
         }
+
     }
 }
-

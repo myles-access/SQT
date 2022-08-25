@@ -1579,11 +1579,11 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(21, 220);
+            this.label11.Location = new System.Drawing.Point(13, 217);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(459, 37);
+            this.label11.Size = new System.Drawing.Size(478, 37);
             this.label11.TabIndex = 100;
-            this.label11.Text = "Cost of lift (in chosen currency)";
+            this.label11.Text = "Cost per lift (in chosen currency)";
             // 
             // Pin_Mul_Exp
             // 
@@ -1591,8 +1591,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1755, 1234);
-            this.Controls.Add(this.lbWait);
             this.Controls.Add(this.currencySelectionGroup);
+            this.Controls.Add(this.lbWait);
             this.Controls.Add(this.tbMainEntranceGuards);
             this.Controls.Add(this.tbCost);
             this.Controls.Add(this.tBMainFloors);

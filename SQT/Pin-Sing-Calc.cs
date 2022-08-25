@@ -61,7 +61,7 @@ namespace SQT
             lblCostIncludingMargin.Text = "$0";
             lblGST.Text = "$0";
             lblPriceIncludingGST.Text = "$0";
-            quoteNumber = ("Qu" + DateTime.Now.ToString("yy") + "-000");
+            quoteNumber = ("QuAP" + DateTime.Now.ToString("yy") + "-000");
             tBMainQuoteNumber.Text = quoteNumber;
             lbWait.Visible = false;
             button3.Visible = false;

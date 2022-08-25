@@ -44,7 +44,7 @@ namespace SQT
             return bPasswordCheck;
         }
         
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // pintaric single 
         {
             Form1 fForm1 = new Form1();
             fForm1.Show();
@@ -63,8 +63,14 @@ namespace SQT
 
         private void btLamSingle_Click(object sender, EventArgs e)
         {
-            Lam_Sing_Calc fLamCalc = new Lam_Sing_Calc();
-            fLamCalc.Show();
+            Lam_Sing_Calc fLamSing = new Lam_Sing_Calc();
+            fLamSing.Show();
+        }
+
+        private void btLamMulti_Click(object sender, EventArgs e)
+        {
+            Lam_Mul_Calc fLamMul = new Lam_Mul_Calc();
+            fLamMul.Show();
         }
     }
 }

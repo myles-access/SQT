@@ -97,6 +97,7 @@
             this.btLamMulti.TabStop = false;
             this.btLamMulti.Text = "Multiple Lifts";
             this.btLamMulti.UseVisualStyleBackColor = true;
+            this.btLamMulti.Click += new System.EventHandler(this.btLamMulti_Click);
             // 
             // btPinMulti
             // 

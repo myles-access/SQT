@@ -83,6 +83,18 @@
     <Compile Include="AdminPanel.Designer.cs">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lam-Mul-Calc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lam-Mul-Calc.Designer.cs">
+      <DependentUpon>Lam-Mul-Calc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lam-Mul-Exp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lam-Mul-Exp.Designer.cs">
+      <DependentUpon>Lam-Mul-Exp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lam-Sing-Calc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,12 @@
     </Compile>
     <EmbeddedResource Include="AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lam-Mul-Calc.resx">
+      <DependentUpon>Lam-Mul-Calc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lam-Mul-Exp.resx">
+      <DependentUpon>Lam-Mul-Exp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lam-Sing-Calc.resx">
       <DependentUpon>Lam-Sing-Calc.cs</DependentUpon>
