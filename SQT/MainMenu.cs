@@ -72,5 +72,11 @@ namespace SQT
             Lam_Mul_Calc fLamMul = new Lam_Mul_Calc();
             fLamMul.Show();
         }
+
+        private void btPinDiff_Click(object sender, EventArgs e)
+        {
+            Pin_Dif_Calc fPinDif = new Pin_Dif_Calc();
+            fPinDif.Show();
+        }
     }
 }

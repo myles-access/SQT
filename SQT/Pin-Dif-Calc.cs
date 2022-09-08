@@ -8,7 +8,7 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace SQT
 {
-    public partial class Lam_Mul_Calc : Form
+    public partial class Pin_Dif_Calc : Form
     {
         #region VARS
         public bool sucessfulSave = false;
@@ -42,13 +42,12 @@ namespace SQT
         #endregion
 
         #region Form Loading Methods
-
-        public Lam_Mul_Calc()
+        public Pin_Dif_Calc()
         {
             InitializeComponent();
         }
 
-        private void Lam_Mul_Calc_Load(object sender, EventArgs e)
+        private void Pin_Dif_Calc_Load(object sender, EventArgs e)
         {
             //this.Enabled = true;
             FetchBasePrices();
@@ -62,7 +61,7 @@ namespace SQT
             lblCostIncludingMargin.Text = "$0";
             lblGST.Text = "$0";
             lblPriceIncludingGST.Text = "$0";
-            quoteNumber = ("QuAL" + DateTime.Now.ToString("yy") + "-000");
+            quoteNumber = ("QuAP" + DateTime.Now.ToString("yy") + "-000");
             tBMainQuoteNumber.Text = quoteNumber;
             lbWait.Visible = false;
             button3.Visible = false;
@@ -536,7 +535,7 @@ namespace SQT
                 WordData("AE103", tbMainNumberLifts.Text);//number of lifts
                 WordData("AE104", tBMainFloors.Text);//number of floors
 
-                Lam_Mul_Exp qI = new Lam_Mul_Exp();
+                Pin_Dif_Exp qI = new Pin_Dif_Exp();
                 qI.Show();//open questionaire 
                 //questions complete method called from final form of querstions to continue the export to word function. 
             }
@@ -552,7 +551,7 @@ namespace SQT
         {
             lblWaitControl(true);
             fileOpen = new Word.Application();
-            document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-Lamont-Multi.docx", ReadOnly: false);
+            document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-Pintaric-Multi.docx", ReadOnly: false);
             fileOpen.Visible = true;
             document.Activate();
         }
@@ -1248,8 +1247,6 @@ namespace SQT
             }
         }
 
-
         #endregion
-
     }
 }

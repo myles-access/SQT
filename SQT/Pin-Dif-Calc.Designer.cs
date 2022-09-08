@@ -1,6 +1,6 @@
 ﻿namespace SQT
 {
-    partial class Lam_Mul_Calc
+    partial class Pin_Dif_Calc
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lam_Mul_Calc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pin_Dif_Calc));
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.lbWait = new System.Windows.Forms.Label();
             this.tbMainBlankets = new System.Windows.Forms.TextBox();
@@ -1414,7 +1414,6 @@
             this.btn40Ft.TabStop = false;
             this.btn40Ft.Text = "Add 1 40ft Shipping Container";
             this.btn40Ft.UseVisualStyleBackColor = true;
-            this.btn40Ft.Click += new System.EventHandler(this.btn40Ft_Click);
             // 
             // btn20Ft
             // 
@@ -1426,7 +1425,6 @@
             this.btn20Ft.TabStop = false;
             this.btn20Ft.Text = "Add 1 20ft Shipping Container";
             this.btn20Ft.UseVisualStyleBackColor = true;
-            this.btn20Ft.Click += new System.EventHandler(this.btn20Ft_Click);
             // 
             // label20
             // 
@@ -1585,7 +1583,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Lam_Mul_Calc
+            // Pin_Dif_Calc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1643,9 +1641,9 @@
             this.Controls.Add(this.exchangeRateLbl);
             this.Controls.Add(this.tbMainStorage);
             this.Controls.Add(this.button1);
-            this.Name = "Lam_Mul_Calc";
+            this.Name = "Pin_Dif_Calc";
             this.Text = "Quote Calculator";
-            this.Load += new System.EventHandler(this.Lam_Mul_Calc_Load);
+            this.Load += new System.EventHandler(this.Pin_Dif_Calc_Load);
             this.currencySelectionGroup.ResumeLayout(false);
             this.currencySelectionGroup.PerformLayout();
             this.groupBox1.ResumeLayout(false);

@@ -107,6 +107,12 @@
     <Compile Include="Lam-Sing-Exp.Designer.cs">
       <DependentUpon>Lam-Sing-Exp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pin-Dif-Calc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pin-Dif-Calc.Designer.cs">
+      <DependentUpon>Pin-Dif-Calc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pin-Mul-Exp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,12 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pin_Dif_Exp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pin_Dif_Exp.Designer.cs">
+      <DependentUpon>Pin_Dif_Exp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pin-Sing-Exp.cs">
@@ -154,6 +166,9 @@
     <EmbeddedResource Include="Lam-Sing-Exp.resx">
       <DependentUpon>Lam-Sing-Exp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pin-Dif-Calc.resx">
+      <DependentUpon>Pin-Dif-Calc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pin-Mul-Exp.resx">
       <DependentUpon>Pin-Mul-Exp.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pin_Dif_Exp.resx">
+      <DependentUpon>Pin_Dif_Exp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

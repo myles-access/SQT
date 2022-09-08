@@ -1406,10 +1406,10 @@
             this.cbMainSecurity.Location = new System.Drawing.Point(489, 718);
             this.cbMainSecurity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbMainSecurity.Name = "cbMainSecurity";
-            this.cbMainSecurity.Size = new System.Drawing.Size(328, 41);
+            this.cbMainSecurity.Size = new System.Drawing.Size(292, 41);
             this.cbMainSecurity.TabIndex = 63;
             this.cbMainSecurity.TabStop = false;
-            this.cbMainSecurity.Text = "Is security required?";
+            this.cbMainSecurity.Text = "Security Cabling?";
             this.cbMainSecurity.UseVisualStyleBackColor = true;
             // 
             // button1

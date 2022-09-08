@@ -132,6 +132,7 @@
             this.btPinDiff.TabStop = false;
             this.btPinDiff.Text = "Multiple Lifts\r\nDifferent Floors\r\n";
             this.btPinDiff.UseVisualStyleBackColor = true;
+            this.btPinDiff.Click += new System.EventHandler(this.btPinDiff_Click);
             // 
             // label1
             // 

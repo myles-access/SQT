@@ -12,7 +12,7 @@ namespace SQT
 {
     public partial class Pin_Mul_Calc : Form
     {
-       Lam_Mul_Calc f = Application.OpenForms.OfType<Lam_Mul_Calc>().Single();
+       Pin_Mul_Exp f = Application.OpenForms.OfType<Pin_Mul_Exp>().Single();
 
         public Pin_Mul_Calc()
         {
