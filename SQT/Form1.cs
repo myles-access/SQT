@@ -517,6 +517,7 @@ namespace SQT
             WordSave(false); // save the doc
             if (sucessfulSave)
             {
+                wordExportData.Clear();
                 WordData("AE101", tBMainAddress.Text); //address
                 WordData("AE102", tBMainQuoteNumber.Text);//quote number
                 WordData("AE103", tbMainNumberLifts.Text);//number of lifts
@@ -574,7 +575,7 @@ namespace SQT
         // called from question forms to take data and write it to the dictionary
         public void WordData(string k, string v)
         {
-            wordExportData.Add(k, v);
+            wordExportData[k] = v;
             //MessageBox.Show("Word Data Method called with: " + k + " " + v);
         }
 
