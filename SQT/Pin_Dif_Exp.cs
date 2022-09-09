@@ -75,7 +75,8 @@ namespace SQT
                 f.LoadPreviousXmlTb(tbfname, tblname, tbphone, tbAddress1, tbAddress2, tbAddress3, tbLiftNumbers, tbTypeofLift,
                     tbShaftDepth, tbShaftWidth, tbPitDepth, tbHeadroom, tbTravel, tbNumofLandingDoors, tbNumofLandings,
                     tbNumberOfCOPS, tbMainCOPLocation, tbAuxCOPLocation, tbKeyswitchLocation, tbDesignations, tbNumOfLEDLights, tbFloorFinish,
-                    tbDoorWidth, tbDoorHeight, tbLoad, tbSpeed, tbwidth, tbDepth, tbHeight, tbLiftRating, tbNumofCarEntrances, tbLiftCarNotes);
+                    tbDoorWidth, tbDoorHeight, tbLoad, tbSpeed, tbwidth, tbDepth, tbHeight, tbLiftRating, tbNumofCarEntrances, tbLiftCarNotes
+                    );
 
                 f.LoadPreviousXmlRb(null, rbSL, rbSumasa, rbWittur);
                 f.LoadPreviousXmlRb(null, rbIndependentServiceYes, rbIndependentServiceNo);
@@ -155,7 +156,7 @@ namespace SQT
             // QuoteInfo3 nF = new QuoteInfo3();
             //f.WordData("","");            //call WordData method in form 1 to send all info into the dictiinary for writing 
 
-            #region Page 1 Saving
+            #region Page 1 Word Export
             f.WordData("AE105", tbfname.Text); //first name
             f.WordData("AE106", tblname.Text);//last name
             f.WordData("AE107", tbphone.Text);//phone number
@@ -235,12 +236,15 @@ namespace SQT
             f.WordData("AE209", f.RadioButtonHandeler(null, rbEmergencyLoweringSystemYes, rbEmergencyLoweringSystemNo));// emergency lowering system 
             f.WordData("AE210", f.RadioButtonHandeler(null, rbOutofServiceNo, rbOutofServiceYes));//out of service 
             f.WordData("AE178", f.CheckboxTrueToYes(f.cbMainSecurity));//security cabiling only 
+            #endregion
 
+            #region Page 1 Saving
             f.SaveTbToXML(tbAuxCOPLocation, tbCOPFinish, tbDesignations, tbKeyswitchLocation, tbMainCOPLocation, tbNumberOfCOPS,
                 tbCarDoorFinish, tbCeilingFinish, tbFloorFinish, tbFrontWall, tbHandrail, tbMirror, tbNumOfLEDLights, tbRearWall, tbSideWall,
                 tbDoorHeight, tbDoorTracks, tbDoorWidth, tbLandingDoorFinish, tbDepth, tbHeight, tbLiftCarNotes, tbLiftRating, tbLoad, tbNumofCarEntrances, tbSpeed,
                 tbwidth, tbHeadroom, tbNumofLandingDoors, tbNumofLandings, tbPitDepth, tbTypeofLift, tbLiftNumbers,
-                tbShaftDepth, tbShaftWidth, tbStructureShaft, tbTravel, tbControlerLocation, tbfname, tblname, tbphone, tbAddress1, tbAddress2, tbAddress3);
+                tbShaftDepth, tbShaftWidth, tbStructureShaft, tbTravel, tbControlerLocation, tbfname, tblname, tbphone, tbAddress1, tbAddress2, tbAddress3
+                );
 
             f.SaveRbToXML(rbCOPFinishOther, rbCOPFinishSatinStainlessSteel, rbExclusiveServiceNo, rbExclusiveServiceYes,
                  rbGPOInCarNo, rbGPOInCarYes, rbLEDColourBlue, rbLEDColourRed, rbLEDColourWhite, rbPositionIndicatorTypeFlushMount,
@@ -256,16 +260,18 @@ namespace SQT
                 rbFireServiceNo, rbFireServiceYes, rbIndependentServiceNo, rbIndependentServiceYes, rbLoadWeighingNo, rbLoadWeighingYes,
                 rbControlerLoactionTopLanding, rbControlerLocationBottomLanding, rbControlerLocationOther, rbControlerlocationShaft,
                 rbFireServiceNo, rbFireServiceYes, rbIndependentServiceNo, rbIndependentServiceYes, rbLoadWeighingNo, rbLoadWeighingYes,
-                rbSL, rbSumasa, rbWittur);
+                rbSL, rbSumasa, rbWittur
+                );
             #endregion
             #region Page 2 Saving
-            f.SaveTbToXML(tb2AddressLine1, tb2AddressLine2, tb2AddressLine3, tb2AuxCOPLocation, tb2CarDepth, tb2CarDoorFinishText,
+            f.SaveTbToXML( tb2AuxCOPLocation, tb2CarDepth, tb2CarDoorFinishText,
                 tb2CarHeight, tb2CarLoad, tb2CarWidth, tb2CeilingFinishText, tb2ControlerLocationText, tb2COPFinishText, tb2Designations,
-                tb2DoorHeight, tb2DoorTracksText, tb2DoorWidth, tb2FacePlateMaterialText, tb2FIrstName, tb2FloorFinish, tb2FrontWallText,
-                tb2HandrailText, tb2Headroom, tb2KeyswitchLocation, tb2LandingDoorFinishText, tb2LAstName, tb2LiftNumbers, tb2LiftRating,
+                tb2DoorHeight, tb2DoorTracksText, tb2DoorWidth, tb2FacePlateMaterialText,  tb2FloorFinish, tb2FrontWallText,
+                tb2HandrailText, tb2Headroom, tb2KeyswitchLocation, tb2LandingDoorFinishText,  tb2LiftNumbers, tb2LiftRating,
                 tb2MainCOPLocation, tb2MirrorText, tb2Note, tb2NumberOfCarEntrances, tb2NumberOfCOPs, tb2NumberOfLAndingDoors,
-                tb2NumberOfLandings, tb2NumberofLEDLights, tb2PhoneNumber, tb2PitDepth, tb2RearWallText, tb2ShaftDepth, tb2ShaftWidth,
-                tb2SideWallText, tb2Speed, tb2StructureShaftText, tb2Travel, tb2TypeOfLift);
+                tb2NumberOfLandings, tb2NumberofLEDLights,  tb2PitDepth, tb2RearWallText, tb2ShaftDepth, tb2ShaftWidth,
+                tb2SideWallText, tb2Speed, tb2StructureShaftText, tb2Travel, tb2TypeOfLift
+                );
 
             f.SaveRbToXML(rb2AdvancedOpeningNo, rb2AdvancedOpeningYes, rb2BumpRailNo, rb2BumpRailYes, rb2CarDoorFinishOther,
                 rb2CarDoorFinishStainlessSteel, rb2CeilingFinishMirrorStainlessSteel, rb2CeilingFinishOther, rb2CeilingFinishStainlessSteel,
@@ -281,17 +287,19 @@ namespace SQT
                 rb2OutOfServiceYes, rb2PositionIndicatorTypeFlushMount, rb2PositionIndicatorTypeSurfaceMount, rb2ProtectiveBlanketsNo,
                 rb2ProtectiveBlanketsYes, rb2RearDoorKeySwitchNo, rb2RearDoorKeySwitchYes, rb2RearWallOther, rb2RearWallStainlessSteel,
                 rb2SecurityKeySwitchNo, rb2SecurityKeySwitchYes, rb2SideWallOther, rb2SideWallStainlessSteel, rb2StructureShaftConcrete,
-                rb2StructureShaftOther, rb2SupplierSL, rb2SupplierSumasa, rb2SupplierWittur, rb2TrimmerBeamsNo, rb2TrimmerBeamsYes,
-                rb2VoiceAnnunciationNo, rb2VoiceAnnunciationYes);
+                rb2StructureShaftOther,    rb2TrimmerBeamsNo, rb2TrimmerBeamsYes,
+                rb2VoiceAnnunciationNo, rb2VoiceAnnunciationYes
+                );
             #endregion
             #region Page 3 Saving
-            f.SaveTbToXML(tb3AddressLine1, tb3AddressLine2, tb3AddressLine3, tb3AuxCOPLocation, tb3CarDepth, tb3CarDoorFinishText,
+            f.SaveTbToXML(   tb3AuxCOPLocation, tb3CarDepth, tb3CarDoorFinishText,
                 tb3CarHeight, tb3CarNote, tb3CarWidth, tb3CEilingFinishText, tb3ControlerLocationText, tb3COPFinishText, tb3Designations,
-                tb3DoorHeight, tb3DoorTracksText, tb3DoorWidth, tb3FacePlaterMaterialText, tb3FirstName, tb3FloorFinish, tb3FrontWallText,
-                tb3HandrailText, tb3HeadRoom, tb3KeyswitchLocation, tb3LandingDoorFinishText, tb3LastName, tb3LiftNumbers, tb3LiftRating,
+                tb3DoorHeight, tb3DoorTracksText, tb3DoorWidth, tb3FacePlaterMaterialText,  tb3FloorFinish, tb3FrontWallText,
+                tb3HandrailText, tb3HeadRoom, tb3KeyswitchLocation, tb3LandingDoorFinishText,  tb3LiftNumbers, tb3LiftRating,
                 tb3Load, tb3MainCOPLocation, tb3MirrorText, tb3NumberOfCarEntrances, tb3NumberOfCOPs, tb3NumberOfLandingDoors,
-                tb3NumberOfLandings, tb3NumberOfLEDLights, tb3PhoneNumber, tb3PitDepth, tb3RearWallText, tb3ShaftDepth, tb3ShaftWidth,
-                tb3SideWallText, tb3Speed, tb3StructureShaftText, tb3Travel, tb3TypeOfLift);
+                tb3NumberOfLandings, tb3NumberOfLEDLights,  tb3PitDepth, tb3RearWallText, tb3ShaftDepth, tb3ShaftWidth,
+                tb3SideWallText, tb3Speed, tb3StructureShaftText, tb3Travel, tb3TypeOfLift
+                );
 
             f.SaveRbToXML(rb3AdvancedOpeningNo, rb3AdvancedOpeningYes, rb3BumpRailNo, rb3BumpRailYes, rb3CarDoorFinishOther,
                 rb3CarDoorFinishStainlessSteel, rb3CeilingFinishOther, rb3CeilingFinishStainlessSteel, rb3CeilingFinishWhite,
@@ -307,17 +315,19 @@ namespace SQT
                 rb3OutOfSErviceYes, rb3PositionIndicatorTypeFlushMount, rb3PositionIndicatorTypeSurfaceMount, rb3ProtectiveBlanketsNo,
                 rb3ProtectiveBlanketsYes, rb3RearDoorKeySwitchNo, rb3RearDoorKeySwitchYes, rb3RearWallOther, rb3RearWallStainlessSteel,
                 rb3SecurityKeySwitchNo, rb3SecurityKeySwitchYes, rb3SideWallOther, rb3SideWallStainlessSteel, rb3StructureShaftConcrete,
-                rb3StructureShaftOther, rb3SupplierSL, rb3SupplierSumasa, rb3SupplierWittur, rb3TrimmerBeamsNo, rb3TrimmerBeamsYes,
-                rb3VoiceAnnunciationNo, rb3VoiceAnnunciationYes);
+                rb3StructureShaftOther,    rb3TrimmerBeamsNo, rb3TrimmerBeamsYes,
+                rb3VoiceAnnunciationNo, rb3VoiceAnnunciationYes
+                );
             #endregion
             #region Page 4 Saving
-            f.SaveTbToXML(tb4AddressLine1, tb4AddressLine2, tb4AddressLine3, tb4AuxCOPLocation, tb4CarDepth, tb4CarDoorFinish,
+            f.SaveTbToXML(   tb4AuxCOPLocation, tb4CarDepth, tb4CarDoorFinish,
                 tb4CarHeight, tb4CarNote, tb4CarWidth, tb4CeilingFinishText, tb4ControlerLocationText, tb4COPFinishText, tb4Designations,
-                tb4DoorHeight, tb4DoorTracksText, tb4DoorWidth, tb4FacePlateMaterialText, tb4FirstName, tb4FloorFinish, tb4FrontWallText,
-                tb4HandrailText, tb4Headroom, tb4KeyswitchLocations, tb4LandingDoorFinishText, tb4LastName, tb4LiftNumbers, tb4LiftRating,
+                tb4DoorHeight, tb4DoorTracksText, tb4DoorWidth, tb4FacePlateMaterialText,  tb4FloorFinish, tb4FrontWallText,
+                tb4HandrailText, tb4Headroom, tb4KeyswitchLocations, tb4LandingDoorFinishText,  tb4LiftNumbers, tb4LiftRating,
                 tb4Load, tb4MainCOPLocation, tb4MirrorText, tb4NumberOfCarEntrances, tb4NumberOfCOPs, tb4NumberOfLandingDoors,
                 tb4NumberOfLandings, tb4NumbeROfLEDLights, tb4PitDepth, tb4RearWallText, tb4ShaftDepth, tb4ShaftWidth, tb4SideWallText,
-                tb4Speed, tb4StructureShaftText, tb4Travel, tb4TypeOfLift);
+                tb4Speed, tb4StructureShaftText, tb4Travel, tb4TypeOfLift
+                );
 
             f.SaveRbToXML(rb4AdvancedOpeningNo, rb4AdvancedOpeningYes, rb4BumpRailNo, rb4BumpRailYes, rb4CarDoorFinishOther,
                 rb4CarDoorFinishStainlessSteel, rb4CeilingFinishMirrorStainlessSteel, rb4CeilingFinishOther, rb4CeilingFinishStainlessSteel,
@@ -332,17 +342,19 @@ namespace SQT
                 rb4OutOfServiceNo, rb4OutOfServiceYes, rb4PositionIndicatorTypeFlushMount, rb4PositionIndicatorTypeSurfaceMount,
                 rb4ProtectiveBlanketsYes, rb4ProtetiveBlanketsNo, rb4RearDoorKeySwitchNo, rb4RearDoorKeySwitchYes, rb4RearWallOther,
                 rb4RearWallStainlessSteel, rb4SecurityKeySwitchNo, rb4SecurityKeySwitchYes, rb4SideWallOther, rb4SideWallStainlessSteel,
-                rb4StructureShaftConcrete, rb4StructureShaftOther, rb4SupplierSL, rb4SupplierSumasa, rb4SupplierWittur, rb4TrimmerBeamsNo,
-                rb4TrimmerBeamsYes, rb4VoiceAnnunciationNo, rb4VoiceAnnunciationYes);
+                rb4StructureShaftConcrete, rb4StructureShaftOther,    rb4TrimmerBeamsNo,
+                rb4TrimmerBeamsYes, rb4VoiceAnnunciationNo, rb4VoiceAnnunciationYes
+                );
             #endregion
             #region Page 5 Saving
-            f.SaveTbToXML(tb5AddressLine1, tb5AddressLine2, tb5AddressLine3, tb5AuxCOPLocation, tb5CarDepth, tb5CarDoorFinishText,
+            f.SaveTbToXML(   tb5AuxCOPLocation, tb5CarDepth, tb5CarDoorFinishText,
                 tb5CaRHeight, tb5CarNote, tb5CarWidth, tb5CeilingFinishText, tb5ControlerLocationText, tb5COPFinishText, tb5Designations,
-                tb5DoorHeight, tb5DoorTRacksText, tb5DoorWidth, tb5FacePlateMaterialText, tb5FirstName, tb5FloorFinish, tb5FrontWallText,
-                tb5HandrailText, tb5Headroom, tb5KetyswitchLocation, tb5LandingDoorFinishText, tb5LastName, tb5LiftNumbers, tb5LiftRating,
+                tb5DoorHeight, tb5DoorTRacksText, tb5DoorWidth, tb5FacePlateMaterialText,  tb5FloorFinish, tb5FrontWallText,
+                tb5HandrailText, tb5Headroom, tb5KetyswitchLocation, tb5LandingDoorFinishText,  tb5LiftNumbers, tb5LiftRating,
                 tb5Load, tb5MainCOPLocation, tb5MirrorText, tb5NumberOfCarEntrances, tb5NumberOfCOPs, tb5NumberOfLandingDoors,
-                tb5NumberOfLandings, tb5NumberOIfLEDLights, tb5PHoneNumber, tb5PitDepth, tb5RearWallText, tb5ShaftDEpth, tb5ShaftWidth,
-                tb5SideWallText, tb5Speed, tb5StructureShaftText, tb5Travel, tb5TypeOfLift);
+                tb5NumberOfLandings, tb5NumberOIfLEDLights,  tb5PitDepth, tb5RearWallText, tb5ShaftDEpth, tb5ShaftWidth,
+                tb5SideWallText, tb5Speed, tb5StructureShaftText, tb5Travel, tb5TypeOfLift
+                );
 
             f.SaveRbToXML(rb5AdvancedOpeningNo, rb5AdvancedOpeningYes, rb5BumpRailNo, rb5BumpRailYes, rb5CarDoorFinishOther,
                 rb5CarDoorFinishStainlessSteel, rb5CeilingFinishMirrorStainlessSTeel, rb5CeilingFinishOther, rb5CeilingFinishStainlessSteel,
@@ -358,17 +370,19 @@ namespace SQT
                 rb5PositionIndicatorTypeSurfaceMount, rb5PostionIndicatorTypeFlushMount, rb5ProtectiveBlanketsNo, rb5ProtectiveBlanketsYes,
                 rb5RearDoorKeySwitchNo, rb5RearDoorKeySwitchYes, rb5RearWallOther, rb5RearWallStainlesSteel, rb5SecurityKeySwitchNo,
                 rb5SecurityServiceYes, rb5SideWallOther, rb5SideWallStainlessSTeel, rb5StructureShaftConcrete, rb5StructureShaftOther,
-                rb5SupplierSL, rb5SupplierSumasa, rb5SupplierWittur, rb5TrimmerBeamsNo, rb5TrimmerBeamsYes,
-                rb5VoiceAnnunciationNo, rb5VoiceAnnunciationYes);
+                   rb5TrimmerBeamsNo, rb5TrimmerBeamsYes,
+                rb5VoiceAnnunciationNo, rb5VoiceAnnunciationYes
+                );
             #endregion
             #region Page 6 Saving
-            f.SaveTbToXML(tb6AddressLine1, tb6AddressLine2, tb6AddressLine3, tb6AuxCOPLocation, tb6CarDepth, tb6CarDoorFinishText,
+            f.SaveTbToXML(   tb6AuxCOPLocation, tb6CarDepth, tb6CarDoorFinishText,
                 tb6CarHeight, tb6CarLoad, tb6CarNote, tb6CarSpeed, tb6CarWidth, tb6CeilingFinishText, tb6ControlerLocationText, tb6COPFinishText,
-                tb6Designations, tb6DoorHeight, tb6DoorTracksOther, tb6DoorWidth, tb6FacePlateMaterialText, tb6FirstName, tb6FloorFinish,
-                tb6FrontWallText, tb6HAndrailText, tb6Headroom, tb6KeySwitchLocation, tb6LandingDoorFinishText, tb6LastName, tb6LiftNumbers,
+                tb6Designations, tb6DoorHeight, tb6DoorTracksOther, tb6DoorWidth, tb6FacePlateMaterialText,  tb6FloorFinish,
+                tb6FrontWallText, tb6HAndrailText, tb6Headroom, tb6KeySwitchLocation, tb6LandingDoorFinishText,  tb6LiftNumbers,
                 tb6LiftRating, tb6MainCOPLocation, tb6MirrorText, tb6NumberOfCarEntrances, tb6NumberOFCOPs, tb6NumberOfLandingDoors,
-                tb6NumberOfLandings, tb6NumberOfLEDLights, tb6PhoneNumber, tb6PitDepth, tb6RearWallText, tb6ShaftDepth, tb6ShaftWidth,
-                tb6SideWallText, tb6StructureShaftText, tb6Travel, tb6TypeOfLift);
+                tb6NumberOfLandings, tb6NumberOfLEDLights,  tb6PitDepth, tb6RearWallText, tb6ShaftDepth, tb6ShaftWidth,
+                tb6SideWallText, tb6StructureShaftText, tb6Travel, tb6TypeOfLift
+                );
 
             f.SaveRbToXML(rb6AdvancedOpeningNo, rb6AdvancedOpeningYes, rb6BumpRailNo, rb6BumpRailYes, rb6CarDoorFinishOther,
                 rb6CarDoorFinishStainlessSteel, rb6CeilingFinishMirrorStainlessSteel, rb6CeilingFinishOther, rb6CeilingFinishStainlessSteel,
@@ -383,17 +397,19 @@ namespace SQT
                 rb6MirrorOther, rb6OutOfServiceNo, rb6OutOfServiceYes, rb6PositionIndicatorTypeFlushMount, rb6PositionIndicatorTypeSurfaceMount,
                 rb6ProtectiveBlanketsNo, rb6ProtectiveBlanketsYes, rb6RearDoorKeySwitchNo, rb6RearDoorKeySwitchYes, rb6RearWallOther,
                 rb6RearWallStainlessSteel, rb6SecurityKeySwitchNo, rb6SecurityKeySwitchYes, rb6SideWallOther, rb6SideWallStainlessSteel,
-                rb6StructureShaftCOncrete, rb6StructureShaftOther, rb6SupplierSL, rb6SupplierSumasa, rb6SupplierWittur, rb6TrimmerBeamsNo,
-                rb6TrimmerBeamsYes, rb6VoiceAnnunciationNo, rb6VoiceAnnunciationYes);
+                rb6StructureShaftCOncrete, rb6StructureShaftOther,    rb6TrimmerBeamsNo,
+                rb6TrimmerBeamsYes, rb6VoiceAnnunciationNo, rb6VoiceAnnunciationYes
+                );
             #endregion
             #region Page 7 Saving
-            f.SaveTbToXML(tb7AddressLine1, tb7AddressLine2, tb7AddressLine3, tb7AuzCOPLocation, tb7CarDepth, tb7CarDoorFinishText,
+            f.SaveTbToXML(   tb7AuzCOPLocation, tb7CarDepth, tb7CarDoorFinishText,
                 tb7CarHeight, tb7CarLoad, tb7CarNotes, tb7CarSpeed, tb7CarWidth, tb7CEilingFinishText, tb7ControlerLocationText, tb7COPFinishText,
-                tb7Designations, tb7DoorHeight, tb7DoorTracksText, tb7DoorWidth, tb7FacePlateMaterialText, tb7FirstName, tb7FloorFinish, tb7FrontWallText,
-                tb7HandrailText, tb7HeadRoom, tb7KeyswitchLocation, tb7LandingDoorFinishText, tb7LastName, tb7LiftNumbers, tb7LiftRating,
+                tb7Designations, tb7DoorHeight, tb7DoorTracksText, tb7DoorWidth, tb7FacePlateMaterialText,  tb7FloorFinish, tb7FrontWallText,
+                tb7HandrailText, tb7HeadRoom, tb7KeyswitchLocation, tb7LandingDoorFinishText,  tb7LiftNumbers, tb7LiftRating,
                 tb7MainCOPLocation, tb7MirrorText, tb7NumberOfCarEntrances, tb7NumberOfCOPs, tb7NumberOfLandingDoors, tb7NumberOfLandings,
-                tb7NumberOfLEDLights, tb7PhoneNumber, tb7PitDepth, tb7RearWallText, tb7ShaftDepth, tb7ShaftWidth, tb7SideWallText,
-                tb7StructureShaftText, tb7Travel, tb7TypeOfLift);
+                tb7NumberOfLEDLights,  tb7PitDepth, tb7RearWallText, tb7ShaftDepth, tb7ShaftWidth, tb7SideWallText,
+                tb7StructureShaftText, tb7Travel, tb7TypeOfLift
+                );
 
             f.SaveRbToXML(rb7AdvancedOpeningNo, rb7AdvancedOpeningYes, rb7BumpRailNo, rb7BumpRailYes, rb7CarDoorFinishOther,
                 rb7CarDoorFinishStainlessSteel, rb7CeilingFinishMirrorStainlessSteel, rb7CeilingFinishOther, rb7CeilingFinishStainlessSteel,
@@ -408,9 +424,10 @@ namespace SQT
                 rb7MirrorFullSize, rb7MirrorHalfSize, rb7MirrorOther, rb7OutOfSErviceNo, rb7OutOfServiceYes, rb7PositionIndicatorTypeFlushMount,
                 rb7PositionIndicatorTypeSurfaceMount, rb7ProtctiveBlanketsNo, rb7ProtectiveBlanketsYes, rb7RearDoorKeySwitchNo,
                 rb7RearDoorKeySwitchYes, rb7RearWallOther, rb7RearWallStainlessSteel, rb7SecurityKeySwitchNo, rb7SecurityKeySwitchYes,
-                rb7SideWallOther, rb7SideWallStainlessSteel, rb7StructureShaftConcrete, rb7StructureShaftOther, rb7SupplierSL, rb7SupplierSumasa,
-                rb7supplierWittur, rb7TrimmerBeamsNo, rb7TrimmerBeamsYes, rb7VoiceAnnunciationYes, rb7VoiceAnunciationNo);
-            #endregion, 
+                rb7SideWallOther, rb7SideWallStainlessSteel, rb7StructureShaftConcrete, rb7StructureShaftOther,  
+                 rb7TrimmerBeamsNo, rb7TrimmerBeamsYes, rb7VoiceAnnunciationYes, rb7VoiceAnunciationNo
+                );
+            #endregion
             #region Page 8 Saving
             f.SaveRbToXML(rb8AdvancedOpeningYes, rb8AdvncedOpeningNo, rb8BumpRailNo, rb8BumpRailYes, rb8CarDoorFinishOther,
                 rb8CarDoorFinishStainlessSteel, rb8CeilingFinishMirrorStainlessSTeel, rb8CeilingFinishOther, rb8CeilingFinishStainlessSteel,
@@ -425,16 +442,18 @@ namespace SQT
                 rb8MirrorOther, rb8OutOFServiceNo, rb8OutOfSErviceYes, rb8PositionIndicatorTypeFlushMount, rb8PositionIndicatorTypeSurfaceMount,
                 rb8ProtectiveBlanketsNo, rb8ProtectiveBlanketsYes, rb8RearDoorKeySwitchNo, rb8RearDoorKeySwitchYes, rb8RearWallOther,
                 rb8RearWallStainlessSteel, rb8SecurityKeySwitchNo, rb8SecurityKeySwitchYes, rb8SideWallOther, rb8SideWallStainlessSteel,
-                rb8StructureShaftConcrete, rb8StructureShaftOther, rb8SupplierSL, rb8SupplierSumasa, rb8SupplierWittur, rb8TimmemrBeamsYes,
-                rb8TrimmerBeamsNo, rb8VoiceAnnunicationNo, rb8VoiceAnnunicationYes, tb8DoorNudgingNo, tb8LandingDoorFinishStainlessSteel);
+                rb8StructureShaftConcrete, rb8StructureShaftOther,    rb8TimmemrBeamsYes,
+                rb8TrimmerBeamsNo, rb8VoiceAnnunicationNo, rb8VoiceAnnunicationYes, tb8DoorNudgingNo, tb8LandingDoorFinishStainlessSteel
+                );
 
-            f.SaveTbToXML(tb8AddressLine1, tb8AddressLine2, tb8AddressLine3, tb8AuxCOPLocation, tb8CarDEpth, tb8CarDoorFinishText,
+            f.SaveTbToXML(   tb8AuxCOPLocation, tb8CarDEpth, tb8CarDoorFinishText,
                 tb8CarHeight, tb8CarWidth, tb8CeilingFinishText, tb8ControlerLocationText, tb8COPFinishText, tb8Desiginations, tb8DoorHeight,
-                tb8DoorTracksText, tb8DoorWidth, tb8FacePlateMaterialText, tb8FirstName, tb8FloorFinish, tb8FrontWallText, tb8HandrailText,
-                tb8Headroom, tb8KeyswitchLocations, tb8LandingDoorFinishText, tb8LastName, tb8LiftCarNotes,
+                tb8DoorTracksText, tb8DoorWidth, tb8FacePlateMaterialText,  tb8FloorFinish, tb8FrontWallText, tb8HandrailText,
+                tb8Headroom, tb8KeyswitchLocations, tb8LandingDoorFinishText,  tb8LiftCarNotes,
                 tb8LiftNumbers, tb8LiftRating, tb8Load, tb8MainCOPLocation, tb8MirrorText, tb8NumberOfCarEntrances, tb8NumberOfCOPs,
-                tb8NumberOfLandingDoors, tb8NumberOfLandings, tb8NumberofLEDLights, tb8PhoneNumber, tb8PitDepth, tb8RearWallText,
-                tb8ShaftDepth, tb8ShaftWidth, tb8SideWallText, tb8Speed, tb8StructureShaftText, tb8Travel, tb8TypeOfLift);
+                tb8NumberOfLandingDoors, tb8NumberOfLandings, tb8NumberofLEDLights,  tb8PitDepth, tb8RearWallText,
+                tb8ShaftDepth, tb8ShaftWidth, tb8SideWallText, tb8Speed, tb8StructureShaftText, tb8Travel, tb8TypeOfLift
+                );
             #endregion
             #region Page 9 Saving
             f.SaveRbToXML(rb9AdvancedOpeningNo, rb9AdvancedOpeningYes, rb9BumpRailNo, rb9BumpRailYes, rb9CarDoorFinishOther,
@@ -449,24 +468,27 @@ namespace SQT
                 rb9MirrorFullSize, rb9MirrorHalfSize, rb9MirrorOther, rb9OutOfServiceNo, rb9OutOfServiceYes, rb9PositionIndicatorTypeFlushMount,
                 rb9PositionIndicatorTypeSurfaceMount, rb9ProtectiveBlanketsNo, rb9ProtectiveBlanketsYes, rb9RearDoorKeySwitchNo, rb9RearDoorKeySwitchYes,
                 rb9RearWallOther, rb9RearWallStainlessSteel, rb9SecurityKeySwitchNo, rb9SecurityKeySwitchYes, rb9SideWallOther, rb9SideWallStainlessSteel,
-                rb9StructureShaftConcrete, rb9StructureShaftOther, rb9SupplierSL, rb9SupplierSumasa, rb9SupplierWittur, rb9TrimmerBeamsNo, rb9TrimmerBeamsYes,
-                rb9VoiceAnnunciationNo, rb9VoiceAnnunciationYes);
+                rb9StructureShaftConcrete, rb9StructureShaftOther,    rb9TrimmerBeamsNo, rb9TrimmerBeamsYes,
+                rb9VoiceAnnunciationNo, rb9VoiceAnnunciationYes
+                );
 
-            f.SaveTbToXML(tb9AddressLine1, tb9AddressLine2, tb9AddressLine3, tb9AuxCOPLocation, tb9CarDepth, tb9CarDoorFinishText, tb9CarHeight,
+            f.SaveTbToXML(   tb9AuxCOPLocation, tb9CarDepth, tb9CarDoorFinishText, tb9CarHeight,
                 tb9CarNotes, tb9CarWidth, tb9CeilingFinishText, tb9ControlerLocationText, tb9COPFinishText, tb9Designations, tb9DoorHeight, tb9DoorTracksText,
-                tb9DoorWidth, tb9FacePlateMaterialText, tb9FirstName, tb9FloorFinish, tb9FrontWallText, tb9HandrailTexrt, tb9Headroom, tb9KeyswitchLocation,
-                tb9LandingDoorFinishText, tb9LastName, tb9LiftNumbers, tb9LiftRating, tb9Load, tb9MainCOPLocation, tb9MirrorText, tb9NumberOFCarEntraces,
-                tb9NumberOfCOPs, tb9NumberOfLandingDoors, tb9NumberOfLandings, tb9NumberOfLEDLights, tb9PhoneNumber, tb9PitDepth, tb9RearWallText,
-                tb9ShaftDepth, tb9ShaftWidth, tb9SideWallText, tb9Speed, tb9StructureShaftText, tb9Travel, tb9TypeOfLift);
+                tb9DoorWidth, tb9FacePlateMaterialText,  tb9FloorFinish, tb9FrontWallText, tb9HandrailTexrt, tb9Headroom, tb9KeyswitchLocation,
+                tb9LandingDoorFinishText,  tb9LiftNumbers, tb9LiftRating, tb9Load, tb9MainCOPLocation, tb9MirrorText, tb9NumberOFCarEntraces,
+                tb9NumberOfCOPs, tb9NumberOfLandingDoors, tb9NumberOfLandings, tb9NumberOfLEDLights,  tb9PitDepth, tb9RearWallText,
+                tb9ShaftDepth, tb9ShaftWidth, tb9SideWallText, tb9Speed, tb9StructureShaftText, tb9Travel, tb9TypeOfLift
+                );
             #endregion
             #region Page 10 Saving
-            f.SaveTbToXML(tb10AddressLine1, tb10AddressLine2, tb10AddressLine3, tb10AuxCOPLocation, tb10CarDepth, tb10CarDoorFinishText,
+            f.SaveTbToXML(   tb10AuxCOPLocation, tb10CarDepth, tb10CarDoorFinishText,
                 tb10CarHeight, tb10CarWidth, tb10CEilingFinishText, tb10ControlerLocationText, tb10COPFinishText, tb10Desigination, tb10DoorHeight,
-                tb10DoorTracksText, tb10DoorWidth, tb10FacePlateMaterialText, tb10FirstName, tb10FloorFinish, tb10FrontWallText, tb10HandrailText,
-                tb10Headroom, tb10KeyswitchLocation, tb10LandingDoorFinishText, tb10LastName, tb10LiftCarLoad, tb10LiftCarNotes, tb10LiftNumbers,
+                tb10DoorTracksText, tb10DoorWidth, tb10FacePlateMaterialText,  tb10FloorFinish, tb10FrontWallText, tb10HandrailText,
+                tb10Headroom, tb10KeyswitchLocation, tb10LandingDoorFinishText,  tb10LiftCarLoad, tb10LiftCarNotes, tb10LiftNumbers,
                 tb10LiftRating, tb10MainCOPLocation, tb10MirrorText, tb10NumberofCarEntrances, tb10NumberOfCOPs, tb10NumberofLandingDoors,
-                tb10NumberofLandings, tb10NumberOfLEDLIghts, tb10PhoneNumber, tb10PitDepth, tb10RearWallText, tb10ShaftDepth, tb10ShaftWidth,
-                tb10SideWallText, tb10Speed, tb10StructureShaftText, tb10Travel, tb10TypeOfLift);
+                tb10NumberofLandings, tb10NumberOfLEDLIghts,  tb10PitDepth, tb10RearWallText, tb10ShaftDepth, tb10ShaftWidth,
+                tb10SideWallText, tb10Speed, tb10StructureShaftText, tb10Travel, tb10TypeOfLift
+                );
 
             f.SaveRbToXML(rb10AdvancedOpeningNo, rb10AdvancedOpeningYes, rb10BumpRaidYes, rb10BumpRailNo, rb10CarDoorFinishOther,
                 rb10CarDoorFinishStainlessSteel, rb10CEilingFinishMirrorStainlessSteel, rb10CEilingFinishOther, rb10CeilingFinishStainlessSteel,
@@ -480,17 +502,19 @@ namespace SQT
                 rb10LCDColourWhite, rb10LoadWEighingNo, rb10LoadWeighingYes, rb10MirrorFullSize, rb10MirrorHalfSize, rb10MirrorOther, rb10OutOfServiceNo,
                 rb10OutOFServiceYes, rb10PositionIndicatorTypeFlushMount, rb10PositionIndicatorTypeSurfaceMount, rb10ProtectiveBlanketNo, rb10ProtectiveBlanketYes,
                 rb10RearDoorKeySwitchNo, rb10RearDoorKeySwitchYes, rb10RearWallOther, rb10RearWallStainlessSteel, rb10SecurityKeySwitchNo,
-                rb10SecurityKeySwitchYes, rb10SideWallOther, rb10SideWallStainlesSteel, rb10StructureShaftConcrete, rb10StructureShaftOther, rb10SupplierSL,
-                rb10SupplierSumasa, rb10SupplierWittur, rb10TimmerbeamsYes, rb10TrimmerBeamsNo, rb10VoiceAnnunciationNo, rb10VoiceAnnunciationYes);
+                rb10SecurityKeySwitchYes, rb10SideWallOther, rb10SideWallStainlesSteel, rb10StructureShaftConcrete, rb10StructureShaftOther, 
+                  rb10TimmerbeamsYes, rb10TrimmerBeamsNo, rb10VoiceAnnunciationNo, rb10VoiceAnnunciationYes
+                );
             #endregion
             #region Page 11 Saving
-            f.SaveTbToXML(tb11AddressLineOne, tb11AddressLineThree, tb11AddressLineTwo, tb11AuxCOPLocation, tb11CarDepth, tb11CarDoorFinishText,
+            f.SaveTbToXML(   tb11AuxCOPLocation, tb11CarDepth, tb11CarDoorFinishText,
                 tb11CarHeight, tb11CarWidth, tb11CeilingFinishText, tb11ControlerLocationText, tb11COPFinishText, tb11Designations, tb11DoorHeight,
-                tb11DoorTracksText, tb11DoorWidth, tb11FaceplateMaterialText, tb11FirstName, tb11FloorFinish, tb11FrontWallText, tb11HandrailText, tb11Headroom,
-                tb11KeyswitchLocation, tb11LandingDoorFInishOther, tb11LastName, tb11LiftCarLoad, tb11LiftCarNote, tb11LiftRating, tb11MainCOPLocation,
+                tb11DoorTracksText, tb11DoorWidth, tb11FaceplateMaterialText,  tb11FloorFinish, tb11FrontWallText, tb11HandrailText, tb11Headroom,
+                tb11KeyswitchLocation, tb11LandingDoorFInishOther,  tb11LiftCarLoad, tb11LiftCarNote, tb11LiftRating, tb11MainCOPLocation,
                 tb11MirrorText, tb11NumberofCarEntrances, tb11NumberOfCOPs, tb11NumberOfLandingDoors, tb11NumberOfLandings, tb11NumberOfLEDLights,
-                tb11PhoneNumber, tb11PitDepth, tb11RearWallText, tb11ShaftDepth, tb11ShaftWidth, tb11SideWallText, tb11Speed, tb11Travel, tb11TypeOfLift,
-                rb11LiftNumbers, rb11StructureShaftText);
+                 tb11PitDepth, tb11RearWallText, tb11ShaftDepth, tb11ShaftWidth, tb11SideWallText, tb11Speed, tb11Travel, tb11TypeOfLift,
+                rb11LiftNumbers, rb11StructureShaftText
+                );
 
             f.SaveRbToXML(rb11AdvancedOpeningNo, rb11AdvancedOpeningYes, rb11BumpRailNo, tb11ControlerLocationTopLanding, rb11BumpRailYes,
                 rb11CarDoorFinishOther, rb11CarDoorFinishStainlessSteel, rb11CeilingFinishMirrorStainlessSteel, rb11CeilingFinishOther, rb11CeilingFinishStainlessSteel,
@@ -504,17 +528,19 @@ namespace SQT
                 rb11MirrorHalfSize, rb11MirrorOther, rb11OutOfServiceNo, rb11OutOfSErviceYes, rb11PositionIndicatorTypeFlushMount,
                 rb11PositionIndicatorTypeSurfaceMount, rb11ProtectiveBlanketNo, rb11ProtectiveBlanketsYes, rb11RearDoorKeySwitchNo, rb11RearDoorKeySwitchYes,
                 rb11RearWallOther, rb11RearWallStainlessSteel, rb11SecurityKeySwitchNo, rb11SecurityKeySwitchYes, rb11SideWallOther, rb11SideWallStainlessSteel,
-                rb11StrructureShaftOther, rb11StructureShaftConcrete, rb11SupplierSL, rb11SupplierSumasa, rb11SupplierWittur,
-                rb11TrimmerBeamNo, rb11TrimmerBeamsYes, rb11VoiceAnnunciationNo, rb11VoiceAnnunciationYes);
+                rb11StrructureShaftOther, rb11StructureShaftConcrete,   
+                rb11TrimmerBeamNo, rb11TrimmerBeamsYes, rb11VoiceAnnunciationNo, rb11VoiceAnnunciationYes
+                );
             #endregion
             #region Page 12 Saving
-            f.SaveTbToXML(tb12AddressLine1, tb12AddressLine2, tb12AddressLine3, tb12AuxCOPLocation, tb12CarDepth, tb12CarDoorFinishText,
+            f.SaveTbToXML(   tb12AuxCOPLocation, tb12CarDepth, tb12CarDoorFinishText,
                 tb12CarHeight, tb12CarLiftRating, tb12CarLoad, tb12CarNumberOfCarEntrances, tb12CarSpeed, tb12CarWidth, tb12CeilingFinishText,
-                tb12ControlerLocationText, tb12COPFinishText, tb12Designations, tb12DoorTracksText, tb12FacePlateMaterialText, tb12FirstName,
+                tb12ControlerLocationText, tb12COPFinishText, tb12Designations, tb12DoorTracksText, tb12FacePlateMaterialText, 
                 tb12FloorFinish, tb12FrontWallText, tb12HandrailText, tb12Headroom, tb12KeyswitchLocation, tb12LandingDoorFinishText,
-                tb12LandingDoorHeight, tb12LandingDoorWidth, tb12LastName, tb12LiftCarNotes, tb12LiftNumbers, tb12MainCOPLocation, tb12MirrorText,
-                tb12NumberOfCOPs, tb12NumberOfLandingDoors, tb12NumberOfLandings, tb12NumberOfLEDLights, tb12PhoneNumber, tb12PitDepth,
-                 tb12RearWallText, tb12ShaftDepth, tb12ShaftWidth, tb12SideWallText, tb12StructureShaftText, tb12Travel, tb12TypeOfLift);
+                tb12LandingDoorHeight, tb12LandingDoorWidth,  tb12LiftCarNotes, tb12LiftNumbers, tb12MainCOPLocation, tb12MirrorText,
+                tb12NumberOfCOPs, tb12NumberOfLandingDoors, tb12NumberOfLandings, tb12NumberOfLEDLights,  tb12PitDepth,
+                 tb12RearWallText, tb12ShaftDepth, tb12ShaftWidth, tb12SideWallText, tb12StructureShaftText, tb12Travel, tb12TypeOfLift
+                 );
 
             f.SaveRbToXML(rb12AdvancedOpeningNo, rb12AdvancedOpeningYes, rb12BumpRailNo, rb12BumpRailYes, rb12CarDoorFinishOther,
                 rb12CarDoorFinishStainlessSteel, rb12CeilingFinishMirrorStainlessSteel, rb12CeilingFinishOther, rb12CeilingFinishStainlessSteel,
@@ -529,8 +555,9 @@ namespace SQT
                 rb12MirrorFullSize, rb12MirrorHalfSize, rb12MirrorOTher, rb12OutOfServiceNo, rb12OutOfServiceYes, rb12PositionIndicatorTypeFlushMount,
                 rb12PositionIndicatorTypeSurfaceMount, rb12ProectiveBlanketsYes, rb12ProtectiveBlanketsNo, rb12RearDoorKeySwitchNo, rb12RearDoorKeySwitchYes,
                 rb12RearWallOther, rb12RearWallStainlessSteel, rb12SecurityKeySwitchNo, rb12SecurityKeySwitchYes, rb12SideWallOther, rb12SideWallStainlessSteel,
-                rb12StructureShaftConcrete, rb12StructureShaftOther, rb12SupplierSL, rb12SupplierSumasa, rb12SupplierWittur, rb12TrimmerBeamsNo,
-                rb12TrimmerBeamsYes, rb12VoicAnnunciationNo, rb12VoiceAnnuniationYes);
+                rb12StructureShaftConcrete, rb12StructureShaftOther,    rb12TrimmerBeamsNo,
+                rb12TrimmerBeamsYes, rb12VoicAnnunciationNo, rb12VoiceAnnuniationYes
+                );
             #endregion
 
             this.Enabled = false;
