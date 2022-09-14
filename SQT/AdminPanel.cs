@@ -71,7 +71,7 @@ namespace SQT
 
         private void FetchLabourPrices()
         {
-            int dKey = 0;
+            int dKey = -1;
             float dName = -1;
 
             XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\LabourCosts.xml");
@@ -89,10 +89,10 @@ namespace SQT
 
                 }
 
-                if (dKey != 0 && dName != -1)
+                if (dKey != -1 && dName != -1)
                 {
                     labourPrice.Add(dKey, dName);
-                    dKey = 0;
+                    dKey = -1;
                     dName = -1;
 
                 }
@@ -275,6 +275,7 @@ namespace SQT
         {
             this.Close();
         }
+
     }
 }
 
