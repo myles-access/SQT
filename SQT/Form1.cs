@@ -107,7 +107,7 @@ namespace SQT
         //find the labour costs from the file int he server and write them into the labour prices dictionary 
         private void FetchLabourPrices()
         {
-            int dKey = 0;
+            int dKey = -1;
             float dName = -1;
 
             XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\LabourCosts.xml");
@@ -116,21 +116,21 @@ namespace SQT
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Floors")
                 {
                     dKey = int.Parse(XMLR.ReadElementContentAsString());
-                    if (dKey > maxNumberOfFloors)
-                    {
-                        maxNumberOfFloors = dKey;
-                       // MessageBox.Show(maxNumberOfFloors.ToString());
-                    }
                 }
                 else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Price")
                 {
                     dName = float.Parse(XMLR.ReadElementContentAsString());
                 }
 
-                if (dKey != 0 && dName != -1)
+                if (dKey != -1 && dName != -1)
                 {
                     labourPrice.Add(dKey, dName);
-                    dKey = 0;
+                    if (dKey > maxNumberOfFloors)
+                    {
+                        maxNumberOfFloors = dKey;
+                        // MessageBox.Show(maxNumberOfFloors.ToString());
+                    }
+                    dKey = -1;
                     dName = -1;
                 }
             }
@@ -421,7 +421,11 @@ namespace SQT
             //add freight based on number of required containers 
             PriceListFormatting(lblFreight, freightTotal);
             //add labour from the labour costs dictionary based on number of floors in the building 
-            PriceListFormatting(lblLabour, labourPrice[int.Parse(tBMainFloors.Text)]*int.Parse(tbMainNumberLifts.Text));
+            //MessageBox.Show(int.Parse(tBMainFloors.Text).ToString());
+           // MessageBox.Show(int.Parse(tbMainNumberLifts.Text).ToString());
+            float labourCalc = labourPrice[int.Parse(tBMainFloors.Text)] * int.Parse(tbMainNumberLifts.Text);
+            //MessageBox.Show(labourCalc.ToString());
+            PriceListFormatting(lblLabour, labourCalc);
 
             marginPercent = 1 + (float.Parse(tbMainMargin.Text) / 100);
             float marginValue = (float.Parse(tbMainMargin.Text) / 100) * liftPrice;
