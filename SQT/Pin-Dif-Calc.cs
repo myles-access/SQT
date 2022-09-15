@@ -11,6 +11,8 @@ namespace SQT
     public partial class Pin_Dif_Calc : Form
     {
         #region VARS
+        public bool debugMode = false; // bool switch to show all debug message boxes in the program, turn off before release
+
         public bool sucessfulSave = false;
         public bool loadingPreviousData = false;
         private bool costInEuro;
@@ -29,6 +31,7 @@ namespace SQT
         public int exCurrency = 0; // 0 AUD, 1 USD, 2 EUR
         public int num20Ft;
         public int num40Ft;
+        public int maxFloorNumber;
         private int numberOfPagesNeeded;
 
         public Dictionary<string, float> basePrices = new Dictionary<string, float>();
@@ -92,6 +95,26 @@ namespace SQT
 
         #endregion
 
+        #region Debug Box 
+        public void DebugBoxCall(string textSent)
+        {
+            if (!debugMode)
+            {
+                return;
+            }
+
+            DialogResult dialogResult = MessageBox.Show(textSent + "\nDo you wish to continue run?", "Debug Log", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                return;
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                this.Close();
+            }
+        }
+        #endregion
+
         #region Importing Data from XML Files
 
         //find the quote price list list from the file in the server and write them into the base prices dictionary 
@@ -144,12 +167,17 @@ namespace SQT
                 if (dKey != -1 && dName != -1)
                 {
                     labourPrice.Add(dKey, dName);
+                    if (dKey > maxFloorNumber)
+                    {
+                        maxFloorNumber = dKey;
+                    }
                     dKey = -1;
                     dName = -1;
                 }
             }
 
             XMLR.Close();
+            DebugBoxCall("Max Floor Number: " + maxFloorNumber);
         }
 
         //find the live currency rates from floatrates.com and write them into the Exchange rate dictionary 
@@ -443,7 +471,7 @@ namespace SQT
             //add freight based on number of required containers 
             PriceListFormatting(lblFreight, freightTotal);
             //add labour from the labour costs dictionary based on number of floors in the building 
-            PriceListFormatting(lblLabour, FloorsAdder());
+            PriceListFormatting(lblLabour, LabourAdder());
 
             marginPercent = 1 + (float.Parse(tbMainMargin.Text) / 100);
             float marginValue = (float.Parse(tbMainMargin.Text) / 100) * liftPrice;
@@ -457,19 +485,37 @@ namespace SQT
 
         private float FloorsAdder()
         {
+            float floors = 0;
+            floors += int.Parse(tbLift1Floors.Text) * int.Parse(tbLift1Number.Text);
+            floors += int.Parse(tbLift2Floors.Text) * int.Parse(tbLift2Number.Text);
+            floors += int.Parse(tbLift3Floors.Text) * int.Parse(tbLift3Number.Text);
+            floors += int.Parse(tbLift4Floors.Text) * int.Parse(tbLift4Number.Text);
+            floors += int.Parse(tbLift5Floors.Text) * int.Parse(tbLift5Number.Text);
+            floors += int.Parse(tbLift6Floors.Text) * int.Parse(tbLift6Number.Text);
+            floors += int.Parse(tbLift7Floors.Text) * int.Parse(tbLift7Number.Text);
+            floors += int.Parse(tbLift8Floors.Text) * int.Parse(tbLift8Number.Text);
+            floors += int.Parse(tbLift9Floors.Text) * int.Parse(tbLift9Number.Text);
+            floors += int.Parse(tbLift10Floors.Text) * int.Parse(tbLift10Number.Text);
+            floors += int.Parse(tbLift11Floors.Text) * int.Parse(tbLift11Numebr.Text);
+            floors += int.Parse(tbLift12Floors.Text) * int.Parse(tbLift12Number.Text);
+            return floors;
+        }
+
+        private float LabourAdder()
+        {
             float labour = 0;
-            labour += labourPrice[int.Parse(tbLift1Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift2Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift3Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift4Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift5Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift6Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift7Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift8Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift9Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift10Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift11Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift12Floors.Text)];
+            labour += labourPrice[int.Parse(tbLift1Floors.Text)] * int.Parse(tbLift1Number.Text);
+            labour += labourPrice[int.Parse(tbLift2Floors.Text)] * int.Parse(tbLift2Number.Text);
+            labour += labourPrice[int.Parse(tbLift3Floors.Text)] * int.Parse(tbLift3Number.Text);
+            labour += labourPrice[int.Parse(tbLift4Floors.Text)] * int.Parse(tbLift4Number.Text);
+            labour += labourPrice[int.Parse(tbLift5Floors.Text)] * int.Parse(tbLift5Number.Text);
+            labour += labourPrice[int.Parse(tbLift6Floors.Text)] * int.Parse(tbLift6Number.Text);
+            labour += labourPrice[int.Parse(tbLift7Floors.Text)] * int.Parse(tbLift7Number.Text);
+            labour += labourPrice[int.Parse(tbLift8Floors.Text)] * int.Parse(tbLift8Number.Text);
+            labour += labourPrice[int.Parse(tbLift9Floors.Text)] * int.Parse(tbLift9Number.Text);
+            labour += labourPrice[int.Parse(tbLift10Floors.Text)] * int.Parse(tbLift10Number.Text);
+            labour += labourPrice[int.Parse(tbLift11Floors.Text)] * int.Parse(tbLift11Numebr.Text);
+            labour += labourPrice[int.Parse(tbLift12Floors.Text)] * int.Parse(tbLift12Number.Text);
             return labour;
         }
 
@@ -515,7 +561,7 @@ namespace SQT
                 return false;
             }
 
-            if (i > 16 || i < 0)
+            if (i > maxFloorNumber || i < 0)
             {
                 MessageBox.Show("Invalid floor number entered ");
                 return false;
@@ -855,6 +901,7 @@ namespace SQT
                     loadingPreviousData = true;
                     FetchLoadData(xmlPath);
                     Form1LoadFromXML();
+                    GenerateListOfPrices();
                 }
                 else
                 {
@@ -938,7 +985,7 @@ namespace SQT
                 //EUR
                 SelectCurrency("E");
             }
-        }
+                    }
 
         public void LoadPreviousXmlTb(params TextBox[] tb)
         {
@@ -1334,7 +1381,7 @@ namespace SQT
         {
             TotalCostAdder();
             PagesRequired();
-            MessageBox.Show(numberOfPagesNeeded.ToString());
+            DebugBoxCall("number of pages needed " + numberOfPagesNeeded.ToString());
         }
 
         private void PagesRequired()

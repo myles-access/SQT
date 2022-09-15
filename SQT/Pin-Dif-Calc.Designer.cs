@@ -2618,7 +2618,6 @@
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1755, 1234);
             this.Controls.Add(this.lbWait);
-            this.Controls.Add(this.liftPricesPanel);
             this.Controls.Add(this.tbMainBlankets);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.printButton);
@@ -2663,6 +2662,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.currencySelectionGroup);
             this.Controls.Add(this.btnConfigurePrices);
+            this.Controls.Add(this.liftPricesPanel);
             this.Name = "Pin_Dif_Calc";
             this.Text = "Quote Calculator";
             this.Load += new System.EventHandler(this.Pin_Dif_Calc_Load);
