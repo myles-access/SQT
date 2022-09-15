@@ -27,6 +27,7 @@ namespace SQT
         public int exCurrency = 0; // 0 AUD, 1 USD, 2 EUR
         public int num20Ft;
         public int num40Ft;
+        private int maxNumberOfFloors;
 
         public Dictionary<string, float> basePrices = new Dictionary<string, float>();
         public Dictionary<int, float> labourPrice = new Dictionary<int, float>();
@@ -115,6 +116,11 @@ namespace SQT
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Floors")
                 {
                     dKey = int.Parse(XMLR.ReadElementContentAsString());
+                    if (dKey > maxNumberOfFloors)
+                    {
+                        maxNumberOfFloors = dKey;
+                       // MessageBox.Show(maxNumberOfFloors.ToString());
+                    }
                 }
                 else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Price")
                 {
@@ -415,7 +421,7 @@ namespace SQT
             //add freight based on number of required containers 
             PriceListFormatting(lblFreight, freightTotal);
             //add labour from the labour costs dictionary based on number of floors in the building 
-            PriceListFormatting(lblLabour, labourPrice[int.Parse(tBMainFloors.Text)]);
+            PriceListFormatting(lblLabour, labourPrice[int.Parse(tBMainFloors.Text)]*int.Parse(tbMainNumberLifts.Text));
 
             marginPercent = 1 + (float.Parse(tbMainMargin.Text) / 100);
             float marginValue = (float.Parse(tbMainMargin.Text) / 100) * liftPrice;
@@ -469,8 +475,8 @@ namespace SQT
                 return false;
             }
 
-            if (i > 16 || i < 0)
-            {
+            if (i > maxNumberOfFloors || i < 0)
+            {                
                 MessageBox.Show("Invalid floor number entered ");
                 return false;
             }
@@ -479,7 +485,7 @@ namespace SQT
                 return true;
             }
         }
-
+        
         //checks that the margin is within the acceptable threshold
         public bool marginTbChecker()
         {
