@@ -247,7 +247,7 @@
             this.lbWait.BackColor = System.Drawing.Color.Gray;
             this.lbWait.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWait.ForeColor = System.Drawing.Color.Navy;
-            this.lbWait.Location = new System.Drawing.Point(35, 491);
+            this.lbWait.Location = new System.Drawing.Point(62, 526);
             this.lbWait.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbWait.Name = "lbWait";
             this.lbWait.Size = new System.Drawing.Size(1423, 164);
@@ -1369,6 +1369,7 @@
             this.btnShippingReset.TabStop = false;
             this.btnShippingReset.Text = "Reset Shipping Containers";
             this.btnShippingReset.UseVisualStyleBackColor = true;
+            this.btnShippingReset.Click += new System.EventHandler(this.btnShippingReset_Click);
             // 
             // tbMainEntranceGuards
             // 
@@ -1424,6 +1425,7 @@
             this.btn40Ft.TabStop = false;
             this.btn40Ft.Text = "Add 1 40ft Shipping Container";
             this.btn40Ft.UseVisualStyleBackColor = true;
+            this.btn40Ft.Click += new System.EventHandler(this.btn40Ft_Click);
             // 
             // btn20Ft
             // 
@@ -1435,6 +1437,7 @@
             this.btn20Ft.TabStop = false;
             this.btn20Ft.Text = "Add 1 20ft Shipping Container";
             this.btn20Ft.UseVisualStyleBackColor = true;
+            this.btn20Ft.Click += new System.EventHandler(this.btn20Ft_Click);
             // 
             // label20
             // 
@@ -2618,6 +2621,7 @@
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1755, 1234);
             this.Controls.Add(this.lbWait);
+            this.Controls.Add(this.liftPricesPanel);
             this.Controls.Add(this.tbMainBlankets);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.printButton);
@@ -2662,7 +2666,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.currencySelectionGroup);
             this.Controls.Add(this.btnConfigurePrices);
-            this.Controls.Add(this.liftPricesPanel);
             this.Name = "Pin_Dif_Calc";
             this.Text = "Quote Calculator";
             this.Load += new System.EventHandler(this.Pin_Dif_Calc_Load);

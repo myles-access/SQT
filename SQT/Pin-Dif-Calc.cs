@@ -501,6 +501,24 @@ namespace SQT
             return floors;
         }
 
+        public int LiftAdder()
+        {
+            int lifts = 0;
+            lifts += int.Parse(tbLift1Number.Text);
+            lifts += int.Parse(tbLift2Number.Text);
+            lifts += int.Parse(tbLift3Number.Text);
+            lifts += int.Parse(tbLift4Number.Text);
+            lifts += int.Parse(tbLift5Number.Text);
+            lifts += int.Parse(tbLift6Number.Text);
+            lifts += int.Parse(tbLift7Number.Text);
+            lifts += int.Parse(tbLift8Number.Text);
+            lifts += int.Parse(tbLift9Number.Text);
+            lifts += int.Parse(tbLift10Number.Text);
+            lifts += int.Parse(tbLift11Numebr.Text);
+            lifts += int.Parse(tbLift12Number.Text);
+            return lifts;
+        }
+
         private float LabourAdder()
         {
             float labour = 0;
@@ -628,16 +646,11 @@ namespace SQT
         public void WordSetup()
         {
             lblWaitControl(true);
-            TemplateSelector();
             string filePath = @"X:\Program Dependancies\Quote tool\Template Word Docs\Template-" + salesRep + "-Diff-" + numberOfPagesNeeded + ".docx";
             fileOpen = new Word.Application();
             fileOpen.Visible = true;
             document = fileOpen.Documents.Open(filePath, ReadOnly: false);
             document.Activate();
-        }
-
-        private void TemplateSelector()
-        {
         }
 
         // if false,asks where to save the word doc and saves it. if true saves in the previously set location
@@ -951,6 +964,7 @@ namespace SQT
 
         private void Form1LoadFromXML()
         {
+            numberOfPagesNeeded = int.Parse(loadData["NumberOfPagesOpen"]);
             LoadPreviousXmlTb(tbMainAccomodation, tBMainAddress, tbMainBlankets, tbMainCartage, tbMainDuct, tbMainEntranceGuards, tbMainMargin,
                  tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired,
                  tbLift1Price, tbLift1Number, tbLift1Floors, tbLift2Price, tbLift2Number, tbLift2Floors, tb3Lift3Price, tbLift3Number, tbLift3Floors,
@@ -1009,17 +1023,21 @@ namespace SQT
             }
         }
 
-        public void LoadPreviousXmlRb(TextBox tb, params RadioButton[] rb)
+        public void LoadPreviousXmlRb(params RadioButton[] rb)
         {
             foreach (RadioButton radio in rb)
             {
-                radio.Checked = bool.Parse(loadData[radio.Name.ToString()]);
-
+                if (loadData.ContainsKey(radio.Name.ToString()))
+                {
+                    radio.Checked = bool.Parse(loadData[radio.Name.ToString()]);
+                }
+                /*
                 if (radio.Checked == true && radio.Text == "")
                 {
                     tb.Text = loadData[tb.Name.ToString()];
                     return;
                 }
+                */
             }
         }
 
@@ -1381,6 +1399,7 @@ namespace SQT
         {
             TotalCostAdder();
             PagesRequired();
+            GenerateListOfPrices();
             DebugBoxCall("number of pages needed " + numberOfPagesNeeded.ToString());
         }
 
@@ -1735,5 +1754,5 @@ namespace SQT
         }
 
         #endregion
-    }
+            }
 }
