@@ -5,19 +5,19 @@ using System.Windows.Forms;
 namespace SQT
 {
     #region Form Setup Methods
-    public partial class Pin_Dif_Exp : Form
+    public partial class Lam_Dif_Exp : Form
     {
-        Pin_Dif_Calc f = Application.OpenForms.OfType<Pin_Dif_Calc>().Single();
+        Lam_Dif_Calc f = Application.OpenForms.OfType<Lam_Dif_Calc>().Single();
         Button[] pageButtons; // = new Button[12];
         Panel[] infoPages;
         int pageTracker = 1;
         int activePage = 0;
-        public Pin_Dif_Exp()
+        public Lam_Dif_Exp()
         {
             InitializeComponent();
         }
 
-        private void Pin_Dif_Exp_Load(object sender, EventArgs e)
+        private void Lam_Dif_Exp_Load(object sender, EventArgs e)
         {
             this.Enabled = true;
 
@@ -479,12 +479,12 @@ namespace SQT
 
 
                 f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rbIndependentServiceYes, rbIndependentServiceNo));//independent service
-                f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rbLoadWeighingYes,rbLoadWeighingNo));//load weighing
+                f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rbLoadWeighingYes, rbLoadWeighingNo));//load weighing
                 f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler(rbFalseFloorYes, rbFalseFloorNo));//false floor
-                f.WordData(prefix + "AE132", f.RadioButtonToAsteriskHandeler(rbTrimmerBeamsYes,rbTrimmerBeamsNo));//trimmer beams
-                f.WordData(prefix + "AE167", f.RadioButtonToAsteriskHandeler(rbProtectriveBlanketsYes,rbProtectiveBlanketsNo)); // protective blankets 
-                f.WordData(prefix + "AE189", f.RadioButtonToAsteriskHandeler(rbVoiceAnnunciationYes,rbVoiceAnnunciationNo));//voice annunciation 
-                f.WordData(prefix + "AE210", f.RadioButtonToAsteriskHandeler(rbOutofServiceYes,rbOutofServiceNo));//out of service 
+                f.WordData(prefix + "AE132", f.RadioButtonToAsteriskHandeler(rbTrimmerBeamsYes, rbTrimmerBeamsNo));//trimmer beams
+                f.WordData(prefix + "AE167", f.RadioButtonToAsteriskHandeler(rbProtectriveBlanketsYes, rbProtectiveBlanketsNo)); // protective blankets 
+                f.WordData(prefix + "AE189", f.RadioButtonToAsteriskHandeler(rbVoiceAnnunciationYes, rbVoiceAnnunciationNo));//voice annunciation 
+                f.WordData(prefix + "AE210", f.RadioButtonToAsteriskHandeler(rbOutofServiceYes, rbOutofServiceNo));//out of service 
                 #endregion
             }
             if (pageTracker >= 2)
@@ -522,7 +522,7 @@ namespace SQT
                 f.WordData(prefix + "AE114", tb2LiftNumbers.Text);//lift number
                 f.WordData(prefix + "AE115", tb2TypeOfLift.Text);//type of lift
                 f.WordData(prefix + "AE215", "Full Collective"); //control type, not changable 
-                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler( rb2IndependentServiceYes, rb2IndependentServiceNo));//independent service
+                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rb2IndependentServiceYes, rb2IndependentServiceNo));//independent service
                 f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rb2LoadWeighingYes, rb2LoadWeighingNo));//load weighing
                 f.WordData(prefix + "AE118", f.RadioButtonHandeler(tb2ControlerLocationText, rb2ControlerLocationBottomLanding, rb2ControlerLocationOther, rb2ControlerLocationShaft, rb2ControlerLocationTopLanding));//controler location
                 f.WordData(prefix + "AE120", f.RadioButtonHandeler(null, rb2FireSErviceNo, rb2FireSErviceYes));//fire service
@@ -535,7 +535,7 @@ namespace SQT
                 f.WordData(prefix + "AE129", tb2NumberOfLAndingDoors.Text);//number of landing doors 
                 f.WordData(prefix + "AE130", f.RadioButtonHandeler(tb2StructureShaftText, rb2StructureShaftConcrete, rb2StructureShaftOther)); //structure shaft 
                 f.WordData(prefix + "AE132", f.RadioButtonToAsteriskHandeler(rb2TrimmerBeamsYes, rb2TrimmerBeamsNo));//trimmer beams
-                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler( rb2FalseFloorYes, rb2FalseFloorNo));//false floor
+                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler(rb2FalseFloorYes, rb2FalseFloorNo));//false floor
                 f.WordData(prefix + "AE134", f.MeasureStringChecker(tb2CarLoad.Text, "kg")); //load
                 f.WordData(prefix + "AE135", f.MeasureStringChecker(tb2Speed.Text, "mps"));//speed
                 f.WordData(prefix + "AE136", f.MeasureStringChecker(tb2CarWidth.Text, "mm")); // width
@@ -628,7 +628,7 @@ namespace SQT
                 f.WordData(prefix + "AE114", tb3LiftNumbers.Text);//lift number
                 f.WordData(prefix + "AE115", tb3TypeOfLift.Text);//type of lift
                 f.WordData(prefix + "AE215", "Full Collective"); //control type, not changable 
-                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler( rb3IndependentServiceYes, rb3IndependentServiceNo));//independent service
+                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rb3IndependentServiceYes, rb3IndependentServiceNo));//independent service
                 f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rb3LoadWeighingYes, rb3LoadWeighingNo));//load weighing
                 f.WordData(prefix + "AE118", f.RadioButtonHandeler(tb3ControlerLocationText, rb3ControleRLocationBottomLanding, rb3ControlerLocationOther, rb3ControlerLocationShaft, rb3ControlerLocationTopLanding));//controler location
                 f.WordData(prefix + "AE120", f.RadioButtonHandeler(null, rb3FireServieNo, rb3FireServiceYes));//fire service
@@ -641,7 +641,7 @@ namespace SQT
                 f.WordData(prefix + "AE129", tb3NumberOfLandingDoors.Text);//number of landing doors 
                 f.WordData(prefix + "AE130", f.RadioButtonHandeler(tb3StructureShaftText, rb3StructureShaftConcrete, rb3StructureShaftOther)); //structure shaft 
                 f.WordData(prefix + "AE132", f.RadioButtonToAsteriskHandeler(rb3TrimmerBeamsYes, rb3TrimmerBeamsNo));//trimmer beams
-                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler( rb3FalseFloorYes, rb3FalseFloorNo));//false floor
+                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler(rb3FalseFloorYes, rb3FalseFloorNo));//false floor
                 f.WordData(prefix + "AE134", f.MeasureStringChecker(tb3Load.Text, "kg")); //load
                 f.WordData(prefix + "AE135", f.MeasureStringChecker(tb3Speed.Text, "mps"));//speed
                 f.WordData(prefix + "AE136", f.MeasureStringChecker(tb3CarWidth.Text, "mm")); // width
@@ -733,7 +733,7 @@ namespace SQT
                 f.WordData(prefix + "AE114", tb4LiftNumbers.Text);//lift number
                 f.WordData(prefix + "AE115", tb4TypeOfLift.Text);//type of lift
                 f.WordData(prefix + "AE215", "Full Collective"); //control type, not changable 
-                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler( rb4IndependentServiceYes, IndependentServiceNo));//independent service
+                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rb4IndependentServiceYes, IndependentServiceNo));//independent service
                 f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rb4LoadWeighingYes, rb4LoadWeighingNo));//load weighing
                 f.WordData(prefix + "AE118", f.RadioButtonHandeler(tb4ControlerLocationText, rb4ControlerLocationBottomLanding, rb4ControlerLocationOther, rb4ControlerLocationShaft, rb4ControelrLocationTopLanding));//controler location
                 f.WordData(prefix + "AE120", f.RadioButtonHandeler(null, rb4FireSErviceNo, rb4FireServiceYes));//fire service
@@ -746,7 +746,7 @@ namespace SQT
                 f.WordData(prefix + "AE129", tb4NumberOfLandingDoors.Text);//number of landing doors 
                 f.WordData(prefix + "AE130", f.RadioButtonHandeler(tb4StructureShaftText, rb4StructureShaftConcrete, rb4StructureShaftOther)); //structure shaft 
                 f.WordData(prefix + "AE132", f.RadioButtonToAsteriskHandeler(rb4TrimmerBeamsYes, rb4TrimmerBeamsNo));//trimmer beams
-                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler( rb4FalseFloorYes, rb4FalseFloorNo));//false floor
+                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler(rb4FalseFloorYes, rb4FalseFloorNo));//false floor
                 f.WordData(prefix + "AE134", f.MeasureStringChecker(tb4Load.Text, "kg")); //load
                 f.WordData(prefix + "AE135", f.MeasureStringChecker(tb4Speed.Text, "mps"));//speed
                 f.WordData(prefix + "AE136", f.MeasureStringChecker(tb4CarWidth.Text, "mm")); // width
@@ -781,7 +781,7 @@ namespace SQT
                 f.WordData(prefix + "AE163", @"Natural & Mechanical");// ventelation fan
                 f.WordData(prefix + "AE164", f.RadioButtonHandeler(tb4SideWallText, rb4SideWallStainlessSteel, rb4SideWallOther)); //side wall 
                 f.WordData(prefix + "AE165", tb4NumbeROfLEDLights.Text + " LED Lights"); // lighting 
-                f.WordData(prefix + "AE167", f.RadioButtonToAsteriskHandeler( rb4ProtectiveBlanketsYes, rb4ProtetiveBlanketsNo)); // protective blankets 
+                f.WordData(prefix + "AE167", f.RadioButtonToAsteriskHandeler(rb4ProtectiveBlanketsYes, rb4ProtetiveBlanketsNo)); // protective blankets 
                 f.WordData(prefix + "AE216", f.RadioButtonHandeler(tb4RearWallText, rb4RearWallOther, rb4RearWallStainlessSteel)); //  rear wall
                 f.WordData(prefix + "AE168", tb4NumberOfCOPs.Text); // number of COPS
                 f.WordData(prefix + "AE169", tb4MainCOPLocation.Text);// main COP location
@@ -839,7 +839,7 @@ namespace SQT
                 f.WordData(prefix + "AE114", tb5LiftNumbers.Text);//lift number
                 f.WordData(prefix + "AE115", tb5TypeOfLift.Text);//type of lift
                 f.WordData(prefix + "AE215", "Full Collective"); //control type, not changable 
-                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler( rb5IndependentServiceYes, rb5IndependentServiceNo));//independent service
+                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rb5IndependentServiceYes, rb5IndependentServiceNo));//independent service
                 f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rb5LoadWeighingYes, rb5LoadWeighingNo));//load weighing
                 f.WordData(prefix + "AE118", f.RadioButtonHandeler(tb5ControlerLocationText, rb5ControlerLocationBottomLanding, rb5ControlerLocationOther, rb5ControlerLocationShaft, rb5ControlerLocationTopLanding));//controler location
                 f.WordData(prefix + "AE120", f.RadioButtonHandeler(null, rb5FireSErviceNo, rb5FireServiceYes));//fire service
@@ -852,7 +852,7 @@ namespace SQT
                 f.WordData(prefix + "AE129", tb5NumberOfLandingDoors.Text);//number of landing doors 
                 f.WordData(prefix + "AE130", f.RadioButtonHandeler(tb5StructureShaftText, rb5StructureShaftConcrete, rb5StructureShaftOther)); //structure shaft 
                 f.WordData(prefix + "AE132", f.RadioButtonToAsteriskHandeler(rb5TrimmerBeamsYes, rb5TrimmerBeamsNo));//trimmer beams
-                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler( rb5FalseFloorYes, rb5FalseFloorNo));//false floor
+                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler(rb5FalseFloorYes, rb5FalseFloorNo));//false floor
                 f.WordData(prefix + "AE134", f.MeasureStringChecker(tb5Load.Text, "kg")); //load
                 f.WordData(prefix + "AE135", f.MeasureStringChecker(tb5Speed.Text, "mps"));//speed
                 f.WordData(prefix + "AE136", f.MeasureStringChecker(tb5CarWidth.Text, "mm")); // width
@@ -945,7 +945,7 @@ namespace SQT
                 f.WordData(prefix + "AE115", tb6TypeOfLift.Text);//type of lift
                 f.WordData(prefix + "AE215", "Full Collective"); //control type, not changable 
                 f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rb6IndependentServiceYes, rb6IndependentNo));//independent service
-                f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rb6LoadWeighingYes, rb6LoadWeighingNo ));//load weighing
+                f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rb6LoadWeighingYes, rb6LoadWeighingNo));//load weighing
                 f.WordData(prefix + "AE118", f.RadioButtonHandeler(tb6ControlerLocationText, rb6ControlerLocationOther, rb6ControlerLocationBottomLanding, rb6ControlerLocationShaft, rb6ControlerLocationTopLanding));//controler location
                 f.WordData(prefix + "AE120", f.RadioButtonHandeler(null, rb6FireServiceNo, rb6FireServiceYes));//fire service
                 f.WordData(prefix + "AE123", f.MeasureStringChecker(tb6ShaftWidth.Text, "mm"));// shaft width
@@ -1050,7 +1050,7 @@ namespace SQT
                 f.WordData(prefix + "AE114", tb7LiftNumbers.Text);//lift number
                 f.WordData(prefix + "AE115", tb7TypeOfLift.Text);//type of lift
                 f.WordData(prefix + "AE215", "Full Collective"); //control type, not changable 
-                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler( rb7IndpendentServiceYes, rb7IndependentServiceNo));//independent service
+                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rb7IndpendentServiceYes, rb7IndependentServiceNo));//independent service
                 f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rb7LoadWeighingYes, rb7LoadWeighingNo));//load weighing
                 f.WordData(prefix + "AE118", f.RadioButtonHandeler(tb7ControlerLocationText, rb7ControlerLocationBottomLAnding, rb7ControlerLocationOther, rb7ControlerLocationShaft, rb7ControlerLocationTopLanding));//controler location
                 f.WordData(prefix + "AE120", f.RadioButtonHandeler(null, rb7FireServiceNo, rb7FireSErviceYes));//fire service
@@ -1063,7 +1063,7 @@ namespace SQT
                 f.WordData(prefix + "AE129", tb7NumberOfLandingDoors.Text);//number of landing doors 
                 f.WordData(prefix + "AE130", f.RadioButtonHandeler(tb7StructureShaftText, rb7StructureShaftConcrete, rb7StructureShaftOther)); //structure shaft 
                 f.WordData(prefix + "AE132", f.RadioButtonToAsteriskHandeler(rb7TrimmerBeamsYes, rb7TrimmerBeamsNo));//trimmer beams
-                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler( rb7FalseFloorYes, rb7FalseFloorNo));//false floor
+                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler(rb7FalseFloorYes, rb7FalseFloorNo));//false floor
                 f.WordData(prefix + "AE134", f.MeasureStringChecker(tb7CarLoad.Text, "kg")); //load
                 f.WordData(prefix + "AE135", f.MeasureStringChecker(tb7CarSpeed.Text, "mps"));//speed
                 f.WordData(prefix + "AE136", f.MeasureStringChecker(tb7CarWidth.Text, "mm")); // width
@@ -1098,7 +1098,7 @@ namespace SQT
                 f.WordData(prefix + "AE163", @"Natural & Mechanical");// ventelation fan
                 f.WordData(prefix + "AE164", f.RadioButtonHandeler(tb7SideWallText, rb7SideWallStainlessSteel, rb7SideWallOther)); //side wall 
                 f.WordData(prefix + "AE165", tb7NumberOfLEDLights.Text + " LED Lights"); // lighting 
-                f.WordData(prefix + "AE167", f.RadioButtonToAsteriskHandeler( rb7ProtectiveBlanketsYes, rb7ProtctiveBlanketsNo)); // protective blankets 
+                f.WordData(prefix + "AE167", f.RadioButtonToAsteriskHandeler(rb7ProtectiveBlanketsYes, rb7ProtctiveBlanketsNo)); // protective blankets 
                 f.WordData(prefix + "AE216", f.RadioButtonHandeler(tb7RearWallText, rb7RearWallOther, rb7RearWallStainlessSteel)); //  rear wall
                 f.WordData(prefix + "AE168", tb7NumberOfCOPs.Text); // number of COPS
                 f.WordData(prefix + "AE169", tb7MainCOPLocation.Text);// main COP location
@@ -1112,7 +1112,7 @@ namespace SQT
                 f.WordData(prefix + "AE184", f.RadioButtonHandeler(null, rb7RearDoorKeySwitchNo, rb7RearDoorKeySwitchYes));// rear door kew switch 
                 f.WordData(prefix + "AE186", f.RadioButtonHandeler(null, rb7SecurityKeySwitchNo, rb7SecurityKeySwitchYes));//security key switch 
                 f.WordData(prefix + "AE187", f.RadioButtonHandeler(null, rb7GPOInCarNo, rb7GPOInCarYes));//GPO in car
-                f.WordData(prefix + "AE189", f.RadioButtonToAsteriskHandeler( rb7VoiceAnnunciationYes, rb7VoiceAnunciationNo));//voice annunciation 
+                f.WordData(prefix + "AE189", f.RadioButtonToAsteriskHandeler(rb7VoiceAnnunciationYes, rb7VoiceAnunciationNo));//voice annunciation 
                 f.WordData(prefix + "AE190", f.RadioButtonHandeler(null, rb7PositionIndicatorTypeSurfaceMount, rb7PositionIndicatorTypeFlushMount));// position indicaor type 
                 f.WordData(prefix + "AE192", f.RadioButtonHandeler(tb7FacePlateMaterialText, rb7FacePlateMaterialStainlessSteel, rb7FacePlateMaterialOther));//face plate material 
                 f.WordData(prefix + "AE193", "Dual illumination buttons with gong");//button type
@@ -1154,8 +1154,8 @@ namespace SQT
                 f.WordData(prefix + "AE114", tb8LiftNumbers.Text);//lift number
                 f.WordData(prefix + "AE115", tb8TypeOfLift.Text);//type of lift
                 f.WordData(prefix + "AE215", "Full Collective"); //control type, not changable 
-                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler( rb8IndependentServiceYes, rb8IndependentServiceNo));//independent service
-                f.WordData(prefix + "AE117", f. RadioButtonToAsteriskHandeler(rb8LoadWeighingYes, rb8LoadWeighingNo));//load weighing
+                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rb8IndependentServiceYes, rb8IndependentServiceNo));//independent service
+                f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rb8LoadWeighingYes, rb8LoadWeighingNo));//load weighing
                 f.WordData(prefix + "AE118", f.RadioButtonHandeler(tb8ControlerLocationText, rb8ControlerLocationBottomLanding, rb8ControlerLocationOther, rb8ControlerLocationShaft, rb8ControlerLocationTopLanding));//controler location
                 f.WordData(prefix + "AE120", f.RadioButtonHandeler(null, rb8FireSErviceNo, rb8FireServiceYes));//fire service
                 f.WordData(prefix + "AE123", f.MeasureStringChecker(tb8ShaftWidth.Text, "mm"));// shaft width
@@ -1167,7 +1167,7 @@ namespace SQT
                 f.WordData(prefix + "AE129", tb8NumberOfLandingDoors.Text);//number of landing doors 
                 f.WordData(prefix + "AE130", f.RadioButtonHandeler(tb8StructureShaftText, rb8StructureShaftConcrete, rb8StructureShaftOther)); //structure shaft 
                 f.WordData(prefix + "AE132", f.RadioButtonToAsteriskHandeler(rb8TimmemrBeamsYes, rb8TrimmerBeamsNo));//trimmer beams
-                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler( rb8FalseFloorYes, rb8FalseFloorNo));//false floor
+                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler(rb8FalseFloorYes, rb8FalseFloorNo));//false floor
                 f.WordData(prefix + "AE134", f.MeasureStringChecker(tb8Load.Text, "kg")); //load
                 f.WordData(prefix + "AE135", f.MeasureStringChecker(tb8Speed.Text, "mps"));//speed
                 f.WordData(prefix + "AE136", f.MeasureStringChecker(tb8CarWidth.Text, "mm")); // width
@@ -1256,7 +1256,7 @@ namespace SQT
                 f.WordData(prefix + "AE114", tb9LiftNumbers.Text);//lift number
                 f.WordData(prefix + "AE115", tb9TypeOfLift.Text);//type of lift
                 f.WordData(prefix + "AE215", "Full Collective"); //control type, not changable 
-                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler( rb9IndependentServiceYes, rb9IndependentServiceNo));//independent service
+                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rb9IndependentServiceYes, rb9IndependentServiceNo));//independent service
                 f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rb9LoadWeighingYes, rb9LoadWeighingNo));//load weighing
                 f.WordData(prefix + "AE118", f.RadioButtonHandeler(tb9ControlerLocationText, rb9ControlerLocationBottomLanding, rb9ControlerLocationOther, rb9ControlerLocationShaft, rb9ControlrLocationTopLanding));//controler location
                 f.WordData(prefix + "AE120", f.RadioButtonHandeler(null, rb9FireServiceNo, rb9FireSErviceYes));//fire service
@@ -1269,7 +1269,7 @@ namespace SQT
                 f.WordData(prefix + "AE129", tb9NumberOfLandingDoors.Text);//number of landing doors 
                 f.WordData(prefix + "AE130", f.RadioButtonHandeler(tb9StructureShaftText, rb9StructureShaftConcrete, rb9StructureShaftOther)); //structure shaft 
                 f.WordData(prefix + "AE132", f.RadioButtonToAsteriskHandeler(rb9TrimmerBeamsYes, rb9TrimmerBeamsNo));//trimmer beams
-                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler( rb9FalseFloorYes, rb9FalseFloorNo));//false floor
+                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler(rb9FalseFloorYes, rb9FalseFloorNo));//false floor
                 f.WordData(prefix + "AE134", f.MeasureStringChecker(tb9Load.Text, "kg")); //load
                 f.WordData(prefix + "AE135", f.MeasureStringChecker(tb9Speed.Text, "mps"));//speed
                 f.WordData(prefix + "AE136", f.MeasureStringChecker(tb9CarWidth.Text, "mm")); // width
@@ -1359,7 +1359,7 @@ namespace SQT
                 f.WordData(prefix + "AE114", tb10LiftNumbers.Text);//lift number
                 f.WordData(prefix + "AE115", tb10TypeOfLift.Text);//type of lift
                 f.WordData(prefix + "AE215", "Full Collective"); //control type, not changable 
-                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler( rb10IndependentServiceYes, rb10IndependentServiceNo));//independent service
+                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rb10IndependentServiceYes, rb10IndependentServiceNo));//independent service
                 f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rb10LoadWeighingYes, rb10LoadWEighingNo));//load weighing
                 f.WordData(prefix + "AE118", f.RadioButtonHandeler(tb10ControlerLocationText, rb10ControlerLocationBottomLanding, rb10ControlerLocationOther, rb10ControlerLocationShaft, rb10ControlerLocationTopLanding));//controler location
                 f.WordData(prefix + "AE120", f.RadioButtonHandeler(null, rb10FireSERviceNo, rb10FireSErviceYes));//fire service
@@ -1372,7 +1372,7 @@ namespace SQT
                 f.WordData(prefix + "AE129", tb10NumberofLandingDoors.Text);//number of landing doors 
                 f.WordData(prefix + "AE130", f.RadioButtonHandeler(tb10StructureShaftText, rb10StructureShaftConcrete, rb10StructureShaftOther)); //structure shaft 
                 f.WordData(prefix + "AE132", f.RadioButtonToAsteriskHandeler(rb10TimmerbeamsYes, rb10TrimmerBeamsNo));//trimmer beams
-                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler( rb10FalseFloorYes, rb10FalseFloorNo));//false floor
+                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler(rb10FalseFloorYes, rb10FalseFloorNo));//false floor
                 f.WordData(prefix + "AE134", f.MeasureStringChecker(tb10LiftCarLoad.Text, "kg")); //load
                 f.WordData(prefix + "AE135", f.MeasureStringChecker(tb10Speed.Text, "mps"));//speed
                 f.WordData(prefix + "AE136", f.MeasureStringChecker(tb10CarWidth.Text, "mm")); // width
@@ -1462,7 +1462,7 @@ namespace SQT
                 f.WordData(prefix + "AE114", rb11LiftNumbers.Text);//lift number
                 f.WordData(prefix + "AE115", tb11TypeOfLift.Text);//type of lift
                 f.WordData(prefix + "AE215", "Full Collective"); //control type, not changable 
-                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler( rb11IndependentServiceYes, rb11IndependentSErviceNO));//independent service
+                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rb11IndependentServiceYes, rb11IndependentSErviceNO));//independent service
                 f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rb11LoadWeighingYes, rb11LoadWeighingNo));//load weighing
                 f.WordData(prefix + "AE118", f.RadioButtonHandeler(tb11ControlerLocationText, rb11ControlerLocationBottomLanding, rb11ControlerLocationOther, rb11ControlerLocationShaft, tb11ControlerLocationTopLanding));//controler location
                 f.WordData(prefix + "AE120", f.RadioButtonHandeler(null, rb11FireServiceNo, rb11FireServiceYes));//fire service
@@ -1475,7 +1475,7 @@ namespace SQT
                 f.WordData(prefix + "AE129", tb11NumberOfLandingDoors.Text);//number of landing doors 
                 f.WordData(prefix + "AE130", f.RadioButtonHandeler(rb11StructureShaftText, rb11StructureShaftConcrete, rb11StrructureShaftOther)); //structure shaft 
                 f.WordData(prefix + "AE132", f.RadioButtonToAsteriskHandeler(rb11TrimmerBeamsYes, rb11TrimmerBeamNo));//trimmer beams
-                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler( rb11FalseFloorYes, rb11FalseFloorNo));//false floor
+                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler(rb11FalseFloorYes, rb11FalseFloorNo));//false floor
                 f.WordData(prefix + "AE134", f.MeasureStringChecker(tb11LiftCarLoad.Text, "kg")); //load
                 f.WordData(prefix + "AE135", f.MeasureStringChecker(tb11Speed.Text, "mps"));//speed
                 f.WordData(prefix + "AE136", f.MeasureStringChecker(tb11CarWidth.Text, "mm")); // width
@@ -1566,7 +1566,7 @@ namespace SQT
                 f.WordData(prefix + "AE114", tb12LiftNumbers.Text);//lift number
                 f.WordData(prefix + "AE115", tb12TypeOfLift.Text);//type of lift
                 f.WordData(prefix + "AE215", "Full Collective"); //control type, not changable 
-                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler( rb12IndependentServiceYes, rb12IndependentServiceNo));//independent service
+                f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rb12IndependentServiceYes, rb12IndependentServiceNo));//independent service
                 f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rb12LoadWeighingYes, rb12LoadWeighingNo));//load weighing
                 f.WordData(prefix + "AE118", f.RadioButtonHandeler(tb12ControlerLocationText, rb12ControlerLocationBottomLanding, rb12ControlerLocationOther, rb12ControlerLocationShaft, rb12ControlerLocationTopLanding));//controler location
                 f.WordData(prefix + "AE120", f.RadioButtonHandeler(null, rb12FireServiceNo, rb12FireServiceYes));//fire service
@@ -1579,7 +1579,7 @@ namespace SQT
                 f.WordData(prefix + "AE129", tb12NumberOfLandingDoors.Text);//number of landing doors 
                 f.WordData(prefix + "AE130", f.RadioButtonHandeler(tb12StructureShaftText, rb12StructureShaftConcrete, rb12StructureShaftOther)); //structure shaft 
                 f.WordData(prefix + "AE132", f.RadioButtonToAsteriskHandeler(rb12TrimmerBeamsYes, rb12TrimmerBeamsNo));//trimmer beams
-                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler( rb12FalseFloorYes, rb12FalseFloorNo));//false floor
+                f.WordData(prefix + "AE133", f.RadioButtonToAsteriskHandeler(rb12FalseFloorYes, rb12FalseFloorNo));//false floor
                 f.WordData(prefix + "AE134", f.MeasureStringChecker(tb12CarLoad.Text, "kg")); //load
                 f.WordData(prefix + "AE135", f.MeasureStringChecker(tb12CarSpeed.Text, "mps"));//speed
                 f.WordData(prefix + "AE136", f.MeasureStringChecker(tb12CarWidth.Text, "mm")); // width

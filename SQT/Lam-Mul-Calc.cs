@@ -34,7 +34,6 @@ namespace SQT
         public Dictionary<string, string> wordExportData = new Dictionary<string, string>();
         public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
         public Dictionary<string, string> priceExports = new Dictionary<string, string>();
-        public Dictionary<string, string> loadData = new Dictionary<string, string>();
         public Dictionary<string, string> saveData = new Dictionary<string, string>();
 
         Word.Application fileOpen;
@@ -169,7 +168,7 @@ namespace SQT
         }
 
         //read the XML file of a previous job and reload in its data
-        private void FetchLoadData(string loadPath)
+        private void FetchsaveData(string loadPath)
         {
             string dKey = "";
             string dName = "";
@@ -188,7 +187,7 @@ namespace SQT
 
                 if (dKey != "" && dName != "")
                 {
-                    loadData.Add(dKey, dName);
+                    saveData.Add(dKey, dName);
 
                     dKey = "";
                     dName = "";
@@ -424,7 +423,8 @@ namespace SQT
             //add freight based on number of required containers 
             PriceListFormatting(lblFreight, freightTotal);
             //add labour from the labour costs dictionary based on number of floors in the building 
-            PriceListFormatting(lblLabour, labourPrice[int.Parse(tBMainFloors.Text)]);
+            float f = labourPrice[int.Parse(tBMainFloors.Text)] * int.Parse(tbMainNumberLifts.Text);
+            PriceListFormatting(lblLabour,f );
 
             marginPercent = 1 + (float.Parse(tbMainMargin.Text) / 100);
             float marginValue = (float.Parse(tbMainMargin.Text) / 100) * liftPrice;
@@ -812,11 +812,11 @@ namespace SQT
                 string xmlPath = FindXmlFile(openFileDialog1.FileName);
                 if (xmlPath != null)
                 {
-                    loadData.Clear();
+                    saveData.Clear();
                     xmlPath = @"X:\Program Dependancies\Quote tool\Previous Prices\" + xmlPath + ".xml";
                     //MessageBox.Show(xmlPath);
                     loadingPreviousData = true;
-                    FetchLoadData(xmlPath);
+                    FetchsaveData(xmlPath);
                     Form1LoadFromXML();
                 }
                 else
@@ -870,29 +870,29 @@ namespace SQT
             LoadPreviousXmlTb(tbCost, tbMainAccomodation, tBMainAddress, tbMainBlankets, tbMainCartage, tbMainDuct, tbMainEntranceGuards, tBMainFloors, tbMainMargin,
                 tbMainNumberLifts, tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired);
             LoadPreviousXmlCb(cbMainSecurity);
-            //num20Ft = int.Parse(loadData["num20Ft"]);
-            //num40Ft = int.Parse(loadData["num40Ft"]);
+            //num20Ft = int.Parse(saveData["num20Ft"]);
+            //num40Ft = int.Parse(saveData["num40Ft"]);
             ShippingCalculation(1);
-            for (int i = 0; i < int.Parse(loadData["num20Ft"]); i++)
+            for (int i = 0; i < int.Parse(saveData["num20Ft"]); i++)
             {
                 ShippingCalculation(2);
             }
-            for (int i = 0; i < int.Parse(loadData["num40Ft"]); i++)
+            for (int i = 0; i < int.Parse(saveData["num40Ft"]); i++)
             {
                 ShippingCalculation(3);
             }
 
-            if (int.Parse(loadData["exCurrency"]) == 0)
+            if (int.Parse(saveData["exCurrency"]) == 0)
             {
                 //AUD
                 SelectCurrency("A");
             }
-            else if (int.Parse(loadData["exCurrency"]) == 1)
+            else if (int.Parse(saveData["exCurrency"]) == 1)
             {
                 //USD
                 SelectCurrency("U");
             }
-            else if (int.Parse(loadData["exCurrency"]) == 2)
+            else if (int.Parse(saveData["exCurrency"]) == 2)
             {
                 //EUR
                 SelectCurrency("E");
@@ -903,9 +903,9 @@ namespace SQT
         {
             foreach (TextBox Box in tb)
             {
-                if (loadData.ContainsKey(Box.Name.ToString()))
+                if (saveData.ContainsKey(Box.Name.ToString()))
                 {
-                    Box.Text = loadData[Box.Name.ToString()];
+                    Box.Text = saveData[Box.Name.ToString()];
                 }
             }
         }
@@ -914,9 +914,9 @@ namespace SQT
         {
             foreach (CheckBox Box in cb)
             {
-                if (loadData.ContainsKey(Box.Name.ToString()))
+                if (saveData.ContainsKey(Box.Name.ToString()))
                 {
-                    Box.Checked = bool.Parse(loadData[Box.Name.ToString()]);
+                    Box.Checked = bool.Parse(saveData[Box.Name.ToString()]);
                 }
             }
         }
@@ -925,11 +925,11 @@ namespace SQT
         {
             foreach (RadioButton radio in rb)
             {
-                radio.Checked = bool.Parse(loadData[radio.Name.ToString()]);
+                radio.Checked = bool.Parse(saveData[radio.Name.ToString()]);
 
                 if (radio.Checked == true && radio.Text == "")
                 {
-                    tb.Text = loadData[tb.Name.ToString()];
+                    tb.Text = saveData[tb.Name.ToString()];
                     return;
                 }
             }

@@ -83,6 +83,12 @@
     <Compile Include="AdminPanel.Designer.cs">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lam-Dif-Calc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lam-Dif-Calc.Designer.cs">
+      <DependentUpon>Lam-Dif-Calc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lam-Mul-Calc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     </Compile>
     <Compile Include="Lam-Sing-Exp.Designer.cs">
       <DependentUpon>Lam-Sing-Exp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lam_Dif_Exp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lam_Dif_Exp.Designer.cs">
+      <DependentUpon>Lam_Dif_Exp.cs</DependentUpon>
     </Compile>
     <Compile Include="Pin-Dif-Calc.cs">
       <SubType>Form</SubType>
@@ -154,6 +166,9 @@
     <EmbeddedResource Include="AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lam-Dif-Calc.resx">
+      <DependentUpon>Lam-Dif-Calc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lam-Mul-Calc.resx">
       <DependentUpon>Lam-Mul-Calc.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lam-Sing-Exp.resx">
       <DependentUpon>Lam-Sing-Exp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lam_Dif_Exp.resx">
+      <DependentUpon>Lam_Dif_Exp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pin-Dif-Calc.resx">
       <DependentUpon>Pin-Dif-Calc.cs</DependentUpon>

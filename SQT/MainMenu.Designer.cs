@@ -119,8 +119,9 @@
             this.btLamDif.Size = new System.Drawing.Size(368, 131);
             this.btLamDif.TabIndex = 53;
             this.btLamDif.TabStop = false;
-            this.btLamDif.Text = "Multiple Lifts\r\nDifferent Floors\r\n";
+            this.btLamDif.Text = "Different Lifts";
             this.btLamDif.UseVisualStyleBackColor = true;
+            this.btLamDif.Click += new System.EventHandler(this.btLamDif_Click);
             // 
             // btPinDiff
             // 
@@ -130,7 +131,7 @@
             this.btPinDiff.Size = new System.Drawing.Size(368, 131);
             this.btPinDiff.TabIndex = 52;
             this.btPinDiff.TabStop = false;
-            this.btPinDiff.Text = "Multiple Lifts\r\nDifferent Floors\r\n";
+            this.btPinDiff.Text = "Different Lifts";
             this.btPinDiff.UseVisualStyleBackColor = true;
             this.btPinDiff.Click += new System.EventHandler(this.btPinDiff_Click);
             // 

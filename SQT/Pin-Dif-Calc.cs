@@ -32,14 +32,13 @@ namespace SQT
         public int num20Ft;
         public int num40Ft;
         public int maxFloorNumber;
-        private int numberOfPagesNeeded;
+        public int numberOfPagesNeeded;
 
         public Dictionary<string, float> basePrices = new Dictionary<string, float>();
         public Dictionary<int, float> labourPrice = new Dictionary<int, float>();
         public Dictionary<string, string> wordExportData = new Dictionary<string, string>();
         public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
         public Dictionary<string, string> priceExports = new Dictionary<string, string>();
-        public Dictionary<string, string> loadData = new Dictionary<string, string>();
         public Dictionary<string, string> saveData = new Dictionary<string, string>();
 
         Word.Application fileOpen;
@@ -216,7 +215,7 @@ namespace SQT
         }
 
         //read the XML file of a previous job and reload in its data
-        private void FetchLoadData(string loadPath)
+        private void FetchsaveData(string loadPath)
         {
             string dKey = "";
             string dName = "";
@@ -235,7 +234,7 @@ namespace SQT
 
                 if (dKey != "" && dName != "")
                 {
-                    loadData.Add(dKey, dName);
+                    saveData.Add(dKey, dName);
 
                     dKey = "";
                     dName = "";
@@ -521,7 +520,14 @@ namespace SQT
 
         private float LabourAdder()
         {
+            TextBox[] tbs = { tbLift1Floors, tbLift2Floors, tbLift3Floors, tbLift4Floors, tbLift5Floors, tbLift6Floors, tbLift7Floors, tbLift7Floors, tbLift8Floors, tbLift9Floors, tbLift10Floors, tbLift11Floors, tbLift12Floors };
             float labour = 0;
+
+            foreach (TextBox i in tbs)
+            {
+                floorsTbChecker(i);
+            }
+
             labour += labourPrice[int.Parse(tbLift1Floors.Text)] * int.Parse(tbLift1Number.Text);
             labour += labourPrice[int.Parse(tbLift2Floors.Text)] * int.Parse(tbLift2Number.Text);
             labour += labourPrice[int.Parse(tbLift3Floors.Text)] * int.Parse(tbLift3Number.Text);
@@ -816,7 +822,7 @@ namespace SQT
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 fileOpen = new Word.Application();
-                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\PriceExport.docx", ReadOnly: false);
+                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-" + salesRep + "-Price-" + numberOfPagesNeeded + ".docx", ReadOnly: false);
                 SavePricesToDict();
                 fileOpen.Visible = true;
                 document.Activate();
@@ -843,14 +849,86 @@ namespace SQT
 
         {
             float f = liftPrice * (marginPercent - 1);
-
+            float f2;
             priceExports.Clear();
+
             priceExports.Add("AEP1", tBMainAddress.Text);
             priceExports.Add("AEP2", tBMainQuoteNumber.Text);
             priceExports.Add("AEP3", FormalDate());
             priceExports.Add("AEP4", exchangeRateText);
-            priceExports.Add("AEP5", lblLiftNoConvertPrice.Text);
-            priceExports.Add("AEP6", lblCost.Text);
+
+            f2 = float.Parse(tbLift1Price.Text) * applicableExchangeRate;
+            priceExports.Add("P1AEP5", PriceRounding(float.Parse(tbLift1Price.Text), costInEuro));
+            priceExports.Add("P1AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P1AEP38", tbLift1Floors.Text);
+            priceExports.Add("P1AEP39", tbLift1Number.Text);
+
+            f2 = float.Parse(tbLift2Price.Text) * applicableExchangeRate;
+            priceExports.Add("P2AEP5", PriceRounding(float.Parse(tbLift2Price.Text), costInEuro));
+            priceExports.Add("P2AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P2AEP38", tbLift2Floors.Text);
+            priceExports.Add("P2AEP39", tbLift2Number.Text);
+
+            f2 = float.Parse(tb3Lift3Price.Text) * applicableExchangeRate;
+            priceExports.Add("P3AEP5", PriceRounding(float.Parse(tb3Lift3Price.Text), costInEuro));
+            priceExports.Add("P3AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P3AEP38", tbLift3Floors.Text);
+            priceExports.Add("P3AEP39", tbLift3Number.Text);
+
+            f2 = float.Parse(tbLift4Price.Text) * applicableExchangeRate;
+            priceExports.Add("P4AEP5", PriceRounding(float.Parse(tbLift4Price.Text), costInEuro));
+            priceExports.Add("P4AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P4AEP38", tbLift4Floors.Text);
+            priceExports.Add("P4AEP39", tbLift4Number.Text);
+
+            f2 = float.Parse(tbLift5Price.Text) * applicableExchangeRate;
+            priceExports.Add("P5AEP5", PriceRounding(float.Parse(tbLift5Price.Text), costInEuro));
+            priceExports.Add("P5AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P5AEP38", tbLift5Floors.Text);
+            priceExports.Add("P5AEP39", tbLift5Number.Text);
+
+            f2 = float.Parse(tbLift6Price.Text) * applicableExchangeRate;
+            priceExports.Add("P6AEP5", PriceRounding(float.Parse(tbLift6Price.Text), costInEuro));
+            priceExports.Add("P6AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P6AEP38", tbLift6Floors.Text);
+            priceExports.Add("P6AEP39", tbLift6Number.Text);
+
+            f2 = float.Parse(tbLift7Price.Text) * applicableExchangeRate;
+            priceExports.Add("P7AEP5", PriceRounding(float.Parse(tbLift7Price.Text), costInEuro));
+            priceExports.Add("P7AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P7AEP38", tbLift7Floors.Text);
+            priceExports.Add("P7AEP39", tbLift7Number.Text);
+
+            f2 = float.Parse(tbLift8Price.Text) * applicableExchangeRate;
+            priceExports.Add("P8AEP5", PriceRounding(float.Parse(tbLift8Price.Text), costInEuro));
+            priceExports.Add("P8AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P8AEP38", tbLift8Floors.Text);
+            priceExports.Add("P8AEP39", tbLift8Number.Text);
+
+            f2 = float.Parse(tbLift9Price.Text) * applicableExchangeRate;
+            priceExports.Add("P9AEP5", PriceRounding(float.Parse(tbLift9Price.Text), costInEuro));
+            priceExports.Add("P9AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P9AEP38", tbLift9Floors.Text);
+            priceExports.Add("P9AEP39", tbLift9Number.Text);
+
+            f2 = float.Parse(tbLift10Price.Text) * applicableExchangeRate;
+            priceExports.Add("P10AEP5", PriceRounding(float.Parse(tbLift10Price.Text), costInEuro));
+            priceExports.Add("P10AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P10AEP38", tbLift10Floors.Text);
+            priceExports.Add("P10AEP39", tbLift10Number.Text);
+
+            f2 = float.Parse(tbLift11Price.Text) * applicableExchangeRate;
+            priceExports.Add("P11AEP5", PriceRounding(float.Parse(tbLift11Price.Text), costInEuro));
+            priceExports.Add("P11AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P11AEP38", tbLift11Floors.Text);
+            priceExports.Add("P11AEP39", tbLift11Numebr.Text);
+
+            f2 = float.Parse(tbLift12Price.Text) * applicableExchangeRate;
+            priceExports.Add("P12AEP5", PriceRounding(float.Parse(tbLift12Price.Text), costInEuro));
+            priceExports.Add("P12AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P12AEP38", tbLift12Floors.Text);
+            priceExports.Add("P12AEP39", tbLift12Number.Text);
+
             priceExports.Add("AEP7", lblFinishes.Text);
             priceExports.Add("AEP8", lblFire.Text);
             priceExports.Add("AEP9", lblGSM.Text);
@@ -908,13 +986,14 @@ namespace SQT
                 string xmlPath = FindXmlFile(openFileDialog1.FileName);
                 if (xmlPath != null)
                 {
-                    loadData.Clear();
+                    saveData.Clear();
                     xmlPath = @"X:\Program Dependancies\Quote tool\Previous Prices\" + xmlPath + ".xml";
                     //MessageBox.Show(xmlPath);
                     loadingPreviousData = true;
-                    FetchLoadData(xmlPath);
+                    FetchsaveData(xmlPath);
                     Form1LoadFromXML();
                     GenerateListOfPrices();
+                    liftPricesPanel.Visible = false;
                 }
                 else
                 {
@@ -964,7 +1043,10 @@ namespace SQT
 
         private void Form1LoadFromXML()
         {
-            numberOfPagesNeeded = int.Parse(loadData["NumberOfPagesOpen"]);
+            if (saveData.ContainsKey("NumberOfPagesOpen"))
+            {
+                numberOfPagesNeeded = int.Parse(saveData["NumberOfPagesOpen"]);
+            }
             LoadPreviousXmlTb(tbMainAccomodation, tBMainAddress, tbMainBlankets, tbMainCartage, tbMainDuct, tbMainEntranceGuards, tbMainMargin,
                  tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired,
                  tbLift1Price, tbLift1Number, tbLift1Floors, tbLift2Price, tbLift2Number, tbLift2Floors, tb3Lift3Price, tbLift3Number, tbLift3Floors,
@@ -972,42 +1054,42 @@ namespace SQT
                  tbLift7Price, tbLift7Number, tbLift7Floors, tbLift8Price, tbLift8Number, tbLift8Floors, tbLift9Price, tbLift9Number, tbLift9Floors,
                  tbLift10Price, tbLift10Number, tbLift10Floors, tbLift11Price, tbLift11Numebr, tbLift11Floors, tbLift12Price, tbLift12Number, tbLift12Floors);
             LoadPreviousXmlCb(cbMainSecurity);
-            //num20Ft = int.Parse(loadData["num20Ft"]);
-            //num40Ft = int.Parse(loadData["num40Ft"]);
+            //num20Ft = int.Parse(saveData["num20Ft"]);
+            //num40Ft = int.Parse(saveData["num40Ft"]);
             ShippingCalculation(1);
-            for (int i = 0; i < int.Parse(loadData["num20Ft"]); i++)
+            for (int i = 0; i < int.Parse(saveData["num20Ft"]); i++)
             {
                 ShippingCalculation(2);
             }
-            for (int i = 0; i < int.Parse(loadData["num40Ft"]); i++)
+            for (int i = 0; i < int.Parse(saveData["num40Ft"]); i++)
             {
                 ShippingCalculation(3);
             }
 
-            if (int.Parse(loadData["exCurrency"]) == 0)
+            if (int.Parse(saveData["exCurrency"]) == 0)
             {
                 //AUD
                 SelectCurrency("A");
             }
-            else if (int.Parse(loadData["exCurrency"]) == 1)
+            else if (int.Parse(saveData["exCurrency"]) == 1)
             {
                 //USD
                 SelectCurrency("U");
             }
-            else if (int.Parse(loadData["exCurrency"]) == 2)
+            else if (int.Parse(saveData["exCurrency"]) == 2)
             {
                 //EUR
                 SelectCurrency("E");
             }
-                    }
+        }
 
         public void LoadPreviousXmlTb(params TextBox[] tb)
         {
             foreach (TextBox Box in tb)
             {
-                if (loadData.ContainsKey(Box.Name.ToString()))
+                if (saveData.ContainsKey(Box.Name.ToString()))
                 {
-                    Box.Text = loadData[Box.Name.ToString()];
+                    Box.Text = saveData[Box.Name.ToString()];
                 }
             }
         }
@@ -1016,9 +1098,9 @@ namespace SQT
         {
             foreach (CheckBox Box in cb)
             {
-                if (loadData.ContainsKey(Box.Name.ToString()))
+                if (saveData.ContainsKey(Box.Name.ToString()))
                 {
-                    Box.Checked = bool.Parse(loadData[Box.Name.ToString()]);
+                    Box.Checked = bool.Parse(saveData[Box.Name.ToString()]);
                 }
             }
         }
@@ -1027,14 +1109,14 @@ namespace SQT
         {
             foreach (RadioButton radio in rb)
             {
-                if (loadData.ContainsKey(radio.Name.ToString()))
+                if (saveData.ContainsKey(radio.Name.ToString()))
                 {
-                    radio.Checked = bool.Parse(loadData[radio.Name.ToString()]);
+                    radio.Checked = bool.Parse(saveData[radio.Name.ToString()]);
                 }
                 /*
                 if (radio.Checked == true && radio.Text == "")
                 {
-                    tb.Text = loadData[tb.Name.ToString()];
+                    tb.Text = saveData[tb.Name.ToString()];
                     return;
                 }
                 */
@@ -1244,6 +1326,18 @@ namespace SQT
             return "";
         }
 
+        public string RadioButtonToAsteriskHandeler(RadioButton yes, RadioButton no)
+        {
+            if (yes.Checked == true)
+            {
+                return "*";
+            }
+            else
+            {
+                return "";
+            }
+        }
+
         //called with all the checkboxes in each group, it will then read them and determine how to return a string
         public string CheckBoxHandler(params CheckBox[] cB)
         {
@@ -1296,12 +1390,6 @@ namespace SQT
 
         private void button2_Click_1(object sender, EventArgs e) // close button
         {
-            // lines below this till "return" are used for the close button to function as a generic debug button for testing. 
-            //close method works and requires no further testing at this time
-            //MessageBox.Show(FormalDate());
-
-            // return; // remove this line and above to have the close button function normally
-
             if (document != null)
             {
                 try
@@ -1754,5 +1842,6 @@ namespace SQT
         }
 
         #endregion
-            }
+
+    }
 }

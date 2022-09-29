@@ -193,7 +193,7 @@ namespace SQT
             basePrices["1CarFinishes"] = float.Parse(tbCarFinishes.Text);
             basePrices["2FireExtinguisher"] = float.Parse(tbFireExtinguishers.Text);
             basePrices["3GSMUnitPhone"] = float.Parse(tbGSM.Text);
-            basePrices["4ProtectiveBlanket"] = float.Parse(tbProtectiveBlanket.Text);
+            //basePrices["4ProtectiveBlanket"] = float.Parse(tbProtectiveBlanket.Text);
             basePrices["5SumpCover"] = float.Parse(tbSumpCover.Text);
             basePrices["6Wiring"] = float.Parse(tbWiring.Text);
             basePrices["7Sinage"] = float.Parse(tbSinage.Text);
@@ -227,6 +227,9 @@ namespace SQT
             labourPrice[int.Parse("14")] = int.Parse(tbLabour14.Text);
             labourPrice[int.Parse("15")] = int.Parse(tbLabour15.Text);
             labourPrice[int.Parse("16")] = int.Parse(tbLabour16.Text);
+            labourPrice[int.Parse("17")] = int.Parse(tbLabour17.Text);
+            labourPrice[int.Parse("18")] = int.Parse(tbLabour18.Text);
+            labourPrice[int.Parse("19")] = int.Parse(tbLabour19.Text);
         }
 
         private void SetTextToDict()
@@ -235,7 +238,7 @@ namespace SQT
             tbCarFinishes.Text = basePrices["1CarFinishes"].ToString();
             tbFireExtinguishers.Text = basePrices["2FireExtinguisher"].ToString();
             tbGSM.Text = basePrices["3GSMUnitPhone"].ToString();
-            tbProtectiveBlanket.Text = basePrices["4ProtectiveBlanket"].ToString();
+           // tbProtectiveBlanket.Text = basePrices["4ProtectiveBlanket"].ToString();
             tbSumpCover.Text = basePrices["5SumpCover"].ToString();
             tbWiring.Text = basePrices["6Wiring"].ToString();
             tbSinage.Text = basePrices["7Sinage"].ToString();
@@ -269,6 +272,9 @@ namespace SQT
             tbLabour14.Text = labourPrice[int.Parse("14")].ToString();
             tbLabour15.Text = labourPrice[int.Parse("15")].ToString();
             tbLabour16.Text = labourPrice[int.Parse("16")].ToString();
+            tbLabour17.Text = labourPrice[int.Parse("17")].ToString();
+            tbLabour18.Text = labourPrice[int.Parse("18")].ToString();
+            tbLabour19.Text = labourPrice[int.Parse("19")].ToString();
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)

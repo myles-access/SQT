@@ -29771,7 +29771,7 @@
             this.Controls.Add(this.panelLift5);
             this.Name = "Pin_Dif_Exp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "`";
+            this.Text = "Quote Generator";
             this.Load += new System.EventHandler(this.Pin_Dif_Exp_Load);
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();

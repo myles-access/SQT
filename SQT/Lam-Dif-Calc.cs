@@ -8,13 +8,16 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace SQT
 {
-    public partial class Pin_Mul_Exp : Form
+    public partial class Lam_Dif_Calc : Form
     {
         #region VARS
+        public bool debugMode = false; // bool switch to show all debug message boxes in the program, turn off before release
+
         public bool sucessfulSave = false;
         public bool loadingPreviousData = false;
         private bool costInEuro;
 
+        public string salesRep = "Lamont";
         public string quoteNumber = "";
         public string exchangeRateDate;
         public string exchangeRateText;
@@ -28,6 +31,8 @@ namespace SQT
         public int exCurrency = 0; // 0 AUD, 1 USD, 2 EUR
         public int num20Ft;
         public int num40Ft;
+        public int maxFloorNumber;
+        public int numberOfPagesNeeded;
 
         public Dictionary<string, float> basePrices = new Dictionary<string, float>();
         public Dictionary<int, float> labourPrice = new Dictionary<int, float>();
@@ -41,27 +46,19 @@ namespace SQT
         #endregion
 
         #region Form Loading Methods
-        public Pin_Mul_Exp()
+        public Lam_Dif_Calc()
         {
             InitializeComponent();
         }
 
-        private void Pin_Mul_Exp_Load(object sender, EventArgs e)
+        private void Lam_Dif_Calc_Load(object sender, EventArgs e)
         {
             //this.Enabled = true;
             FetchBasePrices();
             FetchCurrencyRates();
             FetchLabourPrices();
             GeneratePriceList();
-
-            lowestMargin = basePrices["17LowestMargin"];
-            tbMainMargin.Text = basePrices["18DefaultMargin"].ToString();
-            lblCostOfParts.Text = "$0";
-            lblCostIncludingMargin.Text = "$0";
-            lblGST.Text = "$0";
-            lblPriceIncludingGST.Text = "$0";
-            quoteNumber = ("QuAP" + DateTime.Now.ToString("yy") + "-000");
-            tBMainQuoteNumber.Text = quoteNumber;
+            SetLablesToDefault();
             lbWait.Visible = false;
             button3.Visible = false;
             button3.Enabled = false;
@@ -69,6 +66,52 @@ namespace SQT
             printButton.Enabled = false;
         }
 
+        private void SetLablesToDefault()
+        {
+            string s = "0";
+            lowestMargin = basePrices["17LowestMargin"];
+            tbMainMargin.Text = basePrices["18DefaultMargin"].ToString();
+            lblCostOfParts.Text = PriceRounding(float.Parse(s));
+            lblCostIncludingMargin.Text = PriceRounding(float.Parse(s));
+            lblGST.Text = PriceRounding(float.Parse(s));
+            lblPriceIncludingGST.Text = PriceRounding(float.Parse(s));
+            quoteNumber = ("QuAP" + DateTime.Now.ToString("yy") + "-000");
+            lblLift10Total.Text = s;
+            lblLift11Total.Text = s;
+            lblLift12Total.Text = s;
+            lblLift1Total.Text = s;
+            lblLift2Total.Text = s;
+            lblLift3Total.Text = s;
+            lblLift4Total.Text = s;
+            lblLift5Total.Text = s;
+            lblLift6Total.Text = s;
+            lblLift7Total.Text = s;
+            lblLift8Total.Text = s;
+            lblLift9Total.Text = s;
+            lblTotalLiftPrice.Text = "0";
+            tBMainQuoteNumber.Text = quoteNumber;
+        }
+
+        #endregion
+
+        #region Debug Box 
+        public void DebugBoxCall(string textSent)
+        {
+            if (!debugMode)
+            {
+                return;
+            }
+
+            DialogResult dialogResult = MessageBox.Show(textSent + "\nDo you wish to continue run?", "Debug Log", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                return;
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                this.Close();
+            }
+        }
         #endregion
 
         #region Importing Data from XML Files
@@ -105,7 +148,7 @@ namespace SQT
         //find the labour costs from the file int he server and write them into the labour prices dictionary 
         private void FetchLabourPrices()
         {
-            int dKey = 0;
+            int dKey = -1;
             float dName = -1;
 
             XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\LabourCosts.xml");
@@ -120,15 +163,20 @@ namespace SQT
                     dName = float.Parse(XMLR.ReadElementContentAsString());
                 }
 
-                if (dKey != 0 && dName != -1)
+                if (dKey != -1 && dName != -1)
                 {
                     labourPrice.Add(dKey, dName);
-                    dKey = 0;
+                    if (dKey > maxFloorNumber)
+                    {
+                        maxFloorNumber = dKey;
+                    }
+                    dKey = -1;
                     dName = -1;
                 }
             }
 
             XMLR.Close();
+            DebugBoxCall("Max Floor Number: " + maxFloorNumber);
         }
 
         //find the live currency rates from floatrates.com and write them into the Exchange rate dictionary 
@@ -223,6 +271,8 @@ namespace SQT
         {
             currencySelectionGroup.Enabled = false;
             currencySelectionGroup.Visible = false;
+            liftPricesPanel.Visible = true;
+            liftPricesPanel.Enabled = true;
 
             if (selector == "A")
             {
@@ -330,7 +380,7 @@ namespace SQT
             TextBoxFixer(tbMainEntranceGuards);
             TextBoxFixer(tbMainWeeksRequired);
 
-            if (floorsTbChecker() && marginTbChecker())
+            if (marginTbChecker()) // may need to add floors checker here??
             {
                 GeneratePriceList();
                 Form1SaveToXML();
@@ -383,17 +433,15 @@ namespace SQT
             //add security from base prices dictionary if box is checked
             if (cbMainSecurity.Checked)
             {
-                PriceListFormatting(lblSecurity, basePrices["Security"] + (basePrices["SecurityPerFloor"] * int.Parse(tBMainFloors.Text)));
+                PriceListFormatting(lblSecurity, basePrices["Security"] + (basePrices["SecurityPerFloor"] * FloorsAdder()));
             }
             else
             {
                 PriceListFormatting(lblSecurity, 0);
             }
 
-            for (int i = 0; i < int.Parse(tbMainNumberLifts.Text); i++)
-            {
-                PriceListFormatting(lblCost, float.Parse(tbCost.Text) * applicableExchangeRate);
-            }
+            TotalCostAdder();
+            PriceListFormatting(lblCost, float.Parse(lblTotalLiftPrice.Text) * applicableExchangeRate);
 
             // if needed show the unconverted cost of the lift
             if (exCurrency == 0)
@@ -408,7 +456,7 @@ namespace SQT
                 lblLiftNoConvertPrice.Visible = true;
                 lblLiftNoConvert.Text = "Cost of Lift (USD)";
                 costInEuro = false;
-                lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(tbCost.Text), costInEuro);
+                lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(lblTotalLiftPrice.Text), costInEuro);
             }
             else if (exCurrency == 2)
             {
@@ -416,14 +464,13 @@ namespace SQT
                 lblLiftNoConvertPrice.Visible = true;
                 lblLiftNoConvert.Text = "Cost of Lift (EUR)";
                 costInEuro = true;
-                lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(tbCost.Text), costInEuro);
+                lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(lblTotalLiftPrice.Text), costInEuro);
             }
 
             //add freight based on number of required containers 
             PriceListFormatting(lblFreight, freightTotal);
             //add labour from the labour costs dictionary based on number of floors in the building 
-            float f = labourPrice[int.Parse(tBMainFloors.Text)] * int.Parse(tbMainNumberLifts.Text);
-            PriceListFormatting(lblLabour, f);
+            PriceListFormatting(lblLabour, LabourAdder());
 
             marginPercent = 1 + (float.Parse(tbMainMargin.Text) / 100);
             float marginValue = (float.Parse(tbMainMargin.Text) / 100) * liftPrice;
@@ -433,11 +480,67 @@ namespace SQT
             lblCostIncludingMargin.Text = PriceRounding(liftPrice * marginPercent); //+ " (" + PriceRounding(marginValue) + ")";
             lblGST.Text = PriceRounding(liftPrice * marginPercent * 0.1f);
             lblPriceIncludingGST.Text = PriceRounding(liftPrice * marginPercent * 1.1f);
+        }
 
-            float multipliedPrice = float.Parse(tbCost.Text) * float.Parse(tbMainNumberLifts.Text);
-            float convertedMultipliedPrice = float.Parse(tbCost.Text) * float.Parse(tbMainNumberLifts.Text) * applicableExchangeRate;
-            lblCost.Text += " x" + tbMainNumberLifts.Text + " (" + PriceRounding(convertedMultipliedPrice) + ")";
-            lblLiftNoConvertPrice.Text += " x" + tbMainNumberLifts.Text + " (" + PriceRounding(multipliedPrice, costInEuro) + ")";
+        private float FloorsAdder()
+        {
+            float floors = 0;
+            floors += int.Parse(tbLift1Floors.Text) * int.Parse(tbLift1Number.Text);
+            floors += int.Parse(tbLift2Floors.Text) * int.Parse(tbLift2Number.Text);
+            floors += int.Parse(tbLift3Floors.Text) * int.Parse(tbLift3Number.Text);
+            floors += int.Parse(tbLift4Floors.Text) * int.Parse(tbLift4Number.Text);
+            floors += int.Parse(tbLift5Floors.Text) * int.Parse(tbLift5Number.Text);
+            floors += int.Parse(tbLift6Floors.Text) * int.Parse(tbLift6Number.Text);
+            floors += int.Parse(tbLift7Floors.Text) * int.Parse(tbLift7Number.Text);
+            floors += int.Parse(tbLift8Floors.Text) * int.Parse(tbLift8Number.Text);
+            floors += int.Parse(tbLift9Floors.Text) * int.Parse(tbLift9Number.Text);
+            floors += int.Parse(tbLift10Floors.Text) * int.Parse(tbLift10Number.Text);
+            floors += int.Parse(tbLift11Floors.Text) * int.Parse(tbLift11Numebr.Text);
+            floors += int.Parse(tbLift12Floors.Text) * int.Parse(tbLift12Number.Text);
+            return floors;
+        }
+
+        public int LiftAdder()
+        {
+            int lifts = 0;
+            lifts += int.Parse(tbLift1Number.Text);
+            lifts += int.Parse(tbLift2Number.Text);
+            lifts += int.Parse(tbLift3Number.Text);
+            lifts += int.Parse(tbLift4Number.Text);
+            lifts += int.Parse(tbLift5Number.Text);
+            lifts += int.Parse(tbLift6Number.Text);
+            lifts += int.Parse(tbLift7Number.Text);
+            lifts += int.Parse(tbLift8Number.Text);
+            lifts += int.Parse(tbLift9Number.Text);
+            lifts += int.Parse(tbLift10Number.Text);
+            lifts += int.Parse(tbLift11Numebr.Text);
+            lifts += int.Parse(tbLift12Number.Text);
+            return lifts;
+        }
+
+        private float LabourAdder()
+        {
+            TextBox[] tbs = { tbLift1Floors, tbLift2Floors, tbLift3Floors, tbLift4Floors, tbLift5Floors, tbLift6Floors, tbLift7Floors, tbLift7Floors, tbLift8Floors, tbLift9Floors, tbLift10Floors, tbLift11Floors, tbLift12Floors };
+            float labour = 0;
+
+            foreach (TextBox i in tbs)
+            {
+                floorsTbChecker(i);
+            }
+
+            labour += labourPrice[int.Parse(tbLift1Floors.Text)] * int.Parse(tbLift1Number.Text);
+            labour += labourPrice[int.Parse(tbLift2Floors.Text)] * int.Parse(tbLift2Number.Text);
+            labour += labourPrice[int.Parse(tbLift3Floors.Text)] * int.Parse(tbLift3Number.Text);
+            labour += labourPrice[int.Parse(tbLift4Floors.Text)] * int.Parse(tbLift4Number.Text);
+            labour += labourPrice[int.Parse(tbLift5Floors.Text)] * int.Parse(tbLift5Number.Text);
+            labour += labourPrice[int.Parse(tbLift6Floors.Text)] * int.Parse(tbLift6Number.Text);
+            labour += labourPrice[int.Parse(tbLift7Floors.Text)] * int.Parse(tbLift7Number.Text);
+            labour += labourPrice[int.Parse(tbLift8Floors.Text)] * int.Parse(tbLift8Number.Text);
+            labour += labourPrice[int.Parse(tbLift9Floors.Text)] * int.Parse(tbLift9Number.Text);
+            labour += labourPrice[int.Parse(tbLift10Floors.Text)] * int.Parse(tbLift10Number.Text);
+            labour += labourPrice[int.Parse(tbLift11Floors.Text)] * int.Parse(tbLift11Numebr.Text);
+            labour += labourPrice[int.Parse(tbLift12Floors.Text)] * int.Parse(tbLift12Number.Text);
+            return labour;
         }
 
         //Sends prices through the rounder method as well as adding them to the total cost of the lift for the total
@@ -456,9 +559,9 @@ namespace SQT
         }
 
         //rounds all prices to 2 decimal places and added the applicable currency symbols as well as commas and decimal points
-        private string PriceRounding(float s, bool b = false)
+        private string PriceRounding(float s, bool isPriceInEuro = false)
         {
-            if (b)
+            if (isPriceInEuro)
             {
                 return "€" + Math.Round(s, 2).ToString("N", new System.Globalization.CultureInfo("en-US"));
             }
@@ -469,12 +572,12 @@ namespace SQT
         }
 
         //Checks that the floors entered is within the acceptable threshold
-        public bool floorsTbChecker()
+        public bool floorsTbChecker(TextBox tb)
         {
             int i = 0;
             try
             {
-                i = int.Parse(tBMainFloors.Text);
+                i = int.Parse(tb.Text);
             }
             catch
             {
@@ -482,7 +585,7 @@ namespace SQT
                 return false;
             }
 
-            if (i > 16 || i < 0)
+            if (i > maxFloorNumber || i < 0)
             {
                 MessageBox.Show("Invalid floor number entered ");
                 return false;
@@ -532,10 +635,9 @@ namespace SQT
             {
                 WordData("AE101", tBMainAddress.Text); //address
                 WordData("AE102", tBMainQuoteNumber.Text);//quote number
-                WordData("AE103", tbMainNumberLifts.Text);//number of lifts
-                WordData("AE104", tBMainFloors.Text);//number of floors
+                WordData("AE103", TotalLifts().ToString());//number of lifts
 
-                Pin_Mul_Calc qI = new Pin_Mul_Calc();
+                Pin_Dif_Exp qI = new Pin_Dif_Exp();
                 qI.Show();//open questionaire 
                 //questions complete method called from final form of querstions to continue the export to word function. 
             }
@@ -550,9 +652,10 @@ namespace SQT
         public void WordSetup()
         {
             lblWaitControl(true);
+            string filePath = @"X:\Program Dependancies\Quote tool\Template Word Docs\Template-" + salesRep + "-Diff-" + numberOfPagesNeeded + ".docx";
             fileOpen = new Word.Application();
-            document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-Pintaric-Multi.docx", ReadOnly: false);
             fileOpen.Visible = true;
+            document = fileOpen.Documents.Open(filePath, ReadOnly: false);
             document.Activate();
         }
 
@@ -600,7 +703,7 @@ namespace SQT
             WordData("AE213", lblGST.Text);
             WordData("AE214", lblPriceIncludingGST.Text);
 
-            float totalPrice = float.Parse(tbCost.Text) * float.Parse(tbMainNumberLifts.Text) * applicableExchangeRate;
+            float totalPrice = float.Parse(lblTotalLiftPrice.Text) * applicableExchangeRate;
             WordData("AE220", PriceRounding(totalPrice));
 
             WordReplaceLooper(wordExportData);// loop the find and replace method to populate the info 
@@ -719,7 +822,7 @@ namespace SQT
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 fileOpen = new Word.Application();
-                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\PriceExport.docx", ReadOnly: false);
+                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-" + salesRep + "-Price-" + numberOfPagesNeeded + ".docx", ReadOnly: false);
                 SavePricesToDict();
                 fileOpen.Visible = true;
                 document.Activate();
@@ -746,14 +849,86 @@ namespace SQT
 
         {
             float f = liftPrice * (marginPercent - 1);
-
+            float f2;
             priceExports.Clear();
+
             priceExports.Add("AEP1", tBMainAddress.Text);
             priceExports.Add("AEP2", tBMainQuoteNumber.Text);
             priceExports.Add("AEP3", FormalDate());
             priceExports.Add("AEP4", exchangeRateText);
-            priceExports.Add("AEP5", lblLiftNoConvertPrice.Text);
-            priceExports.Add("AEP6", lblCost.Text);
+
+            f2 = float.Parse(tbLift1Price.Text) * applicableExchangeRate;
+            priceExports.Add("P1AEP5", PriceRounding(float.Parse(tbLift1Price.Text), costInEuro));
+            priceExports.Add("P1AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P1AEP38", tbLift1Floors.Text);
+            priceExports.Add("P1AEP39", tbLift1Number.Text);
+
+            f2 = float.Parse(tbLift2Price.Text) * applicableExchangeRate;
+            priceExports.Add("P2AEP5", PriceRounding(float.Parse(tbLift2Price.Text), costInEuro));
+            priceExports.Add("P2AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P2AEP38", tbLift2Floors.Text);
+            priceExports.Add("P2AEP39", tbLift2Number.Text);
+
+            f2 = float.Parse(tb3Lift3Price.Text) * applicableExchangeRate;
+            priceExports.Add("P3AEP5", PriceRounding(float.Parse(tb3Lift3Price.Text), costInEuro));
+            priceExports.Add("P3AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P3AEP38", tbLift3Floors.Text);
+            priceExports.Add("P3AEP39", tbLift3Number.Text);
+
+            f2 = float.Parse(tbLift4Price.Text) * applicableExchangeRate;
+            priceExports.Add("P4AEP5", PriceRounding(float.Parse(tbLift4Price.Text), costInEuro));
+            priceExports.Add("P4AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P4AEP38", tbLift4Floors.Text);
+            priceExports.Add("P4AEP39", tbLift4Number.Text);
+
+            f2 = float.Parse(tbLift5Price.Text) * applicableExchangeRate;
+            priceExports.Add("P5AEP5", PriceRounding(float.Parse(tbLift5Price.Text), costInEuro));
+            priceExports.Add("P5AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P5AEP38", tbLift5Floors.Text);
+            priceExports.Add("P5AEP39", tbLift5Number.Text);
+
+            f2 = float.Parse(tbLift6Price.Text) * applicableExchangeRate;
+            priceExports.Add("P6AEP5", PriceRounding(float.Parse(tbLift6Price.Text), costInEuro));
+            priceExports.Add("P6AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P6AEP38", tbLift6Floors.Text);
+            priceExports.Add("P6AEP39", tbLift6Number.Text);
+
+            f2 = float.Parse(tbLift7Price.Text) * applicableExchangeRate;
+            priceExports.Add("P7AEP5", PriceRounding(float.Parse(tbLift7Price.Text), costInEuro));
+            priceExports.Add("P7AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P7AEP38", tbLift7Floors.Text);
+            priceExports.Add("P7AEP39", tbLift7Number.Text);
+
+            f2 = float.Parse(tbLift8Price.Text) * applicableExchangeRate;
+            priceExports.Add("P8AEP5", PriceRounding(float.Parse(tbLift8Price.Text), costInEuro));
+            priceExports.Add("P8AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P8AEP38", tbLift8Floors.Text);
+            priceExports.Add("P8AEP39", tbLift8Number.Text);
+
+            f2 = float.Parse(tbLift9Price.Text) * applicableExchangeRate;
+            priceExports.Add("P9AEP5", PriceRounding(float.Parse(tbLift9Price.Text), costInEuro));
+            priceExports.Add("P9AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P9AEP38", tbLift9Floors.Text);
+            priceExports.Add("P9AEP39", tbLift9Number.Text);
+
+            f2 = float.Parse(tbLift10Price.Text) * applicableExchangeRate;
+            priceExports.Add("P10AEP5", PriceRounding(float.Parse(tbLift10Price.Text), costInEuro));
+            priceExports.Add("P10AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P10AEP38", tbLift10Floors.Text);
+            priceExports.Add("P10AEP39", tbLift10Number.Text);
+
+            f2 = float.Parse(tbLift11Price.Text) * applicableExchangeRate;
+            priceExports.Add("P11AEP5", PriceRounding(float.Parse(tbLift11Price.Text), costInEuro));
+            priceExports.Add("P11AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P11AEP38", tbLift11Floors.Text);
+            priceExports.Add("P11AEP39", tbLift11Numebr.Text);
+
+            f2 = float.Parse(tbLift12Price.Text) * applicableExchangeRate;
+            priceExports.Add("P12AEP5", PriceRounding(float.Parse(tbLift12Price.Text), costInEuro));
+            priceExports.Add("P12AEP6", PriceRounding(float.Parse(f2.ToString()), false));
+            priceExports.Add("P12AEP38", tbLift12Floors.Text);
+            priceExports.Add("P12AEP39", tbLift12Number.Text);
+
             priceExports.Add("AEP7", lblFinishes.Text);
             priceExports.Add("AEP8", lblFire.Text);
             priceExports.Add("AEP9", lblGSM.Text);
@@ -817,6 +992,8 @@ namespace SQT
                     loadingPreviousData = true;
                     FetchsaveData(xmlPath);
                     Form1LoadFromXML();
+                    GenerateListOfPrices();
+                    liftPricesPanel.Visible = false;
                 }
                 else
                 {
@@ -866,8 +1043,16 @@ namespace SQT
 
         private void Form1LoadFromXML()
         {
-            LoadPreviousXmlTb(tbCost, tbMainAccomodation, tBMainAddress, tbMainBlankets, tbMainCartage, tbMainDuct, tbMainEntranceGuards, tBMainFloors, tbMainMargin,
-                tbMainNumberLifts, tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired);
+            if (saveData.ContainsKey("NumberOfPagesOpen"))
+            {
+                numberOfPagesNeeded = int.Parse(saveData["NumberOfPagesOpen"]);
+            }
+            LoadPreviousXmlTb(tbMainAccomodation, tBMainAddress, tbMainBlankets, tbMainCartage, tbMainDuct, tbMainEntranceGuards, tbMainMargin,
+                 tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired,
+                 tbLift1Price, tbLift1Number, tbLift1Floors, tbLift2Price, tbLift2Number, tbLift2Floors, tb3Lift3Price, tbLift3Number, tbLift3Floors,
+                 tbLift4Price, tbLift4Number, tbLift4Floors, tbLift5Price, tbLift5Number, tbLift5Floors, tbLift6Price, tbLift6Number, tbLift6Floors,
+                 tbLift7Price, tbLift7Number, tbLift7Floors, tbLift8Price, tbLift8Number, tbLift8Floors, tbLift9Price, tbLift9Number, tbLift9Floors,
+                 tbLift10Price, tbLift10Number, tbLift10Floors, tbLift11Price, tbLift11Numebr, tbLift11Floors, tbLift12Price, tbLift12Number, tbLift12Floors);
             LoadPreviousXmlCb(cbMainSecurity);
             //num20Ft = int.Parse(saveData["num20Ft"]);
             //num40Ft = int.Parse(saveData["num40Ft"]);
@@ -920,17 +1105,21 @@ namespace SQT
             }
         }
 
-        public void LoadPreviousXmlRb(TextBox tb, params RadioButton[] rb)
+        public void LoadPreviousXmlRb(params RadioButton[] rb)
         {
             foreach (RadioButton radio in rb)
             {
-                radio.Checked = bool.Parse(saveData[radio.Name.ToString()]);
-
+                if (saveData.ContainsKey(radio.Name.ToString()))
+                {
+                    radio.Checked = bool.Parse(saveData[radio.Name.ToString()]);
+                }
+                /*
                 if (radio.Checked == true && radio.Text == "")
                 {
                     tb.Text = saveData[tb.Name.ToString()];
                     return;
                 }
+                */
             }
         }
 
@@ -991,15 +1180,17 @@ namespace SQT
 
         private void Form1SaveToXML()
         {
-            SaveTbToXML(tbMainAccomodation, tBMainAddress, tbMainBlankets, tbMainCartage, tbMainDuct, tbMainEntranceGuards, tBMainFloors, tbMainMargin,
-                tbMainNumberLifts, tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired, tbCost);
+            SaveTbToXML(tbMainAccomodation, tBMainAddress, tbMainBlankets, tbMainCartage, tbMainDuct, tbMainEntranceGuards, tbMainMargin,
+                 tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired,
+                 tbLift1Price, tbLift1Number, tbLift1Floors, tbLift2Price, tbLift2Number, tbLift2Floors, tb3Lift3Price, tbLift3Number, tbLift3Floors,
+                 tbLift4Price, tbLift4Number, tbLift4Floors, tbLift5Price, tbLift5Number, tbLift5Floors, tbLift6Price, tbLift6Number, tbLift6Floors,
+                 tbLift7Price, tbLift7Number, tbLift7Floors, tbLift8Price, tbLift8Number, tbLift8Floors, tbLift9Price, tbLift9Number, tbLift9Floors,
+                 tbLift10Price, tbLift10Number, tbLift10Floors, tbLift11Price, tbLift11Numebr, tbLift11Floors, tbLift12Price, tbLift12Number, tbLift12Floors);
             SaveCbToXML(cbMainSecurity);
             saveData["num20Ft"] = num20Ft.ToString();
             saveData["num40Ft"] = num40Ft.ToString();
             saveData["exCurrency"] = exCurrency.ToString();
-
         }
-
         #endregion
 
         #region Data Formatting methods for external calls
@@ -1135,6 +1326,18 @@ namespace SQT
             return "";
         }
 
+        public string RadioButtonToAsteriskHandeler(RadioButton yes, RadioButton no)
+        {
+            if (yes.Checked == true)
+            {
+                return "*";
+            }
+            else
+            {
+                return "";
+            }
+        }
+
         //called with all the checkboxes in each group, it will then read them and determine how to return a string
         public string CheckBoxHandler(params CheckBox[] cB)
         {
@@ -1187,12 +1390,6 @@ namespace SQT
 
         private void button2_Click_1(object sender, EventArgs e) // close button
         {
-            // lines below this till "return" are used for the close button to function as a generic debug button for testing. 
-            //close method works and requires no further testing at this time
-            //MessageBox.Show(FormalDate());
-
-            // return; // remove this line and above to have the close button function normally
-
             if (document != null)
             {
                 try
@@ -1210,6 +1407,42 @@ namespace SQT
         #endregion
 
         #region unused methods
+        private void liftPricesPanel_Paint(object sender, PaintEventArgs e)
+        {
+            //
+        }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+
+        private void label36_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+
+
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
         private void label13_Click(object sender, EventArgs e)
         {
             //
@@ -1245,6 +1478,367 @@ namespace SQT
             {
                 quoteNumber = tBMainQuoteNumber.Text;
             }
+        }
+
+        #endregion
+
+        #region Configure Lift Prices Menu
+        private void BtGenerateLiftPrices_Click(object sender, EventArgs e)
+        {
+            TotalCostAdder();
+            PagesRequired();
+            GenerateListOfPrices();
+            DebugBoxCall("number of pages needed " + numberOfPagesNeeded.ToString());
+        }
+
+        private void PagesRequired()
+        {
+            int i = 0;
+            if (tbLift1Number.Text == "0")
+            {
+                i++;
+            }
+            if (tbLift2Number.Text == "0")
+            {
+                i++;
+            }
+            if (tbLift3Number.Text == "0")
+            {
+                i++;
+            }
+            if (tbLift4Number.Text == "0")
+            {
+                i++;
+            }
+            if (tbLift5Number.Text == "0")
+            {
+                i++;
+            }
+            if (tbLift6Number.Text == "0")
+            {
+                i++;
+            }
+            if (tbLift7Number.Text == "0")
+            {
+                i++;
+            }
+            if (tbLift8Number.Text == "0")
+            {
+                i++;
+            }
+            if (tbLift9Number.Text == "0")
+            {
+                i++;
+            }
+            if (tbLift10Number.Text == "0")
+            {
+                i++;
+            }
+            if (tbLift11Numebr.Text == "0")
+            {
+                i++;
+            }
+            if (tbLift12Number.Text == "0")
+            {
+                i++;
+            }
+            numberOfPagesNeeded = 12 - i;
+        }
+        #region Text Changed Methods
+        private void tbLift1Floors_TextChanged(object sender, EventArgs e)
+        {
+            floorsTbChecker(tbLift1Floors);
+        }
+
+        private void tbLift2Floors_TextChanged(object sender, EventArgs e)
+        {
+
+            floorsTbChecker(tbLift2Floors);
+        }
+
+        private void tbLift3Floors_TextChanged(object sender, EventArgs e)
+        {
+
+            floorsTbChecker(tbLift3Floors);
+        }
+
+        private void tbLift4Floors_TextChanged(object sender, EventArgs e)
+        {
+            floorsTbChecker(tbLift4Floors);
+
+        }
+
+        private void tbLift5Floors_TextChanged(object sender, EventArgs e)
+        {
+            floorsTbChecker(tbLift5Floors);
+
+        }
+
+        private void tbLift6Floors_TextChanged(object sender, EventArgs e)
+        {
+
+            floorsTbChecker(tbLift6Floors);
+        }
+
+        private void tbLift7Floors_TextChanged(object sender, EventArgs e)
+        {
+
+            floorsTbChecker(tbLift7Floors);
+        }
+
+        private void tbLift8Floors_TextChanged(object sender, EventArgs e)
+        {
+            floorsTbChecker(tbLift8Floors);
+
+        }
+
+        private void tbLift9Floors_TextChanged(object sender, EventArgs e)
+        {
+
+            floorsTbChecker(tbLift9Floors);
+        }
+
+        private void tbLift10Floors_TextChanged(object sender, EventArgs e)
+        {
+
+            floorsTbChecker(tbLift10Floors);
+        }
+
+        private void tbLift11Floors_TextChanged(object sender, EventArgs e)
+        {
+
+            floorsTbChecker(tbLift11Floors);
+        }
+
+        private void tbLift12Floors_TextChanged(object sender, EventArgs e)
+        {
+
+            floorsTbChecker(tbLift12Floors);
+        }
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift8Price, tbLift8Number, lblLift8Total);
+        }
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift9Price, tbLift9Number, lblLift9Total);
+        }
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift10Price, tbLift10Number, lblLift10Total);
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift11Price, tbLift11Numebr, lblLift11Total);
+        }
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift12Price, tbLift12Number, lblLift12Total);
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            RefreshLiftPrices(tbLift1Price, tbLift1Number, lblLift1Total);
+        }
+
+        private void tbLift2Price_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift2Price, tbLift2Number, lblLift2Total);
+        }
+
+        private void tb3Lift3Price_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tb3Lift3Price, tbLift3Number, lblLift3Total);
+        }
+
+        private void tbLift4Price_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift4Price, tbLift4Number, lblLift4Total);
+        }
+
+        private void tbLift5Price_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift5Price, tbLift5Number, lblLift5Total);
+        }
+
+        private void tbLift6Price_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift6Price, tbLift6Number, lblLift6Total);
+        }
+
+        private void tbLift7Price_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift7Price, tbLift7Number, lblLift7Total);
+        }
+
+        private void tbLift1Number_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift1Price, tbLift1Number, lblLift1Total);
+        }
+
+        private void tbLift2Number_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift2Price, tbLift2Number, lblLift2Total);
+        }
+
+        private void tbLift3Number_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tb3Lift3Price, tbLift3Number, lblLift3Total);
+        }
+
+        private void tbLift4Number_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift4Price, tbLift4Number, lblLift4Total);
+        }
+
+        private void tbLift5Number_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift5Price, tbLift5Number, lblLift5Total);
+        }
+
+        private void tbLift6Number_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift6Price, tbLift6Number, lblLift6Total);
+        }
+
+        private void tbLift7Number_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift7Price, tbLift7Number, lblLift7Total);
+        }
+
+        private void tbLift8Number_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift8Price, tbLift8Number, lblLift8Total);
+        }
+
+        private void tbLift10Number_TextChanged(object sender, EventArgs e)
+        {
+            RefreshLiftPrices(tbLift10Price, tbLift10Number, lblLift10Total);
+
+        }
+
+        private void tbLift11Numebr_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift11Price, tbLift11Numebr, lblLift11Total);
+        }
+        private void tbLift9Number_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift9Price, tbLift9Number, lblLift9Total);
+        }
+
+        private void tbLift12Number_TextChanged(object sender, EventArgs e)
+        {
+
+            RefreshLiftPrices(tbLift12Price, tbLift12Number, lblLift12Total);
+        }
+        #endregion
+        private void btnConfigurePrices_Click(object sender, EventArgs e)
+        {
+            liftPricesPanel.Enabled = true;
+            liftPricesPanel.Visible = true;
+        }
+
+        private void HideButton_Click(object sender, EventArgs e)
+        {
+            SendPricesToMainForm();
+            liftPricesPanel.Visible = false;
+        }
+
+        private void SendPricesToMainForm()
+        {/*
+            bool euro = false;
+            if (exCurrency == 2)
+            {
+                euro = true;
+            }
+            lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(lblTotalLiftPrice.Text));
+            PriceListFormatting(lblCost, float.Parse(lblTotalLiftPrice.Text), euro);
+            */
+        }
+
+        private void RefreshLiftPrices(TextBox price, TextBox number, Label total)
+        {
+            try
+            {
+                total.Text = (float.Parse(price.Text) * float.Parse(number.Text)).ToString();
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private int TotalLifts()
+        {
+            int total = 0;
+            total += int.Parse(tbLift11Numebr.Text);
+            total += int.Parse(tbLift2Number.Text);
+            total += int.Parse(tbLift3Number.Text);
+            total += int.Parse(tbLift4Number.Text);
+            total += int.Parse(tbLift5Number.Text);
+            total += int.Parse(tbLift6Number.Text);
+            total += int.Parse(tbLift7Number.Text);
+            total += int.Parse(tbLift8Number.Text);
+            total += int.Parse(tbLift9Number.Text);
+            total += int.Parse(tbLift10Number.Text);
+            total += int.Parse(tbLift11Numebr.Text);
+            total += int.Parse(tbLift12Number.Text);
+            return total;
+        }
+
+        private void TotalCostAdder()
+        {
+            lblWaitControl(true);
+            float f = 0;
+            f += LabelToFloat(lblLift1Total);
+            f += LabelToFloat(lblLift2Total);
+            f += LabelToFloat(lblLift3Total);
+            f += LabelToFloat(lblLift4Total);
+            f += LabelToFloat(lblLift5Total);
+            f += LabelToFloat(lblLift6Total);
+            f += LabelToFloat(lblLift7Total);
+            f += LabelToFloat(lblLift8Total);
+            f += LabelToFloat(lblLift9Total);
+            f += LabelToFloat(lblLift10Total);
+            f += LabelToFloat(lblLift11Total);
+            f += LabelToFloat(lblLift12Total);
+            lblTotalLiftPrice.Text = f.ToString();
+            lblWaitControl(false);
+        }
+
+        private float LabelToFloat(Label tb)
+        {
+            float f = -1;
+            try
+            {
+                f = float.Parse(tb.Text);
+            }
+            catch (Exception)
+            {
+                return f;
+            }
+            return f;
         }
 
         #endregion
