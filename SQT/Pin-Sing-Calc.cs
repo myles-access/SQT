@@ -592,6 +592,7 @@ namespace SQT
             SaveReloadXMLFile(saveData);
             WordFinish();//finish the methods 
 
+            MessageBox.Show("Quote sucessfully exported");
         }
 
         // loops through the word document performing a find and replace operation
@@ -631,10 +632,8 @@ namespace SQT
         // closes the word document 
         private void WordFinish()
         {
-            fileOpen.ShowMe();
             fileOpen.Quit();
 
-            MessageBox.Show("Quote sucessfully exported");
             lblWaitControl(false);
         }
 
@@ -710,6 +709,7 @@ namespace SQT
                 WordReplaceLooper(priceExports);
                 document.SaveAs2(saveFileDialog1.FileName);
                 document.Close();
+                fileOpen.Quit();
                 return true;
             }
             else

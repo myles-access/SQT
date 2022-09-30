@@ -727,6 +727,7 @@ namespace SQT
                 WordReplaceLooper(priceExports);
                 document.SaveAs2(saveFileDialog1.FileName);
                 document.Close();
+                fileOpen.Quit();
                 return true;
             }
             else
