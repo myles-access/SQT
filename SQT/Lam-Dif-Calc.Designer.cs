@@ -2552,6 +2552,7 @@
             this.btnConfigurePrices.TabStop = false;
             this.btnConfigurePrices.Text = "Configure Lift Prices";
             this.btnConfigurePrices.UseVisualStyleBackColor = true;
+            this.btnConfigurePrices.Click += new System.EventHandler(this.btnConfigurePrices_Click);
             // 
             // openFileDialog1
             // 
@@ -2577,7 +2578,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1755, 1234);
+            this.Controls.Add(this.lbWait);
             this.Controls.Add(this.liftPricesPanel);
+            this.Controls.Add(this.currencySelectionGroup);
             this.Controls.Add(this.tBMainQuoteNumber);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tBMainAddress);
@@ -2600,7 +2603,6 @@
             this.Controls.Add(this.tbMainStorage);
             this.Controls.Add(this.tbMainAccomodation);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lbWait);
             this.Controls.Add(this.tbMainBlankets);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.printButton);
@@ -2621,7 +2623,6 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.shippingLbl20);
-            this.Controls.Add(this.currencySelectionGroup);
             this.Controls.Add(this.btnConfigurePrices);
             this.Name = "Lam_Dif_Calc";
             this.Text = "Quote Calculator";

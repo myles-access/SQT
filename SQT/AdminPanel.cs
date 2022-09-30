@@ -32,9 +32,6 @@ namespace SQT
 
             //f.Hide();
         }
-        #endregion
-
-        #region XML Methods
         private void FetchBasePrices()
         {
             string dKey = "";
@@ -99,63 +96,9 @@ namespace SQT
             }
             XMLR.Close();
         }
-
-        private void BasePricesXMLWriter()
-        {
-            XmlTextWriter xmlWriter = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\QuotePriceList.xml", Encoding.UTF8);
-            xmlWriter.Formatting = Formatting.Indented;
-            xmlWriter.WriteStartDocument();
-
-            xmlWriter.WriteStartElement("prices");
-
-            foreach (KeyValuePair<string, float> bP in basePrices)
-            {
-                xmlWriter.WriteStartElement("item");
-
-                xmlWriter.WriteElementString("costItem", bP.Key);
-                xmlWriter.WriteElementString("price", bP.Value.ToString());
-
-                xmlWriter.WriteEndElement(); // item element end
-            }
-
-            xmlWriter.WriteEndElement(); // prices element end
-            xmlWriter.Close();
-        }
-
-        private void LabourPricesXMLWriter()
-        {
-            XmlTextWriter xmlWriter = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\LabourCosts.xml", Encoding.UTF8);
-            xmlWriter.Formatting = Formatting.Indented;
-            xmlWriter.WriteStartDocument();
-
-            xmlWriter.WriteStartElement("Costs");
-
-            foreach (KeyValuePair<int, float> lC in labourPrice)
-            {
-                xmlWriter.WriteStartElement("Cost");
-
-                xmlWriter.WriteElementString("Floors", lC.Key.ToString());
-                xmlWriter.WriteElementString("Price", lC.Value.ToString());
-
-                xmlWriter.WriteEndElement(); //Cost element end
-            }
-
-            xmlWriter.WriteEndElement(); //Costs element end 
-            xmlWriter.Close();
-        }
         #endregion
 
-        #region Button Click Methods
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            var mainForm = Application.OpenForms.OfType<MainMenu>().Single();
-            mainForm.CloseFormMethod();
-        }
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            SetTextToDict();
-        }
-
+        #region Save Prices to XML
         private void btnSave_Click(object sender, EventArgs e)
         {
             btnSave.BackColor = Color.Red;
@@ -173,18 +116,6 @@ namespace SQT
             }
             btnSave.BackColor = Color.LightGreen;
 
-        }
-        #endregion
-
-        #region Unused Methods
-        private void label1_Click(object sender, EventArgs e) { }
-        private void label33_Click(object sender, EventArgs e) { }
-        #endregion
-
-        void myForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            var mainForm = Application.OpenForms.OfType<MainMenu>().Single();
-            mainForm.CloseFormMethod();
         }
 
         private void UpdateDict()
@@ -231,7 +162,58 @@ namespace SQT
             labourPrice[int.Parse("18")] = int.Parse(tbLabour18.Text);
             labourPrice[int.Parse("19")] = int.Parse(tbLabour19.Text);
         }
+        private void BasePricesXMLWriter()
+        {
+            XmlTextWriter xmlWriter = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\QuotePriceList.xml", Encoding.UTF8);
+            xmlWriter.Formatting = Formatting.Indented;
+            xmlWriter.WriteStartDocument();
 
+            xmlWriter.WriteStartElement("prices");
+
+            foreach (KeyValuePair<string, float> bP in basePrices)
+            {
+                xmlWriter.WriteStartElement("item");
+
+                xmlWriter.WriteElementString("costItem", bP.Key);
+                xmlWriter.WriteElementString("price", bP.Value.ToString());
+
+                xmlWriter.WriteEndElement(); // item element end
+            }
+
+            xmlWriter.WriteEndElement(); // prices element end
+            xmlWriter.Close();
+        }
+
+        private void LabourPricesXMLWriter()
+        {
+            XmlTextWriter xmlWriter = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\LabourCosts.xml", Encoding.UTF8);
+            xmlWriter.Formatting = Formatting.Indented;
+            xmlWriter.WriteStartDocument();
+
+            xmlWriter.WriteStartElement("Costs");
+
+            foreach (KeyValuePair<int, float> lC in labourPrice)
+            {
+                xmlWriter.WriteStartElement("Cost");
+
+                xmlWriter.WriteElementString("Floors", lC.Key.ToString());
+                xmlWriter.WriteElementString("Price", lC.Value.ToString());
+
+                xmlWriter.WriteEndElement(); //Cost element end
+            }
+
+            xmlWriter.WriteEndElement(); //Costs element end 
+            xmlWriter.Close();
+        }
+
+        #endregion
+
+        #region Reset values to default
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            SetTextToDict();
+        }
         private void SetTextToDict()
         {
             //update text box values based off base prices dictionary
@@ -277,11 +259,36 @@ namespace SQT
             tbLabour19.Text = labourPrice[int.Parse("19")].ToString();
         }
 
+        #endregion
+
+        #region closing methods
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            var mainForm = Application.OpenForms.OfType<MainMenu>().Single();
+            mainForm.CloseFormMethod();
+        }
+
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        void myForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var mainForm = Application.OpenForms.OfType<MainMenu>().Single();
+            mainForm.CloseFormMethod();
+        }
+        #endregion
+
+        #region Unused Methods
+        private void label1_Click(object sender, EventArgs e)
+        {
+            //
+        }
+        private void label33_Click(object sender, EventArgs e)
+        {
+            //
+        }
+        #endregion
     }
 }
-
