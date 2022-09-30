@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SQT
 {
     public partial class Pin_Mul_Calc : Form
     {
-       Pin_Mul_Exp f = Application.OpenForms.OfType<Pin_Mul_Exp>().Single();
+        Pin_Mul_Exp f = Application.OpenForms.OfType<Pin_Mul_Exp>().Single();
 
         public Pin_Mul_Calc()
         {
@@ -189,27 +183,27 @@ namespace SQT
             f.WordData("AE210", f.RadioButtonHandeler(null, rbOutofServiceNo, rbOutofServiceYes));//out of service 
             f.WordData("AE178", f.CheckboxTrueToYes(f.cbMainSecurity));//security cabiling only 
 
-            f.SaveTbToXML(tbAuxCOPLocation, tbCOPFinish, tbDesignations, tbKeyswitchLocation, tbMainCOPLocation, tbNumberOfCOPS,
-                tbCarDoorFinish, tbCeilingFinish, tbFloorFinish, tbFrontWall, tbHandrail, tbMirror, tbNumOfLEDLights, tbRearWall, tbSideWall,
-                tbDoorHeight, tbDoorTracks, tbDoorWidth, tbLandingDoorFinish, tbDepth, tbHeight, tbLiftCarNotes, tbLiftRating, tbLoad, tbNumofCarEntrances, tbSpeed,
-                tbwidth, tbHeadroom, tbNumofLandingDoors, tbNumofLandings, tbPitDepth, tbTypeofLift, tbLiftNumbers,
-                tbShaftDepth, tbShaftWidth, tbStructureShaft, tbTravel, tbControlerLocation, tbfname, tblname, tbphone, tbAddress1, tbAddress2, tbAddress3);
+            f.SaveTbToXML(tbAddress1, tbAddress2, tbAddress3, tbAuxCOPLocation, tbCarDoorFinish, tbCeilingFinish, tbControlerLocation,
+                tbCOPFinish, tbDepth, tbDesignations, tbDoorHeight, tbDoorTracks, tbDoorWidth, tbFacePlateMaterial, tbFloorFinish, tbfname,
+                tbFrontWall, tbHandrail, tbHeadroom, tbHeight, tbKeyswitchLocation, tbLandingDoorFinish, tbLiftCarNotes, tbLiftNumbers,
+                tbLiftRating, tblname, tbLoad, tbMainCOPLocation, tbMirror, tbNumberOfCOPS, tbNumofCarEntrances, tbNumofLandingDoors,
+                tbNumofLandings, tbNumOfLEDLights, tbphone, tbPitDepth, tbRearWall, tbShaftDepth, tbShaftWidth, tbSideWall, tbSpeed,
+                tbStructureShaft, tbTravel, tbTypeofLift, tbwidth);
 
-            f.SaveRbToXML(rbCOPFinishOther, rbCOPFinishSatinStainlessSteel, rbExclusiveServiceNo, rbExclusiveServiceYes,
-                 rbGPOInCarNo, rbGPOInCarYes, rbLEDColourBlue, rbLEDColourRed, rbLEDColourWhite, rbPositionIndicatorTypeFlushMount,
-                rbPositionIndicatorTypeSurfaceMount, rbRearDoorKeySwitchNo, rbRearDoorKeySwitchYes, rbSecurityKeySwitchNo, rbSecurityKeySwitchYes,
-                rbVoiceAnnunciationNo, rbVoiceAnnunciationYes, tbFrontWallOther, rbBumpRailNo, rbBumpRailYes, rbCarDoorFInishBrushedStainlessSteel, rbCarDoorFinishOther,
-                rbCeilingFinishBrushedStasinlessSteel, rbCeilingFinishMirrorStainlessSteel, rbCeilingFinishOther, rbCeilingFinishWhite, rbFalseCeilingNo,
-                rbFalseCeilingYes, rbFrontWallBrushedStainlessSteel, rbHandrailBrushedStainlessSTeel, rbHandrailOther, rbMirrorFullSize, rbMirrorHalfSize,
-                rbMirrorOther, rbProtectiveBlanketsNo, rbProtectriveBlanketsYes, rbRearWallBrushedStainlessSteel, rbRearWallOther,
-                rbSideWallBrushedStainlessSteel, rbSideWallOther, rbAdvancedOpeningNo, rbAdvancedOpeningYes, rbDoorNudgingNo, rbDoorNudgingYes,
-                rbDoorTracksAnodisedAluminium, rbDoorTracksOther, rbDoorTypeCentreOpening, rbDoorTypeSideOpening, rbLandingDoorFinishOther,
-                rbLandingDoorFinishStainlessSteel, rbFalseFloorNo, rbFalseFloorYes, rbStructureShaftConcrete, rbStructureShaftOther, rbTrimmerBeamsNo,
-                rbTrimmerBeamsYes, rbControlerLoactionTopLanding, rbControlerLocationBottomLanding, rbControlerLocationOther, rbControlerlocationShaft,
-                rbFireServiceNo, rbFireServiceYes, rbIndependentServiceNo, rbIndependentServiceYes, rbLoadWeighingNo, rbLoadWeighingYes,
-                rbControlerLoactionTopLanding, rbControlerLocationBottomLanding, rbControlerLocationOther, rbControlerlocationShaft,
-                rbFireServiceNo, rbFireServiceYes, rbIndependentServiceNo, rbIndependentServiceYes, rbLoadWeighingNo, rbLoadWeighingYes,
-                rbSL, rbSumasa, rbWittur);
+            f.SaveRbToXML(rbAdvancedOpeningNo, tbFrontWallOther, rbAdvancedOpeningYes, rbBumpRailNo, rbBumpRailYes,
+                rbCarDoorFInishBrushedStainlessSteel, rbCarDoorFinishOther, rbCeilingFinishBrushedStasinlessSteel, rbCeilingFinishMirrorStainlessSteel,
+                rbCeilingFinishOther, rbCeilingFinishWhite, rbControlerLoactionTopLanding, rbControlerLocationBottomLanding, rbControlerLocationOther,
+                rbControlerlocationShaft, rbCOPFinishOther, rbCOPFinishSatinStainlessSteel, rbDoorNudgingNo, rbDoorNudgingYes,
+                rbDoorTracksAnodisedAluminium, rbDoorTracksOther, rbDoorTypeCentreOpening, rbDoorTypeSideOpening, rbEmergencyLoweringSystemNo,
+                rbEmergencyLoweringSystemYes, rbExclusiveServiceNo, rbExclusiveServiceYes, rbFacePlateMaterialOther,
+                rbFacePlateMaterialSatinStainlessSteel, rbFalseCeilingNo, rbFalseCeilingYes, rbFalseFloorNo, rbFalseFloorYes, rbFireServiceNo,
+                rbFireServiceYes, rbFrontWallBrushedStainlessSteel, rbGPOInCarNo, rbGPOInCarYes, rbHandrailBrushedStainlessSTeel, rbHandrailOther,
+                rbIndependentServiceNo, rbIndependentServiceYes, rbLandingDoorFinishOther, rbLandingDoorFinishStainlessSteel, rbLEDColourBlue,
+                rbLEDColourRed, rbLEDColourWhite, rbLoadWeighingNo, rbLoadWeighingYes, rbMirrorFullSize, rbMirrorHalfSize, rbMirrorOther,
+                rbOutofServiceNo, rbOutofServiceYes, rbPositionIndicatorTypeFlushMount, rbPositionIndicatorTypeSurfaceMount, rbProtectiveBlanketsNo,
+                rbProtectriveBlanketsYes, rbRearDoorKeySwitchNo, rbRearDoorKeySwitchYes, rbRearWallBrushedStainlessSteel, rbRearWallOther,
+                rbSecurityKeySwitchNo, rbSecurityKeySwitchYes, rbSideWallBrushedStainlessSteel, rbSideWallOther, rbSL, rbStructureShaftConcrete,
+                rbStructureShaftOther, rbSumasa, rbTrimmerBeamsNo, rbTrimmerBeamsYes, rbVoiceAnnunciationNo, rbVoiceAnnunciationYes, rbWittur);
 
             this.Enabled = false;
             f.QuestionsComplete();

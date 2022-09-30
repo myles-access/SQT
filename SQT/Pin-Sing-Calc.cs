@@ -14,6 +14,7 @@ namespace SQT
         public bool sucessfulSave = false;
         public bool loadingPreviousData = false;
 
+        public string salesRep = "Pintaric";
         public string quoteNumber = "";
         public string exchangeRateDate;
         public string exchangeRateText;
@@ -702,7 +703,7 @@ namespace SQT
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 fileOpen = new Word.Application();
-                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\PriceExport.docx", ReadOnly: false);
+                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-" + salesRep + "-Price-1.docx", ReadOnly: false);
                 SavePricesToDict();
                 fileOpen.Visible = true;
                 document.Activate();
@@ -735,8 +736,8 @@ namespace SQT
             priceExports.Add("AEP2", tBMainQuoteNumber.Text);
             priceExports.Add("AEP3", FormalDate());
             priceExports.Add("AEP4", exchangeRateText);
-            priceExports.Add("AEP5", lblLiftNoConvertPrice.Text);
-            priceExports.Add("AEP6", lblCost.Text);
+            priceExports.Add("P1AEP5", lblLiftNoConvertPrice.Text);
+            priceExports.Add("P1AEP6", lblCost.Text);
             priceExports.Add("AEP7", lblFinishes.Text);
             priceExports.Add("AEP8", lblFire.Text);
             priceExports.Add("AEP9", lblGSM.Text);
@@ -768,6 +769,8 @@ namespace SQT
             priceExports.Add("AEP35", lblGST.Text);
             priceExports.Add("AEP36", lblPriceIncludingGST.Text);
             priceExports.Add("AEP37", PriceRounding(f).ToString());
+            priceExports.Add("P1AEP38", tBMainFloors.Text);
+            priceExports.Add("P1AEP39", "1");
         }
 
         #endregion
@@ -842,7 +845,7 @@ namespace SQT
             }
             catch (Exception)
             {
-               // MessageBox.Show("Unable to find Load Data for this Quote");
+                // MessageBox.Show("Unable to find Load Data for this Quote");
                 return null;
             }
         }

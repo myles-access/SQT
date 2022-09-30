@@ -238,7 +238,7 @@ namespace SQT
             tbCarFinishes.Text = basePrices["1CarFinishes"].ToString();
             tbFireExtinguishers.Text = basePrices["2FireExtinguisher"].ToString();
             tbGSM.Text = basePrices["3GSMUnitPhone"].ToString();
-           // tbProtectiveBlanket.Text = basePrices["4ProtectiveBlanket"].ToString();
+            // tbProtectiveBlanket.Text = basePrices["4ProtectiveBlanket"].ToString();
             tbSumpCover.Text = basePrices["5SumpCover"].ToString();
             tbWiring.Text = basePrices["6Wiring"].ToString();
             tbSinage.Text = basePrices["7Sinage"].ToString();

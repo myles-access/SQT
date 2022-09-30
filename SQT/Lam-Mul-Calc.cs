@@ -15,6 +15,7 @@ namespace SQT
         public bool loadingPreviousData = false;
         private bool costInEuro;
 
+        public string salesRep = "Lamont";
         public string quoteNumber = "";
         public string exchangeRateDate;
         public string exchangeRateText;
@@ -424,7 +425,7 @@ namespace SQT
             PriceListFormatting(lblFreight, freightTotal);
             //add labour from the labour costs dictionary based on number of floors in the building 
             float f = labourPrice[int.Parse(tBMainFloors.Text)] * int.Parse(tbMainNumberLifts.Text);
-            PriceListFormatting(lblLabour,f );
+            PriceListFormatting(lblLabour, f);
 
             marginPercent = 1 + (float.Parse(tbMainMargin.Text) / 100);
             float marginValue = (float.Parse(tbMainMargin.Text) / 100) * liftPrice;
@@ -720,7 +721,7 @@ namespace SQT
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 fileOpen = new Word.Application();
-                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\PriceExport.docx", ReadOnly: false);
+                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-" + salesRep + "-Price-1.docx", ReadOnly: false);
                 SavePricesToDict();
                 fileOpen.Visible = true;
                 document.Activate();
@@ -753,8 +754,8 @@ namespace SQT
             priceExports.Add("AEP2", tBMainQuoteNumber.Text);
             priceExports.Add("AEP3", FormalDate());
             priceExports.Add("AEP4", exchangeRateText);
-            priceExports.Add("AEP5", lblLiftNoConvertPrice.Text);
-            priceExports.Add("AEP6", lblCost.Text);
+            priceExports.Add("P1AEP5", lblLiftNoConvertPrice.Text);
+            priceExports.Add("P1AEP6", lblCost.Text);
             priceExports.Add("AEP7", lblFinishes.Text);
             priceExports.Add("AEP8", lblFire.Text);
             priceExports.Add("AEP9", lblGSM.Text);
@@ -786,6 +787,8 @@ namespace SQT
             priceExports.Add("AEP35", lblGST.Text);
             priceExports.Add("AEP36", lblPriceIncludingGST.Text);
             priceExports.Add("AEP37", PriceRounding(f).ToString());
+            priceExports.Add("P1AEP38", tBMainFloors.Text);
+            priceExports.Add("P1AEP39", tbMainNumberLifts.Text);
         }
 
         #endregion
