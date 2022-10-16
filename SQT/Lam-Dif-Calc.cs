@@ -75,7 +75,7 @@ namespace SQT
             lblCostIncludingMargin.Text = PriceRounding(float.Parse(s));
             lblGST.Text = PriceRounding(float.Parse(s));
             lblPriceIncludingGST.Text = PriceRounding(float.Parse(s));
-            quoteNumber = ("QuAP" + DateTime.Now.ToString("yy") + "-000");
+            quoteNumber = ("QuAL" + DateTime.Now.ToString("yy") + "-000");
             lblLift10Total.Text = s;
             lblLift11Total.Text = s;
             lblLift12Total.Text = s;
@@ -380,7 +380,10 @@ namespace SQT
             TextBoxFixer(tbMainEntranceGuards);
             TextBoxFixer(tbMainWeeksRequired);
 
-            if (marginTbChecker()) // may need to add floors checker here??
+            TotalAllMenuPrices();
+
+
+            if (marginTbChecker() ) // may need to add floors checker here??
             {
                 GeneratePriceList();
                 Form1SaveToXML();
@@ -389,6 +392,17 @@ namespace SQT
                 printButton.Visible = true;
                 printButton.Enabled = true;
             }
+        }
+
+        public bool CheckAddressForSlash()
+        {
+            bool b = tBMainAddress.Text.Contains(@"/");
+            if (b)
+            {
+                MessageBox.Show("Addresses can't have slashes, please remove the slash");
+                return !b;
+            }
+            return b;
         }
 
         //if a textbox is blank fill it with a 0 instead to prevent errors
@@ -520,8 +534,9 @@ namespace SQT
 
         private float LabourAdder()
         {
-            TextBox[] tbs = { tbLift1Floors, tbLift2Floors, tbLift3Floors, tbLift4Floors, tbLift5Floors, tbLift6Floors, tbLift7Floors, tbLift7Floors, tbLift8Floors, tbLift9Floors, tbLift10Floors, tbLift11Floors, tbLift12Floors };
             float labour = 0;
+
+            TextBox[] tbs = { tbLift1Floors, tbLift2Floors, tbLift3Floors, tbLift4Floors, tbLift5Floors, tbLift6Floors, tbLift7Floors, tbLift7Floors, tbLift8Floors, tbLift9Floors, tbLift10Floors, tbLift11Floors, tbLift12Floors };
 
             foreach (TextBox i in tbs)
             {
@@ -775,14 +790,14 @@ namespace SQT
             }
         }
 
-        public void lblWaitControl(bool b)
+        public void lblWaitControl(bool displayWaitMessage)
         {
             // if called true will enable the wait message and disable the form
             // if called false will disable the wait message and enable the form 
 
-            lbWait.Enabled = b;
-            lbWait.Visible = b;
-            this.Enabled = !b;
+            lbWait.Enabled = displayWaitMessage;
+            lbWait.Visible = displayWaitMessage;
+            this.Enabled = !displayWaitMessage;
         }
 
         #endregion
@@ -1220,64 +1235,40 @@ namespace SQT
             bool endIn3 = day.EndsWith("3");
             bool startWith1 = day.StartsWith("1");
 
-            //if the days number ends in a 1 it requires either "th" or "st" suffix 
-            if (endIn1)
+            if (singleDigit)
             {
-                // if it is single digit it means it is the 1st and requires the "st" suffix
-                if (singleDigit)
+                if (endIn1)
                 {
                     day += "st";
                 }
-                // if it starts with a 1 and is 2 digits it is the 11th and requires the "th" suffix
-                else if (startWith1 && !singleDigit)
-                {
-                    day += "th";
-                }
-                //if it starts with any other number and si not single digit it means it is not the 1st or the 11th and requires the "st" suffix
-                else
-                {
-                    day += "st";
-                }
-            }
-            //if the days number ends in a 2 it requires either "th" or "nd" suffix
-            else if (endIn2)
-            {
-                // if it is single digit it means it is the 2nd and requires the "nd" suffix
-                if (singleDigit)
+                else if (endIn2)
                 {
                     day += "nd";
                 }
-                // if it starts with a 1 and is 2 digits it is the 12th and requires the "th" suffix
-                else if (startWith1 && !singleDigit)
-                {
-                    day += "th";
-                }
-                //if it starts with any other number and si not single digit it means it is not the 2nd or the 12th and requires the "nd" suffix
-                else
-                {
-                    day += "nd";
-                }
-            }
-            //if the days number ends in 3 it requires either "th" or "rd" suffix
-            else if (endIn3)
-            {
-                // if it is single digit it means it is the 3rd and requires the "rd" suffix
-                if (singleDigit)
-                {
-                    day += "rd";
-                }
-                // if it starts with a 1 and is 2 digits it is the 13th and requires the "th" suffix
-                else if (startWith1 && !singleDigit)
-                {
-                    day += "th";
-                }
-                //if it starts with any other number and si not single digit it means it is not the 3rd or the 13th and requires the "rd" suffix
-                else
+                else if (endIn3)
                 {
                     day += "rd";
                 }
             }
-            // if the days number ends in any other number it requires a "th" suffix
+            else if (!singleDigit && startWith1)
+            {
+                day += "th";
+            }
+            else if (!singleDigit && !startWith1)
+            {
+                if (endIn1)
+                {
+                    day += "st";
+                }
+                else if (endIn2)
+                {
+                    day += "nd";
+                }
+                else if (endIn3)
+                {
+                    day += "rd";
+                }
+            }
             else
             {
                 day += "th";
@@ -1285,6 +1276,7 @@ namespace SQT
 
             //take the correctly formatted date number and add on a full length month and year 
             string date = day + " " + monthYear;
+
             //return the date as a string 
             return date;
         }
@@ -1487,10 +1479,27 @@ namespace SQT
         #region Configure Lift Prices Menu
         private void BtGenerateLiftPrices_Click(object sender, EventArgs e)
         {
+            TotalAllMenuPrices();
             TotalCostAdder();
             PagesRequired();
             GenerateListOfPrices();
             DebugBoxCall("number of pages needed " + numberOfPagesNeeded.ToString());
+        }
+
+        private void TotalAllMenuPrices()
+        {
+            RefreshLiftPrices(tbLift1Price, tbLift1Number, lblLift1Total);
+            RefreshLiftPrices(tbLift2Price, tbLift2Number, lblLift2Total);
+            RefreshLiftPrices(tb3Lift3Price, tbLift3Number, lblLift3Total);
+            RefreshLiftPrices(tbLift4Price, tbLift4Number, lblLift4Total);
+            RefreshLiftPrices(tbLift5Price, tbLift5Number, lblLift5Total);
+            RefreshLiftPrices(tbLift6Price, tbLift6Number, lblLift6Total);
+            RefreshLiftPrices(tbLift7Price, tbLift7Number, lblLift7Total);
+            RefreshLiftPrices(tbLift8Price, tbLift8Number, lblLift8Total);
+            RefreshLiftPrices(tbLift9Price, tbLift9Number, lblLift9Total);
+            RefreshLiftPrices(tbLift10Price, tbLift10Number, lblLift10Total);
+            RefreshLiftPrices(tbLift11Price, tbLift11Numebr, lblLift11Total);
+            RefreshLiftPrices(tbLift12Price, tbLift12Number, lblLift12Total);
         }
 
         private void PagesRequired()

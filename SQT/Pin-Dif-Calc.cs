@@ -380,7 +380,7 @@ namespace SQT
             TextBoxFixer(tbMainEntranceGuards);
             TextBoxFixer(tbMainWeeksRequired);
 
-            if (marginTbChecker()) // may need to add floors checker here??
+            if (marginTbChecker() ) // may need to add floors checker here??
             {
                 GeneratePriceList();
                 Form1SaveToXML();
@@ -389,6 +389,17 @@ namespace SQT
                 printButton.Visible = true;
                 printButton.Enabled = true;
             }
+        }
+
+        public bool CheckAddressForSlash()
+        {
+            bool b = tBMainAddress.Text.Contains(@"/");
+            if (b)
+            {
+                MessageBox.Show("Addresses can't have slashes, please remove the slash");
+                return !b;
+            }
+            return b;
         }
 
         //if a textbox is blank fill it with a 0 instead to prevent errors
