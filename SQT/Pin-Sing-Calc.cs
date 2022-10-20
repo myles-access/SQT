@@ -24,6 +24,7 @@ namespace SQT
         public float liftPrice;
         public float lowestMargin;
         private float marginPercent;
+        private float maxFloors;
 
         public int exCurrency = 0; // 0 AUD, 1 USD, 2 EUR
         public int num20Ft;
@@ -104,9 +105,10 @@ namespace SQT
         }
 
         //find the labour costs from the file int he server and write them into the labour prices dictionary 
+
         private void FetchLabourPrices()
         {
-            int dKey = 0;
+            int dKey = -1;
             float dName = -1;
 
             XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\LabourCosts.xml");
@@ -121,10 +123,14 @@ namespace SQT
                     dName = float.Parse(XMLR.ReadElementContentAsString());
                 }
 
-                if (dKey != 0 && dName != -1)
+                if (dKey != -1 && dName != -1)
                 {
                     labourPrice.Add(dKey, dName);
-                    dKey = 0;
+                    if (dKey > maxFloors)
+                    {
+                        maxFloors = dKey;
+                    }
+                    dKey = -1;
                     dName = -1;
                 }
             }
@@ -341,6 +347,7 @@ namespace SQT
                 printButton.Enabled = true;
             }
         }
+
         public bool CheckAddressForSlash()
         {
             bool b = tBMainAddress.Text.Contains(@"/");
@@ -468,25 +475,21 @@ namespace SQT
         //Checks that the floors entered is within the acceptable threshold
         public bool floorsTbChecker()
         {
-            int i = 0;
             try
             {
-                i = int.Parse(tBMainFloors.Text);
+                if (int.Parse(tBMainFloors.Text) > maxFloors || int.Parse(tBMainFloors.Text) < 2)
+                {
+                    MessageBox.Show("Invalid floor number entered ");
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
             }
-            catch
+            catch (Exception)
             {
-                //MessageBox.Show("Invalid floor number entered ");
                 return false;
-            }
-
-            if (i > 16 || i < 0)
-            {
-                MessageBox.Show("Invalid floor number entered ");
-                return false;
-            }
-            else
-            {
-                return true;
             }
         }
 
@@ -944,7 +947,7 @@ namespace SQT
                 saveData[item.Name.ToString()] = item.Checked.ToString();
             }
         }
-
+        
         public void SaveCbToXML(params CheckBox[] cb)
         {
             foreach (CheckBox item in cb)

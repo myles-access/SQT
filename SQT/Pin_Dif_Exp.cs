@@ -411,7 +411,7 @@ namespace SQT
                 f.WordData("AE109", tbAddress2.Text);//address 2
                 f.WordData("AE110", tbAddress3.Text);//address 3
                 f.WordData(prefix + "AE111", f.RadioButtonHandeler(null, rbSL, rbWittur, rbSumasa)); //supplier
-                f.WordData("AE114", f.LiftAdder().ToString());//lift number
+                f.WordData("AE114", f.TotalLifts().ToString());//lift number
                 f.WordData("AE115", tbTypeofLift.Text);//type of lift
                 f.WordData(prefix + "AE215", "Full Collective"); //control type, not changable 
                 f.WordData(prefix + "AE118", f.RadioButtonHandeler(tbControlerLocation, rbControlerLoactionTopLanding, rbControlerlocationShaft, rbControlerLocationBottomLanding, rbControlerLocationOther));//controler location

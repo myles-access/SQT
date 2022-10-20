@@ -147,7 +147,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.liftPricesPanel = new System.Windows.Forms.Panel();
             this.BtGenerateLiftPrices = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lbltitleCost = new System.Windows.Forms.Label();
             this.tbLift12Floors = new System.Windows.Forms.TextBox();
@@ -163,30 +162,6 @@
             this.tbLift2Floors = new System.Windows.Forms.TextBox();
             this.tbLift1Floors = new System.Windows.Forms.TextBox();
             this.HideButton = new System.Windows.Forms.Button();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label85 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
-            this.tbLift12Number = new System.Windows.Forms.TextBox();
-            this.tbLift11Numebr = new System.Windows.Forms.TextBox();
-            this.tbLift10Number = new System.Windows.Forms.TextBox();
-            this.tbLift9Number = new System.Windows.Forms.TextBox();
-            this.tbLift8Number = new System.Windows.Forms.TextBox();
-            this.tbLift7Number = new System.Windows.Forms.TextBox();
-            this.tbLift6Number = new System.Windows.Forms.TextBox();
-            this.tbLift5Number = new System.Windows.Forms.TextBox();
-            this.tbLift4Number = new System.Windows.Forms.TextBox();
-            this.tbLift3Number = new System.Windows.Forms.TextBox();
-            this.tbLift2Number = new System.Windows.Forms.TextBox();
-            this.tbLift1Number = new System.Windows.Forms.TextBox();
             this.label68 = new System.Windows.Forms.Label();
             this.lblTotalLiftPrice = new System.Windows.Forms.Label();
             this.lblLift12Total = new System.Windows.Forms.Label();
@@ -1601,7 +1576,6 @@
             this.liftPricesPanel.BackColor = System.Drawing.Color.SteelBlue;
             this.liftPricesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.liftPricesPanel.Controls.Add(this.BtGenerateLiftPrices);
-            this.liftPricesPanel.Controls.Add(this.label13);
             this.liftPricesPanel.Controls.Add(this.label11);
             this.liftPricesPanel.Controls.Add(this.lbltitleCost);
             this.liftPricesPanel.Controls.Add(this.tbLift12Floors);
@@ -1617,30 +1591,6 @@
             this.liftPricesPanel.Controls.Add(this.tbLift2Floors);
             this.liftPricesPanel.Controls.Add(this.tbLift1Floors);
             this.liftPricesPanel.Controls.Add(this.HideButton);
-            this.liftPricesPanel.Controls.Add(this.label70);
-            this.liftPricesPanel.Controls.Add(this.label72);
-            this.liftPricesPanel.Controls.Add(this.label74);
-            this.liftPricesPanel.Controls.Add(this.label76);
-            this.liftPricesPanel.Controls.Add(this.label78);
-            this.liftPricesPanel.Controls.Add(this.label80);
-            this.liftPricesPanel.Controls.Add(this.label81);
-            this.liftPricesPanel.Controls.Add(this.label82);
-            this.liftPricesPanel.Controls.Add(this.label83);
-            this.liftPricesPanel.Controls.Add(this.label84);
-            this.liftPricesPanel.Controls.Add(this.label85);
-            this.liftPricesPanel.Controls.Add(this.label86);
-            this.liftPricesPanel.Controls.Add(this.tbLift12Number);
-            this.liftPricesPanel.Controls.Add(this.tbLift11Numebr);
-            this.liftPricesPanel.Controls.Add(this.tbLift10Number);
-            this.liftPricesPanel.Controls.Add(this.tbLift9Number);
-            this.liftPricesPanel.Controls.Add(this.tbLift8Number);
-            this.liftPricesPanel.Controls.Add(this.tbLift7Number);
-            this.liftPricesPanel.Controls.Add(this.tbLift6Number);
-            this.liftPricesPanel.Controls.Add(this.tbLift5Number);
-            this.liftPricesPanel.Controls.Add(this.tbLift4Number);
-            this.liftPricesPanel.Controls.Add(this.tbLift3Number);
-            this.liftPricesPanel.Controls.Add(this.tbLift2Number);
-            this.liftPricesPanel.Controls.Add(this.tbLift1Number);
             this.liftPricesPanel.Controls.Add(this.label68);
             this.liftPricesPanel.Controls.Add(this.lblTotalLiftPrice);
             this.liftPricesPanel.Controls.Add(this.lblLift12Total);
@@ -1701,17 +1651,6 @@
             this.BtGenerateLiftPrices.UseVisualStyleBackColor = true;
             this.BtGenerateLiftPrices.Click += new System.EventHandler(this.BtGenerateLiftPrices_Click);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(418, 136);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(35, 37);
-            this.label13.TabIndex = 252;
-            this.label13.Text = "#";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1728,7 +1667,7 @@
             this.lbltitleCost.AutoSize = true;
             this.lbltitleCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitleCost.ForeColor = System.Drawing.Color.Black;
-            this.lbltitleCost.Location = new System.Drawing.Point(202, 136);
+            this.lbltitleCost.Location = new System.Drawing.Point(228, 136);
             this.lbltitleCost.Name = "lbltitleCost";
             this.lbltitleCost.Size = new System.Drawing.Size(106, 37);
             this.lbltitleCost.TabIndex = 250;
@@ -1891,282 +1830,6 @@
             this.HideButton.UseVisualStyleBackColor = true;
             this.HideButton.Click += new System.EventHandler(this.HideButton_Click);
             // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.ForeColor = System.Drawing.Color.Black;
-            this.label70.Location = new System.Drawing.Point(377, 827);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(32, 37);
-            this.label70.TabIndex = 236;
-            this.label70.Text = "x";
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.ForeColor = System.Drawing.Color.Black;
-            this.label72.Location = new System.Drawing.Point(378, 770);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(32, 37);
-            this.label72.TabIndex = 235;
-            this.label72.Text = "x";
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.ForeColor = System.Drawing.Color.Black;
-            this.label74.Location = new System.Drawing.Point(377, 710);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(32, 37);
-            this.label74.TabIndex = 234;
-            this.label74.Text = "x";
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.ForeColor = System.Drawing.Color.Black;
-            this.label76.Location = new System.Drawing.Point(377, 654);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(32, 37);
-            this.label76.TabIndex = 233;
-            this.label76.Text = "x";
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.ForeColor = System.Drawing.Color.Black;
-            this.label78.Location = new System.Drawing.Point(377, 595);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(32, 37);
-            this.label78.TabIndex = 232;
-            this.label78.Text = "x";
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.ForeColor = System.Drawing.Color.Black;
-            this.label80.Location = new System.Drawing.Point(377, 537);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(32, 37);
-            this.label80.TabIndex = 231;
-            this.label80.Text = "x";
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.ForeColor = System.Drawing.Color.Black;
-            this.label81.Location = new System.Drawing.Point(377, 477);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(32, 37);
-            this.label81.TabIndex = 230;
-            this.label81.Text = "x";
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.ForeColor = System.Drawing.Color.Black;
-            this.label82.Location = new System.Drawing.Point(377, 421);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(32, 37);
-            this.label82.TabIndex = 229;
-            this.label82.Text = "x";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label83.ForeColor = System.Drawing.Color.Black;
-            this.label83.Location = new System.Drawing.Point(377, 365);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(32, 37);
-            this.label83.TabIndex = 228;
-            this.label83.Text = "x";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label84.ForeColor = System.Drawing.Color.Black;
-            this.label84.Location = new System.Drawing.Point(377, 308);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(32, 37);
-            this.label84.TabIndex = 227;
-            this.label84.Text = "x";
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.ForeColor = System.Drawing.Color.Black;
-            this.label85.Location = new System.Drawing.Point(377, 252);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(32, 37);
-            this.label85.TabIndex = 226;
-            this.label85.Text = "x";
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label86.ForeColor = System.Drawing.Color.Black;
-            this.label86.Location = new System.Drawing.Point(377, 196);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(32, 37);
-            this.label86.TabIndex = 225;
-            this.label86.Text = "x";
-            // 
-            // tbLift12Number
-            // 
-            this.tbLift12Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLift12Number.ForeColor = System.Drawing.Color.Black;
-            this.tbLift12Number.Location = new System.Drawing.Point(409, 827);
-            this.tbLift12Number.Name = "tbLift12Number";
-            this.tbLift12Number.Size = new System.Drawing.Size(51, 44);
-            this.tbLift12Number.TabIndex = 234;
-            this.tbLift12Number.Text = "0";
-            this.tbLift12Number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLift12Number.TextChanged += new System.EventHandler(this.tbLift12Number_TextChanged);
-            // 
-            // tbLift11Numebr
-            // 
-            this.tbLift11Numebr.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLift11Numebr.ForeColor = System.Drawing.Color.Black;
-            this.tbLift11Numebr.Location = new System.Drawing.Point(409, 770);
-            this.tbLift11Numebr.Name = "tbLift11Numebr";
-            this.tbLift11Numebr.Size = new System.Drawing.Size(51, 44);
-            this.tbLift11Numebr.TabIndex = 231;
-            this.tbLift11Numebr.Text = "0";
-            this.tbLift11Numebr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLift11Numebr.TextChanged += new System.EventHandler(this.tbLift11Numebr_TextChanged);
-            // 
-            // tbLift10Number
-            // 
-            this.tbLift10Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLift10Number.ForeColor = System.Drawing.Color.Black;
-            this.tbLift10Number.Location = new System.Drawing.Point(409, 710);
-            this.tbLift10Number.Name = "tbLift10Number";
-            this.tbLift10Number.Size = new System.Drawing.Size(51, 44);
-            this.tbLift10Number.TabIndex = 228;
-            this.tbLift10Number.Text = "0";
-            this.tbLift10Number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLift10Number.TextChanged += new System.EventHandler(this.tbLift10Number_TextChanged);
-            // 
-            // tbLift9Number
-            // 
-            this.tbLift9Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLift9Number.ForeColor = System.Drawing.Color.Black;
-            this.tbLift9Number.Location = new System.Drawing.Point(409, 654);
-            this.tbLift9Number.Name = "tbLift9Number";
-            this.tbLift9Number.Size = new System.Drawing.Size(51, 44);
-            this.tbLift9Number.TabIndex = 225;
-            this.tbLift9Number.Text = "0";
-            this.tbLift9Number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLift9Number.TextChanged += new System.EventHandler(this.tbLift9Number_TextChanged);
-            // 
-            // tbLift8Number
-            // 
-            this.tbLift8Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLift8Number.ForeColor = System.Drawing.Color.Black;
-            this.tbLift8Number.Location = new System.Drawing.Point(409, 595);
-            this.tbLift8Number.Name = "tbLift8Number";
-            this.tbLift8Number.Size = new System.Drawing.Size(51, 44);
-            this.tbLift8Number.TabIndex = 222;
-            this.tbLift8Number.Text = "0";
-            this.tbLift8Number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLift8Number.TextChanged += new System.EventHandler(this.tbLift8Number_TextChanged);
-            // 
-            // tbLift7Number
-            // 
-            this.tbLift7Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLift7Number.ForeColor = System.Drawing.Color.Black;
-            this.tbLift7Number.Location = new System.Drawing.Point(409, 537);
-            this.tbLift7Number.Name = "tbLift7Number";
-            this.tbLift7Number.Size = new System.Drawing.Size(51, 44);
-            this.tbLift7Number.TabIndex = 219;
-            this.tbLift7Number.Text = "0";
-            this.tbLift7Number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLift7Number.TextChanged += new System.EventHandler(this.tbLift7Number_TextChanged);
-            // 
-            // tbLift6Number
-            // 
-            this.tbLift6Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLift6Number.ForeColor = System.Drawing.Color.Black;
-            this.tbLift6Number.Location = new System.Drawing.Point(409, 477);
-            this.tbLift6Number.Name = "tbLift6Number";
-            this.tbLift6Number.Size = new System.Drawing.Size(51, 44);
-            this.tbLift6Number.TabIndex = 216;
-            this.tbLift6Number.Text = "0";
-            this.tbLift6Number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLift6Number.TextChanged += new System.EventHandler(this.tbLift6Number_TextChanged);
-            // 
-            // tbLift5Number
-            // 
-            this.tbLift5Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLift5Number.ForeColor = System.Drawing.Color.Black;
-            this.tbLift5Number.Location = new System.Drawing.Point(409, 421);
-            this.tbLift5Number.Name = "tbLift5Number";
-            this.tbLift5Number.Size = new System.Drawing.Size(51, 44);
-            this.tbLift5Number.TabIndex = 213;
-            this.tbLift5Number.Text = "0";
-            this.tbLift5Number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLift5Number.TextChanged += new System.EventHandler(this.tbLift5Number_TextChanged);
-            // 
-            // tbLift4Number
-            // 
-            this.tbLift4Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLift4Number.ForeColor = System.Drawing.Color.Black;
-            this.tbLift4Number.Location = new System.Drawing.Point(409, 365);
-            this.tbLift4Number.Name = "tbLift4Number";
-            this.tbLift4Number.Size = new System.Drawing.Size(51, 44);
-            this.tbLift4Number.TabIndex = 210;
-            this.tbLift4Number.Text = "0";
-            this.tbLift4Number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLift4Number.TextChanged += new System.EventHandler(this.tbLift4Number_TextChanged);
-            // 
-            // tbLift3Number
-            // 
-            this.tbLift3Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLift3Number.ForeColor = System.Drawing.Color.Black;
-            this.tbLift3Number.Location = new System.Drawing.Point(409, 308);
-            this.tbLift3Number.Name = "tbLift3Number";
-            this.tbLift3Number.Size = new System.Drawing.Size(51, 44);
-            this.tbLift3Number.TabIndex = 207;
-            this.tbLift3Number.Text = "0";
-            this.tbLift3Number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLift3Number.TextChanged += new System.EventHandler(this.tbLift3Number_TextChanged);
-            // 
-            // tbLift2Number
-            // 
-            this.tbLift2Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLift2Number.ForeColor = System.Drawing.Color.Black;
-            this.tbLift2Number.Location = new System.Drawing.Point(409, 248);
-            this.tbLift2Number.Name = "tbLift2Number";
-            this.tbLift2Number.Size = new System.Drawing.Size(51, 44);
-            this.tbLift2Number.TabIndex = 204;
-            this.tbLift2Number.Text = "0";
-            this.tbLift2Number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLift2Number.TextChanged += new System.EventHandler(this.tbLift2Number_TextChanged);
-            // 
-            // tbLift1Number
-            // 
-            this.tbLift1Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLift1Number.ForeColor = System.Drawing.Color.Black;
-            this.tbLift1Number.Location = new System.Drawing.Point(409, 192);
-            this.tbLift1Number.Name = "tbLift1Number";
-            this.tbLift1Number.Size = new System.Drawing.Size(51, 44);
-            this.tbLift1Number.TabIndex = 201;
-            this.tbLift1Number.Text = "0";
-            this.tbLift1Number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbLift1Number.TextChanged += new System.EventHandler(this.tbLift1Number_TextChanged);
-            // 
             // label68
             // 
             this.label68.AutoSize = true;
@@ -2327,7 +1990,7 @@
             this.tbLift12Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift12Price.Location = new System.Drawing.Point(128, 826);
             this.tbLift12Price.Name = "tbLift12Price";
-            this.tbLift12Price.Size = new System.Drawing.Size(246, 44);
+            this.tbLift12Price.Size = new System.Drawing.Size(309, 44);
             this.tbLift12Price.TabIndex = 233;
             this.tbLift12Price.Text = "0";
             this.tbLift12Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2351,7 +2014,7 @@
             this.tbLift11Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift11Price.Location = new System.Drawing.Point(128, 769);
             this.tbLift11Price.Name = "tbLift11Price";
-            this.tbLift11Price.Size = new System.Drawing.Size(246, 44);
+            this.tbLift11Price.Size = new System.Drawing.Size(309, 44);
             this.tbLift11Price.TabIndex = 230;
             this.tbLift11Price.Text = "0";
             this.tbLift11Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2375,7 +2038,7 @@
             this.tbLift10Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift10Price.Location = new System.Drawing.Point(128, 709);
             this.tbLift10Price.Name = "tbLift10Price";
-            this.tbLift10Price.Size = new System.Drawing.Size(246, 44);
+            this.tbLift10Price.Size = new System.Drawing.Size(309, 44);
             this.tbLift10Price.TabIndex = 227;
             this.tbLift10Price.Text = "0";
             this.tbLift10Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2399,7 +2062,7 @@
             this.tbLift9Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift9Price.Location = new System.Drawing.Point(128, 653);
             this.tbLift9Price.Name = "tbLift9Price";
-            this.tbLift9Price.Size = new System.Drawing.Size(246, 44);
+            this.tbLift9Price.Size = new System.Drawing.Size(309, 44);
             this.tbLift9Price.TabIndex = 224;
             this.tbLift9Price.Text = "0";
             this.tbLift9Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2423,7 +2086,7 @@
             this.tbLift8Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift8Price.Location = new System.Drawing.Point(128, 594);
             this.tbLift8Price.Name = "tbLift8Price";
-            this.tbLift8Price.Size = new System.Drawing.Size(246, 44);
+            this.tbLift8Price.Size = new System.Drawing.Size(309, 44);
             this.tbLift8Price.TabIndex = 221;
             this.tbLift8Price.Text = "0";
             this.tbLift8Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2447,7 +2110,7 @@
             this.tbLift7Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift7Price.Location = new System.Drawing.Point(128, 536);
             this.tbLift7Price.Name = "tbLift7Price";
-            this.tbLift7Price.Size = new System.Drawing.Size(246, 44);
+            this.tbLift7Price.Size = new System.Drawing.Size(309, 44);
             this.tbLift7Price.TabIndex = 218;
             this.tbLift7Price.Text = "0";
             this.tbLift7Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2470,7 +2133,7 @@
             this.tbLift6Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift6Price.Location = new System.Drawing.Point(128, 476);
             this.tbLift6Price.Name = "tbLift6Price";
-            this.tbLift6Price.Size = new System.Drawing.Size(246, 44);
+            this.tbLift6Price.Size = new System.Drawing.Size(309, 44);
             this.tbLift6Price.TabIndex = 215;
             this.tbLift6Price.Text = "0";
             this.tbLift6Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2493,7 +2156,7 @@
             this.tbLift5Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift5Price.Location = new System.Drawing.Point(128, 420);
             this.tbLift5Price.Name = "tbLift5Price";
-            this.tbLift5Price.Size = new System.Drawing.Size(246, 44);
+            this.tbLift5Price.Size = new System.Drawing.Size(309, 44);
             this.tbLift5Price.TabIndex = 212;
             this.tbLift5Price.Text = "0";
             this.tbLift5Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2516,7 +2179,7 @@
             this.tbLift4Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift4Price.Location = new System.Drawing.Point(128, 364);
             this.tbLift4Price.Name = "tbLift4Price";
-            this.tbLift4Price.Size = new System.Drawing.Size(246, 44);
+            this.tbLift4Price.Size = new System.Drawing.Size(309, 44);
             this.tbLift4Price.TabIndex = 209;
             this.tbLift4Price.Text = "0";
             this.tbLift4Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2539,7 +2202,7 @@
             this.tb3Lift3Price.ForeColor = System.Drawing.Color.Black;
             this.tb3Lift3Price.Location = new System.Drawing.Point(128, 307);
             this.tb3Lift3Price.Name = "tb3Lift3Price";
-            this.tb3Lift3Price.Size = new System.Drawing.Size(246, 44);
+            this.tb3Lift3Price.Size = new System.Drawing.Size(309, 44);
             this.tb3Lift3Price.TabIndex = 206;
             this.tb3Lift3Price.Text = "0";
             this.tb3Lift3Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2562,7 +2225,7 @@
             this.tbLift2Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift2Price.Location = new System.Drawing.Point(128, 250);
             this.tbLift2Price.Name = "tbLift2Price";
-            this.tbLift2Price.Size = new System.Drawing.Size(246, 44);
+            this.tbLift2Price.Size = new System.Drawing.Size(309, 44);
             this.tbLift2Price.TabIndex = 203;
             this.tbLift2Price.Text = "0";
             this.tbLift2Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2585,7 +2248,7 @@
             this.tbLift1Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift1Price.Location = new System.Drawing.Point(128, 191);
             this.tbLift1Price.Name = "tbLift1Price";
-            this.tbLift1Price.Size = new System.Drawing.Size(246, 44);
+            this.tbLift1Price.Size = new System.Drawing.Size(309, 44);
             this.tbLift1Price.TabIndex = 200;
             this.tbLift1Price.Text = "0";
             this.tbLift1Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2824,30 +2487,6 @@
         public System.Windows.Forms.TextBox tbLift1Price;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Button HideButton;
-        public System.Windows.Forms.Label label70;
-        public System.Windows.Forms.Label label72;
-        public System.Windows.Forms.Label label74;
-        public System.Windows.Forms.Label label76;
-        public System.Windows.Forms.Label label78;
-        public System.Windows.Forms.Label label80;
-        public System.Windows.Forms.Label label81;
-        public System.Windows.Forms.Label label82;
-        public System.Windows.Forms.Label label83;
-        public System.Windows.Forms.Label label84;
-        public System.Windows.Forms.Label label85;
-        public System.Windows.Forms.Label label86;
-        public System.Windows.Forms.TextBox tbLift12Number;
-        public System.Windows.Forms.TextBox tbLift11Numebr;
-        public System.Windows.Forms.TextBox tbLift10Number;
-        public System.Windows.Forms.TextBox tbLift9Number;
-        public System.Windows.Forms.TextBox tbLift8Number;
-        public System.Windows.Forms.TextBox tbLift7Number;
-        public System.Windows.Forms.TextBox tbLift6Number;
-        public System.Windows.Forms.TextBox tbLift5Number;
-        public System.Windows.Forms.TextBox tbLift4Number;
-        public System.Windows.Forms.TextBox tbLift3Number;
-        public System.Windows.Forms.TextBox tbLift2Number;
-        public System.Windows.Forms.TextBox tbLift1Number;
         public System.Windows.Forms.Label label68;
         public System.Windows.Forms.Label lblTotalLiftPrice;
         public System.Windows.Forms.Label lblLift12Total;
@@ -2862,7 +2501,6 @@
         public System.Windows.Forms.Label lblLift3Total;
         public System.Windows.Forms.Label lblLift2Total;
         public System.Windows.Forms.Label lblLift1Total;
-        public System.Windows.Forms.Label label13;
         public System.Windows.Forms.Label label11;
         public System.Windows.Forms.Label lbltitleCost;
         public System.Windows.Forms.TextBox tbLift12Floors;

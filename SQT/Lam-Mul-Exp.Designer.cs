@@ -969,6 +969,7 @@
             // rbRearDoorKeySwitchNo
             // 
             this.rbRearDoorKeySwitchNo.AutoSize = true;
+            this.rbRearDoorKeySwitchNo.Checked = true;
             this.rbRearDoorKeySwitchNo.Location = new System.Drawing.Point(108, 43);
             this.rbRearDoorKeySwitchNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbRearDoorKeySwitchNo.Name = "rbRearDoorKeySwitchNo";
@@ -986,7 +987,6 @@
             this.rbRearDoorKeySwitchYes.Name = "rbRearDoorKeySwitchYes";
             this.rbRearDoorKeySwitchYes.Size = new System.Drawing.Size(91, 37);
             this.rbRearDoorKeySwitchYes.TabIndex = 0;
-            this.rbRearDoorKeySwitchYes.TabStop = true;
             this.rbRearDoorKeySwitchYes.Text = "Yes";
             this.rbRearDoorKeySwitchYes.UseVisualStyleBackColor = true;
             // 
