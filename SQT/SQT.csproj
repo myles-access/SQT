@@ -13,10 +13,10 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>X:\Program Dependancies\Quote tool\SQT\</PublishUrl>
+    <PublishUrl>\\SERVER\shared folders\Company\Program Dependancies\Quote tool\Installer Files\1.0\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
@@ -24,8 +24,9 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>\\SERVER\Company Files\Program Dependancies\Quote tool\SQT\</UpdateUrl>
-    <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>18</ApplicationRevision>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>20</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -63,6 +64,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -76,91 +78,130 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AdminPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrintForm.cs">
+    <Compile Include="Lam-Dif-Calc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintForm.Designer.cs">
-      <DependentUpon>PrintForm.cs</DependentUpon>
+    <Compile Include="Lam-Dif-Calc.Designer.cs">
+      <DependentUpon>Lam-Dif-Calc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lam-Mul-Calc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lam-Mul-Calc.Designer.cs">
+      <DependentUpon>Lam-Mul-Calc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lam-Mul-Exp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lam-Mul-Exp.Designer.cs">
+      <DependentUpon>Lam-Mul-Exp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lam-Sing-Calc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lam-Sing-Calc.Designer.cs">
+      <DependentUpon>Lam-Sing-Calc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lam-Sing-Exp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lam-Sing-Exp.Designer.cs">
+      <DependentUpon>Lam-Sing-Exp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lam_Dif_Exp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lam_Dif_Exp.Designer.cs">
+      <DependentUpon>Lam_Dif_Exp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pin-Dif-Calc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pin-Dif-Calc.Designer.cs">
+      <DependentUpon>Pin-Dif-Calc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pin-Mul-Exp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pin-Mul-Exp.Designer.cs">
+      <DependentUpon>Pin-Mul-Exp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pin-Mul-Cal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pin-Mul-Cal.Designer.cs">
+      <DependentUpon>Pin-Mul-Cal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pin-Sing-Calc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pin-Sing-Calc.Designer.cs">
+      <DependentUpon>Pin-Sing-Calc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pin_Dif_Exp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pin_Dif_Exp.Designer.cs">
+      <DependentUpon>Pin_Dif_Exp.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuoteInfo.cs">
+    <Compile Include="Pin-Sing-Exp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuoteInfo.Designer.cs">
-      <DependentUpon>QuoteInfo.cs</DependentUpon>
+    <Compile Include="Pin-Sing-Exp.Designer.cs">
+      <DependentUpon>Pin-Sing-Exp.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuoteInfo10.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuoteInfo10.Designer.cs">
-      <DependentUpon>QuoteInfo10.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuoteInfo11.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuoteInfo11.Designer.cs">
-      <DependentUpon>QuoteInfo11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuoteInfo2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuoteInfo2.Designer.cs">
-      <DependentUpon>QuoteInfo2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuoteInfo3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuoteInfo3.Designer.cs">
-      <DependentUpon>QuoteInfo3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuoteInfo4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuoteInfo4.Designer.cs">
-      <DependentUpon>QuoteInfo4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuoteInfo5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuoteInfo5.Designer.cs">
-      <DependentUpon>QuoteInfo5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuoteInfo6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuoteInfo6.Designer.cs">
-      <DependentUpon>QuoteInfo6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuoteInfo7.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuoteInfo7.Designer.cs">
-      <DependentUpon>QuoteInfo7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuoteInfo8.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuoteInfo8.Designer.cs">
-      <DependentUpon>QuoteInfo8.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuoteInfo9.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuoteInfo9.Designer.cs">
-      <DependentUpon>QuoteInfo9.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintForm.resx">
-      <DependentUpon>PrintForm.cs</DependentUpon>
+    <EmbeddedResource Include="Lam-Dif-Calc.resx">
+      <DependentUpon>Lam-Dif-Calc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lam-Mul-Calc.resx">
+      <DependentUpon>Lam-Mul-Calc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lam-Mul-Exp.resx">
+      <DependentUpon>Lam-Mul-Exp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lam-Sing-Calc.resx">
+      <DependentUpon>Lam-Sing-Calc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lam-Sing-Exp.resx">
+      <DependentUpon>Lam-Sing-Exp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lam_Dif_Exp.resx">
+      <DependentUpon>Lam_Dif_Exp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pin-Dif-Calc.resx">
+      <DependentUpon>Pin-Dif-Calc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pin-Mul-Exp.resx">
+      <DependentUpon>Pin-Mul-Exp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pin-Mul-Cal.resx">
+      <DependentUpon>Pin-Mul-Cal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pin-Sing-Calc.resx">
+      <DependentUpon>Pin-Sing-Calc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pin_Dif_Exp.resx">
+      <DependentUpon>Pin_Dif_Exp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,38 +213,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="QuoteInfo.resx">
-      <DependentUpon>QuoteInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuoteInfo10.resx">
-      <DependentUpon>QuoteInfo10.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuoteInfo11.resx">
-      <DependentUpon>QuoteInfo11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuoteInfo2.resx">
-      <DependentUpon>QuoteInfo2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuoteInfo3.resx">
-      <DependentUpon>QuoteInfo3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuoteInfo4.resx">
-      <DependentUpon>QuoteInfo4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuoteInfo5.resx">
-      <DependentUpon>QuoteInfo5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuoteInfo6.resx">
-      <DependentUpon>QuoteInfo6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuoteInfo7.resx">
-      <DependentUpon>QuoteInfo7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuoteInfo8.resx">
-      <DependentUpon>QuoteInfo8.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuoteInfo9.resx">
-      <DependentUpon>QuoteInfo9.cs</DependentUpon>
+    <EmbeddedResource Include="Pin-Sing-Exp.resx">
+      <DependentUpon>Pin-Sing-Exp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -262,6 +273,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Project.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
