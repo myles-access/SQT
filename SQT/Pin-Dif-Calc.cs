@@ -75,7 +75,7 @@ namespace SQT
             lblCostIncludingMargin.Text = PriceRounding(float.Parse(s));
             lblGST.Text = PriceRounding(float.Parse(s));
             lblPriceIncludingGST.Text = PriceRounding(float.Parse(s));
-            quoteNumber = ("QuAP" + DateTime.Now.ToString("yy") + "-000");
+            quoteNumber = ("Qu" + DateTime.Now.ToString("yy") + "AP-000");
             lblLift10Total.Text = s;
             lblLift11Total.Text = s;
             lblLift12Total.Text = s;

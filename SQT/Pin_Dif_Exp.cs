@@ -576,7 +576,7 @@ namespace SQT
                 f.WordData(prefix + "AE169", tb2MainCOPLocation.Text);// main COP location
                 f.WordData(prefix + "AE170", tb2AuxCOPLocation.Text);//aux cop location
                 f.WordData(prefix + "AE171", tb2Designations.Text); // designations 
-                f.WordData(prefix + "AE191", tb2KeyswitchLocation.Text); //keyt switch location
+                f.WordData(prefix + "AE191", tb2KeyswitchLocation.Text); //key switch location
                 f.WordData(prefix + "AE172", f.RadioButtonHandeler(tb2COPFinishText, rb2COPFinishStainlessSTeell, rb2COPFinishOther));// COP finish
                 f.WordData(prefix + "AE173", "Dual illumination buttons with gong");// button type 
                 f.WordData(prefix + "AE174", f.RadioButtonHandeler(null, rb2LCDColourBlue, rb2LCDColourRed, rb2LCDColourWhite));// LCD colour
@@ -590,7 +590,7 @@ namespace SQT
                 f.WordData(prefix + "AE193", "Dual illumination buttons with gong");//button type
                 f.WordData(prefix + "AE209", f.RadioButtonHandeler(null, rb2EmergencyLoweringSystemYes, rb2EmergemncyLoweringSystemNo));// emergency lowering system 
                 f.WordData(prefix + "AE210", f.RadioButtonToAsteriskHandeler(rb2OutOfServiceYes, rb2OutOfServiceNo));//out of service 
-
+                
                 #endregion
             }
             if (pageTracker >= 3)
@@ -1104,7 +1104,7 @@ namespace SQT
                 f.WordData(prefix + "AE169", tb7MainCOPLocation.Text);// main COP location
                 f.WordData(prefix + "AE170", tb7AuzCOPLocation.Text);//aux cop location
                 f.WordData(prefix + "AE171", tb7Designations.Text); // designations 
-                f.WordData(prefix + "AE191", tb7KeyswitchLocation.Text); //keyt switch location
+                f.WordData(prefix + "AE191", tb7KeyswitchLocation.Text); //key switch location
                 f.WordData(prefix + "AE172", f.RadioButtonHandeler(tb7COPFinishText, rb7COPFinishStainlessSteel, rb7COPFinishOther));// COP finish
                 f.WordData(prefix + "AE173", "Dual illumination buttons with gong");// button type 
                 f.WordData(prefix + "AE174", f.RadioButtonHandeler(null, rb7LCDColourBlue, rb7LCDColourRed, rb7LCDColourWhite));// LCD colour
@@ -1118,6 +1118,7 @@ namespace SQT
                 f.WordData(prefix + "AE193", "Dual illumination buttons with gong");//button type
                 f.WordData(prefix + "AE209", f.RadioButtonHandeler(null, rb7EmergencyLoweringSystemYes, rb7EmergencyLoweringSystemNo));// emergency lowering system 
                 f.WordData(prefix + "AE210", f.RadioButtonToAsteriskHandeler(rb7OutOfServiceYes, rb7OutOfSErviceNo));//out of service 
+              
                 #endregion
             }
             if (pageTracker >= 8)
