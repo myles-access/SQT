@@ -470,6 +470,7 @@
             this.btnShippingReset.TabStop = false;
             this.btnShippingReset.Text = "Reset Shipping Containers";
             this.btnShippingReset.UseVisualStyleBackColor = true;
+            this.btnShippingReset.Click += new System.EventHandler(this.btnShippingReset_Click);
             // 
             // btn40Ft
             // 
@@ -708,7 +709,7 @@
             this.lbWait.BackColor = System.Drawing.Color.Gray;
             this.lbWait.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWait.ForeColor = System.Drawing.Color.Navy;
-            this.lbWait.Location = new System.Drawing.Point(25, 517);
+            this.lbWait.Location = new System.Drawing.Point(21, 555);
             this.lbWait.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbWait.Name = "lbWait";
             this.lbWait.Size = new System.Drawing.Size(1423, 164);

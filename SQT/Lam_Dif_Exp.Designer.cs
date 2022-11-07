@@ -4461,7 +4461,7 @@
             this.groupBox320.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox320.Name = "groupBox320";
             this.groupBox320.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox320.Size = new System.Drawing.Size(247, 92);
+            this.groupBox320.Size = new System.Drawing.Size(281, 92);
             this.groupBox320.TabIndex = 368;
             this.groupBox320.TabStop = false;
             this.groupBox320.Text = "Door Nudging";
@@ -4696,7 +4696,7 @@
             this.groupBox284.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox284.Name = "groupBox284";
             this.groupBox284.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox284.Size = new System.Drawing.Size(209, 92);
+            this.groupBox284.Size = new System.Drawing.Size(247, 92);
             this.groupBox284.TabIndex = 368;
             this.groupBox284.TabStop = false;
             this.groupBox284.Text = "Door Nudging";
@@ -7923,7 +7923,7 @@
             this.groupBox248.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox248.Name = "groupBox248";
             this.groupBox248.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox248.Size = new System.Drawing.Size(209, 92);
+            this.groupBox248.Size = new System.Drawing.Size(257, 92);
             this.groupBox248.TabIndex = 368;
             this.groupBox248.TabStop = false;
             this.groupBox248.Text = "Door Nudging";
@@ -8482,7 +8482,7 @@
             this.label245.AutoSize = true;
             this.label245.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label245.ForeColor = System.Drawing.Color.Black;
-            this.label245.Location = new System.Drawing.Point(55, 1676);
+            this.label245.Location = new System.Drawing.Point(8, 1677);
             this.label245.Name = "label245";
             this.label245.Size = new System.Drawing.Size(264, 37);
             this.label245.TabIndex = 365;
@@ -8493,7 +8493,7 @@
             this.groupBox216.Controls.Add(this.rb9AdvancedOpeningNo);
             this.groupBox216.Controls.Add(this.rb9AdvancedOpeningYes);
             this.groupBox216.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox216.Location = new System.Drawing.Point(464, 1671);
+            this.groupBox216.Location = new System.Drawing.Point(417, 1672);
             this.groupBox216.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox216.Name = "groupBox216";
             this.groupBox216.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -8506,7 +8506,7 @@
             // 
             this.tb9DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9DoorWidth.ForeColor = System.Drawing.Color.Black;
-            this.tb9DoorWidth.Location = new System.Drawing.Point(325, 1671);
+            this.tb9DoorWidth.Location = new System.Drawing.Point(278, 1672);
             this.tb9DoorWidth.Name = "tb9DoorWidth";
             this.tb9DoorWidth.Size = new System.Drawing.Size(120, 44);
             this.tb9DoorWidth.TabIndex = 318;
@@ -8516,7 +8516,7 @@
             // 
             this.tb9DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9DoorHeight.ForeColor = System.Drawing.Color.Black;
-            this.tb9DoorHeight.Location = new System.Drawing.Point(325, 1726);
+            this.tb9DoorHeight.Location = new System.Drawing.Point(278, 1727);
             this.tb9DoorHeight.Name = "tb9DoorHeight";
             this.tb9DoorHeight.Size = new System.Drawing.Size(120, 44);
             this.tb9DoorHeight.TabIndex = 319;
@@ -8527,7 +8527,7 @@
             this.label246.AutoSize = true;
             this.label246.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label246.ForeColor = System.Drawing.Color.Black;
-            this.label246.Location = new System.Drawing.Point(55, 1726);
+            this.label246.Location = new System.Drawing.Point(8, 1727);
             this.label246.Name = "label246";
             this.label246.Size = new System.Drawing.Size(273, 37);
             this.label246.TabIndex = 366;
@@ -11319,11 +11319,11 @@
             this.groupBox428.Controls.Add(this.rb10DoorNudgingNo);
             this.groupBox428.Controls.Add(this.rb10DoorNudgingYes);
             this.groupBox428.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox428.Location = new System.Drawing.Point(763, 1682);
+            this.groupBox428.Location = new System.Drawing.Point(743, 1682);
             this.groupBox428.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox428.Name = "groupBox428";
             this.groupBox428.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox428.Size = new System.Drawing.Size(209, 92);
+            this.groupBox428.Size = new System.Drawing.Size(253, 92);
             this.groupBox428.TabIndex = 368;
             this.groupBox428.TabStop = false;
             this.groupBox428.Text = "Door Nudging";
@@ -11671,7 +11671,7 @@
             this.label491.AutoSize = true;
             this.label491.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label491.ForeColor = System.Drawing.Color.Black;
-            this.label491.Location = new System.Drawing.Point(62, 1687);
+            this.label491.Location = new System.Drawing.Point(42, 1687);
             this.label491.Name = "label491";
             this.label491.Size = new System.Drawing.Size(264, 37);
             this.label491.TabIndex = 365;
@@ -11682,7 +11682,7 @@
             this.groupBox432.Controls.Add(this.rb10AdvancedOpeningNo);
             this.groupBox432.Controls.Add(this.rb10AdvancedOpeningYes);
             this.groupBox432.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox432.Location = new System.Drawing.Point(471, 1682);
+            this.groupBox432.Location = new System.Drawing.Point(451, 1682);
             this.groupBox432.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox432.Name = "groupBox432";
             this.groupBox432.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -11719,7 +11719,7 @@
             // 
             this.tb10DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10DoorWidth.ForeColor = System.Drawing.Color.Black;
-            this.tb10DoorWidth.Location = new System.Drawing.Point(332, 1682);
+            this.tb10DoorWidth.Location = new System.Drawing.Point(312, 1682);
             this.tb10DoorWidth.Name = "tb10DoorWidth";
             this.tb10DoorWidth.Size = new System.Drawing.Size(120, 44);
             this.tb10DoorWidth.TabIndex = 318;
@@ -11729,7 +11729,7 @@
             // 
             this.tb10DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10DoorHeight.ForeColor = System.Drawing.Color.Black;
-            this.tb10DoorHeight.Location = new System.Drawing.Point(332, 1737);
+            this.tb10DoorHeight.Location = new System.Drawing.Point(312, 1737);
             this.tb10DoorHeight.Name = "tb10DoorHeight";
             this.tb10DoorHeight.Size = new System.Drawing.Size(120, 44);
             this.tb10DoorHeight.TabIndex = 319;
@@ -11740,7 +11740,7 @@
             this.label492.AutoSize = true;
             this.label492.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label492.ForeColor = System.Drawing.Color.Black;
-            this.label492.Location = new System.Drawing.Point(62, 1737);
+            this.label492.Location = new System.Drawing.Point(42, 1737);
             this.label492.Name = "label492";
             this.label492.Size = new System.Drawing.Size(273, 37);
             this.label492.TabIndex = 366;
@@ -15098,7 +15098,7 @@
             this.groupBox356.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox356.Name = "groupBox356";
             this.groupBox356.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox356.Size = new System.Drawing.Size(209, 92);
+            this.groupBox356.Size = new System.Drawing.Size(257, 92);
             this.groupBox356.TabIndex = 368;
             this.groupBox356.TabStop = false;
             this.groupBox356.Text = "Door Nudging";
@@ -15656,7 +15656,7 @@
             this.groupBox392.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox392.Name = "groupBox392";
             this.groupBox392.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox392.Size = new System.Drawing.Size(209, 92);
+            this.groupBox392.Size = new System.Drawing.Size(247, 92);
             this.groupBox392.TabIndex = 368;
             this.groupBox392.TabStop = false;
             this.groupBox392.Text = "Door Nudging";
@@ -18401,7 +18401,7 @@
             this.groupBox104.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox104.Name = "groupBox104";
             this.groupBox104.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox104.Size = new System.Drawing.Size(209, 92);
+            this.groupBox104.Size = new System.Drawing.Size(266, 92);
             this.groupBox104.TabIndex = 368;
             this.groupBox104.TabStop = false;
             this.groupBox104.Text = "Door Nudging";
@@ -20462,7 +20462,7 @@
             this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox9.Size = new System.Drawing.Size(209, 92);
+            this.groupBox9.Size = new System.Drawing.Size(270, 92);
             this.groupBox9.TabIndex = 368;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Door Nudging";
@@ -22965,11 +22965,11 @@
             this.groupBox68.Controls.Add(this.rb2DoorNudgingNo);
             this.groupBox68.Controls.Add(this.rb2DoorNudgingYes);
             this.groupBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox68.Location = new System.Drawing.Point(746, 1849);
+            this.groupBox68.Location = new System.Drawing.Point(715, 1848);
             this.groupBox68.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox68.Name = "groupBox68";
             this.groupBox68.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox68.Size = new System.Drawing.Size(209, 92);
+            this.groupBox68.Size = new System.Drawing.Size(273, 92);
             this.groupBox68.TabIndex = 368;
             this.groupBox68.TabStop = false;
             this.groupBox68.Text = "Door Nudging";
@@ -23203,7 +23203,7 @@
             this.label81.AutoSize = true;
             this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label81.ForeColor = System.Drawing.Color.Black;
-            this.label81.Location = new System.Drawing.Point(45, 1854);
+            this.label81.Location = new System.Drawing.Point(14, 1853);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(264, 37);
             this.label81.TabIndex = 365;
@@ -23214,7 +23214,7 @@
             this.groupBox72.Controls.Add(this.rb2AdvancedOpeningNo);
             this.groupBox72.Controls.Add(this.rb2AdvancedOpeningYes);
             this.groupBox72.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox72.Location = new System.Drawing.Point(454, 1849);
+            this.groupBox72.Location = new System.Drawing.Point(423, 1848);
             this.groupBox72.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox72.Name = "groupBox72";
             this.groupBox72.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -23227,7 +23227,7 @@
             // 
             this.tb2DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2DoorWidth.ForeColor = System.Drawing.Color.Black;
-            this.tb2DoorWidth.Location = new System.Drawing.Point(315, 1849);
+            this.tb2DoorWidth.Location = new System.Drawing.Point(284, 1848);
             this.tb2DoorWidth.Name = "tb2DoorWidth";
             this.tb2DoorWidth.Size = new System.Drawing.Size(120, 44);
             this.tb2DoorWidth.TabIndex = 318;
@@ -23237,7 +23237,7 @@
             // 
             this.tb2DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2DoorHeight.ForeColor = System.Drawing.Color.Black;
-            this.tb2DoorHeight.Location = new System.Drawing.Point(315, 1904);
+            this.tb2DoorHeight.Location = new System.Drawing.Point(284, 1903);
             this.tb2DoorHeight.Name = "tb2DoorHeight";
             this.tb2DoorHeight.Size = new System.Drawing.Size(120, 44);
             this.tb2DoorHeight.TabIndex = 319;
@@ -23248,7 +23248,7 @@
             this.label82.AutoSize = true;
             this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label82.ForeColor = System.Drawing.Color.Black;
-            this.label82.Location = new System.Drawing.Point(45, 1904);
+            this.label82.Location = new System.Drawing.Point(14, 1903);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(273, 37);
             this.label82.TabIndex = 366;
@@ -25447,11 +25447,11 @@
             this.groupBox212.Controls.Add(this.rb9DoorNudgingNo);
             this.groupBox212.Controls.Add(this.rb9DoorNudgingYes);
             this.groupBox212.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox212.Location = new System.Drawing.Point(756, 1671);
+            this.groupBox212.Location = new System.Drawing.Point(709, 1672);
             this.groupBox212.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox212.Name = "groupBox212";
             this.groupBox212.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox212.Size = new System.Drawing.Size(209, 92);
+            this.groupBox212.Size = new System.Drawing.Size(273, 92);
             this.groupBox212.TabIndex = 368;
             this.groupBox212.TabStop = false;
             this.groupBox212.Text = "Door Nudging";
@@ -28515,7 +28515,7 @@
             this.groupBox140.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox140.Name = "groupBox140";
             this.groupBox140.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox140.Size = new System.Drawing.Size(209, 92);
+            this.groupBox140.Size = new System.Drawing.Size(263, 92);
             this.groupBox140.TabIndex = 368;
             this.groupBox140.TabStop = false;
             this.groupBox140.Text = "Door Nudging";
@@ -29427,7 +29427,7 @@
             this.groupBox176.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox176.Name = "groupBox176";
             this.groupBox176.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox176.Size = new System.Drawing.Size(209, 92);
+            this.groupBox176.Size = new System.Drawing.Size(268, 92);
             this.groupBox176.TabIndex = 368;
             this.groupBox176.TabStop = false;
             this.groupBox176.Text = "Door Nudging";

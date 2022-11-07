@@ -337,7 +337,7 @@ namespace SQT
             TextBoxFixer(tbMainEntranceGuards);
             TextBoxFixer(tbMainWeeksRequired);
 
-            if (floorsTbChecker() && marginTbChecker() )
+            if (floorsTbChecker() && marginTbChecker())
             {
                 GeneratePriceList();
                 Form1SaveToXML();
@@ -660,7 +660,7 @@ namespace SQT
         // closes the word document 
         private void WordFinish()
         {
-            fileOpen.ShowMe();
+            //fileOpen.ShowMe();
             fileOpen.Quit();
 
             MessageBox.Show("Quote sucessfully exported");

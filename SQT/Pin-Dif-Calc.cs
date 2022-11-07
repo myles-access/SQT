@@ -575,10 +575,10 @@ namespace SQT
             catch
             {
                 //MessageBox.Show("Invalid floor number entered ");
-                return false;
+                tb.Text = "0";
             }
 
-            if (i > maxFloorNumber || i <= 1)
+            if (i > maxFloorNumber || i < 0 || i == 1)
             {
                 MessageBox.Show("Invalid floor number entered ");
                 return false;
@@ -743,7 +743,7 @@ namespace SQT
         // closes the word document 
         private void WordFinish()
         {
-            fileOpen.ShowMe();
+            //fileOpen.ShowMe();
             fileOpen.Quit();
 
             MessageBox.Show("Quote sucessfully exported");
@@ -1031,10 +1031,10 @@ namespace SQT
             }
             LoadPreviousXmlTb(tbMainAccomodation, tBMainAddress, tbMainBlankets, tbMainCartage, tbMainDuct, tbMainEntranceGuards, tbMainMargin,
                  tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired,
-                 tbLift1Price, tbLift1Floors, tbLift2Price,  tbLift2Floors, tb3Lift3Price,  tbLift3Floors,
-                 tbLift4Price, tbLift4Floors, tbLift5Price,  tbLift5Floors, tbLift6Price,  tbLift6Floors,
-                 tbLift7Price,  tbLift7Floors, tbLift8Price,  tbLift8Floors, tbLift9Price,  tbLift9Floors,
-                 tbLift10Price,  tbLift10Floors, tbLift11Price,  tbLift11Floors, tbLift12Price,  tbLift12Floors);
+                 tbLift1Price, tbLift1Floors, tbLift2Price, tbLift2Floors, tb3Lift3Price, tbLift3Floors,
+                 tbLift4Price, tbLift4Floors, tbLift5Price, tbLift5Floors, tbLift6Price, tbLift6Floors,
+                 tbLift7Price, tbLift7Floors, tbLift8Price, tbLift8Floors, tbLift9Price, tbLift9Floors,
+                 tbLift10Price, tbLift10Floors, tbLift11Price, tbLift11Floors, tbLift12Price, tbLift12Floors);
             LoadPreviousXmlCb(cbMainSecurity);
             //num20Ft = int.Parse(saveData["num20Ft"]);
             //num40Ft = int.Parse(saveData["num40Ft"]);
@@ -1164,10 +1164,10 @@ namespace SQT
         {
             SaveTbToXML(tbMainAccomodation, tBMainAddress, tbMainBlankets, tbMainCartage, tbMainDuct, tbMainEntranceGuards, tbMainMargin,
                  tBMainQuoteNumber, tbMainScaffold, tbMainShaftLight, tbMainStorage, tbMainSundries, tbMainTravel, tbMainWeeksRequired,
-                 tbLift1Price,  tbLift1Floors, tbLift2Price,  tbLift2Floors, tb3Lift3Price,  tbLift3Floors,
-                 tbLift4Price,  tbLift4Floors, tbLift5Price,  tbLift5Floors, tbLift6Price,  tbLift6Floors,
-                 tbLift7Price,  tbLift7Floors, tbLift8Price,  tbLift8Floors, tbLift9Price,  tbLift9Floors,
-                 tbLift10Price,  tbLift10Floors, tbLift11Price,  tbLift11Floors, tbLift12Price,  tbLift12Floors);
+                 tbLift1Price, tbLift1Floors, tbLift2Price, tbLift2Floors, tb3Lift3Price, tbLift3Floors,
+                 tbLift4Price, tbLift4Floors, tbLift5Price, tbLift5Floors, tbLift6Price, tbLift6Floors,
+                 tbLift7Price, tbLift7Floors, tbLift8Price, tbLift8Floors, tbLift9Price, tbLift9Floors,
+                 tbLift10Price, tbLift10Floors, tbLift11Price, tbLift11Floors, tbLift12Price, tbLift12Floors);
             SaveCbToXML(cbMainSecurity);
             saveData["num20Ft"] = num20Ft.ToString();
             saveData["num40Ft"] = num40Ft.ToString();
@@ -1600,139 +1600,139 @@ namespace SQT
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift8Price,  lblLift8Total);
+            RefreshLiftPrices(tbLift8Price, lblLift8Total);
         }
         private void textBox12_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift9Price,  lblLift9Total);
+            RefreshLiftPrices(tbLift9Price, lblLift9Total);
         }
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift10Price,  lblLift10Total);
+            RefreshLiftPrices(tbLift10Price, lblLift10Total);
         }
 
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift11Price,  lblLift11Total);
+            RefreshLiftPrices(tbLift11Price, lblLift11Total);
         }
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift12Price,  lblLift12Total);
+            RefreshLiftPrices(tbLift12Price, lblLift12Total);
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            RefreshLiftPrices(tbLift1Price,  lblLift1Total);
+            RefreshLiftPrices(tbLift1Price, lblLift1Total);
         }
 
         private void tbLift2Price_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift2Price,  lblLift2Total);
+            RefreshLiftPrices(tbLift2Price, lblLift2Total);
         }
 
         private void tb3Lift3Price_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tb3Lift3Price,  lblLift3Total);
+            RefreshLiftPrices(tb3Lift3Price, lblLift3Total);
         }
 
         private void tbLift4Price_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift4Price,  lblLift4Total);
+            RefreshLiftPrices(tbLift4Price, lblLift4Total);
         }
 
         private void tbLift5Price_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift5Price,  lblLift5Total);
+            RefreshLiftPrices(tbLift5Price, lblLift5Total);
         }
 
         private void tbLift6Price_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift6Price,  lblLift6Total);
+            RefreshLiftPrices(tbLift6Price, lblLift6Total);
         }
 
         private void tbLift7Price_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift7Price,  lblLift7Total);
+            RefreshLiftPrices(tbLift7Price, lblLift7Total);
         }
 
         private void tbLift1Number_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift1Price,  lblLift1Total);
+            RefreshLiftPrices(tbLift1Price, lblLift1Total);
         }
 
         private void tbLift2Number_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift2Price,  lblLift2Total);
+            RefreshLiftPrices(tbLift2Price, lblLift2Total);
         }
 
         private void tbLift3Number_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tb3Lift3Price,  lblLift3Total);
+            RefreshLiftPrices(tb3Lift3Price, lblLift3Total);
         }
 
         private void tbLift4Number_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift4Price,  lblLift4Total);
+            RefreshLiftPrices(tbLift4Price, lblLift4Total);
         }
 
         private void tbLift5Number_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift5Price,  lblLift5Total);
+            RefreshLiftPrices(tbLift5Price, lblLift5Total);
         }
 
         private void tbLift6Number_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift6Price,  lblLift6Total);
+            RefreshLiftPrices(tbLift6Price, lblLift6Total);
         }
 
         private void tbLift7Number_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift7Price,  lblLift7Total);
+            RefreshLiftPrices(tbLift7Price, lblLift7Total);
         }
 
         private void tbLift8Number_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift8Price,  lblLift8Total);
+            RefreshLiftPrices(tbLift8Price, lblLift8Total);
         }
 
         private void tbLift10Number_TextChanged(object sender, EventArgs e)
         {
-            RefreshLiftPrices(tbLift10Price,  lblLift10Total);
+            RefreshLiftPrices(tbLift10Price, lblLift10Total);
 
         }
 
         private void tbLift11Numebr_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift11Price,  lblLift11Total);
+            RefreshLiftPrices(tbLift11Price, lblLift11Total);
         }
         private void tbLift9Number_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift9Price,  lblLift9Total);
+            RefreshLiftPrices(tbLift9Price, lblLift9Total);
         }
 
         private void tbLift12Number_TextChanged(object sender, EventArgs e)
         {
 
-            RefreshLiftPrices(tbLift12Price,  lblLift12Total);
+            RefreshLiftPrices(tbLift12Price, lblLift12Total);
         }
         #endregion
         private void btnConfigurePrices_Click(object sender, EventArgs e)
@@ -1763,7 +1763,7 @@ namespace SQT
         {
             try
             {
-                total.Text = (float.Parse(price.Text) ).ToString();
+                total.Text = (float.Parse(price.Text)).ToString();
             }
             catch (Exception)
             {

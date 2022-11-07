@@ -337,7 +337,7 @@ namespace SQT
             TextBoxFixer(tbMainEntranceGuards);
             TextBoxFixer(tbMainWeeksRequired);
 
-            if (floorsTbChecker() && marginTbChecker() )
+            if (floorsTbChecker() && marginTbChecker())
             {
                 GeneratePriceList();
                 Form1SaveToXML();
@@ -947,7 +947,7 @@ namespace SQT
                 saveData[item.Name.ToString()] = item.Checked.ToString();
             }
         }
-        
+
         public void SaveCbToXML(params CheckBox[] cb)
         {
             foreach (CheckBox item in cb)

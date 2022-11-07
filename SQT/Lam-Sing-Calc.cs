@@ -644,7 +644,7 @@ namespace SQT
         // closes the word document 
         private void WordFinish()
         {
-            fileOpen.ShowMe();
+            //  fileOpen.ShowMe();
             fileOpen.Quit();
 
             MessageBox.Show("Quote sucessfully exported");
@@ -1241,5 +1241,6 @@ namespace SQT
         }
 
         #endregion
+
     }
 }
