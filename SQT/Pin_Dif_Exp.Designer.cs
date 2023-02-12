@@ -4251,6 +4251,7 @@
             this.tbNumofCarEntrances.Size = new System.Drawing.Size(186, 44);
             this.tbNumofCarEntrances.TabIndex = 316;
             this.tbNumofCarEntrances.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNumofCarEntrances.TextChanged += new System.EventHandler(this.tbNumofCarEntrances_TextChanged_1);
             // 
             // label21
             // 
@@ -29741,7 +29742,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1381, 1184);
+            this.ClientSize = new System.Drawing.Size(1381, 1158);
             this.Controls.Add(this.buttonEUR);
             this.Controls.Add(this.btNewPanel);
             this.Controls.Add(this.btPanel12);

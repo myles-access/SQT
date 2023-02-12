@@ -7,6 +7,7 @@ namespace SQT
     public partial class Lam_Mul_Exp : Form
     {
         Lam_Mul_Calc f = Application.OpenForms.OfType<Lam_Mul_Calc>().Single();
+        bool rearDoorChecker = false;
 
         public Lam_Mul_Exp()
         {
@@ -79,8 +80,13 @@ namespace SQT
             }
         }
 
-        private void tbNumofCarEntrances_TextChanged(object sender, EventArgs e)
+        private void tbNumofCarEntrances_TextChanged_1(object sender, EventArgs e)
         {
+            if (rearDoorChecker)
+            {
+                return;
+            }
+
             try
             {
                 if (int.Parse(tbNumofCarEntrances.Text) > 2)
@@ -91,6 +97,8 @@ namespace SQT
                 {
                     rbRearDoorKeySwitchNo.Checked = true;
                 }
+
+                rearDoorChecker = true;
             }
             catch (Exception)
             {
@@ -214,6 +222,5 @@ namespace SQT
         {
             f.QuestionCloseCall(this);
         }
-
     }
 }

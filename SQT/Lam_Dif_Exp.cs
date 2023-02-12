@@ -13,6 +13,7 @@ namespace SQT
         int pageTracker = 1;
         int activePage = 0;
 
+        bool rearDoorChecker = false;
         bool page2Opened = false;
         bool page3Opened = false;
         bool page4Opened = false;
@@ -352,16 +353,19 @@ namespace SQT
         #endregion
 
         #region Data Formatting Methods
-        private void tbNumofCarEntrances_TextChanged(object sender, EventArgs e)
+        private void tbNumofCarEntrances_TextChanged_1(object sender, EventArgs e)
         {
-            RearDoorChecker(tbNumofCarEntrances, rbRearDoorKeySwitchYes, rbRearDoorKeySwitchNo);
+            if (!rearDoorChecker)
+            {
+                RearDoorChecker(tbNumofCarEntrances, rbRearDoorKeySwitchYes, rbRearDoorKeySwitchNo);
+            }
         }
 
         private void RearDoorChecker(TextBox carEntrance, RadioButton rbYes, RadioButton rbNo)
         {
             try
             {
-                if (int.Parse(carEntrance.Text) > 2)
+                if (int.Parse(carEntrance.Text) >= 2)
                 {
                     rbYes.Checked = true;
                 }
@@ -369,6 +373,9 @@ namespace SQT
                 {
                     rbNo.Checked = true;
                 }
+                //if try fails the bool will remain false and thus be able to try again
+                // if try is sucessful it will change the bool to true and prevent additional edits
+                rearDoorChecker = true;
             }
             catch (Exception)
             {
@@ -1902,7 +1909,13 @@ namespace SQT
         #region Fill data from 1st page into additional pages
         private void FillPageWithMainData(int pageToBeFilled,ref bool pageOpenedPreviously, bool previousQuoteWasLoaded)
         {
-            int pageArrayCorrector = pageToBeFilled - 1;
+            if (pageOpenedPreviously || previousQuoteWasLoaded)
+            {
+                return;
+            }
+
+            pageToBeFilled --;
+            pageOpenedPreviously = true;
 
             #region Page Data Vars
             Object[][] pageObjects = new object[][]
@@ -2163,37 +2176,32 @@ namespace SQT
 
             #endregion
 
-            if (pageOpenedPreviously || previousQuoteWasLoaded)
+            for (int i = 0; i < pageObjects[pageToBeFilled].Length; i++)
             {
-                return;
-            }
-            pageOpenedPreviously = true;
-
-            for (int i = 0; i < pageObjects[pageArrayCorrector].Length; i++)
-            {
-                if (pageObjects[pageArrayCorrector][i] is TextBox)
+                if (pageObjects[pageToBeFilled][i] is TextBox)
                 {
                     TextBox sourceTextBox = (TextBox)pageObjects[0][i];
-                    TextBox recipientTextBox = (TextBox)pageObjects[pageArrayCorrector][i];
+                    TextBox recipientTextBox = (TextBox)pageObjects[pageToBeFilled][i];
 
                     recipientTextBox.Text = sourceTextBox.Text;
                 }
-                else if (pageObjects[pageArrayCorrector][i] is RadioButton)
+                else if (pageObjects[pageToBeFilled][i] is RadioButton)
                 {
                     RadioButton sourceRadioButton = (RadioButton)pageObjects[0][i];
-                    RadioButton recipientRadioButton = (RadioButton)pageObjects[pageArrayCorrector][i];
+                    RadioButton recipientRadioButton = (RadioButton)pageObjects[pageToBeFilled][i];
 
                     recipientRadioButton.Checked = sourceRadioButton.Checked;
                 }
-                else if (pageObjects[pageArrayCorrector][i] is CheckBox)
+                else if (pageObjects[pageToBeFilled][i] is CheckBox)
                 {
                     CheckBox sourceCheckBox = (CheckBox)pageObjects[0][i];
-                    CheckBox recipientCheckBox = (CheckBox)pageObjects[pageArrayCorrector][i];
+                    CheckBox recipientCheckBox = (CheckBox)pageObjects[pageToBeFilled][i];
 
                     recipientCheckBox.Checked = sourceCheckBox.Checked;
                 }
             }
         }
         #endregion
+
     }
 }

@@ -14,6 +14,7 @@ namespace SQT
         int pageTracker = 1;
         int activePage = 0;
 
+        bool rearDoorChecker = false;
         bool page2Opened = false;
         bool page3Opened = false;
         bool page4Opened = false;
@@ -354,16 +355,19 @@ namespace SQT
         #endregion
 
         #region Data Formatting Methods
-        private void tbNumofCarEntrances_TextChanged(object sender, EventArgs e)
+        private void tbNumofCarEntrances_TextChanged_1(object sender, EventArgs e)
         {
-            RearDoorChecker(tbNumofCarEntrances, rbRearDoorKeySwitchYes, rbRearDoorKeySwitchNo);
+            if (!rearDoorChecker)
+            {
+                RearDoorChecker(tbNumofCarEntrances, rbRearDoorKeySwitchYes, rbRearDoorKeySwitchNo);
+            }
         }
 
         private void RearDoorChecker(TextBox carEntrance, RadioButton rbYes, RadioButton rbNo)
         {
             try
             {
-                if (int.Parse(carEntrance.Text) > 2)
+                if (int.Parse(carEntrance.Text) >= 2)
                 {
                     rbYes.Checked = true;
                 }
@@ -371,6 +375,9 @@ namespace SQT
                 {
                     rbNo.Checked = true;
                 }
+                //if try fails the bool will remain false and thus be able to try again
+                // if try is sucessful it will change the bool to true and prevent additional edits
+                rearDoorChecker = true;
             }
             catch (Exception)
             {
@@ -493,7 +500,6 @@ namespace SQT
                 f.WordData(prefix + "AE193", "Dual illumination buttons with gong");//button type
                 f.WordData(prefix + "AE209", f.RadioButtonHandeler(null, rbEmergencyLoweringSystemYes, rbEmergencyLoweringSystemNo));// emergency lowering system 
                 f.WordData(prefix + "AE178", f.CheckboxTrueToYes(f.cbMainSecurity));//security cabiling only 
-
 
                 f.WordData(prefix + "AE116", f.RadioButtonToAsteriskHandeler(rbIndependentServiceYes, rbIndependentServiceNo));//independent service
                 f.WordData(prefix + "AE117", f.RadioButtonToAsteriskHandeler(rbLoadWeighingYes, rbLoadWeighingNo));//load weighing
@@ -699,7 +705,7 @@ namespace SQT
                 f.WordData(prefix + "AE169", tb3MainCOPLocation.Text);// main COP location
                 f.WordData(prefix + "AE170", tb3AuxCOPLocation.Text);//aux cop location
                 f.WordData(prefix + "AE171", tb3Designations.Text); // designations 
-                f.WordData(prefix + "AE191", tb3KeyswitchLocation.Text); //keyt switch location
+                f.WordData(prefix + "AE191", tb3KeyswitchLocation.Text); //key switch location
                 f.WordData(prefix + "AE172", f.RadioButtonHandeler(tb3COPFinishText, rb3COPFinishStainlessSteel, rb3COPFinishOther));// COP finish
                 f.WordData(prefix + "AE173", "Dual illumination buttons with gong");// button type 
                 f.WordData(prefix + "AE174", f.RadioButtonHandeler(null, rb3LCDColourBlue, rb3LCDColourRed, rb3LCDColourWhite));// LCD colour
@@ -1912,10 +1918,8 @@ namespace SQT
                 return;
             }
 
-            int pageArrayCorrector = pageToBeFilled - 1;
+            pageToBeFilled--;
             pageOpenedPreviously = true;
-
-            //MessageBox.Show(pageOpenedPreviously.ToString() + page2Opened.ToString());
 
             #region Page Data Vars
             Object[][] pageObjects = new object[][]
@@ -2176,31 +2180,32 @@ namespace SQT
 
             #endregion
 
-            for (int i = 0; i < pageObjects[pageArrayCorrector].Length; i++)
+            for (int i = 0; i < pageObjects[pageToBeFilled].Length; i++)
             {
-                if (pageObjects[pageArrayCorrector][i] is TextBox)
+                if (pageObjects[pageToBeFilled][i] is TextBox)
                 {
                     TextBox sourceTextBox = (TextBox)pageObjects[0][i];
-                    TextBox recipientTextBox = (TextBox)pageObjects[pageArrayCorrector][i];
+                    TextBox recipientTextBox = (TextBox)pageObjects[pageToBeFilled][i];
 
                     recipientTextBox.Text = sourceTextBox.Text;
                 }
-                else if (pageObjects[pageArrayCorrector][i] is RadioButton)
+                else if (pageObjects[pageToBeFilled][i] is RadioButton)
                 {
                     RadioButton sourceRadioButton = (RadioButton)pageObjects[0][i];
-                    RadioButton recipientRadioButton = (RadioButton)pageObjects[pageArrayCorrector][i];
+                    RadioButton recipientRadioButton = (RadioButton)pageObjects[pageToBeFilled][i];
 
                     recipientRadioButton.Checked = sourceRadioButton.Checked;
                 }
-                else if (pageObjects[pageArrayCorrector][i] is CheckBox)
+                else if (pageObjects[pageToBeFilled][i] is CheckBox)
                 {
                     CheckBox sourceCheckBox = (CheckBox)pageObjects[0][i];
-                    CheckBox recipientCheckBox = (CheckBox)pageObjects[pageArrayCorrector][i];
+                    CheckBox recipientCheckBox = (CheckBox)pageObjects[pageToBeFilled][i];
 
                     recipientCheckBox.Checked = sourceCheckBox.Checked;
                 }
             }
         }
         #endregion
+
     }
 }

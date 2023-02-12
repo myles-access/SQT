@@ -20522,6 +20522,7 @@
             this.tbNumofCarEntrances.Size = new System.Drawing.Size(186, 44);
             this.tbNumofCarEntrances.TabIndex = 316;
             this.tbNumofCarEntrances.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNumofCarEntrances.TextChanged += new System.EventHandler(this.tbNumofCarEntrances_TextChanged_1);
             // 
             // label21
             // 
@@ -29717,7 +29718,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1381, 1184);
+            this.ClientSize = new System.Drawing.Size(1381, 1176);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btPanel10);
             this.Controls.Add(this.btPanel9);
@@ -29733,6 +29734,11 @@
             this.Controls.Add(this.btPanel1);
             this.Controls.Add(this.btNewPanel);
             this.Controls.Add(this.buttonEUR);
+            this.Controls.Add(this.panelLift1);
+            this.Controls.Add(this.panelLift2);
+            this.Controls.Add(this.panelLift9);
+            this.Controls.Add(this.panelLift4);
+            this.Controls.Add(this.panelLift5);
             this.Controls.Add(this.panelLift6);
             this.Controls.Add(this.panelLift8);
             this.Controls.Add(this.panelLift7);
@@ -29740,12 +29746,8 @@
             this.Controls.Add(this.panelLift12);
             this.Controls.Add(this.panelLift11);
             this.Controls.Add(this.panelLift3);
-            this.Controls.Add(this.panelLift1);
-            this.Controls.Add(this.panelLift2);
-            this.Controls.Add(this.panelLift9);
-            this.Controls.Add(this.panelLift4);
-            this.Controls.Add(this.panelLift5);
             this.Name = "Lam_Dif_Exp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quote Generator";
             this.Load += new System.EventHandler(this.Lam_Dif_Exp_Load);
             this.groupBox298.ResumeLayout(false);

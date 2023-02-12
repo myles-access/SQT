@@ -1861,6 +1861,7 @@
             this.tbNumofCarEntrances.Size = new System.Drawing.Size(186, 44);
             this.tbNumofCarEntrances.TabIndex = 316;
             this.tbNumofCarEntrances.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNumofCarEntrances.TextChanged += new System.EventHandler(this.tbNumofCarEntrances_TextChanged_1);
             // 
             // label21
             // 

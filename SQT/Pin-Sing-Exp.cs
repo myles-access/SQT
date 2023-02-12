@@ -7,11 +7,13 @@ namespace SQT
     public partial class QuoteInfo2 : Form
     {
         Form1 f = Application.OpenForms.OfType<Form1>().Single();
+        bool rearDoorChecker = false;
 
         public QuoteInfo2()
         {
             InitializeComponent();
         }
+
 
         private void QuoteInfo2_Load(object sender, EventArgs e)
         {
@@ -81,9 +83,14 @@ namespace SQT
 
         private void tbNumofCarEntrances_TextChanged(object sender, EventArgs e)
         {
+            if (rearDoorChecker)
+            {
+                return;
+            }
+
             try
             {
-                if (int.Parse(tbNumofCarEntrances.Text) > 2)
+                if (int.Parse(tbNumofCarEntrances.Text) >= 2)
                 {
                     rbRearDoorKeySwitchYes.Checked = true;
                 }
@@ -91,6 +98,8 @@ namespace SQT
                 {
                     rbRearDoorKeySwitchNo.Checked = true;
                 }
+
+                rearDoorChecker = true;
             }
             catch (Exception)
             {

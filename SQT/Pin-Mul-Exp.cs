@@ -7,7 +7,8 @@ namespace SQT
     public partial class Pin_Mul_Calc : Form
     {
         Pin_Mul_Exp f = Application.OpenForms.OfType<Pin_Mul_Exp>().Single();
-
+        bool rearDoorChecker = false;
+        
         public Pin_Mul_Calc()
         {
             InitializeComponent();
@@ -79,8 +80,13 @@ namespace SQT
             }
         }
 
-        private void tbNumofCarEntrances_TextChanged(object sender, EventArgs e)
+        private void tbNumofCarEntrances_TextChanged_1(object sender, EventArgs e)
         {
+            if (rearDoorChecker)
+            {
+                return;
+            }
+
             try
             {
                 if (int.Parse(tbNumofCarEntrances.Text) > 2)
@@ -91,6 +97,8 @@ namespace SQT
                 {
                     rbRearDoorKeySwitchNo.Checked = true;
                 }
+
+                rearDoorChecker = true;
             }
             catch (Exception)
             {
@@ -214,6 +222,6 @@ namespace SQT
         {
             f.QuestionCloseCall(this);
         }
-    }
+            }
 }
 
