@@ -84,65 +84,11 @@
     <Compile Include="AdminPanel.Designer.cs">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lam-Dif-Calc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lam-Dif-Calc.Designer.cs">
-      <DependentUpon>Lam-Dif-Calc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Lam-Mul-Calc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lam-Mul-Calc.Designer.cs">
-      <DependentUpon>Lam-Mul-Calc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Lam-Mul-Exp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lam-Mul-Exp.Designer.cs">
-      <DependentUpon>Lam-Mul-Exp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Lam-Sing-Calc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lam-Sing-Calc.Designer.cs">
-      <DependentUpon>Lam-Sing-Calc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Lam-Sing-Exp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lam-Sing-Exp.Designer.cs">
-      <DependentUpon>Lam-Sing-Exp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Lam_Dif_Exp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lam_Dif_Exp.Designer.cs">
-      <DependentUpon>Lam_Dif_Exp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pin-Dif-Calc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pin-Dif-Calc.Designer.cs">
       <DependentUpon>Pin-Dif-Calc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pin-Mul-Exp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pin-Mul-Exp.Designer.cs">
-      <DependentUpon>Pin-Mul-Exp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pin-Mul-Cal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pin-Mul-Cal.Designer.cs">
-      <DependentUpon>Pin-Mul-Cal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pin-Sing-Calc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pin-Sing-Calc.Designer.cs">
-      <DependentUpon>Pin-Sing-Calc.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -158,44 +104,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Pin-Sing-Exp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pin-Sing-Exp.Designer.cs">
-      <DependentUpon>Pin-Sing-Exp.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lam-Dif-Calc.resx">
-      <DependentUpon>Lam-Dif-Calc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Lam-Mul-Calc.resx">
-      <DependentUpon>Lam-Mul-Calc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Lam-Mul-Exp.resx">
-      <DependentUpon>Lam-Mul-Exp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Lam-Sing-Calc.resx">
-      <DependentUpon>Lam-Sing-Calc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Lam-Sing-Exp.resx">
-      <DependentUpon>Lam-Sing-Exp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Lam_Dif_Exp.resx">
-      <DependentUpon>Lam_Dif_Exp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Pin-Dif-Calc.resx">
       <DependentUpon>Pin-Dif-Calc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pin-Mul-Exp.resx">
-      <DependentUpon>Pin-Mul-Exp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pin-Mul-Cal.resx">
-      <DependentUpon>Pin-Mul-Cal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pin-Sing-Calc.resx">
-      <DependentUpon>Pin-Sing-Calc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -213,9 +126,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Pin-Sing-Exp.resx">
-      <DependentUpon>Pin-Sing-Exp.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -276,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\New Project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Youtube_loading_symbol_1_%28wobbly%29.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

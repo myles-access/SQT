@@ -141,6 +141,7 @@ namespace SQT
             basePrices["16CurrencyMargin"] = float.Parse(tbCurrencyMargin.Text);
             basePrices["17LowestMargin"] = float.Parse(tbMinMargin.Text);
             basePrices["18DefaultMargin"] = float.Parse(tbDefMargin.Text);
+            basePrices["19RoundingPoint"] = float.Parse(tbRoundingPoint.Text);
 
             //update labour costs dictionary values
             labourPrice[int.Parse("2")] = int.Parse(tbLabour2.Text);
@@ -237,6 +238,7 @@ namespace SQT
             tbCurrencyMargin.Text = basePrices["16CurrencyMargin"].ToString();
             tbMinMargin.Text = basePrices["17LowestMargin"].ToString();
             tbDefMargin.Text = basePrices["18DefaultMargin"].ToString();
+            tbRoundingPoint.Text = basePrices["19RoundingPoint"].ToString();
 
             // update text boxes based on labour costs dictionary
             tbLabour2.Text = labourPrice[int.Parse("2")].ToString();
