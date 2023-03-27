@@ -14,7 +14,7 @@ namespace SQT
         //VARS
         public Dictionary<int, float> labourPrice = new Dictionary<int, float>();
         public Dictionary<string, float> basePrices = new Dictionary<string, float>();
-        //readonly passwordGate f = Application.OpenForms.OfType<passwordGate>().Single();
+        public Dictionary<string, string> exchangeRate = new Dictionary<string, string>();
         #endregion
 
         #region Load Methods
@@ -28,10 +28,12 @@ namespace SQT
         {
             FetchBasePrices();
             FetchLabourPrices();
+            FetchExchangeRateURL();
             SetTextToDict();
 
             //f.Hide();
         }
+
         private void FetchBasePrices()
         {
             string dKey = "";
@@ -96,6 +98,34 @@ namespace SQT
             }
             XMLR.Close();
         }
+
+        private void FetchExchangeRateURL()
+        {
+            string dKey = "";
+            string dName = "";
+
+            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\ExchangeRateURL.xml");
+            while (XMLR.Read())
+            {
+                if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Name")
+                {
+                    dKey = XMLR.ReadElementContentAsString();
+                }
+
+                if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "URL")
+                {
+                    dName = XMLR.ReadElementContentAsString();
+                }
+
+                if (dKey != "" && dName != "")
+                {
+                    exchangeRate.Add(dKey, dName);
+                    dKey = "";
+                    dName = "";
+                }
+            }
+            XMLR.Close();
+        }
         #endregion
 
         #region Save Prices to XML
@@ -108,6 +138,7 @@ namespace SQT
                 UpdateDict();
                 BasePricesXMLWriter();
                 LabourPricesXMLWriter();
+                ExchnageRateXMLWriter();
                 MessageBox.Show("Saving Successful", "Success");
             }
             else
@@ -162,6 +193,9 @@ namespace SQT
             labourPrice[int.Parse("17")] = int.Parse(tbLabour17.Text);
             labourPrice[int.Parse("18")] = int.Parse(tbLabour18.Text);
             labourPrice[int.Parse("19")] = int.Parse(tbLabour19.Text);
+
+            //update exchange rate URL dictinoary values
+            exchangeRate["1ExchangeRateURL"] = tbExchangeRateXML.Text;
         }
         private void BasePricesXMLWriter()
         {
@@ -207,6 +241,24 @@ namespace SQT
             xmlWriter.Close();
         }
 
+        private void ExchnageRateXMLWriter()
+        {
+            XmlTextWriter xmlWriter = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\ExchangeRateURL.xml", Encoding.UTF8);
+            xmlWriter.Formatting = Formatting.Indented;
+            xmlWriter.WriteStartDocument();
+
+            xmlWriter.WriteStartElement("ExchangeRateURL");
+
+            foreach (KeyValuePair<string, string> ER in exchangeRate)
+            {
+                xmlWriter.WriteElementString("Name", ER.Key.ToString());
+                xmlWriter.WriteElementString("URL", ER.Value.ToString());
+                            }
+
+            xmlWriter.WriteEndElement(); //Costs element end 
+            xmlWriter.Close();
+        }
+
         #endregion
 
         #region Reset values to default
@@ -215,6 +267,7 @@ namespace SQT
         {
             SetTextToDict();
         }
+
         private void SetTextToDict()
         {
             //update text box values based off base prices dictionary
@@ -239,6 +292,7 @@ namespace SQT
             tbMinMargin.Text = basePrices["17LowestMargin"].ToString();
             tbDefMargin.Text = basePrices["18DefaultMargin"].ToString();
             tbRoundingPoint.Text = basePrices["19RoundingPoint"].ToString();
+            tbExchangeRateXML.Text = exchangeRate["1ExchangeRateURL"];
 
             // update text boxes based on labour costs dictionary
             tbLabour2.Text = labourPrice[int.Parse("2")].ToString();
@@ -259,6 +313,9 @@ namespace SQT
             tbLabour17.Text = labourPrice[int.Parse("17")].ToString();
             tbLabour18.Text = labourPrice[int.Parse("18")].ToString();
             tbLabour19.Text = labourPrice[int.Parse("19")].ToString();
+
+            //update text boxes based on exchange rate url dictionary
+            tbExchangeRateXML.Text = exchangeRate["1ExchangeRateURL"];
         }
 
         #endregion

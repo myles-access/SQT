@@ -13,14 +13,13 @@ namespace SQT
     {
         #region VARS
         MainMenu mm = Application.OpenForms.OfType<MainMenu>().Single();
-        
+
         public bool sucessfulSave = false;
         public bool loadingPreviousData = false;
         private bool costInEuro;
 
         public string salesRep = "Pintaric";
         public string quoteNumber = "";
-        public string exchangeRateDate;
         public string exchangeRateText;
 
         public float applicableExchangeRate = 1;
@@ -32,16 +31,11 @@ namespace SQT
         public int exCurrency = 0; // 0 AUD, 1 USD, 2 EUR
         public int num20Ft;
         public int num40Ft;
-        public int maxFloorNumber;
         public int numberOfPagesNeeded;
 
         public Dictionary<string, string> wordExportData = new Dictionary<string, string>();
         public Dictionary<string, string> priceExports = new Dictionary<string, string>();
         public Dictionary<string, string> saveData = new Dictionary<string, string>();
-        
-        public Dictionary<string, float> basePrices = new Dictionary<string, float>();
-        public Dictionary<int, float> labourPrice = new Dictionary<int, float>();
-        public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
 
         Word.Application fileOpen;
         Word.Document document;
@@ -55,13 +49,6 @@ namespace SQT
 
         private void Pin_Dif_Calc_Load(object sender, EventArgs e)
         {
-            //this.Enabled = true;
-            basePrices = mm.basePrices;
-            labourPrice = mm.labourPrice;
-            exchangeRates = mm.exchangeRates;
-            exchangeRateDate = mm.exchangeRateDate;
-            maxFloorNumber = mm.maxFloorNumber;
-            
             GeneratePriceList();
             SetLablesToDefault();
             lbWait.Visible = false;
@@ -74,8 +61,8 @@ namespace SQT
         private void SetLablesToDefault()
         {
             string s = "0";
-            lowestMargin = basePrices["17LowestMargin"];
-            tbMainMargin.Text = basePrices["18DefaultMargin"].ToString();
+            lowestMargin = mm.basePrices["17LowestMargin"];
+            tbMainMargin.Text = mm.basePrices["18DefaultMargin"].ToString();
             lblCostOfParts.Text = PriceRounding(float.Parse(s));
             lblCostIncludingMargin.Text = PriceRounding(float.Parse(s));
             lblGST.Text = PriceRounding(float.Parse(s));
@@ -155,43 +142,40 @@ namespace SQT
         //Called with what currency is selected and sets the exchange rate accordingly
         public void SelectCurrency(string selector)
         {
-            currencySelectionGroup.Enabled = false;
             currencySelectionGroup.Visible = false;
-            liftPricesPanel.Visible = true;
-            liftPricesPanel.Enabled = true;
+            exchangeRateLbl.Visible = true;
+            exchangeRateLbl.Enabled = true;
+            lblExchangeDate.Enabled = true;
+            lblExchangeDate.Visible = true;
 
             if (selector == "A")
             {
                 applicableExchangeRate = 1;
                 exCurrency = 0;
                 exchangeRateText = "AUD";
+                btnCurrency.Text = "AUD";
+                exchangeRateLbl.Text = "No exchange rate is being applied to this form";
+                lblExchangeDate.Text = "";
             }
             else if (selector == "U")
             {
-                applicableExchangeRate = exchangeRates["USD"];
-                exchangeRateLbl.Visible = true;
-                exchangeRateLbl.Enabled = true;
-                lblExchangeDate.Enabled = true;
-                lblExchangeDate.Visible = true;
-                exchangeRateLbl.Text = "The current exchange rate is $1 USD to " + PriceRounding(exchangeRates["USD"]) + " AUD";
-                lblExchangeDate.Text = "Correct as of " + exchangeRateDate;
+                applicableExchangeRate = mm.exchangeRates["USD"];
+                exchangeRateLbl.Text = "The current exchange rate is $1 USD to " + PriceRounding(mm.exchangeRates["USD"]) + " AUD";
+                lblExchangeDate.Text = "Correct as of " + mm.exchangeRateDate;
                 exCurrency = 1;
                 exchangeRateText = "USD";
+                btnCurrency.Text = "USD";
             }
             else if (selector == "E")
             {
-                applicableExchangeRate = exchangeRates["EUR"];
-                exchangeRateLbl.Visible = true;
-                exchangeRateLbl.Enabled = true;
-                lblExchangeDate.Enabled = true;
-                lblExchangeDate.Visible = true;
-                exchangeRateLbl.Text = "The current exchange rate is €1 EUR to " + PriceRounding(exchangeRates["EUR"]) + " AUD";
-                lblExchangeDate.Text = "Correct as of " + exchangeRateDate;
+                applicableExchangeRate = mm.exchangeRates["EUR"];
+                exchangeRateLbl.Text = "The current exchange rate is €1 EUR to " + PriceRounding(mm.exchangeRates["EUR"]) + " AUD";
+                lblExchangeDate.Text = "Correct as of " + mm.exchangeRateDate;
                 exCurrency = 2;
                 exchangeRateText = "EUR";
+                btnCurrency.Text = "EUR";
             }
         }
-
         #endregion
 
         #region Setting Shipping Costs
@@ -228,14 +212,14 @@ namespace SQT
             else if (selector == 2)
             {
                 num20Ft++;
-                shippingLbl20.Text = num20Ft + "x 20ft Container(s) - " + PriceRounding(basePrices["20ftFreight"] * num20Ft);
+                shippingLbl20.Text = num20Ft + "x 20ft Container(s) - " + PriceRounding(mm.basePrices["20ftFreight"] * num20Ft);
             }
             else if (selector == 3)
             {
                 num40Ft++;
-                shippingLbl40.Text = num40Ft + "x 40ft Container(s) - " + PriceRounding(basePrices["40ftFreight"] * num40Ft);
+                shippingLbl40.Text = num40Ft + "x 40ft Container(s) - " + PriceRounding(mm.basePrices["40ftFreight"] * num40Ft);
             }
-            freightTotal = (num20Ft * basePrices["20ftFreight"]) + (num40Ft * basePrices["40ftFreight"]);
+            freightTotal = (num20Ft * mm.basePrices["20ftFreight"]) + (num40Ft * mm.basePrices["40ftFreight"]);
             shippingLblTotal.Text = "Total of " + PriceRounding(freightTotal) + " for shipping";
         }
 
@@ -310,27 +294,27 @@ namespace SQT
             PriceListFormatting(lblStorage, float.Parse(tbMainStorage.Text));
             PriceListFormatting(lblTravel, float.Parse(tbMainTravel.Text));
             //prices pulled from base prices dictionary
-            PriceListFormatting(lblFinishes, basePrices["1CarFinishes"]);
-            PriceListFormatting(lblFire, basePrices["2FireExtinguisher"]);
-            PriceListFormatting(lblGSM, basePrices["3GSMUnitPhone"]);
-            //PriceListFormatting(lblBlanket, basePrices["4ProtectiveBlanket"]);
+            PriceListFormatting(lblFinishes, mm.basePrices["1CarFinishes"]);
+            PriceListFormatting(lblFire, mm.basePrices["2FireExtinguisher"]);
+            PriceListFormatting(lblGSM, mm.basePrices["3GSMUnitPhone"]);
+            //PriceListFormatting(lblBlanket, mm.basePrices["4ProtectiveBlanket"]);
             PriceListFormatting(lblBlanket, float.Parse(tbMainBlankets.Text));
-            PriceListFormatting(lblSump, basePrices["5SumpCover"]);
-            PriceListFormatting(lblWiring, basePrices["6Wiring"]);
-            PriceListFormatting(lblSign, basePrices["7Sinage"]);
-            PriceListFormatting(lblElectrical, basePrices["8ElectricalBox"]);
+            PriceListFormatting(lblSump, mm.basePrices["5SumpCover"]);
+            PriceListFormatting(lblWiring, mm.basePrices["6Wiring"]);
+            PriceListFormatting(lblSign, mm.basePrices["7Sinage"]);
+            PriceListFormatting(lblElectrical, mm.basePrices["8ElectricalBox"]);
             PriceListFormatting(lblCartage, float.Parse(tbMainCartage.Text));
-            PriceListFormatting(lblDrawing, basePrices["9Drawings"]);
-            PriceListFormatting(lblFork, basePrices["10ForkLift"]);
-            PriceListFormatting(lblMaintenance, basePrices["11Maintenance"]);
-            PriceListFormatting(lblManuals, basePrices["12Manuals"]);
-            PriceListFormatting(lblWorkcover, basePrices["13WorkcoverFees"]);
-            PriceListFormatting(lblScaffold, float.Parse(tbMainScaffold.Text) * basePrices["14Scaffolds"]);
-            PriceListFormatting(lblEntrance, float.Parse(tbMainEntranceGuards.Text) * float.Parse(tbMainWeeksRequired.Text) * basePrices["15EntranceGuards"]);
+            PriceListFormatting(lblDrawing, mm.basePrices["9Drawings"]);
+            PriceListFormatting(lblFork, mm.basePrices["10ForkLift"]);
+            PriceListFormatting(lblMaintenance, mm.basePrices["11Maintenance"]);
+            PriceListFormatting(lblManuals, mm.basePrices["12Manuals"]);
+            PriceListFormatting(lblWorkcover, mm.basePrices["13WorkcoverFees"]);
+            PriceListFormatting(lblScaffold, float.Parse(tbMainScaffold.Text) * mm.basePrices["14Scaffolds"]);
+            PriceListFormatting(lblEntrance, float.Parse(tbMainEntranceGuards.Text) * float.Parse(tbMainWeeksRequired.Text) * mm.basePrices["15EntranceGuards"]);
             //add security from base prices dictionary if box is checked
             if (cbMainSecurity.Checked)
             {
-                PriceListFormatting(lblSecurity, basePrices["Security"] + (basePrices["SecurityPerFloor"] * FloorsAdder()));
+                PriceListFormatting(lblSecurity, mm.basePrices["Security"] + (mm.basePrices["SecurityPerFloor"] * FloorsAdder()));
             }
             else
             {
@@ -407,18 +391,18 @@ namespace SQT
                 floorsTbChecker(i);
             }
 
-            labour += labourPrice[int.Parse(tbLift1Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift2Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift3Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift4Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift5Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift6Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift7Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift8Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift9Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift10Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift11Floors.Text)];
-            labour += labourPrice[int.Parse(tbLift12Floors.Text)];
+            labour += mm.labourPrice[int.Parse(tbLift1Floors.Text)];
+            labour += mm.labourPrice[int.Parse(tbLift2Floors.Text)];
+            labour += mm.labourPrice[int.Parse(tbLift3Floors.Text)];
+            labour += mm.labourPrice[int.Parse(tbLift4Floors.Text)];
+            labour += mm.labourPrice[int.Parse(tbLift5Floors.Text)];
+            labour += mm.labourPrice[int.Parse(tbLift6Floors.Text)];
+            labour += mm.labourPrice[int.Parse(tbLift7Floors.Text)];
+            labour += mm.labourPrice[int.Parse(tbLift8Floors.Text)];
+            labour += mm.labourPrice[int.Parse(tbLift9Floors.Text)];
+            labour += mm.labourPrice[int.Parse(tbLift10Floors.Text)];
+            labour += mm.labourPrice[int.Parse(tbLift11Floors.Text)];
+            labour += mm.labourPrice[int.Parse(tbLift12Floors.Text)];
             return labour;
         }
 
@@ -464,7 +448,7 @@ namespace SQT
                 tb.Text = "0";
             }
 
-            if (i > maxFloorNumber || i < 0 || i == 1)
+            if (i > mm.maxFloorNumber || i < 0 || i == 1)
             {
                 MessageBox.Show("Invalid floor number entered ");
                 return false;
@@ -589,7 +573,6 @@ namespace SQT
             WordSave(true);// save the doc again 
             SaveReloadXMLFile(saveData);
             WordFinish();//finish the methods 
-
         }
 
         // loops through the word document performing a find and replace operation
@@ -680,7 +663,6 @@ namespace SQT
                 Form1SaveToXML();
                 SaveReloadXMLFile(saveData);
                 printButton.BackColor = Color.Green;
-
             }
             else
             {
@@ -861,7 +843,6 @@ namespace SQT
                     FetchsaveData(xmlPath);
                     Form1LoadFromXML();
                     GenerateListOfPrices();
-                    liftPricesPanel.Visible = false;
                 }
                 else
                 {
@@ -981,13 +962,6 @@ namespace SQT
                 {
                     radio.Checked = bool.Parse(saveData[radio.Name.ToString()]);
                 }
-                /*
-                if (radio.Checked == true && radio.Text == "")
-                {
-                    tb.Text = saveData[tb.Name.ToString()];
-                    return;
-                }
-                */
             }
         }
 
@@ -1419,93 +1393,77 @@ namespace SQT
 
         private void tbLift2Floors_TextChanged(object sender, EventArgs e)
         {
-
             floorsTbChecker(tbLift2Floors);
         }
 
         private void tbLift3Floors_TextChanged(object sender, EventArgs e)
         {
-
             floorsTbChecker(tbLift3Floors);
         }
 
         private void tbLift4Floors_TextChanged(object sender, EventArgs e)
         {
             floorsTbChecker(tbLift4Floors);
-
         }
 
         private void tbLift5Floors_TextChanged(object sender, EventArgs e)
         {
             floorsTbChecker(tbLift5Floors);
-
         }
 
         private void tbLift6Floors_TextChanged(object sender, EventArgs e)
         {
-
             floorsTbChecker(tbLift6Floors);
         }
 
         private void tbLift7Floors_TextChanged(object sender, EventArgs e)
         {
-
             floorsTbChecker(tbLift7Floors);
         }
 
         private void tbLift8Floors_TextChanged(object sender, EventArgs e)
         {
             floorsTbChecker(tbLift8Floors);
-
         }
 
         private void tbLift9Floors_TextChanged(object sender, EventArgs e)
         {
-
             floorsTbChecker(tbLift9Floors);
         }
 
         private void tbLift10Floors_TextChanged(object sender, EventArgs e)
         {
-
             floorsTbChecker(tbLift10Floors);
         }
 
         private void tbLift11Floors_TextChanged(object sender, EventArgs e)
         {
-
             floorsTbChecker(tbLift11Floors);
         }
 
         private void tbLift12Floors_TextChanged(object sender, EventArgs e)
         {
-
             floorsTbChecker(tbLift12Floors);
         }
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift8Price, lblLift8Total);
         }
         private void textBox12_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift9Price, lblLift9Total);
         }
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift10Price, lblLift10Total);
         }
 
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift11Price, lblLift11Total);
         }
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift12Price, lblLift12Total);
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -1515,133 +1473,102 @@ namespace SQT
 
         private void tbLift2Price_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift2Price, lblLift2Total);
         }
 
         private void tb3Lift3Price_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tb3Lift3Price, lblLift3Total);
         }
 
         private void tbLift4Price_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift4Price, lblLift4Total);
         }
 
         private void tbLift5Price_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift5Price, lblLift5Total);
         }
 
         private void tbLift6Price_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift6Price, lblLift6Total);
         }
 
         private void tbLift7Price_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift7Price, lblLift7Total);
         }
 
         private void tbLift1Number_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift1Price, lblLift1Total);
         }
 
         private void tbLift2Number_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift2Price, lblLift2Total);
         }
 
         private void tbLift3Number_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tb3Lift3Price, lblLift3Total);
         }
 
         private void tbLift4Number_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift4Price, lblLift4Total);
         }
 
         private void tbLift5Number_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift5Price, lblLift5Total);
         }
 
         private void tbLift6Number_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift6Price, lblLift6Total);
         }
 
         private void tbLift7Number_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift7Price, lblLift7Total);
         }
 
         private void tbLift8Number_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift8Price, lblLift8Total);
         }
 
         private void tbLift10Number_TextChanged(object sender, EventArgs e)
         {
             RefreshLiftPrices(tbLift10Price, lblLift10Total);
-
         }
 
         private void tbLift11Numebr_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift11Price, lblLift11Total);
         }
         private void tbLift9Number_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift9Price, lblLift9Total);
         }
 
         private void tbLift12Number_TextChanged(object sender, EventArgs e)
         {
-
             RefreshLiftPrices(tbLift12Price, lblLift12Total);
         }
         #endregion
         private void btnConfigurePrices_Click(object sender, EventArgs e)
         {
-            liftPricesPanel.Enabled = true;
-            liftPricesPanel.Visible = true;
+            panelLiftPrices.Enabled = true;
+            panelLiftPrices.Visible = true;
         }
 
         private void HideButton_Click(object sender, EventArgs e)
         {
-            SendPricesToMainForm();
-            liftPricesPanel.Visible = false;
-        }
-
-        private void SendPricesToMainForm()
-        {/*
-            bool euro = false;
-            if (exCurrency == 2)
-            {
-                euro = true;
-            }
-            lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(lblTotalLiftPrice.Text));
-            PriceListFormatting(lblCost, float.Parse(lblTotalLiftPrice.Text), euro);
-            */
+            //
         }
 
         private void RefreshLiftPrices(TextBox price, Label total)
@@ -1652,7 +1579,7 @@ namespace SQT
             }
             catch (Exception)
             {
-
+                //
             }
         }
 
@@ -1710,8 +1637,44 @@ namespace SQT
             }
             return f;
         }
-
         #endregion
 
+        private void PanelMenuChange(Panel panelToBeShown)
+        {
+            Panel[] panels = { panelAdditionalCosts, panelLiftPrices, panelShipping };
+
+            foreach (Panel p in panels)
+            {
+                if (p != panelToBeShown)
+                {
+                    p.Visible = false;
+                }
+                if (p == panelToBeShown)
+                {
+                    p.Visible = !p.Visible;
+                }
+            }
+        }
+
+
+        private void btnLiftCosts_Click(object sender, EventArgs e)
+        {
+            PanelMenuChange(panelLiftPrices);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            currencySelectionGroup.Visible = !currencySelectionGroup.Visible;
+        }
+
+        private void btnShippingCosts_Click(object sender, EventArgs e)
+        {
+            PanelMenuChange(panelShipping);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            PanelMenuChange(panelAdditionalCosts);
+        }
     }
 }

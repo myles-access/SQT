@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
-using System.Threading.Tasks;
+using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -19,13 +19,14 @@ namespace SQT
         public Dictionary<string, float> basePrices = new Dictionary<string, float>();
         public Dictionary<int, float> labourPrice = new Dictionary<int, float>();
         public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
-
+        public Dictionary<string, string> exchangeRateURL = new Dictionary<string, string>();
 
         public MainMenu()
         {
             InitializeComponent();
         }
 
+        #region Admin Menu
         private void btSQAT_Click(object sender, EventArgs e)
         {
             if (SQATPasswordCheck())
@@ -43,49 +44,87 @@ namespace SQT
             bPasswordCheck = input == passWord;
             return bPasswordCheck;
         }
+        #endregion
 
+        // Load quote tool
         private void btPinDiff_Click(object sender, EventArgs e)
         {
             btPinDiff.Enabled = false;
+            progressBar1.Value = 0;
+            progressBar1.Maximum = 6;
             progressBar1.Visible = true;
-            progressBar1.Maximum = 5;
 
+            //check if software can connect to the network
             lbTitleText.Text = "Checking Network Conectivity";
-            networkConnected = NetworkCheck();
-            if (networkConnected)
-            {
-                MessageBox.Show("NETWORK SUCCESS");
-            }
+            NetworkAccess();
             ProgressBarStep();
 
+            //load up the calculator form
             lbTitleText.Text = "Loading Calculator";
             Pin_Dif_Calc fPinDif = new Pin_Dif_Calc();
             ProgressBarStep();
 
+            //fetch the base prices for the calculator from the XML file
             lbTitleText.Text = "Fetching Base Prices";
             FetchBasePrices();
             ProgressBarStep();
 
-            lbTitleText.Text = "Fetching Exchange Rates";
-            FetchCurrencyRates();
+            //fetch the URL for exchange rates from the XML file
+            lbTitleText.Text = "Checking Exchange Rates Server";
+            FetchExchangeRateURL();
             ProgressBarStep();
 
+            //Ready the exchange rate from either the website or offline stored values
+            lbTitleText.Text = "Fetching Exchange Rates";
+            CurrencyRates();
+            ProgressBarStep();
+
+            //fetch the labour prices from the XML file
             lbTitleText.Text = "Fetching Labour Rates";
             FetchLabourPrices();
             ProgressBarStep();
 
+            // reset the main menu form and show the calculator
             lbTitleText.Text = "Quote Calculator";
             progressBar1.Visible = false;
             btPinDiff.Enabled = true;
             fPinDif.Show();
         }
 
-        private void ProgressBarStep (int stepValue = 1)
+        private void ProgressBarStep(int stepValue = 1)
         {
             progressBar1.Value = progressBar1.Value + stepValue;
         }
 
+        private void CurrencyRates()
+        {
+            if (networkConnected)
+            {
+                //grab rates from website
+                FetchCurrencyRates();
+                LoadStoredCurrencyRates();
+            }
+            else
+            {
+                LoadStoredCurrencyRates();
+            }
+        }
+
         #region Network Conectivity 
+        private void NetworkAccess()
+        {
+            networkConnected = NetworkCheck();
+            if (networkConnected)
+            {
+                //MessageBox.Show("NETWORK SUCCESS");
+                lbTitleText.Text = "Network Connected";
+            }
+            else if (!networkConnected)
+            {
+                lbTitleText.Text = "Network NOT Connected";
+            }
+        }
+
         private bool NetworkCheck()
         {
             var hostUrl = "www.floatrates.com";
@@ -127,14 +166,48 @@ namespace SQT
             XMLR.Close();
         }
 
+        private void FetchExchangeRateURL()
+        {
+            string dKey = "";
+            string dName = "";
+
+            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\ExchangeRateURL.xml");
+            while (XMLR.Read())
+            {
+                if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Name")
+                {
+                    dKey = XMLR.ReadElementContentAsString();
+                }
+
+                if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "URL")
+                {
+                    dName = XMLR.ReadElementContentAsString();
+                }
+
+                if (dKey != "" && dName != "")
+                {
+                    exchangeRateURL.Add(dKey, dName);
+                    dKey = "";
+                    dName = "";
+                }
+            }
+            XMLR.Close();
+        }
+
         //find the live currency rates from floatrates.com and write them into the Exchange rate dictionary 
         private void FetchCurrencyRates()
         {
             string dKey = "";
-            float dName = 0;
-            bool b = true;
+            string dName = "";
+            bool foundPubDate = false;
+            string path = "X:\\Program Dependancies\\Quote tool\\CurrecyExchangeRate.xml";
 
-            XmlTextReader XMLR = new XmlTextReader("http://www.floatrates.com/daily/aud.xml");
+            XmlTextReader XMLR = new XmlTextReader(exchangeRateURL["1ExchangeRateURL"]);
+            XmlTextWriter XMLW = new XmlTextWriter(path, Encoding.UTF8);
+            XMLW.Formatting = Formatting.Indented;
+            XMLW.WriteStartDocument();
+
+            XMLW.WriteStartElement("Data");
             while (XMLR.Read())
             {
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "targetCurrency")
@@ -143,24 +216,73 @@ namespace SQT
                 }
                 else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "inverseRate")
                 {
-                    dName = float.Parse(XMLR.ReadElementContentAsString());
+                    dName = XMLR.ReadElementContentAsString();
                 }
-                else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "pubDate" && b)
+                else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "pubDate" && !foundPubDate)
                 {
-                    exchangeRateDate = XMLR.ReadElementContentAsString();
-                    b = false;
+                    XMLW.WriteStartElement("Object");
+                    XMLW.WriteElementString("pubDate", XMLR.ReadElementContentAsString());
+                    XMLW.WriteEndElement(); //Object end
+                    foundPubDate = true;
                 }
 
-                if (dKey != "" && dName != 0)
+                if (dKey != "" && dName != "")
                 {
-                    exchangeRates.Add(dKey, dName * basePrices["16CurrencyMargin"]);
+                    //exchangeRates.Add(dKey, dName * basePrices["16CurrencyMargin"]);
+
+                    XMLW.WriteStartElement("Object");
+
+                    XMLW.WriteElementString("targetCurrency", dKey);
+                    XMLW.WriteElementString("inverseRate", dName.ToString());
+
+                    XMLW.WriteEndElement(); //Object end
+
                     dKey = "";
-                    dName = 0;
+                    dName = "";
+                }
+            }
+
+            XMLW.WriteEndElement();//Data end
+            XMLW.Close();
+            XMLR.Close();
+        }
+
+        private void LoadStoredCurrencyRates()
+        {
+            string dKey = "";
+            string dName = "";
+            bool foundPubDate = false;
+
+            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\CurrecyExchangeRate.xml");
+
+            while (XMLR.Read())
+            {
+                if (!foundPubDate && XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "pubDate")
+                {
+                    exchangeRateDate = XMLR.ReadElementContentAsString();
+                    foundPubDate = true;
+                }
+                else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "targetCurrency")
+                {
+                    dKey = XMLR.ReadElementContentAsString();
+                }
+                else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "inverseRate")
+                {
+                    dName = XMLR.ReadElementContentAsString();
+                }
+
+                if (dKey != "" && dName != "")
+                {
+                    exchangeRates.Add(dKey, float.Parse(dName) * basePrices["16CurrencyMargin"]);
+
+                    dKey = "";
+                    dName = "";
                 }
             }
 
             XMLR.Close();
         }
+
 
         //find the labour costs from the file int he server and write them into the labour prices dictionary 
         private void FetchLabourPrices()
