@@ -32,10 +32,12 @@ namespace SQT
         public int num20Ft;
         public int num40Ft;
         public int numberOfPagesNeeded;
+        int pageTracker = 1;
 
         public Dictionary<string, string> wordExportData = new Dictionary<string, string>();
         public Dictionary<string, string> priceExports = new Dictionary<string, string>();
         public Dictionary<string, string> saveData = new Dictionary<string, string>();
+        Button[] pageButtons; // = new Button[12];
 
         Word.Application fileOpen;
         Word.Document document;
@@ -51,11 +53,29 @@ namespace SQT
         {
             GeneratePriceList();
             SetLablesToDefault();
+            SetPanelVisabilityDefaults();
+        }
+
+        private void SetPanelVisabilityDefaults()
+        {
+            Point rightPanelLocation = new Point(662, 10);
+            this.Size = new Size(1127, 959);
             lbWait.Visible = false;
+
             button3.Visible = false;
             button3.Enabled = false;
+
             printButton.Visible = false;
             printButton.Enabled = false;
+
+            panelAdditionalCosts.Visible = false;
+            panelAdditionalCosts.Location = rightPanelLocation;
+
+            panelShipping.Visible = false;
+            panelShipping.Location = rightPanelLocation;
+
+            panelLiftPrices.Visible = false;
+            panelLiftPrices.Location = rightPanelLocation;
         }
 
         private void SetLablesToDefault()
@@ -137,6 +157,11 @@ namespace SQT
         private void buttonEUR_Click(object sender, EventArgs e)
         {
             SelectCurrency("E");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            currencySelectionGroup.Visible = !currencySelectionGroup.Visible;
         }
 
         //Called with what currency is selected and sets the exchange rate accordingly
@@ -230,6 +255,7 @@ namespace SQT
         // generate price list button
         private void button1_Click(object sender, EventArgs e)
         {
+            PanelMenuChange(null);
             GenerateListOfPrices();
         }
 
@@ -1639,6 +1665,32 @@ namespace SQT
         }
         #endregion
 
+        #region Multi Lift Exporter Pages
+        private void btNewPanel_Click(object sender, EventArgs e)
+        {
+            NewPage();
+        }
+
+        private void NewPage()
+        {
+            pageButtons[pageTracker].Visible = true;
+            pageButtons[pageTracker].Enabled = true;
+            pageTracker++;
+
+            if (pageTracker <= 11)
+            {
+                btNewPanel.Location = pageButtons[pageTracker].Location;
+            }
+            else
+            {
+                btNewPanel.Visible = false;
+                btNewPanel.Enabled = false;
+            }
+        }
+
+        #endregion
+
+        #region Pannel Switching Methods 
         private void PanelMenuChange(Panel panelToBeShown)
         {
             Panel[] panels = { panelAdditionalCosts, panelLiftPrices, panelShipping };
@@ -1656,18 +1708,12 @@ namespace SQT
             }
         }
 
-
         private void btnLiftCosts_Click(object sender, EventArgs e)
         {
             PanelMenuChange(panelLiftPrices);
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            currencySelectionGroup.Visible = !currencySelectionGroup.Visible;
-        }
-
-        private void btnShippingCosts_Click(object sender, EventArgs e)
+                private void btnShippingCosts_Click(object sender, EventArgs e)
         {
             PanelMenuChange(panelShipping);
         }
@@ -1675,6 +1721,15 @@ namespace SQT
         private void button5_Click(object sender, EventArgs e)
         {
             PanelMenuChange(panelAdditionalCosts);
+        }
+
+        #endregion
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            DateTime dT = Convert.ToDateTime(mm.exchangeRateDate);
+            TimeSpan tS = DateTime.Now - dT;
+            MessageBox.Show(tS.ToString());
         }
     }
 }

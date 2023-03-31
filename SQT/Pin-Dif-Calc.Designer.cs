@@ -208,11 +208,226 @@
             this.panelShipping = new System.Windows.Forms.Panel();
             this.panelCostBreakdown = new System.Windows.Forms.Panel();
             this.panelCalcButtons = new System.Windows.Forms.Panel();
+            this.tbMinorPriceAdjustment = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.btnCurrency = new System.Windows.Forms.Button();
             this.panelAdditionalCosts = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label48 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btPanel1 = new System.Windows.Forms.Button();
+            this.btNewPanel = new System.Windows.Forms.Button();
+            this.btPanel12 = new System.Windows.Forms.Button();
+            this.btPanel2 = new System.Windows.Forms.Button();
+            this.btPanel11 = new System.Windows.Forms.Button();
+            this.btPanel3 = new System.Windows.Forms.Button();
+            this.btPanel10 = new System.Windows.Forms.Button();
+            this.btPanel4 = new System.Windows.Forms.Button();
+            this.btPanel9 = new System.Windows.Forms.Button();
+            this.btPanel5 = new System.Windows.Forms.Button();
+            this.btPanel8 = new System.Windows.Forms.Button();
+            this.btPanel6 = new System.Windows.Forms.Button();
+            this.btPanel7 = new System.Windows.Forms.Button();
+            this.panelLift1 = new System.Windows.Forms.Panel();
+            this.label50 = new System.Windows.Forms.Label();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.rbPositionIndicatorTypeSurfaceMount = new System.Windows.Forms.RadioButton();
+            this.rbPositionIndicatorTypeFlushMount = new System.Windows.Forms.RadioButton();
+            this.tbShaftWidth = new System.Windows.Forms.TextBox();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.rbFalseCeilingNo = new System.Windows.Forms.RadioButton();
+            this.rbFalseCeilingYes = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rbLoadWeighingNo = new System.Windows.Forms.RadioButton();
+            this.rbLoadWeighingYes = new System.Windows.Forms.RadioButton();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.rbCeilingFinishMirrorStainlessSteel = new System.Windows.Forms.RadioButton();
+            this.rbCeilingFinishWhite = new System.Windows.Forms.RadioButton();
+            this.tbCeilingFinish = new System.Windows.Forms.TextBox();
+            this.rbCeilingFinishOther = new System.Windows.Forms.RadioButton();
+            this.rbCeilingFinishBrushedStasinlessSteel = new System.Windows.Forms.RadioButton();
+            this.label52 = new System.Windows.Forms.Label();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.tbSideWall = new System.Windows.Forms.TextBox();
+            this.rbSideWallOther = new System.Windows.Forms.RadioButton();
+            this.rbSideWallBrushedStainlessSteel = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rbIndependentServiceNo = new System.Windows.Forms.RadioButton();
+            this.rbIndependentServiceYes = new System.Windows.Forms.RadioButton();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.tbFrontWall = new System.Windows.Forms.TextBox();
+            this.tbFrontWallOther = new System.Windows.Forms.RadioButton();
+            this.rbFrontWallBrushedStainlessSteel = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbFireServiceNo = new System.Windows.Forms.RadioButton();
+            this.rbFireServiceYes = new System.Windows.Forms.RadioButton();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.tbCarDoorFinish = new System.Windows.Forms.TextBox();
+            this.rbCarDoorFinishOther = new System.Windows.Forms.RadioButton();
+            this.rbCarDoorFInishBrushedStainlessSteel = new System.Windows.Forms.RadioButton();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.tbShaftDepth = new System.Windows.Forms.TextBox();
+            this.tbAuxCOPLocation = new System.Windows.Forms.TextBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.tbPitDepth = new System.Windows.Forms.TextBox();
+            this.tbMainCOPLocation = new System.Windows.Forms.TextBox();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.tbHeadroom = new System.Windows.Forms.TextBox();
+            this.tbNumberOfCOPS = new System.Windows.Forms.TextBox();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.tbTravel = new System.Windows.Forms.TextBox();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.rbOutofServiceNo = new System.Windows.Forms.RadioButton();
+            this.rbOutofServiceYes = new System.Windows.Forms.RadioButton();
+            this.tbNumofLandings = new System.Windows.Forms.TextBox();
+            this.groupBox36 = new System.Windows.Forms.GroupBox();
+            this.rbEmergencyLoweringSystemNo = new System.Windows.Forms.RadioButton();
+            this.rbEmergencyLoweringSystemYes = new System.Windows.Forms.RadioButton();
+            this.label82 = new System.Windows.Forms.Label();
+            this.groupBox34 = new System.Windows.Forms.GroupBox();
+            this.rbFacePlateMaterialOther = new System.Windows.Forms.RadioButton();
+            this.tbFacePlateMaterial = new System.Windows.Forms.TextBox();
+            this.rbFacePlateMaterialSatinStainlessSteel = new System.Windows.Forms.RadioButton();
+            this.tbfname = new System.Windows.Forms.TextBox();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.tbphone = new System.Windows.Forms.TextBox();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.groupBox31 = new System.Windows.Forms.GroupBox();
+            this.rbVoiceAnnunciationNo = new System.Windows.Forms.RadioButton();
+            this.rbVoiceAnnunciationYes = new System.Windows.Forms.RadioButton();
+            this.tblname = new System.Windows.Forms.TextBox();
+            this.groupBox32 = new System.Windows.Forms.GroupBox();
+            this.rbSecurityKeySwitchNo = new System.Windows.Forms.RadioButton();
+            this.rbSecurityKeySwitchYes = new System.Windows.Forms.RadioButton();
+            this.label87 = new System.Windows.Forms.Label();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.rbRearDoorKeySwitchNo = new System.Windows.Forms.RadioButton();
+            this.rbRearDoorKeySwitchYes = new System.Windows.Forms.RadioButton();
+            this.tbAddress1 = new System.Windows.Forms.TextBox();
+            this.groupBox33 = new System.Windows.Forms.GroupBox();
+            this.rbExclusiveServiceNo = new System.Windows.Forms.RadioButton();
+            this.rbExclusiveServiceYes = new System.Windows.Forms.RadioButton();
+            this.label88 = new System.Windows.Forms.Label();
+            this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.rbGPOInCarNo = new System.Windows.Forms.RadioButton();
+            this.rbGPOInCarYes = new System.Windows.Forms.RadioButton();
+            this.tbAddress2 = new System.Windows.Forms.TextBox();
+            this.tbKeyswitchLocation = new System.Windows.Forms.TextBox();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.tbAddress3 = new System.Windows.Forms.TextBox();
+            this.groupBox28 = new System.Windows.Forms.GroupBox();
+            this.tbCOPFinish = new System.Windows.Forms.TextBox();
+            this.rbCOPFinishOther = new System.Windows.Forms.RadioButton();
+            this.rbCOPFinishSatinStainlessSteel = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbSumasa = new System.Windows.Forms.RadioButton();
+            this.rbSL = new System.Windows.Forms.RadioButton();
+            this.rbWittur = new System.Windows.Forms.RadioButton();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.tbHandrail = new System.Windows.Forms.TextBox();
+            this.rbHandrailBrushedStainlessSTeel = new System.Windows.Forms.RadioButton();
+            this.rbHandrailOther = new System.Windows.Forms.RadioButton();
+            this.label91 = new System.Windows.Forms.Label();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.tbNumOfLEDLights = new System.Windows.Forms.TextBox();
+            this.label92 = new System.Windows.Forms.Label();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.tbMirror = new System.Windows.Forms.TextBox();
+            this.rbMirrorOther = new System.Windows.Forms.RadioButton();
+            this.rbMirrorHalfSize = new System.Windows.Forms.RadioButton();
+            this.rbMirrorFullSize = new System.Windows.Forms.RadioButton();
+            this.tbLiftNumbers = new System.Windows.Forms.TextBox();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.rbBumpRailNo = new System.Windows.Forms.RadioButton();
+            this.rbBumpRailYes = new System.Windows.Forms.RadioButton();
+            this.tbTypeofLift = new System.Windows.Forms.TextBox();
+            this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.rbLEDColourWhite = new System.Windows.Forms.RadioButton();
+            this.rbLEDColourRed = new System.Windows.Forms.RadioButton();
+            this.rbLEDColourBlue = new System.Windows.Forms.RadioButton();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.tbControlerLocation = new System.Windows.Forms.TextBox();
+            this.rbControlerLocationOther = new System.Windows.Forms.RadioButton();
+            this.rbControlerLocationBottomLanding = new System.Windows.Forms.RadioButton();
+            this.rbControlerLoactionTopLanding = new System.Windows.Forms.RadioButton();
+            this.rbControlerlocationShaft = new System.Windows.Forms.RadioButton();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.tbFloorFinish = new System.Windows.Forms.TextBox();
+            this.label95 = new System.Windows.Forms.Label();
+            this.tbDesignations = new System.Windows.Forms.TextBox();
+            this.tbNumofLandingDoors = new System.Windows.Forms.TextBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.tbRearWall = new System.Windows.Forms.TextBox();
+            this.rbRearWallOther = new System.Windows.Forms.RadioButton();
+            this.rbRearWallBrushedStainlessSteel = new System.Windows.Forms.RadioButton();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.tbStructureShaft = new System.Windows.Forms.TextBox();
+            this.rbStructureShaftOther = new System.Windows.Forms.RadioButton();
+            this.rbStructureShaftConcrete = new System.Windows.Forms.RadioButton();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.rbProtectiveBlanketsNo = new System.Windows.Forms.RadioButton();
+            this.rbProtectriveBlanketsYes = new System.Windows.Forms.RadioButton();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.rbTrimmerBeamsNo = new System.Windows.Forms.RadioButton();
+            this.rbTrimmerBeamsYes = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.rbFalseFloorNo = new System.Windows.Forms.RadioButton();
+            this.rbFalseFloorYes = new System.Windows.Forms.RadioButton();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.rbDoorNudgingNo = new System.Windows.Forms.RadioButton();
+            this.rbDoorNudgingYes = new System.Windows.Forms.RadioButton();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.tbLiftCarNotes = new System.Windows.Forms.TextBox();
+            this.label99 = new System.Windows.Forms.Label();
+            this.tbNumofCarEntrances = new System.Windows.Forms.TextBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.tbLiftRating = new System.Windows.Forms.TextBox();
+            this.tbwidth = new System.Windows.Forms.TextBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.tbLoad = new System.Windows.Forms.TextBox();
+            this.tbHeight = new System.Windows.Forms.TextBox();
+            this.tbSpeed = new System.Windows.Forms.TextBox();
+            this.tbDepth = new System.Windows.Forms.TextBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.rbDoorTypeSideOpening = new System.Windows.Forms.RadioButton();
+            this.rbDoorTypeCentreOpening = new System.Windows.Forms.RadioButton();
+            this.label104 = new System.Windows.Forms.Label();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.tbDoorTracks = new System.Windows.Forms.TextBox();
+            this.rbDoorTracksOther = new System.Windows.Forms.RadioButton();
+            this.rbDoorTracksAnodisedAluminium = new System.Windows.Forms.RadioButton();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.tbLandingDoorFinish = new System.Windows.Forms.TextBox();
+            this.rbLandingDoorFinishOther = new System.Windows.Forms.RadioButton();
+            this.rbLandingDoorFinishStainlessSteel = new System.Windows.Forms.RadioButton();
+            this.label105 = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.rbAdvancedOpeningNo = new System.Windows.Forms.RadioButton();
+            this.rbAdvancedOpeningYes = new System.Windows.Forms.RadioButton();
+            this.tbDoorWidth = new System.Windows.Forms.TextBox();
+            this.tbDoorHeight = new System.Windows.Forms.TextBox();
+            this.label106 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.currencySelectionGroup.SuspendLayout();
             this.panelAddress.SuspendLayout();
             this.panelLiftPrices.SuspendLayout();
@@ -221,6 +436,44 @@
             this.panelCalcButtons.SuspendLayout();
             this.panelAdditionalCosts.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panelLift1.SuspendLayout();
+            this.groupBox26.SuspendLayout();
+            this.groupBox21.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox22.SuspendLayout();
+            this.groupBox23.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox24.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox25.SuspendLayout();
+            this.groupBox35.SuspendLayout();
+            this.groupBox36.SuspendLayout();
+            this.groupBox34.SuspendLayout();
+            this.groupBox31.SuspendLayout();
+            this.groupBox32.SuspendLayout();
+            this.groupBox30.SuspendLayout();
+            this.groupBox33.SuspendLayout();
+            this.groupBox29.SuspendLayout();
+            this.groupBox28.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox27.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // printPreviewDialog1
@@ -473,7 +726,7 @@
             this.currencySelectionGroup.Controls.Add(this.buttonUSD);
             this.currencySelectionGroup.Cursor = System.Windows.Forms.Cursors.Default;
             this.currencySelectionGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.currencySelectionGroup.Location = new System.Drawing.Point(4, 5);
+            this.currencySelectionGroup.Location = new System.Drawing.Point(5, 8);
             this.currencySelectionGroup.Margin = new System.Windows.Forms.Padding(2);
             this.currencySelectionGroup.Name = "currencySelectionGroup";
             this.currencySelectionGroup.Padding = new System.Windows.Forms.Padding(2);
@@ -1544,7 +1797,7 @@
             this.lblExchangeDate.AutoSize = true;
             this.lblExchangeDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExchangeDate.ForeColor = System.Drawing.Color.Black;
-            this.lblExchangeDate.Location = new System.Drawing.Point(105, 44);
+            this.lblExchangeDate.Location = new System.Drawing.Point(104, 56);
             this.lblExchangeDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblExchangeDate.Name = "lblExchangeDate";
             this.lblExchangeDate.Size = new System.Drawing.Size(533, 26);
@@ -1556,7 +1809,7 @@
             // 
             this.tbMainMargin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainMargin.ForeColor = System.Drawing.Color.Black;
-            this.tbMainMargin.Location = new System.Drawing.Point(164, 363);
+            this.tbMainMargin.Location = new System.Drawing.Point(234, 379);
             this.tbMainMargin.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainMargin.Name = "tbMainMargin";
             this.tbMainMargin.Size = new System.Drawing.Size(102, 44);
@@ -1569,7 +1822,7 @@
             this.label79.AutoSize = true;
             this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label79.ForeColor = System.Drawing.Color.Black;
-            this.label79.Location = new System.Drawing.Point(21, 366);
+            this.label79.Location = new System.Drawing.Point(91, 382);
             this.label79.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(152, 37);
@@ -1581,7 +1834,7 @@
             this.exchangeRateLbl.AutoSize = true;
             this.exchangeRateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exchangeRateLbl.ForeColor = System.Drawing.Color.Black;
-            this.exchangeRateLbl.Location = new System.Drawing.Point(104, 15);
+            this.exchangeRateLbl.Location = new System.Drawing.Point(103, 27);
             this.exchangeRateLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.exchangeRateLbl.Name = "exchangeRateLbl";
             this.exchangeRateLbl.Size = new System.Drawing.Size(533, 26);
@@ -1604,9 +1857,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(270, 363);
+            this.button1.Location = new System.Drawing.Point(350, 395);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(344, 44);
+            this.button1.Size = new System.Drawing.Size(182, 59);
             this.button1.TabIndex = 172;
             this.button1.TabStop = false;
             this.button1.Text = "Generate Prices ";
@@ -2344,7 +2597,7 @@
             this.panelLiftPrices.Controls.Add(this.lblLift5Total);
             this.panelLiftPrices.Controls.Add(this.lblLift3Total);
             this.panelLiftPrices.Controls.Add(this.lblLift4Total);
-            this.panelLiftPrices.Location = new System.Drawing.Point(662, 10);
+            this.panelLiftPrices.Location = new System.Drawing.Point(2127, 139);
             this.panelLiftPrices.Name = "panelLiftPrices";
             this.panelLiftPrices.Size = new System.Drawing.Size(442, 793);
             this.panelLiftPrices.TabIndex = 183;
@@ -2353,7 +2606,7 @@
             // btnLiftCosts
             // 
             this.btnLiftCosts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLiftCosts.Location = new System.Drawing.Point(8, 151);
+            this.btnLiftCosts.Location = new System.Drawing.Point(35, 149);
             this.btnLiftCosts.Margin = new System.Windows.Forms.Padding(2);
             this.btnLiftCosts.Name = "btnLiftCosts";
             this.btnLiftCosts.Size = new System.Drawing.Size(170, 59);
@@ -2368,7 +2621,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(182, 152);
+            this.label16.Location = new System.Drawing.Point(209, 150);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(164, 26);
@@ -2380,7 +2633,7 @@
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(182, 221);
+            this.label42.Location = new System.Drawing.Point(209, 219);
             this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(355, 26);
@@ -2390,7 +2643,7 @@
             // btnShippingCosts
             // 
             this.btnShippingCosts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShippingCosts.Location = new System.Drawing.Point(8, 216);
+            this.btnShippingCosts.Location = new System.Drawing.Point(35, 214);
             this.btnShippingCosts.Margin = new System.Windows.Forms.Padding(2);
             this.btnShippingCosts.Name = "btnShippingCosts";
             this.btnShippingCosts.Size = new System.Drawing.Size(170, 59);
@@ -2405,7 +2658,7 @@
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Location = new System.Drawing.Point(182, 184);
+            this.label44.Location = new System.Drawing.Point(209, 182);
             this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(171, 26);
@@ -2417,7 +2670,7 @@
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.Black;
-            this.label46.Location = new System.Drawing.Point(182, 249);
+            this.label46.Location = new System.Drawing.Point(209, 247);
             this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(171, 26);
@@ -2432,7 +2685,7 @@
             this.panelShipping.Controls.Add(this.shippingLbl20);
             this.panelShipping.Controls.Add(this.shippingLbl40);
             this.panelShipping.Controls.Add(this.btnShippingReset);
-            this.panelShipping.Location = new System.Drawing.Point(662, 12);
+            this.panelShipping.Location = new System.Drawing.Point(2150, 104);
             this.panelShipping.Name = "panelShipping";
             this.panelShipping.Size = new System.Drawing.Size(442, 793);
             this.panelShipping.TabIndex = 190;
@@ -2501,6 +2754,8 @@
             // 
             // panelCalcButtons
             // 
+            this.panelCalcButtons.Controls.Add(this.tbMinorPriceAdjustment);
+            this.panelCalcButtons.Controls.Add(this.label13);
             this.panelCalcButtons.Controls.Add(this.currencySelectionGroup);
             this.panelCalcButtons.Controls.Add(this.label48);
             this.panelCalcButtons.Controls.Add(this.button5);
@@ -2529,10 +2784,59 @@
             this.panelCalcButtons.Size = new System.Drawing.Size(644, 687);
             this.panelCalcButtons.TabIndex = 192;
             // 
+            // tbMinorPriceAdjustment
+            // 
+            this.tbMinorPriceAdjustment.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMinorPriceAdjustment.ForeColor = System.Drawing.Color.Black;
+            this.tbMinorPriceAdjustment.Location = new System.Drawing.Point(234, 426);
+            this.tbMinorPriceAdjustment.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMinorPriceAdjustment.Name = "tbMinorPriceAdjustment";
+            this.tbMinorPriceAdjustment.Size = new System.Drawing.Size(102, 44);
+            this.tbMinorPriceAdjustment.TabIndex = 193;
+            this.tbMinorPriceAdjustment.Text = "0";
+            this.tbMinorPriceAdjustment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(148, 429);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(82, 37);
+            this.label13.TabIndex = 194;
+            this.label13.Text = "# +/-";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.Black;
+            this.label48.Location = new System.Drawing.Point(211, 296);
+            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(171, 26);
+            this.label48.TabIndex = 192;
+            this.label48.Text = "Totaling $# AUD";
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(35, 281);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(170, 59);
+            this.button5.TabIndex = 191;
+            this.button5.TabStop = false;
+            this.button5.Text = "Extra Costs";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // btnCurrency
             // 
             this.btnCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCurrency.Location = new System.Drawing.Point(8, 14);
+            this.btnCurrency.Location = new System.Drawing.Point(7, 26);
             this.btnCurrency.Margin = new System.Windows.Forms.Padding(2);
             this.btnCurrency.Name = "btnCurrency";
             this.btnCurrency.Size = new System.Drawing.Size(93, 59);
@@ -2567,36 +2871,11 @@
             this.panelAdditionalCosts.Controls.Add(this.tbMainSundries);
             this.panelAdditionalCosts.Controls.Add(this.label15);
             this.panelAdditionalCosts.Controls.Add(this.label20);
-            this.panelAdditionalCosts.Location = new System.Drawing.Point(662, 10);
+            this.panelAdditionalCosts.Location = new System.Drawing.Point(2184, 28);
             this.panelAdditionalCosts.Name = "panelAdditionalCosts";
             this.panelAdditionalCosts.Size = new System.Drawing.Size(442, 795);
             this.panelAdditionalCosts.TabIndex = 193;
             this.panelAdditionalCosts.Visible = false;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(8, 283);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(170, 59);
-            this.button5.TabIndex = 191;
-            this.button5.TabStop = false;
-            this.button5.Text = "Extra Costs";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.Black;
-            this.label48.Location = new System.Drawing.Point(184, 298);
-            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(171, 26);
-            this.label48.TabIndex = 192;
-            this.label48.Text = "Totaling $# AUD";
             // 
             // panel2
             // 
@@ -2609,12 +2888,2550 @@
             this.panel2.Size = new System.Drawing.Size(1092, 101);
             this.panel2.TabIndex = 194;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btPanel1);
+            this.panel1.Controls.Add(this.btNewPanel);
+            this.panel1.Controls.Add(this.btPanel12);
+            this.panel1.Controls.Add(this.btPanel2);
+            this.panel1.Controls.Add(this.btPanel11);
+            this.panel1.Controls.Add(this.btPanel3);
+            this.panel1.Controls.Add(this.btPanel10);
+            this.panel1.Controls.Add(this.btPanel4);
+            this.panel1.Controls.Add(this.btPanel9);
+            this.panel1.Controls.Add(this.btPanel5);
+            this.panel1.Controls.Add(this.btPanel8);
+            this.panel1.Controls.Add(this.btPanel6);
+            this.panel1.Controls.Add(this.btPanel7);
+            this.panel1.Location = new System.Drawing.Point(1000, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(104, 793);
+            this.panel1.TabIndex = 195;
+            // 
+            // btPanel1
+            // 
+            this.btPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPanel1.Location = new System.Drawing.Point(12, 26);
+            this.btPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.btPanel1.Name = "btPanel1";
+            this.btPanel1.Size = new System.Drawing.Size(84, 58);
+            this.btPanel1.TabIndex = 420;
+            this.btPanel1.Text = "1";
+            this.btPanel1.UseVisualStyleBackColor = true;
+            // 
+            // btNewPanel
+            // 
+            this.btNewPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNewPanel.Location = new System.Drawing.Point(100, 26);
+            this.btNewPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.btNewPanel.Name = "btNewPanel";
+            this.btNewPanel.Size = new System.Drawing.Size(84, 58);
+            this.btNewPanel.TabIndex = 432;
+            this.btNewPanel.Text = "+";
+            this.btNewPanel.UseVisualStyleBackColor = true;
+            this.btNewPanel.Click += new System.EventHandler(this.btNewPanel_Click);
+            // 
+            // btPanel12
+            // 
+            this.btPanel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPanel12.Location = new System.Drawing.Point(12, 705);
+            this.btPanel12.Margin = new System.Windows.Forms.Padding(2);
+            this.btPanel12.Name = "btPanel12";
+            this.btPanel12.Size = new System.Drawing.Size(84, 58);
+            this.btPanel12.TabIndex = 431;
+            this.btPanel12.Text = "12";
+            this.btPanel12.UseVisualStyleBackColor = true;
+            // 
+            // btPanel2
+            // 
+            this.btPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPanel2.Location = new System.Drawing.Point(12, 88);
+            this.btPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.btPanel2.Name = "btPanel2";
+            this.btPanel2.Size = new System.Drawing.Size(84, 58);
+            this.btPanel2.TabIndex = 421;
+            this.btPanel2.Text = "2";
+            this.btPanel2.UseVisualStyleBackColor = true;
+            // 
+            // btPanel11
+            // 
+            this.btPanel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPanel11.Location = new System.Drawing.Point(12, 643);
+            this.btPanel11.Margin = new System.Windows.Forms.Padding(2);
+            this.btPanel11.Name = "btPanel11";
+            this.btPanel11.Size = new System.Drawing.Size(84, 58);
+            this.btPanel11.TabIndex = 430;
+            this.btPanel11.Text = "11";
+            this.btPanel11.UseVisualStyleBackColor = true;
+            // 
+            // btPanel3
+            // 
+            this.btPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPanel3.Location = new System.Drawing.Point(12, 149);
+            this.btPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.btPanel3.Name = "btPanel3";
+            this.btPanel3.Size = new System.Drawing.Size(84, 58);
+            this.btPanel3.TabIndex = 422;
+            this.btPanel3.Text = "3";
+            this.btPanel3.UseVisualStyleBackColor = true;
+            // 
+            // btPanel10
+            // 
+            this.btPanel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPanel10.Location = new System.Drawing.Point(12, 582);
+            this.btPanel10.Margin = new System.Windows.Forms.Padding(2);
+            this.btPanel10.Name = "btPanel10";
+            this.btPanel10.Size = new System.Drawing.Size(84, 58);
+            this.btPanel10.TabIndex = 429;
+            this.btPanel10.Text = "10";
+            this.btPanel10.UseVisualStyleBackColor = true;
+            // 
+            // btPanel4
+            // 
+            this.btPanel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPanel4.Location = new System.Drawing.Point(12, 211);
+            this.btPanel4.Margin = new System.Windows.Forms.Padding(2);
+            this.btPanel4.Name = "btPanel4";
+            this.btPanel4.Size = new System.Drawing.Size(84, 58);
+            this.btPanel4.TabIndex = 423;
+            this.btPanel4.Text = "4";
+            this.btPanel4.UseVisualStyleBackColor = true;
+            // 
+            // btPanel9
+            // 
+            this.btPanel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPanel9.Location = new System.Drawing.Point(12, 520);
+            this.btPanel9.Margin = new System.Windows.Forms.Padding(2);
+            this.btPanel9.Name = "btPanel9";
+            this.btPanel9.Size = new System.Drawing.Size(84, 58);
+            this.btPanel9.TabIndex = 428;
+            this.btPanel9.Text = "9";
+            this.btPanel9.UseVisualStyleBackColor = true;
+            // 
+            // btPanel5
+            // 
+            this.btPanel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPanel5.Location = new System.Drawing.Point(12, 273);
+            this.btPanel5.Margin = new System.Windows.Forms.Padding(2);
+            this.btPanel5.Name = "btPanel5";
+            this.btPanel5.Size = new System.Drawing.Size(84, 58);
+            this.btPanel5.TabIndex = 424;
+            this.btPanel5.Text = "5";
+            this.btPanel5.UseVisualStyleBackColor = true;
+            // 
+            // btPanel8
+            // 
+            this.btPanel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPanel8.Location = new System.Drawing.Point(12, 458);
+            this.btPanel8.Margin = new System.Windows.Forms.Padding(2);
+            this.btPanel8.Name = "btPanel8";
+            this.btPanel8.Size = new System.Drawing.Size(84, 58);
+            this.btPanel8.TabIndex = 427;
+            this.btPanel8.Text = "8";
+            this.btPanel8.UseVisualStyleBackColor = true;
+            // 
+            // btPanel6
+            // 
+            this.btPanel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPanel6.Location = new System.Drawing.Point(12, 335);
+            this.btPanel6.Margin = new System.Windows.Forms.Padding(2);
+            this.btPanel6.Name = "btPanel6";
+            this.btPanel6.Size = new System.Drawing.Size(84, 58);
+            this.btPanel6.TabIndex = 425;
+            this.btPanel6.Text = "6";
+            this.btPanel6.UseVisualStyleBackColor = true;
+            // 
+            // btPanel7
+            // 
+            this.btPanel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPanel7.Location = new System.Drawing.Point(12, 396);
+            this.btPanel7.Margin = new System.Windows.Forms.Padding(2);
+            this.btPanel7.Name = "btPanel7";
+            this.btPanel7.Size = new System.Drawing.Size(84, 58);
+            this.btPanel7.TabIndex = 426;
+            this.btPanel7.Text = "7";
+            this.btPanel7.UseVisualStyleBackColor = true;
+            // 
+            // panelLift1
+            // 
+            this.panelLift1.AutoScroll = true;
+            this.panelLift1.BackColor = System.Drawing.Color.SlateGray;
+            this.panelLift1.Controls.Add(this.button4);
+            this.panelLift1.Controls.Add(this.label50);
+            this.panelLift1.Controls.Add(this.groupBox26);
+            this.panelLift1.Controls.Add(this.tbShaftWidth);
+            this.panelLift1.Controls.Add(this.groupBox21);
+            this.panelLift1.Controls.Add(this.groupBox3);
+            this.panelLift1.Controls.Add(this.groupBox22);
+            this.panelLift1.Controls.Add(this.label52);
+            this.panelLift1.Controls.Add(this.groupBox23);
+            this.panelLift1.Controls.Add(this.groupBox4);
+            this.panelLift1.Controls.Add(this.groupBox24);
+            this.panelLift1.Controls.Add(this.groupBox2);
+            this.panelLift1.Controls.Add(this.label54);
+            this.panelLift1.Controls.Add(this.label56);
+            this.panelLift1.Controls.Add(this.label58);
+            this.panelLift1.Controls.Add(this.label60);
+            this.panelLift1.Controls.Add(this.groupBox25);
+            this.panelLift1.Controls.Add(this.label62);
+            this.panelLift1.Controls.Add(this.label64);
+            this.panelLift1.Controls.Add(this.tbShaftDepth);
+            this.panelLift1.Controls.Add(this.tbAuxCOPLocation);
+            this.panelLift1.Controls.Add(this.label66);
+            this.panelLift1.Controls.Add(this.label70);
+            this.panelLift1.Controls.Add(this.tbPitDepth);
+            this.panelLift1.Controls.Add(this.tbMainCOPLocation);
+            this.panelLift1.Controls.Add(this.label72);
+            this.panelLift1.Controls.Add(this.label74);
+            this.panelLift1.Controls.Add(this.tbHeadroom);
+            this.panelLift1.Controls.Add(this.tbNumberOfCOPS);
+            this.panelLift1.Controls.Add(this.label76);
+            this.panelLift1.Controls.Add(this.label78);
+            this.panelLift1.Controls.Add(this.tbTravel);
+            this.panelLift1.Controls.Add(this.label80);
+            this.panelLift1.Controls.Add(this.label81);
+            this.panelLift1.Controls.Add(this.groupBox35);
+            this.panelLift1.Controls.Add(this.tbNumofLandings);
+            this.panelLift1.Controls.Add(this.groupBox36);
+            this.panelLift1.Controls.Add(this.label82);
+            this.panelLift1.Controls.Add(this.groupBox34);
+            this.panelLift1.Controls.Add(this.tbfname);
+            this.panelLift1.Controls.Add(this.label83);
+            this.panelLift1.Controls.Add(this.label84);
+            this.panelLift1.Controls.Add(this.tbphone);
+            this.panelLift1.Controls.Add(this.label85);
+            this.panelLift1.Controls.Add(this.label86);
+            this.panelLift1.Controls.Add(this.groupBox31);
+            this.panelLift1.Controls.Add(this.tblname);
+            this.panelLift1.Controls.Add(this.groupBox32);
+            this.panelLift1.Controls.Add(this.label87);
+            this.panelLift1.Controls.Add(this.groupBox30);
+            this.panelLift1.Controls.Add(this.tbAddress1);
+            this.panelLift1.Controls.Add(this.groupBox33);
+            this.panelLift1.Controls.Add(this.label88);
+            this.panelLift1.Controls.Add(this.groupBox29);
+            this.panelLift1.Controls.Add(this.tbAddress2);
+            this.panelLift1.Controls.Add(this.tbKeyswitchLocation);
+            this.panelLift1.Controls.Add(this.label89);
+            this.panelLift1.Controls.Add(this.label90);
+            this.panelLift1.Controls.Add(this.tbAddress3);
+            this.panelLift1.Controls.Add(this.groupBox28);
+            this.panelLift1.Controls.Add(this.groupBox1);
+            this.panelLift1.Controls.Add(this.groupBox18);
+            this.panelLift1.Controls.Add(this.label91);
+            this.panelLift1.Controls.Add(this.groupBox19);
+            this.panelLift1.Controls.Add(this.label92);
+            this.panelLift1.Controls.Add(this.groupBox20);
+            this.panelLift1.Controls.Add(this.tbLiftNumbers);
+            this.panelLift1.Controls.Add(this.label93);
+            this.panelLift1.Controls.Add(this.label94);
+            this.panelLift1.Controls.Add(this.groupBox17);
+            this.panelLift1.Controls.Add(this.tbTypeofLift);
+            this.panelLift1.Controls.Add(this.groupBox27);
+            this.panelLift1.Controls.Add(this.groupBox6);
+            this.panelLift1.Controls.Add(this.groupBox16);
+            this.panelLift1.Controls.Add(this.label95);
+            this.panelLift1.Controls.Add(this.tbDesignations);
+            this.panelLift1.Controls.Add(this.tbNumofLandingDoors);
+            this.panelLift1.Controls.Add(this.groupBox14);
+            this.panelLift1.Controls.Add(this.groupBox8);
+            this.panelLift1.Controls.Add(this.groupBox15);
+            this.panelLift1.Controls.Add(this.groupBox7);
+            this.panelLift1.Controls.Add(this.groupBox5);
+            this.panelLift1.Controls.Add(this.groupBox9);
+            this.panelLift1.Controls.Add(this.label96);
+            this.panelLift1.Controls.Add(this.label97);
+            this.panelLift1.Controls.Add(this.label98);
+            this.panelLift1.Controls.Add(this.tbLiftCarNotes);
+            this.panelLift1.Controls.Add(this.label99);
+            this.panelLift1.Controls.Add(this.tbNumofCarEntrances);
+            this.panelLift1.Controls.Add(this.label100);
+            this.panelLift1.Controls.Add(this.label101);
+            this.panelLift1.Controls.Add(this.tbLiftRating);
+            this.panelLift1.Controls.Add(this.tbwidth);
+            this.panelLift1.Controls.Add(this.label102);
+            this.panelLift1.Controls.Add(this.label103);
+            this.panelLift1.Controls.Add(this.tbLoad);
+            this.panelLift1.Controls.Add(this.tbHeight);
+            this.panelLift1.Controls.Add(this.tbSpeed);
+            this.panelLift1.Controls.Add(this.tbDepth);
+            this.panelLift1.Controls.Add(this.groupBox13);
+            this.panelLift1.Controls.Add(this.label104);
+            this.panelLift1.Controls.Add(this.groupBox12);
+            this.panelLift1.Controls.Add(this.groupBox10);
+            this.panelLift1.Controls.Add(this.label105);
+            this.panelLift1.Controls.Add(this.groupBox11);
+            this.panelLift1.Controls.Add(this.tbDoorWidth);
+            this.panelLift1.Controls.Add(this.tbDoorHeight);
+            this.panelLift1.Controls.Add(this.label106);
+            this.panelLift1.Location = new System.Drawing.Point(11, 11);
+            this.panelLift1.Margin = new System.Windows.Forms.Padding(2);
+            this.panelLift1.Name = "panelLift1";
+            this.panelLift1.Size = new System.Drawing.Size(984, 795);
+            this.panelLift1.TabIndex = 405;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.Black;
+            this.label50.Location = new System.Drawing.Point(290, 17);
+            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(341, 26);
+            this.label50.TabIndex = 327;
+            this.label50.Text = "Who is the contact for this job?";
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.Controls.Add(this.rbPositionIndicatorTypeSurfaceMount);
+            this.groupBox26.Controls.Add(this.rbPositionIndicatorTypeFlushMount);
+            this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox26.Location = new System.Drawing.Point(588, 2083);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Size = new System.Drawing.Size(224, 131);
+            this.groupBox26.TabIndex = 389;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "Position Indicator Type";
+            // 
+            // rbPositionIndicatorTypeSurfaceMount
+            // 
+            this.rbPositionIndicatorTypeSurfaceMount.AutoSize = true;
+            this.rbPositionIndicatorTypeSurfaceMount.Location = new System.Drawing.Point(6, 28);
+            this.rbPositionIndicatorTypeSurfaceMount.Name = "rbPositionIndicatorTypeSurfaceMount";
+            this.rbPositionIndicatorTypeSurfaceMount.Size = new System.Drawing.Size(150, 28);
+            this.rbPositionIndicatorTypeSurfaceMount.TabIndex = 2;
+            this.rbPositionIndicatorTypeSurfaceMount.TabStop = true;
+            this.rbPositionIndicatorTypeSurfaceMount.Text = "Surface Mount";
+            this.rbPositionIndicatorTypeSurfaceMount.UseVisualStyleBackColor = true;
+            // 
+            // rbPositionIndicatorTypeFlushMount
+            // 
+            this.rbPositionIndicatorTypeFlushMount.AutoSize = true;
+            this.rbPositionIndicatorTypeFlushMount.Location = new System.Drawing.Point(6, 62);
+            this.rbPositionIndicatorTypeFlushMount.Name = "rbPositionIndicatorTypeFlushMount";
+            this.rbPositionIndicatorTypeFlushMount.Size = new System.Drawing.Size(133, 28);
+            this.rbPositionIndicatorTypeFlushMount.TabIndex = 1;
+            this.rbPositionIndicatorTypeFlushMount.TabStop = true;
+            this.rbPositionIndicatorTypeFlushMount.Text = "Flush Mount";
+            this.rbPositionIndicatorTypeFlushMount.UseVisualStyleBackColor = true;
+            // 
+            // tbShaftWidth
+            // 
+            this.tbShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbShaftWidth.ForeColor = System.Drawing.Color.Black;
+            this.tbShaftWidth.Location = new System.Drawing.Point(240, 806);
+            this.tbShaftWidth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbShaftWidth.Name = "tbShaftWidth";
+            this.tbShaftWidth.Size = new System.Drawing.Size(100, 32);
+            this.tbShaftWidth.TabIndex = 303;
+            this.tbShaftWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.rbFalseCeilingNo);
+            this.groupBox21.Controls.Add(this.rbFalseCeilingYes);
+            this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox21.Location = new System.Drawing.Point(351, 1506);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(253, 60);
+            this.groupBox21.TabIndex = 376;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "False Ceiling";
+            // 
+            // rbFalseCeilingNo
+            // 
+            this.rbFalseCeilingNo.AutoSize = true;
+            this.rbFalseCeilingNo.Location = new System.Drawing.Point(72, 28);
+            this.rbFalseCeilingNo.Name = "rbFalseCeilingNo";
+            this.rbFalseCeilingNo.Size = new System.Drawing.Size(53, 28);
+            this.rbFalseCeilingNo.TabIndex = 1;
+            this.rbFalseCeilingNo.TabStop = true;
+            this.rbFalseCeilingNo.Text = "No";
+            this.rbFalseCeilingNo.UseVisualStyleBackColor = true;
+            // 
+            // rbFalseCeilingYes
+            // 
+            this.rbFalseCeilingYes.AutoSize = true;
+            this.rbFalseCeilingYes.Location = new System.Drawing.Point(6, 28);
+            this.rbFalseCeilingYes.Name = "rbFalseCeilingYes";
+            this.rbFalseCeilingYes.Size = new System.Drawing.Size(60, 28);
+            this.rbFalseCeilingYes.TabIndex = 0;
+            this.rbFalseCeilingYes.TabStop = true;
+            this.rbFalseCeilingYes.Text = "Yes";
+            this.rbFalseCeilingYes.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rbLoadWeighingNo);
+            this.groupBox3.Controls.Add(this.rbLoadWeighingYes);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(171, 547);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(199, 63);
+            this.groupBox3.TabIndex = 340;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Load Weighing";
+            // 
+            // rbLoadWeighingNo
+            // 
+            this.rbLoadWeighingNo.AutoSize = true;
+            this.rbLoadWeighingNo.Checked = true;
+            this.rbLoadWeighingNo.Location = new System.Drawing.Point(72, 28);
+            this.rbLoadWeighingNo.Name = "rbLoadWeighingNo";
+            this.rbLoadWeighingNo.Size = new System.Drawing.Size(53, 28);
+            this.rbLoadWeighingNo.TabIndex = 1;
+            this.rbLoadWeighingNo.TabStop = true;
+            this.rbLoadWeighingNo.Text = "No";
+            this.rbLoadWeighingNo.UseVisualStyleBackColor = true;
+            // 
+            // rbLoadWeighingYes
+            // 
+            this.rbLoadWeighingYes.AutoSize = true;
+            this.rbLoadWeighingYes.Location = new System.Drawing.Point(6, 28);
+            this.rbLoadWeighingYes.Name = "rbLoadWeighingYes";
+            this.rbLoadWeighingYes.Size = new System.Drawing.Size(60, 28);
+            this.rbLoadWeighingYes.TabIndex = 0;
+            this.rbLoadWeighingYes.Text = "Yes";
+            this.rbLoadWeighingYes.UseVisualStyleBackColor = true;
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.rbCeilingFinishMirrorStainlessSteel);
+            this.groupBox22.Controls.Add(this.rbCeilingFinishWhite);
+            this.groupBox22.Controls.Add(this.tbCeilingFinish);
+            this.groupBox22.Controls.Add(this.rbCeilingFinishOther);
+            this.groupBox22.Controls.Add(this.rbCeilingFinishBrushedStasinlessSteel);
+            this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox22.Location = new System.Drawing.Point(105, 1506);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(240, 169);
+            this.groupBox22.TabIndex = 375;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Ceiling Finish";
+            // 
+            // rbCeilingFinishMirrorStainlessSteel
+            // 
+            this.rbCeilingFinishMirrorStainlessSteel.AutoSize = true;
+            this.rbCeilingFinishMirrorStainlessSteel.Location = new System.Drawing.Point(6, 89);
+            this.rbCeilingFinishMirrorStainlessSteel.Name = "rbCeilingFinishMirrorStainlessSteel";
+            this.rbCeilingFinishMirrorStainlessSteel.Size = new System.Drawing.Size(203, 28);
+            this.rbCeilingFinishMirrorStainlessSteel.TabIndex = 78;
+            this.rbCeilingFinishMirrorStainlessSteel.Text = "Mirror Stainless Steel";
+            this.rbCeilingFinishMirrorStainlessSteel.UseVisualStyleBackColor = true;
+            // 
+            // rbCeilingFinishWhite
+            // 
+            this.rbCeilingFinishWhite.AutoSize = true;
+            this.rbCeilingFinishWhite.Location = new System.Drawing.Point(6, 58);
+            this.rbCeilingFinishWhite.Name = "rbCeilingFinishWhite";
+            this.rbCeilingFinishWhite.Size = new System.Drawing.Size(76, 28);
+            this.rbCeilingFinishWhite.TabIndex = 77;
+            this.rbCeilingFinishWhite.Text = "White";
+            this.rbCeilingFinishWhite.UseVisualStyleBackColor = true;
+            // 
+            // tbCeilingFinish
+            // 
+            this.tbCeilingFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCeilingFinish.ForeColor = System.Drawing.Color.Black;
+            this.tbCeilingFinish.Location = new System.Drawing.Point(25, 122);
+            this.tbCeilingFinish.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCeilingFinish.Name = "tbCeilingFinish";
+            this.tbCeilingFinish.Size = new System.Drawing.Size(199, 32);
+            this.tbCeilingFinish.TabIndex = 76;
+            this.tbCeilingFinish.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rbCeilingFinishOther
+            // 
+            this.rbCeilingFinishOther.AutoSize = true;
+            this.rbCeilingFinishOther.Location = new System.Drawing.Point(6, 132);
+            this.rbCeilingFinishOther.Name = "rbCeilingFinishOther";
+            this.rbCeilingFinishOther.Size = new System.Drawing.Size(14, 13);
+            this.rbCeilingFinishOther.TabIndex = 75;
+            this.rbCeilingFinishOther.UseVisualStyleBackColor = true;
+            // 
+            // rbCeilingFinishBrushedStasinlessSteel
+            // 
+            this.rbCeilingFinishBrushedStasinlessSteel.AutoSize = true;
+            this.rbCeilingFinishBrushedStasinlessSteel.Checked = true;
+            this.rbCeilingFinishBrushedStasinlessSteel.Location = new System.Drawing.Point(6, 26);
+            this.rbCeilingFinishBrushedStasinlessSteel.Name = "rbCeilingFinishBrushedStasinlessSteel";
+            this.rbCeilingFinishBrushedStasinlessSteel.Size = new System.Drawing.Size(225, 28);
+            this.rbCeilingFinishBrushedStasinlessSteel.TabIndex = 1;
+            this.rbCeilingFinishBrushedStasinlessSteel.TabStop = true;
+            this.rbCeilingFinishBrushedStasinlessSteel.Text = "Brushed Stainless Steel";
+            this.rbCeilingFinishBrushedStasinlessSteel.UseVisualStyleBackColor = true;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.Black;
+            this.label52.Location = new System.Drawing.Point(375, 441);
+            this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(189, 26);
+            this.label52.TabIndex = 336;
+            this.label52.Text = "Control Features";
+            // 
+            // groupBox23
+            // 
+            this.groupBox23.Controls.Add(this.tbSideWall);
+            this.groupBox23.Controls.Add(this.rbSideWallOther);
+            this.groupBox23.Controls.Add(this.rbSideWallBrushedStainlessSteel);
+            this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox23.Location = new System.Drawing.Point(610, 1506);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(253, 98);
+            this.groupBox23.TabIndex = 371;
+            this.groupBox23.TabStop = false;
+            this.groupBox23.Text = "Side Wall";
+            // 
+            // tbSideWall
+            // 
+            this.tbSideWall.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSideWall.ForeColor = System.Drawing.Color.Black;
+            this.tbSideWall.Location = new System.Drawing.Point(26, 56);
+            this.tbSideWall.Margin = new System.Windows.Forms.Padding(2);
+            this.tbSideWall.Name = "tbSideWall";
+            this.tbSideWall.Size = new System.Drawing.Size(199, 32);
+            this.tbSideWall.TabIndex = 76;
+            this.tbSideWall.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rbSideWallOther
+            // 
+            this.rbSideWallOther.AutoSize = true;
+            this.rbSideWallOther.Location = new System.Drawing.Point(7, 66);
+            this.rbSideWallOther.Name = "rbSideWallOther";
+            this.rbSideWallOther.Size = new System.Drawing.Size(14, 13);
+            this.rbSideWallOther.TabIndex = 75;
+            this.rbSideWallOther.UseVisualStyleBackColor = true;
+            // 
+            // rbSideWallBrushedStainlessSteel
+            // 
+            this.rbSideWallBrushedStainlessSteel.AutoSize = true;
+            this.rbSideWallBrushedStainlessSteel.Checked = true;
+            this.rbSideWallBrushedStainlessSteel.Location = new System.Drawing.Point(6, 26);
+            this.rbSideWallBrushedStainlessSteel.Name = "rbSideWallBrushedStainlessSteel";
+            this.rbSideWallBrushedStainlessSteel.Size = new System.Drawing.Size(225, 28);
+            this.rbSideWallBrushedStainlessSteel.TabIndex = 1;
+            this.rbSideWallBrushedStainlessSteel.TabStop = true;
+            this.rbSideWallBrushedStainlessSteel.Text = "Brushed Stainless Steel";
+            this.rbSideWallBrushedStainlessSteel.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.rbIndependentServiceNo);
+            this.groupBox4.Controls.Add(this.rbIndependentServiceYes);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(171, 478);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(199, 63);
+            this.groupBox4.TabIndex = 337;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Independent Service";
+            // 
+            // rbIndependentServiceNo
+            // 
+            this.rbIndependentServiceNo.AutoSize = true;
+            this.rbIndependentServiceNo.Checked = true;
+            this.rbIndependentServiceNo.Location = new System.Drawing.Point(72, 28);
+            this.rbIndependentServiceNo.Name = "rbIndependentServiceNo";
+            this.rbIndependentServiceNo.Size = new System.Drawing.Size(53, 28);
+            this.rbIndependentServiceNo.TabIndex = 1;
+            this.rbIndependentServiceNo.TabStop = true;
+            this.rbIndependentServiceNo.Text = "No";
+            this.rbIndependentServiceNo.UseVisualStyleBackColor = true;
+            // 
+            // rbIndependentServiceYes
+            // 
+            this.rbIndependentServiceYes.AutoSize = true;
+            this.rbIndependentServiceYes.Location = new System.Drawing.Point(6, 28);
+            this.rbIndependentServiceYes.Name = "rbIndependentServiceYes";
+            this.rbIndependentServiceYes.Size = new System.Drawing.Size(60, 28);
+            this.rbIndependentServiceYes.TabIndex = 0;
+            this.rbIndependentServiceYes.Text = "Yes";
+            this.rbIndependentServiceYes.UseVisualStyleBackColor = true;
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.Controls.Add(this.tbFrontWall);
+            this.groupBox24.Controls.Add(this.tbFrontWallOther);
+            this.groupBox24.Controls.Add(this.rbFrontWallBrushedStainlessSteel);
+            this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox24.Location = new System.Drawing.Point(351, 1400);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(253, 99);
+            this.groupBox24.TabIndex = 372;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "Front Wall";
+            // 
+            // tbFrontWall
+            // 
+            this.tbFrontWall.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFrontWall.ForeColor = System.Drawing.Color.Black;
+            this.tbFrontWall.Location = new System.Drawing.Point(25, 57);
+            this.tbFrontWall.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFrontWall.Name = "tbFrontWall";
+            this.tbFrontWall.Size = new System.Drawing.Size(199, 32);
+            this.tbFrontWall.TabIndex = 76;
+            this.tbFrontWall.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbFrontWallOther
+            // 
+            this.tbFrontWallOther.AutoSize = true;
+            this.tbFrontWallOther.Location = new System.Drawing.Point(6, 67);
+            this.tbFrontWallOther.Name = "tbFrontWallOther";
+            this.tbFrontWallOther.Size = new System.Drawing.Size(14, 13);
+            this.tbFrontWallOther.TabIndex = 75;
+            this.tbFrontWallOther.UseVisualStyleBackColor = true;
+            // 
+            // rbFrontWallBrushedStainlessSteel
+            // 
+            this.rbFrontWallBrushedStainlessSteel.AutoSize = true;
+            this.rbFrontWallBrushedStainlessSteel.Checked = true;
+            this.rbFrontWallBrushedStainlessSteel.Location = new System.Drawing.Point(6, 26);
+            this.rbFrontWallBrushedStainlessSteel.Name = "rbFrontWallBrushedStainlessSteel";
+            this.rbFrontWallBrushedStainlessSteel.Size = new System.Drawing.Size(225, 28);
+            this.rbFrontWallBrushedStainlessSteel.TabIndex = 1;
+            this.rbFrontWallBrushedStainlessSteel.TabStop = true;
+            this.rbFrontWallBrushedStainlessSteel.Text = "Brushed Stainless Steel";
+            this.rbFrontWallBrushedStainlessSteel.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rbFireServiceNo);
+            this.groupBox2.Controls.Add(this.rbFireServiceYes);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(376, 478);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(199, 101);
+            this.groupBox2.TabIndex = 338;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Fire Service";
+            // 
+            // rbFireServiceNo
+            // 
+            this.rbFireServiceNo.AutoSize = true;
+            this.rbFireServiceNo.Location = new System.Drawing.Point(7, 61);
+            this.rbFireServiceNo.Name = "rbFireServiceNo";
+            this.rbFireServiceNo.Size = new System.Drawing.Size(53, 28);
+            this.rbFireServiceNo.TabIndex = 1;
+            this.rbFireServiceNo.Text = "No";
+            this.rbFireServiceNo.UseVisualStyleBackColor = true;
+            // 
+            // rbFireServiceYes
+            // 
+            this.rbFireServiceYes.AutoSize = true;
+            this.rbFireServiceYes.Checked = true;
+            this.rbFireServiceYes.Location = new System.Drawing.Point(6, 28);
+            this.rbFireServiceYes.Name = "rbFireServiceYes";
+            this.rbFireServiceYes.Size = new System.Drawing.Size(60, 28);
+            this.rbFireServiceYes.TabIndex = 0;
+            this.rbFireServiceYes.TabStop = true;
+            this.rbFireServiceYes.Text = "Yes";
+            this.rbFireServiceYes.UseVisualStyleBackColor = true;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.Black;
+            this.label54.Location = new System.Drawing.Point(220, 1881);
+            this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(179, 26);
+            this.label54.TabIndex = 383;
+            this.label54.Text = "Number of COPs";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.Color.Black;
+            this.label56.Location = new System.Drawing.Point(379, 663);
+            this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(149, 26);
+            this.label56.TabIndex = 341;
+            this.label56.Text = "Shaft Details";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.Black;
+            this.label58.Location = new System.Drawing.Point(393, 1137);
+            this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(209, 26);
+            this.label58.TabIndex = 361;
+            this.label58.Text = "Landing / Car door";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.Black;
+            this.label60.Location = new System.Drawing.Point(56, 809);
+            this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(183, 26);
+            this.label60.TabIndex = 342;
+            this.label60.Text = "Shaft Width (mm)";
+            // 
+            // groupBox25
+            // 
+            this.groupBox25.Controls.Add(this.tbCarDoorFinish);
+            this.groupBox25.Controls.Add(this.rbCarDoorFinishOther);
+            this.groupBox25.Controls.Add(this.rbCarDoorFInishBrushedStainlessSteel);
+            this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox25.Location = new System.Drawing.Point(105, 1400);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Size = new System.Drawing.Size(240, 98);
+            this.groupBox25.TabIndex = 370;
+            this.groupBox25.TabStop = false;
+            this.groupBox25.Text = "Car Door Finish";
+            // 
+            // tbCarDoorFinish
+            // 
+            this.tbCarDoorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCarDoorFinish.ForeColor = System.Drawing.Color.Black;
+            this.tbCarDoorFinish.Location = new System.Drawing.Point(25, 56);
+            this.tbCarDoorFinish.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCarDoorFinish.Name = "tbCarDoorFinish";
+            this.tbCarDoorFinish.Size = new System.Drawing.Size(199, 32);
+            this.tbCarDoorFinish.TabIndex = 76;
+            this.tbCarDoorFinish.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rbCarDoorFinishOther
+            // 
+            this.rbCarDoorFinishOther.AutoSize = true;
+            this.rbCarDoorFinishOther.Location = new System.Drawing.Point(6, 66);
+            this.rbCarDoorFinishOther.Name = "rbCarDoorFinishOther";
+            this.rbCarDoorFinishOther.Size = new System.Drawing.Size(14, 13);
+            this.rbCarDoorFinishOther.TabIndex = 75;
+            this.rbCarDoorFinishOther.UseVisualStyleBackColor = true;
+            // 
+            // rbCarDoorFInishBrushedStainlessSteel
+            // 
+            this.rbCarDoorFInishBrushedStainlessSteel.AutoSize = true;
+            this.rbCarDoorFInishBrushedStainlessSteel.Checked = true;
+            this.rbCarDoorFInishBrushedStainlessSteel.Location = new System.Drawing.Point(6, 26);
+            this.rbCarDoorFInishBrushedStainlessSteel.Name = "rbCarDoorFInishBrushedStainlessSteel";
+            this.rbCarDoorFInishBrushedStainlessSteel.Size = new System.Drawing.Size(225, 28);
+            this.rbCarDoorFInishBrushedStainlessSteel.TabIndex = 1;
+            this.rbCarDoorFInishBrushedStainlessSteel.TabStop = true;
+            this.rbCarDoorFInishBrushedStainlessSteel.Text = "Brushed Stainless Steel";
+            this.rbCarDoorFInishBrushedStainlessSteel.UseVisualStyleBackColor = true;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.Color.Black;
+            this.label62.Location = new System.Drawing.Point(56, 845);
+            this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(185, 26);
+            this.label62.TabIndex = 343;
+            this.label62.Text = "Shaft Depth (mm)";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.Black;
+            this.label64.Location = new System.Drawing.Point(389, 1373);
+            this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(186, 26);
+            this.label64.TabIndex = 369;
+            this.label64.Text = "Lift Car Finishes";
+            // 
+            // tbShaftDepth
+            // 
+            this.tbShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbShaftDepth.ForeColor = System.Drawing.Color.Black;
+            this.tbShaftDepth.Location = new System.Drawing.Point(240, 842);
+            this.tbShaftDepth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbShaftDepth.Name = "tbShaftDepth";
+            this.tbShaftDepth.Size = new System.Drawing.Size(100, 32);
+            this.tbShaftDepth.TabIndex = 304;
+            this.tbShaftDepth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbAuxCOPLocation
+            // 
+            this.tbAuxCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAuxCOPLocation.ForeColor = System.Drawing.Color.Black;
+            this.tbAuxCOPLocation.Location = new System.Drawing.Point(402, 1950);
+            this.tbAuxCOPLocation.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAuxCOPLocation.Name = "tbAuxCOPLocation";
+            this.tbAuxCOPLocation.Size = new System.Drawing.Size(433, 32);
+            this.tbAuxCOPLocation.TabIndex = 322;
+            this.tbAuxCOPLocation.Text = "Right hand side wall 350mm from front";
+            this.tbAuxCOPLocation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.Black;
+            this.label66.Location = new System.Drawing.Point(359, 808);
+            this.label66.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(160, 26);
+            this.label66.TabIndex = 344;
+            this.label66.Text = "Pit Depth (mm)";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.Black;
+            this.label70.Location = new System.Drawing.Point(206, 1953);
+            this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(192, 26);
+            this.label70.TabIndex = 385;
+            this.label70.Text = "Aux COP Location";
+            // 
+            // tbPitDepth
+            // 
+            this.tbPitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPitDepth.ForeColor = System.Drawing.Color.Black;
+            this.tbPitDepth.Location = new System.Drawing.Point(519, 805);
+            this.tbPitDepth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPitDepth.Name = "tbPitDepth";
+            this.tbPitDepth.Size = new System.Drawing.Size(100, 32);
+            this.tbPitDepth.TabIndex = 305;
+            this.tbPitDepth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbMainCOPLocation
+            // 
+            this.tbMainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMainCOPLocation.ForeColor = System.Drawing.Color.Black;
+            this.tbMainCOPLocation.Location = new System.Drawing.Point(402, 1914);
+            this.tbMainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMainCOPLocation.Name = "tbMainCOPLocation";
+            this.tbMainCOPLocation.Size = new System.Drawing.Size(433, 32);
+            this.tbMainCOPLocation.TabIndex = 321;
+            this.tbMainCOPLocation.Text = "Left hand side wall 350mm from front";
+            this.tbMainCOPLocation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ForeColor = System.Drawing.Color.Black;
+            this.label72.Location = new System.Drawing.Point(346, 844);
+            this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(172, 26);
+            this.label72.TabIndex = 345;
+            this.label72.Text = "Headroom (mm)";
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.ForeColor = System.Drawing.Color.Black;
+            this.label74.Location = new System.Drawing.Point(197, 1917);
+            this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(201, 26);
+            this.label74.TabIndex = 384;
+            this.label74.Text = "Main COP Location";
+            // 
+            // tbHeadroom
+            // 
+            this.tbHeadroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHeadroom.ForeColor = System.Drawing.Color.Black;
+            this.tbHeadroom.Location = new System.Drawing.Point(519, 841);
+            this.tbHeadroom.Margin = new System.Windows.Forms.Padding(2);
+            this.tbHeadroom.Name = "tbHeadroom";
+            this.tbHeadroom.Size = new System.Drawing.Size(100, 32);
+            this.tbHeadroom.TabIndex = 306;
+            this.tbHeadroom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbNumberOfCOPS
+            // 
+            this.tbNumberOfCOPS.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumberOfCOPS.ForeColor = System.Drawing.Color.Black;
+            this.tbNumberOfCOPS.Location = new System.Drawing.Point(402, 1878);
+            this.tbNumberOfCOPS.Margin = new System.Windows.Forms.Padding(2);
+            this.tbNumberOfCOPS.Name = "tbNumberOfCOPS";
+            this.tbNumberOfCOPS.Size = new System.Drawing.Size(100, 32);
+            this.tbNumberOfCOPS.TabIndex = 320;
+            this.tbNumberOfCOPS.Text = "2";
+            this.tbNumberOfCOPS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.ForeColor = System.Drawing.Color.Black;
+            this.label76.Location = new System.Drawing.Point(390, 880);
+            this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(129, 26);
+            this.label76.TabIndex = 346;
+            this.label76.Text = "Travel (mm)";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.ForeColor = System.Drawing.Color.Black;
+            this.label78.Location = new System.Drawing.Point(401, 1838);
+            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(203, 26);
+            this.label78.TabIndex = 382;
+            this.label78.Text = "Car Appointments";
+            // 
+            // tbTravel
+            // 
+            this.tbTravel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTravel.ForeColor = System.Drawing.Color.Black;
+            this.tbTravel.Location = new System.Drawing.Point(519, 877);
+            this.tbTravel.Margin = new System.Windows.Forms.Padding(2);
+            this.tbTravel.Name = "tbTravel";
+            this.tbTravel.Size = new System.Drawing.Size(100, 32);
+            this.tbTravel.TabIndex = 307;
+            this.tbTravel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Enabled = false;
+            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.ForeColor = System.Drawing.Color.Black;
+            this.label80.Location = new System.Drawing.Point(296, 2686);
+            this.label80.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(12, 52);
+            this.label80.TabIndex = 403;
+            this.label80.Text = "\r\n\r\n";
+            this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.ForeColor = System.Drawing.Color.Black;
+            this.label81.Location = new System.Drawing.Point(679, 809);
+            this.label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(142, 26);
+            this.label81.TabIndex = 347;
+            this.label81.Text = "# of Landings";
+            // 
+            // groupBox35
+            // 
+            this.groupBox35.Controls.Add(this.rbOutofServiceNo);
+            this.groupBox35.Controls.Add(this.rbOutofServiceYes);
+            this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox35.Location = new System.Drawing.Point(550, 2607);
+            this.groupBox35.Name = "groupBox35";
+            this.groupBox35.Size = new System.Drawing.Size(183, 60);
+            this.groupBox35.TabIndex = 399;
+            this.groupBox35.TabStop = false;
+            this.groupBox35.Text = "Out of Service";
+            // 
+            // rbOutofServiceNo
+            // 
+            this.rbOutofServiceNo.AutoSize = true;
+            this.rbOutofServiceNo.Checked = true;
+            this.rbOutofServiceNo.Location = new System.Drawing.Point(72, 28);
+            this.rbOutofServiceNo.Name = "rbOutofServiceNo";
+            this.rbOutofServiceNo.Size = new System.Drawing.Size(53, 28);
+            this.rbOutofServiceNo.TabIndex = 1;
+            this.rbOutofServiceNo.TabStop = true;
+            this.rbOutofServiceNo.Text = "No";
+            this.rbOutofServiceNo.UseVisualStyleBackColor = true;
+            // 
+            // rbOutofServiceYes
+            // 
+            this.rbOutofServiceYes.AutoSize = true;
+            this.rbOutofServiceYes.Location = new System.Drawing.Point(6, 28);
+            this.rbOutofServiceYes.Name = "rbOutofServiceYes";
+            this.rbOutofServiceYes.Size = new System.Drawing.Size(60, 28);
+            this.rbOutofServiceYes.TabIndex = 0;
+            this.rbOutofServiceYes.Text = "Yes";
+            this.rbOutofServiceYes.UseVisualStyleBackColor = true;
+            // 
+            // tbNumofLandings
+            // 
+            this.tbNumofLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumofLandings.ForeColor = System.Drawing.Color.Black;
+            this.tbNumofLandings.Location = new System.Drawing.Point(825, 806);
+            this.tbNumofLandings.Margin = new System.Windows.Forms.Padding(2);
+            this.tbNumofLandings.Name = "tbNumofLandings";
+            this.tbNumofLandings.Size = new System.Drawing.Size(100, 32);
+            this.tbNumofLandings.TabIndex = 308;
+            this.tbNumofLandings.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox36
+            // 
+            this.groupBox36.Controls.Add(this.rbEmergencyLoweringSystemNo);
+            this.groupBox36.Controls.Add(this.rbEmergencyLoweringSystemYes);
+            this.groupBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox36.Location = new System.Drawing.Point(247, 2607);
+            this.groupBox36.Name = "groupBox36";
+            this.groupBox36.Size = new System.Drawing.Size(275, 60);
+            this.groupBox36.TabIndex = 400;
+            this.groupBox36.TabStop = false;
+            this.groupBox36.Text = "Emergency Lowering System";
+            // 
+            // rbEmergencyLoweringSystemNo
+            // 
+            this.rbEmergencyLoweringSystemNo.AutoSize = true;
+            this.rbEmergencyLoweringSystemNo.Location = new System.Drawing.Point(72, 28);
+            this.rbEmergencyLoweringSystemNo.Name = "rbEmergencyLoweringSystemNo";
+            this.rbEmergencyLoweringSystemNo.Size = new System.Drawing.Size(53, 28);
+            this.rbEmergencyLoweringSystemNo.TabIndex = 1;
+            this.rbEmergencyLoweringSystemNo.Text = "No";
+            this.rbEmergencyLoweringSystemNo.UseVisualStyleBackColor = true;
+            // 
+            // rbEmergencyLoweringSystemYes
+            // 
+            this.rbEmergencyLoweringSystemYes.AutoSize = true;
+            this.rbEmergencyLoweringSystemYes.Checked = true;
+            this.rbEmergencyLoweringSystemYes.Location = new System.Drawing.Point(6, 28);
+            this.rbEmergencyLoweringSystemYes.Name = "rbEmergencyLoweringSystemYes";
+            this.rbEmergencyLoweringSystemYes.Size = new System.Drawing.Size(60, 28);
+            this.rbEmergencyLoweringSystemYes.TabIndex = 0;
+            this.rbEmergencyLoweringSystemYes.TabStop = true;
+            this.rbEmergencyLoweringSystemYes.Text = "Yes";
+            this.rbEmergencyLoweringSystemYes.UseVisualStyleBackColor = true;
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.ForeColor = System.Drawing.Color.Black;
+            this.label82.Location = new System.Drawing.Point(76, 69);
+            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(119, 26);
+            this.label82.TabIndex = 325;
+            this.label82.Text = "First Name";
+            // 
+            // groupBox34
+            // 
+            this.groupBox34.Controls.Add(this.rbFacePlateMaterialOther);
+            this.groupBox34.Controls.Add(this.tbFacePlateMaterial);
+            this.groupBox34.Controls.Add(this.rbFacePlateMaterialSatinStainlessSteel);
+            this.groupBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox34.Location = new System.Drawing.Point(368, 2450);
+            this.groupBox34.Name = "groupBox34";
+            this.groupBox34.Size = new System.Drawing.Size(243, 104);
+            this.groupBox34.TabIndex = 397;
+            this.groupBox34.TabStop = false;
+            this.groupBox34.Text = "Face Plate Material";
+            // 
+            // rbFacePlateMaterialOther
+            // 
+            this.rbFacePlateMaterialOther.AutoSize = true;
+            this.rbFacePlateMaterialOther.Location = new System.Drawing.Point(6, 69);
+            this.rbFacePlateMaterialOther.Name = "rbFacePlateMaterialOther";
+            this.rbFacePlateMaterialOther.Size = new System.Drawing.Size(14, 13);
+            this.rbFacePlateMaterialOther.TabIndex = 96;
+            this.rbFacePlateMaterialOther.UseVisualStyleBackColor = true;
+            // 
+            // tbFacePlateMaterial
+            // 
+            this.tbFacePlateMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFacePlateMaterial.ForeColor = System.Drawing.Color.Black;
+            this.tbFacePlateMaterial.Location = new System.Drawing.Point(25, 61);
+            this.tbFacePlateMaterial.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFacePlateMaterial.Name = "tbFacePlateMaterial";
+            this.tbFacePlateMaterial.Size = new System.Drawing.Size(203, 32);
+            this.tbFacePlateMaterial.TabIndex = 95;
+            this.tbFacePlateMaterial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rbFacePlateMaterialSatinStainlessSteel
+            // 
+            this.rbFacePlateMaterialSatinStainlessSteel.AutoSize = true;
+            this.rbFacePlateMaterialSatinStainlessSteel.Checked = true;
+            this.rbFacePlateMaterialSatinStainlessSteel.Location = new System.Drawing.Point(6, 28);
+            this.rbFacePlateMaterialSatinStainlessSteel.Name = "rbFacePlateMaterialSatinStainlessSteel";
+            this.rbFacePlateMaterialSatinStainlessSteel.Size = new System.Drawing.Size(195, 28);
+            this.rbFacePlateMaterialSatinStainlessSteel.TabIndex = 2;
+            this.rbFacePlateMaterialSatinStainlessSteel.TabStop = true;
+            this.rbFacePlateMaterialSatinStainlessSteel.Text = "Satin Stainless Steel";
+            this.rbFacePlateMaterialSatinStainlessSteel.UseVisualStyleBackColor = true;
+            // 
+            // tbfname
+            // 
+            this.tbfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbfname.ForeColor = System.Drawing.Color.Black;
+            this.tbfname.Location = new System.Drawing.Point(200, 69);
+            this.tbfname.Margin = new System.Windows.Forms.Padding(2);
+            this.tbfname.Name = "tbfname";
+            this.tbfname.Size = new System.Drawing.Size(198, 32);
+            this.tbfname.TabIndex = 295;
+            this.tbfname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.ForeColor = System.Drawing.Color.Black;
+            this.label83.Location = new System.Drawing.Point(545, 111);
+            this.label83.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(93, 26);
+            this.label83.TabIndex = 326;
+            this.label83.Text = "Phone #";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.ForeColor = System.Drawing.Color.Black;
+            this.label84.Location = new System.Drawing.Point(445, 2568);
+            this.label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(96, 26);
+            this.label84.TabIndex = 398;
+            this.label84.Text = "General";
+            // 
+            // tbphone
+            // 
+            this.tbphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbphone.ForeColor = System.Drawing.Color.Black;
+            this.tbphone.Location = new System.Drawing.Point(641, 107);
+            this.tbphone.Margin = new System.Windows.Forms.Padding(2);
+            this.tbphone.Name = "tbphone";
+            this.tbphone.Size = new System.Drawing.Size(198, 32);
+            this.tbphone.TabIndex = 297;
+            this.tbphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label85.ForeColor = System.Drawing.Color.Black;
+            this.label85.Location = new System.Drawing.Point(376, 2410);
+            this.label85.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(249, 26);
+            this.label85.TabIndex = 396;
+            this.label85.Text = "Landing Appointments";
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label86.ForeColor = System.Drawing.Color.Black;
+            this.label86.Location = new System.Drawing.Point(406, 71);
+            this.label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(118, 26);
+            this.label86.TabIndex = 328;
+            this.label86.Text = "Last Name";
+            // 
+            // groupBox31
+            // 
+            this.groupBox31.Controls.Add(this.rbVoiceAnnunciationNo);
+            this.groupBox31.Controls.Add(this.rbVoiceAnnunciationYes);
+            this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox31.Location = new System.Drawing.Point(198, 2318);
+            this.groupBox31.Name = "groupBox31";
+            this.groupBox31.Size = new System.Drawing.Size(229, 60);
+            this.groupBox31.TabIndex = 395;
+            this.groupBox31.TabStop = false;
+            this.groupBox31.Text = "Voice Annunciation";
+            // 
+            // rbVoiceAnnunciationNo
+            // 
+            this.rbVoiceAnnunciationNo.AutoSize = true;
+            this.rbVoiceAnnunciationNo.Location = new System.Drawing.Point(72, 28);
+            this.rbVoiceAnnunciationNo.Name = "rbVoiceAnnunciationNo";
+            this.rbVoiceAnnunciationNo.Size = new System.Drawing.Size(53, 28);
+            this.rbVoiceAnnunciationNo.TabIndex = 1;
+            this.rbVoiceAnnunciationNo.Text = "No";
+            this.rbVoiceAnnunciationNo.UseVisualStyleBackColor = true;
+            // 
+            // rbVoiceAnnunciationYes
+            // 
+            this.rbVoiceAnnunciationYes.AutoSize = true;
+            this.rbVoiceAnnunciationYes.Checked = true;
+            this.rbVoiceAnnunciationYes.Location = new System.Drawing.Point(6, 28);
+            this.rbVoiceAnnunciationYes.Name = "rbVoiceAnnunciationYes";
+            this.rbVoiceAnnunciationYes.Size = new System.Drawing.Size(60, 28);
+            this.rbVoiceAnnunciationYes.TabIndex = 0;
+            this.rbVoiceAnnunciationYes.TabStop = true;
+            this.rbVoiceAnnunciationYes.Text = "Yes";
+            this.rbVoiceAnnunciationYes.UseVisualStyleBackColor = true;
+            // 
+            // tblname
+            // 
+            this.tblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblname.ForeColor = System.Drawing.Color.Black;
+            this.tblname.Location = new System.Drawing.Point(528, 71);
+            this.tblname.Margin = new System.Windows.Forms.Padding(2);
+            this.tblname.Name = "tblname";
+            this.tblname.Size = new System.Drawing.Size(198, 32);
+            this.tblname.TabIndex = 296;
+            this.tblname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox32
+            // 
+            this.groupBox32.Controls.Add(this.rbSecurityKeySwitchNo);
+            this.groupBox32.Controls.Add(this.rbSecurityKeySwitchYes);
+            this.groupBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox32.Location = new System.Drawing.Point(434, 2284);
+            this.groupBox32.Name = "groupBox32";
+            this.groupBox32.Size = new System.Drawing.Size(224, 60);
+            this.groupBox32.TabIndex = 394;
+            this.groupBox32.TabStop = false;
+            this.groupBox32.Text = "Security Key Switch";
+            // 
+            // rbSecurityKeySwitchNo
+            // 
+            this.rbSecurityKeySwitchNo.AutoSize = true;
+            this.rbSecurityKeySwitchNo.Checked = true;
+            this.rbSecurityKeySwitchNo.Location = new System.Drawing.Point(72, 28);
+            this.rbSecurityKeySwitchNo.Name = "rbSecurityKeySwitchNo";
+            this.rbSecurityKeySwitchNo.Size = new System.Drawing.Size(53, 28);
+            this.rbSecurityKeySwitchNo.TabIndex = 1;
+            this.rbSecurityKeySwitchNo.TabStop = true;
+            this.rbSecurityKeySwitchNo.Text = "No";
+            this.rbSecurityKeySwitchNo.UseVisualStyleBackColor = true;
+            // 
+            // rbSecurityKeySwitchYes
+            // 
+            this.rbSecurityKeySwitchYes.AutoSize = true;
+            this.rbSecurityKeySwitchYes.Location = new System.Drawing.Point(6, 28);
+            this.rbSecurityKeySwitchYes.Name = "rbSecurityKeySwitchYes";
+            this.rbSecurityKeySwitchYes.Size = new System.Drawing.Size(60, 28);
+            this.rbSecurityKeySwitchYes.TabIndex = 0;
+            this.rbSecurityKeySwitchYes.Text = "Yes";
+            this.rbSecurityKeySwitchYes.UseVisualStyleBackColor = true;
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.ForeColor = System.Drawing.Color.Black;
+            this.label87.Location = new System.Drawing.Point(41, 111);
+            this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(157, 26);
+            this.label87.TabIndex = 329;
+            this.label87.Text = "Address Line 1";
+            // 
+            // groupBox30
+            // 
+            this.groupBox30.Controls.Add(this.rbRearDoorKeySwitchNo);
+            this.groupBox30.Controls.Add(this.rbRearDoorKeySwitchYes);
+            this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox30.Location = new System.Drawing.Point(196, 2190);
+            this.groupBox30.Name = "groupBox30";
+            this.groupBox30.Size = new System.Drawing.Size(231, 60);
+            this.groupBox30.TabIndex = 391;
+            this.groupBox30.TabStop = false;
+            this.groupBox30.Text = "Rear Door Key Switch";
+            // 
+            // rbRearDoorKeySwitchNo
+            // 
+            this.rbRearDoorKeySwitchNo.AutoSize = true;
+            this.rbRearDoorKeySwitchNo.Checked = true;
+            this.rbRearDoorKeySwitchNo.Location = new System.Drawing.Point(72, 28);
+            this.rbRearDoorKeySwitchNo.Name = "rbRearDoorKeySwitchNo";
+            this.rbRearDoorKeySwitchNo.Size = new System.Drawing.Size(53, 28);
+            this.rbRearDoorKeySwitchNo.TabIndex = 1;
+            this.rbRearDoorKeySwitchNo.TabStop = true;
+            this.rbRearDoorKeySwitchNo.Text = "No";
+            this.rbRearDoorKeySwitchNo.UseVisualStyleBackColor = true;
+            // 
+            // rbRearDoorKeySwitchYes
+            // 
+            this.rbRearDoorKeySwitchYes.AutoSize = true;
+            this.rbRearDoorKeySwitchYes.Location = new System.Drawing.Point(6, 28);
+            this.rbRearDoorKeySwitchYes.Name = "rbRearDoorKeySwitchYes";
+            this.rbRearDoorKeySwitchYes.Size = new System.Drawing.Size(60, 28);
+            this.rbRearDoorKeySwitchYes.TabIndex = 0;
+            this.rbRearDoorKeySwitchYes.Text = "Yes";
+            this.rbRearDoorKeySwitchYes.UseVisualStyleBackColor = true;
+            // 
+            // tbAddress1
+            // 
+            this.tbAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress1.ForeColor = System.Drawing.Color.Black;
+            this.tbAddress1.Location = new System.Drawing.Point(202, 108);
+            this.tbAddress1.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddress1.Name = "tbAddress1";
+            this.tbAddress1.Size = new System.Drawing.Size(329, 32);
+            this.tbAddress1.TabIndex = 298;
+            this.tbAddress1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox33
+            // 
+            this.groupBox33.Controls.Add(this.rbExclusiveServiceNo);
+            this.groupBox33.Controls.Add(this.rbExclusiveServiceYes);
+            this.groupBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox33.Location = new System.Drawing.Point(434, 2218);
+            this.groupBox33.Name = "groupBox33";
+            this.groupBox33.Size = new System.Drawing.Size(224, 60);
+            this.groupBox33.TabIndex = 393;
+            this.groupBox33.TabStop = false;
+            this.groupBox33.Text = "Exclusive Service";
+            // 
+            // rbExclusiveServiceNo
+            // 
+            this.rbExclusiveServiceNo.AutoSize = true;
+            this.rbExclusiveServiceNo.Checked = true;
+            this.rbExclusiveServiceNo.Location = new System.Drawing.Point(72, 28);
+            this.rbExclusiveServiceNo.Name = "rbExclusiveServiceNo";
+            this.rbExclusiveServiceNo.Size = new System.Drawing.Size(53, 28);
+            this.rbExclusiveServiceNo.TabIndex = 1;
+            this.rbExclusiveServiceNo.TabStop = true;
+            this.rbExclusiveServiceNo.Text = "No";
+            this.rbExclusiveServiceNo.UseVisualStyleBackColor = true;
+            // 
+            // rbExclusiveServiceYes
+            // 
+            this.rbExclusiveServiceYes.AutoSize = true;
+            this.rbExclusiveServiceYes.Location = new System.Drawing.Point(6, 28);
+            this.rbExclusiveServiceYes.Name = "rbExclusiveServiceYes";
+            this.rbExclusiveServiceYes.Size = new System.Drawing.Size(60, 28);
+            this.rbExclusiveServiceYes.TabIndex = 0;
+            this.rbExclusiveServiceYes.Text = "Yes";
+            this.rbExclusiveServiceYes.UseVisualStyleBackColor = true;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label88.ForeColor = System.Drawing.Color.Black;
+            this.label88.Location = new System.Drawing.Point(41, 147);
+            this.label88.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(157, 26);
+            this.label88.TabIndex = 330;
+            this.label88.Text = "Address Line 2";
+            // 
+            // groupBox29
+            // 
+            this.groupBox29.Controls.Add(this.rbGPOInCarNo);
+            this.groupBox29.Controls.Add(this.rbGPOInCarYes);
+            this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox29.Location = new System.Drawing.Point(196, 2252);
+            this.groupBox29.Name = "groupBox29";
+            this.groupBox29.Size = new System.Drawing.Size(231, 60);
+            this.groupBox29.TabIndex = 392;
+            this.groupBox29.TabStop = false;
+            this.groupBox29.Text = "GPO In Car";
+            // 
+            // rbGPOInCarNo
+            // 
+            this.rbGPOInCarNo.AutoSize = true;
+            this.rbGPOInCarNo.Checked = true;
+            this.rbGPOInCarNo.Location = new System.Drawing.Point(72, 28);
+            this.rbGPOInCarNo.Name = "rbGPOInCarNo";
+            this.rbGPOInCarNo.Size = new System.Drawing.Size(53, 28);
+            this.rbGPOInCarNo.TabIndex = 1;
+            this.rbGPOInCarNo.TabStop = true;
+            this.rbGPOInCarNo.Text = "No";
+            this.rbGPOInCarNo.UseVisualStyleBackColor = true;
+            // 
+            // rbGPOInCarYes
+            // 
+            this.rbGPOInCarYes.AutoSize = true;
+            this.rbGPOInCarYes.Location = new System.Drawing.Point(6, 28);
+            this.rbGPOInCarYes.Name = "rbGPOInCarYes";
+            this.rbGPOInCarYes.Size = new System.Drawing.Size(60, 28);
+            this.rbGPOInCarYes.TabIndex = 0;
+            this.rbGPOInCarYes.Text = "Yes";
+            this.rbGPOInCarYes.UseVisualStyleBackColor = true;
+            // 
+            // tbAddress2
+            // 
+            this.tbAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress2.ForeColor = System.Drawing.Color.Black;
+            this.tbAddress2.Location = new System.Drawing.Point(202, 144);
+            this.tbAddress2.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddress2.Name = "tbAddress2";
+            this.tbAddress2.Size = new System.Drawing.Size(329, 32);
+            this.tbAddress2.TabIndex = 299;
+            this.tbAddress2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbKeyswitchLocation
+            // 
+            this.tbKeyswitchLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbKeyswitchLocation.ForeColor = System.Drawing.Color.Black;
+            this.tbKeyswitchLocation.Location = new System.Drawing.Point(402, 1986);
+            this.tbKeyswitchLocation.Margin = new System.Windows.Forms.Padding(2);
+            this.tbKeyswitchLocation.Name = "tbKeyswitchLocation";
+            this.tbKeyswitchLocation.Size = new System.Drawing.Size(433, 32);
+            this.tbKeyswitchLocation.TabIndex = 323;
+            this.tbKeyswitchLocation.Text = "Main COP only";
+            this.tbKeyswitchLocation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.ForeColor = System.Drawing.Color.Black;
+            this.label89.Location = new System.Drawing.Point(41, 183);
+            this.label89.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(157, 26);
+            this.label89.TabIndex = 331;
+            this.label89.Text = "Address Line 3";
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label90.ForeColor = System.Drawing.Color.Black;
+            this.label90.Location = new System.Drawing.Point(197, 1989);
+            this.label90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(199, 26);
+            this.label90.TabIndex = 387;
+            this.label90.Text = "Keyswitch Location";
+            // 
+            // tbAddress3
+            // 
+            this.tbAddress3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress3.ForeColor = System.Drawing.Color.Black;
+            this.tbAddress3.Location = new System.Drawing.Point(202, 180);
+            this.tbAddress3.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddress3.Name = "tbAddress3";
+            this.tbAddress3.Size = new System.Drawing.Size(329, 32);
+            this.tbAddress3.TabIndex = 300;
+            this.tbAddress3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox28
+            // 
+            this.groupBox28.Controls.Add(this.tbCOPFinish);
+            this.groupBox28.Controls.Add(this.rbCOPFinishOther);
+            this.groupBox28.Controls.Add(this.rbCOPFinishSatinStainlessSteel);
+            this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox28.Location = new System.Drawing.Point(197, 2083);
+            this.groupBox28.Name = "groupBox28";
+            this.groupBox28.Size = new System.Drawing.Size(230, 101);
+            this.groupBox28.TabIndex = 386;
+            this.groupBox28.TabStop = false;
+            this.groupBox28.Text = "COP Finish";
+            // 
+            // tbCOPFinish
+            // 
+            this.tbCOPFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCOPFinish.ForeColor = System.Drawing.Color.Black;
+            this.tbCOPFinish.Location = new System.Drawing.Point(23, 58);
+            this.tbCOPFinish.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCOPFinish.Name = "tbCOPFinish";
+            this.tbCOPFinish.Size = new System.Drawing.Size(202, 32);
+            this.tbCOPFinish.TabIndex = 76;
+            this.tbCOPFinish.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rbCOPFinishOther
+            // 
+            this.rbCOPFinishOther.AutoSize = true;
+            this.rbCOPFinishOther.Location = new System.Drawing.Point(4, 68);
+            this.rbCOPFinishOther.Name = "rbCOPFinishOther";
+            this.rbCOPFinishOther.Size = new System.Drawing.Size(14, 13);
+            this.rbCOPFinishOther.TabIndex = 75;
+            this.rbCOPFinishOther.UseVisualStyleBackColor = true;
+            // 
+            // rbCOPFinishSatinStainlessSteel
+            // 
+            this.rbCOPFinishSatinStainlessSteel.AutoSize = true;
+            this.rbCOPFinishSatinStainlessSteel.Checked = true;
+            this.rbCOPFinishSatinStainlessSteel.Location = new System.Drawing.Point(6, 28);
+            this.rbCOPFinishSatinStainlessSteel.Name = "rbCOPFinishSatinStainlessSteel";
+            this.rbCOPFinishSatinStainlessSteel.Size = new System.Drawing.Size(195, 28);
+            this.rbCOPFinishSatinStainlessSteel.TabIndex = 2;
+            this.rbCOPFinishSatinStainlessSteel.TabStop = true;
+            this.rbCOPFinishSatinStainlessSteel.Text = "Satin Stainless Steel";
+            this.rbCOPFinishSatinStainlessSteel.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbSumasa);
+            this.groupBox1.Controls.Add(this.rbSL);
+            this.groupBox1.Controls.Add(this.rbWittur);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(155, 284);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(220, 132);
+            this.groupBox1.TabIndex = 335;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Supplier";
+            // 
+            // rbSumasa
+            // 
+            this.rbSumasa.AutoSize = true;
+            this.rbSumasa.Location = new System.Drawing.Point(6, 96);
+            this.rbSumasa.Name = "rbSumasa";
+            this.rbSumasa.Size = new System.Drawing.Size(96, 28);
+            this.rbSumasa.TabIndex = 3;
+            this.rbSumasa.TabStop = true;
+            this.rbSumasa.Text = "Sumasa";
+            this.rbSumasa.UseVisualStyleBackColor = true;
+            // 
+            // rbSL
+            // 
+            this.rbSL.AutoSize = true;
+            this.rbSL.Location = new System.Drawing.Point(6, 28);
+            this.rbSL.Name = "rbSL";
+            this.rbSL.Size = new System.Drawing.Size(50, 28);
+            this.rbSL.TabIndex = 2;
+            this.rbSL.TabStop = true;
+            this.rbSL.Text = "SL";
+            this.rbSL.UseVisualStyleBackColor = true;
+            // 
+            // rbWittur
+            // 
+            this.rbWittur.AutoSize = true;
+            this.rbWittur.Location = new System.Drawing.Point(6, 62);
+            this.rbWittur.Name = "rbWittur";
+            this.rbWittur.Size = new System.Drawing.Size(75, 28);
+            this.rbWittur.TabIndex = 1;
+            this.rbWittur.TabStop = true;
+            this.rbWittur.Text = "Wittur";
+            this.rbWittur.UseVisualStyleBackColor = true;
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.tbHandrail);
+            this.groupBox18.Controls.Add(this.rbHandrailBrushedStainlessSTeel);
+            this.groupBox18.Controls.Add(this.rbHandrailOther);
+            this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox18.Location = new System.Drawing.Point(610, 1400);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(253, 98);
+            this.groupBox18.TabIndex = 380;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Handrail";
+            // 
+            // tbHandrail
+            // 
+            this.tbHandrail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHandrail.ForeColor = System.Drawing.Color.Black;
+            this.tbHandrail.Location = new System.Drawing.Point(25, 52);
+            this.tbHandrail.Margin = new System.Windows.Forms.Padding(2);
+            this.tbHandrail.Name = "tbHandrail";
+            this.tbHandrail.Size = new System.Drawing.Size(199, 32);
+            this.tbHandrail.TabIndex = 74;
+            this.tbHandrail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rbHandrailBrushedStainlessSTeel
+            // 
+            this.rbHandrailBrushedStainlessSTeel.AutoSize = true;
+            this.rbHandrailBrushedStainlessSTeel.Checked = true;
+            this.rbHandrailBrushedStainlessSTeel.Location = new System.Drawing.Point(6, 28);
+            this.rbHandrailBrushedStainlessSTeel.Name = "rbHandrailBrushedStainlessSTeel";
+            this.rbHandrailBrushedStainlessSTeel.Size = new System.Drawing.Size(225, 28);
+            this.rbHandrailBrushedStainlessSTeel.TabIndex = 2;
+            this.rbHandrailBrushedStainlessSTeel.TabStop = true;
+            this.rbHandrailBrushedStainlessSTeel.Text = "Brushed Stainless Steel";
+            this.rbHandrailBrushedStainlessSTeel.UseVisualStyleBackColor = true;
+            // 
+            // rbHandrailOther
+            // 
+            this.rbHandrailOther.AutoSize = true;
+            this.rbHandrailOther.Location = new System.Drawing.Point(6, 62);
+            this.rbHandrailOther.Name = "rbHandrailOther";
+            this.rbHandrailOther.Size = new System.Drawing.Size(14, 13);
+            this.rbHandrailOther.TabIndex = 1;
+            this.rbHandrailOther.UseVisualStyleBackColor = true;
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label91.ForeColor = System.Drawing.Color.Black;
+            this.label91.Location = new System.Drawing.Point(291, 249);
+            this.label91.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(361, 26);
+            this.label91.TabIndex = 332;
+            this.label91.Text = "What are the specifics of the lift?";
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.tbNumOfLEDLights);
+            this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox19.Location = new System.Drawing.Point(355, 1573);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(249, 70);
+            this.groupBox19.TabIndex = 378;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "# of LED Lights";
+            // 
+            // tbNumOfLEDLights
+            // 
+            this.tbNumOfLEDLights.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumOfLEDLights.ForeColor = System.Drawing.Color.Black;
+            this.tbNumOfLEDLights.Location = new System.Drawing.Point(8, 27);
+            this.tbNumOfLEDLights.Margin = new System.Windows.Forms.Padding(2);
+            this.tbNumOfLEDLights.Name = "tbNumOfLEDLights";
+            this.tbNumOfLEDLights.Size = new System.Drawing.Size(231, 32);
+            this.tbNumOfLEDLights.TabIndex = 74;
+            this.tbNumOfLEDLights.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label92.ForeColor = System.Drawing.Color.Black;
+            this.label92.Location = new System.Drawing.Point(392, 361);
+            this.label92.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(136, 26);
+            this.label92.TabIndex = 333;
+            this.label92.Text = "Lift Numbers";
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.tbMirror);
+            this.groupBox20.Controls.Add(this.rbMirrorOther);
+            this.groupBox20.Controls.Add(this.rbMirrorHalfSize);
+            this.groupBox20.Controls.Add(this.rbMirrorFullSize);
+            this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox20.Location = new System.Drawing.Point(105, 1682);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(240, 117);
+            this.groupBox20.TabIndex = 374;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Mirror";
+            // 
+            // tbMirror
+            // 
+            this.tbMirror.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMirror.ForeColor = System.Drawing.Color.Black;
+            this.tbMirror.Location = new System.Drawing.Point(25, 78);
+            this.tbMirror.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMirror.Name = "tbMirror";
+            this.tbMirror.Size = new System.Drawing.Size(199, 32);
+            this.tbMirror.TabIndex = 78;
+            this.tbMirror.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rbMirrorOther
+            // 
+            this.rbMirrorOther.AutoSize = true;
+            this.rbMirrorOther.Location = new System.Drawing.Point(6, 88);
+            this.rbMirrorOther.Name = "rbMirrorOther";
+            this.rbMirrorOther.Size = new System.Drawing.Size(14, 13);
+            this.rbMirrorOther.TabIndex = 77;
+            this.rbMirrorOther.TabStop = true;
+            this.rbMirrorOther.UseVisualStyleBackColor = true;
+            // 
+            // rbMirrorHalfSize
+            // 
+            this.rbMirrorHalfSize.AutoSize = true;
+            this.rbMirrorHalfSize.Location = new System.Drawing.Point(6, 52);
+            this.rbMirrorHalfSize.Name = "rbMirrorHalfSize";
+            this.rbMirrorHalfSize.Size = new System.Drawing.Size(101, 28);
+            this.rbMirrorHalfSize.TabIndex = 2;
+            this.rbMirrorHalfSize.Text = "Half Size";
+            this.rbMirrorHalfSize.UseVisualStyleBackColor = true;
+            // 
+            // rbMirrorFullSize
+            // 
+            this.rbMirrorFullSize.AutoSize = true;
+            this.rbMirrorFullSize.Location = new System.Drawing.Point(6, 26);
+            this.rbMirrorFullSize.Name = "rbMirrorFullSize";
+            this.rbMirrorFullSize.Size = new System.Drawing.Size(100, 28);
+            this.rbMirrorFullSize.TabIndex = 1;
+            this.rbMirrorFullSize.Text = "Full Size";
+            this.rbMirrorFullSize.UseVisualStyleBackColor = true;
+            // 
+            // tbLiftNumbers
+            // 
+            this.tbLiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLiftNumbers.ForeColor = System.Drawing.Color.Black;
+            this.tbLiftNumbers.Location = new System.Drawing.Point(528, 359);
+            this.tbLiftNumbers.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLiftNumbers.Name = "tbLiftNumbers";
+            this.tbLiftNumbers.Size = new System.Drawing.Size(236, 32);
+            this.tbLiftNumbers.TabIndex = 302;
+            this.tbLiftNumbers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label93.ForeColor = System.Drawing.Color.Black;
+            this.label93.Location = new System.Drawing.Point(260, 2027);
+            this.label93.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(138, 26);
+            this.label93.TabIndex = 390;
+            this.label93.Text = "Designations";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label94.ForeColor = System.Drawing.Color.Black;
+            this.label94.Location = new System.Drawing.Point(407, 312);
+            this.label94.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(118, 26);
+            this.label94.TabIndex = 334;
+            this.label94.Text = "Type of Lift";
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.rbBumpRailNo);
+            this.groupBox17.Controls.Add(this.rbBumpRailYes);
+            this.groupBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox17.Location = new System.Drawing.Point(351, 1758);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(253, 60);
+            this.groupBox17.TabIndex = 377;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Bump Rail";
+            // 
+            // rbBumpRailNo
+            // 
+            this.rbBumpRailNo.AutoSize = true;
+            this.rbBumpRailNo.Location = new System.Drawing.Point(72, 28);
+            this.rbBumpRailNo.Name = "rbBumpRailNo";
+            this.rbBumpRailNo.Size = new System.Drawing.Size(53, 28);
+            this.rbBumpRailNo.TabIndex = 1;
+            this.rbBumpRailNo.TabStop = true;
+            this.rbBumpRailNo.Text = "No";
+            this.rbBumpRailNo.UseVisualStyleBackColor = true;
+            // 
+            // rbBumpRailYes
+            // 
+            this.rbBumpRailYes.AutoSize = true;
+            this.rbBumpRailYes.Location = new System.Drawing.Point(6, 28);
+            this.rbBumpRailYes.Name = "rbBumpRailYes";
+            this.rbBumpRailYes.Size = new System.Drawing.Size(60, 28);
+            this.rbBumpRailYes.TabIndex = 0;
+            this.rbBumpRailYes.TabStop = true;
+            this.rbBumpRailYes.Text = "Yes";
+            this.rbBumpRailYes.UseVisualStyleBackColor = true;
+            // 
+            // tbTypeofLift
+            // 
+            this.tbTypeofLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTypeofLift.ForeColor = System.Drawing.Color.Black;
+            this.tbTypeofLift.Location = new System.Drawing.Point(528, 309);
+            this.tbTypeofLift.Margin = new System.Windows.Forms.Padding(2);
+            this.tbTypeofLift.Name = "tbTypeofLift";
+            this.tbTypeofLift.Size = new System.Drawing.Size(236, 32);
+            this.tbTypeofLift.TabIndex = 301;
+            this.tbTypeofLift.Text = "Traction Passenger";
+            this.tbTypeofLift.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox27
+            // 
+            this.groupBox27.Controls.Add(this.rbLEDColourWhite);
+            this.groupBox27.Controls.Add(this.rbLEDColourRed);
+            this.groupBox27.Controls.Add(this.rbLEDColourBlue);
+            this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox27.Location = new System.Drawing.Point(434, 2083);
+            this.groupBox27.Name = "groupBox27";
+            this.groupBox27.Size = new System.Drawing.Size(148, 131);
+            this.groupBox27.TabIndex = 388;
+            this.groupBox27.TabStop = false;
+            this.groupBox27.Text = "LCD Colour";
+            // 
+            // rbLEDColourWhite
+            // 
+            this.rbLEDColourWhite.AutoSize = true;
+            this.rbLEDColourWhite.Location = new System.Drawing.Point(6, 96);
+            this.rbLEDColourWhite.Name = "rbLEDColourWhite";
+            this.rbLEDColourWhite.Size = new System.Drawing.Size(76, 28);
+            this.rbLEDColourWhite.TabIndex = 3;
+            this.rbLEDColourWhite.Text = "White";
+            this.rbLEDColourWhite.UseVisualStyleBackColor = true;
+            // 
+            // rbLEDColourRed
+            // 
+            this.rbLEDColourRed.AutoSize = true;
+            this.rbLEDColourRed.Location = new System.Drawing.Point(6, 28);
+            this.rbLEDColourRed.Name = "rbLEDColourRed";
+            this.rbLEDColourRed.Size = new System.Drawing.Size(63, 28);
+            this.rbLEDColourRed.TabIndex = 2;
+            this.rbLEDColourRed.Text = "Red";
+            this.rbLEDColourRed.UseVisualStyleBackColor = true;
+            // 
+            // rbLEDColourBlue
+            // 
+            this.rbLEDColourBlue.AutoSize = true;
+            this.rbLEDColourBlue.Checked = true;
+            this.rbLEDColourBlue.Location = new System.Drawing.Point(6, 62);
+            this.rbLEDColourBlue.Name = "rbLEDColourBlue";
+            this.rbLEDColourBlue.Size = new System.Drawing.Size(66, 28);
+            this.rbLEDColourBlue.TabIndex = 1;
+            this.rbLEDColourBlue.TabStop = true;
+            this.rbLEDColourBlue.Text = "Blue";
+            this.rbLEDColourBlue.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.tbControlerLocation);
+            this.groupBox6.Controls.Add(this.rbControlerLocationOther);
+            this.groupBox6.Controls.Add(this.rbControlerLocationBottomLanding);
+            this.groupBox6.Controls.Add(this.rbControlerLoactionTopLanding);
+            this.groupBox6.Controls.Add(this.rbControlerlocationShaft);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(581, 478);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(191, 170);
+            this.groupBox6.TabIndex = 339;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Controler Location";
+            // 
+            // tbControlerLocation
+            // 
+            this.tbControlerLocation.Location = new System.Drawing.Point(27, 126);
+            this.tbControlerLocation.Name = "tbControlerLocation";
+            this.tbControlerLocation.Size = new System.Drawing.Size(139, 29);
+            this.tbControlerLocation.TabIndex = 54;
+            // 
+            // rbControlerLocationOther
+            // 
+            this.rbControlerLocationOther.AutoSize = true;
+            this.rbControlerLocationOther.Location = new System.Drawing.Point(7, 135);
+            this.rbControlerLocationOther.Name = "rbControlerLocationOther";
+            this.rbControlerLocationOther.Size = new System.Drawing.Size(14, 13);
+            this.rbControlerLocationOther.TabIndex = 3;
+            this.rbControlerLocationOther.TabStop = true;
+            this.rbControlerLocationOther.UseVisualStyleBackColor = true;
+            // 
+            // rbControlerLocationBottomLanding
+            // 
+            this.rbControlerLocationBottomLanding.AutoSize = true;
+            this.rbControlerLocationBottomLanding.Location = new System.Drawing.Point(7, 96);
+            this.rbControlerLocationBottomLanding.Name = "rbControlerLocationBottomLanding";
+            this.rbControlerLocationBottomLanding.Size = new System.Drawing.Size(159, 28);
+            this.rbControlerLocationBottomLanding.TabIndex = 2;
+            this.rbControlerLocationBottomLanding.TabStop = true;
+            this.rbControlerLocationBottomLanding.Text = "Bottom Landing";
+            this.rbControlerLocationBottomLanding.UseVisualStyleBackColor = true;
+            // 
+            // rbControlerLoactionTopLanding
+            // 
+            this.rbControlerLoactionTopLanding.AutoSize = true;
+            this.rbControlerLoactionTopLanding.Location = new System.Drawing.Point(7, 62);
+            this.rbControlerLoactionTopLanding.Name = "rbControlerLoactionTopLanding";
+            this.rbControlerLoactionTopLanding.Size = new System.Drawing.Size(135, 28);
+            this.rbControlerLoactionTopLanding.TabIndex = 1;
+            this.rbControlerLoactionTopLanding.TabStop = true;
+            this.rbControlerLoactionTopLanding.Text = "Top Landing";
+            this.rbControlerLoactionTopLanding.UseVisualStyleBackColor = true;
+            // 
+            // rbControlerlocationShaft
+            // 
+            this.rbControlerlocationShaft.AutoSize = true;
+            this.rbControlerlocationShaft.Location = new System.Drawing.Point(6, 28);
+            this.rbControlerlocationShaft.Name = "rbControlerlocationShaft";
+            this.rbControlerlocationShaft.Size = new System.Drawing.Size(69, 28);
+            this.rbControlerlocationShaft.TabIndex = 0;
+            this.rbControlerlocationShaft.TabStop = true;
+            this.rbControlerlocationShaft.Text = "Shaft";
+            this.rbControlerlocationShaft.UseVisualStyleBackColor = true;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.tbFloorFinish);
+            this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox16.Location = new System.Drawing.Point(610, 1678);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(253, 72);
+            this.groupBox16.TabIndex = 381;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Floor Finish";
+            // 
+            // tbFloorFinish
+            // 
+            this.tbFloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFloorFinish.ForeColor = System.Drawing.Color.Black;
+            this.tbFloorFinish.Location = new System.Drawing.Point(10, 33);
+            this.tbFloorFinish.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFloorFinish.Name = "tbFloorFinish";
+            this.tbFloorFinish.Size = new System.Drawing.Size(231, 32);
+            this.tbFloorFinish.TabIndex = 75;
+            this.tbFloorFinish.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label95.ForeColor = System.Drawing.Color.Black;
+            this.label95.Location = new System.Drawing.Point(626, 845);
+            this.label95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(195, 26);
+            this.label95.TabIndex = 348;
+            this.label95.Text = "# of Landing Doors";
+            // 
+            // tbDesignations
+            // 
+            this.tbDesignations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDesignations.ForeColor = System.Drawing.Color.Black;
+            this.tbDesignations.Location = new System.Drawing.Point(402, 2025);
+            this.tbDesignations.Margin = new System.Windows.Forms.Padding(2);
+            this.tbDesignations.Name = "tbDesignations";
+            this.tbDesignations.Size = new System.Drawing.Size(433, 32);
+            this.tbDesignations.TabIndex = 324;
+            this.tbDesignations.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbNumofLandingDoors
+            // 
+            this.tbNumofLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumofLandingDoors.ForeColor = System.Drawing.Color.Black;
+            this.tbNumofLandingDoors.Location = new System.Drawing.Point(825, 842);
+            this.tbNumofLandingDoors.Margin = new System.Windows.Forms.Padding(2);
+            this.tbNumofLandingDoors.Name = "tbNumofLandingDoors";
+            this.tbNumofLandingDoors.Size = new System.Drawing.Size(100, 32);
+            this.tbNumofLandingDoors.TabIndex = 309;
+            this.tbNumofLandingDoors.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.tbRearWall);
+            this.groupBox14.Controls.Add(this.rbRearWallOther);
+            this.groupBox14.Controls.Add(this.rbRearWallBrushedStainlessSteel);
+            this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.Location = new System.Drawing.Point(351, 1656);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(253, 98);
+            this.groupBox14.TabIndex = 373;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Rear Wall";
+            // 
+            // tbRearWall
+            // 
+            this.tbRearWall.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRearWall.ForeColor = System.Drawing.Color.Black;
+            this.tbRearWall.Location = new System.Drawing.Point(25, 56);
+            this.tbRearWall.Margin = new System.Windows.Forms.Padding(2);
+            this.tbRearWall.Name = "tbRearWall";
+            this.tbRearWall.Size = new System.Drawing.Size(199, 32);
+            this.tbRearWall.TabIndex = 76;
+            this.tbRearWall.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rbRearWallOther
+            // 
+            this.rbRearWallOther.AutoSize = true;
+            this.rbRearWallOther.Location = new System.Drawing.Point(6, 66);
+            this.rbRearWallOther.Name = "rbRearWallOther";
+            this.rbRearWallOther.Size = new System.Drawing.Size(14, 13);
+            this.rbRearWallOther.TabIndex = 75;
+            this.rbRearWallOther.UseVisualStyleBackColor = true;
+            // 
+            // rbRearWallBrushedStainlessSteel
+            // 
+            this.rbRearWallBrushedStainlessSteel.AutoSize = true;
+            this.rbRearWallBrushedStainlessSteel.Checked = true;
+            this.rbRearWallBrushedStainlessSteel.Location = new System.Drawing.Point(6, 26);
+            this.rbRearWallBrushedStainlessSteel.Name = "rbRearWallBrushedStainlessSteel";
+            this.rbRearWallBrushedStainlessSteel.Size = new System.Drawing.Size(225, 28);
+            this.rbRearWallBrushedStainlessSteel.TabIndex = 1;
+            this.rbRearWallBrushedStainlessSteel.TabStop = true;
+            this.rbRearWallBrushedStainlessSteel.Text = "Brushed Stainless Steel";
+            this.rbRearWallBrushedStainlessSteel.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.tbStructureShaft);
+            this.groupBox8.Controls.Add(this.rbStructureShaftOther);
+            this.groupBox8.Controls.Add(this.rbStructureShaftConcrete);
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox8.Location = new System.Drawing.Point(203, 697);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(166, 102);
+            this.groupBox8.TabIndex = 349;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Structure (Shaft)";
+            // 
+            // tbStructureShaft
+            // 
+            this.tbStructureShaft.Location = new System.Drawing.Point(30, 59);
+            this.tbStructureShaft.Name = "tbStructureShaft";
+            this.tbStructureShaft.Size = new System.Drawing.Size(130, 29);
+            this.tbStructureShaft.TabIndex = 70;
+            // 
+            // rbStructureShaftOther
+            // 
+            this.rbStructureShaftOther.AutoSize = true;
+            this.rbStructureShaftOther.Location = new System.Drawing.Point(6, 68);
+            this.rbStructureShaftOther.Name = "rbStructureShaftOther";
+            this.rbStructureShaftOther.Size = new System.Drawing.Size(14, 13);
+            this.rbStructureShaftOther.TabIndex = 69;
+            this.rbStructureShaftOther.UseVisualStyleBackColor = true;
+            // 
+            // rbStructureShaftConcrete
+            // 
+            this.rbStructureShaftConcrete.AutoSize = true;
+            this.rbStructureShaftConcrete.Checked = true;
+            this.rbStructureShaftConcrete.Location = new System.Drawing.Point(6, 28);
+            this.rbStructureShaftConcrete.Name = "rbStructureShaftConcrete";
+            this.rbStructureShaftConcrete.Size = new System.Drawing.Size(105, 28);
+            this.rbStructureShaftConcrete.TabIndex = 0;
+            this.rbStructureShaftConcrete.TabStop = true;
+            this.rbStructureShaftConcrete.Text = "Concrete";
+            this.rbStructureShaftConcrete.UseVisualStyleBackColor = true;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.rbProtectiveBlanketsNo);
+            this.groupBox15.Controls.Add(this.rbProtectriveBlanketsYes);
+            this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox15.Location = new System.Drawing.Point(610, 1610);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(253, 61);
+            this.groupBox15.TabIndex = 379;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Protective Blankets";
+            // 
+            // rbProtectiveBlanketsNo
+            // 
+            this.rbProtectiveBlanketsNo.AutoSize = true;
+            this.rbProtectiveBlanketsNo.Location = new System.Drawing.Point(72, 28);
+            this.rbProtectiveBlanketsNo.Name = "rbProtectiveBlanketsNo";
+            this.rbProtectiveBlanketsNo.Size = new System.Drawing.Size(53, 28);
+            this.rbProtectiveBlanketsNo.TabIndex = 1;
+            this.rbProtectiveBlanketsNo.TabStop = true;
+            this.rbProtectiveBlanketsNo.Text = "No";
+            this.rbProtectiveBlanketsNo.UseVisualStyleBackColor = true;
+            // 
+            // rbProtectriveBlanketsYes
+            // 
+            this.rbProtectriveBlanketsYes.AutoSize = true;
+            this.rbProtectriveBlanketsYes.Location = new System.Drawing.Point(6, 28);
+            this.rbProtectriveBlanketsYes.Name = "rbProtectriveBlanketsYes";
+            this.rbProtectriveBlanketsYes.Size = new System.Drawing.Size(60, 28);
+            this.rbProtectriveBlanketsYes.TabIndex = 0;
+            this.rbProtectriveBlanketsYes.TabStop = true;
+            this.rbProtectriveBlanketsYes.Text = "Yes";
+            this.rbProtectriveBlanketsYes.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.rbTrimmerBeamsNo);
+            this.groupBox7.Controls.Add(this.rbTrimmerBeamsYes);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(375, 697);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(166, 63);
+            this.groupBox7.TabIndex = 350;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Trimmer Beams";
+            // 
+            // rbTrimmerBeamsNo
+            // 
+            this.rbTrimmerBeamsNo.AutoSize = true;
+            this.rbTrimmerBeamsNo.Location = new System.Drawing.Point(72, 28);
+            this.rbTrimmerBeamsNo.Name = "rbTrimmerBeamsNo";
+            this.rbTrimmerBeamsNo.Size = new System.Drawing.Size(53, 28);
+            this.rbTrimmerBeamsNo.TabIndex = 1;
+            this.rbTrimmerBeamsNo.TabStop = true;
+            this.rbTrimmerBeamsNo.Text = "No";
+            this.rbTrimmerBeamsNo.UseVisualStyleBackColor = true;
+            // 
+            // rbTrimmerBeamsYes
+            // 
+            this.rbTrimmerBeamsYes.AutoSize = true;
+            this.rbTrimmerBeamsYes.Location = new System.Drawing.Point(6, 28);
+            this.rbTrimmerBeamsYes.Name = "rbTrimmerBeamsYes";
+            this.rbTrimmerBeamsYes.Size = new System.Drawing.Size(60, 28);
+            this.rbTrimmerBeamsYes.TabIndex = 0;
+            this.rbTrimmerBeamsYes.TabStop = true;
+            this.rbTrimmerBeamsYes.Text = "Yes";
+            this.rbTrimmerBeamsYes.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.rbFalseFloorNo);
+            this.groupBox5.Controls.Add(this.rbFalseFloorYes);
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(547, 697);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(166, 63);
+            this.groupBox5.TabIndex = 351;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "False Floor";
+            // 
+            // rbFalseFloorNo
+            // 
+            this.rbFalseFloorNo.AutoSize = true;
+            this.rbFalseFloorNo.Checked = true;
+            this.rbFalseFloorNo.Location = new System.Drawing.Point(72, 28);
+            this.rbFalseFloorNo.Name = "rbFalseFloorNo";
+            this.rbFalseFloorNo.Size = new System.Drawing.Size(53, 28);
+            this.rbFalseFloorNo.TabIndex = 1;
+            this.rbFalseFloorNo.TabStop = true;
+            this.rbFalseFloorNo.Text = "No";
+            this.rbFalseFloorNo.UseVisualStyleBackColor = true;
+            // 
+            // rbFalseFloorYes
+            // 
+            this.rbFalseFloorYes.AutoSize = true;
+            this.rbFalseFloorYes.Location = new System.Drawing.Point(6, 28);
+            this.rbFalseFloorYes.Name = "rbFalseFloorYes";
+            this.rbFalseFloorYes.Size = new System.Drawing.Size(60, 28);
+            this.rbFalseFloorYes.TabIndex = 0;
+            this.rbFalseFloorYes.Text = "Yes";
+            this.rbFalseFloorYes.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.rbDoorNudgingNo);
+            this.groupBox9.Controls.Add(this.rbDoorNudgingYes);
+            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.Location = new System.Drawing.Point(608, 1177);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(191, 60);
+            this.groupBox9.TabIndex = 368;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Door Nudging";
+            // 
+            // rbDoorNudgingNo
+            // 
+            this.rbDoorNudgingNo.AutoSize = true;
+            this.rbDoorNudgingNo.Checked = true;
+            this.rbDoorNudgingNo.Location = new System.Drawing.Point(72, 28);
+            this.rbDoorNudgingNo.Name = "rbDoorNudgingNo";
+            this.rbDoorNudgingNo.Size = new System.Drawing.Size(53, 28);
+            this.rbDoorNudgingNo.TabIndex = 1;
+            this.rbDoorNudgingNo.TabStop = true;
+            this.rbDoorNudgingNo.Text = "No";
+            this.rbDoorNudgingNo.UseVisualStyleBackColor = true;
+            // 
+            // rbDoorNudgingYes
+            // 
+            this.rbDoorNudgingYes.AutoSize = true;
+            this.rbDoorNudgingYes.Location = new System.Drawing.Point(6, 28);
+            this.rbDoorNudgingYes.Name = "rbDoorNudgingYes";
+            this.rbDoorNudgingYes.Size = new System.Drawing.Size(60, 28);
+            this.rbDoorNudgingYes.TabIndex = 0;
+            this.rbDoorNudgingYes.Text = "Yes";
+            this.rbDoorNudgingYes.UseVisualStyleBackColor = true;
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label96.ForeColor = System.Drawing.Color.Black;
+            this.label96.Location = new System.Drawing.Point(657, 1005);
+            this.label96.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(128, 26);
+            this.label96.TabIndex = 357;
+            this.label96.Text = "Depth (mm)";
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label97.ForeColor = System.Drawing.Color.Black;
+            this.label97.Location = new System.Drawing.Point(18, 1066);
+            this.label97.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(58, 26);
+            this.label97.TabIndex = 360;
+            this.label97.Text = "Note";
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.ForeColor = System.Drawing.Color.Black;
+            this.label98.Location = new System.Drawing.Point(384, 1004);
+            this.label98.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(137, 26);
+            this.label98.TabIndex = 355;
+            this.label98.Text = "Speed (mps)";
+            // 
+            // tbLiftCarNotes
+            // 
+            this.tbLiftCarNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLiftCarNotes.ForeColor = System.Drawing.Color.Black;
+            this.tbLiftCarNotes.Location = new System.Drawing.Point(82, 1048);
+            this.tbLiftCarNotes.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLiftCarNotes.Multiline = true;
+            this.tbLiftCarNotes.Name = "tbLiftCarNotes";
+            this.tbLiftCarNotes.Size = new System.Drawing.Size(563, 67);
+            this.tbLiftCarNotes.TabIndex = 317;
+            this.tbLiftCarNotes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.ForeColor = System.Drawing.Color.Black;
+            this.label99.Location = new System.Drawing.Point(443, 929);
+            this.label99.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(90, 26);
+            this.label99.TabIndex = 352;
+            this.label99.Text = "Lift Car";
+            // 
+            // tbNumofCarEntrances
+            // 
+            this.tbNumofCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumofCarEntrances.ForeColor = System.Drawing.Color.Black;
+            this.tbNumofCarEntrances.Location = new System.Drawing.Point(258, 1001);
+            this.tbNumofCarEntrances.Margin = new System.Windows.Forms.Padding(2);
+            this.tbNumofCarEntrances.Name = "tbNumofCarEntrances";
+            this.tbNumofCarEntrances.Size = new System.Drawing.Size(125, 32);
+            this.tbNumofCarEntrances.TabIndex = 316;
+            this.tbNumofCarEntrances.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.ForeColor = System.Drawing.Color.Black;
+            this.label100.Location = new System.Drawing.Point(14, 967);
+            this.label100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(242, 26);
+            this.label100.TabIndex = 353;
+            this.label100.Text = "Lift Rating (passengers)";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.ForeColor = System.Drawing.Color.Black;
+            this.label101.Location = new System.Drawing.Point(61, 1004);
+            this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(193, 26);
+            this.label101.TabIndex = 359;
+            this.label101.Text = "# of Car Entrances";
+            // 
+            // tbLiftRating
+            // 
+            this.tbLiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLiftRating.ForeColor = System.Drawing.Color.Black;
+            this.tbLiftRating.Location = new System.Drawing.Point(258, 963);
+            this.tbLiftRating.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLiftRating.Name = "tbLiftRating";
+            this.tbLiftRating.Size = new System.Drawing.Size(125, 32);
+            this.tbLiftRating.TabIndex = 315;
+            this.tbLiftRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbwidth
+            // 
+            this.tbwidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbwidth.ForeColor = System.Drawing.Color.Black;
+            this.tbwidth.Location = new System.Drawing.Point(784, 971);
+            this.tbwidth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbwidth.Name = "tbwidth";
+            this.tbwidth.Size = new System.Drawing.Size(117, 32);
+            this.tbwidth.TabIndex = 312;
+            this.tbwidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label102.ForeColor = System.Drawing.Color.Black;
+            this.label102.Location = new System.Drawing.Point(409, 969);
+            this.label102.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(103, 26);
+            this.label102.TabIndex = 354;
+            this.label102.Text = "Load (kg)";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label103.ForeColor = System.Drawing.Color.Black;
+            this.label103.Location = new System.Drawing.Point(652, 1042);
+            this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(133, 26);
+            this.label103.TabIndex = 358;
+            this.label103.Text = "Height (mm)";
+            // 
+            // tbLoad
+            // 
+            this.tbLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLoad.ForeColor = System.Drawing.Color.Black;
+            this.tbLoad.Location = new System.Drawing.Point(525, 969);
+            this.tbLoad.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLoad.Name = "tbLoad";
+            this.tbLoad.Size = new System.Drawing.Size(117, 32);
+            this.tbLoad.TabIndex = 310;
+            this.tbLoad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbHeight
+            // 
+            this.tbHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHeight.ForeColor = System.Drawing.Color.Black;
+            this.tbHeight.Location = new System.Drawing.Point(784, 1042);
+            this.tbHeight.Margin = new System.Windows.Forms.Padding(2);
+            this.tbHeight.Name = "tbHeight";
+            this.tbHeight.Size = new System.Drawing.Size(117, 32);
+            this.tbHeight.TabIndex = 314;
+            this.tbHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbSpeed
+            // 
+            this.tbSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSpeed.ForeColor = System.Drawing.Color.Black;
+            this.tbSpeed.Location = new System.Drawing.Point(525, 1004);
+            this.tbSpeed.Margin = new System.Windows.Forms.Padding(2);
+            this.tbSpeed.Name = "tbSpeed";
+            this.tbSpeed.Size = new System.Drawing.Size(117, 32);
+            this.tbSpeed.TabIndex = 311;
+            this.tbSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbDepth
+            // 
+            this.tbDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDepth.ForeColor = System.Drawing.Color.Black;
+            this.tbDepth.Location = new System.Drawing.Point(784, 1007);
+            this.tbDepth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbDepth.Name = "tbDepth";
+            this.tbDepth.Size = new System.Drawing.Size(117, 32);
+            this.tbDepth.TabIndex = 313;
+            this.tbDepth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.rbDoorTypeSideOpening);
+            this.groupBox13.Controls.Add(this.rbDoorTypeCentreOpening);
+            this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.Location = new System.Drawing.Point(101, 1252);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(262, 94);
+            this.groupBox13.TabIndex = 362;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Door Type";
+            // 
+            // rbDoorTypeSideOpening
+            // 
+            this.rbDoorTypeSideOpening.AutoSize = true;
+            this.rbDoorTypeSideOpening.Location = new System.Drawing.Point(6, 60);
+            this.rbDoorTypeSideOpening.Name = "rbDoorTypeSideOpening";
+            this.rbDoorTypeSideOpening.Size = new System.Drawing.Size(232, 28);
+            this.rbDoorTypeSideOpening.TabIndex = 2;
+            this.rbDoorTypeSideOpening.Text = "2 Panels / Side Opening";
+            this.rbDoorTypeSideOpening.UseVisualStyleBackColor = true;
+            // 
+            // rbDoorTypeCentreOpening
+            // 
+            this.rbDoorTypeCentreOpening.AutoSize = true;
+            this.rbDoorTypeCentreOpening.Checked = true;
+            this.rbDoorTypeCentreOpening.Location = new System.Drawing.Point(6, 28);
+            this.rbDoorTypeCentreOpening.Name = "rbDoorTypeCentreOpening";
+            this.rbDoorTypeCentreOpening.Size = new System.Drawing.Size(250, 28);
+            this.rbDoorTypeCentreOpening.TabIndex = 1;
+            this.rbDoorTypeCentreOpening.TabStop = true;
+            this.rbDoorTypeCentreOpening.Text = "2 Panels / Centre Opening";
+            this.rbDoorTypeCentreOpening.UseVisualStyleBackColor = true;
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label104.ForeColor = System.Drawing.Color.Black;
+            this.label104.Location = new System.Drawing.Point(660, 969);
+            this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(126, 26);
+            this.label104.TabIndex = 356;
+            this.label104.Text = "Width (mm)";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.tbDoorTracks);
+            this.groupBox12.Controls.Add(this.rbDoorTracksOther);
+            this.groupBox12.Controls.Add(this.rbDoorTracksAnodisedAluminium);
+            this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox12.Location = new System.Drawing.Point(619, 1252);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(219, 95);
+            this.groupBox12.TabIndex = 364;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Door Tracks";
+            // 
+            // tbDoorTracks
+            // 
+            this.tbDoorTracks.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDoorTracks.ForeColor = System.Drawing.Color.Black;
+            this.tbDoorTracks.Location = new System.Drawing.Point(25, 56);
+            this.tbDoorTracks.Margin = new System.Windows.Forms.Padding(2);
+            this.tbDoorTracks.Name = "tbDoorTracks";
+            this.tbDoorTracks.Size = new System.Drawing.Size(188, 32);
+            this.tbDoorTracks.TabIndex = 82;
+            this.tbDoorTracks.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rbDoorTracksOther
+            // 
+            this.rbDoorTracksOther.AutoSize = true;
+            this.rbDoorTracksOther.Location = new System.Drawing.Point(6, 67);
+            this.rbDoorTracksOther.Name = "rbDoorTracksOther";
+            this.rbDoorTracksOther.Size = new System.Drawing.Size(14, 13);
+            this.rbDoorTracksOther.TabIndex = 81;
+            this.rbDoorTracksOther.UseVisualStyleBackColor = true;
+            // 
+            // rbDoorTracksAnodisedAluminium
+            // 
+            this.rbDoorTracksAnodisedAluminium.AutoSize = true;
+            this.rbDoorTracksAnodisedAluminium.Checked = true;
+            this.rbDoorTracksAnodisedAluminium.Location = new System.Drawing.Point(6, 26);
+            this.rbDoorTracksAnodisedAluminium.Name = "rbDoorTracksAnodisedAluminium";
+            this.rbDoorTracksAnodisedAluminium.Size = new System.Drawing.Size(204, 28);
+            this.rbDoorTracksAnodisedAluminium.TabIndex = 1;
+            this.rbDoorTracksAnodisedAluminium.TabStop = true;
+            this.rbDoorTracksAnodisedAluminium.Text = "Anodised Aluminium";
+            this.rbDoorTracksAnodisedAluminium.UseVisualStyleBackColor = true;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.tbLandingDoorFinish);
+            this.groupBox10.Controls.Add(this.rbLandingDoorFinishOther);
+            this.groupBox10.Controls.Add(this.rbLandingDoorFinishStainlessSteel);
+            this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox10.Location = new System.Drawing.Point(369, 1252);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(244, 95);
+            this.groupBox10.TabIndex = 363;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Landing Door Finish";
+            // 
+            // tbLandingDoorFinish
+            // 
+            this.tbLandingDoorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLandingDoorFinish.ForeColor = System.Drawing.Color.Black;
+            this.tbLandingDoorFinish.Location = new System.Drawing.Point(25, 59);
+            this.tbLandingDoorFinish.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLandingDoorFinish.Name = "tbLandingDoorFinish";
+            this.tbLandingDoorFinish.Size = new System.Drawing.Size(188, 32);
+            this.tbLandingDoorFinish.TabIndex = 80;
+            this.tbLandingDoorFinish.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rbLandingDoorFinishOther
+            // 
+            this.rbLandingDoorFinishOther.AutoSize = true;
+            this.rbLandingDoorFinishOther.Location = new System.Drawing.Point(6, 70);
+            this.rbLandingDoorFinishOther.Name = "rbLandingDoorFinishOther";
+            this.rbLandingDoorFinishOther.Size = new System.Drawing.Size(14, 13);
+            this.rbLandingDoorFinishOther.TabIndex = 2;
+            this.rbLandingDoorFinishOther.UseVisualStyleBackColor = true;
+            // 
+            // rbLandingDoorFinishStainlessSteel
+            // 
+            this.rbLandingDoorFinishStainlessSteel.AutoSize = true;
+            this.rbLandingDoorFinishStainlessSteel.Checked = true;
+            this.rbLandingDoorFinishStainlessSteel.Location = new System.Drawing.Point(6, 26);
+            this.rbLandingDoorFinishStainlessSteel.Name = "rbLandingDoorFinishStainlessSteel";
+            this.rbLandingDoorFinishStainlessSteel.Size = new System.Drawing.Size(225, 28);
+            this.rbLandingDoorFinishStainlessSteel.TabIndex = 1;
+            this.rbLandingDoorFinishStainlessSteel.TabStop = true;
+            this.rbLandingDoorFinishStainlessSteel.Text = "Brushed Stainless Steel";
+            this.rbLandingDoorFinishStainlessSteel.UseVisualStyleBackColor = true;
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.ForeColor = System.Drawing.Color.Black;
+            this.label105.Location = new System.Drawing.Point(140, 1180);
+            this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(179, 26);
+            this.label105.TabIndex = 365;
+            this.label105.Text = "Door Width (mm)";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.rbAdvancedOpeningNo);
+            this.groupBox11.Controls.Add(this.rbAdvancedOpeningYes);
+            this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox11.Location = new System.Drawing.Point(413, 1177);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(189, 60);
+            this.groupBox11.TabIndex = 367;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Advanced Opening";
+            // 
+            // rbAdvancedOpeningNo
+            // 
+            this.rbAdvancedOpeningNo.AutoSize = true;
+            this.rbAdvancedOpeningNo.Location = new System.Drawing.Point(72, 28);
+            this.rbAdvancedOpeningNo.Name = "rbAdvancedOpeningNo";
+            this.rbAdvancedOpeningNo.Size = new System.Drawing.Size(53, 28);
+            this.rbAdvancedOpeningNo.TabIndex = 1;
+            this.rbAdvancedOpeningNo.TabStop = true;
+            this.rbAdvancedOpeningNo.Text = "No";
+            this.rbAdvancedOpeningNo.UseVisualStyleBackColor = true;
+            // 
+            // rbAdvancedOpeningYes
+            // 
+            this.rbAdvancedOpeningYes.AutoSize = true;
+            this.rbAdvancedOpeningYes.Location = new System.Drawing.Point(6, 28);
+            this.rbAdvancedOpeningYes.Name = "rbAdvancedOpeningYes";
+            this.rbAdvancedOpeningYes.Size = new System.Drawing.Size(60, 28);
+            this.rbAdvancedOpeningYes.TabIndex = 0;
+            this.rbAdvancedOpeningYes.TabStop = true;
+            this.rbAdvancedOpeningYes.Text = "Yes";
+            this.rbAdvancedOpeningYes.UseVisualStyleBackColor = true;
+            // 
+            // tbDoorWidth
+            // 
+            this.tbDoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDoorWidth.ForeColor = System.Drawing.Color.Black;
+            this.tbDoorWidth.Location = new System.Drawing.Point(320, 1177);
+            this.tbDoorWidth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbDoorWidth.Name = "tbDoorWidth";
+            this.tbDoorWidth.Size = new System.Drawing.Size(81, 32);
+            this.tbDoorWidth.TabIndex = 318;
+            this.tbDoorWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbDoorHeight
+            // 
+            this.tbDoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDoorHeight.ForeColor = System.Drawing.Color.Black;
+            this.tbDoorHeight.Location = new System.Drawing.Point(320, 1212);
+            this.tbDoorHeight.Margin = new System.Windows.Forms.Padding(2);
+            this.tbDoorHeight.Name = "tbDoorHeight";
+            this.tbDoorHeight.Size = new System.Drawing.Size(81, 32);
+            this.tbDoorHeight.TabIndex = 319;
+            this.tbDoorHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label106.ForeColor = System.Drawing.Color.Black;
+            this.label106.Location = new System.Drawing.Point(140, 1212);
+            this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(186, 26);
+            this.label106.TabIndex = 366;
+            this.label106.Text = "Door Height (mm)";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(825, 354);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 406;
+            this.button4.Text = "DEBUG";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
             // Pin_Dif_Calc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(2171, 1178);
+            this.ClientSize = new System.Drawing.Size(2479, 1216);
+            this.Controls.Add(this.panelLift1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelCalcButtons);
             this.Controls.Add(this.lbWait);
@@ -2644,6 +5461,81 @@
             this.panelAdditionalCosts.ResumeLayout(false);
             this.panelAdditionalCosts.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panelLift1.ResumeLayout(false);
+            this.panelLift1.PerformLayout();
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox26.PerformLayout();
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox22.PerformLayout();
+            this.groupBox23.ResumeLayout(false);
+            this.groupBox23.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox24.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox25.ResumeLayout(false);
+            this.groupBox25.PerformLayout();
+            this.groupBox35.ResumeLayout(false);
+            this.groupBox35.PerformLayout();
+            this.groupBox36.ResumeLayout(false);
+            this.groupBox36.PerformLayout();
+            this.groupBox34.ResumeLayout(false);
+            this.groupBox34.PerformLayout();
+            this.groupBox31.ResumeLayout(false);
+            this.groupBox31.PerformLayout();
+            this.groupBox32.ResumeLayout(false);
+            this.groupBox32.PerformLayout();
+            this.groupBox30.ResumeLayout(false);
+            this.groupBox30.PerformLayout();
+            this.groupBox33.ResumeLayout(false);
+            this.groupBox33.PerformLayout();
+            this.groupBox29.ResumeLayout(false);
+            this.groupBox29.PerformLayout();
+            this.groupBox28.ResumeLayout(false);
+            this.groupBox28.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox27.ResumeLayout(false);
+            this.groupBox27.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2835,5 +5727,220 @@
         public System.Windows.Forms.Label label48;
         public System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.TextBox tbMinorPriceAdjustment;
+        public System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btPanel1;
+        private System.Windows.Forms.Button btNewPanel;
+        private System.Windows.Forms.Button btPanel12;
+        private System.Windows.Forms.Button btPanel2;
+        private System.Windows.Forms.Button btPanel11;
+        private System.Windows.Forms.Button btPanel3;
+        private System.Windows.Forms.Button btPanel10;
+        private System.Windows.Forms.Button btPanel4;
+        private System.Windows.Forms.Button btPanel9;
+        private System.Windows.Forms.Button btPanel5;
+        private System.Windows.Forms.Button btPanel8;
+        private System.Windows.Forms.Button btPanel6;
+        private System.Windows.Forms.Button btPanel7;
+        private System.Windows.Forms.Panel panelLift1;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.GroupBox groupBox26;
+        private System.Windows.Forms.RadioButton rbPositionIndicatorTypeSurfaceMount;
+        private System.Windows.Forms.RadioButton rbPositionIndicatorTypeFlushMount;
+        private System.Windows.Forms.TextBox tbShaftWidth;
+        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.RadioButton rbFalseCeilingNo;
+        private System.Windows.Forms.RadioButton rbFalseCeilingYes;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rbLoadWeighingNo;
+        private System.Windows.Forms.RadioButton rbLoadWeighingYes;
+        private System.Windows.Forms.GroupBox groupBox22;
+        private System.Windows.Forms.RadioButton rbCeilingFinishMirrorStainlessSteel;
+        private System.Windows.Forms.RadioButton rbCeilingFinishWhite;
+        private System.Windows.Forms.TextBox tbCeilingFinish;
+        private System.Windows.Forms.RadioButton rbCeilingFinishOther;
+        private System.Windows.Forms.RadioButton rbCeilingFinishBrushedStasinlessSteel;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.GroupBox groupBox23;
+        private System.Windows.Forms.TextBox tbSideWall;
+        private System.Windows.Forms.RadioButton rbSideWallOther;
+        private System.Windows.Forms.RadioButton rbSideWallBrushedStainlessSteel;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton rbIndependentServiceNo;
+        private System.Windows.Forms.RadioButton rbIndependentServiceYes;
+        private System.Windows.Forms.GroupBox groupBox24;
+        private System.Windows.Forms.TextBox tbFrontWall;
+        private System.Windows.Forms.RadioButton tbFrontWallOther;
+        private System.Windows.Forms.RadioButton rbFrontWallBrushedStainlessSteel;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rbFireServiceNo;
+        private System.Windows.Forms.RadioButton rbFireServiceYes;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.GroupBox groupBox25;
+        private System.Windows.Forms.TextBox tbCarDoorFinish;
+        private System.Windows.Forms.RadioButton rbCarDoorFinishOther;
+        private System.Windows.Forms.RadioButton rbCarDoorFInishBrushedStainlessSteel;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.TextBox tbShaftDepth;
+        private System.Windows.Forms.TextBox tbAuxCOPLocation;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.TextBox tbPitDepth;
+        private System.Windows.Forms.TextBox tbMainCOPLocation;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.TextBox tbHeadroom;
+        private System.Windows.Forms.TextBox tbNumberOfCOPS;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.TextBox tbTravel;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.GroupBox groupBox35;
+        private System.Windows.Forms.RadioButton rbOutofServiceNo;
+        private System.Windows.Forms.RadioButton rbOutofServiceYes;
+        private System.Windows.Forms.TextBox tbNumofLandings;
+        private System.Windows.Forms.GroupBox groupBox36;
+        private System.Windows.Forms.RadioButton rbEmergencyLoweringSystemNo;
+        private System.Windows.Forms.RadioButton rbEmergencyLoweringSystemYes;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.GroupBox groupBox34;
+        private System.Windows.Forms.RadioButton rbFacePlateMaterialOther;
+        private System.Windows.Forms.TextBox tbFacePlateMaterial;
+        private System.Windows.Forms.RadioButton rbFacePlateMaterialSatinStainlessSteel;
+        private System.Windows.Forms.TextBox tbfname;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.TextBox tbphone;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.GroupBox groupBox31;
+        private System.Windows.Forms.RadioButton rbVoiceAnnunciationNo;
+        private System.Windows.Forms.RadioButton rbVoiceAnnunciationYes;
+        private System.Windows.Forms.TextBox tblname;
+        private System.Windows.Forms.GroupBox groupBox32;
+        private System.Windows.Forms.RadioButton rbSecurityKeySwitchNo;
+        private System.Windows.Forms.RadioButton rbSecurityKeySwitchYes;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.GroupBox groupBox30;
+        private System.Windows.Forms.RadioButton rbRearDoorKeySwitchNo;
+        private System.Windows.Forms.RadioButton rbRearDoorKeySwitchYes;
+        private System.Windows.Forms.TextBox tbAddress1;
+        private System.Windows.Forms.GroupBox groupBox33;
+        private System.Windows.Forms.RadioButton rbExclusiveServiceNo;
+        private System.Windows.Forms.RadioButton rbExclusiveServiceYes;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.GroupBox groupBox29;
+        private System.Windows.Forms.RadioButton rbGPOInCarNo;
+        private System.Windows.Forms.RadioButton rbGPOInCarYes;
+        private System.Windows.Forms.TextBox tbAddress2;
+        private System.Windows.Forms.TextBox tbKeyswitchLocation;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.TextBox tbAddress3;
+        private System.Windows.Forms.GroupBox groupBox28;
+        private System.Windows.Forms.TextBox tbCOPFinish;
+        private System.Windows.Forms.RadioButton rbCOPFinishOther;
+        private System.Windows.Forms.RadioButton rbCOPFinishSatinStainlessSteel;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbSumasa;
+        private System.Windows.Forms.RadioButton rbSL;
+        private System.Windows.Forms.RadioButton rbWittur;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.TextBox tbHandrail;
+        private System.Windows.Forms.RadioButton rbHandrailBrushedStainlessSTeel;
+        private System.Windows.Forms.RadioButton rbHandrailOther;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.TextBox tbNumOfLEDLights;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.TextBox tbMirror;
+        private System.Windows.Forms.RadioButton rbMirrorOther;
+        private System.Windows.Forms.RadioButton rbMirrorHalfSize;
+        private System.Windows.Forms.RadioButton rbMirrorFullSize;
+        private System.Windows.Forms.TextBox tbLiftNumbers;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.RadioButton rbBumpRailNo;
+        private System.Windows.Forms.RadioButton rbBumpRailYes;
+        private System.Windows.Forms.TextBox tbTypeofLift;
+        private System.Windows.Forms.GroupBox groupBox27;
+        private System.Windows.Forms.RadioButton rbLEDColourWhite;
+        private System.Windows.Forms.RadioButton rbLEDColourRed;
+        private System.Windows.Forms.RadioButton rbLEDColourBlue;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox tbControlerLocation;
+        private System.Windows.Forms.RadioButton rbControlerLocationOther;
+        private System.Windows.Forms.RadioButton rbControlerLocationBottomLanding;
+        private System.Windows.Forms.RadioButton rbControlerLoactionTopLanding;
+        private System.Windows.Forms.RadioButton rbControlerlocationShaft;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.TextBox tbFloorFinish;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.TextBox tbDesignations;
+        private System.Windows.Forms.TextBox tbNumofLandingDoors;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.TextBox tbRearWall;
+        private System.Windows.Forms.RadioButton rbRearWallOther;
+        private System.Windows.Forms.RadioButton rbRearWallBrushedStainlessSteel;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox tbStructureShaft;
+        private System.Windows.Forms.RadioButton rbStructureShaftOther;
+        private System.Windows.Forms.RadioButton rbStructureShaftConcrete;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.RadioButton rbProtectiveBlanketsNo;
+        private System.Windows.Forms.RadioButton rbProtectriveBlanketsYes;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.RadioButton rbTrimmerBeamsNo;
+        private System.Windows.Forms.RadioButton rbTrimmerBeamsYes;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton rbFalseFloorNo;
+        private System.Windows.Forms.RadioButton rbFalseFloorYes;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.RadioButton rbDoorNudgingNo;
+        private System.Windows.Forms.RadioButton rbDoorNudgingYes;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.TextBox tbLiftCarNotes;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.TextBox tbNumofCarEntrances;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.TextBox tbLiftRating;
+        private System.Windows.Forms.TextBox tbwidth;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.TextBox tbLoad;
+        private System.Windows.Forms.TextBox tbHeight;
+        private System.Windows.Forms.TextBox tbSpeed;
+        private System.Windows.Forms.TextBox tbDepth;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.RadioButton rbDoorTypeSideOpening;
+        private System.Windows.Forms.RadioButton rbDoorTypeCentreOpening;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.TextBox tbDoorTracks;
+        private System.Windows.Forms.RadioButton rbDoorTracksOther;
+        private System.Windows.Forms.RadioButton rbDoorTracksAnodisedAluminium;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.TextBox tbLandingDoorFinish;
+        private System.Windows.Forms.RadioButton rbLandingDoorFinishOther;
+        private System.Windows.Forms.RadioButton rbLandingDoorFinishStainlessSteel;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.RadioButton rbAdvancedOpeningNo;
+        private System.Windows.Forms.RadioButton rbAdvancedOpeningYes;
+        private System.Windows.Forms.TextBox tbDoorWidth;
+        private System.Windows.Forms.TextBox tbDoorHeight;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -10,6 +10,7 @@ namespace SQT
 {
     public partial class MainMenu : Form
     {
+        #region VARS
         private readonly string passWord = "LiftFix";
         AdminPanel adminPanel = new AdminPanel();
         public string exchangeRateDate;
@@ -21,10 +22,15 @@ namespace SQT
         public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
         public Dictionary<string, string> exchangeRateURL = new Dictionary<string, string>();
 
+        #endregion
+
+        #region Loading Methods
         public MainMenu()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region Admin Menu
         private void btSQAT_Click(object sender, EventArgs e)
@@ -46,7 +52,7 @@ namespace SQT
         }
         #endregion
 
-        // Load quote tool
+        #region Opening Quote Calculator
         private void btPinDiff_Click(object sender, EventArgs e)
         {
             btPinDiff.Enabled = false;
@@ -96,76 +102,39 @@ namespace SQT
             progressBar1.Value = progressBar1.Value + stepValue;
         }
 
+        #endregion
+
+        #region Exchange Rate Methods
         private void CurrencyRates()
         {
             if (networkConnected)
             {
                 //grab rates from website
-                FetchCurrencyRates();
+               FetchCurrencyRates();
                 LoadStoredCurrencyRates();
             }
             else
             {
                 LoadStoredCurrencyRates();
             }
+
+            CheckCurrencyDate();
         }
 
-        #region Network Conectivity 
-        private void NetworkAccess()
+        private void CheckCurrencyDate()
         {
-            networkConnected = NetworkCheck();
-            if (networkConnected)
+            DateTime dT = Convert.ToDateTime(exchangeRateDate);
+            TimeSpan tS = DateTime.Now - dT;
+
+            if (tS.Days >= 7)
             {
-                //MessageBox.Show("NETWORK SUCCESS");
-                lbTitleText.Text = "Network Connected";
+                MessageBox.Show("Warning, the exchange rates being used are over 7 days old. Please connect to the internet to refresh");
             }
-            else if (!networkConnected)
+            else if (tS.Days < 7)
             {
-                lbTitleText.Text = "Network NOT Connected";
+                MessageBox.Show("Exchange Rate OK");
             }
         }
-
-        private bool NetworkCheck()
-        {
-            var hostUrl = "www.floatrates.com";
-
-            Ping ping = new Ping();
-
-            PingReply result = ping.Send(hostUrl);
-            return result.Status == IPStatus.Success;
-        }
-        #endregion
-
-        #region XML Functions
-        //find the quote price list list from the file in the server and write them into the base prices dictionary 
-        private void FetchBasePrices()
-        {
-            string dKey = "";
-            float dName = -1;
-
-            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\QuotePriceList.xml");
-            while (XMLR.Read())
-            {
-                if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "costItem")
-                {
-                    dKey = XMLR.ReadElementContentAsString();
-                }
-                else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "price")
-                {
-                    dName = float.Parse(XMLR.ReadElementContentAsString());
-                }
-
-                if (dKey != "" && dName != -1)
-                {
-                    basePrices.Add(dKey, dName);
-                    dKey = "";
-                    dName = -1;
-                }
-            }
-
-            XMLR.Close();
-        }
-
         private void FetchExchangeRateURL()
         {
             string dKey = "";
@@ -283,6 +252,63 @@ namespace SQT
             XMLR.Close();
         }
 
+        #endregion
+
+        #region Network Conectivity 
+        private void NetworkAccess()
+        {
+            networkConnected = NetworkCheck();
+            if (networkConnected)
+            {
+                //MessageBox.Show("NETWORK SUCCESS");
+                lbTitleText.Text = "Network Connected";
+            }
+            else if (!networkConnected)
+            {
+                lbTitleText.Text = "Network NOT Connected";
+            }
+        }
+
+        private bool NetworkCheck()
+        {
+            var hostUrl = "www.accesselevators.com.au";
+
+            Ping ping = new Ping();
+
+            PingReply result = ping.Send(hostUrl);
+            return result.Status == IPStatus.Success;
+        }
+        #endregion
+
+        #region XML Functions
+        //find the quote price list list from the file in the server and write them into the base prices dictionary 
+        private void FetchBasePrices()
+        {
+            string dKey = "";
+            float dName = -1;
+
+            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\QuotePriceList.xml");
+            while (XMLR.Read())
+            {
+                if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "costItem")
+                {
+                    dKey = XMLR.ReadElementContentAsString();
+                }
+                else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "price")
+                {
+                    dName = float.Parse(XMLR.ReadElementContentAsString());
+                }
+
+                if (dKey != "" && dName != -1)
+                {
+                    basePrices.Add(dKey, dName);
+                    dKey = "";
+                    dName = -1;
+                }
+            }
+
+            XMLR.Close();
+        }
 
         //find the labour costs from the file int he server and write them into the labour prices dictionary 
         private void FetchLabourPrices()
