@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Windows.Forms;
@@ -16,6 +17,7 @@ namespace SQT
         public string exchangeRateDate;
         public int maxFloorNumber;
         public bool networkConnected;
+        public bool internetConnected;
 
         public Dictionary<string, float> basePrices = new Dictionary<string, float>();
         public Dictionary<int, float> labourPrice = new Dictionary<int, float>();
@@ -63,16 +65,17 @@ namespace SQT
             //check if software can connect to the network
             lbTitleText.Text = "Checking Network Conectivity";
             NetworkAccess();
-            ProgressBarStep();
-
-            //load up the calculator form
-            lbTitleText.Text = "Loading Calculator";
-            Pin_Dif_Calc fPinDif = new Pin_Dif_Calc();
+            if(!networkConnected || !internetConnected) { return; };
             ProgressBarStep();
 
             //fetch the base prices for the calculator from the XML file
             lbTitleText.Text = "Fetching Base Prices";
             FetchBasePrices();
+            ProgressBarStep();
+
+            //fetch the labour prices from the XML file
+            lbTitleText.Text = "Fetching Labour Rates";
+            FetchLabourPrices();
             ProgressBarStep();
 
             //fetch the URL for exchange rates from the XML file
@@ -85,9 +88,15 @@ namespace SQT
             CurrencyRates();
             ProgressBarStep();
 
-            //fetch the labour prices from the XML file
-            lbTitleText.Text = "Fetching Labour Rates";
-            FetchLabourPrices();
+            //check the date of the used exchange rate and return out if rate is too old. 
+            if (IsExchangeRateOld())
+            {
+                return;
+            }
+
+            //load up the calculator form
+            lbTitleText.Text = "Loading Calculator";
+            Pin_Dif_Calc fPinDif = new Pin_Dif_Calc();
             ProgressBarStep();
 
             // reset the main menu form and show the calculator
@@ -110,18 +119,16 @@ namespace SQT
             if (networkConnected)
             {
                 //grab rates from website
-               FetchCurrencyRates();
+                FetchCurrencyRates();
                 LoadStoredCurrencyRates();
             }
             else
             {
                 LoadStoredCurrencyRates();
             }
-
-            CheckCurrencyDate();
         }
 
-        private void CheckCurrencyDate()
+        private bool IsExchangeRateOld()
         {
             DateTime dT = Convert.ToDateTime(exchangeRateDate);
             TimeSpan tS = DateTime.Now - dT;
@@ -129,12 +136,15 @@ namespace SQT
             if (tS.Days >= 7)
             {
                 MessageBox.Show("Warning, the exchange rates being used are over 7 days old. Please connect to the internet to refresh");
+                return true;
             }
-            else if (tS.Days < 7)
+            else
             {
                 MessageBox.Show("Exchange Rate OK");
+                return false;
             }
         }
+
         private void FetchExchangeRateURL()
         {
             string dKey = "";
@@ -257,19 +267,21 @@ namespace SQT
         #region Network Conectivity 
         private void NetworkAccess()
         {
-            networkConnected = NetworkCheck();
-            if (networkConnected)
+            networkConnected = LocalNetworkCheck();
+            internetConnected = InternetCheck();
+
+            if (!networkConnected || !internetConnected)
             {
-                //MessageBox.Show("NETWORK SUCCESS");
-                lbTitleText.Text = "Network Connected";
+                lbTitleText.Text = "Networks Connected";
             }
-            else if (!networkConnected)
+            else
             {
-                lbTitleText.Text = "Network NOT Connected";
+                lbTitleText.Text = "Networks NOT Connected";
+                MessageBox.Show("Local Network = " + networkConnected.ToString() + "\n Internet = "+internetConnected.ToString());
             }
         }
 
-        private bool NetworkCheck()
+        private bool InternetCheck()
         {
             var hostUrl = "www.accesselevators.com.au";
 
@@ -278,6 +290,20 @@ namespace SQT
             PingReply result = ping.Send(hostUrl);
             return result.Status == IPStatus.Success;
         }
+
+        private bool LocalNetworkCheck()
+        {
+            try
+            {
+                Directory.GetAccessControl(@"X:\");
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         #endregion
 
         #region XML Functions
