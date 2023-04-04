@@ -33,8 +33,8 @@ namespace SQT
         public int exCurrency = 0; // 0 AUD, 1 USD, 2 EUR
         public int num20Ft;
         public int num40Ft;
-        public int numberOfPagesNeeded;
-        int pageTracker = 1;
+        public int numberOfPagesNeeded = 1;
+        int pageTracker;
         int activePage = 0;
 
         public Dictionary<string, string> wordExportData = new Dictionary<string, string>();
@@ -46,6 +46,7 @@ namespace SQT
 
         Button[] pageButtons; // = new Button[12];
         Panel[] infoPages;
+        Object[,] costsGroups;
         #endregion
 
         #region Form Loading Methods
@@ -56,11 +57,30 @@ namespace SQT
 
         private void Pin_Dif_Calc_Load(object sender, EventArgs e)
         {
+            RuntimeVarSetter();
+            SetupPricesPanel();
             GeneratePriceList();
             SetLablesToDefault();
             SetPanelVisabilityDefaults();
             PageButtonSetup();
-            InfoPagesSetup();
+        }
+
+        private void RuntimeVarSetter()
+        {
+            costsGroups = new Object[12, 4] {
+                { label5, tbLift1Price, tbLift1Floors, lblLift1Total },
+                { label7, tbLift2Price, tbLift2Floors, lblLift2Total },
+                { label9, tb3Lift3Price, tbLift3Floors, lblLift3Total },
+                { label12, tbLift4Price, tbLift4Floors, lblLift4Total },
+                { label32, tbLift5Price, tbLift5Floors, lblLift5Total },
+                { label30, tbLift6Price, tbLift6Floors, lblLift6Total },
+                { label28, tbLift7Price, tbLift7Floors, lblLift7Total },
+                { label14, tbLift8Price, tbLift8Floors, lblLift8Total },
+                { label40, tbLift9Price, tbLift9Floors, lblLift9Total },
+                { label38, tbLift10Price, tbLift10Floors, lblLift10Total },
+                { label36, tbLift11Price, tbLift11Floors, lblLift11Total },
+                { label34, tbLift12Price, tbLift12Floors, lblLift12Total }
+            };
         }
 
         private void SetPanelVisabilityDefaults()
@@ -70,38 +90,48 @@ namespace SQT
 
             lbWait.Visible = false;
 
-            button3.Visible = false;
-            button3.Enabled = false;
+            btnExportQuote.Visible = false;
+            btnExportQuote.Enabled = false;
+
+            btnEditQuotePrices.Enabled = false;
+            btnEditQuotePrices.Visible = false;
+            btnEditQuotePrices.Location = btnGenerateCustomerQuote.Location;
 
             printButton.Visible = false;
             printButton.Enabled = false;
 
-            panelAdditionalCosts.Visible = false;
-            panelAdditionalCosts.Location = rightPanelLocation;
+            PanelDefaultSettings(panelAdditionalCosts, rightPanelLocation);
+            PanelDefaultSettings(panelShipping, rightPanelLocation);
+            PanelDefaultSettings(panelLiftPrices, rightPanelLocation);
+            PanelDefaultSettings(panelPageNumberButtons, new Point(997, 12));
+            PanelDefaultSettings(panelExportQuote, new Point(713, 755));
 
-            panelShipping.Visible = false;
-            panelShipping.Location = rightPanelLocation;
-
-            panelLiftPrices.Visible = false;
-            panelLiftPrices.Location = rightPanelLocation;
-        }
-
-
-        private void InfoPagesSetup()
-        {
             infoPages = new Panel[] { panelLift1, panelLift2, panelLift3, panelLift4, panelLift5, panelLift6, panelLift7, panelLift8, panelLift9, panelLift10, panelLift11, panelLift12 };
             foreach (Panel p in infoPages)
             {
-                p.Visible = false;
-                p.Location = new Point(181, 18);
-                p.BringToFront();
-                p.Enabled = false;
+                PanelDefaultSettings(p, new Point(12, 12));
             }
+        }
 
-            panelPageNumberButtons.Visible = false;
-            panelPageNumberButtons.Location = new Point(1500, 18);
-            panelPageNumberButtons.BringToFront();
-            panelPageNumberButtons.Enabled = false;
+        private void PanelDefaultSettings(Panel panel, Point location, bool visible = false, bool enabled = false)
+        {
+            panel.Location = location;
+            panel.BringToFront();
+            panel.Visible = visible;
+            panel.Enabled = enabled;
+        }
+
+        private void SetupPricesPanel()
+        {
+            for (int i = 1; i < 12; i++)
+            {
+                NewCostsRow(i, false);
+            }
+            NewCostsRow(0);
+            btnAddLiftCostField.Enabled = true;
+            btnAddLiftCostField.Visible = true;
+            numberOfPagesNeeded = 1;
+            //btnAddLiftCostField.Location = new Point(111, 186);
         }
 
         private void SetLablesToDefault()
@@ -297,6 +327,8 @@ namespace SQT
         private void button1_Click(object sender, EventArgs e)
         {
             PanelMenuChange(null);
+            TotalCostAdder();
+            PagesRequired();
             GenerateListOfPrices();
         }
 
@@ -321,8 +353,10 @@ namespace SQT
             {
                 GeneratePriceList();
                 Form1SaveToXML();
-                button3.Visible = true;
-                button3.Enabled = true;
+                btnExportQuote.Visible = true;
+                btnExportQuote.Enabled = true;
+                btnGenerateCustomerQuote.Visible = true;
+                btnGenerateCustomerQuote.Enabled = true;
                 printButton.Visible = true;
                 printButton.Enabled = true;
             }
@@ -1479,6 +1513,7 @@ namespace SQT
             }
             numberOfPagesNeeded = 12 - i;
         }
+
         #region Text Changed Methods
         private void tbLift1Floors_TextChanged(object sender, EventArgs e)
         {
@@ -1654,10 +1689,47 @@ namespace SQT
             RefreshLiftPrices(tbLift12Price, lblLift12Total);
         }
         #endregion
-        private void btnConfigurePrices_Click(object sender, EventArgs e)
+
+        private void btnAddLiftCostField_Click(object sender, EventArgs e)
         {
-            panelLiftPrices.Enabled = true;
-            panelLiftPrices.Visible = true;
+            NewCostsRow(numberOfPagesNeeded);
+        }
+
+        private void NewCostsRow(int costRow, bool Visibility = true)
+        {
+            Label l;
+            TextBox tb;
+
+            for (int i = 0; i < 4; i++)
+            {
+                if (costsGroups[costRow, i] is Label)
+                {
+                    l = (Label)costsGroups[costRow, i];
+
+                    l.Visible = Visibility;
+                    l.Enabled = Visibility;
+                }
+                else if (costsGroups[costRow, i] is TextBox)
+                {
+                    tb = (TextBox)costsGroups[costRow, i];
+
+                    tb.Visible = Visibility;
+                    tb.Enabled = Visibility;
+                }
+            }
+
+            if (costRow < 11)
+            {
+                tb = (TextBox)costsGroups[costRow+1, 1];
+                btnAddLiftCostField.Location = tb.Location;
+            }
+            else
+            {
+                btnAddLiftCostField.Enabled = false;
+                btnAddLiftCostField.Visible = false;
+            }
+
+            numberOfPagesNeeded++;
         }
 
         private void HideButton_Click(object sender, EventArgs e)
@@ -1737,6 +1809,66 @@ namespace SQT
         private void btNewPanel_Click(object sender, EventArgs e)
         {
             NewPage();
+        }
+
+        private void btPanel1_Click(object sender, EventArgs e)
+        {
+            OpenInfoPage(0);
+        }
+
+        private void btPanel2_Click(object sender, EventArgs e)
+        {
+            OpenInfoPage(1);
+        }
+
+        private void btPanel3_Click(object sender, EventArgs e)
+        {
+            OpenInfoPage(2);
+        }
+
+        private void btPanel4_Click(object sender, EventArgs e)
+        {
+            OpenInfoPage(3);
+        }
+
+        private void btPanel5_Click(object sender, EventArgs e)
+        {
+            OpenInfoPage(4);
+        }
+
+        private void btPanel6_Click(object sender, EventArgs e)
+        {
+            OpenInfoPage(5);
+        }
+
+        private void btPanel7_Click(object sender, EventArgs e)
+        {
+            OpenInfoPage(6);
+        }
+
+        private void btPanel8_Click(object sender, EventArgs e)
+        {
+            OpenInfoPage(7);
+        }
+
+        private void btPanel9_Click(object sender, EventArgs e)
+        {
+            OpenInfoPage(8);
+        }
+
+        private void btPanel10_Click(object sender, EventArgs e)
+        {
+            OpenInfoPage(9);
+        }
+
+        private void btPanel11_Click(object sender, EventArgs e)
+        {
+            OpenInfoPage(10);
+        }
+
+        private void btPanel12_Click(object sender, EventArgs e)
+        {
+            OpenInfoPage(11);
         }
 
         private void NewPage()
@@ -2082,11 +2214,11 @@ namespace SQT
             {
                 if (p != panelToBeShown)
                 {
-                    p.Visible = false;
+                    PanelDefaultSettings(p, p.Location);
                 }
                 if (p == panelToBeShown)
                 {
-                    p.Visible = !p.Visible;
+                    PanelDefaultSettings(p, p.Location, !p.Visible, !p.Enabled);
                 }
             }
         }
@@ -3647,6 +3779,39 @@ namespace SQT
         }
         #endregion
 
+        #region Swapping Between Calculator and Exporter
+        // click generate customer quote button
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+            SwapBetweenCalcAndExp(true);
+        }
+
+        // click edit quote prices button
+        private void btnEditQuotePrices_Click(object sender, EventArgs e)
+        {
+            SwapBetweenCalcAndExp(false);
+        }
+
+        private void SwapBetweenCalcAndExp(bool swapToExporter)
+        {
+            PanelMenuChange(null);
+            //calc panels
+            PanelDefaultSettings(panelAddress, panelAddress.Location, !swapToExporter, !swapToExporter);
+            PanelDefaultSettings(panelCalcButtons, panelCalcButtons.Location, !swapToExporter, !swapToExporter);
+            PanelDefaultSettings(panelCostBreakdown, panelCostBreakdown.Location, !swapToExporter, !swapToExporter);
+            //exp panels
+            PanelDefaultSettings(panelPageNumberButtons, panelPageNumberButtons.Location, swapToExporter, swapToExporter);
+            PanelDefaultSettings(panelExportQuote, panelExportQuote.Location, swapToExporter, swapToExporter);
+            PanelDefaultSettings(panelLift1, panelLift1.Location, swapToExporter, swapToExporter);
+            //swap to exp button
+            btnGenerateCustomerQuote.Enabled = !swapToExporter;
+            btnGenerateCustomerQuote.Visible = !swapToExporter;
+            //swap to calc button
+            btnEditQuotePrices.Enabled = swapToExporter;
+            btnEditQuotePrices.Visible = swapToExporter;
+        }
+
+        #endregion
         //DEBUG BUTTON
         private void button4_Click_1(object sender, EventArgs e)
         {
@@ -3654,5 +3819,6 @@ namespace SQT
             TimeSpan tS = DateTime.Now - dT;
             MessageBox.Show(tS.ToString());
         }
+
     }
 }

@@ -61,6 +61,10 @@ namespace SQT
             progressBar1.Value = 0;
             progressBar1.Maximum = 6;
             progressBar1.Visible = true;
+            basePrices.Clear();
+            labourPrice.Clear();
+            exchangeRates.Clear();
+            exchangeRateURL.Clear();
 
             //check if software can connect to the network
             lbTitleText.Text = "Checking Network Conectivity";
