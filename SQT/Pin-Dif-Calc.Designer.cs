@@ -208,7 +208,7 @@
             this.panelShipping = new System.Windows.Forms.Panel();
             this.panelCostBreakdown = new System.Windows.Forms.Panel();
             this.panelCalcButtons = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbAutoRounding = new System.Windows.Forms.CheckBox();
             this.tbMinorPriceAdjustment = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
@@ -233,7 +233,6 @@
             this.btPanel6 = new System.Windows.Forms.Button();
             this.btPanel7 = new System.Windows.Forms.Button();
             this.panelLift1 = new System.Windows.Forms.Panel();
-            this.label50 = new System.Windows.Forms.Label();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.rbPositionIndicatorTypeSurfaceMount = new System.Windows.Forms.RadioButton();
             this.rbPositionIndicatorTypeFlushMount = new System.Windows.Forms.RadioButton();
@@ -297,41 +296,29 @@
             this.groupBox36 = new System.Windows.Forms.GroupBox();
             this.rbEmergencyLoweringSystemNo = new System.Windows.Forms.RadioButton();
             this.rbEmergencyLoweringSystemYes = new System.Windows.Forms.RadioButton();
-            this.label82 = new System.Windows.Forms.Label();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
             this.rbFacePlateMaterialOther = new System.Windows.Forms.RadioButton();
             this.tbFacePlateMaterial = new System.Windows.Forms.TextBox();
             this.rbFacePlateMaterialSatinStainlessSteel = new System.Windows.Forms.RadioButton();
-            this.tbfname = new System.Windows.Forms.TextBox();
-            this.label83 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
-            this.tbphone = new System.Windows.Forms.TextBox();
             this.label85 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
             this.groupBox31 = new System.Windows.Forms.GroupBox();
             this.rbVoiceAnnunciationNo = new System.Windows.Forms.RadioButton();
             this.rbVoiceAnnunciationYes = new System.Windows.Forms.RadioButton();
-            this.tblname = new System.Windows.Forms.TextBox();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.rbSecurityKeySwitchNo = new System.Windows.Forms.RadioButton();
             this.rbSecurityKeySwitchYes = new System.Windows.Forms.RadioButton();
-            this.label87 = new System.Windows.Forms.Label();
             this.groupBox30 = new System.Windows.Forms.GroupBox();
             this.rbRearDoorKeySwitchNo = new System.Windows.Forms.RadioButton();
             this.rbRearDoorKeySwitchYes = new System.Windows.Forms.RadioButton();
-            this.tbAddress1 = new System.Windows.Forms.TextBox();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.rbExclusiveServiceNo = new System.Windows.Forms.RadioButton();
             this.rbExclusiveServiceYes = new System.Windows.Forms.RadioButton();
-            this.label88 = new System.Windows.Forms.Label();
             this.groupBox29 = new System.Windows.Forms.GroupBox();
             this.rbGPOInCarNo = new System.Windows.Forms.RadioButton();
             this.rbGPOInCarYes = new System.Windows.Forms.RadioButton();
-            this.tbAddress2 = new System.Windows.Forms.TextBox();
             this.tbKeyswitchLocation = new System.Windows.Forms.TextBox();
-            this.label89 = new System.Windows.Forms.Label();
             this.label90 = new System.Windows.Forms.Label();
-            this.tbAddress3 = new System.Windows.Forms.TextBox();
             this.groupBox28 = new System.Windows.Forms.GroupBox();
             this.tbCOPFinish = new System.Windows.Forms.TextBox();
             this.rbCOPFinishOther = new System.Windows.Forms.RadioButton();
@@ -430,6 +417,17 @@
             this.tbDoorWidth = new System.Windows.Forms.TextBox();
             this.tbDoorHeight = new System.Windows.Forms.TextBox();
             this.label106 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.tbfname = new System.Windows.Forms.TextBox();
+            this.label83 = new System.Windows.Forms.Label();
+            this.tbphone = new System.Windows.Forms.TextBox();
+            this.label86 = new System.Windows.Forms.Label();
+            this.tblname = new System.Windows.Forms.TextBox();
+            this.label87 = new System.Windows.Forms.Label();
+            this.tbAddress1 = new System.Windows.Forms.TextBox();
+            this.tbAddress2 = new System.Windows.Forms.TextBox();
+            this.tbAddress3 = new System.Windows.Forms.TextBox();
             this.panelLift12 = new System.Windows.Forms.Panel();
             this.groupBox325 = new System.Windows.Forms.GroupBox();
             this.rb12PositionIndicatorTypeSurfaceMount = new System.Windows.Forms.RadioButton();
@@ -2422,6 +2420,7 @@
             this.tb3DoorHeight = new System.Windows.Forms.TextBox();
             this.label427 = new System.Windows.Forms.Label();
             this.panelExportQuote = new System.Windows.Forms.Panel();
+            this.panelContactDetails = new System.Windows.Forms.Panel();
             this.currencySelectionGroup.SuspendLayout();
             this.panelAddress.SuspendLayout();
             this.panelLiftPrices.SuspendLayout();
@@ -2865,6 +2864,7 @@
             this.groupBox107.SuspendLayout();
             this.groupBox108.SuspendLayout();
             this.panelExportQuote.SuspendLayout();
+            this.panelContactDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // printPreviewDialog1
@@ -2896,7 +2896,7 @@
             this.tbMainBlankets.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainBlankets.ForeColor = System.Drawing.Color.Black;
             this.tbMainBlankets.Location = new System.Drawing.Point(223, 54);
-            this.tbMainBlankets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainBlankets.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainBlankets.Name = "tbMainBlankets";
             this.tbMainBlankets.Size = new System.Drawing.Size(126, 32);
             this.tbMainBlankets.TabIndex = 138;
@@ -3060,7 +3060,7 @@
             this.tbMainWeeksRequired.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainWeeksRequired.ForeColor = System.Drawing.Color.Black;
             this.tbMainWeeksRequired.Location = new System.Drawing.Point(366, 454);
-            this.tbMainWeeksRequired.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainWeeksRequired.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainWeeksRequired.Name = "tbMainWeeksRequired";
             this.tbMainWeeksRequired.Size = new System.Drawing.Size(68, 32);
             this.tbMainWeeksRequired.TabIndex = 145;
@@ -3118,9 +3118,9 @@
             this.currencySelectionGroup.Cursor = System.Windows.Forms.Cursors.Default;
             this.currencySelectionGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.currencySelectionGroup.Location = new System.Drawing.Point(5, 8);
-            this.currencySelectionGroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.currencySelectionGroup.Margin = new System.Windows.Forms.Padding(2);
             this.currencySelectionGroup.Name = "currencySelectionGroup";
-            this.currencySelectionGroup.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.currencySelectionGroup.Padding = new System.Windows.Forms.Padding(2);
             this.currencySelectionGroup.Size = new System.Drawing.Size(636, 115);
             this.currencySelectionGroup.TabIndex = 150;
             this.currencySelectionGroup.TabStop = false;
@@ -3129,7 +3129,7 @@
             // 
             this.buttonEUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEUR.Location = new System.Drawing.Point(377, 52);
-            this.buttonEUR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonEUR.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEUR.Name = "buttonEUR";
             this.buttonEUR.Size = new System.Drawing.Size(111, 53);
             this.buttonEUR.TabIndex = 3;
@@ -3142,7 +3142,7 @@
             // 
             this.buttonAUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAUD.Location = new System.Drawing.Point(147, 52);
-            this.buttonAUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAUD.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAUD.Name = "buttonAUD";
             this.buttonAUD.Size = new System.Drawing.Size(111, 53);
             this.buttonAUD.TabIndex = 0;
@@ -3167,7 +3167,7 @@
             // 
             this.buttonUSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUSD.Location = new System.Drawing.Point(262, 52);
-            this.buttonUSD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonUSD.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUSD.Name = "buttonUSD";
             this.buttonUSD.Size = new System.Drawing.Size(111, 53);
             this.buttonUSD.TabIndex = 2;
@@ -3181,7 +3181,7 @@
             this.tbMainScaffold.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainScaffold.ForeColor = System.Drawing.Color.Black;
             this.tbMainScaffold.Location = new System.Drawing.Point(366, 494);
-            this.tbMainScaffold.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainScaffold.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainScaffold.Name = "tbMainScaffold";
             this.tbMainScaffold.Size = new System.Drawing.Size(68, 32);
             this.tbMainScaffold.TabIndex = 146;
@@ -3216,7 +3216,7 @@
             this.tbMainShaftLight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainShaftLight.ForeColor = System.Drawing.Color.Black;
             this.tbMainShaftLight.Location = new System.Drawing.Point(223, 91);
-            this.tbMainShaftLight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainShaftLight.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainShaftLight.Name = "tbMainShaftLight";
             this.tbMainShaftLight.Size = new System.Drawing.Size(126, 32);
             this.tbMainShaftLight.TabIndex = 137;
@@ -3240,7 +3240,7 @@
             this.tbMainDuct.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainDuct.ForeColor = System.Drawing.Color.Black;
             this.tbMainDuct.Location = new System.Drawing.Point(223, 127);
-            this.tbMainDuct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainDuct.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainDuct.Name = "tbMainDuct";
             this.tbMainDuct.Size = new System.Drawing.Size(126, 32);
             this.tbMainDuct.TabIndex = 139;
@@ -3264,7 +3264,7 @@
             this.tbMainSundries.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainSundries.ForeColor = System.Drawing.Color.Black;
             this.tbMainSundries.Location = new System.Drawing.Point(223, 17);
-            this.tbMainSundries.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainSundries.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainSundries.Name = "tbMainSundries";
             this.tbMainSundries.Size = new System.Drawing.Size(126, 32);
             this.tbMainSundries.TabIndex = 136;
@@ -3959,7 +3959,7 @@
             this.tBMainQuoteNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBMainQuoteNumber.ForeColor = System.Drawing.Color.Black;
             this.tBMainQuoteNumber.Location = new System.Drawing.Point(98, 48);
-            this.tBMainQuoteNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tBMainQuoteNumber.Margin = new System.Windows.Forms.Padding(2);
             this.tBMainQuoteNumber.Name = "tBMainQuoteNumber";
             this.tBMainQuoteNumber.Size = new System.Drawing.Size(165, 32);
             this.tBMainQuoteNumber.TabIndex = 132;
@@ -3982,7 +3982,7 @@
             this.tBMainAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBMainAddress.ForeColor = System.Drawing.Color.Black;
             this.tBMainAddress.Location = new System.Drawing.Point(98, 16);
-            this.tBMainAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tBMainAddress.Margin = new System.Windows.Forms.Padding(2);
             this.tBMainAddress.Name = "tBMainAddress";
             this.tBMainAddress.Size = new System.Drawing.Size(539, 32);
             this.tBMainAddress.TabIndex = 130;
@@ -4005,7 +4005,7 @@
             // 
             this.btnShippingReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShippingReset.Location = new System.Drawing.Point(60, 327);
-            this.btnShippingReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShippingReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnShippingReset.Name = "btnShippingReset";
             this.btnShippingReset.Size = new System.Drawing.Size(319, 37);
             this.btnShippingReset.TabIndex = 164;
@@ -4019,7 +4019,7 @@
             this.tbMainEntranceGuards.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainEntranceGuards.ForeColor = System.Drawing.Color.Black;
             this.tbMainEntranceGuards.Location = new System.Drawing.Point(366, 414);
-            this.tbMainEntranceGuards.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainEntranceGuards.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainEntranceGuards.Name = "tbMainEntranceGuards";
             this.tbMainEntranceGuards.Size = new System.Drawing.Size(68, 32);
             this.tbMainEntranceGuards.TabIndex = 144;
@@ -4066,7 +4066,7 @@
             // 
             this.btn40Ft.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn40Ft.Location = new System.Drawing.Point(222, 34);
-            this.btn40Ft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn40Ft.Margin = new System.Windows.Forms.Padding(2);
             this.btn40Ft.Name = "btn40Ft";
             this.btn40Ft.Size = new System.Drawing.Size(157, 90);
             this.btn40Ft.TabIndex = 163;
@@ -4079,7 +4079,7 @@
             // 
             this.btn20Ft.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn20Ft.Location = new System.Drawing.Point(60, 34);
-            this.btn20Ft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn20Ft.Margin = new System.Windows.Forms.Padding(2);
             this.btn20Ft.Name = "btn20Ft";
             this.btn20Ft.Size = new System.Drawing.Size(155, 90);
             this.btn20Ft.TabIndex = 162;
@@ -4116,7 +4116,7 @@
             this.tbMainTravel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainTravel.ForeColor = System.Drawing.Color.Black;
             this.tbMainTravel.Location = new System.Drawing.Point(222, 271);
-            this.tbMainTravel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainTravel.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainTravel.Name = "tbMainTravel";
             this.tbMainTravel.Size = new System.Drawing.Size(126, 32);
             this.tbMainTravel.TabIndex = 143;
@@ -4140,7 +4140,7 @@
             this.tbMainCartage.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainCartage.ForeColor = System.Drawing.Color.Black;
             this.tbMainCartage.Location = new System.Drawing.Point(222, 199);
-            this.tbMainCartage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainCartage.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainCartage.Name = "tbMainCartage";
             this.tbMainCartage.Size = new System.Drawing.Size(126, 32);
             this.tbMainCartage.TabIndex = 141;
@@ -4164,7 +4164,7 @@
             this.tbMainAccomodation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainAccomodation.ForeColor = System.Drawing.Color.Black;
             this.tbMainAccomodation.Location = new System.Drawing.Point(222, 163);
-            this.tbMainAccomodation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainAccomodation.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainAccomodation.Name = "tbMainAccomodation";
             this.tbMainAccomodation.Size = new System.Drawing.Size(126, 32);
             this.tbMainAccomodation.TabIndex = 140;
@@ -4201,7 +4201,7 @@
             this.tbMainMargin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainMargin.ForeColor = System.Drawing.Color.Black;
             this.tbMainMargin.Location = new System.Drawing.Point(279, 378);
-            this.tbMainMargin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainMargin.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainMargin.Name = "tbMainMargin";
             this.tbMainMargin.Size = new System.Drawing.Size(102, 44);
             this.tbMainMargin.TabIndex = 148;
@@ -4238,7 +4238,7 @@
             this.tbMainStorage.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainStorage.ForeColor = System.Drawing.Color.Black;
             this.tbMainStorage.Location = new System.Drawing.Point(222, 235);
-            this.tbMainStorage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainStorage.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainStorage.Name = "tbMainStorage";
             this.tbMainStorage.Size = new System.Drawing.Size(126, 32);
             this.tbMainStorage.TabIndex = 142;
@@ -4286,7 +4286,7 @@
             this.tbLift12Floors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift12Floors.ForeColor = System.Drawing.Color.Black;
             this.tbLift12Floors.Location = new System.Drawing.Point(245, 495);
-            this.tbLift12Floors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift12Floors.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift12Floors.Name = "tbLift12Floors";
             this.tbLift12Floors.Size = new System.Drawing.Size(85, 32);
             this.tbLift12Floors.TabIndex = 235;
@@ -4299,7 +4299,7 @@
             this.tbLift11Floors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift11Floors.ForeColor = System.Drawing.Color.Black;
             this.tbLift11Floors.Location = new System.Drawing.Point(245, 458);
-            this.tbLift11Floors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift11Floors.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift11Floors.Name = "tbLift11Floors";
             this.tbLift11Floors.Size = new System.Drawing.Size(85, 32);
             this.tbLift11Floors.TabIndex = 232;
@@ -4312,7 +4312,7 @@
             this.tbLift10Floors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift10Floors.ForeColor = System.Drawing.Color.Black;
             this.tbLift10Floors.Location = new System.Drawing.Point(245, 419);
-            this.tbLift10Floors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift10Floors.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift10Floors.Name = "tbLift10Floors";
             this.tbLift10Floors.Size = new System.Drawing.Size(85, 32);
             this.tbLift10Floors.TabIndex = 229;
@@ -4325,7 +4325,7 @@
             this.tbLift9Floors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift9Floors.ForeColor = System.Drawing.Color.Black;
             this.tbLift9Floors.Location = new System.Drawing.Point(245, 382);
-            this.tbLift9Floors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift9Floors.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift9Floors.Name = "tbLift9Floors";
             this.tbLift9Floors.Size = new System.Drawing.Size(85, 32);
             this.tbLift9Floors.TabIndex = 226;
@@ -4338,7 +4338,7 @@
             this.tbLift8Floors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift8Floors.ForeColor = System.Drawing.Color.Black;
             this.tbLift8Floors.Location = new System.Drawing.Point(245, 344);
-            this.tbLift8Floors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift8Floors.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift8Floors.Name = "tbLift8Floors";
             this.tbLift8Floors.Size = new System.Drawing.Size(85, 32);
             this.tbLift8Floors.TabIndex = 223;
@@ -4351,7 +4351,7 @@
             this.tbLift7Floors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift7Floors.ForeColor = System.Drawing.Color.Black;
             this.tbLift7Floors.Location = new System.Drawing.Point(245, 306);
-            this.tbLift7Floors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift7Floors.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift7Floors.Name = "tbLift7Floors";
             this.tbLift7Floors.Size = new System.Drawing.Size(85, 32);
             this.tbLift7Floors.TabIndex = 220;
@@ -4364,7 +4364,7 @@
             this.tbLift6Floors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift6Floors.ForeColor = System.Drawing.Color.Black;
             this.tbLift6Floors.Location = new System.Drawing.Point(245, 267);
-            this.tbLift6Floors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift6Floors.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift6Floors.Name = "tbLift6Floors";
             this.tbLift6Floors.Size = new System.Drawing.Size(85, 32);
             this.tbLift6Floors.TabIndex = 217;
@@ -4377,7 +4377,7 @@
             this.tbLift5Floors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift5Floors.ForeColor = System.Drawing.Color.Black;
             this.tbLift5Floors.Location = new System.Drawing.Point(245, 231);
-            this.tbLift5Floors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift5Floors.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift5Floors.Name = "tbLift5Floors";
             this.tbLift5Floors.Size = new System.Drawing.Size(85, 32);
             this.tbLift5Floors.TabIndex = 214;
@@ -4390,7 +4390,7 @@
             this.tbLift4Floors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift4Floors.ForeColor = System.Drawing.Color.Black;
             this.tbLift4Floors.Location = new System.Drawing.Point(245, 195);
-            this.tbLift4Floors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift4Floors.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift4Floors.Name = "tbLift4Floors";
             this.tbLift4Floors.Size = new System.Drawing.Size(85, 32);
             this.tbLift4Floors.TabIndex = 211;
@@ -4403,7 +4403,7 @@
             this.tbLift3Floors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift3Floors.ForeColor = System.Drawing.Color.Black;
             this.tbLift3Floors.Location = new System.Drawing.Point(245, 158);
-            this.tbLift3Floors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift3Floors.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift3Floors.Name = "tbLift3Floors";
             this.tbLift3Floors.Size = new System.Drawing.Size(85, 32);
             this.tbLift3Floors.TabIndex = 208;
@@ -4416,7 +4416,7 @@
             this.tbLift2Floors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift2Floors.ForeColor = System.Drawing.Color.Black;
             this.tbLift2Floors.Location = new System.Drawing.Point(245, 120);
-            this.tbLift2Floors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift2Floors.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift2Floors.Name = "tbLift2Floors";
             this.tbLift2Floors.Size = new System.Drawing.Size(85, 32);
             this.tbLift2Floors.TabIndex = 205;
@@ -4429,7 +4429,7 @@
             this.tbLift1Floors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift1Floors.ForeColor = System.Drawing.Color.Black;
             this.tbLift1Floors.Location = new System.Drawing.Point(245, 82);
-            this.tbLift1Floors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift1Floors.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift1Floors.Name = "tbLift1Floors";
             this.tbLift1Floors.Size = new System.Drawing.Size(85, 32);
             this.tbLift1Floors.TabIndex = 202;
@@ -4586,7 +4586,7 @@
             this.tbLift12Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift12Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift12Price.Location = new System.Drawing.Point(74, 496);
-            this.tbLift12Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift12Price.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift12Price.Name = "tbLift12Price";
             this.tbLift12Price.Size = new System.Drawing.Size(164, 32);
             this.tbLift12Price.TabIndex = 233;
@@ -4612,7 +4612,7 @@
             this.tbLift11Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift11Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift11Price.Location = new System.Drawing.Point(74, 459);
-            this.tbLift11Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift11Price.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift11Price.Name = "tbLift11Price";
             this.tbLift11Price.Size = new System.Drawing.Size(164, 32);
             this.tbLift11Price.TabIndex = 230;
@@ -4638,7 +4638,7 @@
             this.tbLift10Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift10Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift10Price.Location = new System.Drawing.Point(74, 420);
-            this.tbLift10Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift10Price.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift10Price.Name = "tbLift10Price";
             this.tbLift10Price.Size = new System.Drawing.Size(164, 32);
             this.tbLift10Price.TabIndex = 227;
@@ -4664,7 +4664,7 @@
             this.tbLift9Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift9Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift9Price.Location = new System.Drawing.Point(74, 383);
-            this.tbLift9Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift9Price.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift9Price.Name = "tbLift9Price";
             this.tbLift9Price.Size = new System.Drawing.Size(164, 32);
             this.tbLift9Price.TabIndex = 224;
@@ -4690,7 +4690,7 @@
             this.tbLift8Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift8Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift8Price.Location = new System.Drawing.Point(74, 345);
-            this.tbLift8Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift8Price.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift8Price.Name = "tbLift8Price";
             this.tbLift8Price.Size = new System.Drawing.Size(164, 32);
             this.tbLift8Price.TabIndex = 221;
@@ -4716,7 +4716,7 @@
             this.tbLift7Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift7Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift7Price.Location = new System.Drawing.Point(74, 307);
-            this.tbLift7Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift7Price.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift7Price.Name = "tbLift7Price";
             this.tbLift7Price.Size = new System.Drawing.Size(164, 32);
             this.tbLift7Price.TabIndex = 218;
@@ -4741,7 +4741,7 @@
             this.tbLift6Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift6Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift6Price.Location = new System.Drawing.Point(74, 268);
-            this.tbLift6Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift6Price.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift6Price.Name = "tbLift6Price";
             this.tbLift6Price.Size = new System.Drawing.Size(164, 32);
             this.tbLift6Price.TabIndex = 215;
@@ -4766,7 +4766,7 @@
             this.tbLift5Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift5Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift5Price.Location = new System.Drawing.Point(74, 232);
-            this.tbLift5Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift5Price.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift5Price.Name = "tbLift5Price";
             this.tbLift5Price.Size = new System.Drawing.Size(164, 32);
             this.tbLift5Price.TabIndex = 212;
@@ -4791,7 +4791,7 @@
             this.tbLift4Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift4Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift4Price.Location = new System.Drawing.Point(74, 196);
-            this.tbLift4Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift4Price.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift4Price.Name = "tbLift4Price";
             this.tbLift4Price.Size = new System.Drawing.Size(164, 32);
             this.tbLift4Price.TabIndex = 209;
@@ -4816,7 +4816,7 @@
             this.tb3Lift3Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3Lift3Price.ForeColor = System.Drawing.Color.Black;
             this.tb3Lift3Price.Location = new System.Drawing.Point(74, 159);
-            this.tb3Lift3Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3Lift3Price.Margin = new System.Windows.Forms.Padding(2);
             this.tb3Lift3Price.Name = "tb3Lift3Price";
             this.tb3Lift3Price.Size = new System.Drawing.Size(164, 32);
             this.tb3Lift3Price.TabIndex = 206;
@@ -4841,7 +4841,7 @@
             this.tbLift2Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift2Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift2Price.Location = new System.Drawing.Point(74, 121);
-            this.tbLift2Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift2Price.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift2Price.Name = "tbLift2Price";
             this.tbLift2Price.Size = new System.Drawing.Size(164, 32);
             this.tbLift2Price.TabIndex = 203;
@@ -4866,7 +4866,7 @@
             this.tbLift1Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLift1Price.ForeColor = System.Drawing.Color.Black;
             this.tbLift1Price.Location = new System.Drawing.Point(74, 83);
-            this.tbLift1Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLift1Price.Margin = new System.Windows.Forms.Padding(2);
             this.tbLift1Price.Name = "tbLift1Price";
             this.tbLift1Price.Size = new System.Drawing.Size(164, 32);
             this.tbLift1Price.TabIndex = 200;
@@ -4952,7 +4952,7 @@
             this.panelLiftPrices.Controls.Add(this.lblLift5Total);
             this.panelLiftPrices.Controls.Add(this.lblLift3Total);
             this.panelLiftPrices.Controls.Add(this.lblLift4Total);
-            this.panelLiftPrices.Location = new System.Drawing.Point(1203, 177);
+            this.panelLiftPrices.Location = new System.Drawing.Point(2069, 1051);
             this.panelLiftPrices.Name = "panelLiftPrices";
             this.panelLiftPrices.Size = new System.Drawing.Size(442, 793);
             this.panelLiftPrices.TabIndex = 183;
@@ -5000,7 +5000,7 @@
             // 
             this.btnLiftCosts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLiftCosts.Location = new System.Drawing.Point(35, 149);
-            this.btnLiftCosts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLiftCosts.Margin = new System.Windows.Forms.Padding(2);
             this.btnLiftCosts.Name = "btnLiftCosts";
             this.btnLiftCosts.Size = new System.Drawing.Size(170, 59);
             this.btnLiftCosts.TabIndex = 184;
@@ -5037,7 +5037,7 @@
             // 
             this.btnShippingCosts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShippingCosts.Location = new System.Drawing.Point(35, 214);
-            this.btnShippingCosts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShippingCosts.Margin = new System.Windows.Forms.Padding(2);
             this.btnShippingCosts.Name = "btnShippingCosts";
             this.btnShippingCosts.Size = new System.Drawing.Size(170, 59);
             this.btnShippingCosts.TabIndex = 186;
@@ -5147,7 +5147,7 @@
             // 
             // panelCalcButtons
             // 
-            this.panelCalcButtons.Controls.Add(this.checkBox1);
+            this.panelCalcButtons.Controls.Add(this.cbAutoRounding);
             this.panelCalcButtons.Controls.Add(this.tbMinorPriceAdjustment);
             this.panelCalcButtons.Controls.Add(this.label13);
             this.panelCalcButtons.Controls.Add(this.currencySelectionGroup);
@@ -5178,24 +5178,25 @@
             this.panelCalcButtons.Size = new System.Drawing.Size(644, 687);
             this.panelCalcButtons.TabIndex = 192;
             // 
-            // checkBox1
+            // cbAutoRounding
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(323, 441);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(214, 35);
-            this.checkBox1.TabIndex = 195;
-            this.checkBox1.Text = "Auto-Rounding";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbAutoRounding.AutoSize = true;
+            this.cbAutoRounding.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAutoRounding.Location = new System.Drawing.Point(323, 441);
+            this.cbAutoRounding.Margin = new System.Windows.Forms.Padding(2);
+            this.cbAutoRounding.Name = "cbAutoRounding";
+            this.cbAutoRounding.Size = new System.Drawing.Size(214, 35);
+            this.cbAutoRounding.TabIndex = 195;
+            this.cbAutoRounding.Text = "Auto-Rounding";
+            this.cbAutoRounding.UseVisualStyleBackColor = true;
+            this.cbAutoRounding.CheckedChanged += new System.EventHandler(this.cbAutoRounding_CheckedChanged);
             // 
             // tbMinorPriceAdjustment
             // 
             this.tbMinorPriceAdjustment.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMinorPriceAdjustment.ForeColor = System.Drawing.Color.Black;
             this.tbMinorPriceAdjustment.Location = new System.Drawing.Point(203, 437);
-            this.tbMinorPriceAdjustment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMinorPriceAdjustment.Margin = new System.Windows.Forms.Padding(2);
             this.tbMinorPriceAdjustment.Name = "tbMinorPriceAdjustment";
             this.tbMinorPriceAdjustment.Size = new System.Drawing.Size(102, 44);
             this.tbMinorPriceAdjustment.TabIndex = 193;
@@ -5230,7 +5231,7 @@
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(35, 281);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(170, 59);
             this.button5.TabIndex = 191;
@@ -5243,7 +5244,7 @@
             // 
             this.btnCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCurrency.Location = new System.Drawing.Point(7, 26);
-            this.btnCurrency.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCurrency.Margin = new System.Windows.Forms.Padding(2);
             this.btnCurrency.Name = "btnCurrency";
             this.btnCurrency.Size = new System.Drawing.Size(93, 59);
             this.btnCurrency.TabIndex = 190;
@@ -5345,7 +5346,7 @@
             // 
             this.btPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPanel1.Location = new System.Drawing.Point(12, 26);
-            this.btPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.btPanel1.Name = "btPanel1";
             this.btPanel1.Size = new System.Drawing.Size(84, 58);
             this.btPanel1.TabIndex = 420;
@@ -5357,7 +5358,7 @@
             // 
             this.btNewPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btNewPanel.Location = new System.Drawing.Point(100, 26);
-            this.btNewPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btNewPanel.Margin = new System.Windows.Forms.Padding(2);
             this.btNewPanel.Name = "btNewPanel";
             this.btNewPanel.Size = new System.Drawing.Size(84, 58);
             this.btNewPanel.TabIndex = 432;
@@ -5369,7 +5370,7 @@
             // 
             this.btPanel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPanel12.Location = new System.Drawing.Point(12, 705);
-            this.btPanel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPanel12.Margin = new System.Windows.Forms.Padding(2);
             this.btPanel12.Name = "btPanel12";
             this.btPanel12.Size = new System.Drawing.Size(84, 58);
             this.btPanel12.TabIndex = 431;
@@ -5381,7 +5382,7 @@
             // 
             this.btPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPanel2.Location = new System.Drawing.Point(12, 88);
-            this.btPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.btPanel2.Name = "btPanel2";
             this.btPanel2.Size = new System.Drawing.Size(84, 58);
             this.btPanel2.TabIndex = 421;
@@ -5393,7 +5394,7 @@
             // 
             this.btPanel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPanel11.Location = new System.Drawing.Point(12, 643);
-            this.btPanel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPanel11.Margin = new System.Windows.Forms.Padding(2);
             this.btPanel11.Name = "btPanel11";
             this.btPanel11.Size = new System.Drawing.Size(84, 58);
             this.btPanel11.TabIndex = 430;
@@ -5405,7 +5406,7 @@
             // 
             this.btPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPanel3.Location = new System.Drawing.Point(12, 149);
-            this.btPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.btPanel3.Name = "btPanel3";
             this.btPanel3.Size = new System.Drawing.Size(84, 58);
             this.btPanel3.TabIndex = 422;
@@ -5417,7 +5418,7 @@
             // 
             this.btPanel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPanel10.Location = new System.Drawing.Point(12, 582);
-            this.btPanel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPanel10.Margin = new System.Windows.Forms.Padding(2);
             this.btPanel10.Name = "btPanel10";
             this.btPanel10.Size = new System.Drawing.Size(84, 58);
             this.btPanel10.TabIndex = 429;
@@ -5429,7 +5430,7 @@
             // 
             this.btPanel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPanel4.Location = new System.Drawing.Point(12, 211);
-            this.btPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.btPanel4.Name = "btPanel4";
             this.btPanel4.Size = new System.Drawing.Size(84, 58);
             this.btPanel4.TabIndex = 423;
@@ -5441,7 +5442,7 @@
             // 
             this.btPanel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPanel9.Location = new System.Drawing.Point(12, 520);
-            this.btPanel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPanel9.Margin = new System.Windows.Forms.Padding(2);
             this.btPanel9.Name = "btPanel9";
             this.btPanel9.Size = new System.Drawing.Size(84, 58);
             this.btPanel9.TabIndex = 428;
@@ -5453,7 +5454,7 @@
             // 
             this.btPanel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPanel5.Location = new System.Drawing.Point(12, 273);
-            this.btPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.btPanel5.Name = "btPanel5";
             this.btPanel5.Size = new System.Drawing.Size(84, 58);
             this.btPanel5.TabIndex = 424;
@@ -5465,7 +5466,7 @@
             // 
             this.btPanel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPanel8.Location = new System.Drawing.Point(12, 458);
-            this.btPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPanel8.Margin = new System.Windows.Forms.Padding(2);
             this.btPanel8.Name = "btPanel8";
             this.btPanel8.Size = new System.Drawing.Size(84, 58);
             this.btPanel8.TabIndex = 427;
@@ -5477,7 +5478,7 @@
             // 
             this.btPanel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPanel6.Location = new System.Drawing.Point(12, 335);
-            this.btPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.btPanel6.Name = "btPanel6";
             this.btPanel6.Size = new System.Drawing.Size(84, 58);
             this.btPanel6.TabIndex = 425;
@@ -5489,7 +5490,7 @@
             // 
             this.btPanel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPanel7.Location = new System.Drawing.Point(12, 396);
-            this.btPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.btPanel7.Name = "btPanel7";
             this.btPanel7.Size = new System.Drawing.Size(84, 58);
             this.btPanel7.TabIndex = 426;
@@ -5501,7 +5502,6 @@
             // 
             this.panelLift1.AutoScroll = true;
             this.panelLift1.BackColor = System.Drawing.Color.SlateGray;
-            this.panelLift1.Controls.Add(this.label50);
             this.panelLift1.Controls.Add(this.groupBox26);
             this.panelLift1.Controls.Add(this.tbShaftWidth);
             this.panelLift1.Controls.Add(this.groupBox21);
@@ -5537,28 +5537,16 @@
             this.panelLift1.Controls.Add(this.groupBox35);
             this.panelLift1.Controls.Add(this.tbNumofLandings);
             this.panelLift1.Controls.Add(this.groupBox36);
-            this.panelLift1.Controls.Add(this.label82);
             this.panelLift1.Controls.Add(this.groupBox34);
-            this.panelLift1.Controls.Add(this.tbfname);
-            this.panelLift1.Controls.Add(this.label83);
             this.panelLift1.Controls.Add(this.label84);
-            this.panelLift1.Controls.Add(this.tbphone);
             this.panelLift1.Controls.Add(this.label85);
-            this.panelLift1.Controls.Add(this.label86);
             this.panelLift1.Controls.Add(this.groupBox31);
-            this.panelLift1.Controls.Add(this.tblname);
             this.panelLift1.Controls.Add(this.groupBox32);
-            this.panelLift1.Controls.Add(this.label87);
             this.panelLift1.Controls.Add(this.groupBox30);
-            this.panelLift1.Controls.Add(this.tbAddress1);
             this.panelLift1.Controls.Add(this.groupBox33);
-            this.panelLift1.Controls.Add(this.label88);
             this.panelLift1.Controls.Add(this.groupBox29);
-            this.panelLift1.Controls.Add(this.tbAddress2);
             this.panelLift1.Controls.Add(this.tbKeyswitchLocation);
-            this.panelLift1.Controls.Add(this.label89);
             this.panelLift1.Controls.Add(this.label90);
-            this.panelLift1.Controls.Add(this.tbAddress3);
             this.panelLift1.Controls.Add(this.groupBox28);
             this.panelLift1.Controls.Add(this.groupBox1);
             this.panelLift1.Controls.Add(this.groupBox18);
@@ -5608,30 +5596,18 @@
             this.panelLift1.Controls.Add(this.tbDoorWidth);
             this.panelLift1.Controls.Add(this.tbDoorHeight);
             this.panelLift1.Controls.Add(this.label106);
-            this.panelLift1.Location = new System.Drawing.Point(1243, 391);
-            this.panelLift1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLift1.Location = new System.Drawing.Point(1178, 257);
+            this.panelLift1.Margin = new System.Windows.Forms.Padding(2);
             this.panelLift1.Name = "panelLift1";
             this.panelLift1.Size = new System.Drawing.Size(689, 794);
             this.panelLift1.TabIndex = 405;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.ForeColor = System.Drawing.Color.Black;
-            this.label50.Location = new System.Drawing.Point(195, 18);
-            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(341, 26);
-            this.label50.TabIndex = 327;
-            this.label50.Text = "Who is the contact for this job?";
             // 
             // groupBox26
             // 
             this.groupBox26.Controls.Add(this.rbPositionIndicatorTypeSurfaceMount);
             this.groupBox26.Controls.Add(this.rbPositionIndicatorTypeFlushMount);
             this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox26.Location = new System.Drawing.Point(401, 2708);
+            this.groupBox26.Location = new System.Drawing.Point(417, 2381);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Size = new System.Drawing.Size(224, 131);
             this.groupBox26.TabIndex = 389;
@@ -5664,8 +5640,8 @@
             // 
             this.tbShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbShaftWidth.ForeColor = System.Drawing.Color.Black;
-            this.tbShaftWidth.Location = new System.Drawing.Point(240, 875);
-            this.tbShaftWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbShaftWidth.Location = new System.Drawing.Point(251, 564);
+            this.tbShaftWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tbShaftWidth.Name = "tbShaftWidth";
             this.tbShaftWidth.Size = new System.Drawing.Size(100, 32);
             this.tbShaftWidth.TabIndex = 303;
@@ -5676,7 +5652,7 @@
             this.groupBox21.Controls.Add(this.rbFalseCeilingNo);
             this.groupBox21.Controls.Add(this.rbFalseCeilingYes);
             this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox21.Location = new System.Drawing.Point(95, 2192);
+            this.groupBox21.Location = new System.Drawing.Point(88, 1865);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Size = new System.Drawing.Size(240, 60);
             this.groupBox21.TabIndex = 376;
@@ -5710,7 +5686,7 @@
             this.groupBox3.Controls.Add(this.rbLoadWeighingNo);
             this.groupBox3.Controls.Add(this.rbLoadWeighingYes);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(150, 735);
+            this.groupBox3.Location = new System.Drawing.Point(135, 430);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(199, 63);
             this.groupBox3.TabIndex = 340;
@@ -5747,7 +5723,7 @@
             this.groupBox22.Controls.Add(this.rbCeilingFinishOther);
             this.groupBox22.Controls.Add(this.rbCeilingFinishBrushedStasinlessSteel);
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox22.Location = new System.Drawing.Point(95, 1951);
+            this.groupBox22.Location = new System.Drawing.Point(88, 1624);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.Size = new System.Drawing.Size(240, 169);
             this.groupBox22.TabIndex = 375;
@@ -5779,7 +5755,7 @@
             this.tbCeilingFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCeilingFinish.ForeColor = System.Drawing.Color.Black;
             this.tbCeilingFinish.Location = new System.Drawing.Point(25, 122);
-            this.tbCeilingFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCeilingFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tbCeilingFinish.Name = "tbCeilingFinish";
             this.tbCeilingFinish.Size = new System.Drawing.Size(199, 32);
             this.tbCeilingFinish.TabIndex = 76;
@@ -5811,7 +5787,7 @@
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.ForeColor = System.Drawing.Color.Black;
-            this.label52.Location = new System.Drawing.Point(240, 521);
+            this.label52.Location = new System.Drawing.Point(225, 216);
             this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(189, 26);
@@ -5824,7 +5800,7 @@
             this.groupBox23.Controls.Add(this.rbSideWallOther);
             this.groupBox23.Controls.Add(this.rbSideWallBrushedStainlessSteel);
             this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox23.Location = new System.Drawing.Point(342, 2174);
+            this.groupBox23.Location = new System.Drawing.Point(335, 1847);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Size = new System.Drawing.Size(253, 98);
             this.groupBox23.TabIndex = 371;
@@ -5836,7 +5812,7 @@
             this.tbSideWall.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSideWall.ForeColor = System.Drawing.Color.Black;
             this.tbSideWall.Location = new System.Drawing.Point(26, 56);
-            this.tbSideWall.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSideWall.Margin = new System.Windows.Forms.Padding(2);
             this.tbSideWall.Name = "tbSideWall";
             this.tbSideWall.Size = new System.Drawing.Size(199, 32);
             this.tbSideWall.TabIndex = 76;
@@ -5868,7 +5844,7 @@
             this.groupBox4.Controls.Add(this.rbIndependentServiceNo);
             this.groupBox4.Controls.Add(this.rbIndependentServiceYes);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(150, 558);
+            this.groupBox4.Location = new System.Drawing.Point(135, 253);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(199, 63);
             this.groupBox4.TabIndex = 337;
@@ -5903,7 +5879,7 @@
             this.groupBox24.Controls.Add(this.tbFrontWallOther);
             this.groupBox24.Controls.Add(this.rbFrontWallBrushedStainlessSteel);
             this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox24.Location = new System.Drawing.Point(342, 1846);
+            this.groupBox24.Location = new System.Drawing.Point(335, 1519);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(253, 99);
             this.groupBox24.TabIndex = 372;
@@ -5915,7 +5891,7 @@
             this.tbFrontWall.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFrontWall.ForeColor = System.Drawing.Color.Black;
             this.tbFrontWall.Location = new System.Drawing.Point(25, 57);
-            this.tbFrontWall.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbFrontWall.Margin = new System.Windows.Forms.Padding(2);
             this.tbFrontWall.Name = "tbFrontWall";
             this.tbFrontWall.Size = new System.Drawing.Size(199, 32);
             this.tbFrontWall.TabIndex = 76;
@@ -5947,7 +5923,7 @@
             this.groupBox2.Controls.Add(this.rbFireServiceNo);
             this.groupBox2.Controls.Add(this.rbFireServiceYes);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(150, 628);
+            this.groupBox2.Location = new System.Drawing.Point(135, 323);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(199, 101);
             this.groupBox2.TabIndex = 338;
@@ -5981,7 +5957,7 @@
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.Black;
-            this.label54.Location = new System.Drawing.Point(29, 2528);
+            this.label54.Location = new System.Drawing.Point(45, 2201);
             this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(179, 26);
@@ -5993,7 +5969,7 @@
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.Black;
-            this.label56.Location = new System.Drawing.Point(248, 831);
+            this.label56.Location = new System.Drawing.Point(259, 520);
             this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(149, 26);
@@ -6005,7 +5981,7 @@
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.Black;
-            this.label58.Location = new System.Drawing.Point(232, 1468);
+            this.label58.Location = new System.Drawing.Point(228, 1145);
             this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(209, 26);
@@ -6017,7 +5993,7 @@
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.ForeColor = System.Drawing.Color.Black;
-            this.label60.Location = new System.Drawing.Point(56, 878);
+            this.label60.Location = new System.Drawing.Point(67, 567);
             this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(183, 26);
@@ -6030,7 +6006,7 @@
             this.groupBox25.Controls.Add(this.rbCarDoorFinishOther);
             this.groupBox25.Controls.Add(this.rbCarDoorFInishBrushedStainlessSteel);
             this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox25.Location = new System.Drawing.Point(95, 1847);
+            this.groupBox25.Location = new System.Drawing.Point(88, 1520);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Size = new System.Drawing.Size(240, 98);
             this.groupBox25.TabIndex = 370;
@@ -6042,7 +6018,7 @@
             this.tbCarDoorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCarDoorFinish.ForeColor = System.Drawing.Color.Black;
             this.tbCarDoorFinish.Location = new System.Drawing.Point(25, 56);
-            this.tbCarDoorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCarDoorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tbCarDoorFinish.Name = "tbCarDoorFinish";
             this.tbCarDoorFinish.Size = new System.Drawing.Size(199, 32);
             this.tbCarDoorFinish.TabIndex = 76;
@@ -6074,7 +6050,7 @@
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.ForeColor = System.Drawing.Color.Black;
-            this.label62.Location = new System.Drawing.Point(56, 914);
+            this.label62.Location = new System.Drawing.Point(67, 603);
             this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(185, 26);
@@ -6086,7 +6062,7 @@
             this.label64.AutoSize = true;
             this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label64.ForeColor = System.Drawing.Color.Black;
-            this.label64.Location = new System.Drawing.Point(244, 1819);
+            this.label64.Location = new System.Drawing.Point(237, 1492);
             this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(186, 26);
@@ -6097,8 +6073,8 @@
             // 
             this.tbShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbShaftDepth.ForeColor = System.Drawing.Color.Black;
-            this.tbShaftDepth.Location = new System.Drawing.Point(240, 911);
-            this.tbShaftDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbShaftDepth.Location = new System.Drawing.Point(251, 600);
+            this.tbShaftDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tbShaftDepth.Name = "tbShaftDepth";
             this.tbShaftDepth.Size = new System.Drawing.Size(100, 32);
             this.tbShaftDepth.TabIndex = 304;
@@ -6108,8 +6084,8 @@
             // 
             this.tbAuxCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAuxCOPLocation.ForeColor = System.Drawing.Color.Black;
-            this.tbAuxCOPLocation.Location = new System.Drawing.Point(211, 2597);
-            this.tbAuxCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAuxCOPLocation.Location = new System.Drawing.Point(227, 2270);
+            this.tbAuxCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tbAuxCOPLocation.Name = "tbAuxCOPLocation";
             this.tbAuxCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tbAuxCOPLocation.TabIndex = 322;
@@ -6121,7 +6097,7 @@
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label66.ForeColor = System.Drawing.Color.Black;
-            this.label66.Location = new System.Drawing.Point(80, 950);
+            this.label66.Location = new System.Drawing.Point(91, 639);
             this.label66.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(160, 26);
@@ -6133,7 +6109,7 @@
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.ForeColor = System.Drawing.Color.Black;
-            this.label70.Location = new System.Drawing.Point(15, 2600);
+            this.label70.Location = new System.Drawing.Point(31, 2273);
             this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(192, 26);
@@ -6144,8 +6120,8 @@
             // 
             this.tbPitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPitDepth.ForeColor = System.Drawing.Color.Black;
-            this.tbPitDepth.Location = new System.Drawing.Point(240, 947);
-            this.tbPitDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPitDepth.Location = new System.Drawing.Point(251, 636);
+            this.tbPitDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tbPitDepth.Name = "tbPitDepth";
             this.tbPitDepth.Size = new System.Drawing.Size(100, 32);
             this.tbPitDepth.TabIndex = 305;
@@ -6155,8 +6131,8 @@
             // 
             this.tbMainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMainCOPLocation.ForeColor = System.Drawing.Color.Black;
-            this.tbMainCOPLocation.Location = new System.Drawing.Point(211, 2561);
-            this.tbMainCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMainCOPLocation.Location = new System.Drawing.Point(227, 2234);
+            this.tbMainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainCOPLocation.Name = "tbMainCOPLocation";
             this.tbMainCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tbMainCOPLocation.TabIndex = 321;
@@ -6168,7 +6144,7 @@
             this.label72.AutoSize = true;
             this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label72.ForeColor = System.Drawing.Color.Black;
-            this.label72.Location = new System.Drawing.Point(67, 986);
+            this.label72.Location = new System.Drawing.Point(78, 675);
             this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(172, 26);
@@ -6180,7 +6156,7 @@
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label74.ForeColor = System.Drawing.Color.Black;
-            this.label74.Location = new System.Drawing.Point(6, 2564);
+            this.label74.Location = new System.Drawing.Point(22, 2237);
             this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(201, 26);
@@ -6191,8 +6167,8 @@
             // 
             this.tbHeadroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbHeadroom.ForeColor = System.Drawing.Color.Black;
-            this.tbHeadroom.Location = new System.Drawing.Point(240, 983);
-            this.tbHeadroom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbHeadroom.Location = new System.Drawing.Point(251, 672);
+            this.tbHeadroom.Margin = new System.Windows.Forms.Padding(2);
             this.tbHeadroom.Name = "tbHeadroom";
             this.tbHeadroom.Size = new System.Drawing.Size(100, 32);
             this.tbHeadroom.TabIndex = 306;
@@ -6202,8 +6178,8 @@
             // 
             this.tbNumberOfCOPS.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNumberOfCOPS.ForeColor = System.Drawing.Color.Black;
-            this.tbNumberOfCOPS.Location = new System.Drawing.Point(211, 2525);
-            this.tbNumberOfCOPS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNumberOfCOPS.Location = new System.Drawing.Point(227, 2198);
+            this.tbNumberOfCOPS.Margin = new System.Windows.Forms.Padding(2);
             this.tbNumberOfCOPS.Name = "tbNumberOfCOPS";
             this.tbNumberOfCOPS.Size = new System.Drawing.Size(100, 32);
             this.tbNumberOfCOPS.TabIndex = 320;
@@ -6215,7 +6191,7 @@
             this.label76.AutoSize = true;
             this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label76.ForeColor = System.Drawing.Color.Black;
-            this.label76.Location = new System.Drawing.Point(111, 1022);
+            this.label76.Location = new System.Drawing.Point(122, 711);
             this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(129, 26);
@@ -6227,7 +6203,7 @@
             this.label78.AutoSize = true;
             this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label78.ForeColor = System.Drawing.Color.Black;
-            this.label78.Location = new System.Drawing.Point(221, 2486);
+            this.label78.Location = new System.Drawing.Point(237, 2159);
             this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(203, 26);
@@ -6238,8 +6214,8 @@
             // 
             this.tbTravel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTravel.ForeColor = System.Drawing.Color.Black;
-            this.tbTravel.Location = new System.Drawing.Point(240, 1019);
-            this.tbTravel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbTravel.Location = new System.Drawing.Point(251, 708);
+            this.tbTravel.Margin = new System.Windows.Forms.Padding(2);
             this.tbTravel.Name = "tbTravel";
             this.tbTravel.Size = new System.Drawing.Size(100, 32);
             this.tbTravel.TabIndex = 307;
@@ -6251,7 +6227,7 @@
             this.label80.Enabled = false;
             this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label80.ForeColor = System.Drawing.Color.Black;
-            this.label80.Location = new System.Drawing.Point(293, 3352);
+            this.label80.Location = new System.Drawing.Point(313, 3018);
             this.label80.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(12, 52);
@@ -6264,7 +6240,7 @@
             this.label81.AutoSize = true;
             this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label81.ForeColor = System.Drawing.Color.Black;
-            this.label81.Location = new System.Drawing.Point(94, 1058);
+            this.label81.Location = new System.Drawing.Point(105, 747);
             this.label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(142, 26);
@@ -6276,7 +6252,7 @@
             this.groupBox35.Controls.Add(this.rbOutofServiceNo);
             this.groupBox35.Controls.Add(this.rbOutofServiceYes);
             this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox35.Location = new System.Drawing.Point(398, 3268);
+            this.groupBox35.Location = new System.Drawing.Point(418, 2934);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Size = new System.Drawing.Size(183, 60);
             this.groupBox35.TabIndex = 399;
@@ -6309,8 +6285,8 @@
             // 
             this.tbNumofLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNumofLandings.ForeColor = System.Drawing.Color.Black;
-            this.tbNumofLandings.Location = new System.Drawing.Point(240, 1055);
-            this.tbNumofLandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNumofLandings.Location = new System.Drawing.Point(251, 744);
+            this.tbNumofLandings.Margin = new System.Windows.Forms.Padding(2);
             this.tbNumofLandings.Name = "tbNumofLandings";
             this.tbNumofLandings.Size = new System.Drawing.Size(100, 32);
             this.tbNumofLandings.TabIndex = 308;
@@ -6321,7 +6297,7 @@
             this.groupBox36.Controls.Add(this.rbEmergencyLoweringSystemNo);
             this.groupBox36.Controls.Add(this.rbEmergencyLoweringSystemYes);
             this.groupBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox36.Location = new System.Drawing.Point(95, 3268);
+            this.groupBox36.Location = new System.Drawing.Point(115, 2934);
             this.groupBox36.Name = "groupBox36";
             this.groupBox36.Size = new System.Drawing.Size(275, 60);
             this.groupBox36.TabIndex = 400;
@@ -6350,25 +6326,13 @@
             this.rbEmergencyLoweringSystemYes.Text = "Yes";
             this.rbEmergencyLoweringSystemYes.UseVisualStyleBackColor = true;
             // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.ForeColor = System.Drawing.Color.Black;
-            this.label82.Location = new System.Drawing.Point(14, 81);
-            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(119, 26);
-            this.label82.TabIndex = 325;
-            this.label82.Text = "First Name";
-            // 
             // groupBox34
             // 
             this.groupBox34.Controls.Add(this.rbFacePlateMaterialOther);
             this.groupBox34.Controls.Add(this.tbFacePlateMaterial);
             this.groupBox34.Controls.Add(this.rbFacePlateMaterialSatinStainlessSteel);
             this.groupBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox34.Location = new System.Drawing.Point(219, 3088);
+            this.groupBox34.Location = new System.Drawing.Point(239, 2754);
             this.groupBox34.Name = "groupBox34";
             this.groupBox34.Size = new System.Drawing.Size(243, 104);
             this.groupBox34.TabIndex = 397;
@@ -6389,7 +6353,7 @@
             this.tbFacePlateMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFacePlateMaterial.ForeColor = System.Drawing.Color.Black;
             this.tbFacePlateMaterial.Location = new System.Drawing.Point(25, 61);
-            this.tbFacePlateMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbFacePlateMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.tbFacePlateMaterial.Name = "tbFacePlateMaterial";
             this.tbFacePlateMaterial.Size = new System.Drawing.Size(203, 32);
             this.tbFacePlateMaterial.TabIndex = 95;
@@ -6407,82 +6371,36 @@
             this.rbFacePlateMaterialSatinStainlessSteel.Text = "Satin Stainless Steel";
             this.rbFacePlateMaterialSatinStainlessSteel.UseVisualStyleBackColor = true;
             // 
-            // tbfname
-            // 
-            this.tbfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbfname.ForeColor = System.Drawing.Color.Black;
-            this.tbfname.Location = new System.Drawing.Point(129, 81);
-            this.tbfname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbfname.Name = "tbfname";
-            this.tbfname.Size = new System.Drawing.Size(198, 32);
-            this.tbfname.TabIndex = 295;
-            this.tbfname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label83.ForeColor = System.Drawing.Color.Black;
-            this.label83.Location = new System.Drawing.Point(33, 120);
-            this.label83.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(93, 26);
-            this.label83.TabIndex = 326;
-            this.label83.Text = "Phone #";
-            // 
             // label84
             // 
             this.label84.AutoSize = true;
             this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label84.ForeColor = System.Drawing.Color.Black;
-            this.label84.Location = new System.Drawing.Point(293, 3229);
+            this.label84.Location = new System.Drawing.Point(313, 2895);
             this.label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label84.Name = "label84";
             this.label84.Size = new System.Drawing.Size(96, 26);
             this.label84.TabIndex = 398;
             this.label84.Text = "General";
             // 
-            // tbphone
-            // 
-            this.tbphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbphone.ForeColor = System.Drawing.Color.Black;
-            this.tbphone.Location = new System.Drawing.Point(129, 116);
-            this.tbphone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbphone.Name = "tbphone";
-            this.tbphone.Size = new System.Drawing.Size(198, 32);
-            this.tbphone.TabIndex = 297;
-            this.tbphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label85
             // 
             this.label85.AutoSize = true;
             this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label85.ForeColor = System.Drawing.Color.Black;
-            this.label85.Location = new System.Drawing.Point(227, 3048);
+            this.label85.Location = new System.Drawing.Point(247, 2714);
             this.label85.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(249, 26);
             this.label85.TabIndex = 396;
             this.label85.Text = "Landing Appointments";
             // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label86.ForeColor = System.Drawing.Color.Black;
-            this.label86.Location = new System.Drawing.Point(335, 81);
-            this.label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(118, 26);
-            this.label86.TabIndex = 328;
-            this.label86.Text = "Last Name";
-            // 
             // groupBox31
             // 
             this.groupBox31.Controls.Add(this.rbVoiceAnnunciationNo);
             this.groupBox31.Controls.Add(this.rbVoiceAnnunciationYes);
             this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox31.Location = new System.Drawing.Point(11, 2943);
+            this.groupBox31.Location = new System.Drawing.Point(27, 2616);
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Size = new System.Drawing.Size(229, 60);
             this.groupBox31.TabIndex = 395;
@@ -6511,23 +6429,12 @@
             this.rbVoiceAnnunciationYes.Text = "Yes";
             this.rbVoiceAnnunciationYes.UseVisualStyleBackColor = true;
             // 
-            // tblname
-            // 
-            this.tblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tblname.ForeColor = System.Drawing.Color.Black;
-            this.tblname.Location = new System.Drawing.Point(450, 81);
-            this.tblname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tblname.Name = "tblname";
-            this.tblname.Size = new System.Drawing.Size(198, 32);
-            this.tblname.TabIndex = 296;
-            this.tblname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // groupBox32
             // 
             this.groupBox32.Controls.Add(this.rbSecurityKeySwitchNo);
             this.groupBox32.Controls.Add(this.rbSecurityKeySwitchYes);
             this.groupBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox32.Location = new System.Drawing.Point(247, 2909);
+            this.groupBox32.Location = new System.Drawing.Point(263, 2582);
             this.groupBox32.Name = "groupBox32";
             this.groupBox32.Size = new System.Drawing.Size(224, 60);
             this.groupBox32.TabIndex = 394;
@@ -6556,24 +6463,12 @@
             this.rbSecurityKeySwitchYes.Text = "Yes";
             this.rbSecurityKeySwitchYes.UseVisualStyleBackColor = true;
             // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.ForeColor = System.Drawing.Color.Black;
-            this.label87.Location = new System.Drawing.Point(90, 171);
-            this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(157, 26);
-            this.label87.TabIndex = 329;
-            this.label87.Text = "Address Line 1";
-            // 
             // groupBox30
             // 
             this.groupBox30.Controls.Add(this.rbRearDoorKeySwitchNo);
             this.groupBox30.Controls.Add(this.rbRearDoorKeySwitchYes);
             this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox30.Location = new System.Drawing.Point(9, 2815);
+            this.groupBox30.Location = new System.Drawing.Point(25, 2488);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.Size = new System.Drawing.Size(231, 60);
             this.groupBox30.TabIndex = 391;
@@ -6602,23 +6497,12 @@
             this.rbRearDoorKeySwitchYes.Text = "Yes";
             this.rbRearDoorKeySwitchYes.UseVisualStyleBackColor = true;
             // 
-            // tbAddress1
-            // 
-            this.tbAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAddress1.ForeColor = System.Drawing.Color.Black;
-            this.tbAddress1.Location = new System.Drawing.Point(251, 168);
-            this.tbAddress1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbAddress1.Name = "tbAddress1";
-            this.tbAddress1.Size = new System.Drawing.Size(329, 32);
-            this.tbAddress1.TabIndex = 298;
-            this.tbAddress1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // groupBox33
             // 
             this.groupBox33.Controls.Add(this.rbExclusiveServiceNo);
             this.groupBox33.Controls.Add(this.rbExclusiveServiceYes);
             this.groupBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox33.Location = new System.Drawing.Point(247, 2843);
+            this.groupBox33.Location = new System.Drawing.Point(263, 2516);
             this.groupBox33.Name = "groupBox33";
             this.groupBox33.Size = new System.Drawing.Size(224, 60);
             this.groupBox33.TabIndex = 393;
@@ -6647,24 +6531,12 @@
             this.rbExclusiveServiceYes.Text = "Yes";
             this.rbExclusiveServiceYes.UseVisualStyleBackColor = true;
             // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.ForeColor = System.Drawing.Color.Black;
-            this.label88.Location = new System.Drawing.Point(90, 207);
-            this.label88.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(157, 26);
-            this.label88.TabIndex = 330;
-            this.label88.Text = "Address Line 2";
-            // 
             // groupBox29
             // 
             this.groupBox29.Controls.Add(this.rbGPOInCarNo);
             this.groupBox29.Controls.Add(this.rbGPOInCarYes);
             this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox29.Location = new System.Drawing.Point(9, 2877);
+            this.groupBox29.Location = new System.Drawing.Point(25, 2550);
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.Size = new System.Drawing.Size(231, 60);
             this.groupBox29.TabIndex = 392;
@@ -6693,63 +6565,29 @@
             this.rbGPOInCarYes.Text = "Yes";
             this.rbGPOInCarYes.UseVisualStyleBackColor = true;
             // 
-            // tbAddress2
-            // 
-            this.tbAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAddress2.ForeColor = System.Drawing.Color.Black;
-            this.tbAddress2.Location = new System.Drawing.Point(251, 204);
-            this.tbAddress2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbAddress2.Name = "tbAddress2";
-            this.tbAddress2.Size = new System.Drawing.Size(329, 32);
-            this.tbAddress2.TabIndex = 299;
-            this.tbAddress2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // tbKeyswitchLocation
             // 
             this.tbKeyswitchLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbKeyswitchLocation.ForeColor = System.Drawing.Color.Black;
-            this.tbKeyswitchLocation.Location = new System.Drawing.Point(211, 2633);
-            this.tbKeyswitchLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbKeyswitchLocation.Location = new System.Drawing.Point(227, 2306);
+            this.tbKeyswitchLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tbKeyswitchLocation.Name = "tbKeyswitchLocation";
             this.tbKeyswitchLocation.Size = new System.Drawing.Size(433, 32);
             this.tbKeyswitchLocation.TabIndex = 323;
             this.tbKeyswitchLocation.Text = "Main COP only";
             this.tbKeyswitchLocation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label89.ForeColor = System.Drawing.Color.Black;
-            this.label89.Location = new System.Drawing.Point(90, 243);
-            this.label89.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(157, 26);
-            this.label89.TabIndex = 331;
-            this.label89.Text = "Address Line 3";
-            // 
             // label90
             // 
             this.label90.AutoSize = true;
             this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label90.ForeColor = System.Drawing.Color.Black;
-            this.label90.Location = new System.Drawing.Point(6, 2636);
+            this.label90.Location = new System.Drawing.Point(22, 2309);
             this.label90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label90.Name = "label90";
             this.label90.Size = new System.Drawing.Size(199, 26);
             this.label90.TabIndex = 387;
             this.label90.Text = "Keyswitch Location";
-            // 
-            // tbAddress3
-            // 
-            this.tbAddress3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAddress3.ForeColor = System.Drawing.Color.Black;
-            this.tbAddress3.Location = new System.Drawing.Point(251, 240);
-            this.tbAddress3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbAddress3.Name = "tbAddress3";
-            this.tbAddress3.Size = new System.Drawing.Size(329, 32);
-            this.tbAddress3.TabIndex = 300;
-            this.tbAddress3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox28
             // 
@@ -6757,7 +6595,7 @@
             this.groupBox28.Controls.Add(this.rbCOPFinishOther);
             this.groupBox28.Controls.Add(this.rbCOPFinishSatinStainlessSteel);
             this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox28.Location = new System.Drawing.Point(10, 2708);
+            this.groupBox28.Location = new System.Drawing.Point(26, 2381);
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.Size = new System.Drawing.Size(230, 101);
             this.groupBox28.TabIndex = 386;
@@ -6769,7 +6607,7 @@
             this.tbCOPFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCOPFinish.ForeColor = System.Drawing.Color.Black;
             this.tbCOPFinish.Location = new System.Drawing.Point(23, 58);
-            this.tbCOPFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCOPFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tbCOPFinish.Name = "tbCOPFinish";
             this.tbCOPFinish.Size = new System.Drawing.Size(202, 32);
             this.tbCOPFinish.TabIndex = 76;
@@ -6802,7 +6640,7 @@
             this.groupBox1.Controls.Add(this.rbSL);
             this.groupBox1.Controls.Add(this.rbWittur);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(25, 346);
+            this.groupBox1.Location = new System.Drawing.Point(37, 62);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(220, 132);
             this.groupBox1.TabIndex = 335;
@@ -6848,7 +6686,7 @@
             this.groupBox18.Controls.Add(this.rbHandrailBrushedStainlessSTeel);
             this.groupBox18.Controls.Add(this.rbHandrailOther);
             this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox18.Location = new System.Drawing.Point(342, 2074);
+            this.groupBox18.Location = new System.Drawing.Point(335, 1747);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(253, 94);
             this.groupBox18.TabIndex = 380;
@@ -6860,7 +6698,7 @@
             this.tbHandrail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbHandrail.ForeColor = System.Drawing.Color.Black;
             this.tbHandrail.Location = new System.Drawing.Point(25, 52);
-            this.tbHandrail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbHandrail.Margin = new System.Windows.Forms.Padding(2);
             this.tbHandrail.Name = "tbHandrail";
             this.tbHandrail.Size = new System.Drawing.Size(199, 32);
             this.tbHandrail.TabIndex = 74;
@@ -6892,7 +6730,7 @@
             this.label91.AutoSize = true;
             this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label91.ForeColor = System.Drawing.Color.Black;
-            this.label91.Location = new System.Drawing.Point(161, 311);
+            this.label91.Location = new System.Drawing.Point(173, 27);
             this.label91.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label91.Name = "label91";
             this.label91.Size = new System.Drawing.Size(361, 26);
@@ -6903,7 +6741,7 @@
             // 
             this.groupBox19.Controls.Add(this.tbNumOfLEDLights);
             this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox19.Location = new System.Drawing.Point(95, 2259);
+            this.groupBox19.Location = new System.Drawing.Point(88, 1932);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(240, 70);
             this.groupBox19.TabIndex = 378;
@@ -6915,7 +6753,7 @@
             this.tbNumOfLEDLights.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNumOfLEDLights.ForeColor = System.Drawing.Color.Black;
             this.tbNumOfLEDLights.Location = new System.Drawing.Point(8, 27);
-            this.tbNumOfLEDLights.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNumOfLEDLights.Margin = new System.Windows.Forms.Padding(2);
             this.tbNumOfLEDLights.Name = "tbNumOfLEDLights";
             this.tbNumOfLEDLights.Size = new System.Drawing.Size(223, 32);
             this.tbNumOfLEDLights.TabIndex = 74;
@@ -6926,7 +6764,7 @@
             this.label92.AutoSize = true;
             this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label92.ForeColor = System.Drawing.Color.Black;
-            this.label92.Location = new System.Drawing.Point(262, 423);
+            this.label92.Location = new System.Drawing.Point(274, 139);
             this.label92.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label92.Name = "label92";
             this.label92.Size = new System.Drawing.Size(136, 26);
@@ -6940,7 +6778,7 @@
             this.groupBox20.Controls.Add(this.rbMirrorHalfSize);
             this.groupBox20.Controls.Add(this.rbMirrorFullSize);
             this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox20.Location = new System.Drawing.Point(342, 1951);
+            this.groupBox20.Location = new System.Drawing.Point(335, 1624);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Size = new System.Drawing.Size(253, 117);
             this.groupBox20.TabIndex = 374;
@@ -6952,7 +6790,7 @@
             this.tbMirror.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMirror.ForeColor = System.Drawing.Color.Black;
             this.tbMirror.Location = new System.Drawing.Point(25, 78);
-            this.tbMirror.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMirror.Margin = new System.Windows.Forms.Padding(2);
             this.tbMirror.Name = "tbMirror";
             this.tbMirror.Size = new System.Drawing.Size(199, 32);
             this.tbMirror.TabIndex = 78;
@@ -6992,8 +6830,8 @@
             // 
             this.tbLiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLiftNumbers.ForeColor = System.Drawing.Color.Black;
-            this.tbLiftNumbers.Location = new System.Drawing.Point(398, 421);
-            this.tbLiftNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLiftNumbers.Location = new System.Drawing.Point(410, 137);
+            this.tbLiftNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.tbLiftNumbers.Name = "tbLiftNumbers";
             this.tbLiftNumbers.Size = new System.Drawing.Size(236, 32);
             this.tbLiftNumbers.TabIndex = 302;
@@ -7004,7 +6842,7 @@
             this.label93.AutoSize = true;
             this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label93.ForeColor = System.Drawing.Color.Black;
-            this.label93.Location = new System.Drawing.Point(69, 2674);
+            this.label93.Location = new System.Drawing.Point(85, 2347);
             this.label93.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(138, 26);
@@ -7016,7 +6854,7 @@
             this.label94.AutoSize = true;
             this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label94.ForeColor = System.Drawing.Color.Black;
-            this.label94.Location = new System.Drawing.Point(277, 374);
+            this.label94.Location = new System.Drawing.Point(289, 90);
             this.label94.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(118, 26);
@@ -7028,7 +6866,7 @@
             this.groupBox17.Controls.Add(this.rbBumpRailNo);
             this.groupBox17.Controls.Add(this.rbBumpRailYes);
             this.groupBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox17.Location = new System.Drawing.Point(95, 2126);
+            this.groupBox17.Location = new System.Drawing.Point(88, 1799);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(240, 60);
             this.groupBox17.TabIndex = 377;
@@ -7061,8 +6899,8 @@
             // 
             this.tbTypeofLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTypeofLift.ForeColor = System.Drawing.Color.Black;
-            this.tbTypeofLift.Location = new System.Drawing.Point(398, 371);
-            this.tbTypeofLift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbTypeofLift.Location = new System.Drawing.Point(410, 87);
+            this.tbTypeofLift.Margin = new System.Windows.Forms.Padding(2);
             this.tbTypeofLift.Name = "tbTypeofLift";
             this.tbTypeofLift.Size = new System.Drawing.Size(236, 32);
             this.tbTypeofLift.TabIndex = 301;
@@ -7075,7 +6913,7 @@
             this.groupBox27.Controls.Add(this.rbLEDColourRed);
             this.groupBox27.Controls.Add(this.rbLEDColourBlue);
             this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox27.Location = new System.Drawing.Point(247, 2708);
+            this.groupBox27.Location = new System.Drawing.Point(263, 2381);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.Size = new System.Drawing.Size(148, 131);
             this.groupBox27.TabIndex = 388;
@@ -7122,7 +6960,7 @@
             this.groupBox6.Controls.Add(this.rbControlerLoactionTopLanding);
             this.groupBox6.Controls.Add(this.rbControlerlocationShaft);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(357, 558);
+            this.groupBox6.Location = new System.Drawing.Point(342, 253);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(191, 170);
             this.groupBox6.TabIndex = 339;
@@ -7183,7 +7021,7 @@
             // 
             this.groupBox16.Controls.Add(this.tbFloorFinish);
             this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox16.Location = new System.Drawing.Point(95, 2334);
+            this.groupBox16.Location = new System.Drawing.Point(88, 2007);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(240, 72);
             this.groupBox16.TabIndex = 381;
@@ -7195,7 +7033,7 @@
             this.tbFloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFloorFinish.ForeColor = System.Drawing.Color.Black;
             this.tbFloorFinish.Location = new System.Drawing.Point(10, 33);
-            this.tbFloorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbFloorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tbFloorFinish.Name = "tbFloorFinish";
             this.tbFloorFinish.Size = new System.Drawing.Size(221, 32);
             this.tbFloorFinish.TabIndex = 75;
@@ -7206,7 +7044,7 @@
             this.label95.AutoSize = true;
             this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label95.ForeColor = System.Drawing.Color.Black;
-            this.label95.Location = new System.Drawing.Point(41, 1094);
+            this.label95.Location = new System.Drawing.Point(52, 783);
             this.label95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label95.Name = "label95";
             this.label95.Size = new System.Drawing.Size(195, 26);
@@ -7217,8 +7055,8 @@
             // 
             this.tbDesignations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDesignations.ForeColor = System.Drawing.Color.Black;
-            this.tbDesignations.Location = new System.Drawing.Point(211, 2672);
-            this.tbDesignations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDesignations.Location = new System.Drawing.Point(227, 2345);
+            this.tbDesignations.Margin = new System.Windows.Forms.Padding(2);
             this.tbDesignations.Name = "tbDesignations";
             this.tbDesignations.Size = new System.Drawing.Size(433, 32);
             this.tbDesignations.TabIndex = 324;
@@ -7228,8 +7066,8 @@
             // 
             this.tbNumofLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNumofLandingDoors.ForeColor = System.Drawing.Color.Black;
-            this.tbNumofLandingDoors.Location = new System.Drawing.Point(240, 1091);
-            this.tbNumofLandingDoors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNumofLandingDoors.Location = new System.Drawing.Point(251, 780);
+            this.tbNumofLandingDoors.Margin = new System.Windows.Forms.Padding(2);
             this.tbNumofLandingDoors.Name = "tbNumofLandingDoors";
             this.tbNumofLandingDoors.Size = new System.Drawing.Size(100, 32);
             this.tbNumofLandingDoors.TabIndex = 309;
@@ -7241,7 +7079,7 @@
             this.groupBox14.Controls.Add(this.rbRearWallOther);
             this.groupBox14.Controls.Add(this.rbRearWallBrushedStainlessSteel);
             this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.Location = new System.Drawing.Point(342, 2278);
+            this.groupBox14.Location = new System.Drawing.Point(335, 1951);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(253, 98);
             this.groupBox14.TabIndex = 373;
@@ -7253,7 +7091,7 @@
             this.tbRearWall.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRearWall.ForeColor = System.Drawing.Color.Black;
             this.tbRearWall.Location = new System.Drawing.Point(25, 56);
-            this.tbRearWall.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRearWall.Margin = new System.Windows.Forms.Padding(2);
             this.tbRearWall.Name = "tbRearWall";
             this.tbRearWall.Size = new System.Drawing.Size(199, 32);
             this.tbRearWall.TabIndex = 76;
@@ -7286,7 +7124,7 @@
             this.groupBox8.Controls.Add(this.rbStructureShaftOther);
             this.groupBox8.Controls.Add(this.rbStructureShaftConcrete);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(350, 875);
+            this.groupBox8.Location = new System.Drawing.Point(361, 564);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(166, 102);
             this.groupBox8.TabIndex = 349;
@@ -7326,7 +7164,7 @@
             this.groupBox15.Controls.Add(this.rbProtectiveBlanketsNo);
             this.groupBox15.Controls.Add(this.rbProtectriveBlanketsYes);
             this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox15.Location = new System.Drawing.Point(342, 2383);
+            this.groupBox15.Location = new System.Drawing.Point(335, 2056);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(253, 60);
             this.groupBox15.TabIndex = 379;
@@ -7360,7 +7198,7 @@
             this.groupBox7.Controls.Add(this.rbTrimmerBeamsNo);
             this.groupBox7.Controls.Add(this.rbTrimmerBeamsYes);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(350, 983);
+            this.groupBox7.Location = new System.Drawing.Point(361, 672);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(166, 63);
             this.groupBox7.TabIndex = 350;
@@ -7394,7 +7232,7 @@
             this.groupBox5.Controls.Add(this.rbFalseFloorNo);
             this.groupBox5.Controls.Add(this.rbFalseFloorYes);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(350, 1053);
+            this.groupBox5.Location = new System.Drawing.Point(361, 742);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(166, 63);
             this.groupBox5.TabIndex = 351;
@@ -7428,7 +7266,7 @@
             this.groupBox9.Controls.Add(this.rbDoorNudgingNo);
             this.groupBox9.Controls.Add(this.rbDoorNudgingYes);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(479, 1505);
+            this.groupBox9.Location = new System.Drawing.Point(475, 1182);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(191, 60);
             this.groupBox9.TabIndex = 368;
@@ -7462,7 +7300,7 @@
             this.label96.AutoSize = true;
             this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label96.ForeColor = System.Drawing.Color.Black;
-            this.label96.Location = new System.Drawing.Point(12, 1292);
+            this.label96.Location = new System.Drawing.Point(12, 978);
             this.label96.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(128, 26);
@@ -7474,7 +7312,7 @@
             this.label97.AutoSize = true;
             this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label97.ForeColor = System.Drawing.Color.Black;
-            this.label97.Location = new System.Drawing.Point(18, 1390);
+            this.label97.Location = new System.Drawing.Point(18, 1076);
             this.label97.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(58, 26);
@@ -7486,7 +7324,7 @@
             this.label98.AutoSize = true;
             this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label98.ForeColor = System.Drawing.Color.Black;
-            this.label98.Location = new System.Drawing.Point(7, 1221);
+            this.label98.Location = new System.Drawing.Point(7, 907);
             this.label98.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(137, 26);
@@ -7497,8 +7335,8 @@
             // 
             this.tbLiftCarNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLiftCarNotes.ForeColor = System.Drawing.Color.Black;
-            this.tbLiftCarNotes.Location = new System.Drawing.Point(82, 1372);
-            this.tbLiftCarNotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLiftCarNotes.Location = new System.Drawing.Point(82, 1058);
+            this.tbLiftCarNotes.Margin = new System.Windows.Forms.Padding(2);
             this.tbLiftCarNotes.Multiline = true;
             this.tbLiftCarNotes.Name = "tbLiftCarNotes";
             this.tbLiftCarNotes.Size = new System.Drawing.Size(563, 67);
@@ -7510,7 +7348,7 @@
             this.label99.AutoSize = true;
             this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label99.ForeColor = System.Drawing.Color.Black;
-            this.label99.Location = new System.Drawing.Point(290, 1147);
+            this.label99.Location = new System.Drawing.Point(290, 833);
             this.label99.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label99.Name = "label99";
             this.label99.Size = new System.Drawing.Size(90, 26);
@@ -7521,8 +7359,8 @@
             // 
             this.tbNumofCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNumofCarEntrances.ForeColor = System.Drawing.Color.Black;
-            this.tbNumofCarEntrances.Location = new System.Drawing.Point(519, 1255);
-            this.tbNumofCarEntrances.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNumofCarEntrances.Location = new System.Drawing.Point(519, 941);
+            this.tbNumofCarEntrances.Margin = new System.Windows.Forms.Padding(2);
             this.tbNumofCarEntrances.Name = "tbNumofCarEntrances";
             this.tbNumofCarEntrances.Size = new System.Drawing.Size(125, 32);
             this.tbNumofCarEntrances.TabIndex = 316;
@@ -7533,7 +7371,7 @@
             this.label100.AutoSize = true;
             this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label100.ForeColor = System.Drawing.Color.Black;
-            this.label100.Location = new System.Drawing.Point(275, 1221);
+            this.label100.Location = new System.Drawing.Point(275, 907);
             this.label100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label100.Name = "label100";
             this.label100.Size = new System.Drawing.Size(242, 26);
@@ -7545,7 +7383,7 @@
             this.label101.AutoSize = true;
             this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label101.ForeColor = System.Drawing.Color.Black;
-            this.label101.Location = new System.Drawing.Point(322, 1258);
+            this.label101.Location = new System.Drawing.Point(322, 944);
             this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(193, 26);
@@ -7556,8 +7394,8 @@
             // 
             this.tbLiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLiftRating.ForeColor = System.Drawing.Color.Black;
-            this.tbLiftRating.Location = new System.Drawing.Point(519, 1217);
-            this.tbLiftRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLiftRating.Location = new System.Drawing.Point(519, 903);
+            this.tbLiftRating.Margin = new System.Windows.Forms.Padding(2);
             this.tbLiftRating.Name = "tbLiftRating";
             this.tbLiftRating.Size = new System.Drawing.Size(125, 32);
             this.tbLiftRating.TabIndex = 315;
@@ -7567,8 +7405,8 @@
             // 
             this.tbwidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbwidth.ForeColor = System.Drawing.Color.Black;
-            this.tbwidth.Location = new System.Drawing.Point(139, 1258);
-            this.tbwidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbwidth.Location = new System.Drawing.Point(139, 944);
+            this.tbwidth.Margin = new System.Windows.Forms.Padding(2);
             this.tbwidth.Name = "tbwidth";
             this.tbwidth.Size = new System.Drawing.Size(117, 32);
             this.tbwidth.TabIndex = 312;
@@ -7579,7 +7417,7 @@
             this.label102.AutoSize = true;
             this.label102.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label102.ForeColor = System.Drawing.Color.Black;
-            this.label102.Location = new System.Drawing.Point(23, 1186);
+            this.label102.Location = new System.Drawing.Point(23, 872);
             this.label102.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(103, 26);
@@ -7591,7 +7429,7 @@
             this.label103.AutoSize = true;
             this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label103.ForeColor = System.Drawing.Color.Black;
-            this.label103.Location = new System.Drawing.Point(7, 1329);
+            this.label103.Location = new System.Drawing.Point(7, 1015);
             this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(133, 26);
@@ -7602,8 +7440,8 @@
             // 
             this.tbLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLoad.ForeColor = System.Drawing.Color.Black;
-            this.tbLoad.Location = new System.Drawing.Point(139, 1186);
-            this.tbLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLoad.Location = new System.Drawing.Point(139, 872);
+            this.tbLoad.Margin = new System.Windows.Forms.Padding(2);
             this.tbLoad.Name = "tbLoad";
             this.tbLoad.Size = new System.Drawing.Size(117, 32);
             this.tbLoad.TabIndex = 310;
@@ -7613,8 +7451,8 @@
             // 
             this.tbHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbHeight.ForeColor = System.Drawing.Color.Black;
-            this.tbHeight.Location = new System.Drawing.Point(139, 1329);
-            this.tbHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbHeight.Location = new System.Drawing.Point(139, 1015);
+            this.tbHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tbHeight.Name = "tbHeight";
             this.tbHeight.Size = new System.Drawing.Size(117, 32);
             this.tbHeight.TabIndex = 314;
@@ -7624,8 +7462,8 @@
             // 
             this.tbSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSpeed.ForeColor = System.Drawing.Color.Black;
-            this.tbSpeed.Location = new System.Drawing.Point(139, 1221);
-            this.tbSpeed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSpeed.Location = new System.Drawing.Point(139, 907);
+            this.tbSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.tbSpeed.Name = "tbSpeed";
             this.tbSpeed.Size = new System.Drawing.Size(117, 32);
             this.tbSpeed.TabIndex = 311;
@@ -7635,8 +7473,8 @@
             // 
             this.tbDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDepth.ForeColor = System.Drawing.Color.Black;
-            this.tbDepth.Location = new System.Drawing.Point(139, 1294);
-            this.tbDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDepth.Location = new System.Drawing.Point(139, 980);
+            this.tbDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tbDepth.Name = "tbDepth";
             this.tbDepth.Size = new System.Drawing.Size(117, 32);
             this.tbDepth.TabIndex = 313;
@@ -7647,7 +7485,7 @@
             this.groupBox13.Controls.Add(this.rbDoorTypeSideOpening);
             this.groupBox13.Controls.Add(this.rbDoorTypeCentreOpening);
             this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.Location = new System.Drawing.Point(82, 1588);
+            this.groupBox13.Location = new System.Drawing.Point(78, 1265);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(262, 94);
             this.groupBox13.TabIndex = 362;
@@ -7681,7 +7519,7 @@
             this.label104.AutoSize = true;
             this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label104.ForeColor = System.Drawing.Color.Black;
-            this.label104.Location = new System.Drawing.Point(15, 1256);
+            this.label104.Location = new System.Drawing.Point(15, 942);
             this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(126, 26);
@@ -7694,7 +7532,7 @@
             this.groupBox12.Controls.Add(this.rbDoorTracksOther);
             this.groupBox12.Controls.Add(this.rbDoorTracksAnodisedAluminium);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox12.Location = new System.Drawing.Point(243, 1689);
+            this.groupBox12.Location = new System.Drawing.Point(239, 1366);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(219, 95);
             this.groupBox12.TabIndex = 364;
@@ -7706,7 +7544,7 @@
             this.tbDoorTracks.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDoorTracks.ForeColor = System.Drawing.Color.Black;
             this.tbDoorTracks.Location = new System.Drawing.Point(25, 56);
-            this.tbDoorTracks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDoorTracks.Margin = new System.Windows.Forms.Padding(2);
             this.tbDoorTracks.Name = "tbDoorTracks";
             this.tbDoorTracks.Size = new System.Drawing.Size(188, 32);
             this.tbDoorTracks.TabIndex = 82;
@@ -7739,7 +7577,7 @@
             this.groupBox10.Controls.Add(this.rbLandingDoorFinishOther);
             this.groupBox10.Controls.Add(this.rbLandingDoorFinishStainlessSteel);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox10.Location = new System.Drawing.Point(356, 1587);
+            this.groupBox10.Location = new System.Drawing.Point(352, 1264);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(244, 95);
             this.groupBox10.TabIndex = 363;
@@ -7751,7 +7589,7 @@
             this.tbLandingDoorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLandingDoorFinish.ForeColor = System.Drawing.Color.Black;
             this.tbLandingDoorFinish.Location = new System.Drawing.Point(25, 59);
-            this.tbLandingDoorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLandingDoorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tbLandingDoorFinish.Name = "tbLandingDoorFinish";
             this.tbLandingDoorFinish.Size = new System.Drawing.Size(188, 32);
             this.tbLandingDoorFinish.TabIndex = 80;
@@ -7783,7 +7621,7 @@
             this.label105.AutoSize = true;
             this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label105.ForeColor = System.Drawing.Color.Black;
-            this.label105.Location = new System.Drawing.Point(11, 1508);
+            this.label105.Location = new System.Drawing.Point(7, 1185);
             this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label105.Name = "label105";
             this.label105.Size = new System.Drawing.Size(179, 26);
@@ -7795,7 +7633,7 @@
             this.groupBox11.Controls.Add(this.rbAdvancedOpeningNo);
             this.groupBox11.Controls.Add(this.rbAdvancedOpeningYes);
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox11.Location = new System.Drawing.Point(284, 1505);
+            this.groupBox11.Location = new System.Drawing.Point(280, 1182);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(189, 60);
             this.groupBox11.TabIndex = 367;
@@ -7828,8 +7666,8 @@
             // 
             this.tbDoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDoorWidth.ForeColor = System.Drawing.Color.Black;
-            this.tbDoorWidth.Location = new System.Drawing.Point(191, 1505);
-            this.tbDoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDoorWidth.Location = new System.Drawing.Point(187, 1182);
+            this.tbDoorWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tbDoorWidth.Name = "tbDoorWidth";
             this.tbDoorWidth.Size = new System.Drawing.Size(81, 32);
             this.tbDoorWidth.TabIndex = 318;
@@ -7839,8 +7677,8 @@
             // 
             this.tbDoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDoorHeight.ForeColor = System.Drawing.Color.Black;
-            this.tbDoorHeight.Location = new System.Drawing.Point(191, 1540);
-            this.tbDoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDoorHeight.Location = new System.Drawing.Point(187, 1217);
+            this.tbDoorHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tbDoorHeight.Name = "tbDoorHeight";
             this.tbDoorHeight.Size = new System.Drawing.Size(81, 32);
             this.tbDoorHeight.TabIndex = 319;
@@ -7851,12 +7689,139 @@
             this.label106.AutoSize = true;
             this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label106.ForeColor = System.Drawing.Color.Black;
-            this.label106.Location = new System.Drawing.Point(11, 1540);
+            this.label106.Location = new System.Drawing.Point(7, 1217);
             this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label106.Name = "label106";
             this.label106.Size = new System.Drawing.Size(186, 26);
             this.label106.TabIndex = 366;
             this.label106.Text = "Door Height (mm)";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.Black;
+            this.label50.Location = new System.Drawing.Point(47, 7);
+            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(209, 52);
+            this.label50.TabIndex = 327;
+            this.label50.Text = "Who is the contact\r\nfor this job?";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.ForeColor = System.Drawing.Color.Black;
+            this.label82.Location = new System.Drawing.Point(3, 59);
+            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(119, 26);
+            this.label82.TabIndex = 325;
+            this.label82.Text = "First Name";
+            // 
+            // tbfname
+            // 
+            this.tbfname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbfname.ForeColor = System.Drawing.Color.Black;
+            this.tbfname.Location = new System.Drawing.Point(8, 84);
+            this.tbfname.Margin = new System.Windows.Forms.Padding(2);
+            this.tbfname.Name = "tbfname";
+            this.tbfname.Size = new System.Drawing.Size(277, 32);
+            this.tbfname.TabIndex = 295;
+            this.tbfname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.ForeColor = System.Drawing.Color.Black;
+            this.label83.Location = new System.Drawing.Point(6, 186);
+            this.label83.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(93, 26);
+            this.label83.TabIndex = 326;
+            this.label83.Text = "Phone #";
+            // 
+            // tbphone
+            // 
+            this.tbphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbphone.ForeColor = System.Drawing.Color.Black;
+            this.tbphone.Location = new System.Drawing.Point(8, 212);
+            this.tbphone.Margin = new System.Windows.Forms.Padding(2);
+            this.tbphone.Name = "tbphone";
+            this.tbphone.Size = new System.Drawing.Size(277, 32);
+            this.tbphone.TabIndex = 297;
+            this.tbphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label86.ForeColor = System.Drawing.Color.Black;
+            this.label86.Location = new System.Drawing.Point(6, 121);
+            this.label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(118, 26);
+            this.label86.TabIndex = 328;
+            this.label86.Text = "Last Name";
+            // 
+            // tblname
+            // 
+            this.tblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblname.ForeColor = System.Drawing.Color.Black;
+            this.tblname.Location = new System.Drawing.Point(8, 149);
+            this.tblname.Margin = new System.Windows.Forms.Padding(2);
+            this.tblname.Name = "tblname";
+            this.tblname.Size = new System.Drawing.Size(277, 32);
+            this.tblname.TabIndex = 296;
+            this.tblname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.ForeColor = System.Drawing.Color.Black;
+            this.label87.Location = new System.Drawing.Point(6, 250);
+            this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(92, 26);
+            this.label87.TabIndex = 329;
+            this.label87.Text = "Address";
+            // 
+            // tbAddress1
+            // 
+            this.tbAddress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress1.ForeColor = System.Drawing.Color.Black;
+            this.tbAddress1.Location = new System.Drawing.Point(10, 281);
+            this.tbAddress1.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddress1.Name = "tbAddress1";
+            this.tbAddress1.Size = new System.Drawing.Size(277, 32);
+            this.tbAddress1.TabIndex = 298;
+            this.tbAddress1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbAddress2
+            // 
+            this.tbAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress2.ForeColor = System.Drawing.Color.Black;
+            this.tbAddress2.Location = new System.Drawing.Point(10, 317);
+            this.tbAddress2.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddress2.Name = "tbAddress2";
+            this.tbAddress2.Size = new System.Drawing.Size(277, 32);
+            this.tbAddress2.TabIndex = 299;
+            this.tbAddress2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbAddress3
+            // 
+            this.tbAddress3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress3.ForeColor = System.Drawing.Color.Black;
+            this.tbAddress3.Location = new System.Drawing.Point(10, 353);
+            this.tbAddress3.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddress3.Name = "tbAddress3";
+            this.tbAddress3.Size = new System.Drawing.Size(277, 32);
+            this.tbAddress3.TabIndex = 300;
+            this.tbAddress3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panelLift12
             // 
@@ -7956,7 +7921,7 @@
             this.panelLift12.Controls.Add(this.tb12LandingDoorHeight);
             this.panelLift12.Controls.Add(this.label410);
             this.panelLift12.Location = new System.Drawing.Point(2311, 1017);
-            this.panelLift12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLift12.Margin = new System.Windows.Forms.Padding(2);
             this.panelLift12.Name = "panelLift12";
             this.panelLift12.Size = new System.Drawing.Size(689, 735);
             this.panelLift12.TabIndex = 425;
@@ -8000,7 +7965,7 @@
             this.tb12ShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12ShaftWidth.ForeColor = System.Drawing.Color.Black;
             this.tb12ShaftWidth.Location = new System.Drawing.Point(277, 474);
-            this.tb12ShaftWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12ShaftWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb12ShaftWidth.Name = "tb12ShaftWidth";
             this.tb12ShaftWidth.Size = new System.Drawing.Size(100, 32);
             this.tb12ShaftWidth.TabIndex = 303;
@@ -8114,7 +8079,7 @@
             this.tb12CeilingFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12CeilingFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb12CeilingFinishText.Location = new System.Drawing.Point(25, 122);
-            this.tb12CeilingFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12CeilingFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb12CeilingFinishText.Name = "tb12CeilingFinishText";
             this.tb12CeilingFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb12CeilingFinishText.TabIndex = 76;
@@ -8171,7 +8136,7 @@
             this.tb12SideWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12SideWallText.ForeColor = System.Drawing.Color.Black;
             this.tb12SideWallText.Location = new System.Drawing.Point(26, 56);
-            this.tb12SideWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12SideWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb12SideWallText.Name = "tb12SideWallText";
             this.tb12SideWallText.Size = new System.Drawing.Size(199, 32);
             this.tb12SideWallText.TabIndex = 76;
@@ -8250,7 +8215,7 @@
             this.tb12FrontWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12FrontWallText.ForeColor = System.Drawing.Color.Black;
             this.tb12FrontWallText.Location = new System.Drawing.Point(25, 57);
-            this.tb12FrontWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12FrontWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb12FrontWallText.Name = "tb12FrontWallText";
             this.tb12FrontWallText.Size = new System.Drawing.Size(199, 32);
             this.tb12FrontWallText.TabIndex = 76;
@@ -8377,7 +8342,7 @@
             this.tb12CarDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12CarDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb12CarDoorFinishText.Location = new System.Drawing.Point(25, 56);
-            this.tb12CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb12CarDoorFinishText.Name = "tb12CarDoorFinishText";
             this.tb12CarDoorFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb12CarDoorFinishText.TabIndex = 76;
@@ -8433,7 +8398,7 @@
             this.tb12ShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12ShaftDepth.ForeColor = System.Drawing.Color.Black;
             this.tb12ShaftDepth.Location = new System.Drawing.Point(277, 511);
-            this.tb12ShaftDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12ShaftDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb12ShaftDepth.Name = "tb12ShaftDepth";
             this.tb12ShaftDepth.Size = new System.Drawing.Size(100, 32);
             this.tb12ShaftDepth.TabIndex = 304;
@@ -8444,7 +8409,7 @@
             this.tb12AuxCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12AuxCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb12AuxCOPLocation.Location = new System.Drawing.Point(219, 2101);
-            this.tb12AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb12AuxCOPLocation.Name = "tb12AuxCOPLocation";
             this.tb12AuxCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb12AuxCOPLocation.TabIndex = 322;
@@ -8480,7 +8445,7 @@
             this.tb12PitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12PitDepth.ForeColor = System.Drawing.Color.Black;
             this.tb12PitDepth.Location = new System.Drawing.Point(277, 547);
-            this.tb12PitDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12PitDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb12PitDepth.Name = "tb12PitDepth";
             this.tb12PitDepth.Size = new System.Drawing.Size(100, 32);
             this.tb12PitDepth.TabIndex = 305;
@@ -8491,7 +8456,7 @@
             this.tb12MainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12MainCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb12MainCOPLocation.Location = new System.Drawing.Point(219, 2064);
-            this.tb12MainCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12MainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb12MainCOPLocation.Name = "tb12MainCOPLocation";
             this.tb12MainCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb12MainCOPLocation.TabIndex = 321;
@@ -8527,7 +8492,7 @@
             this.tb12Headroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12Headroom.ForeColor = System.Drawing.Color.Black;
             this.tb12Headroom.Location = new System.Drawing.Point(277, 582);
-            this.tb12Headroom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12Headroom.Margin = new System.Windows.Forms.Padding(2);
             this.tb12Headroom.Name = "tb12Headroom";
             this.tb12Headroom.Size = new System.Drawing.Size(100, 32);
             this.tb12Headroom.TabIndex = 306;
@@ -8538,7 +8503,7 @@
             this.tb12NumberOfCOPs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12NumberOfCOPs.ForeColor = System.Drawing.Color.Black;
             this.tb12NumberOfCOPs.Location = new System.Drawing.Point(219, 2029);
-            this.tb12NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2);
             this.tb12NumberOfCOPs.Name = "tb12NumberOfCOPs";
             this.tb12NumberOfCOPs.Size = new System.Drawing.Size(100, 32);
             this.tb12NumberOfCOPs.TabIndex = 320;
@@ -8574,7 +8539,7 @@
             this.tb12Travel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12Travel.ForeColor = System.Drawing.Color.Black;
             this.tb12Travel.Location = new System.Drawing.Point(277, 619);
-            this.tb12Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12Travel.Margin = new System.Windows.Forms.Padding(2);
             this.tb12Travel.Name = "tb12Travel";
             this.tb12Travel.Size = new System.Drawing.Size(100, 32);
             this.tb12Travel.TabIndex = 307;
@@ -8645,7 +8610,7 @@
             this.tb12NumberOfLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12NumberOfLandings.ForeColor = System.Drawing.Color.Black;
             this.tb12NumberOfLandings.Location = new System.Drawing.Point(277, 655);
-            this.tb12NumberOfLandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12NumberOfLandings.Margin = new System.Windows.Forms.Padding(2);
             this.tb12NumberOfLandings.Name = "tb12NumberOfLandings";
             this.tb12NumberOfLandings.Size = new System.Drawing.Size(100, 32);
             this.tb12NumberOfLandings.TabIndex = 308;
@@ -8712,7 +8677,7 @@
             this.tb12FacePlateMaterialText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12FacePlateMaterialText.ForeColor = System.Drawing.Color.Black;
             this.tb12FacePlateMaterialText.Location = new System.Drawing.Point(25, 61);
-            this.tb12FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2);
             this.tb12FacePlateMaterialText.Name = "tb12FacePlateMaterialText";
             this.tb12FacePlateMaterialText.Size = new System.Drawing.Size(203, 32);
             this.tb12FacePlateMaterialText.TabIndex = 95;
@@ -8929,7 +8894,7 @@
             this.tb12KeyswitchLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12KeyswitchLocation.ForeColor = System.Drawing.Color.Black;
             this.tb12KeyswitchLocation.Location = new System.Drawing.Point(219, 2137);
-            this.tb12KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb12KeyswitchLocation.Name = "tb12KeyswitchLocation";
             this.tb12KeyswitchLocation.Size = new System.Drawing.Size(433, 32);
             this.tb12KeyswitchLocation.TabIndex = 323;
@@ -8966,7 +8931,7 @@
             this.tb12COPFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12COPFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb12COPFinishText.Location = new System.Drawing.Point(23, 58);
-            this.tb12COPFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12COPFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb12COPFinishText.Name = "tb12COPFinishText";
             this.tb12COPFinishText.Size = new System.Drawing.Size(202, 32);
             this.tb12COPFinishText.TabIndex = 76;
@@ -9011,7 +8976,7 @@
             this.tb12HandrailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12HandrailText.ForeColor = System.Drawing.Color.Black;
             this.tb12HandrailText.Location = new System.Drawing.Point(25, 52);
-            this.tb12HandrailText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12HandrailText.Margin = new System.Windows.Forms.Padding(2);
             this.tb12HandrailText.Name = "tb12HandrailText";
             this.tb12HandrailText.Size = new System.Drawing.Size(199, 32);
             this.tb12HandrailText.TabIndex = 74;
@@ -9066,7 +9031,7 @@
             this.tb12NumberOfLEDLights.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12NumberOfLEDLights.ForeColor = System.Drawing.Color.Black;
             this.tb12NumberOfLEDLights.Location = new System.Drawing.Point(8, 27);
-            this.tb12NumberOfLEDLights.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12NumberOfLEDLights.Margin = new System.Windows.Forms.Padding(2);
             this.tb12NumberOfLEDLights.Name = "tb12NumberOfLEDLights";
             this.tb12NumberOfLEDLights.Size = new System.Drawing.Size(223, 32);
             this.tb12NumberOfLEDLights.TabIndex = 74;
@@ -9103,7 +9068,7 @@
             this.tb12MirrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12MirrorText.ForeColor = System.Drawing.Color.Black;
             this.tb12MirrorText.Location = new System.Drawing.Point(25, 78);
-            this.tb12MirrorText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12MirrorText.Margin = new System.Windows.Forms.Padding(2);
             this.tb12MirrorText.Name = "tb12MirrorText";
             this.tb12MirrorText.Size = new System.Drawing.Size(199, 32);
             this.tb12MirrorText.TabIndex = 78;
@@ -9144,7 +9109,7 @@
             this.tb12LiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12LiftNumbers.ForeColor = System.Drawing.Color.Black;
             this.tb12LiftNumbers.Location = new System.Drawing.Point(285, 94);
-            this.tb12LiftNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12LiftNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.tb12LiftNumbers.Name = "tb12LiftNumbers";
             this.tb12LiftNumbers.Size = new System.Drawing.Size(236, 32);
             this.tb12LiftNumbers.TabIndex = 302;
@@ -9213,7 +9178,7 @@
             this.tb12TypeOfLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12TypeOfLift.ForeColor = System.Drawing.Color.Black;
             this.tb12TypeOfLift.Location = new System.Drawing.Point(285, 45);
-            this.tb12TypeOfLift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12TypeOfLift.Margin = new System.Windows.Forms.Padding(2);
             this.tb12TypeOfLift.Name = "tb12TypeOfLift";
             this.tb12TypeOfLift.Size = new System.Drawing.Size(236, 32);
             this.tb12TypeOfLift.TabIndex = 301;
@@ -9346,7 +9311,7 @@
             this.tb12FloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12FloorFinish.ForeColor = System.Drawing.Color.Black;
             this.tb12FloorFinish.Location = new System.Drawing.Point(10, 33);
-            this.tb12FloorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12FloorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tb12FloorFinish.Name = "tb12FloorFinish";
             this.tb12FloorFinish.Size = new System.Drawing.Size(221, 32);
             this.tb12FloorFinish.TabIndex = 75;
@@ -9369,7 +9334,7 @@
             this.tb12Designations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12Designations.ForeColor = System.Drawing.Color.Black;
             this.tb12Designations.Location = new System.Drawing.Point(219, 2172);
-            this.tb12Designations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12Designations.Margin = new System.Windows.Forms.Padding(2);
             this.tb12Designations.Name = "tb12Designations";
             this.tb12Designations.Size = new System.Drawing.Size(433, 32);
             this.tb12Designations.TabIndex = 324;
@@ -9380,7 +9345,7 @@
             this.tb12NumberOfLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12NumberOfLandingDoors.ForeColor = System.Drawing.Color.Black;
             this.tb12NumberOfLandingDoors.Location = new System.Drawing.Point(277, 691);
-            this.tb12NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2);
             this.tb12NumberOfLandingDoors.Name = "tb12NumberOfLandingDoors";
             this.tb12NumberOfLandingDoors.Size = new System.Drawing.Size(100, 32);
             this.tb12NumberOfLandingDoors.TabIndex = 309;
@@ -9404,7 +9369,7 @@
             this.tb12RearWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12RearWallText.ForeColor = System.Drawing.Color.Black;
             this.tb12RearWallText.Location = new System.Drawing.Point(25, 56);
-            this.tb12RearWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12RearWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb12RearWallText.Name = "tb12RearWallText";
             this.tb12RearWallText.Size = new System.Drawing.Size(199, 32);
             this.tb12RearWallText.TabIndex = 76;
@@ -9649,7 +9614,7 @@
             this.tb12LiftCarNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12LiftCarNotes.ForeColor = System.Drawing.Color.Black;
             this.tb12LiftCarNotes.Location = new System.Drawing.Point(91, 954);
-            this.tb12LiftCarNotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12LiftCarNotes.Margin = new System.Windows.Forms.Padding(2);
             this.tb12LiftCarNotes.Multiline = true;
             this.tb12LiftCarNotes.Name = "tb12LiftCarNotes";
             this.tb12LiftCarNotes.Size = new System.Drawing.Size(563, 67);
@@ -9673,7 +9638,7 @@
             this.tb12CarNumberOfCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12CarNumberOfCarEntrances.ForeColor = System.Drawing.Color.Black;
             this.tb12CarNumberOfCarEntrances.Location = new System.Drawing.Point(528, 837);
-            this.tb12CarNumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12CarNumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2);
             this.tb12CarNumberOfCarEntrances.Name = "tb12CarNumberOfCarEntrances";
             this.tb12CarNumberOfCarEntrances.Size = new System.Drawing.Size(125, 32);
             this.tb12CarNumberOfCarEntrances.TabIndex = 316;
@@ -9708,7 +9673,7 @@
             this.tb12CarLiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12CarLiftRating.ForeColor = System.Drawing.Color.Black;
             this.tb12CarLiftRating.Location = new System.Drawing.Point(528, 799);
-            this.tb12CarLiftRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12CarLiftRating.Margin = new System.Windows.Forms.Padding(2);
             this.tb12CarLiftRating.Name = "tb12CarLiftRating";
             this.tb12CarLiftRating.Size = new System.Drawing.Size(125, 32);
             this.tb12CarLiftRating.TabIndex = 315;
@@ -9719,7 +9684,7 @@
             this.tb12CarWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12CarWidth.ForeColor = System.Drawing.Color.Black;
             this.tb12CarWidth.Location = new System.Drawing.Point(148, 839);
-            this.tb12CarWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12CarWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb12CarWidth.Name = "tb12CarWidth";
             this.tb12CarWidth.Size = new System.Drawing.Size(117, 32);
             this.tb12CarWidth.TabIndex = 312;
@@ -9754,7 +9719,7 @@
             this.tb12CarLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12CarLoad.ForeColor = System.Drawing.Color.Black;
             this.tb12CarLoad.Location = new System.Drawing.Point(148, 768);
-            this.tb12CarLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12CarLoad.Margin = new System.Windows.Forms.Padding(2);
             this.tb12CarLoad.Name = "tb12CarLoad";
             this.tb12CarLoad.Size = new System.Drawing.Size(117, 32);
             this.tb12CarLoad.TabIndex = 310;
@@ -9765,7 +9730,7 @@
             this.tb12CarHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12CarHeight.ForeColor = System.Drawing.Color.Black;
             this.tb12CarHeight.Location = new System.Drawing.Point(148, 911);
-            this.tb12CarHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12CarHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb12CarHeight.Name = "tb12CarHeight";
             this.tb12CarHeight.Size = new System.Drawing.Size(117, 32);
             this.tb12CarHeight.TabIndex = 314;
@@ -9776,7 +9741,7 @@
             this.tb12CarSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12CarSpeed.ForeColor = System.Drawing.Color.Black;
             this.tb12CarSpeed.Location = new System.Drawing.Point(148, 803);
-            this.tb12CarSpeed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12CarSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.tb12CarSpeed.Name = "tb12CarSpeed";
             this.tb12CarSpeed.Size = new System.Drawing.Size(117, 32);
             this.tb12CarSpeed.TabIndex = 311;
@@ -9787,7 +9752,7 @@
             this.tb12CarDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12CarDepth.ForeColor = System.Drawing.Color.Black;
             this.tb12CarDepth.Location = new System.Drawing.Point(148, 875);
-            this.tb12CarDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12CarDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb12CarDepth.Name = "tb12CarDepth";
             this.tb12CarDepth.Size = new System.Drawing.Size(117, 32);
             this.tb12CarDepth.TabIndex = 313;
@@ -9857,7 +9822,7 @@
             this.tb12DoorTracksText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12DoorTracksText.ForeColor = System.Drawing.Color.Black;
             this.tb12DoorTracksText.Location = new System.Drawing.Point(25, 56);
-            this.tb12DoorTracksText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12DoorTracksText.Margin = new System.Windows.Forms.Padding(2);
             this.tb12DoorTracksText.Name = "tb12DoorTracksText";
             this.tb12DoorTracksText.Size = new System.Drawing.Size(188, 32);
             this.tb12DoorTracksText.TabIndex = 82;
@@ -9902,7 +9867,7 @@
             this.tb12LandingDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12LandingDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb12LandingDoorFinishText.Location = new System.Drawing.Point(25, 59);
-            this.tb12LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb12LandingDoorFinishText.Name = "tb12LandingDoorFinishText";
             this.tb12LandingDoorFinishText.Size = new System.Drawing.Size(188, 32);
             this.tb12LandingDoorFinishText.TabIndex = 80;
@@ -9980,7 +9945,7 @@
             this.tb12LandingDoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12LandingDoorWidth.ForeColor = System.Drawing.Color.Black;
             this.tb12LandingDoorWidth.Location = new System.Drawing.Point(205, 1068);
-            this.tb12LandingDoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12LandingDoorWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb12LandingDoorWidth.Name = "tb12LandingDoorWidth";
             this.tb12LandingDoorWidth.Size = new System.Drawing.Size(81, 32);
             this.tb12LandingDoorWidth.TabIndex = 318;
@@ -9991,7 +9956,7 @@
             this.tb12LandingDoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb12LandingDoorHeight.ForeColor = System.Drawing.Color.Black;
             this.tb12LandingDoorHeight.Location = new System.Drawing.Point(205, 1104);
-            this.tb12LandingDoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb12LandingDoorHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb12LandingDoorHeight.Name = "tb12LandingDoorHeight";
             this.tb12LandingDoorHeight.Size = new System.Drawing.Size(81, 32);
             this.tb12LandingDoorHeight.TabIndex = 319;
@@ -10107,7 +10072,7 @@
             this.panelLift11.Controls.Add(this.tb11DoorHeight);
             this.panelLift11.Controls.Add(this.label451);
             this.panelLift11.Location = new System.Drawing.Point(1298, 329);
-            this.panelLift11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLift11.Margin = new System.Windows.Forms.Padding(2);
             this.panelLift11.Name = "panelLift11";
             this.panelLift11.Size = new System.Drawing.Size(689, 735);
             this.panelLift11.TabIndex = 427;
@@ -10151,7 +10116,7 @@
             this.tb11ShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11ShaftWidth.ForeColor = System.Drawing.Color.Black;
             this.tb11ShaftWidth.Location = new System.Drawing.Point(282, 495);
-            this.tb11ShaftWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11ShaftWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb11ShaftWidth.Name = "tb11ShaftWidth";
             this.tb11ShaftWidth.Size = new System.Drawing.Size(100, 32);
             this.tb11ShaftWidth.TabIndex = 303;
@@ -10265,7 +10230,7 @@
             this.tb11CeilingFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11CeilingFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb11CeilingFinishText.Location = new System.Drawing.Point(25, 122);
-            this.tb11CeilingFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11CeilingFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb11CeilingFinishText.Name = "tb11CeilingFinishText";
             this.tb11CeilingFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb11CeilingFinishText.TabIndex = 76;
@@ -10322,7 +10287,7 @@
             this.tb11SideWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11SideWallText.ForeColor = System.Drawing.Color.Black;
             this.tb11SideWallText.Location = new System.Drawing.Point(26, 56);
-            this.tb11SideWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11SideWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb11SideWallText.Name = "tb11SideWallText";
             this.tb11SideWallText.Size = new System.Drawing.Size(199, 32);
             this.tb11SideWallText.TabIndex = 76;
@@ -10401,7 +10366,7 @@
             this.tb11FrontWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11FrontWallText.ForeColor = System.Drawing.Color.Black;
             this.tb11FrontWallText.Location = new System.Drawing.Point(25, 57);
-            this.tb11FrontWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11FrontWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb11FrontWallText.Name = "tb11FrontWallText";
             this.tb11FrontWallText.Size = new System.Drawing.Size(199, 32);
             this.tb11FrontWallText.TabIndex = 76;
@@ -10528,7 +10493,7 @@
             this.tb11CarDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11CarDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb11CarDoorFinishText.Location = new System.Drawing.Point(25, 56);
-            this.tb11CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb11CarDoorFinishText.Name = "tb11CarDoorFinishText";
             this.tb11CarDoorFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb11CarDoorFinishText.TabIndex = 76;
@@ -10584,7 +10549,7 @@
             this.tb11ShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11ShaftDepth.ForeColor = System.Drawing.Color.Black;
             this.tb11ShaftDepth.Location = new System.Drawing.Point(282, 531);
-            this.tb11ShaftDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11ShaftDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb11ShaftDepth.Name = "tb11ShaftDepth";
             this.tb11ShaftDepth.Size = new System.Drawing.Size(100, 32);
             this.tb11ShaftDepth.TabIndex = 304;
@@ -10595,7 +10560,7 @@
             this.tb11AuxCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11AuxCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb11AuxCOPLocation.Location = new System.Drawing.Point(222, 2142);
-            this.tb11AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb11AuxCOPLocation.Name = "tb11AuxCOPLocation";
             this.tb11AuxCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb11AuxCOPLocation.TabIndex = 322;
@@ -10631,7 +10596,7 @@
             this.tb11PitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11PitDepth.ForeColor = System.Drawing.Color.Black;
             this.tb11PitDepth.Location = new System.Drawing.Point(282, 567);
-            this.tb11PitDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11PitDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb11PitDepth.Name = "tb11PitDepth";
             this.tb11PitDepth.Size = new System.Drawing.Size(100, 32);
             this.tb11PitDepth.TabIndex = 305;
@@ -10642,7 +10607,7 @@
             this.tb11MainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11MainCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb11MainCOPLocation.Location = new System.Drawing.Point(222, 2105);
-            this.tb11MainCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11MainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb11MainCOPLocation.Name = "tb11MainCOPLocation";
             this.tb11MainCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb11MainCOPLocation.TabIndex = 321;
@@ -10678,7 +10643,7 @@
             this.tb11Headroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11Headroom.ForeColor = System.Drawing.Color.Black;
             this.tb11Headroom.Location = new System.Drawing.Point(282, 603);
-            this.tb11Headroom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11Headroom.Margin = new System.Windows.Forms.Padding(2);
             this.tb11Headroom.Name = "tb11Headroom";
             this.tb11Headroom.Size = new System.Drawing.Size(100, 32);
             this.tb11Headroom.TabIndex = 306;
@@ -10689,7 +10654,7 @@
             this.tb11NumberOfCOPs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11NumberOfCOPs.ForeColor = System.Drawing.Color.Black;
             this.tb11NumberOfCOPs.Location = new System.Drawing.Point(222, 2070);
-            this.tb11NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2);
             this.tb11NumberOfCOPs.Name = "tb11NumberOfCOPs";
             this.tb11NumberOfCOPs.Size = new System.Drawing.Size(100, 32);
             this.tb11NumberOfCOPs.TabIndex = 320;
@@ -10725,7 +10690,7 @@
             this.tb11Travel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11Travel.ForeColor = System.Drawing.Color.Black;
             this.tb11Travel.Location = new System.Drawing.Point(282, 639);
-            this.tb11Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11Travel.Margin = new System.Windows.Forms.Padding(2);
             this.tb11Travel.Name = "tb11Travel";
             this.tb11Travel.Size = new System.Drawing.Size(100, 32);
             this.tb11Travel.TabIndex = 307;
@@ -10796,7 +10761,7 @@
             this.tb11NumberOfLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11NumberOfLandings.ForeColor = System.Drawing.Color.Black;
             this.tb11NumberOfLandings.Location = new System.Drawing.Point(282, 675);
-            this.tb11NumberOfLandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11NumberOfLandings.Margin = new System.Windows.Forms.Padding(2);
             this.tb11NumberOfLandings.Name = "tb11NumberOfLandings";
             this.tb11NumberOfLandings.Size = new System.Drawing.Size(100, 32);
             this.tb11NumberOfLandings.TabIndex = 308;
@@ -10863,7 +10828,7 @@
             this.tb11FaceplateMaterialText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11FaceplateMaterialText.ForeColor = System.Drawing.Color.Black;
             this.tb11FaceplateMaterialText.Location = new System.Drawing.Point(25, 61);
-            this.tb11FaceplateMaterialText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11FaceplateMaterialText.Margin = new System.Windows.Forms.Padding(2);
             this.tb11FaceplateMaterialText.Name = "tb11FaceplateMaterialText";
             this.tb11FaceplateMaterialText.Size = new System.Drawing.Size(203, 32);
             this.tb11FaceplateMaterialText.TabIndex = 95;
@@ -11080,7 +11045,7 @@
             this.tb11KeyswitchLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11KeyswitchLocation.ForeColor = System.Drawing.Color.Black;
             this.tb11KeyswitchLocation.Location = new System.Drawing.Point(222, 2178);
-            this.tb11KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb11KeyswitchLocation.Name = "tb11KeyswitchLocation";
             this.tb11KeyswitchLocation.Size = new System.Drawing.Size(433, 32);
             this.tb11KeyswitchLocation.TabIndex = 323;
@@ -11117,7 +11082,7 @@
             this.tb11COPFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11COPFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb11COPFinishText.Location = new System.Drawing.Point(23, 58);
-            this.tb11COPFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11COPFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb11COPFinishText.Name = "tb11COPFinishText";
             this.tb11COPFinishText.Size = new System.Drawing.Size(202, 32);
             this.tb11COPFinishText.TabIndex = 76;
@@ -11162,7 +11127,7 @@
             this.tb11HandrailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11HandrailText.ForeColor = System.Drawing.Color.Black;
             this.tb11HandrailText.Location = new System.Drawing.Point(25, 52);
-            this.tb11HandrailText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11HandrailText.Margin = new System.Windows.Forms.Padding(2);
             this.tb11HandrailText.Name = "tb11HandrailText";
             this.tb11HandrailText.Size = new System.Drawing.Size(199, 32);
             this.tb11HandrailText.TabIndex = 74;
@@ -11217,7 +11182,7 @@
             this.tb11NumberOfLEDLights.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11NumberOfLEDLights.ForeColor = System.Drawing.Color.Black;
             this.tb11NumberOfLEDLights.Location = new System.Drawing.Point(8, 27);
-            this.tb11NumberOfLEDLights.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11NumberOfLEDLights.Margin = new System.Windows.Forms.Padding(2);
             this.tb11NumberOfLEDLights.Name = "tb11NumberOfLEDLights";
             this.tb11NumberOfLEDLights.Size = new System.Drawing.Size(223, 32);
             this.tb11NumberOfLEDLights.TabIndex = 74;
@@ -11254,7 +11219,7 @@
             this.tb11MirrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11MirrorText.ForeColor = System.Drawing.Color.Black;
             this.tb11MirrorText.Location = new System.Drawing.Point(25, 78);
-            this.tb11MirrorText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11MirrorText.Margin = new System.Windows.Forms.Padding(2);
             this.tb11MirrorText.Name = "tb11MirrorText";
             this.tb11MirrorText.Size = new System.Drawing.Size(199, 32);
             this.tb11MirrorText.TabIndex = 78;
@@ -11295,7 +11260,7 @@
             this.rb11LiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb11LiftNumbers.ForeColor = System.Drawing.Color.Black;
             this.rb11LiftNumbers.Location = new System.Drawing.Point(286, 101);
-            this.rb11LiftNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rb11LiftNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.rb11LiftNumbers.Name = "rb11LiftNumbers";
             this.rb11LiftNumbers.Size = new System.Drawing.Size(236, 32);
             this.rb11LiftNumbers.TabIndex = 302;
@@ -11364,7 +11329,7 @@
             this.tb11TypeOfLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11TypeOfLift.ForeColor = System.Drawing.Color.Black;
             this.tb11TypeOfLift.Location = new System.Drawing.Point(286, 51);
-            this.tb11TypeOfLift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11TypeOfLift.Margin = new System.Windows.Forms.Padding(2);
             this.tb11TypeOfLift.Name = "tb11TypeOfLift";
             this.tb11TypeOfLift.Size = new System.Drawing.Size(236, 32);
             this.tb11TypeOfLift.TabIndex = 301;
@@ -11497,7 +11462,7 @@
             this.tb11FloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11FloorFinish.ForeColor = System.Drawing.Color.Black;
             this.tb11FloorFinish.Location = new System.Drawing.Point(10, 33);
-            this.tb11FloorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11FloorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tb11FloorFinish.Name = "tb11FloorFinish";
             this.tb11FloorFinish.Size = new System.Drawing.Size(221, 32);
             this.tb11FloorFinish.TabIndex = 75;
@@ -11520,7 +11485,7 @@
             this.tb11Designations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11Designations.ForeColor = System.Drawing.Color.Black;
             this.tb11Designations.Location = new System.Drawing.Point(222, 2216);
-            this.tb11Designations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11Designations.Margin = new System.Windows.Forms.Padding(2);
             this.tb11Designations.Name = "tb11Designations";
             this.tb11Designations.Size = new System.Drawing.Size(433, 32);
             this.tb11Designations.TabIndex = 324;
@@ -11531,7 +11496,7 @@
             this.tb11NumberOfLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11NumberOfLandingDoors.ForeColor = System.Drawing.Color.Black;
             this.tb11NumberOfLandingDoors.Location = new System.Drawing.Point(282, 711);
-            this.tb11NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2);
             this.tb11NumberOfLandingDoors.Name = "tb11NumberOfLandingDoors";
             this.tb11NumberOfLandingDoors.Size = new System.Drawing.Size(100, 32);
             this.tb11NumberOfLandingDoors.TabIndex = 309;
@@ -11555,7 +11520,7 @@
             this.tb11RearWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11RearWallText.ForeColor = System.Drawing.Color.Black;
             this.tb11RearWallText.Location = new System.Drawing.Point(25, 56);
-            this.tb11RearWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11RearWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb11RearWallText.Name = "tb11RearWallText";
             this.tb11RearWallText.Size = new System.Drawing.Size(199, 32);
             this.tb11RearWallText.TabIndex = 76;
@@ -11800,7 +11765,7 @@
             this.tb11LiftCarNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11LiftCarNote.ForeColor = System.Drawing.Color.Black;
             this.tb11LiftCarNote.Location = new System.Drawing.Point(83, 982);
-            this.tb11LiftCarNote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11LiftCarNote.Margin = new System.Windows.Forms.Padding(2);
             this.tb11LiftCarNote.Multiline = true;
             this.tb11LiftCarNote.Name = "tb11LiftCarNote";
             this.tb11LiftCarNote.Size = new System.Drawing.Size(563, 67);
@@ -11824,7 +11789,7 @@
             this.tb11NumberofCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11NumberofCarEntrances.ForeColor = System.Drawing.Color.Black;
             this.tb11NumberofCarEntrances.Location = new System.Drawing.Point(520, 865);
-            this.tb11NumberofCarEntrances.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11NumberofCarEntrances.Margin = new System.Windows.Forms.Padding(2);
             this.tb11NumberofCarEntrances.Name = "tb11NumberofCarEntrances";
             this.tb11NumberofCarEntrances.Size = new System.Drawing.Size(125, 32);
             this.tb11NumberofCarEntrances.TabIndex = 316;
@@ -11859,7 +11824,7 @@
             this.tb11LiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11LiftRating.ForeColor = System.Drawing.Color.Black;
             this.tb11LiftRating.Location = new System.Drawing.Point(520, 827);
-            this.tb11LiftRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11LiftRating.Margin = new System.Windows.Forms.Padding(2);
             this.tb11LiftRating.Name = "tb11LiftRating";
             this.tb11LiftRating.Size = new System.Drawing.Size(125, 32);
             this.tb11LiftRating.TabIndex = 315;
@@ -11870,7 +11835,7 @@
             this.tb11CarWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11CarWidth.ForeColor = System.Drawing.Color.Black;
             this.tb11CarWidth.Location = new System.Drawing.Point(140, 868);
-            this.tb11CarWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11CarWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb11CarWidth.Name = "tb11CarWidth";
             this.tb11CarWidth.Size = new System.Drawing.Size(117, 32);
             this.tb11CarWidth.TabIndex = 312;
@@ -11905,7 +11870,7 @@
             this.tb11LiftCarLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11LiftCarLoad.ForeColor = System.Drawing.Color.Black;
             this.tb11LiftCarLoad.Location = new System.Drawing.Point(140, 796);
-            this.tb11LiftCarLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11LiftCarLoad.Margin = new System.Windows.Forms.Padding(2);
             this.tb11LiftCarLoad.Name = "tb11LiftCarLoad";
             this.tb11LiftCarLoad.Size = new System.Drawing.Size(117, 32);
             this.tb11LiftCarLoad.TabIndex = 310;
@@ -11916,7 +11881,7 @@
             this.tb11CarHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11CarHeight.ForeColor = System.Drawing.Color.Black;
             this.tb11CarHeight.Location = new System.Drawing.Point(140, 939);
-            this.tb11CarHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11CarHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb11CarHeight.Name = "tb11CarHeight";
             this.tb11CarHeight.Size = new System.Drawing.Size(117, 32);
             this.tb11CarHeight.TabIndex = 314;
@@ -11927,7 +11892,7 @@
             this.tb11Speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11Speed.ForeColor = System.Drawing.Color.Black;
             this.tb11Speed.Location = new System.Drawing.Point(140, 831);
-            this.tb11Speed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11Speed.Margin = new System.Windows.Forms.Padding(2);
             this.tb11Speed.Name = "tb11Speed";
             this.tb11Speed.Size = new System.Drawing.Size(117, 32);
             this.tb11Speed.TabIndex = 311;
@@ -11938,7 +11903,7 @@
             this.tb11CarDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11CarDepth.ForeColor = System.Drawing.Color.Black;
             this.tb11CarDepth.Location = new System.Drawing.Point(140, 903);
-            this.tb11CarDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11CarDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb11CarDepth.Name = "tb11CarDepth";
             this.tb11CarDepth.Size = new System.Drawing.Size(117, 32);
             this.tb11CarDepth.TabIndex = 313;
@@ -12008,7 +11973,7 @@
             this.tb11DoorTracksText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11DoorTracksText.ForeColor = System.Drawing.Color.Black;
             this.tb11DoorTracksText.Location = new System.Drawing.Point(25, 56);
-            this.tb11DoorTracksText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11DoorTracksText.Margin = new System.Windows.Forms.Padding(2);
             this.tb11DoorTracksText.Name = "tb11DoorTracksText";
             this.tb11DoorTracksText.Size = new System.Drawing.Size(188, 32);
             this.tb11DoorTracksText.TabIndex = 82;
@@ -12053,7 +12018,7 @@
             this.tb11LandingDoorFInishOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11LandingDoorFInishOther.ForeColor = System.Drawing.Color.Black;
             this.tb11LandingDoorFInishOther.Location = new System.Drawing.Point(25, 59);
-            this.tb11LandingDoorFInishOther.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11LandingDoorFInishOther.Margin = new System.Windows.Forms.Padding(2);
             this.tb11LandingDoorFInishOther.Name = "tb11LandingDoorFInishOther";
             this.tb11LandingDoorFInishOther.Size = new System.Drawing.Size(188, 32);
             this.tb11LandingDoorFInishOther.TabIndex = 80;
@@ -12131,7 +12096,7 @@
             this.tb11DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11DoorWidth.ForeColor = System.Drawing.Color.Black;
             this.tb11DoorWidth.Location = new System.Drawing.Point(190, 1093);
-            this.tb11DoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11DoorWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb11DoorWidth.Name = "tb11DoorWidth";
             this.tb11DoorWidth.Size = new System.Drawing.Size(81, 32);
             this.tb11DoorWidth.TabIndex = 318;
@@ -12142,7 +12107,7 @@
             this.tb11DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb11DoorHeight.ForeColor = System.Drawing.Color.Black;
             this.tb11DoorHeight.Location = new System.Drawing.Point(190, 1129);
-            this.tb11DoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb11DoorHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb11DoorHeight.Name = "tb11DoorHeight";
             this.tb11DoorHeight.Size = new System.Drawing.Size(81, 32);
             this.tb11DoorHeight.TabIndex = 319;
@@ -12258,7 +12223,7 @@
             this.panelLift9.Controls.Add(this.tb9DoorHeight);
             this.panelLift9.Controls.Add(this.label246);
             this.panelLift9.Location = new System.Drawing.Point(1259, 369);
-            this.panelLift9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLift9.Margin = new System.Windows.Forms.Padding(2);
             this.panelLift9.Name = "panelLift9";
             this.panelLift9.Size = new System.Drawing.Size(689, 735);
             this.panelLift9.TabIndex = 428;
@@ -12302,7 +12267,7 @@
             this.tb9ShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9ShaftWidth.ForeColor = System.Drawing.Color.Black;
             this.tb9ShaftWidth.Location = new System.Drawing.Point(261, 481);
-            this.tb9ShaftWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9ShaftWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb9ShaftWidth.Name = "tb9ShaftWidth";
             this.tb9ShaftWidth.Size = new System.Drawing.Size(100, 32);
             this.tb9ShaftWidth.TabIndex = 303;
@@ -12416,7 +12381,7 @@
             this.tb9CeilingFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9CeilingFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb9CeilingFinishText.Location = new System.Drawing.Point(25, 122);
-            this.tb9CeilingFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9CeilingFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb9CeilingFinishText.Name = "tb9CeilingFinishText";
             this.tb9CeilingFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb9CeilingFinishText.TabIndex = 76;
@@ -12473,7 +12438,7 @@
             this.tb9SideWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9SideWallText.ForeColor = System.Drawing.Color.Black;
             this.tb9SideWallText.Location = new System.Drawing.Point(26, 56);
-            this.tb9SideWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9SideWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb9SideWallText.Name = "tb9SideWallText";
             this.tb9SideWallText.Size = new System.Drawing.Size(199, 32);
             this.tb9SideWallText.TabIndex = 76;
@@ -12552,7 +12517,7 @@
             this.tb9FrontWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9FrontWallText.ForeColor = System.Drawing.Color.Black;
             this.tb9FrontWallText.Location = new System.Drawing.Point(25, 57);
-            this.tb9FrontWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9FrontWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb9FrontWallText.Name = "tb9FrontWallText";
             this.tb9FrontWallText.Size = new System.Drawing.Size(199, 32);
             this.tb9FrontWallText.TabIndex = 76;
@@ -12679,7 +12644,7 @@
             this.tb9CarDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9CarDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb9CarDoorFinishText.Location = new System.Drawing.Point(25, 56);
-            this.tb9CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb9CarDoorFinishText.Name = "tb9CarDoorFinishText";
             this.tb9CarDoorFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb9CarDoorFinishText.TabIndex = 76;
@@ -12735,7 +12700,7 @@
             this.tb9ShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9ShaftDepth.ForeColor = System.Drawing.Color.Black;
             this.tb9ShaftDepth.Location = new System.Drawing.Point(261, 517);
-            this.tb9ShaftDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9ShaftDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb9ShaftDepth.Name = "tb9ShaftDepth";
             this.tb9ShaftDepth.Size = new System.Drawing.Size(100, 32);
             this.tb9ShaftDepth.TabIndex = 304;
@@ -12746,7 +12711,7 @@
             this.tb9AuxCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9AuxCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb9AuxCOPLocation.Location = new System.Drawing.Point(222, 2124);
-            this.tb9AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb9AuxCOPLocation.Name = "tb9AuxCOPLocation";
             this.tb9AuxCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb9AuxCOPLocation.TabIndex = 322;
@@ -12782,7 +12747,7 @@
             this.tb9PitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9PitDepth.ForeColor = System.Drawing.Color.Black;
             this.tb9PitDepth.Location = new System.Drawing.Point(261, 553);
-            this.tb9PitDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9PitDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb9PitDepth.Name = "tb9PitDepth";
             this.tb9PitDepth.Size = new System.Drawing.Size(100, 32);
             this.tb9PitDepth.TabIndex = 305;
@@ -12793,7 +12758,7 @@
             this.tb9MainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9MainCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb9MainCOPLocation.Location = new System.Drawing.Point(222, 2088);
-            this.tb9MainCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9MainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb9MainCOPLocation.Name = "tb9MainCOPLocation";
             this.tb9MainCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb9MainCOPLocation.TabIndex = 321;
@@ -12829,7 +12794,7 @@
             this.tb9Headroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9Headroom.ForeColor = System.Drawing.Color.Black;
             this.tb9Headroom.Location = new System.Drawing.Point(261, 589);
-            this.tb9Headroom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9Headroom.Margin = new System.Windows.Forms.Padding(2);
             this.tb9Headroom.Name = "tb9Headroom";
             this.tb9Headroom.Size = new System.Drawing.Size(100, 32);
             this.tb9Headroom.TabIndex = 306;
@@ -12840,7 +12805,7 @@
             this.tb9NumberOfCOPs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9NumberOfCOPs.ForeColor = System.Drawing.Color.Black;
             this.tb9NumberOfCOPs.Location = new System.Drawing.Point(222, 2052);
-            this.tb9NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2);
             this.tb9NumberOfCOPs.Name = "tb9NumberOfCOPs";
             this.tb9NumberOfCOPs.Size = new System.Drawing.Size(100, 32);
             this.tb9NumberOfCOPs.TabIndex = 320;
@@ -12876,7 +12841,7 @@
             this.tb9Travel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9Travel.ForeColor = System.Drawing.Color.Black;
             this.tb9Travel.Location = new System.Drawing.Point(261, 625);
-            this.tb9Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9Travel.Margin = new System.Windows.Forms.Padding(2);
             this.tb9Travel.Name = "tb9Travel";
             this.tb9Travel.Size = new System.Drawing.Size(100, 32);
             this.tb9Travel.TabIndex = 307;
@@ -12947,7 +12912,7 @@
             this.tb9NumberOfLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9NumberOfLandings.ForeColor = System.Drawing.Color.Black;
             this.tb9NumberOfLandings.Location = new System.Drawing.Point(261, 661);
-            this.tb9NumberOfLandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9NumberOfLandings.Margin = new System.Windows.Forms.Padding(2);
             this.tb9NumberOfLandings.Name = "tb9NumberOfLandings";
             this.tb9NumberOfLandings.Size = new System.Drawing.Size(100, 32);
             this.tb9NumberOfLandings.TabIndex = 308;
@@ -13014,7 +12979,7 @@
             this.tb9FacePlateMaterialText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9FacePlateMaterialText.ForeColor = System.Drawing.Color.Black;
             this.tb9FacePlateMaterialText.Location = new System.Drawing.Point(25, 61);
-            this.tb9FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2);
             this.tb9FacePlateMaterialText.Name = "tb9FacePlateMaterialText";
             this.tb9FacePlateMaterialText.Size = new System.Drawing.Size(203, 32);
             this.tb9FacePlateMaterialText.TabIndex = 95;
@@ -13231,7 +13196,7 @@
             this.tb9KeyswitchLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9KeyswitchLocation.ForeColor = System.Drawing.Color.Black;
             this.tb9KeyswitchLocation.Location = new System.Drawing.Point(222, 2160);
-            this.tb9KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb9KeyswitchLocation.Name = "tb9KeyswitchLocation";
             this.tb9KeyswitchLocation.Size = new System.Drawing.Size(433, 32);
             this.tb9KeyswitchLocation.TabIndex = 323;
@@ -13268,7 +13233,7 @@
             this.tb9COPFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9COPFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb9COPFinishText.Location = new System.Drawing.Point(23, 58);
-            this.tb9COPFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9COPFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb9COPFinishText.Name = "tb9COPFinishText";
             this.tb9COPFinishText.Size = new System.Drawing.Size(202, 32);
             this.tb9COPFinishText.TabIndex = 76;
@@ -13313,7 +13278,7 @@
             this.tb9HandrailTexrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9HandrailTexrt.ForeColor = System.Drawing.Color.Black;
             this.tb9HandrailTexrt.Location = new System.Drawing.Point(25, 52);
-            this.tb9HandrailTexrt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9HandrailTexrt.Margin = new System.Windows.Forms.Padding(2);
             this.tb9HandrailTexrt.Name = "tb9HandrailTexrt";
             this.tb9HandrailTexrt.Size = new System.Drawing.Size(199, 32);
             this.tb9HandrailTexrt.TabIndex = 74;
@@ -13368,7 +13333,7 @@
             this.tb9NumberOfLEDLights.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9NumberOfLEDLights.ForeColor = System.Drawing.Color.Black;
             this.tb9NumberOfLEDLights.Location = new System.Drawing.Point(8, 27);
-            this.tb9NumberOfLEDLights.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9NumberOfLEDLights.Margin = new System.Windows.Forms.Padding(2);
             this.tb9NumberOfLEDLights.Name = "tb9NumberOfLEDLights";
             this.tb9NumberOfLEDLights.Size = new System.Drawing.Size(223, 32);
             this.tb9NumberOfLEDLights.TabIndex = 74;
@@ -13405,7 +13370,7 @@
             this.tb9MirrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9MirrorText.ForeColor = System.Drawing.Color.Black;
             this.tb9MirrorText.Location = new System.Drawing.Point(25, 78);
-            this.tb9MirrorText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9MirrorText.Margin = new System.Windows.Forms.Padding(2);
             this.tb9MirrorText.Name = "tb9MirrorText";
             this.tb9MirrorText.Size = new System.Drawing.Size(199, 32);
             this.tb9MirrorText.TabIndex = 78;
@@ -13446,7 +13411,7 @@
             this.tb9LiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9LiftNumbers.ForeColor = System.Drawing.Color.Black;
             this.tb9LiftNumbers.Location = new System.Drawing.Point(289, 93);
-            this.tb9LiftNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9LiftNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.tb9LiftNumbers.Name = "tb9LiftNumbers";
             this.tb9LiftNumbers.Size = new System.Drawing.Size(236, 32);
             this.tb9LiftNumbers.TabIndex = 302;
@@ -13515,7 +13480,7 @@
             this.tb9TypeOfLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9TypeOfLift.ForeColor = System.Drawing.Color.Black;
             this.tb9TypeOfLift.Location = new System.Drawing.Point(289, 44);
-            this.tb9TypeOfLift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9TypeOfLift.Margin = new System.Windows.Forms.Padding(2);
             this.tb9TypeOfLift.Name = "tb9TypeOfLift";
             this.tb9TypeOfLift.Size = new System.Drawing.Size(236, 32);
             this.tb9TypeOfLift.TabIndex = 301;
@@ -13648,7 +13613,7 @@
             this.tb9FloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9FloorFinish.ForeColor = System.Drawing.Color.Black;
             this.tb9FloorFinish.Location = new System.Drawing.Point(10, 33);
-            this.tb9FloorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9FloorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tb9FloorFinish.Name = "tb9FloorFinish";
             this.tb9FloorFinish.Size = new System.Drawing.Size(221, 32);
             this.tb9FloorFinish.TabIndex = 75;
@@ -13671,7 +13636,7 @@
             this.tb9Designations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9Designations.ForeColor = System.Drawing.Color.Black;
             this.tb9Designations.Location = new System.Drawing.Point(222, 2198);
-            this.tb9Designations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9Designations.Margin = new System.Windows.Forms.Padding(2);
             this.tb9Designations.Name = "tb9Designations";
             this.tb9Designations.Size = new System.Drawing.Size(433, 32);
             this.tb9Designations.TabIndex = 324;
@@ -13682,7 +13647,7 @@
             this.tb9NumberOfLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9NumberOfLandingDoors.ForeColor = System.Drawing.Color.Black;
             this.tb9NumberOfLandingDoors.Location = new System.Drawing.Point(261, 697);
-            this.tb9NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2);
             this.tb9NumberOfLandingDoors.Name = "tb9NumberOfLandingDoors";
             this.tb9NumberOfLandingDoors.Size = new System.Drawing.Size(100, 32);
             this.tb9NumberOfLandingDoors.TabIndex = 309;
@@ -13706,7 +13671,7 @@
             this.tb9RearWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9RearWallText.ForeColor = System.Drawing.Color.Black;
             this.tb9RearWallText.Location = new System.Drawing.Point(25, 56);
-            this.tb9RearWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9RearWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb9RearWallText.Name = "tb9RearWallText";
             this.tb9RearWallText.Size = new System.Drawing.Size(199, 32);
             this.tb9RearWallText.TabIndex = 76;
@@ -13951,7 +13916,7 @@
             this.tb9CarNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9CarNotes.ForeColor = System.Drawing.Color.Black;
             this.tb9CarNotes.Location = new System.Drawing.Point(91, 968);
-            this.tb9CarNotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9CarNotes.Margin = new System.Windows.Forms.Padding(2);
             this.tb9CarNotes.Multiline = true;
             this.tb9CarNotes.Name = "tb9CarNotes";
             this.tb9CarNotes.Size = new System.Drawing.Size(563, 67);
@@ -13975,7 +13940,7 @@
             this.tb9NumberOFCarEntraces.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9NumberOFCarEntraces.ForeColor = System.Drawing.Color.Black;
             this.tb9NumberOFCarEntraces.Location = new System.Drawing.Point(528, 851);
-            this.tb9NumberOFCarEntraces.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9NumberOFCarEntraces.Margin = new System.Windows.Forms.Padding(2);
             this.tb9NumberOFCarEntraces.Name = "tb9NumberOFCarEntraces";
             this.tb9NumberOFCarEntraces.Size = new System.Drawing.Size(125, 32);
             this.tb9NumberOFCarEntraces.TabIndex = 316;
@@ -14010,7 +13975,7 @@
             this.tb9LiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9LiftRating.ForeColor = System.Drawing.Color.Black;
             this.tb9LiftRating.Location = new System.Drawing.Point(528, 813);
-            this.tb9LiftRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9LiftRating.Margin = new System.Windows.Forms.Padding(2);
             this.tb9LiftRating.Name = "tb9LiftRating";
             this.tb9LiftRating.Size = new System.Drawing.Size(125, 32);
             this.tb9LiftRating.TabIndex = 315;
@@ -14021,7 +13986,7 @@
             this.tb9CarWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9CarWidth.ForeColor = System.Drawing.Color.Black;
             this.tb9CarWidth.Location = new System.Drawing.Point(148, 853);
-            this.tb9CarWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9CarWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb9CarWidth.Name = "tb9CarWidth";
             this.tb9CarWidth.Size = new System.Drawing.Size(117, 32);
             this.tb9CarWidth.TabIndex = 312;
@@ -14056,7 +14021,7 @@
             this.tb9Load.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9Load.ForeColor = System.Drawing.Color.Black;
             this.tb9Load.Location = new System.Drawing.Point(148, 782);
-            this.tb9Load.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9Load.Margin = new System.Windows.Forms.Padding(2);
             this.tb9Load.Name = "tb9Load";
             this.tb9Load.Size = new System.Drawing.Size(117, 32);
             this.tb9Load.TabIndex = 310;
@@ -14067,7 +14032,7 @@
             this.tb9CarHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9CarHeight.ForeColor = System.Drawing.Color.Black;
             this.tb9CarHeight.Location = new System.Drawing.Point(148, 925);
-            this.tb9CarHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9CarHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb9CarHeight.Name = "tb9CarHeight";
             this.tb9CarHeight.Size = new System.Drawing.Size(117, 32);
             this.tb9CarHeight.TabIndex = 314;
@@ -14078,7 +14043,7 @@
             this.tb9Speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9Speed.ForeColor = System.Drawing.Color.Black;
             this.tb9Speed.Location = new System.Drawing.Point(148, 817);
-            this.tb9Speed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9Speed.Margin = new System.Windows.Forms.Padding(2);
             this.tb9Speed.Name = "tb9Speed";
             this.tb9Speed.Size = new System.Drawing.Size(117, 32);
             this.tb9Speed.TabIndex = 311;
@@ -14089,7 +14054,7 @@
             this.tb9CarDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9CarDepth.ForeColor = System.Drawing.Color.Black;
             this.tb9CarDepth.Location = new System.Drawing.Point(148, 889);
-            this.tb9CarDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9CarDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb9CarDepth.Name = "tb9CarDepth";
             this.tb9CarDepth.Size = new System.Drawing.Size(117, 32);
             this.tb9CarDepth.TabIndex = 313;
@@ -14159,7 +14124,7 @@
             this.tb9DoorTracksText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9DoorTracksText.ForeColor = System.Drawing.Color.Black;
             this.tb9DoorTracksText.Location = new System.Drawing.Point(25, 56);
-            this.tb9DoorTracksText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9DoorTracksText.Margin = new System.Windows.Forms.Padding(2);
             this.tb9DoorTracksText.Name = "tb9DoorTracksText";
             this.tb9DoorTracksText.Size = new System.Drawing.Size(188, 32);
             this.tb9DoorTracksText.TabIndex = 82;
@@ -14204,7 +14169,7 @@
             this.tb9LandingDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9LandingDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb9LandingDoorFinishText.Location = new System.Drawing.Point(25, 59);
-            this.tb9LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb9LandingDoorFinishText.Name = "tb9LandingDoorFinishText";
             this.tb9LandingDoorFinishText.Size = new System.Drawing.Size(188, 32);
             this.tb9LandingDoorFinishText.TabIndex = 80;
@@ -14282,7 +14247,7 @@
             this.tb9DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9DoorWidth.ForeColor = System.Drawing.Color.Black;
             this.tb9DoorWidth.Location = new System.Drawing.Point(187, 1084);
-            this.tb9DoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9DoorWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb9DoorWidth.Name = "tb9DoorWidth";
             this.tb9DoorWidth.Size = new System.Drawing.Size(81, 32);
             this.tb9DoorWidth.TabIndex = 318;
@@ -14293,7 +14258,7 @@
             this.tb9DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb9DoorHeight.ForeColor = System.Drawing.Color.Black;
             this.tb9DoorHeight.Location = new System.Drawing.Point(187, 1119);
-            this.tb9DoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb9DoorHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb9DoorHeight.Name = "tb9DoorHeight";
             this.tb9DoorHeight.Size = new System.Drawing.Size(81, 32);
             this.tb9DoorHeight.TabIndex = 319;
@@ -14409,7 +14374,7 @@
             this.panelLift10.Controls.Add(this.tb10DoorHeight);
             this.panelLift10.Controls.Add(this.label492);
             this.panelLift10.Location = new System.Drawing.Point(1277, 346);
-            this.panelLift10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLift10.Margin = new System.Windows.Forms.Padding(2);
             this.panelLift10.Name = "panelLift10";
             this.panelLift10.Size = new System.Drawing.Size(689, 735);
             this.panelLift10.TabIndex = 429;
@@ -14453,7 +14418,7 @@
             this.tb10ShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10ShaftWidth.ForeColor = System.Drawing.Color.Black;
             this.tb10ShaftWidth.Location = new System.Drawing.Point(274, 493);
-            this.tb10ShaftWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10ShaftWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb10ShaftWidth.Name = "tb10ShaftWidth";
             this.tb10ShaftWidth.Size = new System.Drawing.Size(100, 32);
             this.tb10ShaftWidth.TabIndex = 303;
@@ -14567,7 +14532,7 @@
             this.tb10CEilingFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10CEilingFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb10CEilingFinishText.Location = new System.Drawing.Point(25, 122);
-            this.tb10CEilingFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10CEilingFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb10CEilingFinishText.Name = "tb10CEilingFinishText";
             this.tb10CEilingFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb10CEilingFinishText.TabIndex = 76;
@@ -14624,7 +14589,7 @@
             this.tb10SideWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10SideWallText.ForeColor = System.Drawing.Color.Black;
             this.tb10SideWallText.Location = new System.Drawing.Point(26, 56);
-            this.tb10SideWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10SideWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb10SideWallText.Name = "tb10SideWallText";
             this.tb10SideWallText.Size = new System.Drawing.Size(199, 32);
             this.tb10SideWallText.TabIndex = 76;
@@ -14703,7 +14668,7 @@
             this.tb10FrontWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10FrontWallText.ForeColor = System.Drawing.Color.Black;
             this.tb10FrontWallText.Location = new System.Drawing.Point(25, 57);
-            this.tb10FrontWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10FrontWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb10FrontWallText.Name = "tb10FrontWallText";
             this.tb10FrontWallText.Size = new System.Drawing.Size(199, 32);
             this.tb10FrontWallText.TabIndex = 76;
@@ -14830,7 +14795,7 @@
             this.tb10CarDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10CarDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb10CarDoorFinishText.Location = new System.Drawing.Point(25, 56);
-            this.tb10CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb10CarDoorFinishText.Name = "tb10CarDoorFinishText";
             this.tb10CarDoorFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb10CarDoorFinishText.TabIndex = 76;
@@ -14886,7 +14851,7 @@
             this.tb10ShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10ShaftDepth.ForeColor = System.Drawing.Color.Black;
             this.tb10ShaftDepth.Location = new System.Drawing.Point(274, 529);
-            this.tb10ShaftDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10ShaftDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb10ShaftDepth.Name = "tb10ShaftDepth";
             this.tb10ShaftDepth.Size = new System.Drawing.Size(100, 32);
             this.tb10ShaftDepth.TabIndex = 304;
@@ -14897,7 +14862,7 @@
             this.tb10AuxCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10AuxCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb10AuxCOPLocation.Location = new System.Drawing.Point(226, 2136);
-            this.tb10AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb10AuxCOPLocation.Name = "tb10AuxCOPLocation";
             this.tb10AuxCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb10AuxCOPLocation.TabIndex = 322;
@@ -14933,7 +14898,7 @@
             this.tb10PitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10PitDepth.ForeColor = System.Drawing.Color.Black;
             this.tb10PitDepth.Location = new System.Drawing.Point(274, 565);
-            this.tb10PitDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10PitDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb10PitDepth.Name = "tb10PitDepth";
             this.tb10PitDepth.Size = new System.Drawing.Size(100, 32);
             this.tb10PitDepth.TabIndex = 305;
@@ -14944,7 +14909,7 @@
             this.tb10MainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10MainCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb10MainCOPLocation.Location = new System.Drawing.Point(226, 2100);
-            this.tb10MainCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10MainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb10MainCOPLocation.Name = "tb10MainCOPLocation";
             this.tb10MainCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb10MainCOPLocation.TabIndex = 321;
@@ -14980,7 +14945,7 @@
             this.tb10Headroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10Headroom.ForeColor = System.Drawing.Color.Black;
             this.tb10Headroom.Location = new System.Drawing.Point(274, 601);
-            this.tb10Headroom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10Headroom.Margin = new System.Windows.Forms.Padding(2);
             this.tb10Headroom.Name = "tb10Headroom";
             this.tb10Headroom.Size = new System.Drawing.Size(100, 32);
             this.tb10Headroom.TabIndex = 306;
@@ -14991,7 +14956,7 @@
             this.tb10NumberOfCOPs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10NumberOfCOPs.ForeColor = System.Drawing.Color.Black;
             this.tb10NumberOfCOPs.Location = new System.Drawing.Point(226, 2064);
-            this.tb10NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2);
             this.tb10NumberOfCOPs.Name = "tb10NumberOfCOPs";
             this.tb10NumberOfCOPs.Size = new System.Drawing.Size(100, 32);
             this.tb10NumberOfCOPs.TabIndex = 320;
@@ -15027,7 +14992,7 @@
             this.tb10Travel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10Travel.ForeColor = System.Drawing.Color.Black;
             this.tb10Travel.Location = new System.Drawing.Point(274, 637);
-            this.tb10Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10Travel.Margin = new System.Windows.Forms.Padding(2);
             this.tb10Travel.Name = "tb10Travel";
             this.tb10Travel.Size = new System.Drawing.Size(100, 32);
             this.tb10Travel.TabIndex = 307;
@@ -15098,7 +15063,7 @@
             this.tb10NumberofLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10NumberofLandings.ForeColor = System.Drawing.Color.Black;
             this.tb10NumberofLandings.Location = new System.Drawing.Point(274, 673);
-            this.tb10NumberofLandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10NumberofLandings.Margin = new System.Windows.Forms.Padding(2);
             this.tb10NumberofLandings.Name = "tb10NumberofLandings";
             this.tb10NumberofLandings.Size = new System.Drawing.Size(100, 32);
             this.tb10NumberofLandings.TabIndex = 308;
@@ -15165,7 +15130,7 @@
             this.tb10FacePlateMaterialText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10FacePlateMaterialText.ForeColor = System.Drawing.Color.Black;
             this.tb10FacePlateMaterialText.Location = new System.Drawing.Point(25, 61);
-            this.tb10FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2);
             this.tb10FacePlateMaterialText.Name = "tb10FacePlateMaterialText";
             this.tb10FacePlateMaterialText.Size = new System.Drawing.Size(203, 32);
             this.tb10FacePlateMaterialText.TabIndex = 95;
@@ -15382,7 +15347,7 @@
             this.tb10KeyswitchLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10KeyswitchLocation.ForeColor = System.Drawing.Color.Black;
             this.tb10KeyswitchLocation.Location = new System.Drawing.Point(226, 2172);
-            this.tb10KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb10KeyswitchLocation.Name = "tb10KeyswitchLocation";
             this.tb10KeyswitchLocation.Size = new System.Drawing.Size(433, 32);
             this.tb10KeyswitchLocation.TabIndex = 323;
@@ -15419,7 +15384,7 @@
             this.tb10COPFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10COPFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb10COPFinishText.Location = new System.Drawing.Point(23, 58);
-            this.tb10COPFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10COPFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb10COPFinishText.Name = "tb10COPFinishText";
             this.tb10COPFinishText.Size = new System.Drawing.Size(202, 32);
             this.tb10COPFinishText.TabIndex = 76;
@@ -15464,7 +15429,7 @@
             this.tb10HandrailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10HandrailText.ForeColor = System.Drawing.Color.Black;
             this.tb10HandrailText.Location = new System.Drawing.Point(25, 52);
-            this.tb10HandrailText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10HandrailText.Margin = new System.Windows.Forms.Padding(2);
             this.tb10HandrailText.Name = "tb10HandrailText";
             this.tb10HandrailText.Size = new System.Drawing.Size(199, 32);
             this.tb10HandrailText.TabIndex = 74;
@@ -15519,7 +15484,7 @@
             this.tb10NumberOfLEDLIghts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10NumberOfLEDLIghts.ForeColor = System.Drawing.Color.Black;
             this.tb10NumberOfLEDLIghts.Location = new System.Drawing.Point(8, 27);
-            this.tb10NumberOfLEDLIghts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10NumberOfLEDLIghts.Margin = new System.Windows.Forms.Padding(2);
             this.tb10NumberOfLEDLIghts.Name = "tb10NumberOfLEDLIghts";
             this.tb10NumberOfLEDLIghts.Size = new System.Drawing.Size(223, 32);
             this.tb10NumberOfLEDLIghts.TabIndex = 74;
@@ -15556,7 +15521,7 @@
             this.tb10MirrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10MirrorText.ForeColor = System.Drawing.Color.Black;
             this.tb10MirrorText.Location = new System.Drawing.Point(25, 78);
-            this.tb10MirrorText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10MirrorText.Margin = new System.Windows.Forms.Padding(2);
             this.tb10MirrorText.Name = "tb10MirrorText";
             this.tb10MirrorText.Size = new System.Drawing.Size(199, 32);
             this.tb10MirrorText.TabIndex = 78;
@@ -15597,7 +15562,7 @@
             this.tb10LiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10LiftNumbers.ForeColor = System.Drawing.Color.Black;
             this.tb10LiftNumbers.Location = new System.Drawing.Point(291, 100);
-            this.tb10LiftNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10LiftNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.tb10LiftNumbers.Name = "tb10LiftNumbers";
             this.tb10LiftNumbers.Size = new System.Drawing.Size(236, 32);
             this.tb10LiftNumbers.TabIndex = 302;
@@ -15666,7 +15631,7 @@
             this.tb10TypeOfLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10TypeOfLift.ForeColor = System.Drawing.Color.Black;
             this.tb10TypeOfLift.Location = new System.Drawing.Point(291, 51);
-            this.tb10TypeOfLift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10TypeOfLift.Margin = new System.Windows.Forms.Padding(2);
             this.tb10TypeOfLift.Name = "tb10TypeOfLift";
             this.tb10TypeOfLift.Size = new System.Drawing.Size(236, 32);
             this.tb10TypeOfLift.TabIndex = 301;
@@ -15799,7 +15764,7 @@
             this.tb10FloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10FloorFinish.ForeColor = System.Drawing.Color.Black;
             this.tb10FloorFinish.Location = new System.Drawing.Point(10, 33);
-            this.tb10FloorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10FloorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tb10FloorFinish.Name = "tb10FloorFinish";
             this.tb10FloorFinish.Size = new System.Drawing.Size(221, 32);
             this.tb10FloorFinish.TabIndex = 75;
@@ -15822,7 +15787,7 @@
             this.tb10Desigination.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10Desigination.ForeColor = System.Drawing.Color.Black;
             this.tb10Desigination.Location = new System.Drawing.Point(226, 2210);
-            this.tb10Desigination.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10Desigination.Margin = new System.Windows.Forms.Padding(2);
             this.tb10Desigination.Name = "tb10Desigination";
             this.tb10Desigination.Size = new System.Drawing.Size(433, 32);
             this.tb10Desigination.TabIndex = 324;
@@ -15833,7 +15798,7 @@
             this.tb10NumberofLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10NumberofLandingDoors.ForeColor = System.Drawing.Color.Black;
             this.tb10NumberofLandingDoors.Location = new System.Drawing.Point(274, 709);
-            this.tb10NumberofLandingDoors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10NumberofLandingDoors.Margin = new System.Windows.Forms.Padding(2);
             this.tb10NumberofLandingDoors.Name = "tb10NumberofLandingDoors";
             this.tb10NumberofLandingDoors.Size = new System.Drawing.Size(100, 32);
             this.tb10NumberofLandingDoors.TabIndex = 309;
@@ -15857,7 +15822,7 @@
             this.tb10RearWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10RearWallText.ForeColor = System.Drawing.Color.Black;
             this.tb10RearWallText.Location = new System.Drawing.Point(25, 56);
-            this.tb10RearWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10RearWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb10RearWallText.Name = "tb10RearWallText";
             this.tb10RearWallText.Size = new System.Drawing.Size(199, 32);
             this.tb10RearWallText.TabIndex = 76;
@@ -16102,7 +16067,7 @@
             this.tb10LiftCarNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10LiftCarNotes.ForeColor = System.Drawing.Color.Black;
             this.tb10LiftCarNotes.Location = new System.Drawing.Point(93, 976);
-            this.tb10LiftCarNotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10LiftCarNotes.Margin = new System.Windows.Forms.Padding(2);
             this.tb10LiftCarNotes.Multiline = true;
             this.tb10LiftCarNotes.Name = "tb10LiftCarNotes";
             this.tb10LiftCarNotes.Size = new System.Drawing.Size(563, 67);
@@ -16126,7 +16091,7 @@
             this.tb10NumberofCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10NumberofCarEntrances.ForeColor = System.Drawing.Color.Black;
             this.tb10NumberofCarEntrances.Location = new System.Drawing.Point(531, 859);
-            this.tb10NumberofCarEntrances.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10NumberofCarEntrances.Margin = new System.Windows.Forms.Padding(2);
             this.tb10NumberofCarEntrances.Name = "tb10NumberofCarEntrances";
             this.tb10NumberofCarEntrances.Size = new System.Drawing.Size(125, 32);
             this.tb10NumberofCarEntrances.TabIndex = 316;
@@ -16161,7 +16126,7 @@
             this.tb10LiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10LiftRating.ForeColor = System.Drawing.Color.Black;
             this.tb10LiftRating.Location = new System.Drawing.Point(531, 821);
-            this.tb10LiftRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10LiftRating.Margin = new System.Windows.Forms.Padding(2);
             this.tb10LiftRating.Name = "tb10LiftRating";
             this.tb10LiftRating.Size = new System.Drawing.Size(125, 32);
             this.tb10LiftRating.TabIndex = 315;
@@ -16172,7 +16137,7 @@
             this.tb10CarWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10CarWidth.ForeColor = System.Drawing.Color.Black;
             this.tb10CarWidth.Location = new System.Drawing.Point(151, 861);
-            this.tb10CarWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10CarWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb10CarWidth.Name = "tb10CarWidth";
             this.tb10CarWidth.Size = new System.Drawing.Size(117, 32);
             this.tb10CarWidth.TabIndex = 312;
@@ -16207,7 +16172,7 @@
             this.tb10LiftCarLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10LiftCarLoad.ForeColor = System.Drawing.Color.Black;
             this.tb10LiftCarLoad.Location = new System.Drawing.Point(151, 790);
-            this.tb10LiftCarLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10LiftCarLoad.Margin = new System.Windows.Forms.Padding(2);
             this.tb10LiftCarLoad.Name = "tb10LiftCarLoad";
             this.tb10LiftCarLoad.Size = new System.Drawing.Size(117, 32);
             this.tb10LiftCarLoad.TabIndex = 310;
@@ -16218,7 +16183,7 @@
             this.tb10CarHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10CarHeight.ForeColor = System.Drawing.Color.Black;
             this.tb10CarHeight.Location = new System.Drawing.Point(151, 933);
-            this.tb10CarHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10CarHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb10CarHeight.Name = "tb10CarHeight";
             this.tb10CarHeight.Size = new System.Drawing.Size(117, 32);
             this.tb10CarHeight.TabIndex = 314;
@@ -16229,7 +16194,7 @@
             this.tb10Speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10Speed.ForeColor = System.Drawing.Color.Black;
             this.tb10Speed.Location = new System.Drawing.Point(151, 825);
-            this.tb10Speed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10Speed.Margin = new System.Windows.Forms.Padding(2);
             this.tb10Speed.Name = "tb10Speed";
             this.tb10Speed.Size = new System.Drawing.Size(117, 32);
             this.tb10Speed.TabIndex = 311;
@@ -16240,7 +16205,7 @@
             this.tb10CarDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10CarDepth.ForeColor = System.Drawing.Color.Black;
             this.tb10CarDepth.Location = new System.Drawing.Point(151, 897);
-            this.tb10CarDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10CarDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb10CarDepth.Name = "tb10CarDepth";
             this.tb10CarDepth.Size = new System.Drawing.Size(117, 32);
             this.tb10CarDepth.TabIndex = 313;
@@ -16310,7 +16275,7 @@
             this.tb10DoorTracksText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10DoorTracksText.ForeColor = System.Drawing.Color.Black;
             this.tb10DoorTracksText.Location = new System.Drawing.Point(25, 56);
-            this.tb10DoorTracksText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10DoorTracksText.Margin = new System.Windows.Forms.Padding(2);
             this.tb10DoorTracksText.Name = "tb10DoorTracksText";
             this.tb10DoorTracksText.Size = new System.Drawing.Size(188, 32);
             this.tb10DoorTracksText.TabIndex = 82;
@@ -16355,7 +16320,7 @@
             this.tb10LandingDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10LandingDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb10LandingDoorFinishText.Location = new System.Drawing.Point(25, 59);
-            this.tb10LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb10LandingDoorFinishText.Name = "tb10LandingDoorFinishText";
             this.tb10LandingDoorFinishText.Size = new System.Drawing.Size(188, 32);
             this.tb10LandingDoorFinishText.TabIndex = 80;
@@ -16433,7 +16398,7 @@
             this.tb10DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10DoorWidth.ForeColor = System.Drawing.Color.Black;
             this.tb10DoorWidth.Location = new System.Drawing.Point(189, 1094);
-            this.tb10DoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10DoorWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb10DoorWidth.Name = "tb10DoorWidth";
             this.tb10DoorWidth.Size = new System.Drawing.Size(81, 32);
             this.tb10DoorWidth.TabIndex = 318;
@@ -16444,7 +16409,7 @@
             this.tb10DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb10DoorHeight.ForeColor = System.Drawing.Color.Black;
             this.tb10DoorHeight.Location = new System.Drawing.Point(189, 1130);
-            this.tb10DoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb10DoorHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb10DoorHeight.Name = "tb10DoorHeight";
             this.tb10DoorHeight.Size = new System.Drawing.Size(81, 32);
             this.tb10DoorHeight.TabIndex = 319;
@@ -16559,8 +16524,8 @@
             this.panelLift8.Controls.Add(this.tb8DoorWidth);
             this.panelLift8.Controls.Add(this.tb8DoorHeight);
             this.panelLift8.Controls.Add(this.label287);
-            this.panelLift8.Location = new System.Drawing.Point(1311, 308);
-            this.panelLift8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLift8.Location = new System.Drawing.Point(1221, 1126);
+            this.panelLift8.Margin = new System.Windows.Forms.Padding(2);
             this.panelLift8.Name = "panelLift8";
             this.panelLift8.Size = new System.Drawing.Size(689, 735);
             this.panelLift8.TabIndex = 436;
@@ -16604,7 +16569,7 @@
             this.tb8ShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8ShaftWidth.ForeColor = System.Drawing.Color.Black;
             this.tb8ShaftWidth.Location = new System.Drawing.Point(245, 485);
-            this.tb8ShaftWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8ShaftWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb8ShaftWidth.Name = "tb8ShaftWidth";
             this.tb8ShaftWidth.Size = new System.Drawing.Size(100, 32);
             this.tb8ShaftWidth.TabIndex = 303;
@@ -16718,7 +16683,7 @@
             this.tb8CeilingFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8CeilingFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb8CeilingFinishText.Location = new System.Drawing.Point(25, 122);
-            this.tb8CeilingFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8CeilingFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb8CeilingFinishText.Name = "tb8CeilingFinishText";
             this.tb8CeilingFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb8CeilingFinishText.TabIndex = 76;
@@ -16775,7 +16740,7 @@
             this.tb8SideWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8SideWallText.ForeColor = System.Drawing.Color.Black;
             this.tb8SideWallText.Location = new System.Drawing.Point(26, 56);
-            this.tb8SideWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8SideWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb8SideWallText.Name = "tb8SideWallText";
             this.tb8SideWallText.Size = new System.Drawing.Size(199, 32);
             this.tb8SideWallText.TabIndex = 76;
@@ -16854,7 +16819,7 @@
             this.tb8FrontWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8FrontWallText.ForeColor = System.Drawing.Color.Black;
             this.tb8FrontWallText.Location = new System.Drawing.Point(25, 57);
-            this.tb8FrontWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8FrontWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb8FrontWallText.Name = "tb8FrontWallText";
             this.tb8FrontWallText.Size = new System.Drawing.Size(199, 32);
             this.tb8FrontWallText.TabIndex = 76;
@@ -16981,7 +16946,7 @@
             this.tb8CarDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8CarDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb8CarDoorFinishText.Location = new System.Drawing.Point(25, 56);
-            this.tb8CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb8CarDoorFinishText.Name = "tb8CarDoorFinishText";
             this.tb8CarDoorFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb8CarDoorFinishText.TabIndex = 76;
@@ -17037,7 +17002,7 @@
             this.tb8ShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8ShaftDepth.ForeColor = System.Drawing.Color.Black;
             this.tb8ShaftDepth.Location = new System.Drawing.Point(245, 521);
-            this.tb8ShaftDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8ShaftDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb8ShaftDepth.Name = "tb8ShaftDepth";
             this.tb8ShaftDepth.Size = new System.Drawing.Size(100, 32);
             this.tb8ShaftDepth.TabIndex = 304;
@@ -17048,7 +17013,7 @@
             this.tb8AuxCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8AuxCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb8AuxCOPLocation.Location = new System.Drawing.Point(224, 2155);
-            this.tb8AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb8AuxCOPLocation.Name = "tb8AuxCOPLocation";
             this.tb8AuxCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb8AuxCOPLocation.TabIndex = 322;
@@ -17084,7 +17049,7 @@
             this.tb8PitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8PitDepth.ForeColor = System.Drawing.Color.Black;
             this.tb8PitDepth.Location = new System.Drawing.Point(245, 557);
-            this.tb8PitDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8PitDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb8PitDepth.Name = "tb8PitDepth";
             this.tb8PitDepth.Size = new System.Drawing.Size(100, 32);
             this.tb8PitDepth.TabIndex = 305;
@@ -17095,7 +17060,7 @@
             this.tb8MainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8MainCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb8MainCOPLocation.Location = new System.Drawing.Point(224, 2119);
-            this.tb8MainCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8MainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb8MainCOPLocation.Name = "tb8MainCOPLocation";
             this.tb8MainCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb8MainCOPLocation.TabIndex = 321;
@@ -17131,7 +17096,7 @@
             this.tb8Headroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8Headroom.ForeColor = System.Drawing.Color.Black;
             this.tb8Headroom.Location = new System.Drawing.Point(245, 593);
-            this.tb8Headroom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8Headroom.Margin = new System.Windows.Forms.Padding(2);
             this.tb8Headroom.Name = "tb8Headroom";
             this.tb8Headroom.Size = new System.Drawing.Size(100, 32);
             this.tb8Headroom.TabIndex = 306;
@@ -17142,7 +17107,7 @@
             this.tb8NumberOfCOPs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8NumberOfCOPs.ForeColor = System.Drawing.Color.Black;
             this.tb8NumberOfCOPs.Location = new System.Drawing.Point(224, 2083);
-            this.tb8NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2);
             this.tb8NumberOfCOPs.Name = "tb8NumberOfCOPs";
             this.tb8NumberOfCOPs.Size = new System.Drawing.Size(100, 32);
             this.tb8NumberOfCOPs.TabIndex = 320;
@@ -17178,7 +17143,7 @@
             this.tb8Travel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8Travel.ForeColor = System.Drawing.Color.Black;
             this.tb8Travel.Location = new System.Drawing.Point(245, 629);
-            this.tb8Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8Travel.Margin = new System.Windows.Forms.Padding(2);
             this.tb8Travel.Name = "tb8Travel";
             this.tb8Travel.Size = new System.Drawing.Size(100, 32);
             this.tb8Travel.TabIndex = 307;
@@ -17249,7 +17214,7 @@
             this.tb8NumberOfLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8NumberOfLandings.ForeColor = System.Drawing.Color.Black;
             this.tb8NumberOfLandings.Location = new System.Drawing.Point(245, 665);
-            this.tb8NumberOfLandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8NumberOfLandings.Margin = new System.Windows.Forms.Padding(2);
             this.tb8NumberOfLandings.Name = "tb8NumberOfLandings";
             this.tb8NumberOfLandings.Size = new System.Drawing.Size(100, 32);
             this.tb8NumberOfLandings.TabIndex = 308;
@@ -17316,7 +17281,7 @@
             this.tb8FacePlateMaterialText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8FacePlateMaterialText.ForeColor = System.Drawing.Color.Black;
             this.tb8FacePlateMaterialText.Location = new System.Drawing.Point(25, 61);
-            this.tb8FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2);
             this.tb8FacePlateMaterialText.Name = "tb8FacePlateMaterialText";
             this.tb8FacePlateMaterialText.Size = new System.Drawing.Size(203, 32);
             this.tb8FacePlateMaterialText.TabIndex = 95;
@@ -17533,7 +17498,7 @@
             this.tb8KeyswitchLocations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8KeyswitchLocations.ForeColor = System.Drawing.Color.Black;
             this.tb8KeyswitchLocations.Location = new System.Drawing.Point(224, 2191);
-            this.tb8KeyswitchLocations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8KeyswitchLocations.Margin = new System.Windows.Forms.Padding(2);
             this.tb8KeyswitchLocations.Name = "tb8KeyswitchLocations";
             this.tb8KeyswitchLocations.Size = new System.Drawing.Size(433, 32);
             this.tb8KeyswitchLocations.TabIndex = 323;
@@ -17570,7 +17535,7 @@
             this.tb8COPFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8COPFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb8COPFinishText.Location = new System.Drawing.Point(23, 58);
-            this.tb8COPFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8COPFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb8COPFinishText.Name = "tb8COPFinishText";
             this.tb8COPFinishText.Size = new System.Drawing.Size(202, 32);
             this.tb8COPFinishText.TabIndex = 76;
@@ -17615,7 +17580,7 @@
             this.tb8HandrailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8HandrailText.ForeColor = System.Drawing.Color.Black;
             this.tb8HandrailText.Location = new System.Drawing.Point(25, 52);
-            this.tb8HandrailText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8HandrailText.Margin = new System.Windows.Forms.Padding(2);
             this.tb8HandrailText.Name = "tb8HandrailText";
             this.tb8HandrailText.Size = new System.Drawing.Size(199, 32);
             this.tb8HandrailText.TabIndex = 74;
@@ -17670,7 +17635,7 @@
             this.tb8NumberofLEDLights.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8NumberofLEDLights.ForeColor = System.Drawing.Color.Black;
             this.tb8NumberofLEDLights.Location = new System.Drawing.Point(8, 27);
-            this.tb8NumberofLEDLights.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8NumberofLEDLights.Margin = new System.Windows.Forms.Padding(2);
             this.tb8NumberofLEDLights.Name = "tb8NumberofLEDLights";
             this.tb8NumberofLEDLights.Size = new System.Drawing.Size(223, 32);
             this.tb8NumberofLEDLights.TabIndex = 74;
@@ -17707,7 +17672,7 @@
             this.tb8MirrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8MirrorText.ForeColor = System.Drawing.Color.Black;
             this.tb8MirrorText.Location = new System.Drawing.Point(25, 78);
-            this.tb8MirrorText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8MirrorText.Margin = new System.Windows.Forms.Padding(2);
             this.tb8MirrorText.Name = "tb8MirrorText";
             this.tb8MirrorText.Size = new System.Drawing.Size(199, 32);
             this.tb8MirrorText.TabIndex = 78;
@@ -17748,7 +17713,7 @@
             this.tb8LiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8LiftNumbers.ForeColor = System.Drawing.Color.Black;
             this.tb8LiftNumbers.Location = new System.Drawing.Point(290, 100);
-            this.tb8LiftNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8LiftNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.tb8LiftNumbers.Name = "tb8LiftNumbers";
             this.tb8LiftNumbers.Size = new System.Drawing.Size(236, 32);
             this.tb8LiftNumbers.TabIndex = 302;
@@ -17817,7 +17782,7 @@
             this.tb8TypeOfLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8TypeOfLift.ForeColor = System.Drawing.Color.Black;
             this.tb8TypeOfLift.Location = new System.Drawing.Point(290, 51);
-            this.tb8TypeOfLift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8TypeOfLift.Margin = new System.Windows.Forms.Padding(2);
             this.tb8TypeOfLift.Name = "tb8TypeOfLift";
             this.tb8TypeOfLift.Size = new System.Drawing.Size(236, 32);
             this.tb8TypeOfLift.TabIndex = 301;
@@ -17950,7 +17915,7 @@
             this.tb8FloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8FloorFinish.ForeColor = System.Drawing.Color.Black;
             this.tb8FloorFinish.Location = new System.Drawing.Point(10, 33);
-            this.tb8FloorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8FloorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tb8FloorFinish.Name = "tb8FloorFinish";
             this.tb8FloorFinish.Size = new System.Drawing.Size(221, 32);
             this.tb8FloorFinish.TabIndex = 75;
@@ -17973,7 +17938,7 @@
             this.tb8Desiginations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8Desiginations.ForeColor = System.Drawing.Color.Black;
             this.tb8Desiginations.Location = new System.Drawing.Point(224, 2230);
-            this.tb8Desiginations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8Desiginations.Margin = new System.Windows.Forms.Padding(2);
             this.tb8Desiginations.Name = "tb8Desiginations";
             this.tb8Desiginations.Size = new System.Drawing.Size(433, 32);
             this.tb8Desiginations.TabIndex = 324;
@@ -17984,7 +17949,7 @@
             this.tb8NumberOfLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8NumberOfLandingDoors.ForeColor = System.Drawing.Color.Black;
             this.tb8NumberOfLandingDoors.Location = new System.Drawing.Point(245, 701);
-            this.tb8NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2);
             this.tb8NumberOfLandingDoors.Name = "tb8NumberOfLandingDoors";
             this.tb8NumberOfLandingDoors.Size = new System.Drawing.Size(100, 32);
             this.tb8NumberOfLandingDoors.TabIndex = 309;
@@ -18008,7 +17973,7 @@
             this.tb8RearWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8RearWallText.ForeColor = System.Drawing.Color.Black;
             this.tb8RearWallText.Location = new System.Drawing.Point(25, 56);
-            this.tb8RearWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8RearWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb8RearWallText.Name = "tb8RearWallText";
             this.tb8RearWallText.Size = new System.Drawing.Size(199, 32);
             this.tb8RearWallText.TabIndex = 76;
@@ -18253,7 +18218,7 @@
             this.tb8LiftCarNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8LiftCarNotes.ForeColor = System.Drawing.Color.Black;
             this.tb8LiftCarNotes.Location = new System.Drawing.Point(87, 982);
-            this.tb8LiftCarNotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8LiftCarNotes.Margin = new System.Windows.Forms.Padding(2);
             this.tb8LiftCarNotes.Multiline = true;
             this.tb8LiftCarNotes.Name = "tb8LiftCarNotes";
             this.tb8LiftCarNotes.Size = new System.Drawing.Size(563, 67);
@@ -18277,7 +18242,7 @@
             this.tb8NumberOfCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8NumberOfCarEntrances.ForeColor = System.Drawing.Color.Black;
             this.tb8NumberOfCarEntrances.Location = new System.Drawing.Point(524, 865);
-            this.tb8NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2);
             this.tb8NumberOfCarEntrances.Name = "tb8NumberOfCarEntrances";
             this.tb8NumberOfCarEntrances.Size = new System.Drawing.Size(125, 32);
             this.tb8NumberOfCarEntrances.TabIndex = 316;
@@ -18312,7 +18277,7 @@
             this.tb8LiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8LiftRating.ForeColor = System.Drawing.Color.Black;
             this.tb8LiftRating.Location = new System.Drawing.Point(524, 827);
-            this.tb8LiftRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8LiftRating.Margin = new System.Windows.Forms.Padding(2);
             this.tb8LiftRating.Name = "tb8LiftRating";
             this.tb8LiftRating.Size = new System.Drawing.Size(125, 32);
             this.tb8LiftRating.TabIndex = 315;
@@ -18323,7 +18288,7 @@
             this.tb8CarWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8CarWidth.ForeColor = System.Drawing.Color.Black;
             this.tb8CarWidth.Location = new System.Drawing.Point(144, 868);
-            this.tb8CarWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8CarWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb8CarWidth.Name = "tb8CarWidth";
             this.tb8CarWidth.Size = new System.Drawing.Size(117, 32);
             this.tb8CarWidth.TabIndex = 312;
@@ -18358,7 +18323,7 @@
             this.tb8Load.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8Load.ForeColor = System.Drawing.Color.Black;
             this.tb8Load.Location = new System.Drawing.Point(144, 796);
-            this.tb8Load.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8Load.Margin = new System.Windows.Forms.Padding(2);
             this.tb8Load.Name = "tb8Load";
             this.tb8Load.Size = new System.Drawing.Size(117, 32);
             this.tb8Load.TabIndex = 310;
@@ -18369,7 +18334,7 @@
             this.tb8CarHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8CarHeight.ForeColor = System.Drawing.Color.Black;
             this.tb8CarHeight.Location = new System.Drawing.Point(144, 939);
-            this.tb8CarHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8CarHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb8CarHeight.Name = "tb8CarHeight";
             this.tb8CarHeight.Size = new System.Drawing.Size(117, 32);
             this.tb8CarHeight.TabIndex = 314;
@@ -18380,7 +18345,7 @@
             this.tb8Speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8Speed.ForeColor = System.Drawing.Color.Black;
             this.tb8Speed.Location = new System.Drawing.Point(144, 831);
-            this.tb8Speed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8Speed.Margin = new System.Windows.Forms.Padding(2);
             this.tb8Speed.Name = "tb8Speed";
             this.tb8Speed.Size = new System.Drawing.Size(117, 32);
             this.tb8Speed.TabIndex = 311;
@@ -18391,7 +18356,7 @@
             this.tb8CarDEpth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8CarDEpth.ForeColor = System.Drawing.Color.Black;
             this.tb8CarDEpth.Location = new System.Drawing.Point(144, 903);
-            this.tb8CarDEpth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8CarDEpth.Margin = new System.Windows.Forms.Padding(2);
             this.tb8CarDEpth.Name = "tb8CarDEpth";
             this.tb8CarDEpth.Size = new System.Drawing.Size(117, 32);
             this.tb8CarDEpth.TabIndex = 313;
@@ -18461,7 +18426,7 @@
             this.tb8DoorTracksText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8DoorTracksText.ForeColor = System.Drawing.Color.Black;
             this.tb8DoorTracksText.Location = new System.Drawing.Point(25, 56);
-            this.tb8DoorTracksText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8DoorTracksText.Margin = new System.Windows.Forms.Padding(2);
             this.tb8DoorTracksText.Name = "tb8DoorTracksText";
             this.tb8DoorTracksText.Size = new System.Drawing.Size(188, 32);
             this.tb8DoorTracksText.TabIndex = 82;
@@ -18506,7 +18471,7 @@
             this.tb8LandingDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8LandingDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb8LandingDoorFinishText.Location = new System.Drawing.Point(25, 59);
-            this.tb8LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb8LandingDoorFinishText.Name = "tb8LandingDoorFinishText";
             this.tb8LandingDoorFinishText.Size = new System.Drawing.Size(188, 32);
             this.tb8LandingDoorFinishText.TabIndex = 80;
@@ -18584,7 +18549,7 @@
             this.tb8DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8DoorWidth.ForeColor = System.Drawing.Color.Black;
             this.tb8DoorWidth.Location = new System.Drawing.Point(189, 1113);
-            this.tb8DoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8DoorWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb8DoorWidth.Name = "tb8DoorWidth";
             this.tb8DoorWidth.Size = new System.Drawing.Size(81, 32);
             this.tb8DoorWidth.TabIndex = 318;
@@ -18595,7 +18560,7 @@
             this.tb8DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb8DoorHeight.ForeColor = System.Drawing.Color.Black;
             this.tb8DoorHeight.Location = new System.Drawing.Point(189, 1149);
-            this.tb8DoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb8DoorHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb8DoorHeight.Name = "tb8DoorHeight";
             this.tb8DoorHeight.Size = new System.Drawing.Size(81, 32);
             this.tb8DoorHeight.TabIndex = 319;
@@ -18711,7 +18676,7 @@
             this.panelLift7.Controls.Add(this.tb7DoorHeight);
             this.panelLift7.Controls.Add(this.label328);
             this.panelLift7.Location = new System.Drawing.Point(1333, 290);
-            this.panelLift7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLift7.Margin = new System.Windows.Forms.Padding(2);
             this.panelLift7.Name = "panelLift7";
             this.panelLift7.Size = new System.Drawing.Size(689, 735);
             this.panelLift7.TabIndex = 435;
@@ -18755,7 +18720,7 @@
             this.tb7ShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7ShaftWidth.ForeColor = System.Drawing.Color.Black;
             this.tb7ShaftWidth.Location = new System.Drawing.Point(245, 486);
-            this.tb7ShaftWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7ShaftWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb7ShaftWidth.Name = "tb7ShaftWidth";
             this.tb7ShaftWidth.Size = new System.Drawing.Size(100, 32);
             this.tb7ShaftWidth.TabIndex = 303;
@@ -18869,7 +18834,7 @@
             this.tb7CEilingFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7CEilingFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb7CEilingFinishText.Location = new System.Drawing.Point(25, 122);
-            this.tb7CEilingFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7CEilingFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb7CEilingFinishText.Name = "tb7CEilingFinishText";
             this.tb7CEilingFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb7CEilingFinishText.TabIndex = 76;
@@ -18926,7 +18891,7 @@
             this.tb7SideWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7SideWallText.ForeColor = System.Drawing.Color.Black;
             this.tb7SideWallText.Location = new System.Drawing.Point(26, 56);
-            this.tb7SideWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7SideWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb7SideWallText.Name = "tb7SideWallText";
             this.tb7SideWallText.Size = new System.Drawing.Size(199, 32);
             this.tb7SideWallText.TabIndex = 76;
@@ -19005,7 +18970,7 @@
             this.tb7FrontWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7FrontWallText.ForeColor = System.Drawing.Color.Black;
             this.tb7FrontWallText.Location = new System.Drawing.Point(25, 57);
-            this.tb7FrontWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7FrontWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb7FrontWallText.Name = "tb7FrontWallText";
             this.tb7FrontWallText.Size = new System.Drawing.Size(199, 32);
             this.tb7FrontWallText.TabIndex = 76;
@@ -19132,7 +19097,7 @@
             this.tb7CarDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7CarDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb7CarDoorFinishText.Location = new System.Drawing.Point(25, 56);
-            this.tb7CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb7CarDoorFinishText.Name = "tb7CarDoorFinishText";
             this.tb7CarDoorFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb7CarDoorFinishText.TabIndex = 76;
@@ -19188,7 +19153,7 @@
             this.tb7ShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7ShaftDepth.ForeColor = System.Drawing.Color.Black;
             this.tb7ShaftDepth.Location = new System.Drawing.Point(245, 523);
-            this.tb7ShaftDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7ShaftDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb7ShaftDepth.Name = "tb7ShaftDepth";
             this.tb7ShaftDepth.Size = new System.Drawing.Size(100, 32);
             this.tb7ShaftDepth.TabIndex = 304;
@@ -19199,7 +19164,7 @@
             this.tb7AuzCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7AuzCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb7AuzCOPLocation.Location = new System.Drawing.Point(226, 2147);
-            this.tb7AuzCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7AuzCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb7AuzCOPLocation.Name = "tb7AuzCOPLocation";
             this.tb7AuzCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb7AuzCOPLocation.TabIndex = 322;
@@ -19235,7 +19200,7 @@
             this.tb7PitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7PitDepth.ForeColor = System.Drawing.Color.Black;
             this.tb7PitDepth.Location = new System.Drawing.Point(245, 558);
-            this.tb7PitDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7PitDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb7PitDepth.Name = "tb7PitDepth";
             this.tb7PitDepth.Size = new System.Drawing.Size(100, 32);
             this.tb7PitDepth.TabIndex = 305;
@@ -19246,7 +19211,7 @@
             this.tb7MainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7MainCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb7MainCOPLocation.Location = new System.Drawing.Point(226, 2111);
-            this.tb7MainCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7MainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb7MainCOPLocation.Name = "tb7MainCOPLocation";
             this.tb7MainCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb7MainCOPLocation.TabIndex = 321;
@@ -19282,7 +19247,7 @@
             this.tb7HeadRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7HeadRoom.ForeColor = System.Drawing.Color.Black;
             this.tb7HeadRoom.Location = new System.Drawing.Point(245, 594);
-            this.tb7HeadRoom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7HeadRoom.Margin = new System.Windows.Forms.Padding(2);
             this.tb7HeadRoom.Name = "tb7HeadRoom";
             this.tb7HeadRoom.Size = new System.Drawing.Size(100, 32);
             this.tb7HeadRoom.TabIndex = 306;
@@ -19293,7 +19258,7 @@
             this.tb7NumberOfCOPs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7NumberOfCOPs.ForeColor = System.Drawing.Color.Black;
             this.tb7NumberOfCOPs.Location = new System.Drawing.Point(226, 2075);
-            this.tb7NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2);
             this.tb7NumberOfCOPs.Name = "tb7NumberOfCOPs";
             this.tb7NumberOfCOPs.Size = new System.Drawing.Size(100, 32);
             this.tb7NumberOfCOPs.TabIndex = 320;
@@ -19329,7 +19294,7 @@
             this.tb7Travel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7Travel.ForeColor = System.Drawing.Color.Black;
             this.tb7Travel.Location = new System.Drawing.Point(245, 630);
-            this.tb7Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7Travel.Margin = new System.Windows.Forms.Padding(2);
             this.tb7Travel.Name = "tb7Travel";
             this.tb7Travel.Size = new System.Drawing.Size(100, 32);
             this.tb7Travel.TabIndex = 307;
@@ -19400,7 +19365,7 @@
             this.tb7NumberOfLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7NumberOfLandings.ForeColor = System.Drawing.Color.Black;
             this.tb7NumberOfLandings.Location = new System.Drawing.Point(245, 666);
-            this.tb7NumberOfLandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7NumberOfLandings.Margin = new System.Windows.Forms.Padding(2);
             this.tb7NumberOfLandings.Name = "tb7NumberOfLandings";
             this.tb7NumberOfLandings.Size = new System.Drawing.Size(100, 32);
             this.tb7NumberOfLandings.TabIndex = 308;
@@ -19467,7 +19432,7 @@
             this.tb7FacePlateMaterialText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7FacePlateMaterialText.ForeColor = System.Drawing.Color.Black;
             this.tb7FacePlateMaterialText.Location = new System.Drawing.Point(25, 61);
-            this.tb7FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2);
             this.tb7FacePlateMaterialText.Name = "tb7FacePlateMaterialText";
             this.tb7FacePlateMaterialText.Size = new System.Drawing.Size(203, 32);
             this.tb7FacePlateMaterialText.TabIndex = 95;
@@ -19684,7 +19649,7 @@
             this.tb7KeyswitchLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7KeyswitchLocation.ForeColor = System.Drawing.Color.Black;
             this.tb7KeyswitchLocation.Location = new System.Drawing.Point(226, 2183);
-            this.tb7KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb7KeyswitchLocation.Name = "tb7KeyswitchLocation";
             this.tb7KeyswitchLocation.Size = new System.Drawing.Size(433, 32);
             this.tb7KeyswitchLocation.TabIndex = 323;
@@ -19721,7 +19686,7 @@
             this.tb7COPFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7COPFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb7COPFinishText.Location = new System.Drawing.Point(23, 58);
-            this.tb7COPFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7COPFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb7COPFinishText.Name = "tb7COPFinishText";
             this.tb7COPFinishText.Size = new System.Drawing.Size(202, 32);
             this.tb7COPFinishText.TabIndex = 76;
@@ -19766,7 +19731,7 @@
             this.tb7HandrailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7HandrailText.ForeColor = System.Drawing.Color.Black;
             this.tb7HandrailText.Location = new System.Drawing.Point(25, 52);
-            this.tb7HandrailText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7HandrailText.Margin = new System.Windows.Forms.Padding(2);
             this.tb7HandrailText.Name = "tb7HandrailText";
             this.tb7HandrailText.Size = new System.Drawing.Size(199, 32);
             this.tb7HandrailText.TabIndex = 74;
@@ -19821,7 +19786,7 @@
             this.tb7NumberOfLEDLights.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7NumberOfLEDLights.ForeColor = System.Drawing.Color.Black;
             this.tb7NumberOfLEDLights.Location = new System.Drawing.Point(8, 27);
-            this.tb7NumberOfLEDLights.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7NumberOfLEDLights.Margin = new System.Windows.Forms.Padding(2);
             this.tb7NumberOfLEDLights.Name = "tb7NumberOfLEDLights";
             this.tb7NumberOfLEDLights.Size = new System.Drawing.Size(223, 32);
             this.tb7NumberOfLEDLights.TabIndex = 74;
@@ -19858,7 +19823,7 @@
             this.tb7MirrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7MirrorText.ForeColor = System.Drawing.Color.Black;
             this.tb7MirrorText.Location = new System.Drawing.Point(25, 78);
-            this.tb7MirrorText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7MirrorText.Margin = new System.Windows.Forms.Padding(2);
             this.tb7MirrorText.Name = "tb7MirrorText";
             this.tb7MirrorText.Size = new System.Drawing.Size(199, 32);
             this.tb7MirrorText.TabIndex = 78;
@@ -19899,7 +19864,7 @@
             this.tb7LiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7LiftNumbers.ForeColor = System.Drawing.Color.Black;
             this.tb7LiftNumbers.Location = new System.Drawing.Point(283, 99);
-            this.tb7LiftNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7LiftNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.tb7LiftNumbers.Name = "tb7LiftNumbers";
             this.tb7LiftNumbers.Size = new System.Drawing.Size(236, 32);
             this.tb7LiftNumbers.TabIndex = 302;
@@ -19968,7 +19933,7 @@
             this.tb7TypeOfLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7TypeOfLift.ForeColor = System.Drawing.Color.Black;
             this.tb7TypeOfLift.Location = new System.Drawing.Point(283, 49);
-            this.tb7TypeOfLift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7TypeOfLift.Margin = new System.Windows.Forms.Padding(2);
             this.tb7TypeOfLift.Name = "tb7TypeOfLift";
             this.tb7TypeOfLift.Size = new System.Drawing.Size(236, 32);
             this.tb7TypeOfLift.TabIndex = 301;
@@ -20101,7 +20066,7 @@
             this.tb7FloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7FloorFinish.ForeColor = System.Drawing.Color.Black;
             this.tb7FloorFinish.Location = new System.Drawing.Point(10, 33);
-            this.tb7FloorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7FloorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tb7FloorFinish.Name = "tb7FloorFinish";
             this.tb7FloorFinish.Size = new System.Drawing.Size(221, 32);
             this.tb7FloorFinish.TabIndex = 75;
@@ -20124,7 +20089,7 @@
             this.tb7Designations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7Designations.ForeColor = System.Drawing.Color.Black;
             this.tb7Designations.Location = new System.Drawing.Point(226, 2221);
-            this.tb7Designations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7Designations.Margin = new System.Windows.Forms.Padding(2);
             this.tb7Designations.Name = "tb7Designations";
             this.tb7Designations.Size = new System.Drawing.Size(433, 32);
             this.tb7Designations.TabIndex = 324;
@@ -20135,7 +20100,7 @@
             this.tb7NumberOfLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7NumberOfLandingDoors.ForeColor = System.Drawing.Color.Black;
             this.tb7NumberOfLandingDoors.Location = new System.Drawing.Point(245, 703);
-            this.tb7NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2);
             this.tb7NumberOfLandingDoors.Name = "tb7NumberOfLandingDoors";
             this.tb7NumberOfLandingDoors.Size = new System.Drawing.Size(100, 32);
             this.tb7NumberOfLandingDoors.TabIndex = 309;
@@ -20159,7 +20124,7 @@
             this.tb7RearWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7RearWallText.ForeColor = System.Drawing.Color.Black;
             this.tb7RearWallText.Location = new System.Drawing.Point(25, 56);
-            this.tb7RearWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7RearWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb7RearWallText.Name = "tb7RearWallText";
             this.tb7RearWallText.Size = new System.Drawing.Size(199, 32);
             this.tb7RearWallText.TabIndex = 76;
@@ -20404,7 +20369,7 @@
             this.tb7CarNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7CarNotes.ForeColor = System.Drawing.Color.Black;
             this.tb7CarNotes.Location = new System.Drawing.Point(87, 983);
-            this.tb7CarNotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7CarNotes.Margin = new System.Windows.Forms.Padding(2);
             this.tb7CarNotes.Multiline = true;
             this.tb7CarNotes.Name = "tb7CarNotes";
             this.tb7CarNotes.Size = new System.Drawing.Size(563, 67);
@@ -20428,7 +20393,7 @@
             this.tb7NumberOfCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7NumberOfCarEntrances.ForeColor = System.Drawing.Color.Black;
             this.tb7NumberOfCarEntrances.Location = new System.Drawing.Point(525, 866);
-            this.tb7NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2);
             this.tb7NumberOfCarEntrances.Name = "tb7NumberOfCarEntrances";
             this.tb7NumberOfCarEntrances.Size = new System.Drawing.Size(125, 32);
             this.tb7NumberOfCarEntrances.TabIndex = 316;
@@ -20463,7 +20428,7 @@
             this.tb7LiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7LiftRating.ForeColor = System.Drawing.Color.Black;
             this.tb7LiftRating.Location = new System.Drawing.Point(525, 829);
-            this.tb7LiftRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7LiftRating.Margin = new System.Windows.Forms.Padding(2);
             this.tb7LiftRating.Name = "tb7LiftRating";
             this.tb7LiftRating.Size = new System.Drawing.Size(125, 32);
             this.tb7LiftRating.TabIndex = 315;
@@ -20474,7 +20439,7 @@
             this.tb7CarWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7CarWidth.ForeColor = System.Drawing.Color.Black;
             this.tb7CarWidth.Location = new System.Drawing.Point(145, 869);
-            this.tb7CarWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7CarWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb7CarWidth.Name = "tb7CarWidth";
             this.tb7CarWidth.Size = new System.Drawing.Size(117, 32);
             this.tb7CarWidth.TabIndex = 312;
@@ -20509,7 +20474,7 @@
             this.tb7CarLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7CarLoad.ForeColor = System.Drawing.Color.Black;
             this.tb7CarLoad.Location = new System.Drawing.Point(145, 798);
-            this.tb7CarLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7CarLoad.Margin = new System.Windows.Forms.Padding(2);
             this.tb7CarLoad.Name = "tb7CarLoad";
             this.tb7CarLoad.Size = new System.Drawing.Size(117, 32);
             this.tb7CarLoad.TabIndex = 310;
@@ -20520,7 +20485,7 @@
             this.tb7CarHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7CarHeight.ForeColor = System.Drawing.Color.Black;
             this.tb7CarHeight.Location = new System.Drawing.Point(145, 941);
-            this.tb7CarHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7CarHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb7CarHeight.Name = "tb7CarHeight";
             this.tb7CarHeight.Size = new System.Drawing.Size(117, 32);
             this.tb7CarHeight.TabIndex = 314;
@@ -20531,7 +20496,7 @@
             this.tb7CarSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7CarSpeed.ForeColor = System.Drawing.Color.Black;
             this.tb7CarSpeed.Location = new System.Drawing.Point(145, 833);
-            this.tb7CarSpeed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7CarSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.tb7CarSpeed.Name = "tb7CarSpeed";
             this.tb7CarSpeed.Size = new System.Drawing.Size(117, 32);
             this.tb7CarSpeed.TabIndex = 311;
@@ -20542,7 +20507,7 @@
             this.tb7CarDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7CarDepth.ForeColor = System.Drawing.Color.Black;
             this.tb7CarDepth.Location = new System.Drawing.Point(145, 905);
-            this.tb7CarDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7CarDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb7CarDepth.Name = "tb7CarDepth";
             this.tb7CarDepth.Size = new System.Drawing.Size(117, 32);
             this.tb7CarDepth.TabIndex = 313;
@@ -20612,7 +20577,7 @@
             this.tb7DoorTracksText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7DoorTracksText.ForeColor = System.Drawing.Color.Black;
             this.tb7DoorTracksText.Location = new System.Drawing.Point(25, 56);
-            this.tb7DoorTracksText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7DoorTracksText.Margin = new System.Windows.Forms.Padding(2);
             this.tb7DoorTracksText.Name = "tb7DoorTracksText";
             this.tb7DoorTracksText.Size = new System.Drawing.Size(188, 32);
             this.tb7DoorTracksText.TabIndex = 82;
@@ -20657,7 +20622,7 @@
             this.tb7LandingDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7LandingDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb7LandingDoorFinishText.Location = new System.Drawing.Point(25, 59);
-            this.tb7LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb7LandingDoorFinishText.Name = "tb7LandingDoorFinishText";
             this.tb7LandingDoorFinishText.Size = new System.Drawing.Size(188, 32);
             this.tb7LandingDoorFinishText.TabIndex = 80;
@@ -20735,7 +20700,7 @@
             this.tb7DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7DoorWidth.ForeColor = System.Drawing.Color.Black;
             this.tb7DoorWidth.Location = new System.Drawing.Point(186, 1095);
-            this.tb7DoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7DoorWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb7DoorWidth.Name = "tb7DoorWidth";
             this.tb7DoorWidth.Size = new System.Drawing.Size(81, 32);
             this.tb7DoorWidth.TabIndex = 318;
@@ -20746,7 +20711,7 @@
             this.tb7DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb7DoorHeight.ForeColor = System.Drawing.Color.Black;
             this.tb7DoorHeight.Location = new System.Drawing.Point(186, 1131);
-            this.tb7DoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb7DoorHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb7DoorHeight.Name = "tb7DoorHeight";
             this.tb7DoorHeight.Size = new System.Drawing.Size(81, 32);
             this.tb7DoorHeight.TabIndex = 319;
@@ -20862,7 +20827,7 @@
             this.panelLift6.Controls.Add(this.tb6DoorHeight);
             this.panelLift6.Controls.Add(this.label369);
             this.panelLift6.Location = new System.Drawing.Point(1349, 274);
-            this.panelLift6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLift6.Margin = new System.Windows.Forms.Padding(2);
             this.panelLift6.Name = "panelLift6";
             this.panelLift6.Size = new System.Drawing.Size(689, 735);
             this.panelLift6.TabIndex = 434;
@@ -20906,7 +20871,7 @@
             this.tb6ShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6ShaftWidth.ForeColor = System.Drawing.Color.Black;
             this.tb6ShaftWidth.Location = new System.Drawing.Point(259, 491);
-            this.tb6ShaftWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6ShaftWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb6ShaftWidth.Name = "tb6ShaftWidth";
             this.tb6ShaftWidth.Size = new System.Drawing.Size(100, 32);
             this.tb6ShaftWidth.TabIndex = 303;
@@ -21020,7 +20985,7 @@
             this.tb6CeilingFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6CeilingFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb6CeilingFinishText.Location = new System.Drawing.Point(25, 122);
-            this.tb6CeilingFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6CeilingFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb6CeilingFinishText.Name = "tb6CeilingFinishText";
             this.tb6CeilingFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb6CeilingFinishText.TabIndex = 76;
@@ -21077,7 +21042,7 @@
             this.tb6SideWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6SideWallText.ForeColor = System.Drawing.Color.Black;
             this.tb6SideWallText.Location = new System.Drawing.Point(26, 56);
-            this.tb6SideWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6SideWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb6SideWallText.Name = "tb6SideWallText";
             this.tb6SideWallText.Size = new System.Drawing.Size(199, 32);
             this.tb6SideWallText.TabIndex = 76;
@@ -21156,7 +21121,7 @@
             this.tb6FrontWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6FrontWallText.ForeColor = System.Drawing.Color.Black;
             this.tb6FrontWallText.Location = new System.Drawing.Point(25, 57);
-            this.tb6FrontWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6FrontWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb6FrontWallText.Name = "tb6FrontWallText";
             this.tb6FrontWallText.Size = new System.Drawing.Size(199, 32);
             this.tb6FrontWallText.TabIndex = 76;
@@ -21283,7 +21248,7 @@
             this.tb6CarDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6CarDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb6CarDoorFinishText.Location = new System.Drawing.Point(25, 56);
-            this.tb6CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb6CarDoorFinishText.Name = "tb6CarDoorFinishText";
             this.tb6CarDoorFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb6CarDoorFinishText.TabIndex = 76;
@@ -21339,7 +21304,7 @@
             this.tb6ShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6ShaftDepth.ForeColor = System.Drawing.Color.Black;
             this.tb6ShaftDepth.Location = new System.Drawing.Point(259, 527);
-            this.tb6ShaftDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6ShaftDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb6ShaftDepth.Name = "tb6ShaftDepth";
             this.tb6ShaftDepth.Size = new System.Drawing.Size(100, 32);
             this.tb6ShaftDepth.TabIndex = 304;
@@ -21350,7 +21315,7 @@
             this.tb6AuxCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6AuxCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb6AuxCOPLocation.Location = new System.Drawing.Point(223, 2179);
-            this.tb6AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb6AuxCOPLocation.Name = "tb6AuxCOPLocation";
             this.tb6AuxCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb6AuxCOPLocation.TabIndex = 322;
@@ -21386,7 +21351,7 @@
             this.tb6PitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6PitDepth.ForeColor = System.Drawing.Color.Black;
             this.tb6PitDepth.Location = new System.Drawing.Point(259, 563);
-            this.tb6PitDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6PitDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb6PitDepth.Name = "tb6PitDepth";
             this.tb6PitDepth.Size = new System.Drawing.Size(100, 32);
             this.tb6PitDepth.TabIndex = 305;
@@ -21397,7 +21362,7 @@
             this.tb6MainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6MainCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb6MainCOPLocation.Location = new System.Drawing.Point(223, 2142);
-            this.tb6MainCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6MainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb6MainCOPLocation.Name = "tb6MainCOPLocation";
             this.tb6MainCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb6MainCOPLocation.TabIndex = 321;
@@ -21433,7 +21398,7 @@
             this.tb6Headroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6Headroom.ForeColor = System.Drawing.Color.Black;
             this.tb6Headroom.Location = new System.Drawing.Point(259, 599);
-            this.tb6Headroom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6Headroom.Margin = new System.Windows.Forms.Padding(2);
             this.tb6Headroom.Name = "tb6Headroom";
             this.tb6Headroom.Size = new System.Drawing.Size(100, 32);
             this.tb6Headroom.TabIndex = 306;
@@ -21444,7 +21409,7 @@
             this.tb6NumberOFCOPs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6NumberOFCOPs.ForeColor = System.Drawing.Color.Black;
             this.tb6NumberOFCOPs.Location = new System.Drawing.Point(223, 2107);
-            this.tb6NumberOFCOPs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6NumberOFCOPs.Margin = new System.Windows.Forms.Padding(2);
             this.tb6NumberOFCOPs.Name = "tb6NumberOFCOPs";
             this.tb6NumberOFCOPs.Size = new System.Drawing.Size(100, 32);
             this.tb6NumberOFCOPs.TabIndex = 320;
@@ -21480,7 +21445,7 @@
             this.tb6Travel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6Travel.ForeColor = System.Drawing.Color.Black;
             this.tb6Travel.Location = new System.Drawing.Point(259, 635);
-            this.tb6Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6Travel.Margin = new System.Windows.Forms.Padding(2);
             this.tb6Travel.Name = "tb6Travel";
             this.tb6Travel.Size = new System.Drawing.Size(100, 32);
             this.tb6Travel.TabIndex = 307;
@@ -21551,7 +21516,7 @@
             this.tb6NumberOfLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6NumberOfLandings.ForeColor = System.Drawing.Color.Black;
             this.tb6NumberOfLandings.Location = new System.Drawing.Point(259, 671);
-            this.tb6NumberOfLandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6NumberOfLandings.Margin = new System.Windows.Forms.Padding(2);
             this.tb6NumberOfLandings.Name = "tb6NumberOfLandings";
             this.tb6NumberOfLandings.Size = new System.Drawing.Size(100, 32);
             this.tb6NumberOfLandings.TabIndex = 308;
@@ -21618,7 +21583,7 @@
             this.tb6FacePlateMaterialText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6FacePlateMaterialText.ForeColor = System.Drawing.Color.Black;
             this.tb6FacePlateMaterialText.Location = new System.Drawing.Point(25, 61);
-            this.tb6FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2);
             this.tb6FacePlateMaterialText.Name = "tb6FacePlateMaterialText";
             this.tb6FacePlateMaterialText.Size = new System.Drawing.Size(203, 32);
             this.tb6FacePlateMaterialText.TabIndex = 95;
@@ -21835,7 +21800,7 @@
             this.tb6KeySwitchLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6KeySwitchLocation.ForeColor = System.Drawing.Color.Black;
             this.tb6KeySwitchLocation.Location = new System.Drawing.Point(223, 2215);
-            this.tb6KeySwitchLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6KeySwitchLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb6KeySwitchLocation.Name = "tb6KeySwitchLocation";
             this.tb6KeySwitchLocation.Size = new System.Drawing.Size(433, 32);
             this.tb6KeySwitchLocation.TabIndex = 323;
@@ -21872,7 +21837,7 @@
             this.tb6COPFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6COPFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb6COPFinishText.Location = new System.Drawing.Point(23, 58);
-            this.tb6COPFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6COPFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb6COPFinishText.Name = "tb6COPFinishText";
             this.tb6COPFinishText.Size = new System.Drawing.Size(202, 32);
             this.tb6COPFinishText.TabIndex = 76;
@@ -21917,7 +21882,7 @@
             this.tb6HAndrailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6HAndrailText.ForeColor = System.Drawing.Color.Black;
             this.tb6HAndrailText.Location = new System.Drawing.Point(25, 52);
-            this.tb6HAndrailText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6HAndrailText.Margin = new System.Windows.Forms.Padding(2);
             this.tb6HAndrailText.Name = "tb6HAndrailText";
             this.tb6HAndrailText.Size = new System.Drawing.Size(199, 32);
             this.tb6HAndrailText.TabIndex = 74;
@@ -21972,7 +21937,7 @@
             this.tb6NumberOfLEDLights.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6NumberOfLEDLights.ForeColor = System.Drawing.Color.Black;
             this.tb6NumberOfLEDLights.Location = new System.Drawing.Point(8, 27);
-            this.tb6NumberOfLEDLights.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6NumberOfLEDLights.Margin = new System.Windows.Forms.Padding(2);
             this.tb6NumberOfLEDLights.Name = "tb6NumberOfLEDLights";
             this.tb6NumberOfLEDLights.Size = new System.Drawing.Size(223, 32);
             this.tb6NumberOfLEDLights.TabIndex = 74;
@@ -22009,7 +21974,7 @@
             this.tb6MirrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6MirrorText.ForeColor = System.Drawing.Color.Black;
             this.tb6MirrorText.Location = new System.Drawing.Point(25, 78);
-            this.tb6MirrorText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6MirrorText.Margin = new System.Windows.Forms.Padding(2);
             this.tb6MirrorText.Name = "tb6MirrorText";
             this.tb6MirrorText.Size = new System.Drawing.Size(199, 32);
             this.tb6MirrorText.TabIndex = 78;
@@ -22050,7 +22015,7 @@
             this.tb6LiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6LiftNumbers.ForeColor = System.Drawing.Color.Black;
             this.tb6LiftNumbers.Location = new System.Drawing.Point(295, 90);
-            this.tb6LiftNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6LiftNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.tb6LiftNumbers.Name = "tb6LiftNumbers";
             this.tb6LiftNumbers.Size = new System.Drawing.Size(236, 32);
             this.tb6LiftNumbers.TabIndex = 302;
@@ -22119,7 +22084,7 @@
             this.tb6TypeOfLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6TypeOfLift.ForeColor = System.Drawing.Color.Black;
             this.tb6TypeOfLift.Location = new System.Drawing.Point(295, 41);
-            this.tb6TypeOfLift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6TypeOfLift.Margin = new System.Windows.Forms.Padding(2);
             this.tb6TypeOfLift.Name = "tb6TypeOfLift";
             this.tb6TypeOfLift.Size = new System.Drawing.Size(236, 32);
             this.tb6TypeOfLift.TabIndex = 301;
@@ -22252,7 +22217,7 @@
             this.tb6FloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6FloorFinish.ForeColor = System.Drawing.Color.Black;
             this.tb6FloorFinish.Location = new System.Drawing.Point(10, 33);
-            this.tb6FloorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6FloorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tb6FloorFinish.Name = "tb6FloorFinish";
             this.tb6FloorFinish.Size = new System.Drawing.Size(221, 32);
             this.tb6FloorFinish.TabIndex = 75;
@@ -22275,7 +22240,7 @@
             this.tb6Designations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6Designations.ForeColor = System.Drawing.Color.Black;
             this.tb6Designations.Location = new System.Drawing.Point(223, 2253);
-            this.tb6Designations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6Designations.Margin = new System.Windows.Forms.Padding(2);
             this.tb6Designations.Name = "tb6Designations";
             this.tb6Designations.Size = new System.Drawing.Size(433, 32);
             this.tb6Designations.TabIndex = 324;
@@ -22286,7 +22251,7 @@
             this.tb6NumberOfLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6NumberOfLandingDoors.ForeColor = System.Drawing.Color.Black;
             this.tb6NumberOfLandingDoors.Location = new System.Drawing.Point(259, 707);
-            this.tb6NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2);
             this.tb6NumberOfLandingDoors.Name = "tb6NumberOfLandingDoors";
             this.tb6NumberOfLandingDoors.Size = new System.Drawing.Size(100, 32);
             this.tb6NumberOfLandingDoors.TabIndex = 309;
@@ -22310,7 +22275,7 @@
             this.tb6RearWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6RearWallText.ForeColor = System.Drawing.Color.Black;
             this.tb6RearWallText.Location = new System.Drawing.Point(25, 56);
-            this.tb6RearWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6RearWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb6RearWallText.Name = "tb6RearWallText";
             this.tb6RearWallText.Size = new System.Drawing.Size(199, 32);
             this.tb6RearWallText.TabIndex = 76;
@@ -22555,7 +22520,7 @@
             this.tb6CarNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6CarNote.ForeColor = System.Drawing.Color.Black;
             this.tb6CarNote.Location = new System.Drawing.Point(85, 982);
-            this.tb6CarNote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6CarNote.Margin = new System.Windows.Forms.Padding(2);
             this.tb6CarNote.Multiline = true;
             this.tb6CarNote.Name = "tb6CarNote";
             this.tb6CarNote.Size = new System.Drawing.Size(563, 67);
@@ -22579,7 +22544,7 @@
             this.tb6NumberOfCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6NumberOfCarEntrances.ForeColor = System.Drawing.Color.Black;
             this.tb6NumberOfCarEntrances.Location = new System.Drawing.Point(523, 865);
-            this.tb6NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2);
             this.tb6NumberOfCarEntrances.Name = "tb6NumberOfCarEntrances";
             this.tb6NumberOfCarEntrances.Size = new System.Drawing.Size(125, 32);
             this.tb6NumberOfCarEntrances.TabIndex = 316;
@@ -22614,7 +22579,7 @@
             this.tb6LiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6LiftRating.ForeColor = System.Drawing.Color.Black;
             this.tb6LiftRating.Location = new System.Drawing.Point(523, 827);
-            this.tb6LiftRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6LiftRating.Margin = new System.Windows.Forms.Padding(2);
             this.tb6LiftRating.Name = "tb6LiftRating";
             this.tb6LiftRating.Size = new System.Drawing.Size(125, 32);
             this.tb6LiftRating.TabIndex = 315;
@@ -22625,7 +22590,7 @@
             this.tb6CarWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6CarWidth.ForeColor = System.Drawing.Color.Black;
             this.tb6CarWidth.Location = new System.Drawing.Point(143, 868);
-            this.tb6CarWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6CarWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb6CarWidth.Name = "tb6CarWidth";
             this.tb6CarWidth.Size = new System.Drawing.Size(117, 32);
             this.tb6CarWidth.TabIndex = 312;
@@ -22660,7 +22625,7 @@
             this.tb6CarLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6CarLoad.ForeColor = System.Drawing.Color.Black;
             this.tb6CarLoad.Location = new System.Drawing.Point(143, 796);
-            this.tb6CarLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6CarLoad.Margin = new System.Windows.Forms.Padding(2);
             this.tb6CarLoad.Name = "tb6CarLoad";
             this.tb6CarLoad.Size = new System.Drawing.Size(117, 32);
             this.tb6CarLoad.TabIndex = 310;
@@ -22671,7 +22636,7 @@
             this.tb6CarHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6CarHeight.ForeColor = System.Drawing.Color.Black;
             this.tb6CarHeight.Location = new System.Drawing.Point(143, 939);
-            this.tb6CarHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6CarHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb6CarHeight.Name = "tb6CarHeight";
             this.tb6CarHeight.Size = new System.Drawing.Size(117, 32);
             this.tb6CarHeight.TabIndex = 314;
@@ -22682,7 +22647,7 @@
             this.tb6CarSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6CarSpeed.ForeColor = System.Drawing.Color.Black;
             this.tb6CarSpeed.Location = new System.Drawing.Point(143, 831);
-            this.tb6CarSpeed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6CarSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.tb6CarSpeed.Name = "tb6CarSpeed";
             this.tb6CarSpeed.Size = new System.Drawing.Size(117, 32);
             this.tb6CarSpeed.TabIndex = 311;
@@ -22693,7 +22658,7 @@
             this.tb6CarDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6CarDepth.ForeColor = System.Drawing.Color.Black;
             this.tb6CarDepth.Location = new System.Drawing.Point(143, 903);
-            this.tb6CarDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6CarDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb6CarDepth.Name = "tb6CarDepth";
             this.tb6CarDepth.Size = new System.Drawing.Size(117, 32);
             this.tb6CarDepth.TabIndex = 313;
@@ -22763,7 +22728,7 @@
             this.tb6DoorTracksOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6DoorTracksOther.ForeColor = System.Drawing.Color.Black;
             this.tb6DoorTracksOther.Location = new System.Drawing.Point(25, 56);
-            this.tb6DoorTracksOther.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6DoorTracksOther.Margin = new System.Windows.Forms.Padding(2);
             this.tb6DoorTracksOther.Name = "tb6DoorTracksOther";
             this.tb6DoorTracksOther.Size = new System.Drawing.Size(188, 32);
             this.tb6DoorTracksOther.TabIndex = 82;
@@ -22808,7 +22773,7 @@
             this.tb6LandingDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6LandingDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb6LandingDoorFinishText.Location = new System.Drawing.Point(25, 59);
-            this.tb6LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb6LandingDoorFinishText.Name = "tb6LandingDoorFinishText";
             this.tb6LandingDoorFinishText.Size = new System.Drawing.Size(188, 32);
             this.tb6LandingDoorFinishText.TabIndex = 80;
@@ -22886,7 +22851,7 @@
             this.tb6DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6DoorWidth.ForeColor = System.Drawing.Color.Black;
             this.tb6DoorWidth.Location = new System.Drawing.Point(195, 1115);
-            this.tb6DoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6DoorWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb6DoorWidth.Name = "tb6DoorWidth";
             this.tb6DoorWidth.Size = new System.Drawing.Size(81, 32);
             this.tb6DoorWidth.TabIndex = 318;
@@ -22897,7 +22862,7 @@
             this.tb6DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb6DoorHeight.ForeColor = System.Drawing.Color.Black;
             this.tb6DoorHeight.Location = new System.Drawing.Point(195, 1150);
-            this.tb6DoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb6DoorHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb6DoorHeight.Name = "tb6DoorHeight";
             this.tb6DoorHeight.Size = new System.Drawing.Size(81, 32);
             this.tb6DoorHeight.TabIndex = 319;
@@ -23013,7 +22978,7 @@
             this.panelLift5.Controls.Add(this.tb5DoorHeight);
             this.panelLift5.Controls.Add(this.label205);
             this.panelLift5.Location = new System.Drawing.Point(1364, 258);
-            this.panelLift5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLift5.Margin = new System.Windows.Forms.Padding(2);
             this.panelLift5.Name = "panelLift5";
             this.panelLift5.Size = new System.Drawing.Size(689, 735);
             this.panelLift5.TabIndex = 431;
@@ -23057,7 +23022,7 @@
             this.tb5ShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5ShaftWidth.ForeColor = System.Drawing.Color.Black;
             this.tb5ShaftWidth.Location = new System.Drawing.Point(269, 498);
-            this.tb5ShaftWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5ShaftWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb5ShaftWidth.Name = "tb5ShaftWidth";
             this.tb5ShaftWidth.Size = new System.Drawing.Size(100, 32);
             this.tb5ShaftWidth.TabIndex = 303;
@@ -23171,7 +23136,7 @@
             this.tb5CeilingFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5CeilingFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb5CeilingFinishText.Location = new System.Drawing.Point(25, 122);
-            this.tb5CeilingFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5CeilingFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb5CeilingFinishText.Name = "tb5CeilingFinishText";
             this.tb5CeilingFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb5CeilingFinishText.TabIndex = 76;
@@ -23228,7 +23193,7 @@
             this.tb5SideWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5SideWallText.ForeColor = System.Drawing.Color.Black;
             this.tb5SideWallText.Location = new System.Drawing.Point(26, 56);
-            this.tb5SideWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5SideWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb5SideWallText.Name = "tb5SideWallText";
             this.tb5SideWallText.Size = new System.Drawing.Size(199, 32);
             this.tb5SideWallText.TabIndex = 76;
@@ -23307,7 +23272,7 @@
             this.tb5FrontWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5FrontWallText.ForeColor = System.Drawing.Color.Black;
             this.tb5FrontWallText.Location = new System.Drawing.Point(25, 57);
-            this.tb5FrontWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5FrontWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb5FrontWallText.Name = "tb5FrontWallText";
             this.tb5FrontWallText.Size = new System.Drawing.Size(199, 32);
             this.tb5FrontWallText.TabIndex = 76;
@@ -23434,7 +23399,7 @@
             this.tb5CarDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5CarDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb5CarDoorFinishText.Location = new System.Drawing.Point(25, 56);
-            this.tb5CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb5CarDoorFinishText.Name = "tb5CarDoorFinishText";
             this.tb5CarDoorFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb5CarDoorFinishText.TabIndex = 76;
@@ -23490,7 +23455,7 @@
             this.tb5ShaftDEpth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5ShaftDEpth.ForeColor = System.Drawing.Color.Black;
             this.tb5ShaftDEpth.Location = new System.Drawing.Point(269, 534);
-            this.tb5ShaftDEpth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5ShaftDEpth.Margin = new System.Windows.Forms.Padding(2);
             this.tb5ShaftDEpth.Name = "tb5ShaftDEpth";
             this.tb5ShaftDEpth.Size = new System.Drawing.Size(100, 32);
             this.tb5ShaftDEpth.TabIndex = 304;
@@ -23501,7 +23466,7 @@
             this.tb5AuxCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5AuxCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb5AuxCOPLocation.Location = new System.Drawing.Point(218, 2172);
-            this.tb5AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb5AuxCOPLocation.Name = "tb5AuxCOPLocation";
             this.tb5AuxCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb5AuxCOPLocation.TabIndex = 322;
@@ -23537,7 +23502,7 @@
             this.tb5PitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5PitDepth.ForeColor = System.Drawing.Color.Black;
             this.tb5PitDepth.Location = new System.Drawing.Point(269, 570);
-            this.tb5PitDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5PitDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb5PitDepth.Name = "tb5PitDepth";
             this.tb5PitDepth.Size = new System.Drawing.Size(100, 32);
             this.tb5PitDepth.TabIndex = 305;
@@ -23548,7 +23513,7 @@
             this.tb5MainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5MainCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb5MainCOPLocation.Location = new System.Drawing.Point(218, 2136);
-            this.tb5MainCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5MainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb5MainCOPLocation.Name = "tb5MainCOPLocation";
             this.tb5MainCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb5MainCOPLocation.TabIndex = 321;
@@ -23584,7 +23549,7 @@
             this.tb5Headroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5Headroom.ForeColor = System.Drawing.Color.Black;
             this.tb5Headroom.Location = new System.Drawing.Point(269, 606);
-            this.tb5Headroom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5Headroom.Margin = new System.Windows.Forms.Padding(2);
             this.tb5Headroom.Name = "tb5Headroom";
             this.tb5Headroom.Size = new System.Drawing.Size(100, 32);
             this.tb5Headroom.TabIndex = 306;
@@ -23595,7 +23560,7 @@
             this.tb5NumberOfCOPs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5NumberOfCOPs.ForeColor = System.Drawing.Color.Black;
             this.tb5NumberOfCOPs.Location = new System.Drawing.Point(218, 2100);
-            this.tb5NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2);
             this.tb5NumberOfCOPs.Name = "tb5NumberOfCOPs";
             this.tb5NumberOfCOPs.Size = new System.Drawing.Size(100, 32);
             this.tb5NumberOfCOPs.TabIndex = 320;
@@ -23631,7 +23596,7 @@
             this.tb5Travel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5Travel.ForeColor = System.Drawing.Color.Black;
             this.tb5Travel.Location = new System.Drawing.Point(269, 642);
-            this.tb5Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5Travel.Margin = new System.Windows.Forms.Padding(2);
             this.tb5Travel.Name = "tb5Travel";
             this.tb5Travel.Size = new System.Drawing.Size(100, 32);
             this.tb5Travel.TabIndex = 307;
@@ -23702,7 +23667,7 @@
             this.tb5NumberOfLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5NumberOfLandings.ForeColor = System.Drawing.Color.Black;
             this.tb5NumberOfLandings.Location = new System.Drawing.Point(269, 678);
-            this.tb5NumberOfLandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5NumberOfLandings.Margin = new System.Windows.Forms.Padding(2);
             this.tb5NumberOfLandings.Name = "tb5NumberOfLandings";
             this.tb5NumberOfLandings.Size = new System.Drawing.Size(100, 32);
             this.tb5NumberOfLandings.TabIndex = 308;
@@ -23769,7 +23734,7 @@
             this.tb5FacePlateMaterialText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5FacePlateMaterialText.ForeColor = System.Drawing.Color.Black;
             this.tb5FacePlateMaterialText.Location = new System.Drawing.Point(25, 61);
-            this.tb5FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2);
             this.tb5FacePlateMaterialText.Name = "tb5FacePlateMaterialText";
             this.tb5FacePlateMaterialText.Size = new System.Drawing.Size(203, 32);
             this.tb5FacePlateMaterialText.TabIndex = 95;
@@ -23986,7 +23951,7 @@
             this.tb5KetyswitchLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5KetyswitchLocation.ForeColor = System.Drawing.Color.Black;
             this.tb5KetyswitchLocation.Location = new System.Drawing.Point(218, 2208);
-            this.tb5KetyswitchLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5KetyswitchLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb5KetyswitchLocation.Name = "tb5KetyswitchLocation";
             this.tb5KetyswitchLocation.Size = new System.Drawing.Size(433, 32);
             this.tb5KetyswitchLocation.TabIndex = 323;
@@ -24023,7 +23988,7 @@
             this.tb5COPFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5COPFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb5COPFinishText.Location = new System.Drawing.Point(23, 58);
-            this.tb5COPFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5COPFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb5COPFinishText.Name = "tb5COPFinishText";
             this.tb5COPFinishText.Size = new System.Drawing.Size(202, 32);
             this.tb5COPFinishText.TabIndex = 76;
@@ -24068,7 +24033,7 @@
             this.tb5HandrailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5HandrailText.ForeColor = System.Drawing.Color.Black;
             this.tb5HandrailText.Location = new System.Drawing.Point(25, 52);
-            this.tb5HandrailText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5HandrailText.Margin = new System.Windows.Forms.Padding(2);
             this.tb5HandrailText.Name = "tb5HandrailText";
             this.tb5HandrailText.Size = new System.Drawing.Size(199, 32);
             this.tb5HandrailText.TabIndex = 74;
@@ -24123,7 +24088,7 @@
             this.tb5NumberOIfLEDLights.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5NumberOIfLEDLights.ForeColor = System.Drawing.Color.Black;
             this.tb5NumberOIfLEDLights.Location = new System.Drawing.Point(8, 27);
-            this.tb5NumberOIfLEDLights.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5NumberOIfLEDLights.Margin = new System.Windows.Forms.Padding(2);
             this.tb5NumberOIfLEDLights.Name = "tb5NumberOIfLEDLights";
             this.tb5NumberOIfLEDLights.Size = new System.Drawing.Size(223, 32);
             this.tb5NumberOIfLEDLights.TabIndex = 74;
@@ -24160,7 +24125,7 @@
             this.tb5MirrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5MirrorText.ForeColor = System.Drawing.Color.Black;
             this.tb5MirrorText.Location = new System.Drawing.Point(25, 78);
-            this.tb5MirrorText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5MirrorText.Margin = new System.Windows.Forms.Padding(2);
             this.tb5MirrorText.Name = "tb5MirrorText";
             this.tb5MirrorText.Size = new System.Drawing.Size(199, 32);
             this.tb5MirrorText.TabIndex = 78;
@@ -24201,7 +24166,7 @@
             this.tb5LiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5LiftNumbers.ForeColor = System.Drawing.Color.Black;
             this.tb5LiftNumbers.Location = new System.Drawing.Point(295, 100);
-            this.tb5LiftNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5LiftNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.tb5LiftNumbers.Name = "tb5LiftNumbers";
             this.tb5LiftNumbers.Size = new System.Drawing.Size(236, 32);
             this.tb5LiftNumbers.TabIndex = 302;
@@ -24270,7 +24235,7 @@
             this.tb5TypeOfLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5TypeOfLift.ForeColor = System.Drawing.Color.Black;
             this.tb5TypeOfLift.Location = new System.Drawing.Point(295, 51);
-            this.tb5TypeOfLift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5TypeOfLift.Margin = new System.Windows.Forms.Padding(2);
             this.tb5TypeOfLift.Name = "tb5TypeOfLift";
             this.tb5TypeOfLift.Size = new System.Drawing.Size(236, 32);
             this.tb5TypeOfLift.TabIndex = 301;
@@ -24403,7 +24368,7 @@
             this.tb5FloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5FloorFinish.ForeColor = System.Drawing.Color.Black;
             this.tb5FloorFinish.Location = new System.Drawing.Point(10, 33);
-            this.tb5FloorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5FloorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tb5FloorFinish.Name = "tb5FloorFinish";
             this.tb5FloorFinish.Size = new System.Drawing.Size(221, 32);
             this.tb5FloorFinish.TabIndex = 75;
@@ -24426,7 +24391,7 @@
             this.tb5Designations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5Designations.ForeColor = System.Drawing.Color.Black;
             this.tb5Designations.Location = new System.Drawing.Point(218, 2246);
-            this.tb5Designations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5Designations.Margin = new System.Windows.Forms.Padding(2);
             this.tb5Designations.Name = "tb5Designations";
             this.tb5Designations.Size = new System.Drawing.Size(433, 32);
             this.tb5Designations.TabIndex = 324;
@@ -24437,7 +24402,7 @@
             this.tb5NumberOfLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5NumberOfLandingDoors.ForeColor = System.Drawing.Color.Black;
             this.tb5NumberOfLandingDoors.Location = new System.Drawing.Point(269, 714);
-            this.tb5NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2);
             this.tb5NumberOfLandingDoors.Name = "tb5NumberOfLandingDoors";
             this.tb5NumberOfLandingDoors.Size = new System.Drawing.Size(100, 32);
             this.tb5NumberOfLandingDoors.TabIndex = 309;
@@ -24461,7 +24426,7 @@
             this.tb5RearWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5RearWallText.ForeColor = System.Drawing.Color.Black;
             this.tb5RearWallText.Location = new System.Drawing.Point(25, 56);
-            this.tb5RearWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5RearWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb5RearWallText.Name = "tb5RearWallText";
             this.tb5RearWallText.Size = new System.Drawing.Size(199, 32);
             this.tb5RearWallText.TabIndex = 76;
@@ -24706,7 +24671,7 @@
             this.tb5CarNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5CarNote.ForeColor = System.Drawing.Color.Black;
             this.tb5CarNote.Location = new System.Drawing.Point(89, 986);
-            this.tb5CarNote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5CarNote.Margin = new System.Windows.Forms.Padding(2);
             this.tb5CarNote.Multiline = true;
             this.tb5CarNote.Name = "tb5CarNote";
             this.tb5CarNote.Size = new System.Drawing.Size(563, 67);
@@ -24730,7 +24695,7 @@
             this.tb5NumberOfCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5NumberOfCarEntrances.ForeColor = System.Drawing.Color.Black;
             this.tb5NumberOfCarEntrances.Location = new System.Drawing.Point(526, 869);
-            this.tb5NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2);
             this.tb5NumberOfCarEntrances.Name = "tb5NumberOfCarEntrances";
             this.tb5NumberOfCarEntrances.Size = new System.Drawing.Size(125, 32);
             this.tb5NumberOfCarEntrances.TabIndex = 316;
@@ -24765,7 +24730,7 @@
             this.tb5LiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5LiftRating.ForeColor = System.Drawing.Color.Black;
             this.tb5LiftRating.Location = new System.Drawing.Point(526, 831);
-            this.tb5LiftRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5LiftRating.Margin = new System.Windows.Forms.Padding(2);
             this.tb5LiftRating.Name = "tb5LiftRating";
             this.tb5LiftRating.Size = new System.Drawing.Size(125, 32);
             this.tb5LiftRating.TabIndex = 315;
@@ -24776,7 +24741,7 @@
             this.tb5CarWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5CarWidth.ForeColor = System.Drawing.Color.Black;
             this.tb5CarWidth.Location = new System.Drawing.Point(146, 872);
-            this.tb5CarWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5CarWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb5CarWidth.Name = "tb5CarWidth";
             this.tb5CarWidth.Size = new System.Drawing.Size(117, 32);
             this.tb5CarWidth.TabIndex = 312;
@@ -24811,7 +24776,7 @@
             this.tb5Load.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5Load.ForeColor = System.Drawing.Color.Black;
             this.tb5Load.Location = new System.Drawing.Point(146, 800);
-            this.tb5Load.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5Load.Margin = new System.Windows.Forms.Padding(2);
             this.tb5Load.Name = "tb5Load";
             this.tb5Load.Size = new System.Drawing.Size(117, 32);
             this.tb5Load.TabIndex = 310;
@@ -24822,7 +24787,7 @@
             this.tb5CaRHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5CaRHeight.ForeColor = System.Drawing.Color.Black;
             this.tb5CaRHeight.Location = new System.Drawing.Point(146, 943);
-            this.tb5CaRHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5CaRHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb5CaRHeight.Name = "tb5CaRHeight";
             this.tb5CaRHeight.Size = new System.Drawing.Size(117, 32);
             this.tb5CaRHeight.TabIndex = 314;
@@ -24833,7 +24798,7 @@
             this.tb5Speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5Speed.ForeColor = System.Drawing.Color.Black;
             this.tb5Speed.Location = new System.Drawing.Point(146, 835);
-            this.tb5Speed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5Speed.Margin = new System.Windows.Forms.Padding(2);
             this.tb5Speed.Name = "tb5Speed";
             this.tb5Speed.Size = new System.Drawing.Size(117, 32);
             this.tb5Speed.TabIndex = 311;
@@ -24844,7 +24809,7 @@
             this.tb5CarDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5CarDepth.ForeColor = System.Drawing.Color.Black;
             this.tb5CarDepth.Location = new System.Drawing.Point(146, 907);
-            this.tb5CarDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5CarDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb5CarDepth.Name = "tb5CarDepth";
             this.tb5CarDepth.Size = new System.Drawing.Size(117, 32);
             this.tb5CarDepth.TabIndex = 313;
@@ -24914,7 +24879,7 @@
             this.tb5DoorTRacksText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5DoorTRacksText.ForeColor = System.Drawing.Color.Black;
             this.tb5DoorTRacksText.Location = new System.Drawing.Point(25, 56);
-            this.tb5DoorTRacksText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5DoorTRacksText.Margin = new System.Windows.Forms.Padding(2);
             this.tb5DoorTRacksText.Name = "tb5DoorTRacksText";
             this.tb5DoorTRacksText.Size = new System.Drawing.Size(188, 32);
             this.tb5DoorTRacksText.TabIndex = 82;
@@ -24959,7 +24924,7 @@
             this.tb5LandingDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5LandingDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb5LandingDoorFinishText.Location = new System.Drawing.Point(25, 59);
-            this.tb5LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb5LandingDoorFinishText.Name = "tb5LandingDoorFinishText";
             this.tb5LandingDoorFinishText.Size = new System.Drawing.Size(188, 32);
             this.tb5LandingDoorFinishText.TabIndex = 80;
@@ -25037,7 +25002,7 @@
             this.tb5DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5DoorWidth.ForeColor = System.Drawing.Color.Black;
             this.tb5DoorWidth.Location = new System.Drawing.Point(198, 1119);
-            this.tb5DoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5DoorWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb5DoorWidth.Name = "tb5DoorWidth";
             this.tb5DoorWidth.Size = new System.Drawing.Size(81, 32);
             this.tb5DoorWidth.TabIndex = 318;
@@ -25048,7 +25013,7 @@
             this.tb5DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb5DoorHeight.ForeColor = System.Drawing.Color.Black;
             this.tb5DoorHeight.Location = new System.Drawing.Point(198, 1154);
-            this.tb5DoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb5DoorHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb5DoorHeight.Name = "tb5DoorHeight";
             this.tb5DoorHeight.Size = new System.Drawing.Size(81, 32);
             this.tb5DoorHeight.TabIndex = 319;
@@ -25164,7 +25129,7 @@
             this.panelLift4.Controls.Add(this.tb4DoorHeight);
             this.panelLift4.Controls.Add(this.label164);
             this.panelLift4.Location = new System.Drawing.Point(1372, 240);
-            this.panelLift4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLift4.Margin = new System.Windows.Forms.Padding(2);
             this.panelLift4.Name = "panelLift4";
             this.panelLift4.Size = new System.Drawing.Size(689, 735);
             this.panelLift4.TabIndex = 433;
@@ -25208,7 +25173,7 @@
             this.tb4ShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4ShaftWidth.ForeColor = System.Drawing.Color.Black;
             this.tb4ShaftWidth.Location = new System.Drawing.Point(266, 508);
-            this.tb4ShaftWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4ShaftWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb4ShaftWidth.Name = "tb4ShaftWidth";
             this.tb4ShaftWidth.Size = new System.Drawing.Size(100, 32);
             this.tb4ShaftWidth.TabIndex = 303;
@@ -25322,7 +25287,7 @@
             this.tb4CeilingFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4CeilingFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb4CeilingFinishText.Location = new System.Drawing.Point(25, 122);
-            this.tb4CeilingFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4CeilingFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb4CeilingFinishText.Name = "tb4CeilingFinishText";
             this.tb4CeilingFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb4CeilingFinishText.TabIndex = 76;
@@ -25379,7 +25344,7 @@
             this.tb4SideWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4SideWallText.ForeColor = System.Drawing.Color.Black;
             this.tb4SideWallText.Location = new System.Drawing.Point(26, 56);
-            this.tb4SideWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4SideWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb4SideWallText.Name = "tb4SideWallText";
             this.tb4SideWallText.Size = new System.Drawing.Size(199, 32);
             this.tb4SideWallText.TabIndex = 76;
@@ -25458,7 +25423,7 @@
             this.tb4FrontWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4FrontWallText.ForeColor = System.Drawing.Color.Black;
             this.tb4FrontWallText.Location = new System.Drawing.Point(25, 57);
-            this.tb4FrontWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4FrontWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb4FrontWallText.Name = "tb4FrontWallText";
             this.tb4FrontWallText.Size = new System.Drawing.Size(199, 32);
             this.tb4FrontWallText.TabIndex = 76;
@@ -25585,7 +25550,7 @@
             this.tb4CarDoorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4CarDoorFinish.ForeColor = System.Drawing.Color.Black;
             this.tb4CarDoorFinish.Location = new System.Drawing.Point(25, 56);
-            this.tb4CarDoorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4CarDoorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tb4CarDoorFinish.Name = "tb4CarDoorFinish";
             this.tb4CarDoorFinish.Size = new System.Drawing.Size(199, 32);
             this.tb4CarDoorFinish.TabIndex = 76;
@@ -25641,7 +25606,7 @@
             this.tb4ShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4ShaftDepth.ForeColor = System.Drawing.Color.Black;
             this.tb4ShaftDepth.Location = new System.Drawing.Point(266, 544);
-            this.tb4ShaftDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4ShaftDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb4ShaftDepth.Name = "tb4ShaftDepth";
             this.tb4ShaftDepth.Size = new System.Drawing.Size(100, 32);
             this.tb4ShaftDepth.TabIndex = 304;
@@ -25652,7 +25617,7 @@
             this.tb4AuxCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4AuxCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb4AuxCOPLocation.Location = new System.Drawing.Point(221, 2181);
-            this.tb4AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb4AuxCOPLocation.Name = "tb4AuxCOPLocation";
             this.tb4AuxCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb4AuxCOPLocation.TabIndex = 322;
@@ -25688,7 +25653,7 @@
             this.tb4PitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4PitDepth.ForeColor = System.Drawing.Color.Black;
             this.tb4PitDepth.Location = new System.Drawing.Point(266, 580);
-            this.tb4PitDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4PitDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb4PitDepth.Name = "tb4PitDepth";
             this.tb4PitDepth.Size = new System.Drawing.Size(100, 32);
             this.tb4PitDepth.TabIndex = 305;
@@ -25699,7 +25664,7 @@
             this.tb4MainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4MainCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb4MainCOPLocation.Location = new System.Drawing.Point(221, 2144);
-            this.tb4MainCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4MainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb4MainCOPLocation.Name = "tb4MainCOPLocation";
             this.tb4MainCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb4MainCOPLocation.TabIndex = 321;
@@ -25735,7 +25700,7 @@
             this.tb4Headroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4Headroom.ForeColor = System.Drawing.Color.Black;
             this.tb4Headroom.Location = new System.Drawing.Point(266, 616);
-            this.tb4Headroom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4Headroom.Margin = new System.Windows.Forms.Padding(2);
             this.tb4Headroom.Name = "tb4Headroom";
             this.tb4Headroom.Size = new System.Drawing.Size(100, 32);
             this.tb4Headroom.TabIndex = 306;
@@ -25746,7 +25711,7 @@
             this.tb4NumberOfCOPs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4NumberOfCOPs.ForeColor = System.Drawing.Color.Black;
             this.tb4NumberOfCOPs.Location = new System.Drawing.Point(221, 2109);
-            this.tb4NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2);
             this.tb4NumberOfCOPs.Name = "tb4NumberOfCOPs";
             this.tb4NumberOfCOPs.Size = new System.Drawing.Size(100, 32);
             this.tb4NumberOfCOPs.TabIndex = 320;
@@ -25782,7 +25747,7 @@
             this.tb4Travel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4Travel.ForeColor = System.Drawing.Color.Black;
             this.tb4Travel.Location = new System.Drawing.Point(266, 652);
-            this.tb4Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4Travel.Margin = new System.Windows.Forms.Padding(2);
             this.tb4Travel.Name = "tb4Travel";
             this.tb4Travel.Size = new System.Drawing.Size(100, 32);
             this.tb4Travel.TabIndex = 307;
@@ -25853,7 +25818,7 @@
             this.tb4NumberOfLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4NumberOfLandings.ForeColor = System.Drawing.Color.Black;
             this.tb4NumberOfLandings.Location = new System.Drawing.Point(266, 688);
-            this.tb4NumberOfLandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4NumberOfLandings.Margin = new System.Windows.Forms.Padding(2);
             this.tb4NumberOfLandings.Name = "tb4NumberOfLandings";
             this.tb4NumberOfLandings.Size = new System.Drawing.Size(100, 32);
             this.tb4NumberOfLandings.TabIndex = 308;
@@ -25920,7 +25885,7 @@
             this.tb4FacePlateMaterialText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4FacePlateMaterialText.ForeColor = System.Drawing.Color.Black;
             this.tb4FacePlateMaterialText.Location = new System.Drawing.Point(25, 61);
-            this.tb4FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2);
             this.tb4FacePlateMaterialText.Name = "tb4FacePlateMaterialText";
             this.tb4FacePlateMaterialText.Size = new System.Drawing.Size(203, 32);
             this.tb4FacePlateMaterialText.TabIndex = 95;
@@ -26137,7 +26102,7 @@
             this.tb4KeyswitchLocations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4KeyswitchLocations.ForeColor = System.Drawing.Color.Black;
             this.tb4KeyswitchLocations.Location = new System.Drawing.Point(221, 2216);
-            this.tb4KeyswitchLocations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4KeyswitchLocations.Margin = new System.Windows.Forms.Padding(2);
             this.tb4KeyswitchLocations.Name = "tb4KeyswitchLocations";
             this.tb4KeyswitchLocations.Size = new System.Drawing.Size(433, 32);
             this.tb4KeyswitchLocations.TabIndex = 323;
@@ -26174,7 +26139,7 @@
             this.tb4COPFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4COPFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb4COPFinishText.Location = new System.Drawing.Point(23, 58);
-            this.tb4COPFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4COPFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb4COPFinishText.Name = "tb4COPFinishText";
             this.tb4COPFinishText.Size = new System.Drawing.Size(202, 32);
             this.tb4COPFinishText.TabIndex = 76;
@@ -26219,7 +26184,7 @@
             this.tb4HandrailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4HandrailText.ForeColor = System.Drawing.Color.Black;
             this.tb4HandrailText.Location = new System.Drawing.Point(25, 52);
-            this.tb4HandrailText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4HandrailText.Margin = new System.Windows.Forms.Padding(2);
             this.tb4HandrailText.Name = "tb4HandrailText";
             this.tb4HandrailText.Size = new System.Drawing.Size(199, 32);
             this.tb4HandrailText.TabIndex = 74;
@@ -26274,7 +26239,7 @@
             this.tb4NumbeROfLEDLights.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4NumbeROfLEDLights.ForeColor = System.Drawing.Color.Black;
             this.tb4NumbeROfLEDLights.Location = new System.Drawing.Point(8, 27);
-            this.tb4NumbeROfLEDLights.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4NumbeROfLEDLights.Margin = new System.Windows.Forms.Padding(2);
             this.tb4NumbeROfLEDLights.Name = "tb4NumbeROfLEDLights";
             this.tb4NumbeROfLEDLights.Size = new System.Drawing.Size(223, 32);
             this.tb4NumbeROfLEDLights.TabIndex = 74;
@@ -26311,7 +26276,7 @@
             this.tb4MirrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4MirrorText.ForeColor = System.Drawing.Color.Black;
             this.tb4MirrorText.Location = new System.Drawing.Point(25, 78);
-            this.tb4MirrorText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4MirrorText.Margin = new System.Windows.Forms.Padding(2);
             this.tb4MirrorText.Name = "tb4MirrorText";
             this.tb4MirrorText.Size = new System.Drawing.Size(199, 32);
             this.tb4MirrorText.TabIndex = 78;
@@ -26352,7 +26317,7 @@
             this.tb4LiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4LiftNumbers.ForeColor = System.Drawing.Color.Black;
             this.tb4LiftNumbers.Location = new System.Drawing.Point(295, 102);
-            this.tb4LiftNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4LiftNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.tb4LiftNumbers.Name = "tb4LiftNumbers";
             this.tb4LiftNumbers.Size = new System.Drawing.Size(236, 32);
             this.tb4LiftNumbers.TabIndex = 302;
@@ -26421,7 +26386,7 @@
             this.tb4TypeOfLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4TypeOfLift.ForeColor = System.Drawing.Color.Black;
             this.tb4TypeOfLift.Location = new System.Drawing.Point(295, 53);
-            this.tb4TypeOfLift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4TypeOfLift.Margin = new System.Windows.Forms.Padding(2);
             this.tb4TypeOfLift.Name = "tb4TypeOfLift";
             this.tb4TypeOfLift.Size = new System.Drawing.Size(236, 32);
             this.tb4TypeOfLift.TabIndex = 301;
@@ -26554,7 +26519,7 @@
             this.tb4FloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4FloorFinish.ForeColor = System.Drawing.Color.Black;
             this.tb4FloorFinish.Location = new System.Drawing.Point(10, 33);
-            this.tb4FloorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4FloorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tb4FloorFinish.Name = "tb4FloorFinish";
             this.tb4FloorFinish.Size = new System.Drawing.Size(221, 32);
             this.tb4FloorFinish.TabIndex = 75;
@@ -26577,7 +26542,7 @@
             this.tb4Designations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4Designations.ForeColor = System.Drawing.Color.Black;
             this.tb4Designations.Location = new System.Drawing.Point(221, 2255);
-            this.tb4Designations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4Designations.Margin = new System.Windows.Forms.Padding(2);
             this.tb4Designations.Name = "tb4Designations";
             this.tb4Designations.Size = new System.Drawing.Size(433, 32);
             this.tb4Designations.TabIndex = 324;
@@ -26588,7 +26553,7 @@
             this.tb4NumberOfLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4NumberOfLandingDoors.ForeColor = System.Drawing.Color.Black;
             this.tb4NumberOfLandingDoors.Location = new System.Drawing.Point(266, 724);
-            this.tb4NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2);
             this.tb4NumberOfLandingDoors.Name = "tb4NumberOfLandingDoors";
             this.tb4NumberOfLandingDoors.Size = new System.Drawing.Size(100, 32);
             this.tb4NumberOfLandingDoors.TabIndex = 309;
@@ -26612,7 +26577,7 @@
             this.tb4RearWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4RearWallText.ForeColor = System.Drawing.Color.Black;
             this.tb4RearWallText.Location = new System.Drawing.Point(25, 56);
-            this.tb4RearWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4RearWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb4RearWallText.Name = "tb4RearWallText";
             this.tb4RearWallText.Size = new System.Drawing.Size(199, 32);
             this.tb4RearWallText.TabIndex = 76;
@@ -26857,7 +26822,7 @@
             this.tb4CarNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4CarNote.ForeColor = System.Drawing.Color.Black;
             this.tb4CarNote.Location = new System.Drawing.Point(87, 996);
-            this.tb4CarNote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4CarNote.Margin = new System.Windows.Forms.Padding(2);
             this.tb4CarNote.Multiline = true;
             this.tb4CarNote.Name = "tb4CarNote";
             this.tb4CarNote.Size = new System.Drawing.Size(563, 67);
@@ -26881,7 +26846,7 @@
             this.tb4NumberOfCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4NumberOfCarEntrances.ForeColor = System.Drawing.Color.Black;
             this.tb4NumberOfCarEntrances.Location = new System.Drawing.Point(524, 879);
-            this.tb4NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2);
             this.tb4NumberOfCarEntrances.Name = "tb4NumberOfCarEntrances";
             this.tb4NumberOfCarEntrances.Size = new System.Drawing.Size(125, 32);
             this.tb4NumberOfCarEntrances.TabIndex = 316;
@@ -26916,7 +26881,7 @@
             this.tb4LiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4LiftRating.ForeColor = System.Drawing.Color.Black;
             this.tb4LiftRating.Location = new System.Drawing.Point(524, 842);
-            this.tb4LiftRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4LiftRating.Margin = new System.Windows.Forms.Padding(2);
             this.tb4LiftRating.Name = "tb4LiftRating";
             this.tb4LiftRating.Size = new System.Drawing.Size(125, 32);
             this.tb4LiftRating.TabIndex = 315;
@@ -26927,7 +26892,7 @@
             this.tb4CarWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4CarWidth.ForeColor = System.Drawing.Color.Black;
             this.tb4CarWidth.Location = new System.Drawing.Point(144, 882);
-            this.tb4CarWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4CarWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb4CarWidth.Name = "tb4CarWidth";
             this.tb4CarWidth.Size = new System.Drawing.Size(117, 32);
             this.tb4CarWidth.TabIndex = 312;
@@ -26962,7 +26927,7 @@
             this.tb4Load.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4Load.ForeColor = System.Drawing.Color.Black;
             this.tb4Load.Location = new System.Drawing.Point(144, 811);
-            this.tb4Load.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4Load.Margin = new System.Windows.Forms.Padding(2);
             this.tb4Load.Name = "tb4Load";
             this.tb4Load.Size = new System.Drawing.Size(117, 32);
             this.tb4Load.TabIndex = 310;
@@ -26973,7 +26938,7 @@
             this.tb4CarHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4CarHeight.ForeColor = System.Drawing.Color.Black;
             this.tb4CarHeight.Location = new System.Drawing.Point(144, 954);
-            this.tb4CarHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4CarHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb4CarHeight.Name = "tb4CarHeight";
             this.tb4CarHeight.Size = new System.Drawing.Size(117, 32);
             this.tb4CarHeight.TabIndex = 314;
@@ -26984,7 +26949,7 @@
             this.tb4Speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4Speed.ForeColor = System.Drawing.Color.Black;
             this.tb4Speed.Location = new System.Drawing.Point(144, 846);
-            this.tb4Speed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4Speed.Margin = new System.Windows.Forms.Padding(2);
             this.tb4Speed.Name = "tb4Speed";
             this.tb4Speed.Size = new System.Drawing.Size(117, 32);
             this.tb4Speed.TabIndex = 311;
@@ -26995,7 +26960,7 @@
             this.tb4CarDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4CarDepth.ForeColor = System.Drawing.Color.Black;
             this.tb4CarDepth.Location = new System.Drawing.Point(144, 918);
-            this.tb4CarDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4CarDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb4CarDepth.Name = "tb4CarDepth";
             this.tb4CarDepth.Size = new System.Drawing.Size(117, 32);
             this.tb4CarDepth.TabIndex = 313;
@@ -27065,7 +27030,7 @@
             this.tb4DoorTracksText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4DoorTracksText.ForeColor = System.Drawing.Color.Black;
             this.tb4DoorTracksText.Location = new System.Drawing.Point(25, 56);
-            this.tb4DoorTracksText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4DoorTracksText.Margin = new System.Windows.Forms.Padding(2);
             this.tb4DoorTracksText.Name = "tb4DoorTracksText";
             this.tb4DoorTracksText.Size = new System.Drawing.Size(188, 32);
             this.tb4DoorTracksText.TabIndex = 82;
@@ -27110,7 +27075,7 @@
             this.tb4LandingDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4LandingDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb4LandingDoorFinishText.Location = new System.Drawing.Point(25, 59);
-            this.tb4LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb4LandingDoorFinishText.Name = "tb4LandingDoorFinishText";
             this.tb4LandingDoorFinishText.Size = new System.Drawing.Size(188, 32);
             this.tb4LandingDoorFinishText.TabIndex = 80;
@@ -27188,7 +27153,7 @@
             this.tb4DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4DoorWidth.ForeColor = System.Drawing.Color.Black;
             this.tb4DoorWidth.Location = new System.Drawing.Point(196, 1129);
-            this.tb4DoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4DoorWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb4DoorWidth.Name = "tb4DoorWidth";
             this.tb4DoorWidth.Size = new System.Drawing.Size(81, 32);
             this.tb4DoorWidth.TabIndex = 318;
@@ -27199,7 +27164,7 @@
             this.tb4DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb4DoorHeight.ForeColor = System.Drawing.Color.Black;
             this.tb4DoorHeight.Location = new System.Drawing.Point(196, 1165);
-            this.tb4DoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb4DoorHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb4DoorHeight.Name = "tb4DoorHeight";
             this.tb4DoorHeight.Size = new System.Drawing.Size(81, 32);
             this.tb4DoorHeight.TabIndex = 319;
@@ -27315,7 +27280,7 @@
             this.panelLift2.Controls.Add(this.tb2DoorHeight);
             this.panelLift2.Controls.Add(this.label223);
             this.panelLift2.Location = new System.Drawing.Point(1377, 227);
-            this.panelLift2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLift2.Margin = new System.Windows.Forms.Padding(2);
             this.panelLift2.Name = "panelLift2";
             this.panelLift2.Size = new System.Drawing.Size(689, 735);
             this.panelLift2.TabIndex = 430;
@@ -27359,7 +27324,7 @@
             this.tb2ShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2ShaftWidth.ForeColor = System.Drawing.Color.Black;
             this.tb2ShaftWidth.Location = new System.Drawing.Point(257, 588);
-            this.tb2ShaftWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2ShaftWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb2ShaftWidth.Name = "tb2ShaftWidth";
             this.tb2ShaftWidth.Size = new System.Drawing.Size(100, 32);
             this.tb2ShaftWidth.TabIndex = 303;
@@ -27473,7 +27438,7 @@
             this.tb2CeilingFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2CeilingFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb2CeilingFinishText.Location = new System.Drawing.Point(25, 122);
-            this.tb2CeilingFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2CeilingFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb2CeilingFinishText.Name = "tb2CeilingFinishText";
             this.tb2CeilingFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb2CeilingFinishText.TabIndex = 76;
@@ -27530,7 +27495,7 @@
             this.tb2SideWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2SideWallText.ForeColor = System.Drawing.Color.Black;
             this.tb2SideWallText.Location = new System.Drawing.Point(26, 56);
-            this.tb2SideWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2SideWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb2SideWallText.Name = "tb2SideWallText";
             this.tb2SideWallText.Size = new System.Drawing.Size(199, 32);
             this.tb2SideWallText.TabIndex = 76;
@@ -27609,7 +27574,7 @@
             this.tb2FrontWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2FrontWallText.ForeColor = System.Drawing.Color.Black;
             this.tb2FrontWallText.Location = new System.Drawing.Point(25, 57);
-            this.tb2FrontWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2FrontWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb2FrontWallText.Name = "tb2FrontWallText";
             this.tb2FrontWallText.Size = new System.Drawing.Size(199, 32);
             this.tb2FrontWallText.TabIndex = 76;
@@ -27736,7 +27701,7 @@
             this.tb2CarDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2CarDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb2CarDoorFinishText.Location = new System.Drawing.Point(25, 56);
-            this.tb2CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb2CarDoorFinishText.Name = "tb2CarDoorFinishText";
             this.tb2CarDoorFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb2CarDoorFinishText.TabIndex = 76;
@@ -27792,7 +27757,7 @@
             this.tb2ShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2ShaftDepth.ForeColor = System.Drawing.Color.Black;
             this.tb2ShaftDepth.Location = new System.Drawing.Point(257, 625);
-            this.tb2ShaftDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2ShaftDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb2ShaftDepth.Name = "tb2ShaftDepth";
             this.tb2ShaftDepth.Size = new System.Drawing.Size(100, 32);
             this.tb2ShaftDepth.TabIndex = 304;
@@ -27803,7 +27768,7 @@
             this.tb2AuxCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2AuxCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb2AuxCOPLocation.Location = new System.Drawing.Point(220, 2280);
-            this.tb2AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb2AuxCOPLocation.Name = "tb2AuxCOPLocation";
             this.tb2AuxCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb2AuxCOPLocation.TabIndex = 322;
@@ -27839,7 +27804,7 @@
             this.tb2PitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2PitDepth.ForeColor = System.Drawing.Color.Black;
             this.tb2PitDepth.Location = new System.Drawing.Point(257, 660);
-            this.tb2PitDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2PitDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb2PitDepth.Name = "tb2PitDepth";
             this.tb2PitDepth.Size = new System.Drawing.Size(100, 32);
             this.tb2PitDepth.TabIndex = 305;
@@ -27850,7 +27815,7 @@
             this.tb2MainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2MainCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb2MainCOPLocation.Location = new System.Drawing.Point(220, 2243);
-            this.tb2MainCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2MainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb2MainCOPLocation.Name = "tb2MainCOPLocation";
             this.tb2MainCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb2MainCOPLocation.TabIndex = 321;
@@ -27886,7 +27851,7 @@
             this.tb2Headroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2Headroom.ForeColor = System.Drawing.Color.Black;
             this.tb2Headroom.Location = new System.Drawing.Point(257, 696);
-            this.tb2Headroom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2Headroom.Margin = new System.Windows.Forms.Padding(2);
             this.tb2Headroom.Name = "tb2Headroom";
             this.tb2Headroom.Size = new System.Drawing.Size(100, 32);
             this.tb2Headroom.TabIndex = 306;
@@ -27897,7 +27862,7 @@
             this.tb2NumberOfCOPs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2NumberOfCOPs.ForeColor = System.Drawing.Color.Black;
             this.tb2NumberOfCOPs.Location = new System.Drawing.Point(220, 2207);
-            this.tb2NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2);
             this.tb2NumberOfCOPs.Name = "tb2NumberOfCOPs";
             this.tb2NumberOfCOPs.Size = new System.Drawing.Size(100, 32);
             this.tb2NumberOfCOPs.TabIndex = 320;
@@ -27933,7 +27898,7 @@
             this.tb2Travel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2Travel.ForeColor = System.Drawing.Color.Black;
             this.tb2Travel.Location = new System.Drawing.Point(257, 733);
-            this.tb2Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2Travel.Margin = new System.Windows.Forms.Padding(2);
             this.tb2Travel.Name = "tb2Travel";
             this.tb2Travel.Size = new System.Drawing.Size(100, 32);
             this.tb2Travel.TabIndex = 307;
@@ -28004,7 +27969,7 @@
             this.tb2NumberOfLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2NumberOfLandings.ForeColor = System.Drawing.Color.Black;
             this.tb2NumberOfLandings.Location = new System.Drawing.Point(257, 768);
-            this.tb2NumberOfLandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2NumberOfLandings.Margin = new System.Windows.Forms.Padding(2);
             this.tb2NumberOfLandings.Name = "tb2NumberOfLandings";
             this.tb2NumberOfLandings.Size = new System.Drawing.Size(100, 32);
             this.tb2NumberOfLandings.TabIndex = 308;
@@ -28071,7 +28036,7 @@
             this.tb2FacePlateMaterialText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2FacePlateMaterialText.ForeColor = System.Drawing.Color.Black;
             this.tb2FacePlateMaterialText.Location = new System.Drawing.Point(25, 61);
-            this.tb2FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2FacePlateMaterialText.Margin = new System.Windows.Forms.Padding(2);
             this.tb2FacePlateMaterialText.Name = "tb2FacePlateMaterialText";
             this.tb2FacePlateMaterialText.Size = new System.Drawing.Size(203, 32);
             this.tb2FacePlateMaterialText.TabIndex = 95;
@@ -28288,7 +28253,7 @@
             this.tb2KeyswitchLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2KeyswitchLocation.ForeColor = System.Drawing.Color.Black;
             this.tb2KeyswitchLocation.Location = new System.Drawing.Point(220, 2315);
-            this.tb2KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb2KeyswitchLocation.Name = "tb2KeyswitchLocation";
             this.tb2KeyswitchLocation.Size = new System.Drawing.Size(433, 32);
             this.tb2KeyswitchLocation.TabIndex = 323;
@@ -28325,7 +28290,7 @@
             this.tb2COPFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2COPFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb2COPFinishText.Location = new System.Drawing.Point(23, 58);
-            this.tb2COPFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2COPFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb2COPFinishText.Name = "tb2COPFinishText";
             this.tb2COPFinishText.Size = new System.Drawing.Size(202, 32);
             this.tb2COPFinishText.TabIndex = 76;
@@ -28370,7 +28335,7 @@
             this.tb2HandrailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2HandrailText.ForeColor = System.Drawing.Color.Black;
             this.tb2HandrailText.Location = new System.Drawing.Point(25, 52);
-            this.tb2HandrailText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2HandrailText.Margin = new System.Windows.Forms.Padding(2);
             this.tb2HandrailText.Name = "tb2HandrailText";
             this.tb2HandrailText.Size = new System.Drawing.Size(199, 32);
             this.tb2HandrailText.TabIndex = 74;
@@ -28425,7 +28390,7 @@
             this.tb2NumberofLEDLights.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2NumberofLEDLights.ForeColor = System.Drawing.Color.Black;
             this.tb2NumberofLEDLights.Location = new System.Drawing.Point(8, 27);
-            this.tb2NumberofLEDLights.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2NumberofLEDLights.Margin = new System.Windows.Forms.Padding(2);
             this.tb2NumberofLEDLights.Name = "tb2NumberofLEDLights";
             this.tb2NumberofLEDLights.Size = new System.Drawing.Size(223, 32);
             this.tb2NumberofLEDLights.TabIndex = 74;
@@ -28462,7 +28427,7 @@
             this.tb2MirrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2MirrorText.ForeColor = System.Drawing.Color.Black;
             this.tb2MirrorText.Location = new System.Drawing.Point(25, 78);
-            this.tb2MirrorText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2MirrorText.Margin = new System.Windows.Forms.Padding(2);
             this.tb2MirrorText.Name = "tb2MirrorText";
             this.tb2MirrorText.Size = new System.Drawing.Size(199, 32);
             this.tb2MirrorText.TabIndex = 78;
@@ -28503,7 +28468,7 @@
             this.tb2LiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2LiftNumbers.ForeColor = System.Drawing.Color.Black;
             this.tb2LiftNumbers.Location = new System.Drawing.Point(299, 136);
-            this.tb2LiftNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2LiftNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.tb2LiftNumbers.Name = "tb2LiftNumbers";
             this.tb2LiftNumbers.Size = new System.Drawing.Size(236, 32);
             this.tb2LiftNumbers.TabIndex = 302;
@@ -28572,7 +28537,7 @@
             this.tb2TypeOfLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2TypeOfLift.ForeColor = System.Drawing.Color.Black;
             this.tb2TypeOfLift.Location = new System.Drawing.Point(299, 101);
-            this.tb2TypeOfLift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2TypeOfLift.Margin = new System.Windows.Forms.Padding(2);
             this.tb2TypeOfLift.Name = "tb2TypeOfLift";
             this.tb2TypeOfLift.Size = new System.Drawing.Size(236, 32);
             this.tb2TypeOfLift.TabIndex = 301;
@@ -28705,7 +28670,7 @@
             this.tb2FloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2FloorFinish.ForeColor = System.Drawing.Color.Black;
             this.tb2FloorFinish.Location = new System.Drawing.Point(10, 33);
-            this.tb2FloorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2FloorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tb2FloorFinish.Name = "tb2FloorFinish";
             this.tb2FloorFinish.Size = new System.Drawing.Size(221, 32);
             this.tb2FloorFinish.TabIndex = 75;
@@ -28728,7 +28693,7 @@
             this.tb2Designations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2Designations.ForeColor = System.Drawing.Color.Black;
             this.tb2Designations.Location = new System.Drawing.Point(220, 2354);
-            this.tb2Designations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2Designations.Margin = new System.Windows.Forms.Padding(2);
             this.tb2Designations.Name = "tb2Designations";
             this.tb2Designations.Size = new System.Drawing.Size(433, 32);
             this.tb2Designations.TabIndex = 324;
@@ -28739,7 +28704,7 @@
             this.tb2NumberOfLAndingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2NumberOfLAndingDoors.ForeColor = System.Drawing.Color.Black;
             this.tb2NumberOfLAndingDoors.Location = new System.Drawing.Point(257, 805);
-            this.tb2NumberOfLAndingDoors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2NumberOfLAndingDoors.Margin = new System.Windows.Forms.Padding(2);
             this.tb2NumberOfLAndingDoors.Name = "tb2NumberOfLAndingDoors";
             this.tb2NumberOfLAndingDoors.Size = new System.Drawing.Size(100, 32);
             this.tb2NumberOfLAndingDoors.TabIndex = 309;
@@ -28763,7 +28728,7 @@
             this.tb2RearWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2RearWallText.ForeColor = System.Drawing.Color.Black;
             this.tb2RearWallText.Location = new System.Drawing.Point(25, 56);
-            this.tb2RearWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2RearWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb2RearWallText.Name = "tb2RearWallText";
             this.tb2RearWallText.Size = new System.Drawing.Size(199, 32);
             this.tb2RearWallText.TabIndex = 76;
@@ -29008,7 +28973,7 @@
             this.tb2Note.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2Note.ForeColor = System.Drawing.Color.Black;
             this.tb2Note.Location = new System.Drawing.Point(88, 1079);
-            this.tb2Note.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2Note.Margin = new System.Windows.Forms.Padding(2);
             this.tb2Note.Multiline = true;
             this.tb2Note.Name = "tb2Note";
             this.tb2Note.Size = new System.Drawing.Size(563, 67);
@@ -29032,7 +28997,7 @@
             this.tb2NumberOfCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2NumberOfCarEntrances.ForeColor = System.Drawing.Color.Black;
             this.tb2NumberOfCarEntrances.Location = new System.Drawing.Point(525, 962);
-            this.tb2NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2);
             this.tb2NumberOfCarEntrances.Name = "tb2NumberOfCarEntrances";
             this.tb2NumberOfCarEntrances.Size = new System.Drawing.Size(125, 32);
             this.tb2NumberOfCarEntrances.TabIndex = 316;
@@ -29067,7 +29032,7 @@
             this.tb2LiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2LiftRating.ForeColor = System.Drawing.Color.Black;
             this.tb2LiftRating.Location = new System.Drawing.Point(525, 924);
-            this.tb2LiftRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2LiftRating.Margin = new System.Windows.Forms.Padding(2);
             this.tb2LiftRating.Name = "tb2LiftRating";
             this.tb2LiftRating.Size = new System.Drawing.Size(125, 32);
             this.tb2LiftRating.TabIndex = 315;
@@ -29078,7 +29043,7 @@
             this.tb2CarWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2CarWidth.ForeColor = System.Drawing.Color.Black;
             this.tb2CarWidth.Location = new System.Drawing.Point(145, 965);
-            this.tb2CarWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2CarWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb2CarWidth.Name = "tb2CarWidth";
             this.tb2CarWidth.Size = new System.Drawing.Size(117, 32);
             this.tb2CarWidth.TabIndex = 312;
@@ -29113,7 +29078,7 @@
             this.tb2CarLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2CarLoad.ForeColor = System.Drawing.Color.Black;
             this.tb2CarLoad.Location = new System.Drawing.Point(145, 893);
-            this.tb2CarLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2CarLoad.Margin = new System.Windows.Forms.Padding(2);
             this.tb2CarLoad.Name = "tb2CarLoad";
             this.tb2CarLoad.Size = new System.Drawing.Size(117, 32);
             this.tb2CarLoad.TabIndex = 310;
@@ -29124,7 +29089,7 @@
             this.tb2CarHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2CarHeight.ForeColor = System.Drawing.Color.Black;
             this.tb2CarHeight.Location = new System.Drawing.Point(145, 1036);
-            this.tb2CarHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2CarHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb2CarHeight.Name = "tb2CarHeight";
             this.tb2CarHeight.Size = new System.Drawing.Size(117, 32);
             this.tb2CarHeight.TabIndex = 314;
@@ -29135,7 +29100,7 @@
             this.tb2Speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2Speed.ForeColor = System.Drawing.Color.Black;
             this.tb2Speed.Location = new System.Drawing.Point(145, 928);
-            this.tb2Speed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2Speed.Margin = new System.Windows.Forms.Padding(2);
             this.tb2Speed.Name = "tb2Speed";
             this.tb2Speed.Size = new System.Drawing.Size(117, 32);
             this.tb2Speed.TabIndex = 311;
@@ -29146,7 +29111,7 @@
             this.tb2CarDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2CarDepth.ForeColor = System.Drawing.Color.Black;
             this.tb2CarDepth.Location = new System.Drawing.Point(145, 1000);
-            this.tb2CarDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2CarDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb2CarDepth.Name = "tb2CarDepth";
             this.tb2CarDepth.Size = new System.Drawing.Size(117, 32);
             this.tb2CarDepth.TabIndex = 313;
@@ -29216,7 +29181,7 @@
             this.tb2DoorTracksText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2DoorTracksText.ForeColor = System.Drawing.Color.Black;
             this.tb2DoorTracksText.Location = new System.Drawing.Point(25, 56);
-            this.tb2DoorTracksText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2DoorTracksText.Margin = new System.Windows.Forms.Padding(2);
             this.tb2DoorTracksText.Name = "tb2DoorTracksText";
             this.tb2DoorTracksText.Size = new System.Drawing.Size(188, 32);
             this.tb2DoorTracksText.TabIndex = 82;
@@ -29261,7 +29226,7 @@
             this.tb2LandingDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2LandingDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb2LandingDoorFinishText.Location = new System.Drawing.Point(25, 59);
-            this.tb2LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb2LandingDoorFinishText.Name = "tb2LandingDoorFinishText";
             this.tb2LandingDoorFinishText.Size = new System.Drawing.Size(188, 32);
             this.tb2LandingDoorFinishText.TabIndex = 80;
@@ -29339,7 +29304,7 @@
             this.tb2DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2DoorWidth.ForeColor = System.Drawing.Color.Black;
             this.tb2DoorWidth.Location = new System.Drawing.Point(187, 1201);
-            this.tb2DoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2DoorWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb2DoorWidth.Name = "tb2DoorWidth";
             this.tb2DoorWidth.Size = new System.Drawing.Size(81, 32);
             this.tb2DoorWidth.TabIndex = 318;
@@ -29350,7 +29315,7 @@
             this.tb2DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2DoorHeight.ForeColor = System.Drawing.Color.Black;
             this.tb2DoorHeight.Location = new System.Drawing.Point(187, 1237);
-            this.tb2DoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb2DoorHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb2DoorHeight.Name = "tb2DoorHeight";
             this.tb2DoorHeight.Size = new System.Drawing.Size(81, 32);
             this.tb2DoorHeight.TabIndex = 319;
@@ -29466,7 +29431,7 @@
             this.panelLift3.Controls.Add(this.tb3DoorHeight);
             this.panelLift3.Controls.Add(this.label427);
             this.panelLift3.Location = new System.Drawing.Point(1387, 211);
-            this.panelLift3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLift3.Margin = new System.Windows.Forms.Padding(2);
             this.panelLift3.Name = "panelLift3";
             this.panelLift3.Size = new System.Drawing.Size(689, 735);
             this.panelLift3.TabIndex = 432;
@@ -29510,7 +29475,7 @@
             this.tb3ShaftWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3ShaftWidth.ForeColor = System.Drawing.Color.Black;
             this.tb3ShaftWidth.Location = new System.Drawing.Point(259, 506);
-            this.tb3ShaftWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3ShaftWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb3ShaftWidth.Name = "tb3ShaftWidth";
             this.tb3ShaftWidth.Size = new System.Drawing.Size(100, 32);
             this.tb3ShaftWidth.TabIndex = 303;
@@ -29624,7 +29589,7 @@
             this.tb3CEilingFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3CEilingFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb3CEilingFinishText.Location = new System.Drawing.Point(25, 122);
-            this.tb3CEilingFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3CEilingFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb3CEilingFinishText.Name = "tb3CEilingFinishText";
             this.tb3CEilingFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb3CEilingFinishText.TabIndex = 76;
@@ -29681,7 +29646,7 @@
             this.tb3SideWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3SideWallText.ForeColor = System.Drawing.Color.Black;
             this.tb3SideWallText.Location = new System.Drawing.Point(26, 56);
-            this.tb3SideWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3SideWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb3SideWallText.Name = "tb3SideWallText";
             this.tb3SideWallText.Size = new System.Drawing.Size(199, 32);
             this.tb3SideWallText.TabIndex = 76;
@@ -29760,7 +29725,7 @@
             this.tb3FrontWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3FrontWallText.ForeColor = System.Drawing.Color.Black;
             this.tb3FrontWallText.Location = new System.Drawing.Point(25, 57);
-            this.tb3FrontWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3FrontWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb3FrontWallText.Name = "tb3FrontWallText";
             this.tb3FrontWallText.Size = new System.Drawing.Size(199, 32);
             this.tb3FrontWallText.TabIndex = 76;
@@ -29887,7 +29852,7 @@
             this.tb3CarDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3CarDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb3CarDoorFinishText.Location = new System.Drawing.Point(25, 56);
-            this.tb3CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3CarDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb3CarDoorFinishText.Name = "tb3CarDoorFinishText";
             this.tb3CarDoorFinishText.Size = new System.Drawing.Size(199, 32);
             this.tb3CarDoorFinishText.TabIndex = 76;
@@ -29943,7 +29908,7 @@
             this.tb3ShaftDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3ShaftDepth.ForeColor = System.Drawing.Color.Black;
             this.tb3ShaftDepth.Location = new System.Drawing.Point(259, 542);
-            this.tb3ShaftDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3ShaftDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb3ShaftDepth.Name = "tb3ShaftDepth";
             this.tb3ShaftDepth.Size = new System.Drawing.Size(100, 32);
             this.tb3ShaftDepth.TabIndex = 304;
@@ -29954,7 +29919,7 @@
             this.tb3AuxCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3AuxCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb3AuxCOPLocation.Location = new System.Drawing.Point(215, 2191);
-            this.tb3AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3AuxCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb3AuxCOPLocation.Name = "tb3AuxCOPLocation";
             this.tb3AuxCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb3AuxCOPLocation.TabIndex = 322;
@@ -29990,7 +29955,7 @@
             this.tb3PitDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3PitDepth.ForeColor = System.Drawing.Color.Black;
             this.tb3PitDepth.Location = new System.Drawing.Point(259, 578);
-            this.tb3PitDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3PitDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb3PitDepth.Name = "tb3PitDepth";
             this.tb3PitDepth.Size = new System.Drawing.Size(100, 32);
             this.tb3PitDepth.TabIndex = 305;
@@ -30001,7 +29966,7 @@
             this.tb3MainCOPLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3MainCOPLocation.ForeColor = System.Drawing.Color.Black;
             this.tb3MainCOPLocation.Location = new System.Drawing.Point(215, 2155);
-            this.tb3MainCOPLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3MainCOPLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb3MainCOPLocation.Name = "tb3MainCOPLocation";
             this.tb3MainCOPLocation.Size = new System.Drawing.Size(433, 32);
             this.tb3MainCOPLocation.TabIndex = 321;
@@ -30037,7 +30002,7 @@
             this.tb3HeadRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3HeadRoom.ForeColor = System.Drawing.Color.Black;
             this.tb3HeadRoom.Location = new System.Drawing.Point(259, 614);
-            this.tb3HeadRoom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3HeadRoom.Margin = new System.Windows.Forms.Padding(2);
             this.tb3HeadRoom.Name = "tb3HeadRoom";
             this.tb3HeadRoom.Size = new System.Drawing.Size(100, 32);
             this.tb3HeadRoom.TabIndex = 306;
@@ -30048,7 +30013,7 @@
             this.tb3NumberOfCOPs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3NumberOfCOPs.ForeColor = System.Drawing.Color.Black;
             this.tb3NumberOfCOPs.Location = new System.Drawing.Point(215, 2119);
-            this.tb3NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3NumberOfCOPs.Margin = new System.Windows.Forms.Padding(2);
             this.tb3NumberOfCOPs.Name = "tb3NumberOfCOPs";
             this.tb3NumberOfCOPs.Size = new System.Drawing.Size(100, 32);
             this.tb3NumberOfCOPs.TabIndex = 320;
@@ -30084,7 +30049,7 @@
             this.tb3Travel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3Travel.ForeColor = System.Drawing.Color.Black;
             this.tb3Travel.Location = new System.Drawing.Point(259, 650);
-            this.tb3Travel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3Travel.Margin = new System.Windows.Forms.Padding(2);
             this.tb3Travel.Name = "tb3Travel";
             this.tb3Travel.Size = new System.Drawing.Size(100, 32);
             this.tb3Travel.TabIndex = 307;
@@ -30155,7 +30120,7 @@
             this.tb3NumberOfLandings.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3NumberOfLandings.ForeColor = System.Drawing.Color.Black;
             this.tb3NumberOfLandings.Location = new System.Drawing.Point(259, 686);
-            this.tb3NumberOfLandings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3NumberOfLandings.Margin = new System.Windows.Forms.Padding(2);
             this.tb3NumberOfLandings.Name = "tb3NumberOfLandings";
             this.tb3NumberOfLandings.Size = new System.Drawing.Size(100, 32);
             this.tb3NumberOfLandings.TabIndex = 308;
@@ -30222,7 +30187,7 @@
             this.tb3FacePlaterMaterialText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3FacePlaterMaterialText.ForeColor = System.Drawing.Color.Black;
             this.tb3FacePlaterMaterialText.Location = new System.Drawing.Point(25, 61);
-            this.tb3FacePlaterMaterialText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3FacePlaterMaterialText.Margin = new System.Windows.Forms.Padding(2);
             this.tb3FacePlaterMaterialText.Name = "tb3FacePlaterMaterialText";
             this.tb3FacePlaterMaterialText.Size = new System.Drawing.Size(203, 32);
             this.tb3FacePlaterMaterialText.TabIndex = 95;
@@ -30439,7 +30404,7 @@
             this.tb3KeyswitchLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3KeyswitchLocation.ForeColor = System.Drawing.Color.Black;
             this.tb3KeyswitchLocation.Location = new System.Drawing.Point(215, 2227);
-            this.tb3KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3KeyswitchLocation.Margin = new System.Windows.Forms.Padding(2);
             this.tb3KeyswitchLocation.Name = "tb3KeyswitchLocation";
             this.tb3KeyswitchLocation.Size = new System.Drawing.Size(433, 32);
             this.tb3KeyswitchLocation.TabIndex = 323;
@@ -30476,7 +30441,7 @@
             this.tb3COPFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3COPFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb3COPFinishText.Location = new System.Drawing.Point(23, 58);
-            this.tb3COPFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3COPFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb3COPFinishText.Name = "tb3COPFinishText";
             this.tb3COPFinishText.Size = new System.Drawing.Size(202, 32);
             this.tb3COPFinishText.TabIndex = 76;
@@ -30521,7 +30486,7 @@
             this.tb3HandrailText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3HandrailText.ForeColor = System.Drawing.Color.Black;
             this.tb3HandrailText.Location = new System.Drawing.Point(25, 52);
-            this.tb3HandrailText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3HandrailText.Margin = new System.Windows.Forms.Padding(2);
             this.tb3HandrailText.Name = "tb3HandrailText";
             this.tb3HandrailText.Size = new System.Drawing.Size(199, 32);
             this.tb3HandrailText.TabIndex = 74;
@@ -30576,7 +30541,7 @@
             this.tb3NumberOfLEDLights.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3NumberOfLEDLights.ForeColor = System.Drawing.Color.Black;
             this.tb3NumberOfLEDLights.Location = new System.Drawing.Point(8, 27);
-            this.tb3NumberOfLEDLights.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3NumberOfLEDLights.Margin = new System.Windows.Forms.Padding(2);
             this.tb3NumberOfLEDLights.Name = "tb3NumberOfLEDLights";
             this.tb3NumberOfLEDLights.Size = new System.Drawing.Size(223, 32);
             this.tb3NumberOfLEDLights.TabIndex = 74;
@@ -30613,7 +30578,7 @@
             this.tb3MirrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3MirrorText.ForeColor = System.Drawing.Color.Black;
             this.tb3MirrorText.Location = new System.Drawing.Point(25, 78);
-            this.tb3MirrorText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3MirrorText.Margin = new System.Windows.Forms.Padding(2);
             this.tb3MirrorText.Name = "tb3MirrorText";
             this.tb3MirrorText.Size = new System.Drawing.Size(199, 32);
             this.tb3MirrorText.TabIndex = 78;
@@ -30654,7 +30619,7 @@
             this.tb3LiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3LiftNumbers.ForeColor = System.Drawing.Color.Black;
             this.tb3LiftNumbers.Location = new System.Drawing.Point(280, 123);
-            this.tb3LiftNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3LiftNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.tb3LiftNumbers.Name = "tb3LiftNumbers";
             this.tb3LiftNumbers.Size = new System.Drawing.Size(236, 32);
             this.tb3LiftNumbers.TabIndex = 302;
@@ -30723,7 +30688,7 @@
             this.tb3TypeOfLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3TypeOfLift.ForeColor = System.Drawing.Color.Black;
             this.tb3TypeOfLift.Location = new System.Drawing.Point(280, 74);
-            this.tb3TypeOfLift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3TypeOfLift.Margin = new System.Windows.Forms.Padding(2);
             this.tb3TypeOfLift.Name = "tb3TypeOfLift";
             this.tb3TypeOfLift.Size = new System.Drawing.Size(236, 32);
             this.tb3TypeOfLift.TabIndex = 301;
@@ -30856,7 +30821,7 @@
             this.tb3FloorFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3FloorFinish.ForeColor = System.Drawing.Color.Black;
             this.tb3FloorFinish.Location = new System.Drawing.Point(10, 33);
-            this.tb3FloorFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3FloorFinish.Margin = new System.Windows.Forms.Padding(2);
             this.tb3FloorFinish.Name = "tb3FloorFinish";
             this.tb3FloorFinish.Size = new System.Drawing.Size(221, 32);
             this.tb3FloorFinish.TabIndex = 75;
@@ -30879,7 +30844,7 @@
             this.tb3Designations.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3Designations.ForeColor = System.Drawing.Color.Black;
             this.tb3Designations.Location = new System.Drawing.Point(215, 2265);
-            this.tb3Designations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3Designations.Margin = new System.Windows.Forms.Padding(2);
             this.tb3Designations.Name = "tb3Designations";
             this.tb3Designations.Size = new System.Drawing.Size(433, 32);
             this.tb3Designations.TabIndex = 324;
@@ -30890,7 +30855,7 @@
             this.tb3NumberOfLandingDoors.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3NumberOfLandingDoors.ForeColor = System.Drawing.Color.Black;
             this.tb3NumberOfLandingDoors.Location = new System.Drawing.Point(259, 722);
-            this.tb3NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3NumberOfLandingDoors.Margin = new System.Windows.Forms.Padding(2);
             this.tb3NumberOfLandingDoors.Name = "tb3NumberOfLandingDoors";
             this.tb3NumberOfLandingDoors.Size = new System.Drawing.Size(100, 32);
             this.tb3NumberOfLandingDoors.TabIndex = 309;
@@ -30914,7 +30879,7 @@
             this.tb3RearWallText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3RearWallText.ForeColor = System.Drawing.Color.Black;
             this.tb3RearWallText.Location = new System.Drawing.Point(25, 56);
-            this.tb3RearWallText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3RearWallText.Margin = new System.Windows.Forms.Padding(2);
             this.tb3RearWallText.Name = "tb3RearWallText";
             this.tb3RearWallText.Size = new System.Drawing.Size(199, 32);
             this.tb3RearWallText.TabIndex = 76;
@@ -31159,7 +31124,7 @@
             this.tb3CarNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3CarNote.ForeColor = System.Drawing.Color.Black;
             this.tb3CarNote.Location = new System.Drawing.Point(86, 997);
-            this.tb3CarNote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3CarNote.Margin = new System.Windows.Forms.Padding(2);
             this.tb3CarNote.Multiline = true;
             this.tb3CarNote.Name = "tb3CarNote";
             this.tb3CarNote.Size = new System.Drawing.Size(563, 67);
@@ -31183,7 +31148,7 @@
             this.tb3NumberOfCarEntrances.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3NumberOfCarEntrances.ForeColor = System.Drawing.Color.Black;
             this.tb3NumberOfCarEntrances.Location = new System.Drawing.Point(523, 880);
-            this.tb3NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3NumberOfCarEntrances.Margin = new System.Windows.Forms.Padding(2);
             this.tb3NumberOfCarEntrances.Name = "tb3NumberOfCarEntrances";
             this.tb3NumberOfCarEntrances.Size = new System.Drawing.Size(125, 32);
             this.tb3NumberOfCarEntrances.TabIndex = 316;
@@ -31218,7 +31183,7 @@
             this.tb3LiftRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3LiftRating.ForeColor = System.Drawing.Color.Black;
             this.tb3LiftRating.Location = new System.Drawing.Point(523, 842);
-            this.tb3LiftRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3LiftRating.Margin = new System.Windows.Forms.Padding(2);
             this.tb3LiftRating.Name = "tb3LiftRating";
             this.tb3LiftRating.Size = new System.Drawing.Size(125, 32);
             this.tb3LiftRating.TabIndex = 315;
@@ -31229,7 +31194,7 @@
             this.tb3CarWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3CarWidth.ForeColor = System.Drawing.Color.Black;
             this.tb3CarWidth.Location = new System.Drawing.Point(143, 883);
-            this.tb3CarWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3CarWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb3CarWidth.Name = "tb3CarWidth";
             this.tb3CarWidth.Size = new System.Drawing.Size(117, 32);
             this.tb3CarWidth.TabIndex = 312;
@@ -31264,7 +31229,7 @@
             this.tb3Load.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3Load.ForeColor = System.Drawing.Color.Black;
             this.tb3Load.Location = new System.Drawing.Point(143, 811);
-            this.tb3Load.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3Load.Margin = new System.Windows.Forms.Padding(2);
             this.tb3Load.Name = "tb3Load";
             this.tb3Load.Size = new System.Drawing.Size(117, 32);
             this.tb3Load.TabIndex = 310;
@@ -31275,7 +31240,7 @@
             this.tb3CarHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3CarHeight.ForeColor = System.Drawing.Color.Black;
             this.tb3CarHeight.Location = new System.Drawing.Point(143, 954);
-            this.tb3CarHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3CarHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb3CarHeight.Name = "tb3CarHeight";
             this.tb3CarHeight.Size = new System.Drawing.Size(117, 32);
             this.tb3CarHeight.TabIndex = 314;
@@ -31286,7 +31251,7 @@
             this.tb3Speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3Speed.ForeColor = System.Drawing.Color.Black;
             this.tb3Speed.Location = new System.Drawing.Point(143, 846);
-            this.tb3Speed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3Speed.Margin = new System.Windows.Forms.Padding(2);
             this.tb3Speed.Name = "tb3Speed";
             this.tb3Speed.Size = new System.Drawing.Size(117, 32);
             this.tb3Speed.TabIndex = 311;
@@ -31297,7 +31262,7 @@
             this.tb3CarDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3CarDepth.ForeColor = System.Drawing.Color.Black;
             this.tb3CarDepth.Location = new System.Drawing.Point(143, 918);
-            this.tb3CarDepth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3CarDepth.Margin = new System.Windows.Forms.Padding(2);
             this.tb3CarDepth.Name = "tb3CarDepth";
             this.tb3CarDepth.Size = new System.Drawing.Size(117, 32);
             this.tb3CarDepth.TabIndex = 313;
@@ -31367,7 +31332,7 @@
             this.tb3DoorTracksText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3DoorTracksText.ForeColor = System.Drawing.Color.Black;
             this.tb3DoorTracksText.Location = new System.Drawing.Point(25, 56);
-            this.tb3DoorTracksText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3DoorTracksText.Margin = new System.Windows.Forms.Padding(2);
             this.tb3DoorTracksText.Name = "tb3DoorTracksText";
             this.tb3DoorTracksText.Size = new System.Drawing.Size(188, 32);
             this.tb3DoorTracksText.TabIndex = 82;
@@ -31412,7 +31377,7 @@
             this.tb3LandingDoorFinishText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3LandingDoorFinishText.ForeColor = System.Drawing.Color.Black;
             this.tb3LandingDoorFinishText.Location = new System.Drawing.Point(25, 59);
-            this.tb3LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3LandingDoorFinishText.Margin = new System.Windows.Forms.Padding(2);
             this.tb3LandingDoorFinishText.Name = "tb3LandingDoorFinishText";
             this.tb3LandingDoorFinishText.Size = new System.Drawing.Size(188, 32);
             this.tb3LandingDoorFinishText.TabIndex = 80;
@@ -31490,7 +31455,7 @@
             this.tb3DoorWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3DoorWidth.ForeColor = System.Drawing.Color.Black;
             this.tb3DoorWidth.Location = new System.Drawing.Point(194, 1123);
-            this.tb3DoorWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3DoorWidth.Margin = new System.Windows.Forms.Padding(2);
             this.tb3DoorWidth.Name = "tb3DoorWidth";
             this.tb3DoorWidth.Size = new System.Drawing.Size(81, 32);
             this.tb3DoorWidth.TabIndex = 318;
@@ -31501,7 +31466,7 @@
             this.tb3DoorHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb3DoorHeight.ForeColor = System.Drawing.Color.Black;
             this.tb3DoorHeight.Location = new System.Drawing.Point(194, 1158);
-            this.tb3DoorHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb3DoorHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tb3DoorHeight.Name = "tb3DoorHeight";
             this.tb3DoorHeight.Size = new System.Drawing.Size(81, 32);
             this.tb3DoorHeight.TabIndex = 319;
@@ -31523,10 +31488,28 @@
             // 
             this.panelExportQuote.Controls.Add(this.btnExportQuote);
             this.panelExportQuote.Location = new System.Drawing.Point(713, 755);
-            this.panelExportQuote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelExportQuote.Margin = new System.Windows.Forms.Padding(2);
             this.panelExportQuote.Name = "panelExportQuote";
             this.panelExportQuote.Size = new System.Drawing.Size(283, 50);
             this.panelExportQuote.TabIndex = 437;
+            // 
+            // panelContactDetails
+            // 
+            this.panelContactDetails.Controls.Add(this.label50);
+            this.panelContactDetails.Controls.Add(this.tbfname);
+            this.panelContactDetails.Controls.Add(this.label82);
+            this.panelContactDetails.Controls.Add(this.tblname);
+            this.panelContactDetails.Controls.Add(this.label86);
+            this.panelContactDetails.Controls.Add(this.label83);
+            this.panelContactDetails.Controls.Add(this.tbphone);
+            this.panelContactDetails.Controls.Add(this.label87);
+            this.panelContactDetails.Controls.Add(this.tbAddress1);
+            this.panelContactDetails.Controls.Add(this.tbAddress2);
+            this.panelContactDetails.Controls.Add(this.tbAddress3);
+            this.panelContactDetails.Location = new System.Drawing.Point(705, 11);
+            this.panelContactDetails.Name = "panelContactDetails";
+            this.panelContactDetails.Size = new System.Drawing.Size(291, 406);
+            this.panelContactDetails.TabIndex = 438;
             // 
             // Pin_Dif_Calc
             // 
@@ -31534,6 +31517,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(2479, 1211);
+            this.Controls.Add(this.panelLift1);
+            this.Controls.Add(this.panelContactDetails);
             this.Controls.Add(this.panelLiftPrices);
             this.Controls.Add(this.panelExportQuote);
             this.Controls.Add(this.panelLift8);
@@ -31547,7 +31532,6 @@
             this.Controls.Add(this.panelLift9);
             this.Controls.Add(this.panelLift11);
             this.Controls.Add(this.panelLift12);
-            this.Controls.Add(this.panelLift1);
             this.Controls.Add(this.panelPageNumberButtons);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelCalcButtons);
@@ -31558,7 +31542,7 @@
             this.Controls.Add(this.panelShipping);
             this.Controls.Add(this.panelCostBreakdown);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Pin_Dif_Calc";
             this.Text = "Quote Calculator";
             this.Load += new System.EventHandler(this.Pin_Dif_Calc_Load);
@@ -32445,6 +32429,8 @@
             this.groupBox108.ResumeLayout(false);
             this.groupBox108.PerformLayout();
             this.panelExportQuote.ResumeLayout(false);
+            this.panelContactDetails.ResumeLayout(false);
+            this.panelContactDetails.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -32740,13 +32726,11 @@
         private System.Windows.Forms.GroupBox groupBox33;
         private System.Windows.Forms.RadioButton rbExclusiveServiceNo;
         private System.Windows.Forms.RadioButton rbExclusiveServiceYes;
-        private System.Windows.Forms.Label label88;
         private System.Windows.Forms.GroupBox groupBox29;
         private System.Windows.Forms.RadioButton rbGPOInCarNo;
         private System.Windows.Forms.RadioButton rbGPOInCarYes;
         private System.Windows.Forms.TextBox tbAddress2;
         private System.Windows.Forms.TextBox tbKeyswitchLocation;
-        private System.Windows.Forms.Label label89;
         private System.Windows.Forms.Label label90;
         private System.Windows.Forms.TextBox tbAddress3;
         private System.Windows.Forms.GroupBox groupBox28;
@@ -34843,7 +34827,8 @@
         public System.Windows.Forms.Button btnAddLiftCostField;
         public System.Windows.Forms.Label label68;
         public System.Windows.Forms.Label lblTotalLiftPrice;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbAutoRounding;
         public System.Windows.Forms.Button btnEditQuotePrices;
+        private System.Windows.Forms.Panel panelContactDetails;
     }
 }

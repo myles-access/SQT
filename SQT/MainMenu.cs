@@ -24,6 +24,7 @@ namespace SQT
         public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
         public Dictionary<string, string> exchangeRateURL = new Dictionary<string, string>();
 
+        public string quNumber;
         #endregion
 
         #region Loading Methods
@@ -59,7 +60,7 @@ namespace SQT
         {
             btPinDiff.Enabled = false;
             progressBar1.Value = 0;
-            progressBar1.Maximum = 6;
+            progressBar1.Maximum = 7;
             progressBar1.Visible = true;
             basePrices.Clear();
             labourPrice.Clear();
@@ -69,7 +70,7 @@ namespace SQT
             //check if software can connect to the network
             lbTitleText.Text = "Checking Network Conectivity";
             NetworkAccess();
-            if(!networkConnected || !internetConnected) { return; };
+            if (!networkConnected || !internetConnected) { return; };
             ProgressBarStep();
 
             //fetch the base prices for the calculator from the XML file
@@ -97,6 +98,11 @@ namespace SQT
             {
                 return;
             }
+
+            //claim a Qu number for the quote
+            lbTitleText.Text = "Claiming Qu Number";
+            ClaimQuNumber();
+            ProgressBarStep();
 
             //load up the calculator form
             lbTitleText.Text = "Loading Calculator";
@@ -144,7 +150,6 @@ namespace SQT
             }
             else
             {
-                MessageBox.Show("Exchange Rate OK");
                 return false;
             }
         }
@@ -276,12 +281,11 @@ namespace SQT
 
             if (!networkConnected || !internetConnected)
             {
-                lbTitleText.Text = "Networks Connected";
+                lbTitleText.Text = "Networks NOT Connected";
             }
             else
             {
-                lbTitleText.Text = "Networks NOT Connected";
-                MessageBox.Show("Local Network = " + networkConnected.ToString() + "\n Internet = "+internetConnected.ToString());
+                lbTitleText.Text = "Networks Connected";
             }
         }
 
@@ -371,6 +375,51 @@ namespace SQT
             }
 
             XMLR.Close();
+        }
+        private void ClaimQuNumber()
+        {
+            string yearNum = "";
+            string nextQu = "";
+
+            //read XML to get next avaliable number
+            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\QuNum.xml");
+            while (XMLR.Read())
+            {
+                if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Year")
+                {
+                    yearNum = XMLR.ReadElementContentAsString();
+                }
+                else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Qu")
+                {
+                    nextQu = XMLR.ReadElementContentAsString();
+                }
+            }
+            XMLR.Close();
+           
+            //correct year of Qu number if less than the current year 
+            if (int.Parse(yearNum) < int.Parse(DateTime.Now.ToString("yy")));
+            {
+                yearNum = DateTime.Now.ToString("yy");
+            }
+          
+
+            // set the Qu Number var to the concainated number string
+            if (yearNum != "" && nextQu != "")
+            {
+                quNumber = ("Qu" + yearNum + "-" + nextQu);
+            }
+
+            //write to the XML file to claim the number
+            XmlTextWriter XMLW = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\QuNum.xml", Encoding.UTF8);
+            XMLW.Formatting = Formatting.Indented;
+            XMLW.WriteStartDocument();
+            XMLW.WriteStartElement("QuVar");
+            XMLW.WriteElementString("Year", yearNum.ToString());
+            int i = int.Parse(nextQu) + 1;
+            XMLW.WriteElementString("Qu", i.ToString("000"));
+            XMLW.WriteEndElement(); //QuVar end
+
+            XMLW.Close();
         }
         #endregion
 

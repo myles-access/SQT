@@ -105,6 +105,7 @@ namespace SQT
             PanelDefaultSettings(panelLiftPrices, rightPanelLocation);
             PanelDefaultSettings(panelPageNumberButtons, new Point(997, 12));
             PanelDefaultSettings(panelExportQuote, new Point(713, 755));
+            PanelDefaultSettings(panelContactDetails, new Point(705, 11));
 
             infoPages = new Panel[] { panelLift1, panelLift2, panelLift3, panelLift4, panelLift5, panelLift6, panelLift7, panelLift8, panelLift9, panelLift10, panelLift11, panelLift12 };
             foreach (Panel p in infoPages)
@@ -143,7 +144,7 @@ namespace SQT
             lblCostIncludingMargin.Text = PriceRounding(float.Parse(s));
             lblGST.Text = PriceRounding(float.Parse(s));
             lblPriceIncludingGST.Text = PriceRounding(float.Parse(s));
-            quoteNumber = ("Qu" + DateTime.Now.ToString("yy") + "AP-000");
+            quoteNumber = mm.quNumber;
             lblLift10Total.Text = s;
             lblLift11Total.Text = s;
             lblLift12Total.Text = s;
@@ -456,12 +457,13 @@ namespace SQT
 
             marginPercent = 1 + (float.Parse(tbMainMargin.Text) / 100);
             float marginValue = (float.Parse(tbMainMargin.Text) / 100) * liftPrice;
+            float roundingAdjustment = Roundingbuffer((liftPrice * marginPercent) * 1.1f);
             //liftPrice *= int.Parse(tbNumberLifts.Text);
 
             lblCostOfParts.Text = PriceRounding(liftPrice);
             lblCostIncludingMargin.Text = PriceRounding(liftPrice * marginPercent); //+ " (" + PriceRounding(marginValue) + ")";
-            lblGST.Text = PriceRounding(liftPrice * marginPercent * 0.1f);
-            lblPriceIncludingGST.Text = PriceRounding(liftPrice * marginPercent * 1.1f);
+            lblPriceIncludingGST.Text = PriceRounding(((liftPrice * marginPercent) * 1.1f) + roundingAdjustment);
+            lblGST.Text = PriceRounding((((liftPrice * marginPercent) * 1.1f) + roundingAdjustment) / 11);
         }
 
         private float FloorsAdder()
@@ -549,7 +551,7 @@ namespace SQT
                 tb.Text = "0";
             }
 
-            if (i > mm.maxFloorNumber || i < 0 || i == 1)
+            if (i > mm.maxFloorNumber || i <= 0)
             {
                 MessageBox.Show("Invalid floor number entered ");
                 return false;
@@ -1720,7 +1722,7 @@ namespace SQT
 
             if (costRow < 11)
             {
-                tb = (TextBox)costsGroups[costRow+1, 1];
+                tb = (TextBox)costsGroups[costRow + 1, 1];
                 btnAddLiftCostField.Location = tb.Location;
             }
             else
@@ -1792,7 +1794,7 @@ namespace SQT
 
         private float LabelToFloat(Label tb)
         {
-            float f = -1;
+            float f = 0f;
             try
             {
                 f = float.Parse(tb.Text);
@@ -1803,6 +1805,7 @@ namespace SQT
             }
             return f;
         }
+
         #endregion
 
         #region Multi Lift Exporter Pages
@@ -1876,6 +1879,7 @@ namespace SQT
             pageButtons[pageTracker].Visible = true;
             pageButtons[pageTracker].Enabled = true;
             pageTracker++;
+            exporterPageOpened[pageTracker] = true;
 
             if (pageTracker <= 11)
             {
@@ -3803,6 +3807,7 @@ namespace SQT
             PanelDefaultSettings(panelPageNumberButtons, panelPageNumberButtons.Location, swapToExporter, swapToExporter);
             PanelDefaultSettings(panelExportQuote, panelExportQuote.Location, swapToExporter, swapToExporter);
             PanelDefaultSettings(panelLift1, panelLift1.Location, swapToExporter, swapToExporter);
+            PanelDefaultSettings(panelContactDetails, panelContactDetails.Location, swapToExporter, swapToExporter);
             //swap to exp button
             btnGenerateCustomerQuote.Enabled = !swapToExporter;
             btnGenerateCustomerQuote.Visible = !swapToExporter;
@@ -3812,13 +3817,66 @@ namespace SQT
         }
 
         #endregion
-        //DEBUG BUTTON
-        private void button4_Click_1(object sender, EventArgs e)
+
+        #region Price Rounding Methods
+
+        private float Roundingbuffer(float unroundedPrice)
         {
-            DateTime dT = Convert.ToDateTime(mm.exchangeRateDate);
-            TimeSpan tS = DateTime.Now - dT;
-            MessageBox.Show(tS.ToString());
+            float priceWithDecimal = unroundedPrice + 0.01f;
+            float roundingPriceBuffer = 0;
+
+            if (!cbAutoRounding.Checked)
+            {
+                try
+                {
+                    roundingPriceBuffer = float.Parse(tbMinorPriceAdjustment.Text);
+                }
+                catch (Exception)
+                {
+                    tbMinorPriceAdjustment.Text = "0";
+                    roundingPriceBuffer = 0;
+                }
+            }
+            else if (cbAutoRounding.Checked)
+            {
+                float f = float.Parse(priceWithDecimal.ToString("0.00").Substring(priceWithDecimal.ToString("0.00").Length - Math.Min(6, priceWithDecimal.ToString("0.00").Length)));
+
+                if (f < 100)
+                {
+                    roundingPriceBuffer = f * -1;
+                }
+                else if (f < 600)
+                {
+                    roundingPriceBuffer = (f - 500) * -1;
+                }
+                else if (f > 100)
+                {
+                    float x = 500 - f;
+                    float y = 1000 - f;
+                    if (x > y || x < 0)
+                    {
+                        roundingPriceBuffer = y;
+                    }
+                    else
+                    {
+                        roundingPriceBuffer = x;
+                    }
+                }
+            }
+            return roundingPriceBuffer + 0.01f;
         }
 
+        private void cbAutoRounding_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbAutoRounding.Checked)
+            {
+                tbMinorPriceAdjustment.Enabled = false;
+            }
+            else
+            {
+                tbMinorPriceAdjustment.Enabled = true;
+            }
+        }
+        #endregion
     }
 }
