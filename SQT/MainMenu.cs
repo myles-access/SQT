@@ -376,6 +376,9 @@ namespace SQT
 
             XMLR.Close();
         }
+        #endregion
+
+        #region Qu Number Claiming
         private void ClaimQuNumber()
         {
             string yearNum = "";
@@ -395,13 +398,13 @@ namespace SQT
                 }
             }
             XMLR.Close();
-           
+
             //correct year of Qu number if less than the current year 
-            if (int.Parse(yearNum) < int.Parse(DateTime.Now.ToString("yy")));
+            if (int.Parse(yearNum) < int.Parse(DateTime.Now.ToString("yy")))
             {
                 yearNum = DateTime.Now.ToString("yy");
+                nextQu = "001";
             }
-          
 
             // set the Qu Number var to the concainated number string
             if (yearNum != "" && nextQu != "")
@@ -420,6 +423,75 @@ namespace SQT
             XMLW.WriteEndElement(); //QuVar end
 
             XMLW.Close();
+            AddQuToSalesmanRecord("Qu" + yearNum + "-" + nextQu);
+        }
+
+        private void AddQuToSalesmanRecord(string claimedQu)
+        {
+            //string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            string userName = Environment.UserName;
+            //Dictionary<String, List<string>> salesRecord = new Dictionary<string, List<string>>();
+
+            List<string> salesmanList = new List<string>();
+            List<List<string>> jobsList = new List<List<string>>();
+            int salesmanTracker = -1;
+            bool salesmanMatch = false;
+
+            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\SalesmanRecord.xml");
+            while (XMLR.Read())
+            {
+                if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Salesman")
+                {
+                    string s = XMLR.ReadElementContentAsString();
+                    salesmanList.Add(s);
+                    jobsList.Add(new List<string> {});
+                    salesmanTracker++;
+                    if (s == userName && !salesmanMatch)
+                    {
+                        salesmanMatch = true;
+                        jobsList[salesmanTracker].Add(claimedQu);
+
+                    }
+                }
+                else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Qu")
+                {
+                    jobsList[salesmanTracker].Add(XMLR.ReadElementContentAsString());
+
+                }
+            }
+            if (!salesmanMatch)
+            {
+                salesmanList.Add(userName);
+                jobsList.Add(new List<string> { });
+                salesmanTracker++;
+                jobsList[salesmanTracker].Add(claimedQu);
+            }
+
+            XMLR.Close();
+
+            //write to the XML file to record the number
+            XmlTextWriter XMLW = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\SalesmanRecord.xml", Encoding.UTF8);
+            XMLW.Formatting = Formatting.Indented;
+            XMLW.WriteStartDocument();
+            XMLW.WriteStartElement("QuoteRecords");
+            int i = 0;
+            foreach (List<string> sublist in jobsList)
+            {
+                XMLW.WriteStartElement("Record");
+                XMLW.WriteElementString("Salesman", salesmanList[i]);
+                i++;
+
+                foreach (string s in sublist)
+                {
+                    XMLW.WriteElementString("Qu", s);
+
+                }
+                XMLW.WriteEndElement(); // Record Entry end
+
+            }
+            XMLW.WriteEndElement(); // Quote records end
+            XMLW.Close();
+
         }
         #endregion
 

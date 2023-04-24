@@ -53,6 +53,7 @@ namespace SQT
         public Pin_Dif_Calc()
         {
             InitializeComponent();
+
         }
 
         private void Pin_Dif_Calc_Load(object sender, EventArgs e)
@@ -63,6 +64,7 @@ namespace SQT
             SetLablesToDefault();
             SetPanelVisabilityDefaults();
             PageButtonSetup();
+            this.Text = tBMainQuoteNumber.Text + " Quote Calculation";
         }
 
         private void RuntimeVarSetter()
@@ -120,6 +122,7 @@ namespace SQT
             panel.BringToFront();
             panel.Visible = visible;
             panel.Enabled = enabled;
+
         }
 
         private void SetupPricesPanel()
@@ -127,12 +130,14 @@ namespace SQT
             for (int i = 1; i < 12; i++)
             {
                 NewCostsRow(i, false);
+
             }
             NewCostsRow(0);
             btnAddLiftCostField.Enabled = true;
             btnAddLiftCostField.Visible = true;
             numberOfPagesNeeded = 1;
             //btnAddLiftCostField.Location = new Point(111, 186);
+
         }
 
         private void SetLablesToDefault()
@@ -173,7 +178,7 @@ namespace SQT
             }
             btPanel1.Enabled = true;
             btPanel1.Visible = true;
-            btPanel1.ForeColor = System.Drawing.Color.Blue;
+            btPanel1.ForeColor = Color.Blue;
         }
 
         #endregion
@@ -323,6 +328,43 @@ namespace SQT
         #endregion
 
         #region Generating Price List
+        //update values in main menu when changed
+        private void SetValuesForMainMenuLabels()
+        {
+            TotalCostAdder();
+
+            lblNumOfLifts.Text = ("Price for " + numberOfPagesNeeded + " lift(s)");
+            float f2 = float.Parse(lblTotalLiftPrice.Text) * applicableExchangeRate;
+            lblTotaliftCosts.Text = ("Totaling $" + f2 + " AUD");
+
+            lblNumOfShipContainers.Text = ("Price for " + num20Ft + " 20ft and " + num40Ft + " 40ft Containers");
+            lblShippingTotal.Text = ("Totaling $" + freightTotal + " AUD");
+
+            float f = TBToFloat(tbMainSundries) + TBToFloat(tbMainBlankets) + TBToFloat(tbMainShaftLight) + TBToFloat(tbMainDuct) + 
+                TBToFloat(tbMainAccomodation) + TBToFloat(tbMainCartage) + TBToFloat(tbMainStorage) + TBToFloat(tbTravel);
+            if (cbMainSecurity.Checked)
+            {
+                f += mm.basePrices["Security"] + (mm.basePrices["SecurityPerFloor"] * FloorsAdder());
+            }
+            f+= float.Parse(tbMainEntranceGuards.Text) * float.Parse(tbMainWeeksRequired.Text) * mm.basePrices["15EntranceGuards"];
+            f += float.Parse(tbMainScaffold.Text) * mm.basePrices["14Scaffolds"];
+
+            lblExtraCostsTotal.Text = ("Totaling $" + f + " AUD");
+        }
+
+        private float TBToFloat(TextBox textBoxToBeConverted)
+        {
+            float f = 0;
+            try
+            {
+                f = float.Parse(textBoxToBeConverted.Text);
+            }
+            catch (Exception)
+            {
+                f = 0;
+            }
+            return f;
+        }
 
         // generate price list button
         private void button1_Click(object sender, EventArgs e)
@@ -551,9 +593,9 @@ namespace SQT
                 tb.Text = "0";
             }
 
-            if (i > mm.maxFloorNumber || i <= 0)
+            if (i > mm.maxFloorNumber || i < 0)
             {
-                MessageBox.Show("Invalid floor number entered ");
+                //MessageBox.Show("Invalid floor number entered ");
                 return false;
             }
             else
@@ -603,9 +645,8 @@ namespace SQT
                 WordData("AE102", tBMainQuoteNumber.Text);//quote number
                 WordData("AE103", TotalLifts().ToString());//number of lifts
 
-                Pin_Dif_Exp qI = new Pin_Dif_Exp();
-                qI.Show();//open questionaire 
-                //questions complete method called from final form of querstions to continue the export to word function. 
+                SaveData();
+                QuestionsComplete();
             }
             else
             {
@@ -740,14 +781,16 @@ namespace SQT
             }
         }
 
-        public void lblWaitControl(bool b)
+        public void lblWaitControl(bool enablewait)
         {
             // if called true will enable the wait message and disable the form
             // if called false will disable the wait message and enable the form 
 
-            lbWait.Enabled = b;
-            lbWait.Visible = b;
-            this.Enabled = !b;
+            lbWait.Location = new Point(42, 358);
+            lbWait.BringToFront();
+            lbWait.Enabled = enablewait;
+            lbWait.Visible = enablewait;
+            this.Enabled = !enablewait;
         }
 
         #endregion
@@ -811,7 +854,6 @@ namespace SQT
         }
 
         public void SavePricesToDict()
-
         {
             float f = liftPrice * (marginPercent - 1);
             float f2;
@@ -2212,6 +2254,7 @@ namespace SQT
         #region Pannel Switching Methods 
         private void PanelMenuChange(Panel panelToBeShown)
         {
+            SetValuesForMainMenuLabels();
             Panel[] panels = { panelAdditionalCosts, panelLiftPrices, panelShipping };
 
             foreach (Panel p in panels)
@@ -3798,13 +3841,22 @@ namespace SQT
 
         private void SwapBetweenCalcAndExp(bool swapToExporter)
         {
+            for (int i = 0; i < numberOfPagesNeeded; i++)
+            {
+                NewPage();
+            }
+
             PanelMenuChange(null);
+            SetValuesForMainMenuLabels();
             //calc panels
             PanelDefaultSettings(panelAddress, panelAddress.Location, !swapToExporter, !swapToExporter);
             PanelDefaultSettings(panelCalcButtons, panelCalcButtons.Location, !swapToExporter, !swapToExporter);
             PanelDefaultSettings(panelCostBreakdown, panelCostBreakdown.Location, !swapToExporter, !swapToExporter);
             //exp panels
-            PanelDefaultSettings(panelPageNumberButtons, panelPageNumberButtons.Location, swapToExporter, swapToExporter);
+            if (numberOfPagesNeeded >= 1)
+            {
+                PanelDefaultSettings(panelPageNumberButtons, panelPageNumberButtons.Location, swapToExporter, swapToExporter);
+            }
             PanelDefaultSettings(panelExportQuote, panelExportQuote.Location, swapToExporter, swapToExporter);
             PanelDefaultSettings(panelLift1, panelLift1.Location, swapToExporter, swapToExporter);
             PanelDefaultSettings(panelContactDetails, panelContactDetails.Location, swapToExporter, swapToExporter);
@@ -3822,7 +3874,7 @@ namespace SQT
 
         private float Roundingbuffer(float unroundedPrice)
         {
-            float priceWithDecimal = unroundedPrice + 0.01f;
+            float priceWithDecimal = unroundedPrice ;
             float roundingPriceBuffer = 0;
 
             if (!cbAutoRounding.Checked)
@@ -3863,7 +3915,7 @@ namespace SQT
                     }
                 }
             }
-            return roundingPriceBuffer + 0.01f;
+            return roundingPriceBuffer ;
         }
 
         private void cbAutoRounding_CheckedChanged(object sender, EventArgs e)
@@ -3878,5 +3930,10 @@ namespace SQT
             }
         }
         #endregion
+
+        private void tBMainQuoteNumber_TextChanged(object sender, EventArgs e)
+        {
+            this.Text = (tBMainQuoteNumber.Text + " Calculation Window");
+        }
     }
 }

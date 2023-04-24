@@ -200,18 +200,18 @@
             this.label68 = new System.Windows.Forms.Label();
             this.lblTotalLiftPrice = new System.Windows.Forms.Label();
             this.btnLiftCosts = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
+            this.lblNumOfLifts = new System.Windows.Forms.Label();
+            this.lblNumOfShipContainers = new System.Windows.Forms.Label();
             this.btnShippingCosts = new System.Windows.Forms.Button();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
+            this.lblTotaliftCosts = new System.Windows.Forms.Label();
+            this.lblShippingTotal = new System.Windows.Forms.Label();
             this.panelShipping = new System.Windows.Forms.Panel();
             this.panelCostBreakdown = new System.Windows.Forms.Panel();
             this.panelCalcButtons = new System.Windows.Forms.Panel();
             this.cbAutoRounding = new System.Windows.Forms.CheckBox();
             this.tbMinorPriceAdjustment = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
+            this.lblExtraCostsTotal = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.btnCurrency = new System.Windows.Forms.Button();
             this.panelAdditionalCosts = new System.Windows.Forms.Panel();
@@ -2883,7 +2883,7 @@
             this.lbWait.BackColor = System.Drawing.Color.Gray;
             this.lbWait.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWait.ForeColor = System.Drawing.Color.Navy;
-            this.lbWait.Location = new System.Drawing.Point(1156, 32);
+            this.lbWait.Location = new System.Drawing.Point(1299, 60);
             this.lbWait.Name = "lbWait";
             this.lbWait.Size = new System.Drawing.Size(965, 110);
             this.lbWait.TabIndex = 176;
@@ -3964,6 +3964,7 @@
             this.tBMainQuoteNumber.Size = new System.Drawing.Size(165, 32);
             this.tBMainQuoteNumber.TabIndex = 132;
             this.tBMainQuoteNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBMainQuoteNumber.TextChanged += new System.EventHandler(this.tBMainQuoteNumber_TextChanged);
             // 
             // label2
             // 
@@ -4952,9 +4953,9 @@
             this.panelLiftPrices.Controls.Add(this.lblLift5Total);
             this.panelLiftPrices.Controls.Add(this.lblLift3Total);
             this.panelLiftPrices.Controls.Add(this.lblLift4Total);
-            this.panelLiftPrices.Location = new System.Drawing.Point(2069, 1051);
+            this.panelLiftPrices.Location = new System.Drawing.Point(2069, 932);
             this.panelLiftPrices.Name = "panelLiftPrices";
-            this.panelLiftPrices.Size = new System.Drawing.Size(442, 793);
+            this.panelLiftPrices.Size = new System.Drawing.Size(442, 795);
             this.panelLiftPrices.TabIndex = 183;
             this.panelLiftPrices.Visible = false;
             // 
@@ -5009,29 +5010,29 @@
             this.btnLiftCosts.UseVisualStyleBackColor = true;
             this.btnLiftCosts.Click += new System.EventHandler(this.btnLiftCosts_Click);
             // 
-            // label16
+            // lblNumOfLifts
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(209, 150);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(164, 26);
-            this.label16.TabIndex = 185;
-            this.label16.Text = "Price for # lift(s)";
+            this.lblNumOfLifts.AutoSize = true;
+            this.lblNumOfLifts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumOfLifts.ForeColor = System.Drawing.Color.Black;
+            this.lblNumOfLifts.Location = new System.Drawing.Point(209, 150);
+            this.lblNumOfLifts.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumOfLifts.Name = "lblNumOfLifts";
+            this.lblNumOfLifts.Size = new System.Drawing.Size(164, 26);
+            this.lblNumOfLifts.TabIndex = 185;
+            this.lblNumOfLifts.Text = "Price for # lift(s)";
             // 
-            // label42
+            // lblNumOfShipContainers
             // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(209, 219);
-            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(355, 26);
-            this.label42.TabIndex = 187;
-            this.label42.Text = "Price for # 20ft and #40ft containers";
+            this.lblNumOfShipContainers.AutoSize = true;
+            this.lblNumOfShipContainers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumOfShipContainers.ForeColor = System.Drawing.Color.Black;
+            this.lblNumOfShipContainers.Location = new System.Drawing.Point(209, 219);
+            this.lblNumOfShipContainers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumOfShipContainers.Name = "lblNumOfShipContainers";
+            this.lblNumOfShipContainers.Size = new System.Drawing.Size(355, 26);
+            this.lblNumOfShipContainers.TabIndex = 187;
+            this.lblNumOfShipContainers.Text = "Price for # 20ft and #40ft containers";
             // 
             // btnShippingCosts
             // 
@@ -5046,29 +5047,29 @@
             this.btnShippingCosts.UseVisualStyleBackColor = true;
             this.btnShippingCosts.Click += new System.EventHandler(this.btnShippingCosts_Click);
             // 
-            // label44
+            // lblTotaliftCosts
             // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Location = new System.Drawing.Point(209, 182);
-            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(171, 26);
-            this.label44.TabIndex = 188;
-            this.label44.Text = "Totaling $# AUD";
+            this.lblTotaliftCosts.AutoSize = true;
+            this.lblTotaliftCosts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotaliftCosts.ForeColor = System.Drawing.Color.Black;
+            this.lblTotaliftCosts.Location = new System.Drawing.Point(209, 182);
+            this.lblTotaliftCosts.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotaliftCosts.Name = "lblTotaliftCosts";
+            this.lblTotaliftCosts.Size = new System.Drawing.Size(171, 26);
+            this.lblTotaliftCosts.TabIndex = 188;
+            this.lblTotaliftCosts.Text = "Totaling $# AUD";
             // 
-            // label46
+            // lblShippingTotal
             // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.Black;
-            this.label46.Location = new System.Drawing.Point(209, 247);
-            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(171, 26);
-            this.label46.TabIndex = 189;
-            this.label46.Text = "Totaling $# AUD";
+            this.lblShippingTotal.AutoSize = true;
+            this.lblShippingTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShippingTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblShippingTotal.Location = new System.Drawing.Point(209, 247);
+            this.lblShippingTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblShippingTotal.Name = "lblShippingTotal";
+            this.lblShippingTotal.Size = new System.Drawing.Size(171, 26);
+            this.lblShippingTotal.TabIndex = 189;
+            this.lblShippingTotal.Text = "Totaling $# AUD";
             // 
             // panelShipping
             // 
@@ -5151,19 +5152,19 @@
             this.panelCalcButtons.Controls.Add(this.tbMinorPriceAdjustment);
             this.panelCalcButtons.Controls.Add(this.label13);
             this.panelCalcButtons.Controls.Add(this.currencySelectionGroup);
-            this.panelCalcButtons.Controls.Add(this.label48);
+            this.panelCalcButtons.Controls.Add(this.lblExtraCostsTotal);
             this.panelCalcButtons.Controls.Add(this.button5);
             this.panelCalcButtons.Controls.Add(this.btnCurrency);
             this.panelCalcButtons.Controls.Add(this.btnLiftCosts);
-            this.panelCalcButtons.Controls.Add(this.label16);
+            this.panelCalcButtons.Controls.Add(this.lblNumOfLifts);
             this.panelCalcButtons.Controls.Add(this.lblGST);
             this.panelCalcButtons.Controls.Add(this.btnShippingCosts);
             this.panelCalcButtons.Controls.Add(this.label8);
-            this.panelCalcButtons.Controls.Add(this.label46);
+            this.panelCalcButtons.Controls.Add(this.lblShippingTotal);
             this.panelCalcButtons.Controls.Add(this.label6);
-            this.panelCalcButtons.Controls.Add(this.label42);
+            this.panelCalcButtons.Controls.Add(this.lblNumOfShipContainers);
             this.panelCalcButtons.Controls.Add(this.lblCostIncludingMargin);
-            this.panelCalcButtons.Controls.Add(this.label44);
+            this.panelCalcButtons.Controls.Add(this.lblTotaliftCosts);
             this.panelCalcButtons.Controls.Add(this.lblExchangeDate);
             this.panelCalcButtons.Controls.Add(this.exchangeRateLbl);
             this.panelCalcButtons.Controls.Add(this.tbMainMargin);
@@ -5215,17 +5216,17 @@
             this.label13.TabIndex = 194;
             this.label13.Text = "+/-";
             // 
-            // label48
+            // lblExtraCostsTotal
             // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.Black;
-            this.label48.Location = new System.Drawing.Point(211, 296);
-            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(171, 26);
-            this.label48.TabIndex = 192;
-            this.label48.Text = "Totaling $# AUD";
+            this.lblExtraCostsTotal.AutoSize = true;
+            this.lblExtraCostsTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExtraCostsTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblExtraCostsTotal.Location = new System.Drawing.Point(211, 296);
+            this.lblExtraCostsTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblExtraCostsTotal.Name = "lblExtraCostsTotal";
+            this.lblExtraCostsTotal.Size = new System.Drawing.Size(171, 26);
+            this.lblExtraCostsTotal.TabIndex = 192;
+            this.lblExtraCostsTotal.Text = "Totaling $# AUD";
             // 
             // button5
             // 
@@ -5278,7 +5279,7 @@
             this.panelAdditionalCosts.Controls.Add(this.tbMainSundries);
             this.panelAdditionalCosts.Controls.Add(this.label15);
             this.panelAdditionalCosts.Controls.Add(this.label20);
-            this.panelAdditionalCosts.Location = new System.Drawing.Point(2184, 28);
+            this.panelAdditionalCosts.Location = new System.Drawing.Point(1847, 17);
             this.panelAdditionalCosts.Name = "panelAdditionalCosts";
             this.panelAdditionalCosts.Size = new System.Drawing.Size(442, 795);
             this.panelAdditionalCosts.TabIndex = 193;
@@ -31516,7 +31517,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(2479, 1211);
+            this.ClientSize = new System.Drawing.Size(2479, 1128);
+            this.Controls.Add(this.lbWait);
             this.Controls.Add(this.panelLift1);
             this.Controls.Add(this.panelContactDetails);
             this.Controls.Add(this.panelLiftPrices);
@@ -31535,7 +31537,6 @@
             this.Controls.Add(this.panelPageNumberButtons);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelCalcButtons);
-            this.Controls.Add(this.lbWait);
             this.Controls.Add(this.panelAddress);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.panelAdditionalCosts);
@@ -31544,7 +31545,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Pin_Dif_Calc";
-            this.Text = "Quote Calculator";
+            this.Text = " = ";
             this.Load += new System.EventHandler(this.Pin_Dif_Calc_Load);
             this.currencySelectionGroup.ResumeLayout(false);
             this.currencySelectionGroup.PerformLayout();
@@ -32606,17 +32607,17 @@
         private System.Windows.Forms.Panel panelAddress;
         private System.Windows.Forms.Panel panelLiftPrices;
         public System.Windows.Forms.Button btnLiftCosts;
-        public System.Windows.Forms.Label label16;
-        public System.Windows.Forms.Label label42;
+        public System.Windows.Forms.Label lblNumOfLifts;
+        public System.Windows.Forms.Label lblNumOfShipContainers;
         public System.Windows.Forms.Button btnShippingCosts;
-        public System.Windows.Forms.Label label44;
-        public System.Windows.Forms.Label label46;
+        public System.Windows.Forms.Label lblTotaliftCosts;
+        public System.Windows.Forms.Label lblShippingTotal;
         private System.Windows.Forms.Panel panelShipping;
         private System.Windows.Forms.Panel panelCostBreakdown;
         private System.Windows.Forms.Panel panelCalcButtons;
         public System.Windows.Forms.Button btnCurrency;
         private System.Windows.Forms.Panel panelAdditionalCosts;
-        public System.Windows.Forms.Label label48;
+        public System.Windows.Forms.Label lblExtraCostsTotal;
         public System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.TextBox tbMinorPriceAdjustment;

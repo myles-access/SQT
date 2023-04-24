@@ -29743,7 +29743,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1382, 1158);
+            this.ClientSize = new System.Drawing.Size(1533, 1307);
             this.Controls.Add(this.buttonEUR);
             this.Controls.Add(this.btNewPanel);
             this.Controls.Add(this.btPanel12);
