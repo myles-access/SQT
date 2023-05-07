@@ -58,7 +58,6 @@
             this.buttonUSD = new System.Windows.Forms.Button();
             this.tbMainScaffold = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.btLoad = new System.Windows.Forms.Button();
             this.tbMainShaftLight = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.tbMainDuct = new System.Windows.Forms.TextBox();
@@ -2918,8 +2917,10 @@
             // printButton
             // 
             this.printButton.Enabled = false;
+            this.printButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.printButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.printButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.printButton.Location = new System.Drawing.Point(580, 13);
+            this.printButton.Location = new System.Drawing.Point(483, 17);
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(308, 73);
             this.printButton.TabIndex = 178;
@@ -2930,8 +2931,10 @@
             // 
             // button2
             // 
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.button2.Location = new System.Drawing.Point(894, 12);
+            this.button2.Location = new System.Drawing.Point(869, 17);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(190, 74);
             this.button2.TabIndex = 177;
@@ -3199,17 +3202,6 @@
             this.label24.Size = new System.Drawing.Size(284, 26);
             this.label24.TabIndex = 168;
             this.label24.Text = "Number of Entrance Guards";
-            // 
-            // btLoad
-            // 
-            this.btLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.btLoad.Location = new System.Drawing.Point(8, 12);
-            this.btLoad.Name = "btLoad";
-            this.btLoad.Size = new System.Drawing.Size(160, 74);
-            this.btLoad.TabIndex = 180;
-            this.btLoad.Text = "Load";
-            this.btLoad.UseVisualStyleBackColor = true;
-            this.btLoad.Click += new System.EventHandler(this.btLoad_Click);
             // 
             // tbMainShaftLight
             // 
@@ -5289,7 +5281,6 @@
             // 
             this.panel2.Controls.Add(this.btnEditQuotePrices);
             this.panel2.Controls.Add(this.btnGenerateCustomerQuote);
-            this.panel2.Controls.Add(this.btLoad);
             this.panel2.Controls.Add(this.printButton);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Location = new System.Drawing.Point(12, 811);
@@ -5300,8 +5291,10 @@
             // btnEditQuotePrices
             // 
             this.btnEditQuotePrices.Enabled = false;
+            this.btnEditQuotePrices.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.btnEditQuotePrices.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnEditQuotePrices.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.btnEditQuotePrices.Location = new System.Drawing.Point(189, 58);
+            this.btnEditQuotePrices.Location = new System.Drawing.Point(25, 60);
             this.btnEditQuotePrices.Name = "btnEditQuotePrices";
             this.btnEditQuotePrices.Size = new System.Drawing.Size(400, 73);
             this.btnEditQuotePrices.TabIndex = 438;
@@ -5313,8 +5306,10 @@
             // btnGenerateCustomerQuote
             // 
             this.btnGenerateCustomerQuote.Enabled = false;
+            this.btnGenerateCustomerQuote.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.btnGenerateCustomerQuote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnGenerateCustomerQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.btnGenerateCustomerQuote.Location = new System.Drawing.Point(175, 14);
+            this.btnGenerateCustomerQuote.Location = new System.Drawing.Point(16, 14);
             this.btnGenerateCustomerQuote.Name = "btnGenerateCustomerQuote";
             this.btnGenerateCustomerQuote.Size = new System.Drawing.Size(400, 73);
             this.btnGenerateCustomerQuote.TabIndex = 437;
@@ -32468,7 +32463,6 @@
         public System.Windows.Forms.Button buttonUSD;
         public System.Windows.Forms.TextBox tbMainScaffold;
         public System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button btLoad;
         public System.Windows.Forms.TextBox tbMainShaftLight;
         public System.Windows.Forms.Label label18;
         public System.Windows.Forms.TextBox tbMainDuct;

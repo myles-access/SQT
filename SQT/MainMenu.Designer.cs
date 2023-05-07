@@ -35,16 +35,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btPinDiff = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.btnLoadOldQuote = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btSQAT
             // 
-            this.btSQAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSQAT.Location = new System.Drawing.Point(134, 355);
+            this.btSQAT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.btSQAT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btSQAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSQAT.Location = new System.Drawing.Point(86, 412);
             this.btSQAT.Margin = new System.Windows.Forms.Padding(2);
             this.btSQAT.Name = "btSQAT";
-            this.btSQAT.Size = new System.Drawing.Size(263, 53);
+            this.btSQAT.Size = new System.Drawing.Size(263, 40);
             this.btSQAT.TabIndex = 46;
             this.btSQAT.TabStop = false;
             this.btSQAT.Text = "Admin Settings";
@@ -56,7 +59,7 @@
             this.lbTitleText.AutoSize = true;
             this.lbTitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitleText.ForeColor = System.Drawing.Color.Black;
-            this.lbTitleText.Location = new System.Drawing.Point(137, 197);
+            this.lbTitleText.Location = new System.Drawing.Point(89, 197);
             this.lbTitleText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTitleText.Name = "lbTitleText";
             this.lbTitleText.Size = new System.Drawing.Size(251, 37);
@@ -69,7 +72,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(193, 412);
+            this.label1.Location = new System.Drawing.Point(145, 454);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 15);
@@ -81,7 +84,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = global::SQT.Properties.Resources.New_Project;
-            this.pictureBox1.Location = new System.Drawing.Point(134, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(86, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(263, 196);
             this.pictureBox1.TabIndex = 53;
@@ -91,8 +94,10 @@
             // btPinDiff
             // 
             this.btPinDiff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btPinDiff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.btPinDiff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btPinDiff.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btPinDiff.Location = new System.Drawing.Point(134, 265);
+            this.btPinDiff.Location = new System.Drawing.Point(86, 265);
             this.btPinDiff.Margin = new System.Windows.Forms.Padding(2);
             this.btPinDiff.Name = "btPinDiff";
             this.btPinDiff.Size = new System.Drawing.Size(263, 86);
@@ -104,7 +109,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(134, 237);
+            this.progressBar1.Location = new System.Drawing.Point(86, 237);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(263, 23);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -112,12 +117,28 @@
             this.progressBar1.Visible = false;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
+            // btnLoadOldQuote
+            // 
+            this.btnLoadOldQuote.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.btnLoadOldQuote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnLoadOldQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadOldQuote.Location = new System.Drawing.Point(86, 355);
+            this.btnLoadOldQuote.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoadOldQuote.Name = "btnLoadOldQuote";
+            this.btnLoadOldQuote.Size = new System.Drawing.Size(263, 53);
+            this.btnLoadOldQuote.TabIndex = 56;
+            this.btnLoadOldQuote.TabStop = false;
+            this.btnLoadOldQuote.Text = "Load Quote";
+            this.btnLoadOldQuote.UseVisualStyleBackColor = true;
+            this.btnLoadOldQuote.Click += new System.EventHandler(this.btnLoadOldQuote_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(524, 436);
+            this.ClientSize = new System.Drawing.Size(435, 473);
+            this.Controls.Add(this.btnLoadOldQuote);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -125,6 +146,8 @@
             this.Controls.Add(this.lbTitleText);
             this.Controls.Add(this.btSQAT);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SQAT";
@@ -143,5 +166,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Button btnLoadOldQuote;
     }
 }

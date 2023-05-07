@@ -56,9 +56,21 @@ namespace SQT
         #endregion
 
         #region Opening Quote Calculator
+        private void btnLoadOldQuote_Click(object sender, EventArgs e)
+        {
+            OpenQuoteCalculator(true);
+        }
+
         private void btPinDiff_Click(object sender, EventArgs e)
         {
+            OpenQuoteCalculator(false);
+        }
+
+        private void OpenQuoteCalculator(bool loadingOldQuote = false)
+        {
+            bool startedSucessfully = true;
             btPinDiff.Enabled = false;
+            btnLoadOldQuote.Enabled = false;
             progressBar1.Value = 0;
             progressBar1.Maximum = 7;
             progressBar1.Visible = true;
@@ -96,24 +108,43 @@ namespace SQT
             //check the date of the used exchange rate and return out if rate is too old. 
             if (IsExchangeRateOld())
             {
-                return;
+                startedSucessfully = false;
             }
-
-            //claim a Qu number for the quote
-            lbTitleText.Text = "Claiming Qu Number";
-            ClaimQuNumber();
-            ProgressBarStep();
 
             //load up the calculator form
             lbTitleText.Text = "Loading Calculator";
             Pin_Dif_Calc fPinDif = new Pin_Dif_Calc();
+            fPinDif.Show();
+            ProgressBarStep();
+
+            if (loadingOldQuote)
+            {
+                //load previous quote values into form, if errored close form and tell user
+                lbTitleText.Text = "Importing Quote Values";
+                if (!fPinDif.LoadPreviousQuote())
+                {
+                    startedSucessfully = false;
+                }
+            }
+            else
+            {
+                //claim a Qu number for the quote
+                lbTitleText.Text = "Claiming Qu Number";
+                ClaimQuNumber();
+            }
             ProgressBarStep();
 
             // reset the main menu form and show the calculator
             lbTitleText.Text = "Quote Calculator";
             progressBar1.Visible = false;
             btPinDiff.Enabled = true;
-            fPinDif.Show();
+            btnLoadOldQuote.Enabled = true;
+            if (!startedSucessfully)
+            {
+                MessageBox.Show("ERROR: Could not load quoting tool.");
+                fPinDif.Close();
+            }
+
         }
 
         private void ProgressBarStep(int stepValue = 1)
@@ -444,7 +475,7 @@ namespace SQT
                 {
                     string s = XMLR.ReadElementContentAsString();
                     salesmanList.Add(s);
-                    jobsList.Add(new List<string> {});
+                    jobsList.Add(new List<string> { });
                     salesmanTracker++;
                     if (s == userName && !salesmanMatch)
                     {
@@ -516,5 +547,6 @@ namespace SQT
             //
         }
         #endregion
+
     }
 }

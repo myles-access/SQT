@@ -89,7 +89,7 @@ namespace SQT
         {
             Point rightPanelLocation = new Point(662, 10);
             this.Size = new Size(1127, 959);
-
+                  
             lbWait.Visible = false;
 
             btnExportQuote.Visible = false;
@@ -961,13 +961,7 @@ namespace SQT
 
         #region Load Data from old quote via XML file
 
-        private void btLoad_Click(object sender, EventArgs e)
-        {
-            LoadPreviousQuote();
-            GenerateListOfPrices();
-        }
-
-        private void LoadPreviousQuote()
+        public bool LoadPreviousQuote()
         {
             // prompt user to select word doc
             // remove "quote" or "price breakdown" and file extenstion
@@ -988,6 +982,7 @@ namespace SQT
                     FetchsaveData(xmlPath);
                     Form1LoadFromXML();
                     GenerateListOfPrices();
+                    return true;
                 }
                 else
                 {
@@ -998,6 +993,7 @@ namespace SQT
             {
                 MessageBox.Show("Invalid file selected");
             }
+            return false;
         }
 
         private string FindXmlFile(string fileName)
@@ -1046,7 +1042,8 @@ namespace SQT
                  tbLift1Price, tbLift1Floors, tbLift2Price, tbLift2Floors, tb3Lift3Price, tbLift3Floors,
                  tbLift4Price, tbLift4Floors, tbLift5Price, tbLift5Floors, tbLift6Price, tbLift6Floors,
                  tbLift7Price, tbLift7Floors, tbLift8Price, tbLift8Floors, tbLift9Price, tbLift9Floors,
-                 tbLift10Price, tbLift10Floors, tbLift11Price, tbLift11Floors, tbLift12Price, tbLift12Floors);
+                 tbLift10Price, tbLift10Floors, tbLift11Price, tbLift11Floors, tbLift12Price, tbLift12Floors, tBMainQuoteNumber);
+            this.Text = tBMainQuoteNumber.Text + " Calculation Window";
             LoadPreviousXmlCb(cbMainSecurity);
             //num20Ft = int.Parse(saveData["num20Ft"]);
             //num40Ft = int.Parse(saveData["num40Ft"]);
@@ -2286,7 +2283,7 @@ namespace SQT
         }
 
         #endregion
-
+         
         #region Loading Old Quote Data Methods
         private void PullInfo()
         {
