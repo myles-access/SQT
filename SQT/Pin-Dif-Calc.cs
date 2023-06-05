@@ -20,7 +20,6 @@ namespace SQT
         bool rearDoorChecker = false;
         bool[] exporterPageOpened = { false, false, false, false, false, false, false, false, false, false, false, false };
 
-        public string salesRep = "Pintaric"; // need to fix underlying QU system
         public string quoteNumber = "";
         public string exchangeRateText;
 
@@ -89,7 +88,7 @@ namespace SQT
         {
             Point rightPanelLocation = new Point(662, 10);
             this.Size = new Size(1127, 959);
-                  
+
             lbWait.Visible = false;
 
             btnExportQuote.Visible = false;
@@ -214,7 +213,7 @@ namespace SQT
             XMLR.Close();
         }
 
-        #endregion
+        #endregion 
 
         #region Setting Currency Exchange Rate
 
@@ -336,17 +335,16 @@ namespace SQT
             lblNumOfLifts.Text = ("Price for " + numberOfPagesNeeded + " lift(s)");
             float f2 = float.Parse(lblTotalLiftPrice.Text) * applicableExchangeRate;
             lblTotaliftCosts.Text = ("Totaling $" + f2 + " AUD");
-
             lblNumOfShipContainers.Text = ("Price for " + num20Ft + " 20ft and " + num40Ft + " 40ft Containers");
             lblShippingTotal.Text = ("Totaling $" + freightTotal + " AUD");
 
-            float f = TBToFloat(tbMainSundries) + TBToFloat(tbMainBlankets) + TBToFloat(tbMainShaftLight) + TBToFloat(tbMainDuct) + 
+            float f = TBToFloat(tbMainSundries) + TBToFloat(tbMainBlankets) + TBToFloat(tbMainShaftLight) + TBToFloat(tbMainDuct) +
                 TBToFloat(tbMainAccomodation) + TBToFloat(tbMainCartage) + TBToFloat(tbMainStorage) + TBToFloat(tbTravel);
             if (cbMainSecurity.Checked)
             {
                 f += mm.basePrices["Security"] + (mm.basePrices["SecurityPerFloor"] * FloorsAdder());
             }
-            f+= float.Parse(tbMainEntranceGuards.Text) * float.Parse(tbMainWeeksRequired.Text) * mm.basePrices["15EntranceGuards"];
+            f += float.Parse(tbMainEntranceGuards.Text) * float.Parse(tbMainWeeksRequired.Text) * mm.basePrices["15EntranceGuards"];
             f += float.Parse(tbMainScaffold.Text) * mm.basePrices["14Scaffolds"];
 
             lblExtraCostsTotal.Text = ("Totaling $" + f + " AUD");
@@ -370,6 +368,7 @@ namespace SQT
         private void button1_Click(object sender, EventArgs e)
         {
             PanelMenuChange(null);
+            SetValuesForMainMenuLabels();
             TotalCostAdder();
             PagesRequired();
             GenerateListOfPrices();
@@ -481,6 +480,7 @@ namespace SQT
                 lblLiftNoConvertPrice.Visible = true;
                 lblLiftNoConvert.Text = "Cost of Lift (USD)";
                 costInEuro = false;
+                //lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(lblTotalLiftPrice.Text), costInEuro);
                 lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(lblTotalLiftPrice.Text), costInEuro);
             }
             else if (exCurrency == 2)
@@ -489,6 +489,7 @@ namespace SQT
                 lblLiftNoConvertPrice.Visible = true;
                 lblLiftNoConvert.Text = "Cost of Lift (EUR)";
                 costInEuro = true;
+                //lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(lblTotalLiftPrice.Text), costInEuro);
                 lblLiftNoConvertPrice.Text = PriceRounding(float.Parse(lblTotalLiftPrice.Text), costInEuro);
             }
 
@@ -506,6 +507,7 @@ namespace SQT
             lblCostIncludingMargin.Text = PriceRounding(liftPrice * marginPercent); //+ " (" + PriceRounding(marginValue) + ")";
             lblPriceIncludingGST.Text = PriceRounding(((liftPrice * marginPercent) * 1.1f) + roundingAdjustment);
             lblGST.Text = PriceRounding((((liftPrice * marginPercent) * 1.1f) + roundingAdjustment) / 11);
+
         }
 
         private float FloorsAdder()
@@ -659,7 +661,7 @@ namespace SQT
         public void WordSetup()
         {
             lblWaitControl(true);
-            string filePath = @"X:\Program Dependancies\Quote tool\Template Word Docs\Template-" + salesRep + "-Diff-" + numberOfPagesNeeded + ".docx";
+            string filePath = @"X:\Program Dependancies\Quote tool\Template Word Docs\Template-" + Environment.UserName + "-Diff-" + numberOfPagesNeeded + ".docx";
             fileOpen = new Word.Application();
             fileOpen.Visible = true;
             document = fileOpen.Documents.Open(filePath, ReadOnly: false);
@@ -747,10 +749,17 @@ namespace SQT
             object replace = 2;
             object wrap = 1;
 
-            //execute find and replace
-            fileOpen.Selection.Find.Execute(ref findText, ref matchCase, ref matchWholeWord,
-                ref matchWildCards, ref matchSoundsLike, ref matchAllWordForms, ref forward, ref wrap, ref format, ref replaceWithText, ref replace,
-                ref matchKashida, ref matchDiacritics, ref matchAlefHamza, ref matchControl);
+            try
+            {
+                //execute find and replace
+                fileOpen.Selection.Find.Execute(ref findText, ref matchCase, ref matchWholeWord,
+                    ref matchWildCards, ref matchSoundsLike, ref matchAllWordForms, ref forward, ref wrap, ref format, ref replaceWithText, ref replace,
+                    ref matchKashida, ref matchDiacritics, ref matchAlefHamza, ref matchControl);
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         // closes the word document 
@@ -829,7 +838,7 @@ namespace SQT
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 fileOpen = new Word.Application();
-                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-" + salesRep + "-Price-" + numberOfPagesNeeded + ".docx", ReadOnly: false);
+                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-" + Environment.UserName + "-Price-" + numberOfPagesNeeded + ".docx", ReadOnly: false);
                 SavePricesToDict();
                 fileOpen.Visible = true;
                 document.Activate();
@@ -1445,9 +1454,6 @@ namespace SQT
         {
             //
         }
-
-
-
 
         private void label14_Click(object sender, EventArgs e)
         {
@@ -2283,7 +2289,7 @@ namespace SQT
         }
 
         #endregion
-         
+
         #region Loading Old Quote Data Methods
         private void PullInfo()
         {
@@ -3871,7 +3877,7 @@ namespace SQT
 
         private float Roundingbuffer(float unroundedPrice)
         {
-            float priceWithDecimal = unroundedPrice ;
+            float priceWithDecimal = unroundedPrice;
             float roundingPriceBuffer = 0;
 
             if (!cbAutoRounding.Checked)
@@ -3912,7 +3918,7 @@ namespace SQT
                     }
                 }
             }
-            return roundingPriceBuffer ;
+            return roundingPriceBuffer;
         }
 
         private void cbAutoRounding_CheckedChanged(object sender, EventArgs e)
@@ -3926,6 +3932,33 @@ namespace SQT
                 tbMinorPriceAdjustment.Enabled = true;
             }
         }
+        #endregion
+
+        #region Salesman Signature Placer
+        /* Unneeded code as have persued another method
+         * 
+        private string[] DocumentSignaturePath()
+        {
+            string userName = Environment.UserName;
+            string[] returnValues = { "", "", "" }; // 0 =signature address, 1 = salesman name, 2= salesman title
+
+            switch (userName)
+            {
+                // need to add other salesman to this section to have their signatures added to documents
+                case "myles":
+                    returnValues[0] = "";
+                    returnValues[1] = "Myles Okorn";
+                    returnValues[2] = "IT";
+
+                    break;
+
+                default:
+                    break;
+            }
+
+            return returnValues;
+        }
+        */
         #endregion
 
         private void tBMainQuoteNumber_TextChanged(object sender, EventArgs e)

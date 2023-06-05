@@ -2882,7 +2882,7 @@
             this.lbWait.BackColor = System.Drawing.Color.Gray;
             this.lbWait.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWait.ForeColor = System.Drawing.Color.Navy;
-            this.lbWait.Location = new System.Drawing.Point(1299, 60);
+            this.lbWait.Location = new System.Drawing.Point(887, 49);
             this.lbWait.Name = "lbWait";
             this.lbWait.Size = new System.Drawing.Size(965, 110);
             this.lbWait.TabIndex = 176;
@@ -2898,7 +2898,7 @@
             this.tbMainBlankets.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainBlankets.Name = "tbMainBlankets";
             this.tbMainBlankets.Size = new System.Drawing.Size(126, 32);
-            this.tbMainBlankets.TabIndex = 138;
+            this.tbMainBlankets.TabIndex = 137;
             this.tbMainBlankets.Text = "0";
             this.tbMainBlankets.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -3211,7 +3211,7 @@
             this.tbMainShaftLight.Margin = new System.Windows.Forms.Padding(2);
             this.tbMainShaftLight.Name = "tbMainShaftLight";
             this.tbMainShaftLight.Size = new System.Drawing.Size(126, 32);
-            this.tbMainShaftLight.TabIndex = 137;
+            this.tbMainShaftLight.TabIndex = 138;
             this.tbMainShaftLight.Text = "0";
             this.tbMainShaftLight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5140,7 +5140,6 @@
             // 
             // panelCalcButtons
             // 
-            this.panelCalcButtons.Controls.Add(this.cbAutoRounding);
             this.panelCalcButtons.Controls.Add(this.tbMinorPriceAdjustment);
             this.panelCalcButtons.Controls.Add(this.label13);
             this.panelCalcButtons.Controls.Add(this.currencySelectionGroup);
@@ -5175,7 +5174,7 @@
             // 
             this.cbAutoRounding.AutoSize = true;
             this.cbAutoRounding.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAutoRounding.Location = new System.Drawing.Point(323, 441);
+            this.cbAutoRounding.Location = new System.Drawing.Point(1008, 1070);
             this.cbAutoRounding.Margin = new System.Windows.Forms.Padding(2);
             this.cbAutoRounding.Name = "cbAutoRounding";
             this.cbAutoRounding.Size = new System.Drawing.Size(214, 35);
@@ -5188,7 +5187,7 @@
             // 
             this.tbMinorPriceAdjustment.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMinorPriceAdjustment.ForeColor = System.Drawing.Color.Black;
-            this.tbMinorPriceAdjustment.Location = new System.Drawing.Point(203, 437);
+            this.tbMinorPriceAdjustment.Location = new System.Drawing.Point(279, 433);
             this.tbMinorPriceAdjustment.Margin = new System.Windows.Forms.Padding(2);
             this.tbMinorPriceAdjustment.Name = "tbMinorPriceAdjustment";
             this.tbMinorPriceAdjustment.Size = new System.Drawing.Size(102, 44);
@@ -5201,7 +5200,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(145, 440);
+            this.label13.Location = new System.Drawing.Point(221, 436);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 37);
@@ -31513,6 +31512,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(2479, 1128);
+            this.Controls.Add(this.cbAutoRounding);
             this.Controls.Add(this.lbWait);
             this.Controls.Add(this.panelLift1);
             this.Controls.Add(this.panelContactDetails);

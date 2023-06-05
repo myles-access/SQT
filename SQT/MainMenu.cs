@@ -131,6 +131,7 @@ namespace SQT
                 //claim a Qu number for the quote
                 lbTitleText.Text = "Claiming Qu Number";
                 ClaimQuNumber();
+                fPinDif.tBMainQuoteNumber.Text = quNumber;
             }
             ProgressBarStep();
 
@@ -144,7 +145,6 @@ namespace SQT
                 MessageBox.Show("ERROR: Could not load quoting tool.");
                 fPinDif.Close();
             }
-
         }
 
         private void ProgressBarStep(int stepValue = 1)
@@ -454,7 +454,9 @@ namespace SQT
             XMLW.WriteEndElement(); //QuVar end
 
             XMLW.Close();
-            AddQuToSalesmanRecord("Qu" + yearNum + "-" + nextQu);
+
+            quNumber = "Qu" + yearNum + "-" + nextQu;
+            AddQuToSalesmanRecord(quNumber);
         }
 
         private void AddQuToSalesmanRecord(string claimedQu)

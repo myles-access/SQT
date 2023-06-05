@@ -253,7 +253,7 @@ namespace SQT
             {
                 xmlWriter.WriteElementString("Name", ER.Key.ToString());
                 xmlWriter.WriteElementString("URL", ER.Value.ToString());
-                            }
+            }
 
             xmlWriter.WriteEndElement(); //Costs element end 
             xmlWriter.Close();
