@@ -505,9 +505,28 @@ namespace SQT
 
             lblCostOfParts.Text = PriceRounding(liftPrice);
             lblCostIncludingMargin.Text = PriceRounding(liftPrice * marginPercent); //+ " (" + PriceRounding(marginValue) + ")";
-            lblPriceIncludingGST.Text = PriceRounding(((liftPrice * marginPercent) * 1.1f) + roundingAdjustment);
-            lblGST.Text = PriceRounding((((liftPrice * marginPercent) * 1.1f) + roundingAdjustment) / 11);
 
+            //auto rounding methods 
+           // lblPriceIncludingGST.Text = PriceRounding(((liftPrice * marginPercent) * 1.1f) + roundingAdjustment);
+            //lblGST.Text = PriceRounding((((liftPrice * marginPercent) * 1.1f) + roundingAdjustment) / 11);
+
+            lblPriceIncludingGST.Text = PriceRounding(((liftPrice * marginPercent) * 1.1f) + PlusMinusAdjust());
+            lblGST.Text = PriceRounding((((liftPrice * marginPercent) * 1.1f) + PlusMinusAdjust()) / 11);
+
+        }
+
+        private float PlusMinusAdjust()
+        {
+            float f = 0;
+            try
+            {
+                f = float.Parse(tbMinorPriceAdjustment.Text);
+                return f;
+            }
+            catch (Exception)
+            {
+                return f;
+            }
         }
 
         private float FloorsAdder()
@@ -1052,6 +1071,7 @@ namespace SQT
                  tbLift4Price, tbLift4Floors, tbLift5Price, tbLift5Floors, tbLift6Price, tbLift6Floors,
                  tbLift7Price, tbLift7Floors, tbLift8Price, tbLift8Floors, tbLift9Price, tbLift9Floors,
                  tbLift10Price, tbLift10Floors, tbLift11Price, tbLift11Floors, tbLift12Price, tbLift12Floors, tBMainQuoteNumber);
+            V1Fixer(); // corrects the bug with differently named textboxes between multi and single in the v1.0 program that no longer exists in the v2.0 program. 
             this.Text = tBMainQuoteNumber.Text + " Calculation Window";
             LoadPreviousXmlCb(cbMainSecurity);
             //num20Ft = int.Parse(saveData["num20Ft"]);
@@ -1080,6 +1100,21 @@ namespace SQT
             {
                 //EUR
                 SelectCurrency("E");
+            }
+        }
+         
+        public void V1Fixer()
+        {
+            // data meant to be saved in the textboxes from the single lift program in 1.0 is redirected into the correct boxes in the 2.0 version
+            // this issue only exists when loading an old quote made under specific circumstances
+            // once loaded for the first time in 2.0 this method will repair the error and upon saving anew will correect for all future loads. 
+            if (saveData.ContainsKey("tbCost"))
+            {
+                tbLift1Price.Text = saveData["tbCost"];
+            }
+            if (saveData.ContainsKey("tBMainFloors"))
+            {
+                tbLift1Floors.Text = saveData["tBMainFloors"];
             }
         }
 
