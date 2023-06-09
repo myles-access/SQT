@@ -2308,6 +2308,20 @@ namespace SQT
             }
         }
 
+        private void liftCostsClose_Click(object sender, EventArgs e)
+        {
+            PanelMenuChange(null);
+        }
+
+        private void extraCostsClose_Click(object sender, EventArgs e)
+        {
+            PanelMenuChange(null);
+        }
+
+        private void shippingCostsClose_Click(object sender, EventArgs e)
+        {
+            PanelMenuChange(null);
+        }
         private void btnLiftCosts_Click(object sender, EventArgs e)
         {
             PanelMenuChange(panelLiftPrices);
@@ -4000,5 +4014,6 @@ namespace SQT
         {
             this.Text = (tBMainQuoteNumber.Text + " Calculation Window");
         }
+
     }
 }

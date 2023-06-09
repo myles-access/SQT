@@ -31,6 +31,7 @@ namespace SQT
         public MainMenu()
         {
             InitializeComponent();
+            this.Size = new System.Drawing.Size(674, 784);
         }
 
         #endregion
