@@ -965,6 +965,7 @@ namespace SQT
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                MessageBox.Show(openFileDialog1.FileName.ToString()); 
                 string xmlPath = FindXmlFile(openFileDialog1.FileName);
                 if (xmlPath != null)
                 {
@@ -979,12 +980,12 @@ namespace SQT
                 }
                 else
                 {
-                    MessageBox.Show("Invalid file selected");
+                    MessageBox.Show("Invalid file selected a");
                 }
             }
-            else
+            else 
             {
-                MessageBox.Show("Invalid file selected");
+                MessageBox.Show("Invalid file selected b");
             }
         }
 
@@ -1008,7 +1009,8 @@ namespace SQT
                     int index = fileName.IndexOf(subString);
                     rtnString = fileName.Remove(index, subString.Length);
                     int lastIndex = rtnString.LastIndexOf(@"\", rtnString.Length);
-                    rtnString = rtnString.Remove(0, lastIndex + 1);
+                    rtnString = rtnString.Remove(0, lastIndex + 1); 
+                    MessageBox.Show("looking for file " + rtnString);
                     return rtnString;
                 }
                 else
