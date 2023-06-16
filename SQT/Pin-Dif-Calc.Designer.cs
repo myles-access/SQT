@@ -195,6 +195,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panelAddress = new System.Windows.Forms.Panel();
             this.panelLiftPrices = new System.Windows.Forms.Panel();
+            this.liftCostsClose = new System.Windows.Forms.Button();
             this.btnAddLiftCostField = new System.Windows.Forms.Button();
             this.label68 = new System.Windows.Forms.Label();
             this.lblTotalLiftPrice = new System.Windows.Forms.Label();
@@ -205,6 +206,7 @@
             this.lblTotaliftCosts = new System.Windows.Forms.Label();
             this.lblShippingTotal = new System.Windows.Forms.Label();
             this.panelShipping = new System.Windows.Forms.Panel();
+            this.shippingCostsClose = new System.Windows.Forms.Button();
             this.panelCostBreakdown = new System.Windows.Forms.Panel();
             this.panelCalcButtons = new System.Windows.Forms.Panel();
             this.tbMinorPriceAdjustment = new System.Windows.Forms.TextBox();
@@ -214,6 +216,7 @@
             this.btnCurrency = new System.Windows.Forms.Button();
             this.cbAutoRounding = new System.Windows.Forms.CheckBox();
             this.panelAdditionalCosts = new System.Windows.Forms.Panel();
+            this.extraCostsClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEditQuotePrices = new System.Windows.Forms.Button();
             this.btnGenerateCustomerQuote = new System.Windows.Forms.Button();
@@ -2420,9 +2423,6 @@
             this.label427 = new System.Windows.Forms.Label();
             this.panelExportQuote = new System.Windows.Forms.Panel();
             this.panelContactDetails = new System.Windows.Forms.Panel();
-            this.liftCostsClose = new System.Windows.Forms.Button();
-            this.extraCostsClose = new System.Windows.Forms.Button();
-            this.shippingCostsClose = new System.Windows.Forms.Button();
             this.currencySelectionGroup.SuspendLayout();
             this.panelAddress.SuspendLayout();
             this.panelLiftPrices.SuspendLayout();
@@ -4810,6 +4810,18 @@
             this.panelLiftPrices.TabIndex = 183;
             this.panelLiftPrices.Visible = false;
             // 
+            // liftCostsClose
+            // 
+            this.liftCostsClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.liftCostsClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.liftCostsClose.Location = new System.Drawing.Point(18, 8);
+            this.liftCostsClose.Name = "liftCostsClose";
+            this.liftCostsClose.Size = new System.Drawing.Size(45, 45);
+            this.liftCostsClose.TabIndex = 439;
+            this.liftCostsClose.Text = "X";
+            this.liftCostsClose.UseVisualStyleBackColor = false;
+            this.liftCostsClose.Click += new System.EventHandler(this.liftCostsClose_Click);
+            // 
             // btnAddLiftCostField
             // 
             this.btnAddLiftCostField.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4931,6 +4943,18 @@
             this.panelShipping.Size = new System.Drawing.Size(663, 1220);
             this.panelShipping.TabIndex = 190;
             this.panelShipping.Visible = false;
+            // 
+            // shippingCostsClose
+            // 
+            this.shippingCostsClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.shippingCostsClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shippingCostsClose.Location = new System.Drawing.Point(20, 11);
+            this.shippingCostsClose.Name = "shippingCostsClose";
+            this.shippingCostsClose.Size = new System.Drawing.Size(45, 45);
+            this.shippingCostsClose.TabIndex = 440;
+            this.shippingCostsClose.Text = "X";
+            this.shippingCostsClose.UseVisualStyleBackColor = false;
+            this.shippingCostsClose.Click += new System.EventHandler(this.shippingCostsClose_Click);
             // 
             // panelCostBreakdown
             // 
@@ -5129,6 +5153,18 @@
             this.panelAdditionalCosts.Size = new System.Drawing.Size(663, 1223);
             this.panelAdditionalCosts.TabIndex = 193;
             this.panelAdditionalCosts.Visible = false;
+            // 
+            // extraCostsClose
+            // 
+            this.extraCostsClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.extraCostsClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.extraCostsClose.Location = new System.Drawing.Point(28, 25);
+            this.extraCostsClose.Name = "extraCostsClose";
+            this.extraCostsClose.Size = new System.Drawing.Size(45, 45);
+            this.extraCostsClose.TabIndex = 440;
+            this.extraCostsClose.Text = "X";
+            this.extraCostsClose.UseVisualStyleBackColor = false;
+            this.extraCostsClose.Click += new System.EventHandler(this.extraCostsClose_Click);
             // 
             // panel2
             // 
@@ -5388,7 +5424,6 @@
             this.panelLift1.Controls.Add(this.tbKeyswitchLocation);
             this.panelLift1.Controls.Add(this.label90);
             this.panelLift1.Controls.Add(this.groupBox28);
-            this.panelLift1.Controls.Add(this.groupBox1);
             this.panelLift1.Controls.Add(this.groupBox18);
             this.panelLift1.Controls.Add(this.label91);
             this.panelLift1.Controls.Add(this.groupBox19);
@@ -6519,7 +6554,7 @@
             this.groupBox1.Controls.Add(this.rbSL);
             this.groupBox1.Controls.Add(this.rbWittur);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(56, 95);
+            this.groupBox1.Location = new System.Drawing.Point(51, 623);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -6651,7 +6686,7 @@
             this.label92.AutoSize = true;
             this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label92.ForeColor = System.Drawing.Color.Black;
-            this.label92.Location = new System.Drawing.Point(411, 214);
+            this.label92.Location = new System.Drawing.Point(222, 224);
             this.label92.Name = "label92";
             this.label92.Size = new System.Drawing.Size(200, 37);
             this.label92.TabIndex = 333;
@@ -6720,7 +6755,7 @@
             // 
             this.tbLiftNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLiftNumbers.ForeColor = System.Drawing.Color.Black;
-            this.tbLiftNumbers.Location = new System.Drawing.Point(615, 211);
+            this.tbLiftNumbers.Location = new System.Drawing.Point(426, 221);
             this.tbLiftNumbers.Name = "tbLiftNumbers";
             this.tbLiftNumbers.Size = new System.Drawing.Size(352, 44);
             this.tbLiftNumbers.TabIndex = 302;
@@ -6742,7 +6777,7 @@
             this.label94.AutoSize = true;
             this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label94.ForeColor = System.Drawing.Color.Black;
-            this.label94.Location = new System.Drawing.Point(434, 138);
+            this.label94.Location = new System.Drawing.Point(245, 148);
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(175, 37);
             this.label94.TabIndex = 334;
@@ -6790,7 +6825,7 @@
             // 
             this.tbTypeofLift.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTypeofLift.ForeColor = System.Drawing.Color.Black;
-            this.tbTypeofLift.Location = new System.Drawing.Point(615, 134);
+            this.tbTypeofLift.Location = new System.Drawing.Point(426, 144);
             this.tbTypeofLift.Name = "tbTypeofLift";
             this.tbTypeofLift.Size = new System.Drawing.Size(352, 44);
             this.tbTypeofLift.TabIndex = 301;
@@ -32203,47 +32238,12 @@
             this.panelContactDetails.Controls.Add(this.tbAddress1);
             this.panelContactDetails.Controls.Add(this.tbAddress2);
             this.panelContactDetails.Controls.Add(this.tbAddress3);
+            this.panelContactDetails.Controls.Add(this.groupBox1);
             this.panelContactDetails.Location = new System.Drawing.Point(1058, 17);
             this.panelContactDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelContactDetails.Name = "panelContactDetails";
-            this.panelContactDetails.Size = new System.Drawing.Size(436, 625);
+            this.panelContactDetails.Size = new System.Drawing.Size(436, 858);
             this.panelContactDetails.TabIndex = 438;
-            // 
-            // liftCostsClose
-            // 
-            this.liftCostsClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.liftCostsClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.liftCostsClose.Location = new System.Drawing.Point(18, 8);
-            this.liftCostsClose.Name = "liftCostsClose";
-            this.liftCostsClose.Size = new System.Drawing.Size(45, 45);
-            this.liftCostsClose.TabIndex = 439;
-            this.liftCostsClose.Text = "X";
-            this.liftCostsClose.UseVisualStyleBackColor = false;
-            this.liftCostsClose.Click += new System.EventHandler(this.liftCostsClose_Click);
-            // 
-            // extraCostsClose
-            // 
-            this.extraCostsClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.extraCostsClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.extraCostsClose.Location = new System.Drawing.Point(28, 25);
-            this.extraCostsClose.Name = "extraCostsClose";
-            this.extraCostsClose.Size = new System.Drawing.Size(45, 45);
-            this.extraCostsClose.TabIndex = 440;
-            this.extraCostsClose.Text = "X";
-            this.extraCostsClose.UseVisualStyleBackColor = false;
-            this.extraCostsClose.Click += new System.EventHandler(this.extraCostsClose_Click);
-            // 
-            // shippingCostsClose
-            // 
-            this.shippingCostsClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.shippingCostsClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shippingCostsClose.Location = new System.Drawing.Point(20, 11);
-            this.shippingCostsClose.Name = "shippingCostsClose";
-            this.shippingCostsClose.Size = new System.Drawing.Size(45, 45);
-            this.shippingCostsClose.TabIndex = 440;
-            this.shippingCostsClose.Text = "X";
-            this.shippingCostsClose.UseVisualStyleBackColor = false;
-            this.shippingCostsClose.Click += new System.EventHandler(this.shippingCostsClose_Click);
             // 
             // Pin_Dif_Calc
             // 

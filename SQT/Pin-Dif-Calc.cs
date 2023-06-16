@@ -33,6 +33,7 @@ namespace SQT
         public int num20Ft;
         public int num40Ft;
         public int numberOfPagesNeeded = 1;
+        public int numberOfPagesUsed = 0;
         int pageTracker;
         int activePage = 0;
 
@@ -507,7 +508,7 @@ namespace SQT
             lblCostIncludingMargin.Text = PriceRounding(liftPrice * marginPercent); //+ " (" + PriceRounding(marginValue) + ")";
 
             //auto rounding methods 
-           // lblPriceIncludingGST.Text = PriceRounding(((liftPrice * marginPercent) * 1.1f) + roundingAdjustment);
+            // lblPriceIncludingGST.Text = PriceRounding(((liftPrice * marginPercent) * 1.1f) + roundingAdjustment);
             //lblGST.Text = PriceRounding((((liftPrice * marginPercent) * 1.1f) + roundingAdjustment) / 11);
 
             lblPriceIncludingGST.Text = PriceRounding(((liftPrice * marginPercent) * 1.1f) + PlusMinusAdjust());
@@ -989,7 +990,7 @@ namespace SQT
 
         #region Load Data from old quote via XML file
 
-        public bool LoadPreviousQuote()
+        public bool LoadPreviousQuote(string fileToBeLoaded)
         {
             // prompt user to select word doc
             // remove "quote" or "price breakdown" and file extenstion
@@ -998,6 +999,23 @@ namespace SQT
             // populate form with data from dictionary
             // when opening each question form load all relevent data from the dictionary from Form1
 
+            if (fileToBeLoaded != null)
+            {
+                saveData.Clear();
+                string xmlPath = @"X:\Program Dependancies\Quote tool\Previous Prices\" + fileToBeLoaded;
+                //MessageBox.Show(xmlPath);
+                loadingPreviousData = true;
+                FetchsaveData(xmlPath);
+                Form1LoadFromXML();
+                GenerateListOfPrices();
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Invalid file selected");
+            }
+
+            /* Old load method using afile picker, being replaced with the above "list of files" method
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string xmlPath = FindXmlFile(openFileDialog1.FileName);
@@ -1021,6 +1039,7 @@ namespace SQT
             {
                 MessageBox.Show("Invalid file selected");
             }
+            */
             return false;
         }
 
@@ -1102,7 +1121,7 @@ namespace SQT
                 SelectCurrency("E");
             }
         }
-         
+
         public void V1Fixer()
         {
             // data meant to be saved in the textboxes from the single lift program in 1.0 is redirected into the correct boxes in the 2.0 version
@@ -1956,6 +1975,11 @@ namespace SQT
 
         private void NewPage()
         {
+            if (numberOfPagesUsed >= numberOfPagesNeeded)
+            {
+                return;
+            }
+
             pageButtons[pageTracker].Visible = true;
             pageButtons[pageTracker].Enabled = true;
             pageTracker++;
@@ -3896,6 +3920,7 @@ namespace SQT
             for (int i = 0; i < numberOfPagesNeeded; i++)
             {
                 NewPage();
+                numberOfPagesUsed++;
             }
 
             PanelMenuChange(null);
@@ -4013,7 +4038,7 @@ namespace SQT
         private void tBMainQuoteNumber_TextChanged(object sender, EventArgs e)
         {
             this.Text = (tBMainQuoteNumber.Text + " Calculation Window");
-        }
 
+        }
     }
 }

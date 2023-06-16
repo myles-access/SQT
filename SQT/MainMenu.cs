@@ -18,11 +18,15 @@ namespace SQT
         public int maxFloorNumber;
         public bool networkConnected;
         public bool internetConnected;
+        public bool loadMenuOpen = false;
 
         public Dictionary<string, float> basePrices = new Dictionary<string, float>();
         public Dictionary<int, float> labourPrice = new Dictionary<int, float>();
         public Dictionary<string, float> exchangeRates = new Dictionary<string, float>();
         public Dictionary<string, string> exchangeRateURL = new Dictionary<string, string>();
+
+
+        private string[] xmlFiles = Directory.GetFiles(@"X:\Program Dependancies\Quote tool\Previous Prices", "*.*", SearchOption.AllDirectories);
 
         public string quNumber;
         #endregion
@@ -31,7 +35,8 @@ namespace SQT
         public MainMenu()
         {
             InitializeComponent();
-            this.Size = new System.Drawing.Size(674, 784);
+            this.Size = new System.Drawing.Size(449, 523);
+            panelShipping.Visible = false;
         }
 
         #endregion
@@ -57,17 +62,13 @@ namespace SQT
         #endregion
 
         #region Opening Quote Calculator
-        private void btnLoadOldQuote_Click(object sender, EventArgs e)
-        {
-            OpenQuoteCalculator(true);
-        }
 
         private void btPinDiff_Click(object sender, EventArgs e)
         {
             OpenQuoteCalculator(false);
         }
 
-        private void OpenQuoteCalculator(bool loadingOldQuote = false)
+        private void OpenQuoteCalculator(bool loadingOldQuote = false, string fileLoadName = "")
         {
             bool startedSucessfully = true;
             btPinDiff.Enabled = false;
@@ -122,7 +123,7 @@ namespace SQT
             {
                 //load previous quote values into form, if errored close form and tell user
                 lbTitleText.Text = "Importing Quote Values";
-                if (!fPinDif.LoadPreviousQuote())
+                if (fileLoadName == "" || !fPinDif.LoadPreviousQuote(fileLoadName))
                 {
                     startedSucessfully = false;
                 }
@@ -527,6 +528,68 @@ namespace SQT
             XMLW.Close();
 
         }
+        #endregion
+
+        #region Loading Old Quote
+
+        private void btnLoadOldQuote_Click(object sender, EventArgs e)
+        {
+            loadMenuOpen = !loadMenuOpen;
+            if (loadMenuOpen)
+            {
+                ArrayToListBox(listBox1, xmlFiles);
+                panelShipping.Visible = true;
+                this.Size = new System.Drawing.Size(895, 523);
+            }
+            else if (!loadMenuOpen)
+            {
+                this.Size = new System.Drawing.Size(449, 523);
+                panelShipping.Visible = false;
+            }
+
+        }
+
+        private void ArrayToListBox(ListBox lb, String[] s, string searchCriteria = "")
+        {
+            lb.Items.Clear();
+            List<String> list = new List<String>();
+
+            if (searchCriteria == "")
+            {
+                foreach (string arrayString in s)
+                {
+                    lb.Items.Add(Path.GetFileName(arrayString));
+                }
+            }
+            else
+            {
+                foreach (string arrayString in s)
+                {
+                    bool contains = arrayString.IndexOf(searchCriteria, StringComparison.OrdinalIgnoreCase) >= 0;
+                    if (contains)
+                    {
+                        lb.Items.Add(Path.GetFileName(arrayString));
+                    }
+                }
+            }
+        }
+
+        private void tbLoadSearch_TextChanged(object sender, EventArgs e)
+        {
+            ArrayToListBox(listBox1, xmlFiles, tbLoadSearch.Text);
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OpenQuoteCalculator(true, listBox1.SelectedItem.ToString());
+        }
+        private void extraCostsClose_Click(object sender, EventArgs e)
+        {
+            loadMenuOpen = false;
+            this.Size = new System.Drawing.Size(449, 523);
+            panelShipping.Visible = false;
+        }
+
         #endregion
 
         #region Unused Methods
