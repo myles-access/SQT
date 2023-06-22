@@ -15,6 +15,7 @@ namespace SQT
         private readonly string passWord = "LiftFix";
         AdminPanel adminPanel = new AdminPanel();
         public string exchangeRateDate;
+        private string listboxSelected;
         public int maxFloorNumber;
         public bool networkConnected;
         public bool internetConnected;
@@ -535,18 +536,25 @@ namespace SQT
         private void btnLoadOldQuote_Click(object sender, EventArgs e)
         {
             loadMenuOpen = !loadMenuOpen;
-            if (loadMenuOpen)
+            OpenLoadMenu(loadMenuOpen);
+        }
+
+        private void OpenLoadMenu(bool openingmenu)
+        {
+            if (openingmenu)
             {
                 ArrayToListBox(listBox1, xmlFiles);
                 panelShipping.Visible = true;
                 this.Size = new System.Drawing.Size(895, 523);
+                tbLoadSearch.Text = "";
+                loadMenuOpen = true;
             }
-            else if (!loadMenuOpen)
+            else if (!openingmenu)
             {
                 this.Size = new System.Drawing.Size(449, 523);
                 panelShipping.Visible = false;
+                loadMenuOpen = false;
             }
-
         }
 
         private void ArrayToListBox(ListBox lb, String[] s, string searchCriteria = "")
@@ -581,13 +589,17 @@ namespace SQT
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            OpenQuoteCalculator(true, listBox1.SelectedItem.ToString());
+            if (listBox1.SelectedItem.ToString() == listboxSelected)
+            {
+                OpenQuoteCalculator(true, listBox1.SelectedItem.ToString());
+                OpenLoadMenu(false);
+            }
+            listboxSelected = listBox1.SelectedItem.ToString();
         }
+
         private void extraCostsClose_Click(object sender, EventArgs e)
         {
-            loadMenuOpen = false;
-            this.Size = new System.Drawing.Size(449, 523);
-            panelShipping.Visible = false;
+            OpenLoadMenu(false);
         }
 
         #endregion
