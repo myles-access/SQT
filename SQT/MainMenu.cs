@@ -124,7 +124,7 @@ namespace SQT
             {
                 //load previous quote values into form, if errored close form and tell user
                 lbTitleText.Text = "Importing Quote Values";
-                if (fileLoadName == "" || !fPinDif.LoadPreviousQuote(fileLoadName))
+                if (fileLoadName == "" || !fPinDif.LoadProcessManager(fileLoadName))
                 {
                     startedSucessfully = false;
                 }
