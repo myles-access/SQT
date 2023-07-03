@@ -1,4 +1,4 @@
-﻿namespace SQT
+namespace SQT
 {
     partial class MainMenu
     {
