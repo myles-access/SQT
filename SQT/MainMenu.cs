@@ -532,6 +532,14 @@ namespace SQT
         #endregion
 
         #region Loading Old Quote
+        private void btnLoadSelectedITem_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                OpenQuoteCalculator(true, listBox1.SelectedItem.ToString());
+                OpenLoadMenu(false);
+            }
+        }
 
         private void btnLoadOldQuote_Click(object sender, EventArgs e)
         {
@@ -543,6 +551,7 @@ namespace SQT
         {
             if (openingmenu)
             {
+                xmlFiles = Directory.GetFiles(@"X:\Program Dependancies\Quote tool\Previous Prices", "*.*", SearchOption.AllDirectories);
                 ArrayToListBox(listBox1, xmlFiles);
                 panelShipping.Visible = true;
                 this.Size = new System.Drawing.Size(895, 523);

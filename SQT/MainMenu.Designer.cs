@@ -37,9 +37,10 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btnLoadOldQuote = new System.Windows.Forms.Button();
             this.panelShipping = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.tbLoadSearch = new System.Windows.Forms.TextBox();
+            this.btnLoadSelectedITem = new System.Windows.Forms.Button();
             this.extraCostsClose = new System.Windows.Forms.Button();
+            this.tbLoadSearch = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelShipping.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +55,7 @@
             this.btSQAT.Size = new System.Drawing.Size(394, 62);
             this.btSQAT.TabIndex = 46;
             this.btSQAT.TabStop = false;
-            this.btSQAT.Text = "Admin Settings";
+            this.btSQAT.Text = "Settings";
             this.btSQAT.UseVisualStyleBackColor = true;
             this.btSQAT.Click += new System.EventHandler(this.btSQAT_Click);
             // 
@@ -85,7 +86,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.InitialImage = global::SQT.Properties.Resources.New_Project;
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(129, 3);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
@@ -137,6 +138,7 @@
             // panelShipping
             // 
             this.panelShipping.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panelShipping.Controls.Add(this.btnLoadSelectedITem);
             this.panelShipping.Controls.Add(this.extraCostsClose);
             this.panelShipping.Controls.Add(this.tbLoadSearch);
             this.panelShipping.Controls.Add(this.listBox1);
@@ -145,6 +147,37 @@
             this.panelShipping.Name = "panelShipping";
             this.panelShipping.Size = new System.Drawing.Size(737, 706);
             this.panelShipping.TabIndex = 191;
+            // 
+            // btnLoadSelectedITem
+            // 
+            this.btnLoadSelectedITem.Location = new System.Drawing.Point(599, 50);
+            this.btnLoadSelectedITem.Name = "btnLoadSelectedITem";
+            this.btnLoadSelectedITem.Size = new System.Drawing.Size(116, 47);
+            this.btnLoadSelectedITem.TabIndex = 442;
+            this.btnLoadSelectedITem.Text = "LOAD";
+            this.btnLoadSelectedITem.UseVisualStyleBackColor = true;
+            this.btnLoadSelectedITem.Click += new System.EventHandler(this.btnLoadSelectedITem_Click);
+            // 
+            // extraCostsClose
+            // 
+            this.extraCostsClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.extraCostsClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.extraCostsClose.Location = new System.Drawing.Point(3, 3);
+            this.extraCostsClose.Name = "extraCostsClose";
+            this.extraCostsClose.Size = new System.Drawing.Size(36, 41);
+            this.extraCostsClose.TabIndex = 441;
+            this.extraCostsClose.Text = "X";
+            this.extraCostsClose.UseVisualStyleBackColor = false;
+            this.extraCostsClose.Click += new System.EventHandler(this.extraCostsClose_Click);
+            // 
+            // tbLoadSearch
+            // 
+            this.tbLoadSearch.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLoadSearch.Location = new System.Drawing.Point(36, 50);
+            this.tbLoadSearch.Name = "tbLoadSearch";
+            this.tbLoadSearch.Size = new System.Drawing.Size(557, 47);
+            this.tbLoadSearch.TabIndex = 1;
+            this.tbLoadSearch.TextChanged += new System.EventHandler(this.tbLoadSearch_TextChanged);
             // 
             // listBox1
             // 
@@ -162,27 +195,6 @@
             this.listBox1.Size = new System.Drawing.Size(679, 555);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // tbLoadSearch
-            // 
-            this.tbLoadSearch.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLoadSearch.Location = new System.Drawing.Point(36, 50);
-            this.tbLoadSearch.Name = "tbLoadSearch";
-            this.tbLoadSearch.Size = new System.Drawing.Size(679, 47);
-            this.tbLoadSearch.TabIndex = 1;
-            this.tbLoadSearch.TextChanged += new System.EventHandler(this.tbLoadSearch_TextChanged);
-            // 
-            // extraCostsClose
-            // 
-            this.extraCostsClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.extraCostsClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.extraCostsClose.Location = new System.Drawing.Point(3, 3);
-            this.extraCostsClose.Name = "extraCostsClose";
-            this.extraCostsClose.Size = new System.Drawing.Size(36, 41);
-            this.extraCostsClose.TabIndex = 441;
-            this.extraCostsClose.Text = "X";
-            this.extraCostsClose.UseVisualStyleBackColor = false;
-            this.extraCostsClose.Click += new System.EventHandler(this.extraCostsClose_Click);
             // 
             // MainMenu
             // 
@@ -227,5 +239,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox tbLoadSearch;
         private System.Windows.Forms.Button extraCostsClose;
+        private System.Windows.Forms.Button btnLoadSelectedITem;
     }
 }

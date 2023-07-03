@@ -325,10 +325,6 @@
             this.tbCOPFinish = new System.Windows.Forms.TextBox();
             this.rbCOPFinishOther = new System.Windows.Forms.RadioButton();
             this.rbCOPFinishSatinStainlessSteel = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbSumasa = new System.Windows.Forms.RadioButton();
-            this.rbSL = new System.Windows.Forms.RadioButton();
-            this.rbWittur = new System.Windows.Forms.RadioButton();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.tbHandrail = new System.Windows.Forms.TextBox();
             this.rbHandrailBrushedStainlessSTeel = new System.Windows.Forms.RadioButton();
@@ -419,6 +415,10 @@
             this.tbDoorWidth = new System.Windows.Forms.TextBox();
             this.tbDoorHeight = new System.Windows.Forms.TextBox();
             this.label106 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbSumasa = new System.Windows.Forms.RadioButton();
+            this.rbSL = new System.Windows.Forms.RadioButton();
+            this.rbWittur = new System.Windows.Forms.RadioButton();
             this.label50 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.tbfname = new System.Windows.Forms.TextBox();
@@ -2451,7 +2451,6 @@
             this.groupBox33.SuspendLayout();
             this.groupBox29.SuspendLayout();
             this.groupBox28.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -2469,6 +2468,7 @@
             this.groupBox12.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panelLift12.SuspendLayout();
             this.groupBox325.SuspendLayout();
             this.groupBox326.SuspendLayout();
@@ -5251,6 +5251,7 @@
             this.btNewPanel.TabIndex = 432;
             this.btNewPanel.Text = "+";
             this.btNewPanel.UseVisualStyleBackColor = true;
+            this.btNewPanel.Visible = false;
             this.btNewPanel.Click += new System.EventHandler(this.btNewPanel_Click);
             // 
             // btPanel12
@@ -6548,57 +6549,6 @@
             this.rbCOPFinishSatinStainlessSteel.Text = "Satin Stainless Steel";
             this.rbCOPFinishSatinStainlessSteel.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbSumasa);
-            this.groupBox1.Controls.Add(this.rbSL);
-            this.groupBox1.Controls.Add(this.rbWittur);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(51, 623);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(330, 203);
-            this.groupBox1.TabIndex = 335;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Supplier";
-            // 
-            // rbSumasa
-            // 
-            this.rbSumasa.AutoSize = true;
-            this.rbSumasa.Location = new System.Drawing.Point(9, 148);
-            this.rbSumasa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.rbSumasa.Name = "rbSumasa";
-            this.rbSumasa.Size = new System.Drawing.Size(147, 37);
-            this.rbSumasa.TabIndex = 3;
-            this.rbSumasa.TabStop = true;
-            this.rbSumasa.Text = "Sumasa";
-            this.rbSumasa.UseVisualStyleBackColor = true;
-            // 
-            // rbSL
-            // 
-            this.rbSL.AutoSize = true;
-            this.rbSL.Location = new System.Drawing.Point(9, 43);
-            this.rbSL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.rbSL.Name = "rbSL";
-            this.rbSL.Size = new System.Drawing.Size(75, 37);
-            this.rbSL.TabIndex = 2;
-            this.rbSL.TabStop = true;
-            this.rbSL.Text = "SL";
-            this.rbSL.UseVisualStyleBackColor = true;
-            // 
-            // rbWittur
-            // 
-            this.rbWittur.AutoSize = true;
-            this.rbWittur.Location = new System.Drawing.Point(9, 95);
-            this.rbWittur.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.rbWittur.Name = "rbWittur";
-            this.rbWittur.Size = new System.Drawing.Size(116, 37);
-            this.rbWittur.TabIndex = 1;
-            this.rbWittur.TabStop = true;
-            this.rbWittur.Text = "Wittur";
-            this.rbWittur.UseVisualStyleBackColor = true;
-            // 
             // groupBox18
             // 
             this.groupBox18.Controls.Add(this.tbHandrail);
@@ -7647,6 +7597,57 @@
             this.label106.Size = new System.Drawing.Size(273, 37);
             this.label106.TabIndex = 366;
             this.label106.Text = "Door Height (mm)";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbSumasa);
+            this.groupBox1.Controls.Add(this.rbSL);
+            this.groupBox1.Controls.Add(this.rbWittur);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(51, 623);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(330, 203);
+            this.groupBox1.TabIndex = 335;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Supplier";
+            // 
+            // rbSumasa
+            // 
+            this.rbSumasa.AutoSize = true;
+            this.rbSumasa.Location = new System.Drawing.Point(9, 148);
+            this.rbSumasa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbSumasa.Name = "rbSumasa";
+            this.rbSumasa.Size = new System.Drawing.Size(147, 37);
+            this.rbSumasa.TabIndex = 3;
+            this.rbSumasa.TabStop = true;
+            this.rbSumasa.Text = "Sumasa";
+            this.rbSumasa.UseVisualStyleBackColor = true;
+            // 
+            // rbSL
+            // 
+            this.rbSL.AutoSize = true;
+            this.rbSL.Location = new System.Drawing.Point(9, 43);
+            this.rbSL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbSL.Name = "rbSL";
+            this.rbSL.Size = new System.Drawing.Size(75, 37);
+            this.rbSL.TabIndex = 2;
+            this.rbSL.TabStop = true;
+            this.rbSL.Text = "SL";
+            this.rbSL.UseVisualStyleBackColor = true;
+            // 
+            // rbWittur
+            // 
+            this.rbWittur.AutoSize = true;
+            this.rbWittur.Location = new System.Drawing.Point(9, 95);
+            this.rbWittur.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbWittur.Name = "rbWittur";
+            this.rbWittur.Size = new System.Drawing.Size(116, 37);
+            this.rbWittur.TabIndex = 1;
+            this.rbWittur.TabStop = true;
+            this.rbWittur.Text = "Wittur";
+            this.rbWittur.UseVisualStyleBackColor = true;
             // 
             // label50
             // 
@@ -32334,8 +32335,6 @@
             this.groupBox29.PerformLayout();
             this.groupBox28.ResumeLayout(false);
             this.groupBox28.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
             this.groupBox19.ResumeLayout(false);
@@ -32370,6 +32369,8 @@
             this.groupBox10.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panelLift12.ResumeLayout(false);
             this.panelLift12.PerformLayout();
             this.groupBox325.ResumeLayout(false);

@@ -22,6 +22,7 @@ namespace SQT
 
         public string quoteNumber = "";
         public string exchangeRateText;
+        public string user = Environment.UserName;
 
         public float applicableExchangeRate = 1;
         public float freightTotal = 0;
@@ -65,6 +66,11 @@ namespace SQT
             SetPanelVisabilityDefaults();
             PageButtonSetup();
             this.Text = tBMainQuoteNumber.Text + " Quote Calculation";
+
+            if (user == "andrew.l")
+            {
+                user = "andrew";
+            }
         }
 
         private void RuntimeVarSetter()
@@ -648,7 +654,8 @@ namespace SQT
         public void WordSetup()
         {
             lblWaitControl(true);
-            string filePath = @"X:\Program Dependancies\Quote tool\Template Word Docs\Template-" + Environment.UserName + "-Diff-" + numberOfPagesNeeded + ".docx";
+            string filePath;
+            filePath = @"X:\Program Dependancies\Quote tool\Template Word Docs\" + user + @"\" + numberOfPagesNeeded + ".docx";
             fileOpen = new Word.Application();
             fileOpen.Visible = true;
             document = fileOpen.Documents.Open(filePath, ReadOnly: false);
@@ -824,7 +831,7 @@ namespace SQT
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 fileOpen = new Word.Application();
-                document = fileOpen.Documents.Open("X:\\Program Dependancies\\Quote tool\\Template Word Docs\\Template-" + Environment.UserName + "-Price-" + numberOfPagesNeeded + ".docx", ReadOnly: false);
+                document = fileOpen.Documents.Open(@"X:\Program Dependancies\Quote tool\Template Word Docs\" + user + @"\price.docx", ReadOnly: false);
                 SavePricesToDict();
                 fileOpen.Visible = true;
                 document.Activate();
@@ -950,6 +957,7 @@ namespace SQT
             priceExports.Add("AEP35", lblGST.Text);
             priceExports.Add("AEP36", lblPriceIncludingGST.Text);
             priceExports.Add("AEP37", PriceRounding(f).ToString());
+            priceExports.Add("AEP41", tbMinorPriceAdjustment.Text);
         }
 
         #endregion
@@ -969,12 +977,12 @@ namespace SQT
             catch (Exception)
             {
                 loadedSucessfully = false;
-            } 
+            }
             //run method to catch old data from version 1
             V1Fixer();
             this.Text = tBMainQuoteNumber.Text + " Calculation Window";
             //return true or false for if the load was sucessful
-                        SetValuesForMainMenuLabels();
+            SetValuesForMainMenuLabels();
             TotalCostAdder();
             PagesRequired();
             GenerateListOfPrices();
@@ -983,31 +991,31 @@ namespace SQT
 
         private void ImportXML(string xmlPath)
         {
-                string dKey = "";
-                string dName = "";
+            string dKey = "";
+            string dName = "";
 
-                XmlTextReader XMLR = new XmlTextReader(xmlPath);
-                while (XMLR.Read())
+            XmlTextReader XMLR = new XmlTextReader(xmlPath);
+            while (XMLR.Read())
+            {
+                if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Name")
                 {
-                    if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Name")
-                    {
-                        dKey = XMLR.ReadElementContentAsString();
-                    }
-                    else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Info")
-                    {
-                        dName = XMLR.ReadElementContentAsString();
-                    }
-
-                    if (dKey != "" && dName != "")
-                    {
-                        saveData.Add(dKey, dName);
-
-                        dKey = "";
-                        dName = "";
-                    }
+                    dKey = XMLR.ReadElementContentAsString();
+                }
+                else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Info")
+                {
+                    dName = XMLR.ReadElementContentAsString();
                 }
 
-                XMLR.Close();            
+                if (dKey != "" && dName != "")
+                {
+                    saveData.Add(dKey, dName);
+
+                    dKey = "";
+                    dName = "";
+                }
+            }
+
+            XMLR.Close();
         }
 
         private void LoadXMLIntoForm()
@@ -1015,6 +1023,14 @@ namespace SQT
             if (saveData.ContainsKey("NumberOfPagesOpen"))
             {
                 numberOfPagesNeeded = int.Parse(saveData["NumberOfPagesOpen"]);
+
+                int temp = numberOfPagesNeeded;
+
+                for (int i = 0; i < temp; i++)
+                {
+                    NewCostsRow(i);
+                }
+                numberOfPagesNeeded = temp;
             }
 
             #region Load Text Boxes
@@ -1093,7 +1109,7 @@ namespace SQT
                     tb12NumberOfCOPs, tb12NumberOfLandingDoors, tb12NumberOfLandings, tb12NumberOfLEDLights, tb12PitDepth,
                      tb12RearWallText, tb12ShaftDepth, tb12ShaftWidth, tb12SideWallText, tb12StructureShaftText, tb12Travel, tb12TypeOfLift,
                      tbControlerLocation, tbStructureShaft, tbLandingDoorFinish, tbDoorTracks, tbCarDoorFinish, tbCeilingFinish, tbFrontWall,
-                     tbMirror, tbHandrail, tbSideWall, tbRearWall, tbCOPFinish, tbFacePlateMaterial);
+                     tbMirror, tbHandrail, tbSideWall, tbRearWall, tbCOPFinish, tbFacePlateMaterial, tbMinorPriceAdjustment);
             #endregion
 
             #region Load Check Boxes
@@ -1271,7 +1287,7 @@ namespace SQT
                 rbRearWallOther, rbSecurityKeySwitchNo, rbSecurityKeySwitchYes, rbSideWallBrushedStainlessSteel, rbSideWallOther, rbSL,
                 rbStructureShaftConcrete, rbStructureShaftOther, rbSumasa, rbTrimmerBeamsNo, rbTrimmerBeamsYes, rbVoiceAnnunciationNo,
                 rbVoiceAnnunciationYes, rbWittur);
-            
+
             #endregion
 
             ShippingCalculation(1);
@@ -1369,7 +1385,7 @@ namespace SQT
                  tbLift1Price, tbLift1Floors, tbLift2Price, tbLift2Floors, tb3Lift3Price, tbLift3Floors,
                  tbLift4Price, tbLift4Floors, tbLift5Price, tbLift5Floors, tbLift6Price, tbLift6Floors,
                  tbLift7Price, tbLift7Floors, tbLift8Price, tbLift8Floors, tbLift9Price, tbLift9Floors,
-                 tbLift10Price, tbLift10Floors, tbLift11Price, tbLift11Floors, tbLift12Price, tbLift12Floors);
+                 tbLift10Price, tbLift10Floors, tbLift11Price, tbLift11Floors, tbLift12Price, tbLift12Floors, tbMinorPriceAdjustment);
             SaveCbToXML(cbMainSecurity);
             saveData["num20Ft"] = num20Ft.ToString();
             saveData["num40Ft"] = num40Ft.ToString();
@@ -1377,9 +1393,11 @@ namespace SQT
 
             //save items in the quote form
             string prefix = "P0";
-            saveData["NumberOfPagesOpen"] = pageTracker.ToString();
+            //saveData["NumberOfPagesOpen"] = pageTracker.ToString();
+            saveData["NumberOfPagesOpen"] = numberOfPagesNeeded.ToString();
 
-            if (pageTracker >= 1)
+            //if (pageTracker >= 1)
+            if (numberOfPagesNeeded >= 1)
             {
                 prefix = "P1";
                 #region Page 1 Saving
@@ -1490,7 +1508,7 @@ namespace SQT
                 WordData(prefix + "AE210", RadioButtonToAsteriskHandeler(rbOutofServiceYes, rbOutofServiceNo));//out of service 
                 #endregion
             }
-            if (pageTracker >= 2)
+            if (numberOfPagesNeeded >= 2)
             {
                 prefix = "P2";
                 #region Page 2 Saving
@@ -1596,7 +1614,7 @@ namespace SQT
 
                 #endregion
             }
-            if (pageTracker >= 3)
+            if (numberOfPagesNeeded >= 3)
             {
                 prefix = "P3";
                 #region Page 3 Saving
@@ -1702,7 +1720,7 @@ namespace SQT
 
                 #endregion
             }
-            if (pageTracker >= 4)
+            if (numberOfPagesNeeded >= 4)
             {
                 prefix = "P4";
                 #region Page 4 Saving
@@ -1807,7 +1825,7 @@ namespace SQT
 
                 #endregion
             }
-            if (pageTracker >= 5)
+            if (numberOfPagesNeeded >= 5)
             {
                 prefix = "P5";
                 #region Page 5 Saving
@@ -1913,7 +1931,7 @@ namespace SQT
 
                 #endregion
             }
-            if (pageTracker >= 6)
+            if (numberOfPagesNeeded >= 6)
             {
                 prefix = "P6";
                 #region Page 6 Saving
@@ -2018,7 +2036,7 @@ namespace SQT
 
                 #endregion
             }
-            if (pageTracker >= 7)
+            if (numberOfPagesNeeded >= 7)
             {
                 prefix = "P7";
                 #region Page 7 Saving
@@ -2124,7 +2142,7 @@ namespace SQT
 
                 #endregion
             }
-            if (pageTracker >= 8)
+            if (numberOfPagesNeeded >= 8)
             {
                 prefix = "P8";
                 #region Page 8 Saving
@@ -2228,7 +2246,7 @@ namespace SQT
                 WordData(prefix + "AE210", RadioButtonToAsteriskHandeler(rb8OutOfSErviceYes, rb8OutOFServiceNo));//out of service 
                 #endregion
             }
-            if (pageTracker >= 9)
+            if (numberOfPagesNeeded >= 9)
             {
                 prefix = "P9";
                 #region Page 9 Saving
@@ -2330,7 +2348,7 @@ namespace SQT
                 WordData(prefix + "AE210", RadioButtonToAsteriskHandeler(rb9OutOfServiceYes, rb9OutOfServiceNo));//out of service 
                 #endregion
             }
-            if (pageTracker >= 10)
+            if (numberOfPagesNeeded >= 10)
             {
                 prefix = "P10";
                 #region Page 10 Saving
@@ -2433,7 +2451,7 @@ namespace SQT
                 WordData(prefix + "AE210", RadioButtonToAsteriskHandeler(rb10OutOFServiceYes, rb10OutOfServiceNo));//out of service 
                 #endregion
             }
-            if (pageTracker >= 11)
+            if (numberOfPagesNeeded >= 11)
             {
                 prefix = "P11";
                 #region Page 11 Saving
@@ -2536,7 +2554,7 @@ namespace SQT
                 WordData(prefix + "AE210", RadioButtonToAsteriskHandeler(rb11OutOfSErviceYes, rb11OutOfServiceNo));//out of service 
                 #endregion
             }
-            if (pageTracker >= 12)
+            if (numberOfPagesNeeded >= 12)
             {
                 prefix = "P12";
                 #region Page 12 Saving
@@ -3384,6 +3402,11 @@ namespace SQT
             pageButtons[pageTracker].Visible = true;
             pageButtons[pageTracker].Enabled = true;
             pageTracker++;
+            if (pageTracker >= 12)
+            {
+                btNewPanel.Visible = false;
+                return;
+            }
             exporterPageOpened[pageTracker] = true;
 
             if (pageTracker <= 11)
