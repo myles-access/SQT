@@ -315,7 +315,7 @@ namespace SQT
 
             if (!networkConnected || !internetConnected)
             {
-                lbTitleText.Text = "Networks NOT Connected";
+                lbTitleText.Text = "LAN "+ networkConnected+" WAN "+internetConnected;
             }
             else
             {
@@ -325,7 +325,7 @@ namespace SQT
 
         private bool InternetCheck()
         {
-            var hostUrl = "www.accesselevators.com.au";
+            var hostUrl = "www.google.com";
 
             Ping ping = new Ping();
 
@@ -337,7 +337,7 @@ namespace SQT
         {
             try
             {
-                Directory.GetAccessControl(@"X:\");
+                Directory.GetAccessControl(@"X:/");
                 return true;
             }
             catch

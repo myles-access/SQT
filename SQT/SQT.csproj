@@ -52,10 +52,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>A5612668B4EB3F16395E0D2F357A36C4183ADC54</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>BB26E224D79D9370257A486D3D906F02F4E4ED30</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>SQT_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>SQT_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -138,6 +138,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SQT_1_TemporaryKey.pfx" />
     <None Include="SQT_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
