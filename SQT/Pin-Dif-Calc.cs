@@ -655,7 +655,7 @@ namespace SQT
         {
             lblWaitControl(true);
             string filePath;
-            filePath = @"X:\Program Dependancies\Quote tool\Template Word Docs\" + user + @"\" + numberOfPagesNeeded + ".docx";
+            filePath = @"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\Template Word Docs\" + user + @"\" + numberOfPagesNeeded + ".docx";
             fileOpen = new Word.Application();
             fileOpen.Visible = true;
             document = fileOpen.Documents.Open(filePath, ReadOnly: false);
@@ -668,7 +668,7 @@ namespace SQT
             if (!b)
             {
                 saveFileDialog1.Title = ("Where to save the quote");
-                saveFileDialog1.InitialDirectory = "X:\\Sales\\Qu-" + DateTime.Now.ToString("yyyy");
+                saveFileDialog1.InitialDirectory = @"Z:\Shared drives\Access Elevators Server\Sales\\Qu-" + DateTime.Now.ToString("yyyy");
                 saveFileDialog1.FileName = tBMainQuoteNumber.Text + " - " + tBMainAddress.Text + " Quote";
                 saveFileDialog1.DefaultExt = "docx";
                 saveFileDialog1.Filter = "Word Doc (*.docx) |*.docx|All files (*.*) |*.*";
@@ -823,7 +823,7 @@ namespace SQT
         private bool SavePricesDocument()
         {
             saveFileDialog1.Title = ("Where to save the prices");
-            saveFileDialog1.InitialDirectory = "X:\\Sales\\Qu-" + DateTime.Now.ToString("yyyy");
+            saveFileDialog1.InitialDirectory = @"Z:\Shared drives\Access Elevators Server\Sales\Qu-" + DateTime.Now.ToString("yyyy");
             saveFileDialog1.FileName = tBMainQuoteNumber.Text + " - " + tBMainAddress.Text + " Price Breakdown";
             saveFileDialog1.DefaultExt = "docx";
             saveFileDialog1.Filter = "Word Doc (*.docx) |*.docx| All files (*.*) |*.*";
@@ -831,7 +831,7 @@ namespace SQT
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 fileOpen = new Word.Application();
-                document = fileOpen.Documents.Open(@"X:\Program Dependancies\Quote tool\Template Word Docs\" + user + @"\price.docx", ReadOnly: false);
+                document = fileOpen.Documents.Open(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\Template Word Docs\" + user + @"\price.docx", ReadOnly: false);
                 SavePricesToDict();
                 fileOpen.Visible = true;
                 document.Activate();
@@ -968,7 +968,7 @@ namespace SQT
             bool loadedSucessfully = true;
             //load XML into a dictionary
             saveData.Clear();
-            ImportXML(@"X:\Program Dependancies\Quote tool\Previous Prices\" + loadSelection);
+            ImportXML(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\Previous Prices\" + loadSelection);
             //loop through XML and populate form
             try
             {
@@ -2690,7 +2690,7 @@ namespace SQT
         private void SaveReloadXMLFile(Dictionary<string, string> kvp)
         {
             //string path = "X:\\Program Dependancies\\Quote tool\\Previous Prices\\" + saveFileDialog1.FileName.ToString() + ".xml";
-            string path = "X:\\Program Dependancies\\Quote tool\\Previous Prices\\" + tBMainQuoteNumber.Text.ToString() + " - " + tBMainAddress.Text.ToString() + ".xml";
+            string path = @"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\Previous Prices\" + tBMainQuoteNumber.Text.ToString() + " - " + tBMainAddress.Text.ToString() + ".xml";
 
             XmlTextWriter xmlWriter = new XmlTextWriter(path, Encoding.UTF8);
             xmlWriter.Formatting = Formatting.Indented;
@@ -3952,5 +3952,10 @@ namespace SQT
             //
         }
         #endregion
+
+        private void tbMinorPriceAdjustment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

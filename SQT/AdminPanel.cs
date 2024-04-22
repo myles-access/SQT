@@ -39,7 +39,7 @@ namespace SQT
             string dKey = "";
             float dName = -1;
 
-            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\QuotePriceList.xml");
+            XmlTextReader XMLR = new XmlTextReader(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\QuotePriceList.xml");
             while (XMLR.Read())
             {
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "costItem")
@@ -73,7 +73,7 @@ namespace SQT
             int dKey = -1;
             float dName = -1;
 
-            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\LabourCosts.xml");
+            XmlTextReader XMLR = new XmlTextReader(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\LabourCosts.xml");
             while (XMLR.Read())
             {
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Floors")
@@ -104,7 +104,7 @@ namespace SQT
             string dKey = "";
             string dName = "";
 
-            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\ExchangeRateURL.xml");
+            XmlTextReader XMLR = new XmlTextReader(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\ExchangeRateURL.xml");
             while (XMLR.Read())
             {
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Name")
@@ -199,7 +199,7 @@ namespace SQT
         }
         private void BasePricesXMLWriter()
         {
-            XmlTextWriter xmlWriter = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\QuotePriceList.xml", Encoding.UTF8);
+            XmlTextWriter xmlWriter = new XmlTextWriter(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\QuotePriceList.xml", Encoding.UTF8);
             xmlWriter.Formatting = Formatting.Indented;
             xmlWriter.WriteStartDocument();
 
@@ -221,7 +221,7 @@ namespace SQT
 
         private void LabourPricesXMLWriter()
         {
-            XmlTextWriter xmlWriter = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\LabourCosts.xml", Encoding.UTF8);
+            XmlTextWriter xmlWriter = new XmlTextWriter(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\LabourCosts.xml", Encoding.UTF8);
             xmlWriter.Formatting = Formatting.Indented;
             xmlWriter.WriteStartDocument();
 
@@ -243,7 +243,7 @@ namespace SQT
 
         private void ExchnageRateXMLWriter()
         {
-            XmlTextWriter xmlWriter = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\ExchangeRateURL.xml", Encoding.UTF8);
+            XmlTextWriter xmlWriter = new XmlTextWriter(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\ExchangeRateURL.xml", Encoding.UTF8);
             xmlWriter.Formatting = Formatting.Indented;
             xmlWriter.WriteStartDocument();
 

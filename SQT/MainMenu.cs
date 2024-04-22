@@ -27,7 +27,7 @@ namespace SQT
         public Dictionary<string, string> exchangeRateURL = new Dictionary<string, string>();
 
 
-        private string[] xmlFiles = Directory.GetFiles(@"X:\Program Dependancies\Quote tool\Previous Prices", "*.*", SearchOption.AllDirectories);
+        private string[] xmlFiles = Directory.GetFiles(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\Previous Prices", "*.*", SearchOption.AllDirectories);
 
         public string quNumber;
         #endregion
@@ -355,7 +355,7 @@ namespace SQT
             string dKey = "";
             float dName = -1;
 
-            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\QuotePriceList.xml");
+            XmlTextReader XMLR = new XmlTextReader(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\QuotePriceList.xml");
             while (XMLR.Read())
             {
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "costItem")
@@ -384,7 +384,7 @@ namespace SQT
             int dKey = -1;
             float dName = -1;
 
-            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\LabourCosts.xml");
+            XmlTextReader XMLR = new XmlTextReader(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\LabourCosts.xml");
             while (XMLR.Read())
             {
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Floors")
@@ -419,7 +419,7 @@ namespace SQT
             string nextQu = "";
 
             //read XML to get next avaliable number
-            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\QuNum.xml");
+            XmlTextReader XMLR = new XmlTextReader(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\QuNum.xml");
             while (XMLR.Read())
             {
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Year")
@@ -447,7 +447,7 @@ namespace SQT
             }
 
             //write to the XML file to claim the number
-            XmlTextWriter XMLW = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\QuNum.xml", Encoding.UTF8);
+            XmlTextWriter XMLW = new XmlTextWriter(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\QuNum.xml", Encoding.UTF8);
             XMLW.Formatting = Formatting.Indented;
             XMLW.WriteStartDocument();
             XMLW.WriteStartElement("QuVar");
@@ -473,7 +473,7 @@ namespace SQT
             int salesmanTracker = -1;
             bool salesmanMatch = false;
 
-            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\SalesmanRecord.xml");
+            XmlTextReader XMLR = new XmlTextReader(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\SalesmanRecord.xml");
             while (XMLR.Read())
             {
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Salesman")
@@ -506,7 +506,7 @@ namespace SQT
             XMLR.Close();
 
             //write to the XML file to record the number
-            XmlTextWriter XMLW = new XmlTextWriter("X:\\Program Dependancies\\Quote tool\\SalesmanRecord.xml", Encoding.UTF8);
+            XmlTextWriter XMLW = new XmlTextWriter(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\SalesmanRecord.xml", Encoding.UTF8);
             XMLW.Formatting = Formatting.Indented;
             XMLW.WriteStartDocument();
             XMLW.WriteStartElement("QuoteRecords");
@@ -551,7 +551,7 @@ namespace SQT
         {
             if (openingmenu)
             {
-                xmlFiles = Directory.GetFiles(@"X:\Program Dependancies\Quote tool\Previous Prices", "*.*", SearchOption.AllDirectories);
+                xmlFiles = Directory.GetFiles(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\Previous Prices", "*.*", SearchOption.AllDirectories);
                 ArrayToListBox(listBox1, xmlFiles);
                 panelShipping.Visible = true;
                 this.Size = new System.Drawing.Size(895, 523);

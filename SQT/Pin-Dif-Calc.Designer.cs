@@ -5061,6 +5061,7 @@
             this.tbMinorPriceAdjustment.TabIndex = 193;
             this.tbMinorPriceAdjustment.Text = "0";
             this.tbMinorPriceAdjustment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbMinorPriceAdjustment.TextChanged += new System.EventHandler(this.tbMinorPriceAdjustment_TextChanged);
             // 
             // label13
             // 
