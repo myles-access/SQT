@@ -51,11 +51,6 @@
             this.label75 = new System.Windows.Forms.Label();
             this.cbMainSecurity = new System.Windows.Forms.CheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.currencySelectionGroup = new System.Windows.Forms.GroupBox();
-            this.buttonEUR = new System.Windows.Forms.Button();
-            this.buttonAUD = new System.Windows.Forms.Button();
-            this.labelLiftCurrency = new System.Windows.Forms.Label();
-            this.buttonUSD = new System.Windows.Forms.Button();
             this.tbMainScaffold = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.tbMainShaftLight = new System.Windows.Forms.TextBox();
@@ -137,10 +132,8 @@
             this.label23 = new System.Windows.Forms.Label();
             this.tbMainAccomodation = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.lblExchangeDate = new System.Windows.Forms.Label();
             this.tbMainMargin = new System.Windows.Forms.TextBox();
             this.label79 = new System.Windows.Forms.Label();
-            this.exchangeRateLbl = new System.Windows.Forms.Label();
             this.tbMainStorage = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -2423,7 +2416,13 @@
             this.label427 = new System.Windows.Forms.Label();
             this.panelExportQuote = new System.Windows.Forms.Panel();
             this.panelContactDetails = new System.Windows.Forms.Panel();
-            this.currencySelectionGroup.SuspendLayout();
+            this.exchangeRateLbl = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonUSD = new System.Windows.Forms.Button();
+            this.labelLiftCurrency = new System.Windows.Forms.Label();
+            this.buttonAUD = new System.Windows.Forms.Button();
+            this.buttonEUR = new System.Windows.Forms.Button();
+            this.currencySelectionGroup = new System.Windows.Forms.GroupBox();
             this.panelAddress.SuspendLayout();
             this.panelLiftPrices.SuspendLayout();
             this.panelShipping.SuspendLayout();
@@ -2867,6 +2866,7 @@
             this.groupBox108.SuspendLayout();
             this.panelExportQuote.SuspendLayout();
             this.panelContactDetails.SuspendLayout();
+            this.currencySelectionGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // printPreviewDialog1
@@ -3105,68 +3105,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // currencySelectionGroup
-            // 
-            this.currencySelectionGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.currencySelectionGroup.Controls.Add(this.buttonEUR);
-            this.currencySelectionGroup.Controls.Add(this.buttonAUD);
-            this.currencySelectionGroup.Controls.Add(this.labelLiftCurrency);
-            this.currencySelectionGroup.Controls.Add(this.buttonUSD);
-            this.currencySelectionGroup.Cursor = System.Windows.Forms.Cursors.Default;
-            this.currencySelectionGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.currencySelectionGroup.Location = new System.Drawing.Point(8, 12);
-            this.currencySelectionGroup.Name = "currencySelectionGroup";
-            this.currencySelectionGroup.Size = new System.Drawing.Size(954, 177);
-            this.currencySelectionGroup.TabIndex = 150;
-            this.currencySelectionGroup.TabStop = false;
-            // 
-            // buttonEUR
-            // 
-            this.buttonEUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEUR.Location = new System.Drawing.Point(566, 80);
-            this.buttonEUR.Name = "buttonEUR";
-            this.buttonEUR.Size = new System.Drawing.Size(166, 82);
-            this.buttonEUR.TabIndex = 3;
-            this.buttonEUR.TabStop = false;
-            this.buttonEUR.Text = "EUR";
-            this.buttonEUR.UseVisualStyleBackColor = true;
-            this.buttonEUR.Click += new System.EventHandler(this.buttonEUR_Click);
-            // 
-            // buttonAUD
-            // 
-            this.buttonAUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAUD.Location = new System.Drawing.Point(220, 80);
-            this.buttonAUD.Name = "buttonAUD";
-            this.buttonAUD.Size = new System.Drawing.Size(166, 82);
-            this.buttonAUD.TabIndex = 0;
-            this.buttonAUD.TabStop = false;
-            this.buttonAUD.Text = "AUD";
-            this.buttonAUD.UseVisualStyleBackColor = true;
-            this.buttonAUD.Click += new System.EventHandler(this.buttonAUD_Click);
-            // 
-            // labelLiftCurrency
-            // 
-            this.labelLiftCurrency.AutoSize = true;
-            this.labelLiftCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLiftCurrency.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.labelLiftCurrency.Location = new System.Drawing.Point(6, 20);
-            this.labelLiftCurrency.Name = "labelLiftCurrency";
-            this.labelLiftCurrency.Size = new System.Drawing.Size(938, 55);
-            this.labelLiftCurrency.TabIndex = 1;
-            this.labelLiftCurrency.Text = "Is the cost of the lift in AUD, USD, or EUR?";
-            // 
-            // buttonUSD
-            // 
-            this.buttonUSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUSD.Location = new System.Drawing.Point(393, 80);
-            this.buttonUSD.Name = "buttonUSD";
-            this.buttonUSD.Size = new System.Drawing.Size(166, 82);
-            this.buttonUSD.TabIndex = 2;
-            this.buttonUSD.TabStop = false;
-            this.buttonUSD.Text = "USD";
-            this.buttonUSD.UseVisualStyleBackColor = true;
-            this.buttonUSD.Click += new System.EventHandler(this.buttonUSD_Click);
             // 
             // tbMainScaffold
             // 
@@ -4084,18 +4022,6 @@
             this.label19.TabIndex = 155;
             this.label19.Text = "Accommodation";
             // 
-            // lblExchangeDate
-            // 
-            this.lblExchangeDate.AutoSize = true;
-            this.lblExchangeDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExchangeDate.ForeColor = System.Drawing.Color.Black;
-            this.lblExchangeDate.Location = new System.Drawing.Point(156, 86);
-            this.lblExchangeDate.Name = "lblExchangeDate";
-            this.lblExchangeDate.Size = new System.Drawing.Size(783, 37);
-            this.lblExchangeDate.TabIndex = 174;
-            this.lblExchangeDate.Text = "The current Exchange rate is 1 USD to 1.533233 AUD";
-            this.lblExchangeDate.Visible = false;
-            // 
             // tbMainMargin
             // 
             this.tbMainMargin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4117,18 +4043,6 @@
             this.label79.Size = new System.Drawing.Size(227, 55);
             this.label79.TabIndex = 173;
             this.label79.Text = "Margin %";
-            // 
-            // exchangeRateLbl
-            // 
-            this.exchangeRateLbl.AutoSize = true;
-            this.exchangeRateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exchangeRateLbl.ForeColor = System.Drawing.Color.Black;
-            this.exchangeRateLbl.Location = new System.Drawing.Point(154, 42);
-            this.exchangeRateLbl.Name = "exchangeRateLbl";
-            this.exchangeRateLbl.Size = new System.Drawing.Size(783, 37);
-            this.exchangeRateLbl.TabIndex = 161;
-            this.exchangeRateLbl.Text = "The current Exchange rate is 1 USD to 1.533233 AUD";
-            this.exchangeRateLbl.Visible = false;
             // 
             // tbMainStorage
             // 
@@ -5020,6 +4934,7 @@
             // 
             // panelCalcButtons
             // 
+            this.panelCalcButtons.Controls.Add(this.textBox1);
             this.panelCalcButtons.Controls.Add(this.tbMinorPriceAdjustment);
             this.panelCalcButtons.Controls.Add(this.label13);
             this.panelCalcButtons.Controls.Add(this.currencySelectionGroup);
@@ -5036,7 +4951,6 @@
             this.panelCalcButtons.Controls.Add(this.lblNumOfShipContainers);
             this.panelCalcButtons.Controls.Add(this.lblCostIncludingMargin);
             this.panelCalcButtons.Controls.Add(this.lblTotaliftCosts);
-            this.panelCalcButtons.Controls.Add(this.lblExchangeDate);
             this.panelCalcButtons.Controls.Add(this.exchangeRateLbl);
             this.panelCalcButtons.Controls.Add(this.tbMainMargin);
             this.panelCalcButtons.Controls.Add(this.lblPriceIncludingGST);
@@ -32247,6 +32161,88 @@
             this.panelContactDetails.Size = new System.Drawing.Size(436, 858);
             this.panelContactDetails.TabIndex = 438;
             // 
+            // exchangeRateLbl
+            // 
+            this.exchangeRateLbl.AutoSize = true;
+            this.exchangeRateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exchangeRateLbl.ForeColor = System.Drawing.Color.Black;
+            this.exchangeRateLbl.Location = new System.Drawing.Point(200, 64);
+            this.exchangeRateLbl.Name = "exchangeRateLbl";
+            this.exchangeRateLbl.Size = new System.Drawing.Size(467, 37);
+            this.exchangeRateLbl.TabIndex = 161;
+            this.exchangeRateLbl.Text = "$1 of currency = $              AUD";
+            this.exchangeRateLbl.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(484, 65);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 195;
+            this.textBox1.Text = "1";
+            // 
+            // buttonUSD
+            // 
+            this.buttonUSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUSD.Location = new System.Drawing.Point(393, 80);
+            this.buttonUSD.Name = "buttonUSD";
+            this.buttonUSD.Size = new System.Drawing.Size(166, 82);
+            this.buttonUSD.TabIndex = 2;
+            this.buttonUSD.TabStop = false;
+            this.buttonUSD.Text = "USD";
+            this.buttonUSD.UseVisualStyleBackColor = true;
+            this.buttonUSD.Click += new System.EventHandler(this.buttonUSD_Click);
+            // 
+            // labelLiftCurrency
+            // 
+            this.labelLiftCurrency.AutoSize = true;
+            this.labelLiftCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLiftCurrency.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.labelLiftCurrency.Location = new System.Drawing.Point(6, 20);
+            this.labelLiftCurrency.Name = "labelLiftCurrency";
+            this.labelLiftCurrency.Size = new System.Drawing.Size(938, 55);
+            this.labelLiftCurrency.TabIndex = 1;
+            this.labelLiftCurrency.Text = "Is the cost of the lift in AUD, USD, or EUR?";
+            // 
+            // buttonAUD
+            // 
+            this.buttonAUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAUD.Location = new System.Drawing.Point(220, 80);
+            this.buttonAUD.Name = "buttonAUD";
+            this.buttonAUD.Size = new System.Drawing.Size(166, 82);
+            this.buttonAUD.TabIndex = 0;
+            this.buttonAUD.TabStop = false;
+            this.buttonAUD.Text = "AUD";
+            this.buttonAUD.UseVisualStyleBackColor = true;
+            this.buttonAUD.Click += new System.EventHandler(this.buttonAUD_Click);
+            // 
+            // buttonEUR
+            // 
+            this.buttonEUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEUR.Location = new System.Drawing.Point(566, 80);
+            this.buttonEUR.Name = "buttonEUR";
+            this.buttonEUR.Size = new System.Drawing.Size(166, 82);
+            this.buttonEUR.TabIndex = 3;
+            this.buttonEUR.TabStop = false;
+            this.buttonEUR.Text = "EUR";
+            this.buttonEUR.UseVisualStyleBackColor = true;
+            this.buttonEUR.Click += new System.EventHandler(this.buttonEUR_Click);
+            // 
+            // currencySelectionGroup
+            // 
+            this.currencySelectionGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.currencySelectionGroup.Controls.Add(this.buttonEUR);
+            this.currencySelectionGroup.Controls.Add(this.buttonAUD);
+            this.currencySelectionGroup.Controls.Add(this.labelLiftCurrency);
+            this.currencySelectionGroup.Controls.Add(this.buttonUSD);
+            this.currencySelectionGroup.Cursor = System.Windows.Forms.Cursors.Default;
+            this.currencySelectionGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.currencySelectionGroup.Location = new System.Drawing.Point(9, 15);
+            this.currencySelectionGroup.Name = "currencySelectionGroup";
+            this.currencySelectionGroup.Size = new System.Drawing.Size(954, 177);
+            this.currencySelectionGroup.TabIndex = 150;
+            this.currencySelectionGroup.TabStop = false;
+            // 
             // Pin_Dif_Calc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -32282,8 +32278,6 @@
             this.Name = "Pin_Dif_Calc";
             this.Text = " = ";
             this.Load += new System.EventHandler(this.Pin_Dif_Calc_Load);
-            this.currencySelectionGroup.ResumeLayout(false);
-            this.currencySelectionGroup.PerformLayout();
             this.panelAddress.ResumeLayout(false);
             this.panelAddress.PerformLayout();
             this.panelLiftPrices.ResumeLayout(false);
@@ -33167,6 +33161,8 @@
             this.panelExportQuote.ResumeLayout(false);
             this.panelContactDetails.ResumeLayout(false);
             this.panelContactDetails.PerformLayout();
+            this.currencySelectionGroup.ResumeLayout(false);
+            this.currencySelectionGroup.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -33196,11 +33192,6 @@
         public System.Windows.Forms.Label label75;
         public System.Windows.Forms.CheckBox cbMainSecurity;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        public System.Windows.Forms.GroupBox currencySelectionGroup;
-        public System.Windows.Forms.Button buttonEUR;
-        public System.Windows.Forms.Button buttonAUD;
-        public System.Windows.Forms.Label labelLiftCurrency;
-        public System.Windows.Forms.Button buttonUSD;
         public System.Windows.Forms.TextBox tbMainScaffold;
         public System.Windows.Forms.Label label24;
         public System.Windows.Forms.TextBox tbMainShaftLight;
@@ -33282,10 +33273,8 @@
         public System.Windows.Forms.Label label23;
         public System.Windows.Forms.TextBox tbMainAccomodation;
         public System.Windows.Forms.Label label19;
-        public System.Windows.Forms.Label lblExchangeDate;
         public System.Windows.Forms.TextBox tbMainMargin;
         public System.Windows.Forms.Label label79;
-        public System.Windows.Forms.Label exchangeRateLbl;
         public System.Windows.Forms.TextBox tbMainStorage;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox tbLift12Price;
@@ -35568,5 +35557,12 @@
         private System.Windows.Forms.Button liftCostsClose;
         private System.Windows.Forms.Button shippingCostsClose;
         private System.Windows.Forms.Button extraCostsClose;
+        private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Label exchangeRateLbl;
+        public System.Windows.Forms.GroupBox currencySelectionGroup;
+        public System.Windows.Forms.Button buttonEUR;
+        public System.Windows.Forms.Button buttonAUD;
+        public System.Windows.Forms.Label labelLiftCurrency;
+        public System.Windows.Forms.Button buttonUSD;
     }
 }

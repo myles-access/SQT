@@ -220,32 +220,23 @@ namespace SQT
             currencySelectionGroup.Visible = false;
             exchangeRateLbl.Visible = true;
             exchangeRateLbl.Enabled = true;
-            lblExchangeDate.Enabled = true;
-            lblExchangeDate.Visible = true;
 
             if (selector == "A")
             {
-                applicableExchangeRate = 1;
-                exCurrency = 0;
+                applicableExchangeRate = float.Parse(textBox1.Text);
                 exchangeRateText = "AUD";
                 btnCurrency.Text = "AUD";
-                exchangeRateLbl.Text = "No exchange rate is being applied to this form";
-                lblExchangeDate.Text = "";
             }
             else if (selector == "U")
             {
-                applicableExchangeRate = mm.exchangeRates["USD"];
-                exchangeRateLbl.Text = "The current exchange rate is $1 USD to " + PriceRounding(mm.exchangeRates["USD"]) + " AUD";
-                lblExchangeDate.Text = "Correct as of " + mm.exchangeRateDate;
+                applicableExchangeRate = float.Parse(textBox1.Text);
                 exCurrency = 1;
                 exchangeRateText = "USD";
                 btnCurrency.Text = "USD";
             }
             else if (selector == "E")
             {
-                applicableExchangeRate = mm.exchangeRates["EUR"];
-                exchangeRateLbl.Text = "The current exchange rate is €1 EUR to " + PriceRounding(mm.exchangeRates["EUR"]) + " AUD";
-                lblExchangeDate.Text = "Correct as of " + mm.exchangeRateDate;
+                applicableExchangeRate = float.Parse(textBox1.Text);
                 exCurrency = 2;
                 exchangeRateText = "EUR";
                 btnCurrency.Text = "EUR";
@@ -304,6 +295,7 @@ namespace SQT
         //update values in main menu when changed
         private void SetValuesForMainMenuLabels()
         {
+            applicableExchangeRate = float.Parse(textBox1.Text);
             TotalCostAdder();
 
             lblNumOfLifts.Text = ("Price for " + numberOfPagesNeeded + " lift(s)");

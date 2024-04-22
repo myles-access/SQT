@@ -98,22 +98,6 @@ namespace SQT
             FetchLabourPrices();
             ProgressBarStep();
 
-            //fetch the URL for exchange rates from the XML file
-            lbTitleText.Text = "Checking Exchange Rates Server";
-            FetchExchangeRateURL();
-            ProgressBarStep();
-
-            //Ready the exchange rate from either the website or offline stored values
-            lbTitleText.Text = "Fetching Exchange Rates";
-            CurrencyRates();
-            ProgressBarStep();
-
-            //check the date of the used exchange rate and return out if rate is too old. 
-            if (IsExchangeRateOld())
-            {
-                startedSucessfully = false;
-            }
-
             //load up the calculator form
             lbTitleText.Text = "Loading Calculator";
             Pin_Dif_Calc fPinDif = new Pin_Dif_Calc();
