@@ -4934,10 +4934,10 @@
             // 
             // panelCalcButtons
             // 
+            this.panelCalcButtons.Controls.Add(this.currencySelectionGroup);
             this.panelCalcButtons.Controls.Add(this.textBox1);
             this.panelCalcButtons.Controls.Add(this.tbMinorPriceAdjustment);
             this.panelCalcButtons.Controls.Add(this.label13);
-            this.panelCalcButtons.Controls.Add(this.currencySelectionGroup);
             this.panelCalcButtons.Controls.Add(this.lblExtraCostsTotal);
             this.panelCalcButtons.Controls.Add(this.button5);
             this.panelCalcButtons.Controls.Add(this.btnCurrency);
