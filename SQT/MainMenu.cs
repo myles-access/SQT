@@ -193,7 +193,7 @@ namespace SQT
             string dKey = "";
             string dName = "";
 
-            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\ExchangeRateURL.xml");
+            XmlTextReader XMLR = new XmlTextReader(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\ExchangeRateURL.xml");
             while (XMLR.Read())
             {
                 if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "Name")
@@ -222,7 +222,7 @@ namespace SQT
             string dKey = "";
             string dName = "";
             bool foundPubDate = false;
-            string path = "X:\\Program Dependancies\\Quote tool\\CurrecyExchangeRate.xml";
+            string path = @"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\CurrecyExchangeRate.xml";
 
             XmlTextReader XMLR = new XmlTextReader(exchangeRateURL["1ExchangeRateURL"]);
             XmlTextWriter XMLW = new XmlTextWriter(path, Encoding.UTF8);
@@ -275,7 +275,7 @@ namespace SQT
             string dName = "";
             bool foundPubDate = false;
 
-            XmlTextReader XMLR = new XmlTextReader("X:\\Program Dependancies\\Quote tool\\CurrecyExchangeRate.xml");
+            XmlTextReader XMLR = new XmlTextReader(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\CurrecyExchangeRate.xml");
 
             while (XMLR.Read())
             {
@@ -337,7 +337,7 @@ namespace SQT
         {
             try
             {
-                Directory.GetAccessControl(@"X:/");
+                Directory.GetAccessControl(@"Z:/");
                 return true;
             }
             catch
