@@ -235,7 +235,7 @@ namespace SQT
             else if (selector == "U")
             {
                 applicableExchangeRate = mm.exchangeRates["USD"];
-                exchangeRateLbl.Text = "The current exchange rate is $1 USD to " + PriceRounding(mm.exchangeRates["USD"]) + " AUD";
+                exchangeRateLbl.Text = "Exchange Rate = $1 USD to " + PriceRounding(mm.exchangeRates["USD"]) + " AUD (" + PriceRounding(1 / mm.exchangeRates["USD"]) + " flipped)";
                 lblExchangeDate.Text = "Correct as of " + mm.exchangeRateDate;
                 exCurrency = 1;
                 exchangeRateText = "USD";
@@ -244,7 +244,7 @@ namespace SQT
             else if (selector == "E")
             {
                 applicableExchangeRate = mm.exchangeRates["EUR"];
-                exchangeRateLbl.Text = "The current exchange rate is €1 EUR to " + PriceRounding(mm.exchangeRates["EUR"]) + " AUD";
+                exchangeRateLbl.Text = "Exchange Rate = €1 EUR to " + PriceRounding(mm.exchangeRates["EUR"]) + " AUD (" + PriceRounding(1/mm.exchangeRates["EUR"]) +" flipped)";
                 lblExchangeDate.Text = "Correct as of " + mm.exchangeRateDate;
                 exCurrency = 2;
                 exchangeRateText = "EUR";

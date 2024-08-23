@@ -274,6 +274,8 @@ namespace SQT
             string dKey = "";
             string dName = "";
             bool foundPubDate = false;
+            float rateMargin = 0;
+            float rateAddition = 0.05f; // The amount of money that will be added in USD to the exchange rate. 
 
             XmlTextReader XMLR = new XmlTextReader(@"Z:\Shared drives\Access Elevators Server\Program Dependancies\Quote tool\CurrecyExchangeRate.xml");
 
@@ -290,12 +292,17 @@ namespace SQT
                 }
                 else if (XMLR.NodeType == XmlNodeType.Element && XMLR.Name == "inverseRate")
                 {
-                    dName = XMLR.ReadElementContentAsString();
+                    
+                    float f = 1/XMLR.ReadElementContentAsFloat();
+                    rateMargin = f - rateAddition;
+                    dName = (1/rateMargin).ToString();
+                    
+                    //dName = XMLR.ReadElementContentAsString();
                 }
 
                 if (dKey != "" && dName != "")
                 {
-                    exchangeRates.Add(dKey, float.Parse(dName) * basePrices["16CurrencyMargin"]);
+                    exchangeRates.Add(dKey, float.Parse(dName)); // * basePrices["16CurrencyMargin"]);
 
                     dKey = "";
                     dName = "";
